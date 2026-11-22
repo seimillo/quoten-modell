@@ -121,8 +121,11 @@ def _two(outcomes, a, b, key="name"):
     return oa, ob
 
 
-def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events, cur_pl=None, prior_pl=None):
+def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events, cur_pl=None, prior_pl=None, P=None):
     cur_pl, prior_pl = cur_pl or {}, prior_pl or {}
+    P = {**{"team_scale": 1.0, "hca": HCA, "rest_scale": 1.0, "inj_scale": 1.0, "sd_margin": SD_MARGIN,
+            "sd_total": SD_TOTAL, "total_bias": 0.0, "conf": CONF}, **(P or {})}
+    SDM, SDT, CF = P["sd_margin"], P["sd_total"], P["conf"]
     lg = {"cur": sum(v["ortg_a"] for v in cur.values()) / max(1, len(cur)),
           "prior": sum(v["ortg_a"] for v in prior.values()) / max(1, len(prior)) if prior else 115.0,
           "pace": sum(pace.values()) / max(1, len(pace)) if pace else 99.0}
@@ -136,20 +139,27 @@ def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events, c
             continue
         parts = []
         poss = A["pace"] * H["pace"] / lg["pace"]
-        pts_a = poss / 100 * (lg["cur"] + A["off"] - H["def"])
-        pts_h = poss / 100 * (lg["cur"] + H["off"] - A["def"])
-        parts.append({"n": "Team-Stärke & Tempo", "m": pts_h - pts_a})
-        hca = HCA + (ALT_BONUS if TEAMS[home][0] in ("DEN", "UTA") else 0)
+        raw_a = poss / 100 * (lg["cur"] + A["off"] - H["def"])
+        raw_h = poss / 100 * (lg["cur"] + H["off"] - A["def"])
+        team_raw = raw_h - raw_a
+        tot_raw = raw_a + raw_h
+        mid = tot_raw / 2 + P["total_bias"] / 2
+        pts_h, pts_a = mid + P["team_scale"] * team_raw / 2, mid - P["team_scale"] * team_raw / 2
+        parts.append({"n": "Team-Stärke & Tempo", "m": P["team_scale"] * team_raw})
+        alt = ALT_BONUS if TEAMS[home][0] in ("DEN", "UTA") else 0.0
+        hca = P["hca"] + alt
         pts_h += hca / 2; pts_a -= hca / 2
-        parts.append({"n": "Heimvorteil" + (" inkl. Höhe" if hca > HCA else ""), "m": hca})
+        parts.append({"n": "Heimvorteil" + (" inkl. Höhe" if alt else ""), "m": hca})
         gd = _et_date(ev["commence_time"])
         inj_a = injuries.get(away, []) or injuries.get(TEAMS[away][2].title(), [])
         inj_h = injuries.get(home, []) or injuries.get(TEAMS[home][2].title(), [])
         loss_a, rows_a = injury_impact(away, TEAMS[away][0], inj_a, cur.get(away), A["w"], cur_pl, prior_pl, gd.weekday())
         loss_h, rows_h = injury_impact(home, TEAMS[home][0], inj_h, cur.get(home), H["w"], cur_pl, prior_pl, gd.weekday())
+        inj_raw = loss_a - loss_h
         if loss_a or loss_h:
-            pts_a += (loss_h - loss_a) / 2; pts_h += (loss_a - loss_h) / 2
-            parts.append({"n": "Verletzungen", "m": loss_a - loss_h,
+            d = P["inj_scale"] * inj_raw
+            pts_a -= d / 2; pts_h += d / 2
+            parts.append({"n": "Verletzungen", "m": d,
                           "info": f"{TEAMS[away][0]} −{loss_a:.1f}, {TEAMS[home][0]} −{loss_h:.1f} Punkte"})
         rest_a = (gd - last[away]).days - 1 if away in last else 2
         rest_h = (gd - last[home]).days - 1 if home in last else 2
@@ -163,6 +173,8 @@ def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events, c
         tz = TEAMS[home][1] - TEAMS[away][1]
         if tz > 0 and rest_a <= 1:
             rest += 0.3 * tz
+        rest_raw = rest
+        rest = P["rest_scale"] * rest_raw
         if rest:
             pts_h += rest / 2; pts_a -= rest / 2
             parts.append({"n": "Ruhe & Reise", "m": rest, "info": f"Ruhetage {TEAMS[away][0]} {rest_a}, {TEAMS[home][0]} {rest_h}"})
@@ -178,7 +190,7 @@ def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events, c
         if not oa or not oh:
             log(f"NBA: Teamnamen passen nicht bei {away} @ {home}")
             continue
-        p_model_h = phi(M / SD_MARGIN)
+        p_model_h = phi(M / SDM)
         mk_h = devig_power(oh["price"], oa["price"])
         sharp = h2h.get("pinnacle") or h2h.get("betfair_ex_eu")
         if sharp:
@@ -193,7 +205,7 @@ def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events, c
             mk_h = 0.5 * mk_h + 0.5 * sum(pred) / len(pred)
         whale = whales(pm, away, home) if pm else {"trades": [], "usdA": 0, "usdB": 0}
 
-        mix = lambda p, b: CONF * p + (1 - CONF) * b
+        mix = lambda p, b: CF * p + (1 - CF) * b
         bets = []
         def add(market, pick, q, p_model, p_mkt, line=None, side=None):
             p = mix(p_model, p_mkt)
@@ -207,7 +219,7 @@ def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events, c
             sa, sh = _two(s365, away, home)
             if sa and sh and sa.get("point") is not None:
                 line_h = sh["point"]                       # z. B. +2.5 für den Heim-Außenseiter
-                p_cov_h = phi((M + line_h) / SD_MARGIN)
+                p_cov_h = phi((M + line_h) / SDM)
                 m_cov_h = devig_power(sh["price"], sa["price"])
                 sp = spr.get("pinnacle")
                 if sp:
@@ -221,7 +233,7 @@ def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events, c
             o = next((x for x in t365 if x["name"] == "Over"), None)
             u = next((x for x in t365 if x["name"] == "Under"), None)
             if o and u:
-                p_over = 1 - phi((o["point"] - TOT) / SD_TOTAL)
+                p_over = 1 - phi((o["point"] - TOT) / SDT)
                 m_over = devig_power(o["price"], u["price"])
                 tp = tot.get("pinnacle")
                 if tp:
@@ -243,7 +255,9 @@ def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events, c
                         "home": {k: (round(v, 2) if isinstance(v, float) else v) for k, v in H.items()}},
             "kalshi": kal, "polymarket": ({"pA": pm["pA"], "pB": pm["pB"], "volume": round(pm["volume"])} if pm else None),
             "bookKey": bk, "bookName": BOOK_NAMES.get(bk, bk), "whales": whale, "injuries": inj, "bets": bets, "best": best,
-            "sideA": home, "pickLabel": f"{away} @ {home}",
+            "sideA": home, "pickLabel": f"{away} @ {home}", "conf": CF,
+            "feat": {"team": round(team_raw, 3), "alt": alt, "rest": round(rest_raw, 3), "inj": round(inj_raw, 3),
+                     "TOTraw": round(tot_raw, 2), "pModelRaw": round(p_model_h, 4), "pMarket": round(mk_h, 4)},
         })
     games.sort(key=lambda g: -g["best"]["ev"])
     log(f"NBA: {len(games)} Spiele bewertet")

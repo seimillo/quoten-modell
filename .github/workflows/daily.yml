@@ -2,8 +2,15 @@ name: Tägliches Update
 
 on:
   schedule:
-    - cron: "17 11 * * *"     # täglich 12:17 Uhr deutscher Winterzeit (13:17 Sommerzeit)
-  workflow_dispatch: {}        # manuell starten: Reiter „Actions“ → „Tägliches Update“ → „Run workflow“
+    - cron: "17 11 * * *"     # täglich 12:17 Uhr deutscher Winterzeit (13:17 Sommerzeit): Modelle rechnen + lernen
+    - cron: "47 21 * * *"     # täglich 22:47 Uhr: Schlussquoten kurz vor den NBA-Spielen (CLV)
+  workflow_dispatch:           # manuell starten: Reiter „Actions“ → „Tägliches Update“ → „Run workflow“
+    inputs:
+      mode:
+        description: "full = Modelle rechnen, close = nur Schlussquoten"
+        type: choice
+        options: [full, close]
+        default: full
 
 permissions:
   contents: write
@@ -28,6 +35,7 @@ jobs:
       - name: Daten holen und Modelle rechnen
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          RUN_MODE: ${{ inputs.mode || (github.event.schedule == '47 21 * * *' && 'close' || 'full') }}
         run: python -m pipeline.run
       - name: Ergebnisse speichern
         run: |

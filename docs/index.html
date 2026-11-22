@@ -70,6 +70,7 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
   <div id="whales"></div></div></section>
 <section data-view="treffer"><div class="card"><h2>Trefferliste</h2>
   <p class="hint">Jede Prognose wird bis zum Spielbeginn aktualisiert, dann eingefroren und nach dem Spiel ausgewertet.</p>
+  <div id="learn"></div>
   <div id="trk"></div></div></section>
 <section data-view="methode" class="info"><div class="card"><h2>So rechnet das Modell</h2>
   <h3>Tennis</h3>
@@ -86,7 +87,8 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
     <li><b>Heimvorteil</b> 2,2 Punkte, Denver/Utah +0,8 (Höhe).</li>
     <li><b>Ruhe & Reise:</b> zweites Spiel an zwei Tagen −1,5 (auswärts −2,0), Ruhetag-Vorteil +0,3 je Tag, Reise nach Osten −0,3 je Zeitzone.</li>
     <li><b>Wahrscheinlichkeiten:</b> Normalverteilung mit 12,5 Punkten Streuung (Differenz) und 18 Punkten (Gesamt).</li>
-    <li><b>Markt-Anker:</b> 30 % Modell, 70 % Markt (Pinnacle/Betfair bzw. angezeigter Buchmacher, beim Sieg dazu Kalshi und Polymarket zur Hälfte).</li>
+    <li><b>Lernen:</b> Jeden Tag werden alle ausgewerteten Spiele nachgerechnet (Regression des echten Ergebnisses auf die Modellteile, Log-Loss für das Modellgewicht). Die Werte bewegen sich nur in kleinen Schritten und in festen Grenzen – die aktuellen Werte stehen unter „Treffer“.</li>
+    <li><b>Markt-Anker:</b> anfangs 30 % Modell, 70 % Markt (Pinnacle/Betfair bzw. angezeigter Buchmacher, beim Sieg dazu Kalshi und Polymarket zur Hälfte).</li>
     <li><b>Verletzungen:</b> Wert pro Spieler = (BPM + 2) × Minuten/48 (BPM von Basketball-Reference, aktuelle Saison mit Vorsaison gemischt und zur Mitte gezogen, höchstens 8 Punkte). Davon wird nur abgezogen, was noch in den Team-Ratings steckt, mal der Ausfall-Wahrscheinlichkeit aus dem ESPN-Status (Out 100 %, doubtful 75 %, questionable 45 %, Day-To-Day 30 %, probable 10 %).</li>
   </ol>
   <h3>Grenzen</h3>
@@ -160,11 +162,23 @@ $("whales").innerHTML = wl.length ? wl.map(x=>`<div class="item" style="padding:
   ${x.k?`<div class="small">Kalshi: ${f(x.k.a,0)} % / ${f(x.k.b,0)} %</div>`:""}
   ${x.w && x.w.trades.length ? `<table><thead><tr><th>Einsatz auf</th><th>Betrag</th><th>Preis</th><th>Wallet</th><th>Zeit</th></tr></thead><tbody>${x.w.trades.map(t=>`<tr><td>${esc(t.team)}${t.buy?"":" <span class='small'>(Verkauf Gegenseite)</span>"}</td><td>${f(t.usd,0)} $</td><td>${f(t.price*100,0)} ¢</td><td class="small">${esc(t.wallet)}</td><td class="small">${new Date(t.ts*1000).toLocaleString("de-DE",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"})}</td></tr>`).join("")}</tbody></table>` : `<p class="small">Keine Einzeleinsätze ab 1.000 $.</p>`}</div>`).join("") : `<p class="hint">Gerade keine passenden Prognosemärkte.</p>`;
 
+const LBL = {team_scale:"Faktor Teamstärke", hca:"Heimvorteil (Punkte)", rest_scale:"Faktor Ruhe & Reise", inj_scale:"Faktor Verletzungen",
+  sd_margin:"Streuung Punktedifferenz", sd_total:"Streuung Gesamtpunkte", total_bias:"Korrektur Gesamtpunkte", conf:"Modellgewicht NBA", conf_scale:"Faktor Modellgewicht Tennis"};
+const params = await load("params.json", null);
+$("learn").innerHTML = st ? `<h3>Lernt das Modell?</h3><div class="kpis">
+  <div class="kpi"><div class="k">Schlussquote geschlagen (CLV)</div><div class="v ${cls(st.clvAvg||0)}">${st.clvAvg==null?"–":sg(st.clvAvg*100)+" %"}</div><div class="hint">${st.clvN||0} Wetten · ${st.clvPos==null?"–":pct(st.clvPos)} besser als die Schlussquote</div></div>
+  <div class="kpi"><div class="k">Brier reines Modell</div><div class="v">${f(st.brierRaw,3)}</div><div class="hint">ohne Markt-Anker</div></div></div>
+  ${(st.calibration||[]).length?`<h3>Kalibrierung</h3><table><thead><tr><th>Modell sagt</th><th>Spiele</th><th>Ø Prognose</th><th>tatsächlich</th></tr></thead><tbody>${st.calibration.map(c=>`<tr><td>${pct(c.from)}–${pct(c.to)}</td><td>${c.n}</td><td>${pct(c.pred)}</td><td>${pct(c.real)}</td></tr>`).join("")}</tbody></table>`:""}
+  ${params?`<h3>Gelernte Werte</h3><table><thead><tr><th>Wert</th><th>aktuell</th><th>Start</th></tr></thead><tbody>${[["nba","team_scale",1],["nba","hca",2.2],["nba","rest_scale",1],["nba","inj_scale",1],["nba","sd_margin",12.5],["nba","sd_total",18],["nba","total_bias",0],["nba","conf",0.3],["tennis","conf_scale",1]].map(([sp,k,d])=>`<tr><td>${LBL[k]}</td><td>${f(params[sp][k],2)}</td><td class="small">${f(d,2)}</td></tr>`).join("")}</tbody></table>
+  <p class="hint">Angepasst wird ab 40 ausgewerteten Spielen pro Sportart, jeden Tag nur ein kleines Stück. Bisher: ${(params.n&&params.n.nba)||0} NBA-Spiele, ${(params.n&&params.n.tennis)||0} Tennis-Matches.</p>
+  ${(params.history||[]).length?`<details><summary>Änderungen</summary><table><tbody>${params.history.slice(-30).reverse().map(h=>h.changes.map(c=>`<tr><td class="small">${esc(h.date)}</td><td>${LBL[c.key]||esc(c.key)}</td><td>${f(c.old,3)} → ${f(c.new,3)}</td><td class="small">Ziel ${f(c.target,2)}</td></tr>`).join("")).join("")}</tbody></table></details>`:""}`:""}
+  <p class="hint"><b>CLV</b> vergleicht deine Quote mit der fairen Quote kurz vor Spielbeginn (22:47 Uhr). Wer die Schlussquote dauerhaft schlägt, hat einen echten Vorteil – das zeigt sich nach 2–3 Wochen, Gewinn und Verlust erst nach Monaten. Ohne Vorteil liegt der CLV etwa bei minus der halben Buchmacher-Marge (rund −2 bis −3 %).</p>` : "";
+
 const rows = Object.values(picks).sort((a,b)=>String(b.commence).localeCompare(String(a.commence)));
 $("trk").innerHTML = rows.length ? `<table><thead><tr><th>Datum</th><th>Spiel</th><th>Modell</th><th>Markt</th><th>Beste Wette</th><th>Ergebnis</th></tr></thead><tbody>${rows.map(r=>`<tr>
   <td>${esc(r.date)}<div class="small">${esc(r.sport)}</div></td><td>${esc(r.match)}<div class="small">Chance für ${esc(r.sideA)}</div></td>
   <td>${pct(r.pModelA)}</td><td>${pct(r.pMarketA)}</td>
-  <td>${r.bet?`${esc(r.bet.pick)} @ ${f(r.bet.odds,2)}<div class="small">EV ${sg((r.bet.ev||0)*100)} %</div>`:"–"}</td>
+  <td>${r.bet?`${esc(r.bet.pick)} @ ${f(r.bet.odds,2)}<div class="small">EV ${sg((r.bet.ev||0)*100)} %${r.close?` · CLV <span class="${cls(r.close.clv)}">${sg(r.close.clv*100)} %</span>`:""}</div>`:"–"}</td>
   <td>${r.result?`${r.result==="A"?esc(r.sideA)+" gewinnt":"Gegner gewinnt"}<div class="small">${esc(r.score||"")} · Wette ${r.betResult==="win"?"gewonnen":r.betResult==="loss"?"verloren":"zurück"}</div>`:"offen"}</td></tr>`).join("")}</tbody></table>
   <p class="hint">Brier-Wert = Durchschnitt von (Prognose − Ergebnis)². Kleiner ist besser. Ist der Wert des Modells kleiner als der des Markts, war das Modell genauer.</p>` : `<p class="hint">Noch keine Prognosen gespeichert.</p>`;
 

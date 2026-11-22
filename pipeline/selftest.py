@@ -45,7 +45,7 @@ def patch():
     S.polymarket_events = lambda tag: [{"title": "Zverev vs. Alcaraz", "slug": "atp-zverev-alcaraz", "markets": [
         {"question": "Zverev vs. Alcaraz", "outcomes": json.dumps(["Zverev", "Alcaraz"]), "outcomePrices": json.dumps(["0.34", "0.67"]),
          "conditionId": "0xabc", "volume": "30939"}]}] if tag == "tennis" else []
-    S.polymarket_trades = lambda c, limit=500: [
+    S.polymarket_trades = lambda c, limit=1000, min_usd=1000: [
         {"proxyWallet": "0x1234567890abcdef", "side": "BUY", "size": 20000, "price": 0.67, "timestamp": NOW.timestamp(), "outcome": "Alcaraz"},
         {"proxyWallet": "0xfeedbeef00112233", "side": "BUY", "size": 100, "price": 0.34, "timestamp": NOW.timestamp(), "outcome": "Zverev"}]
     S.tennis_elo = lambda tour: {"Carlos Alcaraz": {"elo": 2194.9, "hElo": 2142.2, "cElo": None, "gElo": None},
@@ -55,6 +55,7 @@ def patch():
         "Charlotte Hornets": {"g": 14, "ortg_a": 102.76, "drtg_a": 114.83}} if season >= run.nba_season(NOW) else {
         "Atlanta Hawks": {"g": 82, "ortg_a": 116.13, "drtg_a": 113.80}, "Detroit Pistons": {"g": 82, "ortg_a": 117.70, "drtg_a": 110.10}}
     S.bbref_pace = lambda season: {"Atlanta Hawks": 102.3, "Detroit Pistons": 96.9}
+    S.bbref_players = lambda season: {("jalen duren", "DET"): {"g": 14, "mp": 420, "bpm": 2.5}}
     S.espn_injuries = lambda: {"Detroit Pistons": [{"player": "Jalen Duren", "status": "Out", "info": "Oberschenkel"}]}
     # Nach dem Patch neu binden, weil run und markets die Funktionen beim Import übernommen haben
     import pipeline.markets as M
@@ -83,6 +84,43 @@ def main():
     assert ten and ten[0]["polymarket"] and ten[0]["whales"]["trades"], "Tennis-Polymarket/Whales fehlen"
     assert picks["old1"]["result"] == "A" and picks["old1"]["betResult"] == "win", "Auswertung falsch"
     assert "nba1" in picks and "ten1" in picks, "neue Prognosen fehlen"
+    assert picks["nba1"].get("feat"), "Modellteile fehlen in der Trefferliste"
+
+    # Abendlauf: Quote bewegt sich zur empfohlenen Seite → positiver CLV
+    rec = picks["nba1"]
+    side = rec["bet"]["side"]
+    ev = FAKE["basketball_nba"][0]
+    for b in ev["bookmakers"]:
+        for m in b["markets"]:
+            for o in m["outcomes"]:
+                if m["key"] == "h2h":
+                    mine = (o["name"] == "Atlanta Hawks") == (side == "home")
+                    o["price"] = round(o["price"] * (0.9 if mine else 1.1), 2)
+    os.environ["RUN_MODE"] = "close"
+    run.main()
+    os.environ.pop("RUN_MODE")
+    picks = json.load(open(os.path.join(tmp, "picks.json")))
+    print("--- CLV:", picks["nba1"].get("close"), picks["nba1"]["bet"])
+    assert "close" in picks["nba1"], "Schlussquote fehlt"
+
+    # Kalibrierung mit erfundenen Spielen: wahrer Heimvorteil 3,5, Teamfaktor 0,8 → Werte müssen sich dorthin bewegen
+    import random
+    from .params import calibrate, load_params
+    random.seed(1)
+    fake = {}
+    for i in range(400):
+        team, rest, inj = random.gauss(0, 6), random.choice([0, 0, 2, -1.5]), random.gauss(0, 2)
+        margin = 0.8 * team + 3.5 + rest + inj + random.gauss(0, 12)
+        tot = 225 + random.gauss(0, 18)
+        h = round(tot / 2 + margin / 2); a = round(tot / 2 - margin / 2)
+        fake[f"f{i}"] = {"sport": "NBA", "result": "A" if h > a else "B", "score": f"{h}:{a}",
+                         "feat": {"team": team, "alt": 0, "rest": rest, "inj": inj, "TOTraw": 222,
+                                  "pModelRaw": 0.5, "pMarket": 0.5}}
+    P = load_params()
+    for _ in range(30):
+        P = calibrate(fake, P)
+    print("--- gelernt:", P["nba"])
+    assert P["nba"]["hca"] > 2.6 and P["nba"]["team_scale"] < 0.95 and P["nba"]["total_bias"] > 1, "Kalibrierung lernt nicht"
     print("SELBSTTEST OK")
 
 

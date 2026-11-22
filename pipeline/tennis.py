@@ -46,7 +46,8 @@ def auto_conf(e_min):
     return 0.5 if e_min >= 1900 else 0.4 if e_min >= 1700 else 0.3 if e_min >= 1500 else 0.25
 
 
-def model_matches(sport_events, elo_atp, elo_wta, pm_events, openings):
+def model_matches(sport_events, elo_atp, elo_wta, pm_events, openings, P=None):
+    scale = (P or {}).get("conf_scale", 1.0)
     out = []
     for sport_key, title, events in sport_events:
         wta = "_wta_" in sport_key
@@ -108,6 +109,8 @@ def model_matches(sport_events, elo_atp, elo_wta, pm_events, openings):
             pm = match_polymarket(pm_events, last_name(a), last_name(b))
             if pm:
                 target = 0.5 * target + 0.5 * pm["pA"] / (pm["pA"] + pm["pB"])
+            conf_base = conf
+            conf = max(0.02, min(0.85, conf_base * scale))     # gelernter Faktor aus der Kalibrierung
             p_final = conf * p_model + (1 - conf) * target
             parts.append({"n": "Markt-Anker", "pp": round(p_final - p_model, 4), "info": f"Modell {conf:.0%}, Markt {1 - conf:.0%}" + (" (inkl. Polymarket)" if pm else "")})
             bets = []
@@ -125,6 +128,7 @@ def model_matches(sport_events, elo_atp, elo_wta, pm_events, openings):
                 "polymarket": ({"pA": pm["pA"], "pB": pm["pB"], "volume": round(pm["volume"])} if pm else None),
                 "whales": whales(pm, a, b) if pm else {"trades": [], "usdA": 0, "usdB": 0},
                 "parts": parts, "bets": bets, "best": best, "sideA": a, "pickLabel": f"{a} – {b}",
+                "feat": {"pModelRaw": round(p_model, 4), "pMarket": round(target, 4), "confBase": conf_base},
             })
     out.sort(key=lambda m: -m["best"]["ev"])
     log(f"Tennis: {len(out)} Matches bewertet")
