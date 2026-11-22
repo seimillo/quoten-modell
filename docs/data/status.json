@@ -1,11 +1,11 @@
 {
- "updated": "2026-11-22T14:19:05.185019+00:00",
+ "updated": "2026-11-22T14:25:27.978127+00:00",
  "credits": {
-  "remaining": 494.0,
+  "remaining": 488.0,
   "used_now": 6.0
  },
  "stats": {
-  "total": 0,
+  "total": 8,
   "settled": 0,
   "brierModel": null,
   "brierMarket": null,
@@ -21,10 +21,18 @@
   "Basketball-Reference Ratings 2026: 30 Teams",
   "Basketball-Reference Tempo 2027: 31 Teams",
   "ESPN Verletzungen: 110 Einträge",
-  "NBA: 0 Spiele bewertet",
+  "Quoten basketball_nba: 7 Events, 7 mit Buchmacher-Quoten",
+  "Polymarket Trades 0x35e3a46e… fehlgeschlagen: 410 Client Error: Gone for url: https://data-api.polymarket.com/trades?market=0x35e3a46eea4c56646973fb71aaa058336dcdf80d5b430f33fc67d950aa7a5027&limit=500",
+  "Polymarket Trades 0x28e6cf77… fehlgeschlagen: 410 Client Error: Gone for url: https://data-api.polymarket.com/trades?market=0x28e6cf7726a9a6ec3f90b328c4c75d6067b7978eae5fe68c2419dfbd3c43bd98&limit=500",
+  "Polymarket Trades 0x779b874e… fehlgeschlagen: 410 Client Error: Gone for url: https://data-api.polymarket.com/trades?market=0x779b874ed02642638f0cd5ed1a5f9aac390dae8e3fd5690f0141f6ac1f715e16&limit=500",
+  "Polymarket Trades 0x930102d1… fehlgeschlagen: 410 Client Error: Gone for url: https://data-api.polymarket.com/trades?market=0x930102d12fc3ff4295bc6fe5595c38258ed8f64b100a2b586790137b5dbd3663&limit=500",
+  "Polymarket Trades 0x3b3748b7… fehlgeschlagen: 410 Client Error: Gone for url: https://data-api.polymarket.com/trades?market=0x3b3748b734fb393de1e14f5c3fe9ef400e123faaf9a3595361378564f8e33a7d&limit=500",
+  "Polymarket Trades 0x1d3dcde6… fehlgeschlagen: 410 Client Error: Gone for url: https://data-api.polymarket.com/trades?market=0x1d3dcde6b1f58bea1da7868a6409c8f74423ffd499f02759b043c10833edd9a5&limit=500",
+  "NBA: 7 Spiele bewertet",
   "Tennis Abstract ATP: 555 Spieler",
   "Tennis Abstract WTA: 504 Spieler",
-  "Tennis: 0 Matches bewertet",
+  "Quoten tennis_atp_finals: 1 Events, 1 mit Buchmacher-Quoten",
+  "Tennis: 1 Matches bewertet",
   "Trefferliste: 0 Prognosen ausgewertet"
  ]
 }
