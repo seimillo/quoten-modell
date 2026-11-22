@@ -1,0 +1,30 @@
+{
+ "updated": "2026-11-22T14:19:05.185019+00:00",
+ "credits": {
+  "remaining": 494.0,
+  "used_now": 6.0
+ },
+ "stats": {
+  "total": 0,
+  "settled": 0,
+  "brierModel": null,
+  "brierMarket": null,
+  "valueBets": 0,
+  "profit": 0,
+  "roi": null
+ },
+ "log": [
+  "Kalshi KXNBAGAME: 35 Events",
+  "Polymarket nba: 100 Events",
+  "Polymarket tennis: 100 Events",
+  "Basketball-Reference Ratings 2027: 30 Teams",
+  "Basketball-Reference Ratings 2026: 30 Teams",
+  "Basketball-Reference Tempo 2027: 31 Teams",
+  "ESPN Verletzungen: 110 Einträge",
+  "NBA: 0 Spiele bewertet",
+  "Tennis Abstract ATP: 555 Spieler",
+  "Tennis Abstract WTA: 504 Spieler",
+  "Tennis: 0 Matches bewertet",
+  "Trefferliste: 0 Prognosen ausgewertet"
+ ]
+}
