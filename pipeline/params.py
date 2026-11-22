@@ -12,13 +12,16 @@ import math
 
 from .common import load_json, log, now_utc, save_json
 
+VERSION = 2          # bei neuen Modellteilen: alte, noch ungelernte Werte verwerfen
 DEFAULTS = {
-    "nba": {"team_scale": 1.0, "hca": 2.2, "rest_scale": 1.0, "inj_scale": 1.0,
+    "nba": {"team_scale": 0.5, "player_scale": 0.5, "hca": 2.2, "rest_scale": 1.0, "inj_scale": 0.5,
+            "sched_scale": 1.0, "travel_scale": 0.3, "form_scale": 0.15,
             "sd_margin": 12.5, "sd_total": 18.0, "total_bias": 0.0, "conf": 0.3},
     "tennis": {"conf_scale": 1.0},
 }
 BOUNDS = {
-    "nba": {"team_scale": (0.5, 1.5), "hca": (0.0, 4.5), "rest_scale": (0.0, 2.5), "inj_scale": (0.0, 2.5),
+    "nba": {"team_scale": (0.0, 1.5), "player_scale": (0.0, 1.5), "hca": (0.0, 4.5), "rest_scale": (0.0, 2.5),
+            "inj_scale": (0.0, 2.0), "sched_scale": (0.0, 3.0), "travel_scale": (0.0, 1.5), "form_scale": (0.0, 0.6),
             "sd_margin": (10.0, 15.0), "sd_total": (14.0, 22.0), "total_bias": (-6.0, 6.0), "conf": (0.05, 0.8)},
     "tennis": {"conf_scale": (0.2, 2.0)},
 }
@@ -29,9 +32,12 @@ MAX_STEP = 0.25
 
 def load_params():
     p = load_json("params.json", {})
+    if p.get("version") != VERSION and not any(h for h in p.get("history", [])):
+        p = {}
     out = {s: {**DEFAULTS[s], **(p.get(s) or {})} for s in DEFAULTS}
     out["history"] = p.get("history", [])
     out["n"] = p.get("n", {})
+    out["version"] = VERSION
     return out
 
 
@@ -48,11 +54,14 @@ def _move(params, sport, key, target, n):
     return old, params[sport][key]
 
 
-def _lstsq(X, y):
-    """Normalgleichungen mit leichter Ridge-Regularisierung, ohne numpy-Abhängigkeit im Kern."""
-    k = len(X[0])
-    A = [[sum(r[i] * r[j] for r in X) + (1e-3 if i == j else 0) for j in range(k)] for i in range(k)]
-    b = [sum(r[i] * t for r, t in zip(X, y)) for i in range(k)]
+def _lstsq(X, y, prior=None, prior_games=40):
+    """Regression mit Ridge-Bremse Richtung der aktuellen Werte (zählt wie `prior_games` zusätzliche Spiele).
+    So bleiben stark verwandte Teile (Team-Ratings, Aufstellung, Verletzungen) stabil und seltene Teile unverändert."""
+    k, n = len(X[0]), len(X)
+    prior = prior or [0.0] * k
+    lam = [prior_games * max(1e-6, sum(r[i] ** 2 for r in X) / n) for i in range(k)]
+    A = [[sum(r[i] * r[j] for r in X) + (lam[i] if i == j else 0) for j in range(k)] for i in range(k)]
+    b = [sum(r[i] * t for r, t in zip(X, y)) + lam[i] * prior[i] for i in range(k)]
     for i in range(k):                       # Gauß-Elimination
         piv = max(range(i, k), key=lambda r: abs(A[r][i]))
         A[i], A[piv], b[i], b[piv] = A[piv], A[i], b[piv], b[i]
@@ -87,19 +96,20 @@ def calibrate(picks, params):
         for r in nba:
             f = r["feat"]
             h, a = (float(v) for v in r["score"].split(":"))
-            X.append([f["team"], 1.0, f["rest"], f["inj"]])      # Rohwerte, noch ohne gelernte Faktoren
+            X.append([f["team"], 1.0, f["rest"], f["inj"], f.get("player", 0.0), f.get("sched", 0.0),
+                      f.get("travel", 0.0), f.get("form", 0.0)])     # Rohwerte, noch ohne gelernte Faktoren
             y.append(h - a - f.get("alt", 0.0))
             tot_res.append((h + a) - f["TOTraw"])
             rows.append((f["pModelRaw"], f["pMarket"], 1 if h > a else 0))
-        cs, hca, rs, inj = _lstsq(X, y)
         cur = params["nba"]
-        pred = [cur["team_scale"] * x[0] + cur["hca"] * x[1] + cur["rest_scale"] * x[2] + cur["inj_scale"] * x[3] for x in X]
+        keys = ["team_scale", "hca", "rest_scale", "inj_scale", "player_scale", "sched_scale", "travel_scale", "form_scale"]
+        coef = _lstsq(X, y, [cur[k] for k in keys])
+        pred = [sum(cur[k] * xi for k, xi in zip(keys, x)) for x in X]
         sd_m = math.sqrt(sum((t - p) ** 2 for t, p in zip(y, pred)) / len(y))
         bias = sum(tot_res) / len(tot_res)
         sd_t = math.sqrt(sum((t - bias) ** 2 for t in tot_res) / len(tot_res))
         n = len(nba)
-        for key, tgt in (("team_scale", cs), ("hca", hca), ("rest_scale", rs), ("inj_scale", inj),
-                         ("sd_margin", sd_m), ("sd_total", sd_t), ("total_bias", bias), ("conf", _best_weight(rows))):
+        for key, tgt in (*zip(keys, coef), ("sd_margin", sd_m), ("sd_total", sd_t), ("total_bias", bias), ("conf", _best_weight(rows))):
             old, new = _move(params, "nba", key, tgt, n)
             if abs(new - old) > 1e-4:
                 changes.append({"sport": "NBA", "key": key, "old": old, "new": new, "target": round(tgt, 3)})

@@ -1,7 +1,7 @@
 """Tennis-Modell: Belag-Elo (Tennis Abstract), Best-of-5, Quotenbewegung, Markt-Anker mit Pinnacle und Prognosemärkten."""
 from .common import devig_power, elo_p, last_name, log, logit, norm, sig
 from .markets import match_polymarket, whales
-from .sources import book_prices, BOOK_NAMES, main_book
+from .sources import BOOK_NAMES, SOFT, book_prices, main_book
 
 CLAY = ("french open", "roland", "madrid", "rome", "italian", "monte carlo", "barcelona", "hamburg", "clay")
 GRASS = ("wimbledon", "queen", "halle", "grass", "eastbourne", "s hertogenbosch")
@@ -113,11 +113,22 @@ def model_matches(sport_events, elo_atp, elo_wta, pm_events, openings, P=None):
             conf = max(0.02, min(0.85, conf_base * scale))     # gelernter Faktor aus der Kalibrierung
             p_final = conf * p_model + (1 - conf) * target
             parts.append({"n": "Markt-Anker", "pp": round(p_final - p_model, 4), "info": f"Modell {conf:.0%}, Markt {1 - conf:.0%}" + (" (inkl. Polymarket)" if pm else "")})
+            from .nba import judge
             bets = []
-            for name, q, pf, pm_ in ((a, oa["price"], p_final, p_model), (b, ob["price"], 1 - p_final, 1 - p_model)):
-                bets.append({"market": "Sieg", "pick": name, "odds": q, "p": round(pf, 4), "pModel": round(pm_, 4),
-                             "ev": round(pf * q - 1, 4), "evRaw": round(pm_ * q - 1, 4), "side": "A" if name == a else "B"})
-            best = max(bets, key=lambda x: x["ev"])
+            for name, main_q, pf, pm_, pin in ((a, oa["price"], p_final, p_model, sharp_a),
+                                              (b, ob["price"], 1 - p_final, 1 - p_model,
+                                               None if sharp_a is None else 1 - sharp_a)):
+                offers = [(k, o["price"]) for k in SOFT for o in (h2h.get(k) or []) if o["name"] == name and o.get("price")]
+                book_q, q = max(offers, key=lambda x: x[1]) if offers else (bk, main_q)
+                bets.append(judge({"market": "Sieg", "pick": name, "odds": q, "book": book_q,
+                                   "bookName": BOOK_NAMES.get(book_q, book_q), "mainOdds": main_q,
+                                   "mainBook": BOOK_NAMES.get(bk, bk), "nBooks": len(offers),
+                                   "p": round(pf, 4), "pModel": round(pm_, 4),
+                                   "ev": round(pf * q - 1, 4), "evRaw": round(pm_ * q - 1, 4),
+                                   "evPin": round(pin * q - 1, 4) if pin is not None else None,
+                                   "side": "A" if name == a else "B"}))
+            vals = [x for x in bets if x["value"]]
+            best = max(vals or bets, key=lambda x: x["ev"])
             out.append({
                 "id": ev["id"], "sportKey": sport_key, "sport": "Tennis", "tour": "WTA" if wta else "ATP", "event": title,
                 "surface": surf_name, "bo5": bo5, "commence": ev["commence_time"], "a": a, "b": b,
@@ -127,9 +138,9 @@ def model_matches(sport_events, elo_atp, elo_wta, pm_events, openings, P=None):
                 "sharpA": round(sharp_a, 4) if sharp_a is not None else None,
                 "polymarket": ({"pA": pm["pA"], "pB": pm["pB"], "volume": round(pm["volume"])} if pm else None),
                 "whales": whales(pm, a, b) if pm else {"trades": [], "usdA": 0, "usdB": 0},
-                "parts": parts, "bets": bets, "best": best, "sideA": a, "pickLabel": f"{a} – {b}",
+                "parts": parts, "bets": bets, "best": best, "hasValue": bool(vals), "sideA": a, "pickLabel": f"{a} – {b}",
                 "feat": {"pModelRaw": round(p_model, 4), "pMarket": round(target, 4), "confBase": conf_base},
             })
-    out.sort(key=lambda m: -m["best"]["ev"])
+    out.sort(key=lambda m: (-m["hasValue"], -m["best"]["ev"]))
     log(f"Tennis: {len(out)} Matches bewertet")
     return out

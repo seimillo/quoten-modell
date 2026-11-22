@@ -6,7 +6,7 @@ import re
 
 import pandas as pd
 
-from .common import get, log
+from .common import UA, get, log, now_utc
 
 ODDS_BASE = "https://api.the-odds-api.com/v4"
 KALSHI_BASE = "https://api.elections.kalshi.com/trade-api/v2"
@@ -213,12 +213,115 @@ def bbref_players(season):
                 g, mp, bpm = float(r["G"]), float(r["MP"]), float(r["BPM"])
             except Exception:  # noqa: BLE001
                 continue
-            out[(player_key(r["Player"]), BBREF_ABBR.get(team, team))] = {"g": g, "mp": mp, "bpm": bpm}
+            out[(player_key(r["Player"]), BBREF_ABBR.get(team, team))] = {"g": g, "mp": mp, "bpm": bpm,
+                                                                            "name": str(r["Player"]), "order": len(out)}
         log(f"Basketball-Reference Spieler {season}: {len(out)} Einträge")
         return out
     except Exception as e:  # noqa: BLE001
         log(f"Basketball-Reference Spieler {season} fehlgeschlagen: {e}")
         return {}
+
+
+# ---------------- Offizieller NBA-Verletzungsbericht (PDF, alle 15 Minuten) ----------------
+NBA_STATUS = ("Out", "Doubtful", "Questionable", "Probable", "Available")
+
+
+def _flip_name(n):
+    """„Jaquez Jr., Jaime“ → „Jaime Jaquez Jr.“"""
+    if "," in n:
+        last, first = n.split(",", 1)
+        return f"{first.strip()} {last.strip()}"
+    return n.strip()
+
+
+def parse_nba_report(text, team_names):
+    """Text des PDFs → {Teamname: [Einträge]}, dazu die Teams mit „NOT YET SUBMITTED“."""
+    out, missing, team = {}, set(), None
+    names = sorted(team_names, key=len, reverse=True)
+    pat = re.compile(r"^(.+?,\s*[^,]+?)\s+(" + "|".join(NBA_STATUS) + r")\b\s*(.*)$")
+    for raw in text.splitlines():
+        line = raw.strip()
+        if not line or line.startswith(("Injury Report", "Page ", "Game Date")):
+            continue
+        rest = line
+        hit = None
+        for t in names:
+            i = line.rfind(t)
+            if i >= 0 and (hit is None or i > hit[1]):
+                hit = (t, i)
+        if hit:
+            team = hit[0]
+            rest = line[hit[1] + len(hit[0]):].strip()
+        if team is None:
+            continue
+        if rest.startswith("NOT YET SUBMITTED"):
+            missing.add(team)
+            continue
+        m = pat.match(rest)
+        if not m:
+            if out.get(team) and rest and not re.match(r"^\d", rest):
+                out[team][-1]["info"] = (out[team][-1]["info"] + " " + rest).strip()   # umgebrochener Grund
+            continue
+        name = _flip_name(m.group(1))
+        if any(e["player"] == name for e in out.get(team, [])):
+            continue                                     # Spieler steht schon beim früheren Spiel
+        out.setdefault(team, []).append({"player": name, "status": m.group(2), "info": m.group(3).strip(), "src": "NBA"})
+    return out, missing
+
+
+def nba_official_injuries(team_names, now=None):
+    """Neuester Bericht: von jetzt (US-Ostküstenzeit) in 15-Minuten-Schritten rückwärts suchen."""
+    import requests
+    from datetime import timedelta
+    from pypdf import PdfReader
+    now = now or now_utc()
+    et = now - timedelta(hours=5)
+    et = et.replace(minute=et.minute - et.minute % 15, second=0, microsecond=0)
+    for i in range(24):
+        t = et - timedelta(minutes=15 * i)
+        url = ("https://ak-static.cms.nba.com/referee/injury/Injury-Report_"
+               f"{t:%Y-%m-%d}_{t:%I}_{t:%M}{t:%p}.pdf")
+        try:
+            r = requests.get(url, headers=UA, timeout=20)
+        except Exception:  # noqa: BLE001
+            continue
+        if r.status_code != 200 or not r.content.startswith(b"%PDF"):
+            continue
+        try:
+            text = "\n".join(pg.extract_text() or "" for pg in PdfReader(io.BytesIO(r.content)).pages)
+            out, missing = parse_nba_report(text, team_names)
+            log(f"NBA-Verletzungsbericht {t:%d.%m. %H:%M} ET: {sum(len(v) for v in out.values())} Spieler, "
+                f"{len(missing)} Teams noch nicht gemeldet")
+            return out, missing, f"{t:%Y-%m-%d %H:%M} ET"
+        except Exception as e:  # noqa: BLE001
+            log(f"NBA-Verletzungsbericht nicht lesbar: {e}")
+            break
+    log("NBA-Verletzungsbericht nicht gefunden – nur ESPN")
+    return {}, set(), None
+
+
+# ---------------- ESPN-Spielplan (Ergebnisse für Spielplan-Faktoren und Auswertung) ----------------
+
+def espn_scoreboard(day):
+    """Alle NBA-Spiele eines Tages (US-Datum)."""
+    url = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard"
+    try:
+        data, _ = get(url, {"dates": day.strftime("%Y%m%d")})
+    except Exception as e:  # noqa: BLE001
+        log(f"ESPN-Spielplan {day} fehlgeschlagen: {e}")
+        return None
+    games = []
+    for ev in data.get("events", []):
+        comp = (ev.get("competitions") or [{}])[0]
+        cs = {c.get("homeAway"): c for c in comp.get("competitors", [])}
+        if "home" not in cs or "away" not in cs:
+            continue
+        done = bool(((ev.get("status") or {}).get("type") or {}).get("completed"))
+        games.append({"date": day.isoformat(), "start": ev.get("date"), "home": cs["home"]["team"]["displayName"],
+                      "away": cs["away"]["team"]["displayName"], "done": done, "neutral": bool(comp.get("neutralSite")),
+                      "hs": int(cs["home"].get("score") or 0) if done else None,
+                      "as": int(cs["away"].get("score") or 0) if done else None})
+    return games
 
 
 # ---------------- ESPN (NBA-Verletzungen) ----------------

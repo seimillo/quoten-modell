@@ -1,9 +1,11 @@
-"""NBA-Modell: Team-Ratings + Tempo + Heimvorteil + Ruhe/Reise, Markt-Anker mit Pinnacle und Prognosemärkten."""
-from datetime import timedelta
+"""NBA-Modell: Team-Ratings und Spieler-Aufstellung, Tempo, Heimvorteil, Ruhe/Spielplan/Reise, Form, Verletzungen.
+Markt-Anker mit Pinnacle und Prognosemärkten, beste Quote aller Buchmacher, strenge Wettauswahl mit Kelly-Einsatz."""
+import math
+from datetime import date, timedelta
 
 from .common import devig_power, log, parse_time, phi
 from .markets import match_kalshi, match_polymarket, whales
-from .sources import BOOK_NAMES, book_prices, main_book, player_key
+from .sources import BOOK_NAMES, SHARP, SOFT, book_prices, main_book, player_key
 
 TEAMS = {  # Name bei The Odds API / Basketball-Reference: (Kürzel, Zeitzone relativ zu New York, Spitzname)
     "Atlanta Hawks": ("ATL", 0, "hawks"), "Boston Celtics": ("BOS", 0, "celtics"), "Brooklyn Nets": ("BKN", 0, "nets"),
@@ -60,9 +62,31 @@ LONG_TERM = ("surgery", "re-evaluated", "weeks", "month", "season", "torn", "tea
              "stepping away", "indefinitely", "between", "return sometime")
 
 
-def out_prob(status, info, game_day):
-    """Wahrscheinlichkeit, dass der Spieler fehlt – aus ESPN-Status und Kurztext."""
+OFFICIAL_P = {"out": 1.0, "doubtful": 0.75, "questionable": 0.45, "probable": 0.1, "available": 0.0}
+
+ARENA = {  # Breiten- und Längengrad der Hallen (für Reisekilometer)
+    "ATL": (33.757, -84.396), "BOS": (42.366, -71.062), "BKN": (40.683, -73.976), "CHA": (35.225, -80.839),
+    "CHI": (41.881, -87.674), "CLE": (41.496, -81.688), "DAL": (32.790, -96.810), "DEN": (39.749, -105.008),
+    "DET": (42.341, -83.055), "GSW": (37.768, -122.388), "HOU": (29.751, -95.362), "IND": (39.764, -86.156),
+    "LAC": (33.945, -118.343), "LAL": (34.043, -118.267), "MEM": (35.138, -90.051), "MIA": (25.781, -80.188),
+    "MIL": (43.045, -87.917), "MIN": (44.979, -93.276), "NOP": (29.949, -90.082), "NYK": (40.751, -73.993),
+    "OKC": (35.463, -97.515), "ORL": (28.539, -81.384), "PHI": (39.901, -75.172), "PHX": (33.446, -112.071),
+    "POR": (45.532, -122.667), "SAC": (38.580, -121.500), "SAS": (29.427, -98.438), "TOR": (43.643, -79.379),
+    "UTA": (40.768, -111.901), "WAS": (38.898, -77.021)}
+
+
+def km(a, b):
+    (la1, lo1), (la2, lo2) = ARENA[a], ARENA[b]
+    p1, p2 = math.radians(la1), math.radians(la2)
+    d = math.sin((p2 - p1) / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(math.radians(lo2 - lo1) / 2) ** 2
+    return 2 * 6371 * math.asin(math.sqrt(d))
+
+
+def out_prob(status, info, game_day, src=None):
+    """Wahrscheinlichkeit, dass der Spieler fehlt – offizieller NBA-Status oder ESPN-Status mit Kurztext."""
     st, txt = status.lower(), info.lower()
+    if src == "NBA":
+        return OFFICIAL_P.get(st, 0.3)
     if st == "active":
         return 0.0
     if "probable" in txt:
@@ -103,7 +127,7 @@ def injury_impact(team, abbr, entries, cur_team, w, cur_pl, prior_pl, game_day):
     total, rows = 0.0, []
     team_g = max(1.0, cur_team["g"]) if cur_team else 1.0
     for e in entries:
-        po = out_prob(e.get("status", ""), e.get("info", ""), game_day)
+        po = out_prob(e.get("status", ""), e.get("info", ""), game_day, e.get("src"))
         pv = player_value(e.get("player", ""), abbr, cur_pl, prior_pl)
         row = {**e, "pOut": po}
         if pv and po > 0:
@@ -121,15 +145,143 @@ def _two(outcomes, a, b, key="name"):
     return oa, ob
 
 
-def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events, cur_pl=None, prior_pl=None, P=None):
+# ---------------- Spielerebene: heutige Aufstellung ----------------
+
+def _shrunk_bpm(c, p):
+    mp_c, mp_p = (c["mp"] if c else 0.0), (p["mp"] if p else 0.0)
+    return (mp_c * (c["bpm"] if c else 0) + 0.5 * mp_p * (p["bpm"] if p else 0) - 300) / (mp_c + 0.5 * mp_p + 300)
+
+
+def rosters(cur_pl):
+    """Aktueller Kader je Team: bei Trades zählt die letzte Zeile bei Basketball-Reference."""
+    last = {}
+    for (k, abbr), v in cur_pl.items():
+        if k not in last or v.get("order", 0) > last[k][1].get("order", 0):
+            last[k] = (abbr, v)
+    out = {}
+    for k, (abbr, v) in last.items():
+        out.setdefault(abbr, []).append((k, v))
+    return out
+
+
+def lineup_net(abbr, roster, prior_by_name, avail):
+    """Netto-Rating pro 100 Ballbesitze aus den heute verfügbaren Spielern: Σ BPM × Minuten/48 (240 Minuten)."""
+    players = []
+    for k, c in roster.get(abbr, []):
+        p = prior_by_name.get(k)
+        mpg = c["mp"] / c["g"] if c["g"] >= 3 else (min(p["mp"] / p["g"], 24.0) if p and p["g"] else c["mp"] / max(1, c["g"]))
+        players.append((k, _shrunk_bpm(c, p), mpg * (1 - avail.get(k, 0.0))))
+    if not players:
+        return None, 0.0
+    tot = sum(m for _, _, m in players)
+    scale = 240 / tot if tot > 240 else 1.0
+    net = sum(b * m * scale for _, b, m in players) / 48
+    if tot < 240:
+        net += -2.0 * (240 - tot) / 48                  # fehlende Minuten mit Ersatzniveau auffüllen
+    return net, tot
+
+
+# ---------------- Spielplan: Ruhe, Dichte, Reise, Form ----------------
+
+def team_history(games, before):
+    """{Team: [(Datum, Gastgeber, eigene Punkte, Gegner-Punkte, Gegner, heim?)]} für beendete Spiele vor `before`."""
+    out = {}
+    for g in games:
+        d = date.fromisoformat(g["date"])
+        if not g.get("done") or d >= before:
+            continue
+        h, a = canon(g["home"]), canon(g["away"])
+        out.setdefault(h, []).append((d, h, g["hs"], g["as"], a, True))
+        out.setdefault(a, []).append((d, h, g["as"], g["hs"], h, False))
+    for v in out.values():
+        v.sort()
+    return out
+
+
+def schedule(team, gd, hist, host):
+    """Ruhetage, 3-in-4 / 4-in-6, Reisekilometer seit dem letzten Spiel."""
+    h = hist.get(team, [])
+    if not h:
+        return {"rest": 2, "dens": 0, "km": 0.0, "n": 0}
+    last_d, last_host = h[-1][0], h[-1][1]
+    rest = (gd - last_d).days - 1
+    in4 = sum(1 for x in h if 1 <= (gd - x[0]).days <= 3)
+    in6 = sum(1 for x in h if 1 <= (gd - x[0]).days <= 5)
+    dens = (1 if in4 >= 2 else 0) + (1 if in6 >= 3 else 0)
+    dist = km(TEAMS[last_host][0], TEAMS[host][0]) if last_host in TEAMS and host in TEAMS else 0.0
+    weight = 1.0 if rest == 0 else 0.5 if rest == 1 else 0.0
+    return {"rest": rest, "dens": dens, "km": dist * weight, "n": len(h)}
+
+
+def form(team, hist, expect):
+    """Ø Abweichung der letzten 10 Spiele vom erwarteten Ergebnis, zur Null gezogen."""
+    res = []
+    for d, host, pf, pa, opp, home in hist.get(team, [])[-10:]:
+        e = expect(team, opp, home)
+        if e is not None:
+            res.append((pf - pa) - e)
+    return sum(res) / (len(res) + 10) if res else 0.0
+
+
+# ---------------- Wetten: beste Quote, Pinnacle-Check, Kelly ----------------
+MIN_EV, MIN_EV_NO_SHARP, KELLY_FRAC, KELLY_CAP = 0.03, 0.05, 0.25, 0.02
+
+
+def judge(b):
+    """Strenge Auswahl: EV ≥ 3 % und die Quote ist auch gegen Pinnacle fair (sonst EV ≥ 5 %). Einsatz: ¼-Kelly, max. 2 %."""
+    if b.get("evPin") is not None:
+        ok = b["ev"] >= MIN_EV and b["evPin"] >= 0
+    else:
+        ok = b["ev"] >= MIN_EV_NO_SHARP
+    b["value"] = bool(ok)
+    k = b["ev"] / (b["odds"] - 1) if b["odds"] > 1 else 0
+    b["stake"] = round(min(KELLY_CAP, KELLY_FRAC * k), 4) if ok else 0.0
+    return b
+
+
+def soft_offers(prices, name, point=None):
+    """Alle Angebote deutscher/europäischer Buchmacher für eine Seite: [(Buch, Quote, Linie)]."""
+    out = []
+    for bk in SOFT:
+        o = next((x for x in prices.get(bk) or [] if canon(x["name"]) == name), None)
+        if o and o.get("price"):
+            out.append((bk, o["price"], o.get("point")))
+    return out
+
+
+def sharp_pair(prices, n1, n2):
+    for bk in SHARP:
+        a, b = _two(prices.get(bk) or [], n1, n2)
+        if a and b:
+            return devig_power(a["price"], b["price"]), a, b
+    return None, None, None
+
+
+def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events, cur_pl=None, prior_pl=None, P=None,
+                history=None):
     cur_pl, prior_pl = cur_pl or {}, prior_pl or {}
-    P = {**{"team_scale": 1.0, "hca": HCA, "rest_scale": 1.0, "inj_scale": 1.0, "sd_margin": SD_MARGIN,
-            "sd_total": SD_TOTAL, "total_bias": 0.0, "conf": CONF}, **(P or {})}
+    P = {**{"team_scale": 0.5, "player_scale": 0.5, "hca": HCA, "rest_scale": 1.0, "inj_scale": 0.5, "sched_scale": 1.0,
+            "travel_scale": 0.3, "form_scale": 0.15, "sd_margin": SD_MARGIN, "sd_total": SD_TOTAL, "total_bias": 0.0,
+            "conf": CONF}, **(P or {})}
     SDM, SDT, CF = P["sd_margin"], P["sd_total"], P["conf"]
     lg = {"cur": sum(v["ortg_a"] for v in cur.values()) / max(1, len(cur)),
           "prior": sum(v["ortg_a"] for v in prior.values()) / max(1, len(prior)) if prior else 115.0,
           "pace": sum(pace.values()) / max(1, len(pace)) if pace else 99.0}
     last = last_games(scores)
+    ros = rosters(cur_pl)
+    prior_by_name = {}
+    for (k, _), v in prior_pl.items():
+        if k not in prior_by_name or v["mp"] > prior_by_name[k]["mp"]:
+            prior_by_name[k] = v
+    hist_all = history or []
+
+    def expect(team, opp, home):
+        T, O = rating(team, cur, prior, pace, lg), rating(opp, cur, prior, pace, lg)
+        if not T or not O:
+            return None
+        poss = T["pace"] * O["pace"] / lg["pace"]
+        return poss / 100 * ((T["off"] + T["def"]) - (O["off"] + O["def"])) + (P["hca"] if home else -P["hca"])
+
     games = []
     for ev in events:
         home, away = canon(ev["home_team"]), canon(ev["away_team"])
@@ -137,32 +289,45 @@ def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events, c
         if not H or not A or home not in TEAMS or away not in TEAMS:
             log(f"NBA: keine Ratings für {away} @ {home} – übersprungen")
             continue
+        gd = _et_date(ev["commence_time"])
+        hist = team_history(hist_all, gd)
         parts = []
         poss = A["pace"] * H["pace"] / lg["pace"]
         raw_a = poss / 100 * (lg["cur"] + A["off"] - H["def"])
         raw_h = poss / 100 * (lg["cur"] + H["off"] - A["def"])
-        team_raw = raw_h - raw_a
-        tot_raw = raw_a + raw_h
-        mid = tot_raw / 2 + P["total_bias"] / 2
-        pts_h, pts_a = mid + P["team_scale"] * team_raw / 2, mid - P["team_scale"] * team_raw / 2
-        parts.append({"n": "Team-Stärke & Tempo", "m": P["team_scale"] * team_raw})
-        alt = ALT_BONUS if TEAMS[home][0] in ("DEN", "UTA") else 0.0
-        hca = P["hca"] + alt
-        pts_h += hca / 2; pts_a -= hca / 2
-        parts.append({"n": "Heimvorteil" + (" inkl. Höhe" if alt else ""), "m": hca})
-        gd = _et_date(ev["commence_time"])
+        team_raw, tot_raw = raw_h - raw_a, raw_a + raw_h
+
+        # Verletzungen (gegen Team-Ratings) und Aufstellung (Spielerebene)
         inj_a = injuries.get(away, []) or injuries.get(TEAMS[away][2].title(), [])
         inj_h = injuries.get(home, []) or injuries.get(TEAMS[home][2].title(), [])
         loss_a, rows_a = injury_impact(away, TEAMS[away][0], inj_a, cur.get(away), A["w"], cur_pl, prior_pl, gd.weekday())
         loss_h, rows_h = injury_impact(home, TEAMS[home][0], inj_h, cur.get(home), H["w"], cur_pl, prior_pl, gd.weekday())
         inj_raw = loss_a - loss_h
+        av_a = {player_key(r["player"]): r["pOut"] for r in rows_a}
+        av_h = {player_key(r["player"]): r["pOut"] for r in rows_h}
+        net_a, min_a = lineup_net(TEAMS[away][0], ros, prior_by_name, av_a)
+        net_h, min_h = lineup_net(TEAMS[home][0], ros, prior_by_name, av_h)
+        if net_a is not None and net_h is not None:
+            player_raw = poss / 100 * (net_h - net_a)
+            ts, ps = P["team_scale"], P["player_scale"]
+        else:                                           # ohne Spielerdaten: nur Team-Ratings, voll gewichtet
+            player_raw, ts, ps = 0.0, P["team_scale"] + P["player_scale"], 0.0
+        is_ = P["inj_scale"] if ps else P["inj_scale"] + P["player_scale"]
+        parts.append({"n": "Team-Stärke & Tempo", "m": ts * team_raw, "info": f"Gewicht {ts:.2f}"})
+        if ps:
+            parts.append({"n": "Heutige Aufstellung (Spieler)", "m": ps * player_raw,
+                          "info": f"Netto {TEAMS[away][0]} {net_a:+.1f}, {TEAMS[home][0]} {net_h:+.1f} pro 100 · Gewicht {ps:.2f}"})
         if loss_a or loss_h:
-            d = P["inj_scale"] * inj_raw
-            pts_a -= d / 2; pts_h += d / 2
-            parts.append({"n": "Verletzungen", "m": d,
-                          "info": f"{TEAMS[away][0]} −{loss_a:.1f}, {TEAMS[home][0]} −{loss_h:.1f} Punkte"})
-        rest_a = (gd - last[away]).days - 1 if away in last else 2
-        rest_h = (gd - last[home]).days - 1 if home in last else 2
+            parts.append({"n": "Verletzungen (gegen Team-Ratings)", "m": is_ * inj_raw,
+                          "info": f"{TEAMS[away][0]} −{loss_a:.1f}, {TEAMS[home][0]} −{loss_h:.1f} Punkte · Gewicht {is_:.2f}"})
+        alt = ALT_BONUS if TEAMS[home][0] in ("DEN", "UTA") else 0.0
+        hca = P["hca"] + alt
+        parts.append({"n": "Heimvorteil" + (" inkl. Höhe" if alt else ""), "m": hca})
+
+        # Ruhe, Spielplan, Reise, Form
+        sa_, sh_ = schedule(away, gd, hist, home), schedule(home, gd, hist, home)
+        rest_a = sa_["rest"] if sa_["n"] else ((gd - last[away]).days - 1 if away in last else 2)
+        rest_h = sh_["rest"] if sh_["n"] else ((gd - last[home]).days - 1 if home in last else 2)
         rest = 0.0
         if rest_a == 0:
             rest += 2.0
@@ -174,29 +339,41 @@ def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events, c
         if tz > 0 and rest_a <= 1:
             rest += 0.3 * tz
         rest_raw = rest
-        rest = P["rest_scale"] * rest_raw
-        if rest:
-            pts_h += rest / 2; pts_a -= rest / 2
-            parts.append({"n": "Ruhe & Reise", "m": rest, "info": f"Ruhetage {TEAMS[away][0]} {rest_a}, {TEAMS[home][0]} {rest_h}"})
-        M, TOT = pts_h - pts_a, pts_a + pts_h
+        sched_raw = sa_["dens"] - sh_["dens"]
+        travel_raw = (sa_["km"] - sh_["km"]) / 1000
+        form_raw = form(home, hist, expect) - form(away, hist, expect)
+        r_m = P["rest_scale"] * rest_raw
+        if r_m:
+            parts.append({"n": "Ruhe & Zeitzone", "m": r_m, "info": f"Ruhetage {TEAMS[away][0]} {rest_a}, {TEAMS[home][0]} {rest_h}"})
+        if sched_raw:
+            parts.append({"n": "Spielplan-Dichte", "m": P["sched_scale"] * sched_raw,
+                          "info": f"3-in-4/4-in-6: {TEAMS[away][0]} {sa_['dens']}, {TEAMS[home][0]} {sh_['dens']}"})
+        if abs(travel_raw) > 0.05:
+            parts.append({"n": "Reise", "m": P["travel_scale"] * travel_raw,
+                          "info": f"{TEAMS[away][0]} {sa_['km']:.0f} km, {TEAMS[home][0]} {sh_['km']:.0f} km (gewichtet)"})
+        if abs(form_raw) > 0.05:
+            parts.append({"n": "Form (letzte 10)", "m": P["form_scale"] * form_raw,
+                          "info": "Abweichung vom erwarteten Ergebnis, zur Null gezogen"})
+        M = (ts * team_raw + ps * player_raw + is_ * inj_raw + hca + r_m + P["sched_scale"] * sched_raw
+             + P["travel_scale"] * travel_raw + P["form_scale"] * form_raw)
+        TOT = tot_raw + P["total_bias"]
+        pts_h, pts_a = (TOT + M) / 2, (TOT - M) / 2
 
         # ---- Quoten ----
         h2h, spr, tot = book_prices(ev, "h2h"), book_prices(ev, "spreads"), book_prices(ev, "totals")
-        bk, b365 = main_book(h2h)
-        if not b365:
+        bk, main = main_book(h2h)
+        if not main:
             log(f"NBA: keine Quoten für {away} @ {home}")
             continue
-        oa, oh = _two(b365, away, home)
+        oa, oh = _two(main, away, home)
         if not oa or not oh:
             log(f"NBA: Teamnamen passen nicht bei {away} @ {home}")
             continue
         p_model_h = phi(M / SDM)
         mk_h = devig_power(oh["price"], oa["price"])
-        sharp = h2h.get("pinnacle") or h2h.get("betfair_ex_eu")
-        if sharp:
-            sa, sh = _two(sharp, away, home)
-            if sa and sh:
-                mk_h = devig_power(sh["price"], sa["price"])
+        pin_h, _, _ = sharp_pair(h2h, home, away)
+        if pin_h is not None:
+            mk_h = pin_h
         ab_a, ab_h = TEAMS[away][0], TEAMS[home][0]
         kal = match_kalshi(kalshi, ab_a, ab_h, TEAMS[away][2], TEAMS[home][2])
         pm = match_polymarket(pm_events, TEAMS[away][2], TEAMS[home][2])
@@ -207,44 +384,66 @@ def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events, c
 
         mix = lambda p, b: CF * p + (1 - CF) * b
         bets = []
-        def add(market, pick, q, p_model, p_mkt, line=None, side=None):
-            p = mix(p_model, p_mkt)
-            bets.append({"market": market, "pick": pick, "odds": q, "line": line, "side": side,
-                         "pModel": round(p_model, 4), "pMarket": round(p_mkt, 4), "p": round(p, 4),
-                         "ev": round(p * q - 1, 4), "evRaw": round(p_model * q - 1, 4)})
-        add("Sieg", away, oa["price"], 1 - p_model_h, 1 - mk_h, side="away")
-        add("Sieg", home, oh["price"], p_model_h, mk_h, side="home")
-        s365 = spr.get(bk)
-        if s365:
-            sa, sh = _two(s365, away, home)
-            if sa and sh and sa.get("point") is not None:
-                line_h = sh["point"]                       # z. B. +2.5 für den Heim-Außenseiter
-                p_cov_h = phi((M + line_h) / SDM)
-                m_cov_h = devig_power(sh["price"], sa["price"])
-                sp = spr.get("pinnacle")
-                if sp:
-                    pa_, ph_ = _two(sp, away, home)
-                    if pa_ and ph_ and ph_.get("point") == line_h:
-                        m_cov_h = devig_power(ph_["price"], pa_["price"])
-                add("Handicap", f"{away} {sa['point']:+g}", sa["price"], 1 - p_cov_h, 1 - m_cov_h, line=sa["point"], side="away")
-                add("Handicap", f"{home} {line_h:+g}", sh["price"], p_cov_h, m_cov_h, line=line_h, side="home")
-        t365 = tot.get(bk)
-        if t365:
-            o = next((x for x in t365 if x["name"] == "Over"), None)
-            u = next((x for x in t365 if x["name"] == "Under"), None)
-            if o and u:
-                p_over = 1 - phi((o["point"] - TOT) / SDT)
-                m_over = devig_power(o["price"], u["price"])
-                tp = tot.get("pinnacle")
-                if tp:
-                    po = next((x for x in tp if x["name"] == "Over"), None)
-                    pu = next((x for x in tp if x["name"] == "Under"), None)
-                    if po and pu and po.get("point") == o["point"]:
-                        m_over = devig_power(po["price"], pu["price"])
-                add("Gesamtpunkte", f"Über {o['point']:g}", o["price"], p_over, m_over, line=o["point"], side="over")
-                add("Gesamtpunkte", f"Unter {u['point']:g}", u["price"], 1 - p_over, 1 - m_over, line=u["point"], side="under")
-        best = max(bets, key=lambda b: b["ev"])
-        inj = {"away": rows_a, "home": rows_h}
+
+        def add(market, pick, offers, p_model_fn, p_mkt_fn, p_pin_fn, side):
+            """Bewertet jedes Angebot (Buch, Quote, Linie) und behält das mit dem höchsten EV."""
+            best = None
+            for book, q, line in offers:
+                pm_, pk_ = p_model_fn(line), p_mkt_fn(line)
+                if pm_ is None or pk_ is None:
+                    continue
+                p = mix(pm_, pk_)
+                ev_ = p * q - 1
+                if best is None or ev_ > best["ev"]:
+                    pp = p_pin_fn(line)
+                    best = {"market": market, "pick": pick(line), "odds": q, "line": line, "side": side, "book": book,
+                            "bookName": BOOK_NAMES.get(book, book), "pModel": round(pm_, 4), "pMarket": round(pk_, 4),
+                            "p": round(p, 4), "ev": round(ev_, 4), "evRaw": round(pm_ * q - 1, 4),
+                            "evPin": round(pp * q - 1, 4) if pp is not None else None,
+                            "pPin": round(pp, 4) if pp is not None else None}
+            if best:
+                main_q = next((q for b_, q, _ in offers if b_ == bk), None)
+                best["mainOdds"], best["mainBook"] = main_q, BOOK_NAMES.get(bk, bk)
+                best["nBooks"] = len(offers)
+                bets.append(judge(best))
+
+        # Sieg
+        add("Sieg", lambda l: away, soft_offers(h2h, away), lambda l: 1 - p_model_h, lambda l: 1 - mk_h,
+            lambda l: None if pin_h is None else 1 - pin_h, "away")
+        add("Sieg", lambda l: home, soft_offers(h2h, home), lambda l: p_model_h, lambda l: mk_h,
+            lambda l: pin_h, "home")
+
+        # Handicap: Marktwahrscheinlichkeit an jeder Linie über die Normalverteilung umgerechnet
+        ref_bk = next((b_ for b_ in SHARP + [bk] + SOFT if _two(spr.get(b_) or [], away, home)[1]), None)
+        if ref_bk:
+            ra, rh = _two(spr[ref_bk], away, home)
+            if ra and rh and rh.get("point") is not None:
+                z_h = _z(devig_power(rh["price"], ra["price"]))
+                lh0 = rh["point"]
+                cov_h_mkt = lambda lh: phi(z_h + (lh - lh0) / SDM)
+                pin_ok = ref_bk in SHARP
+                add("Handicap", lambda l: f"{away} {l:+g}", soft_offers(spr, away), lambda l: 1 - phi((M - l) / SDM),
+                    lambda l: 1 - cov_h_mkt(-l), (lambda l: 1 - cov_h_mkt(-l)) if pin_ok else (lambda l: None), "away")
+                add("Handicap", lambda l: f"{home} {l:+g}", soft_offers(spr, home), lambda l: phi((M + l) / SDM),
+                    lambda l: cov_h_mkt(l), (lambda l: cov_h_mkt(l)) if pin_ok else (lambda l: None), "home")
+
+        # Gesamtpunkte
+        ref_bk = next((b_ for b_ in SHARP + [bk] + SOFT if _two(tot.get(b_) or [], "Over", "Under")[0]), None)
+        if ref_bk:
+            ro, ru = _two(tot[ref_bk], "Over", "Under")
+            if ro and ru and ro.get("point") is not None:
+                z_o, t0 = _z(devig_power(ro["price"], ru["price"])), ro["point"]
+                over_mkt = lambda t: phi(z_o - (t - t0) / SDT)
+                pin_ok = ref_bk in SHARP
+                add("Gesamtpunkte", lambda l: f"Über {l:g}", soft_offers(tot, "Over"), lambda l: 1 - phi((l - TOT) / SDT),
+                    over_mkt, over_mkt if pin_ok else (lambda l: None), "over")
+                add("Gesamtpunkte", lambda l: f"Unter {l:g}", soft_offers(tot, "Under"), lambda l: phi((l - TOT) / SDT),
+                    lambda l: 1 - over_mkt(l), (lambda l: 1 - over_mkt(l)) if pin_ok else (lambda l: None), "under")
+
+        if not bets:
+            continue
+        values = [b for b in bets if b["value"]]
+        best = max(values or bets, key=lambda b: b["ev"])
         games.append({
             "id": ev["id"], "sportKey": "basketball_nba", "sport": "NBA", "commence": ev["commence_time"], "away": away, "home": home,
             "abbrA": ab_a, "abbrH": ab_h, "margin": round(M, 1), "total": round(TOT, 1), "poss": round(poss, 1),
@@ -253,12 +452,22 @@ def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events, c
             "parts": [{**x, "m": round(x["m"], 1)} for x in parts],
             "ratings": {"away": {k: (round(v, 2) if isinstance(v, float) else v) for k, v in A.items()},
                         "home": {k: (round(v, 2) if isinstance(v, float) else v) for k, v in H.items()}},
+            "lineup": {"away": {"net": None if net_a is None else round(net_a, 1), "min": round(min_a)},
+                       "home": {"net": None if net_h is None else round(net_h, 1), "min": round(min_h)}},
+            "schedule": {"away": sa_, "home": sh_},
             "kalshi": kal, "polymarket": ({"pA": pm["pA"], "pB": pm["pB"], "volume": round(pm["volume"])} if pm else None),
-            "bookKey": bk, "bookName": BOOK_NAMES.get(bk, bk), "whales": whale, "injuries": inj, "bets": bets, "best": best,
+            "bookKey": bk, "bookName": BOOK_NAMES.get(bk, bk), "whales": whale, "injuries": {"away": rows_a, "home": rows_h},
+            "bets": bets, "best": best, "hasValue": bool(values),
             "sideA": home, "pickLabel": f"{away} @ {home}", "conf": CF,
-            "feat": {"team": round(team_raw, 3), "alt": alt, "rest": round(rest_raw, 3), "inj": round(inj_raw, 3),
+            "feat": {"team": round(team_raw, 3), "player": round(player_raw, 3), "alt": alt, "rest": round(rest_raw, 3),
+                     "inj": round(inj_raw, 3), "sched": sched_raw, "travel": round(travel_raw, 3), "form": round(form_raw, 3),
                      "TOTraw": round(tot_raw, 2), "pModelRaw": round(p_model_h, 4), "pMarket": round(mk_h, 4)},
         })
-    games.sort(key=lambda g: -g["best"]["ev"])
-    log(f"NBA: {len(games)} Spiele bewertet")
+    games.sort(key=lambda g: (-g["hasValue"], -g["best"]["ev"]))
+    log(f"NBA: {len(games)} Spiele bewertet, {sum(g['hasValue'] for g in games)} mit Value-Wette")
     return games
+
+
+def _z(p):
+    from statistics import NormalDist
+    return NormalDist().inv_cdf(min(0.999, max(0.001, p)))

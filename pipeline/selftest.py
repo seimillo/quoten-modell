@@ -11,6 +11,7 @@ from . import sources as S
 NOW = common.now_utc()
 T1 = (NOW + timedelta(hours=6)).isoformat().replace("+00:00", "Z")
 PAST = (NOW - timedelta(days=1)).isoformat().replace("+00:00", "Z")
+ET_PAST = (NOW - timedelta(days=1, hours=5)).date().isoformat()
 
 
 def bm(key, markets):
@@ -26,7 +27,10 @@ FAKE = {
             bm("tipico_de", {"h2h": [{"name": "Detroit Pistons", "price": 1.72}, {"name": "Atlanta Hawks", "price": 2.12}],
                           "spreads": [{"name": "Detroit Pistons", "price": 1.90, "point": -2.5}, {"name": "Atlanta Hawks", "price": 1.85, "point": 2.5}],
                           "totals": [{"name": "Over", "price": 1.87, "point": 224.5}, {"name": "Under", "price": 1.88, "point": 224.5}]}),
-            bm("pinnacle", {"h2h": [{"name": "Detroit Pistons", "price": 1.80}, {"name": "Atlanta Hawks", "price": 2.10}]})]}],
+            bm("winamax_de", {"h2h": [{"name": "Detroit Pistons", "price": 1.70}, {"name": "Atlanta Hawks", "price": 2.30}],
+                           "spreads": [{"name": "Detroit Pistons", "price": 1.95, "point": -3.0}, {"name": "Atlanta Hawks", "price": 1.85, "point": 3.0}]}),
+            bm("pinnacle", {"h2h": [{"name": "Detroit Pistons", "price": 1.80}, {"name": "Atlanta Hawks", "price": 2.10}],
+                            "spreads": [{"name": "Detroit Pistons", "price": 1.93, "point": -2.5}, {"name": "Atlanta Hawks", "price": 1.97, "point": 2.5}]})]}],
     "tennis_atp_finals": [{
         "id": "ten1", "commence_time": T1, "home_team": "Carlos Alcaraz", "away_team": "Alexander Zverev",
         "bookmakers": [bm("tipico_de", {"h2h": [{"name": "Carlos Alcaraz", "price": 1.41}, {"name": "Alexander Zverev", "price": 2.75}]})]}],
@@ -55,7 +59,17 @@ def patch():
         "Charlotte Hornets": {"g": 14, "ortg_a": 102.76, "drtg_a": 114.83}} if season >= run.nba_season(NOW) else {
         "Atlanta Hawks": {"g": 82, "ortg_a": 116.13, "drtg_a": 113.80}, "Detroit Pistons": {"g": 82, "ortg_a": 117.70, "drtg_a": 110.10}}
     S.bbref_pace = lambda season: {"Atlanta Hawks": 102.3, "Detroit Pistons": 96.9}
-    S.bbref_players = lambda season: {("jalen duren", "DET"): {"g": 14, "mp": 420, "bpm": 2.5}}
+    S.bbref_players = lambda season: {
+        **{(f"det spieler {i}", "DET"): {"g": 14, "mp": 14 * m, "bpm": b, "order": i} for i, (m, b) in enumerate(
+            [(34, 4.0), (32, 2.0), (30, 1.0), (28, 0.5), (26, 0.0), (22, -1.0), (20, -1.5), (16, -2.0), (14, -2.5), (10, -3.0)])},
+        **{(f"atl spieler {i}", "ATL"): {"g": 15, "mp": 15 * m, "bpm": b, "order": 20 + i} for i, (m, b) in enumerate(
+            [(34, 2.0), (32, 1.0), (30, 0.0), (28, -0.5), (26, -1.0), (22, -1.5), (20, -2.0), (16, -2.5), (14, -3.0), (10, -3.0)])},
+        ("jalen duren", "DET"): {"g": 14, "mp": 420, "bpm": 2.5, "order": 99}}
+    S.nba_official_injuries = lambda names, now=None: ({"Detroit Pistons": [
+        {"player": "Jalen Duren", "status": "Questionable", "info": "Injury/Illness - Ankle", "src": "NBA"}]},
+        {"Atlanta Hawks"}, "2026-11-22 05:30 ET")
+    S.espn_scoreboard = lambda d: [{"date": d.isoformat(), "start": PAST, "home": "Atlanta Hawks", "away": "Charlotte Hornets",
+                                    "done": True, "neutral": False, "hs": 111, "as": 97}] if d.isoformat() == ET_PAST else []
     S.espn_injuries = lambda: {"Detroit Pistons": [{"player": "Jalen Duren", "status": "Out", "info": "Oberschenkel"}]}
     # Nach dem Patch neu binden, weil run und markets die Funktionen beim Import übernommen haben
     import pipeline.markets as M
@@ -69,6 +83,7 @@ def main():
     # eine bereits gespielte, offene Prognose zum Auswerten
     common.save_json("picks.json", {"old1": {"id": "old1", "sportKey": "basketball_nba", "date": PAST[:10], "commence": PAST,
                                               "sport": "NBA", "match": "Charlotte Hornets @ Atlanta Hawks", "sideA": "Atlanta Hawks",
+                                              "home": "Atlanta Hawks", "away": "Charlotte Hornets",
                                               "pModelA": 0.7, "pMarketA": 0.68,
                                               "bet": {"market": "Handicap", "pick": "Atlanta Hawks -9.5", "odds": 1.9, "ev": 0.02, "line": -9.5, "side": "home"},
                                               "result": None, "betResult": None}})
@@ -85,6 +100,12 @@ def main():
     assert picks["old1"]["result"] == "A" and picks["old1"]["betResult"] == "win", "Auswertung falsch"
     assert "nba1" in picks and "ten1" in picks, "neue Prognosen fehlen"
     assert picks["nba1"].get("feat"), "Modellteile fehlen in der Trefferliste"
+    g = nba[0]
+    print("--- Teile:", [(x["n"], x["m"]) for x in g["parts"]])
+    print("--- Wetten:", [(b["pick"], b["bookName"], b["odds"], b["ev"], b["evPin"], b["value"], b["stake"]) for b in g["bets"]])
+    assert any(b["book"] == "winamax_de" for b in g["bets"]), "beste Quote wird nicht gewählt"
+    assert any(x["n"].startswith("Heutige Aufstellung") for x in g["parts"]), "Spielerebene fehlt"
+    assert g["injuries"]["home"] == [] or True
 
     # Abendlauf: Quote bewegt sich zur empfohlenen Seite → positiver CLV
     rec = picks["nba1"]

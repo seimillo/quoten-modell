@@ -17,8 +17,8 @@ def update_picks(picks, items):
         if rec.get("result"):
             continue
         b = it["best"]
-        bet = {k: b.get(k) for k in ("market", "pick", "odds", "ev", "line", "side")}
-        bet["book"] = it.get("bookKey") or (it.get("book") or {}).get("key")
+        bet = {k: b.get(k) for k in ("market", "pick", "odds", "ev", "line", "side", "book", "bookName", "value", "stake", "evPin")}
+        bet["book"] = bet.get("book") or it.get("bookKey") or (it.get("book") or {}).get("key")
         if rec.get("bet") != bet:
             rec.pop("close", None)                       # neue Empfehlung → alte Schlussquote gilt nicht mehr
         rec.update({
@@ -81,15 +81,24 @@ def stats(picks):
         if not done:
             return None
         return sum(((r.get(key) or 0) - (1 if r["result"] == "A" else 0)) ** 2 for r in done) / len(done)
-    vb = [r for r in picks.values() if r.get("betResult") and (r.get("bet") or {}).get("ev", 0) > 0]
-    profit = sum(10 * (r["bet"]["odds"] - 1) if r["betResult"] == "win" else -10 if r["betResult"] == "loss" else 0 for r in vb)
+    def is_value(r):
+        b = r.get("bet") or {}
+        return b["value"] if "value" in b else b.get("ev", 0) > 0     # alte Einträge: EV > 0
+    vb = [r for r in picks.values() if r.get("betResult") and is_value(r)]
+    ret = lambda r, st: st * (r["bet"]["odds"] - 1) if r["betResult"] == "win" else -st if r["betResult"] == "loss" else 0
+    profit = sum(ret(r, 10) for r in vb)
+    kb = [r for r in vb if (r.get("bet") or {}).get("stake")]
+    kelly = sum(ret(r, r["bet"]["stake"]) for r in kb)            # in Anteilen der Kasse
+    clv_v = [r["close"]["clv"] for r in picks.values() if r.get("close") and is_value(r)]
     clv = [r["close"]["clv"] for r in picks.values() if r.get("close")]
     return {"total": len(picks), "settled": len(done), "brierModel": brier("pModelA"), "brierMarket": brier("pMarketA"),
             "brierRaw": brier("pModelRaw") if all(r.get("pModelRaw") is not None for r in done) else None,
             "clvN": len(clv), "clvAvg": round(sum(clv) / len(clv), 4) if clv else None,
             "clvPos": round(sum(1 for c in clv if c > 0) / len(clv), 3) if clv else None,
             "calibration": calibration(picks),
-            "valueBets": len(vb), "profit": round(profit, 2), "roi": round(profit / (10 * len(vb)), 4) if vb else None}
+            "clvValueN": len(clv_v), "clvValueAvg": round(sum(clv_v) / len(clv_v), 4) if clv_v else None,
+            "valueBets": len(vb), "profit": round(profit, 2), "roi": round(profit / (10 * len(vb)), 4) if vb else None,
+            "kellyBets": len(kb), "kellyGrowth": round(kelly, 4)}
 
 
 # ---------------- Schlussquote (Closing Line Value) ----------------
