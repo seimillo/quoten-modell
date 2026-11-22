@@ -61,7 +61,7 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
   <p class="muted" id="stand">Lade Daten …</p>
   <div class="kpis" id="kpis"></div>
   <div class="card"><h2>Höchste Erwartungswerte</h2><div id="top"></div>
-  <p class="hint">Erwartungswert (EV) = Chance × Quote − 1 bei bet365. Die Chance ist eine Mischung aus Modell und Markt (Markt-Anker), darum sind die Werte bewusst vorsichtig.</p></div>
+  <p class="hint">Erwartungswert (EV) = Chance × Quote − 1 beim angezeigten Buchmacher (bevorzugt Tipico, sonst Winamax, William Hill, Betsson …). Die Chance ist eine Mischung aus Modell und Markt (Markt-Anker), darum sind die Werte bewusst vorsichtig.</p></div>
 </section>
 <section data-view="tennis"><div class="card"><h2>Tennis</h2><div id="tennisList"></div></div></section>
 <section data-view="nba"><div class="card"><h2>NBA</h2><div id="nbaList"></div></div></section>
@@ -77,7 +77,7 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
     <li><b>Stärke:</b> Belag-Elo von Tennis Abstract (hElo/cElo/gElo – dort schon 50:50 mit der Gesamt-Elo gemischt). Belag aus dem Turniernamen, sonst Hartplatz.</li>
     <li><b>Best of 5</b> bei Grand Slams der Männer (Umrechnung über die Satz-Chance).</li>
     <li><b>Quotenbewegung:</b> Das Modell folgt der Bewegung seit dem ersten Abruf zur Hälfte.</li>
-    <li><b>Markt-Anker:</b> Mischung mit dem genauesten verfügbaren Markt (Pinnacle bzw. Betfair, sonst bet365; dazu Polymarket zur Hälfte). Gewicht des Modells: Elo ab 1900 → 50 %, ab 1700 → 40 %, ab 1500 → 30 %, darunter 25 %, ohne Elo 10 %.</li>
+    <li><b>Markt-Anker:</b> Mischung mit dem genauesten verfügbaren Markt (Pinnacle bzw. Betfair, sonst der angezeigte Buchmacher; dazu Polymarket zur Hälfte). Gewicht des Modells: Elo ab 1900 → 50 %, ab 1700 → 40 %, ab 1500 → 30 %, darunter 25 %, ohne Elo 10 %.</li>
   </ol>
   <h3>NBA</h3>
   <ol>
@@ -86,13 +86,13 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
     <li><b>Heimvorteil</b> 2,2 Punkte, Denver/Utah +0,8 (Höhe).</li>
     <li><b>Ruhe & Reise:</b> zweites Spiel an zwei Tagen −1,5 (auswärts −2,0), Ruhetag-Vorteil +0,3 je Tag, Reise nach Osten −0,3 je Zeitzone.</li>
     <li><b>Wahrscheinlichkeiten:</b> Normalverteilung mit 12,5 Punkten Streuung (Differenz) und 18 Punkten (Gesamt).</li>
-    <li><b>Markt-Anker:</b> 30 % Modell, 70 % Markt (Pinnacle/Betfair bzw. bet365, beim Sieg dazu Kalshi und Polymarket zur Hälfte).</li>
+    <li><b>Markt-Anker:</b> 30 % Modell, 70 % Markt (Pinnacle/Betfair bzw. angezeigter Buchmacher, beim Sieg dazu Kalshi und Polymarket zur Hälfte).</li>
     <li><b>Verletzungen</b> werden angezeigt, aber nicht automatisch eingerechnet – dafür fehlt ein frei verfügbarer Wert pro Spieler. Der Markt preist sie meist schnell ein.</li>
   </ol>
   <h3>Grenzen</h3>
   <p>Die Gewichte sind begründete Schätzungen, nicht an alten Spielen getestet. Die Trefferliste zeigt nach ein paar hundert Spielen, ob das Modell genauer ist als der Markt (Brier-Wert). Bis dahin: Lern- und Analyseprojekt, keine Wettempfehlung.</p>
   <h3>Quellen</h3>
-  <p class="hint">Quoten: The Odds API (bet365, Pinnacle, Betfair) · Elo: Tennis Abstract · NBA-Ratings: Basketball-Reference · Verletzungen: ESPN · Prognosemärkte: Kalshi und Polymarket (öffentliche Schnittstellen)</p>
+  <p class="hint">Quoten: The Odds API (Tipico, Winamax, William Hill, Betsson, Unibet, 888sport u. a., dazu Pinnacle und Betfair; bet365 bietet die Schnittstelle nicht an) · Elo: Tennis Abstract · NBA-Ratings: Basketball-Reference · Verletzungen: ESPN · Prognosemärkte: Kalshi und Polymarket (öffentliche Schnittstellen)</p>
 </div></section>
 </main>
 <footer>Analyse- und Lernprojekt, keine Wettempfehlung. Wetten erst ab 18 · Hilfe: check-dein-spiel.de · 0800 1 37 27 00</footer>
@@ -118,7 +118,7 @@ $("kpis").innerHTML = st ? `
 
 function tag(b){ return b.ev>0 ? `<span class="tag good">${esc(b.pick)} ${sg(b.ev*100)} %</span>` : `<span class="tag none">kein Value</span>`; }
 function betsTable(bets){
-  return `<table><thead><tr><th>Wette</th><th>bet365</th><th>Modell</th><th>Gemischt</th><th>EV</th></tr></thead><tbody>${bets.map(b=>`<tr><td>${esc(b.market)}<div class="small">${esc(b.pick)}</div></td><td>${f(b.odds,2)}</td><td>${pct(b.pModel)}</td><td>${pct(b.p)}</td><td class="${cls(b.ev)}">${sg(b.ev*100)} %<div class="small">rein: ${sg(b.evRaw*100)} %</div></td></tr>`).join("")}</tbody></table>`;
+  return `<table><thead><tr><th>Wette</th><th>Quote</th><th>Modell</th><th>Gemischt</th><th>EV</th></tr></thead><tbody>${bets.map(b=>`<tr><td>${esc(b.market)}<div class="small">${esc(b.pick)}</div></td><td>${f(b.odds,2)}</td><td>${pct(b.pModel)}</td><td>${pct(b.p)}</td><td class="${cls(b.ev)}">${sg(b.ev*100)} %<div class="small">rein: ${sg(b.evRaw*100)} %</div></td></tr>`).join("")}</tbody></table>`;
 }
 function whaleLine(w, nA, nB){
   if(!w || (!w.usdA && !w.usdB)) return "";
@@ -128,12 +128,12 @@ function tennisCard(m){
   const parts = m.parts.map(p=>`<tr><td>${esc(p.n)}<div class="small">${esc(p.info||"")}</div></td><td>${p.pp===null?"–":sg(p.pp*100)+" Pkt."}</td></tr>`).join("");
   return `<details class="item"><summary><div><div class="small">${esc(m.tour)} · ${esc(m.event)} · ${esc(m.surface)} · ${when(m.commence)}</div>
     <div class="t">${esc(m.a)} – ${esc(m.b)}</div>
-    <div class="small">bet365 ${f(m.book.qa,2)} / ${f(m.book.qb,2)} · Modell ${pct(m.pModelA)} · Markt ${pct(m.pMarketA)}${m.polymarket?` · Polymarket ${pct(m.polymarket.pA)}`:""}</div>
+    <div class="small">${esc(m.book.name||'Quote')} ${f(m.book.qa,2)} / ${f(m.book.qb,2)} · Modell ${pct(m.pModelA)} · Markt ${pct(m.pMarketA)}${m.polymarket?` · Polymarket ${pct(m.polymarket.pA)}`:""}</div>
     ${whaleLine(m.whales, m.a, m.b)}</div>${tag(m.best)}</summary>
     <div class="body"><h3>Wie die Chance für ${esc(m.a)} entsteht</h3><table><tbody>
       <tr><td><b>Basis</b><div class="small">${m.kind==="elo"?"Elo-Formel":"Markt (keine Elo)"}</div></td><td><b>${pct(m.base,1)}</b></td></tr>${parts}
       <tr><td><b>Ergebnis</b></td><td><b>${pct(m.pFinalA,1)}</b></td></tr></tbody></table>
-      <h3>Wetten</h3>${betsTable(m.bets)}</div></details>`;
+      <h3>Wetten <span class="small">(Quoten: ${esc(m.book.name||"")})</span></h3>${betsTable(m.bets)}</div></details>`;
 }
 function nbaCard(g){
   const parts = g.parts.map(p=>`<tr><td>${esc(p.n)}<div class="small">${esc(p.info||"")}</div></td><td>${sg(p.m)}</td></tr>`).join("");
@@ -145,7 +145,7 @@ function nbaCard(g){
     ${whaleLine(g.whales, g.away, g.home)}</div>${tag(g.best)}</summary>
     <div class="body"><h3>Punktdifferenz ${esc(g.abbrH)}</h3><table><tbody>${parts}
       <tr><td><b>Ergebnis</b><div class="small">${esc(g.abbrA)} ${f(g.ptsA)} : ${f(g.ptsH)} ${esc(g.abbrH)} · ${f(g.poss)} Ballbesitze</div></td><td><b>${sg(g.margin)}</b></td></tr></tbody></table>
-      <h3>Wetten</h3>${betsTable(g.bets)}
+      <h3>Wetten <span class="small">(Quoten: ${esc(g.bookName||"")})</span></h3>${betsTable(g.bets)}
       <h3>Verletzungen (ESPN)</h3><p class="small">${esc(g.abbrA)}: ${inj("away")}<br>${esc(g.abbrH)}: ${inj("home")}</p></div></details>`;
 }
 $("tennisList").innerHTML = tennis.length ? tennis.map(tennisCard).join("") : `<p class="hint">Gerade keine ATP-/WTA-Matches mit Quoten. Challenger-Turniere deckt The Odds API nicht ab.</p>`;

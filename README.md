@@ -8,7 +8,7 @@ Buchmacher-Quoten (Erwartungswert). Eine Trefferliste prüft im Nachhinein, ob d
 
 ## Was automatisch passiert
 Jeden Tag um 12:17 Uhr (Winterzeit) läuft `.github/workflows/daily.yml`:
-1. Quoten von bet365, Pinnacle und Betfair über **The Odds API**
+1. Quoten von Tipico, Winamax, William Hill & Co. sowie Pinnacle und Betfair (bet365 gibt es bei der Schnittstelle nicht) über **The Odds API**
 2. Elo-Werte von **Tennis Abstract**, Team-Ratings und Tempo von **Basketball-Reference**, Verletzungen von **ESPN**
 3. Preise von **Kalshi** und **Polymarket**, dazu Großeinsätze ab 1.000 $ auf Polymarket („Großes Geld“)
 4. Modelle rechnen, Prognosen speichern, vergangene Spiele auswerten

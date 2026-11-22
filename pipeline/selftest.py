@@ -23,13 +23,13 @@ FAKE = {
     "basketball_nba": [{
         "id": "nba1", "commence_time": T1, "home_team": "Atlanta Hawks", "away_team": "Detroit Pistons",
         "bookmakers": [
-            bm("bet365", {"h2h": [{"name": "Detroit Pistons", "price": 1.72}, {"name": "Atlanta Hawks", "price": 2.12}],
+            bm("tipico_de", {"h2h": [{"name": "Detroit Pistons", "price": 1.72}, {"name": "Atlanta Hawks", "price": 2.12}],
                           "spreads": [{"name": "Detroit Pistons", "price": 1.90, "point": -2.5}, {"name": "Atlanta Hawks", "price": 1.85, "point": 2.5}],
                           "totals": [{"name": "Over", "price": 1.87, "point": 224.5}, {"name": "Under", "price": 1.88, "point": 224.5}]}),
             bm("pinnacle", {"h2h": [{"name": "Detroit Pistons", "price": 1.80}, {"name": "Atlanta Hawks", "price": 2.10}]})]}],
     "tennis_atp_finals": [{
         "id": "ten1", "commence_time": T1, "home_team": "Carlos Alcaraz", "away_team": "Alexander Zverev",
-        "bookmakers": [bm("bet365", {"h2h": [{"name": "Carlos Alcaraz", "price": 1.41}, {"name": "Alexander Zverev", "price": 2.75}]})]}],
+        "bookmakers": [bm("tipico_de", {"h2h": [{"name": "Carlos Alcaraz", "price": 1.41}, {"name": "Alexander Zverev", "price": 2.75}]})]}],
     "scores_nba": [{"id": "old1", "completed": True, "commence_time": PAST, "home_team": "Atlanta Hawks", "away_team": "Charlotte Hornets",
                     "scores": [{"name": "Atlanta Hawks", "score": "111"}, {"name": "Charlotte Hornets", "score": "97"}]}],
 }

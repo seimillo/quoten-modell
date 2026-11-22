@@ -3,7 +3,7 @@ from datetime import timedelta
 
 from .common import devig_power, log, parse_time, phi
 from .markets import match_kalshi, match_polymarket, whales
-from .sources import book_prices
+from .sources import BOOK_NAMES, book_prices, main_book
 
 TEAMS = {  # Name bei The Odds API / Basketball-Reference: (Kürzel, Zeitzone relativ zu New York, Spitzname)
     "Atlanta Hawks": ("ATL", 0, "hawks"), "Boston Celtics": ("BOS", 0, "celtics"), "Brooklyn Nets": ("BKN", 0, "nets"),
@@ -101,11 +101,13 @@ def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events):
 
         # ---- Quoten ----
         h2h, spr, tot = book_prices(ev, "h2h"), book_prices(ev, "spreads"), book_prices(ev, "totals")
-        b365 = h2h.get("bet365")
+        bk, b365 = main_book(h2h)
         if not b365:
+            log(f"NBA: keine Quoten für {away} @ {home}")
             continue
         oa, oh = _two(b365, away, home)
         if not oa or not oh:
+            log(f"NBA: Teamnamen passen nicht bei {away} @ {home}")
             continue
         p_model_h = phi(M / SD_MARGIN)
         mk_h = devig_power(oh["price"], oa["price"])
@@ -131,7 +133,7 @@ def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events):
                          "ev": round(p * q - 1, 4), "evRaw": round(p_model * q - 1, 4)})
         add("Sieg", away, oa["price"], 1 - p_model_h, 1 - mk_h, side="away")
         add("Sieg", home, oh["price"], p_model_h, mk_h, side="home")
-        s365 = spr.get("bet365")
+        s365 = spr.get(bk)
         if s365:
             sa, sh = _two(s365, away, home)
             if sa and sh and sa.get("point") is not None:
@@ -145,7 +147,7 @@ def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events):
                         m_cov_h = devig_power(ph_["price"], pa_["price"])
                 add("Handicap", f"{away} {sa['point']:+g}", sa["price"], 1 - p_cov_h, 1 - m_cov_h, line=sa["point"], side="away")
                 add("Handicap", f"{home} {line_h:+g}", sh["price"], p_cov_h, m_cov_h, line=line_h, side="home")
-        t365 = tot.get("bet365")
+        t365 = tot.get(bk)
         if t365:
             o = next((x for x in t365 if x["name"] == "Over"), None)
             u = next((x for x in t365 if x["name"] == "Under"), None)
@@ -172,7 +174,7 @@ def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events):
             "ratings": {"away": {k: (round(v, 2) if isinstance(v, float) else v) for k, v in A.items()},
                         "home": {k: (round(v, 2) if isinstance(v, float) else v) for k, v in H.items()}},
             "kalshi": kal, "polymarket": ({"pA": pm["pA"], "pB": pm["pB"], "volume": round(pm["volume"])} if pm else None),
-            "whales": whale, "injuries": inj, "bets": bets, "best": best,
+            "bookKey": bk, "bookName": BOOK_NAMES.get(bk, bk), "whales": whale, "injuries": inj, "bets": bets, "best": best,
             "sideA": home, "pickLabel": f"{away} @ {home}",
         })
     games.sort(key=lambda g: -g["best"]["ev"])

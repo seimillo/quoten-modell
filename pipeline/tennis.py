@@ -1,7 +1,7 @@
 """Tennis-Modell: Belag-Elo (Tennis Abstract), Best-of-5, Quotenbewegung, Markt-Anker mit Pinnacle und Prognosemärkten."""
 from .common import devig_power, elo_p, last_name, log, logit, norm, sig
 from .markets import match_polymarket, whales
-from .sources import book_prices
+from .sources import book_prices, BOOK_NAMES, main_book
 
 CLAY = ("french open", "roland", "madrid", "rome", "italian", "monte carlo", "barcelona", "hamburg", "clay")
 GRASS = ("wimbledon", "queen", "halle", "grass", "eastbourne", "s hertogenbosch")
@@ -56,7 +56,7 @@ def model_matches(sport_events, elo_atp, elo_wta, pm_events, openings):
         for ev in events:
             a, b = ev["home_team"], ev["away_team"]
             h2h = book_prices(ev, "h2h")
-            b365 = h2h.get("bet365")
+            bk, b365 = main_book(h2h)
             if not b365:
                 continue
             oa = next((o for o in b365 if o["name"] == a), None)
@@ -90,7 +90,9 @@ def model_matches(sport_events, elo_atp, elo_wta, pm_events, openings):
                 parts.append({"n": "Basis", "pp": None, "info": "keine Elo für beide → Start beim Markt"})
             L = logit(p)
             # Quotenbewegung seit dem ersten Abruf
-            op = openings.setdefault(ev["id"], {"qa": oa["price"], "qb": ob["price"]})
+            op = openings.setdefault(ev["id"], {"qa": oa["price"], "qb": ob["price"], "book": bk})
+            if op.get("book", bk) != bk:              # anderer Buchmacher als beim ersten Abruf → neu starten
+                op.update({"qa": oa["price"], "qb": ob["price"], "book": bk})
             open_a = devig_power(op["qa"], op["qb"])
             if abs(open_a - book_a) > 0.002:
                 before = sig(L)
@@ -118,7 +120,7 @@ def model_matches(sport_events, elo_atp, elo_wta, pm_events, openings):
                 "surface": surf_name, "bo5": bo5, "commence": ev["commence_time"], "a": a, "b": b,
                 "eloA": ea, "eloB": eb, "base": round(base, 4), "kind": kind, "conf": conf,
                 "pModelA": round(p_model, 4), "pMarketA": round(target, 4), "pFinalA": round(p_final, 4),
-                "book": {"qa": oa["price"], "qb": ob["price"], "pA": round(book_a, 4)},
+                "book": {"qa": oa["price"], "qb": ob["price"], "pA": round(book_a, 4), "key": bk, "name": BOOK_NAMES.get(bk, bk)},
                 "sharpA": round(sharp_a, 4) if sharp_a is not None else None,
                 "polymarket": ({"pA": pm["pA"], "pB": pm["pB"], "volume": round(pm["volume"])} if pm else None),
                 "whales": whales(pm, a, b) if pm else {"trades": [], "usdA": 0, "usdB": 0},

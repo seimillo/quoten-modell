@@ -12,11 +12,18 @@ ODDS_BASE = "https://api.the-odds-api.com/v4"
 KALSHI_BASE = "https://api.elections.kalshi.com/trade-api/v2"
 GAMMA_BASE = "https://gamma-api.polymarket.com"
 PM_DATA_BASE = "https://data-api.polymarket.com"
-BOOKS = "bet365,pinnacle,betfair_ex_eu"
+# bet365 gibt es bei The Odds API nicht (nur in Australien, kostenpflichtig).
+# Bis zu 10 Buchmacher kosten so viel wie eine Region.
+SHARP = ["pinnacle", "betfair_ex_eu"]
+SOFT = ["tipico_de", "winamax_de", "williamhill", "betsson", "unibet_nl", "sport888", "marathonbet", "betvictor"]
+BOOKS = ",".join(SHARP + SOFT)
+BOOK_NAMES = {"tipico_de": "Tipico", "winamax_de": "Winamax", "williamhill": "William Hill", "betsson": "Betsson",
+              "unibet_nl": "Unibet", "sport888": "888sport", "marathonbet": "Marathonbet", "betvictor": "BetVictor",
+              "pinnacle": "Pinnacle", "betfair_ex_eu": "Betfair"}
 CREDITS = {"remaining": None, "used_now": 0}
 
 
-# ---------------- The Odds API (Quoten bet365 + Pinnacle, Ergebnisse) ----------------
+# ---------------- The Odds API (Quoten deutscher Buchmacher + Pinnacle, Ergebnisse) ----------------
 
 def _key():
     return os.environ.get("ODDS_API_KEY", "").strip()
@@ -56,6 +63,8 @@ def odds_events(sport_key, markets="h2h"):
         data, r = get(f"{ODDS_BASE}/sports/{sport_key}/odds",
                       {"apiKey": _key(), "bookmakers": BOOKS, "markets": markets, "oddsFormat": "decimal"})
         _track_credits(r)
+        with_books = sum(1 for e in data if e.get("bookmakers"))
+        log(f"Quoten {sport_key}: {len(data)} Events, {with_books} mit Buchmacher-Quoten")
         return data
     except Exception as e:  # noqa: BLE001
         log(f"Quoten für {sport_key} fehlgeschlagen: {e}")
@@ -72,6 +81,14 @@ def odds_scores(sport_key, days=3):
     except Exception as e:  # noqa: BLE001
         log(f"Ergebnisse für {sport_key} fehlgeschlagen: {e}")
         return []
+
+
+def main_book(prices):
+    """Wettanbieter, gegen den der EV gerechnet wird: erster verfügbarer aus SOFT, sonst ein Sharp-Buch."""
+    for k in SOFT + SHARP:
+        if prices.get(k):
+            return k, prices[k]
+    return None, None
 
 
 def book_prices(event, market):
