@@ -8,14 +8,14 @@
   "home": "Golden State Warriors",
   "abbrA": "BOS",
   "abbrH": "GSW",
-  "margin": -1.2,
+  "margin": -3.6,
   "total": 214.4,
   "poss": 94.8,
-  "ptsA": 107.8,
-  "ptsH": 106.6,
-  "pModelHome": 0.4624,
+  "ptsA": 109.0,
+  "ptsH": 105.4,
+  "pModelHome": 0.3881,
   "pMarketHome": 0.2418,
-  "pFinalHome": 0.308,
+  "pFinalHome": 0.2857,
   "parts": [
    {
     "n": "Team-Stärke & Tempo",
@@ -24,6 +24,11 @@
    {
     "n": "Heimvorteil",
     "m": 2.2
+   },
+   {
+    "n": "Verletzungen",
+    "m": -2.4,
+    "info": "BOS −2.3, GSW −4.6 Punkte"
    },
    {
     "n": "Ruhe & Reise",
@@ -52,7 +57,7 @@
   "kalshi": {
    "a": 75.5,
    "b": 24.5,
-   "vol": 99282
+   "vol": 99394
   },
   "polymarket": {
    "pA": 0.755,
@@ -71,44 +76,80 @@
     {
      "player": "Mitchell Robinson",
      "status": "Out",
-     "info": "Robinson (illness) has been ruled out for Saturday's game against the Kings, Keith Smith of Spotrac.com reports."
+     "info": "Robinson (illness) has been ruled out for Saturday's game against the Kings, Keith Smith of Spotrac.com reports.",
+     "pOut": 0.4,
+     "value": 1.2,
+     "bpm": 1.3,
+     "mpg": 17.6,
+     "loss": 0.19
     },
     {
      "player": "Derrick White",
      "status": "Out",
-     "info": "White (shoulder) has been ruled out for Saturday's game against Sacramento."
+     "info": "White (shoulder) has been ruled out for Saturday's game against Sacramento.",
+     "pOut": 0.4,
+     "value": 2.6,
+     "bpm": 2.1,
+     "mpg": 29.9,
+     "loss": 0.83
     },
     {
      "player": "Jayson Tatum",
      "status": "Out",
-     "info": "Tatum (rest) has been ruled out for Saturday's game against the Kings."
+     "info": "Tatum (rest) has been ruled out for Saturday's game against the Kings.",
+     "pOut": 0.4,
+     "value": 4.0,
+     "bpm": 3.7,
+     "mpg": 34.1,
+     "loss": 1.25
     }
    ],
    "home": [
     {
      "player": "Brandon Williams",
      "status": "Out",
-     "info": "Williams (hamstring) is out for Sunday's game against the Celtics."
+     "info": "Williams (hamstring) is out for Sunday's game against the Celtics.",
+     "pOut": 1.0,
+     "value": 0.6,
+     "bpm": -0.1,
+     "mpg": 16.1,
+     "loss": 0.17
     },
     {
      "player": "Stephen Curry",
      "status": "Out",
-     "info": "Curry has been diagnosed with an oblique abdominal tear and will be re-evaluated in two weeks, Shams Charania of ESPN reports."
+     "info": "Curry has been diagnosed with an oblique abdominal tear and will be re-evaluated in two weeks, Shams Charania of ESPN reports.",
+     "pOut": 1.0,
+     "value": 4.2,
+     "bpm": 5.6,
+     "mpg": 26.3,
+     "loss": 2.79
     },
     {
      "player": "Kristaps Porzingis",
      "status": "Out",
-     "info": "Porzingis announced on his social media that he's stepping away from basketball."
+     "info": "Porzingis announced on his social media that he's stepping away from basketball.",
+     "pOut": 1.0
     },
     {
      "player": "Moses Moody",
      "status": "Out",
-     "info": "Moody (knee) is progressing toward a potential return between December and January after rupturing his left patellar tendon in March, Anthon"
+     "info": "Moody (knee) is progressing toward a potential return between December and January after rupturing his left patellar tendon in March, Anthon",
+     "pOut": 1.0,
+     "value": 0.9,
+     "bpm": -0.4,
+     "mpg": 25.7,
+     "loss": 0.34
     },
     {
      "player": "Jimmy Butler III",
      "status": "Out",
-     "info": "Butler (knee) could return sometime between January and February as he continues recovering from a torn right ACL, Anthony Slater of ESPN re"
+     "info": "Butler (knee) could return sometime between January and February as he continues recovering from a torn right ACL, Anthony Slater of ESPN re",
+     "pOut": 1.0,
+     "value": 3.4,
+     "bpm": 3.3,
+     "mpg": 31.1,
+     "loss": 1.34
     }
    ]
   },
@@ -119,11 +160,11 @@
     "odds": 1.25,
     "line": null,
     "side": "away",
-    "pModel": 0.5376,
+    "pModel": 0.6119,
     "pMarket": 0.7582,
-    "p": 0.692,
-    "ev": -0.135,
-    "evRaw": -0.328
+    "p": 0.7143,
+    "ev": -0.1072,
+    "evRaw": -0.2352
    },
    {
     "market": "Sieg",
@@ -131,11 +172,11 @@
     "odds": 3.8,
     "line": null,
     "side": "home",
-    "pModel": 0.4624,
+    "pModel": 0.3881,
     "pMarket": 0.2418,
-    "p": 0.308,
-    "ev": 0.1705,
-    "evRaw": 0.7573
+    "p": 0.2857,
+    "ev": 0.0858,
+    "evRaw": 0.4749
    },
    {
     "market": "Handicap",
@@ -143,11 +184,11 @@
     "odds": 1.9,
     "line": -8.5,
     "side": "away",
-    "pModel": 0.279,
+    "pModel": 0.3461,
     "pMarket": 0.504,
-    "p": 0.4365,
-    "ev": -0.1706,
-    "evRaw": -0.4698
+    "p": 0.4566,
+    "ev": -0.1324,
+    "evRaw": -0.3424
    },
    {
     "market": "Handicap",
@@ -155,11 +196,11 @@
     "odds": 1.8,
     "line": 8.5,
     "side": "home",
-    "pModel": 0.721,
+    "pModel": 0.6539,
     "pMarket": 0.496,
-    "p": 0.5635,
-    "ev": 0.0143,
-    "evRaw": 0.2977
+    "p": 0.5434,
+    "ev": -0.022,
+    "evRaw": 0.177
    },
    {
     "market": "Gesamtpunkte",
@@ -192,1015 +233,14 @@
    "odds": 3.8,
    "line": null,
    "side": "home",
-   "pModel": 0.4624,
+   "pModel": 0.3881,
    "pMarket": 0.2418,
-   "p": 0.308,
-   "ev": 0.1705,
-   "evRaw": 0.7573
+   "p": 0.2857,
+   "ev": 0.0858,
+   "evRaw": 0.4749
   },
   "sideA": "Golden State Warriors",
   "pickLabel": "Boston Celtics @ Golden State Warriors"
- },
- {
-  "id": "90da1cde4144fac00d41f2c0db2cc921",
-  "sportKey": "basketball_nba",
-  "sport": "NBA",
-  "commence": "2026-11-22T23:10:00Z",
-  "away": "Oklahoma City Thunder",
-  "home": "Miami Heat",
-  "abbrA": "OKC",
-  "abbrH": "MIA",
-  "margin": -3.0,
-  "total": 231.4,
-  "poss": 102.2,
-  "ptsA": 117.2,
-  "ptsH": 114.2,
-  "pModelHome": 0.4055,
-  "pMarketHome": 0.5978,
-  "pFinalHome": 0.5401,
-  "parts": [
-   {
-    "n": "Team-Stärke & Tempo",
-    "m": -5.8
-   },
-   {
-    "n": "Heimvorteil",
-    "m": 2.2
-   },
-   {
-    "n": "Ruhe & Reise",
-    "m": 0.6,
-    "info": "Ruhetage OKC 1, MIA 2"
-   }
-  ],
-  "ratings": {
-   "away": {
-    "off": 0.65,
-    "def": 5.96,
-    "pace": 99.0,
-    "w": 0.44,
-    "netCur": 5.29,
-    "netPrior": 10.95
-   },
-   "home": {
-    "off": 2.0,
-    "def": -1.05,
-    "pace": 101.8,
-    "w": 0.43,
-    "netCur": 0.15,
-    "netPrior": 2.2
-   }
-  },
-  "kalshi": {
-   "a": 40.5,
-   "b": 59.0,
-   "vol": 160076
-  },
-  "polymarket": null,
-  "bookKey": "tipico_de",
-  "bookName": "Tipico",
-  "whales": {
-   "trades": [],
-   "usdA": 0,
-   "usdB": 0
-  },
-  "injuries": {
-   "away": [
-    {
-     "player": "Shai Gilgeous-Alexander",
-     "status": "Day-To-Day",
-     "info": "Gilgeous-Alexander (back/neck) is listed as questionable for Sunday's game versus Miami."
-    },
-    {
-     "player": "Nikola Topic",
-     "status": "Out",
-     "info": "Topic (hip) is listed as out for Sunday's game versus the Heat."
-    },
-    {
-     "player": "Jaylin Williams",
-     "status": "Out",
-     "info": "Williams (back) is listed as out for Sunday's game against Miami."
-    },
-    {
-     "player": "Alex Caruso",
-     "status": "Out",
-     "info": "Caruso (hip) won't play Sunday against the Heat."
-    },
-    {
-     "player": "Thomas Sorber",
-     "status": "Out",
-     "info": "Sorber underwent an arthroscopic knee procedure Tuesday to address inflammation at the patellofemoral joint in his right knee, and he's expe"
-    },
-    {
-     "player": "Cason Wallace",
-     "status": "Out",
-     "info": "Wallace underwent surgery Friday to repair a torn labrum in his left shoulder and will be re-evaluated before the end of the regular season,"
-    },
-    {
-     "player": "Chet Holmgren",
-     "status": "Out",
-     "info": "Holmgren underwent a biological treatment Friday to address a small patellar tendon tear and will miss at least 8-10 weeks, Nick Crain of Sl"
-    },
-    {
-     "player": "Jalen Williams",
-     "status": "Out",
-     "info": "Williams (leg) underwent successful surgery Wednesday to \"address a fractured left fibula and reconstruction of ankle ligaments following a "
-    }
-   ],
-   "home": [
-    {
-     "player": "Myron Gardner",
-     "status": "Day-To-Day",
-     "info": "Gardner (hamstring) is probable for Sunday's game against the Thunder."
-    },
-    {
-     "player": "Giannis Antetokounmpo",
-     "status": "Day-To-Day",
-     "info": "Antetokounmpo (groin) is listed as questionable for Sunday's game against Oklahoma City, Ira Winderman of the South Florida Sun Sentinel rep"
-    }
-   ]
-  },
-  "bets": [
-   {
-    "market": "Sieg",
-    "pick": "Oklahoma City Thunder",
-    "odds": 2.4,
-    "line": null,
-    "side": "away",
-    "pModel": 0.5945,
-    "pMarket": 0.4022,
-    "p": 0.4599,
-    "ev": 0.1037,
-    "evRaw": 0.4269
-   },
-   {
-    "market": "Sieg",
-    "pick": "Miami Heat",
-    "odds": 1.55,
-    "line": null,
-    "side": "home",
-    "pModel": 0.4055,
-    "pMarket": 0.5978,
-    "p": 0.5401,
-    "ev": -0.1628,
-    "evRaw": -0.3715
-   },
-   {
-    "market": "Handicap",
-    "pick": "Oklahoma City Thunder +4.5",
-    "odds": 1.83,
-    "line": 4.5,
-    "side": "away",
-    "pModel": 0.7255,
-    "pMarket": 0.5061,
-    "p": 0.5719,
-    "ev": 0.0466,
-    "evRaw": 0.3276
-   },
-   {
-    "market": "Handicap",
-    "pick": "Miami Heat -4.5",
-    "odds": 1.87,
-    "line": -4.5,
-    "side": "home",
-    "pModel": 0.2745,
-    "pMarket": 0.4939,
-    "p": 0.4281,
-    "ev": -0.1995,
-    "evRaw": -0.4867
-   },
-   {
-    "market": "Gesamtpunkte",
-    "pick": "Über 230.5",
-    "odds": 1.85,
-    "line": 230.5,
-    "side": "over",
-    "pModel": 0.5206,
-    "pMarket": 0.5,
-    "p": 0.5062,
-    "ev": -0.0636,
-    "evRaw": -0.0368
-   },
-   {
-    "market": "Gesamtpunkte",
-    "pick": "Unter 230.5",
-    "odds": 1.85,
-    "line": 230.5,
-    "side": "under",
-    "pModel": 0.4794,
-    "pMarket": 0.5,
-    "p": 0.4938,
-    "ev": -0.0864,
-    "evRaw": -0.1132
-   }
-  ],
-  "best": {
-   "market": "Sieg",
-   "pick": "Oklahoma City Thunder",
-   "odds": 2.4,
-   "line": null,
-   "side": "away",
-   "pModel": 0.5945,
-   "pMarket": 0.4022,
-   "p": 0.4599,
-   "ev": 0.1037,
-   "evRaw": 0.4269
-  },
-  "sideA": "Miami Heat",
-  "pickLabel": "Oklahoma City Thunder @ Miami Heat"
- },
- {
-  "id": "1e7b9477c6c55aea5efd9c1a47039f5c",
-  "sportKey": "basketball_nba",
-  "sport": "NBA",
-  "commence": "2026-11-23T00:10:00Z",
-  "away": "Dallas Mavericks",
-  "home": "Utah Jazz",
-  "abbrA": "DAL",
-  "abbrH": "UTA",
-  "margin": 1.7,
-  "total": 222.8,
-  "poss": 98.8,
-  "ptsA": 110.6,
-  "ptsH": 112.2,
-  "pModelHome": 0.5529,
-  "pMarketHome": 0.4988,
-  "pFinalHome": 0.515,
-  "parts": [
-   {
-    "n": "Team-Stärke & Tempo",
-    "m": -3.3
-   },
-   {
-    "n": "Heimvorteil inkl. Höhe",
-    "m": 3.0
-   },
-   {
-    "n": "Ruhe & Reise",
-    "m": 2.0,
-    "info": "Ruhetage DAL 0, UTA 1"
-   }
-  ],
-  "ratings": {
-   "away": {
-    "off": -1.58,
-    "def": 0.33,
-    "pace": 98.7,
-    "w": 0.44,
-    "netCur": 1.78,
-    "netPrior": -5.25
-   },
-   "home": {
-    "off": -2.96,
-    "def": -1.67,
-    "pace": 98.7,
-    "w": 0.46,
-    "netCur": -3.62,
-    "netPrior": -7.84
-   }
-  },
-  "kalshi": {
-   "a": 49.5,
-   "b": 49.5,
-   "vol": 85312
-  },
-  "polymarket": {
-   "pA": 0.505,
-   "pB": 0.495,
-   "volume": 26112
-  },
-  "bookKey": "tipico_de",
-  "bookName": "Tipico",
-  "whales": {
-   "trades": [],
-   "usdA": 0,
-   "usdB": 0
-  },
-  "injuries": {
-   "away": [
-    {
-     "player": "P.J. Washington",
-     "status": "Out",
-     "info": "Washington (illness/shoulder) is listed as out for Saturday's game against the Clippers."
-    },
-    {
-     "player": "Tobi Lawal",
-     "status": "Out",
-     "info": "Lawal (groin) is out for Saturday's game against the Clippers."
-    },
-    {
-     "player": "Dereck Lively II",
-     "status": "Out",
-     "info": "Head coach Dusty May said Friday that Lively (foot) is moving well and progressing in his recovery, and the big man told May he's \"close\" to"
-    },
-    {
-     "player": "Sergio de Larrea",
-     "status": "Out",
-     "info": "De Larrea (knee) is listed as out for Wednesday's game against the Warriors."
-    },
-    {
-     "player": "Tarik Biberovic",
-     "status": "Out",
-     "info": "Biberovic (heel) is out for Wednesday's game against the Warriors."
-    }
-   ],
-   "home": [
-    {
-     "player": "Jusuf Nurkic",
-     "status": "Out",
-     "info": "Nurkic (foot) has been cleared for on-court work and will be re-evaluated in one week."
-    },
-    {
-     "player": "Lauri Markkanen",
-     "status": "Out",
-     "info": "Markkanen has been diagnosed with a non-displaced fracture in his right hand and will be sidelined for at least one month, Shams Charania of"
-    },
-    {
-     "player": "Jaren Jackson Jr.",
-     "status": "Out",
-     "info": "Jackson has been diagnosed with a torn MCL in his right knee and will be sidelined for 6-to-8 weeks, per Shams Charania of ESPN."
-    }
-   ]
-  },
-  "bets": [
-   {
-    "market": "Sieg",
-    "pick": "Dallas Mavericks",
-    "odds": 1.87,
-    "line": null,
-    "side": "away",
-    "pModel": 0.4471,
-    "pMarket": 0.5012,
-    "p": 0.485,
-    "ev": -0.093,
-    "evRaw": -0.1639
-   },
-   {
-    "market": "Sieg",
-    "pick": "Utah Jazz",
-    "odds": 1.9,
-    "line": null,
-    "side": "home",
-    "pModel": 0.5529,
-    "pMarket": 0.4988,
-    "p": 0.515,
-    "ev": -0.0215,
-    "evRaw": 0.0505
-   },
-   {
-    "market": "Handicap",
-    "pick": "Dallas Mavericks -1.5",
-    "odds": 1.9,
-    "line": -1.5,
-    "side": "away",
-    "pModel": 0.4002,
-    "pMarket": 0.4848,
-    "p": 0.4594,
-    "ev": -0.1272,
-    "evRaw": -0.2397
-   },
-   {
-    "market": "Handicap",
-    "pick": "Utah Jazz +1.5",
-    "odds": 1.8,
-    "line": 1.5,
-    "side": "home",
-    "pModel": 0.5998,
-    "pMarket": 0.5152,
-    "p": 0.5406,
-    "ev": -0.0269,
-    "evRaw": 0.0797
-   },
-   {
-    "market": "Gesamtpunkte",
-    "pick": "Über 223.5",
-    "odds": 1.9,
-    "line": 223.5,
-    "side": "over",
-    "pModel": 0.4837,
-    "pMarket": 0.4848,
-    "p": 0.4844,
-    "ev": -0.0796,
-    "evRaw": -0.081
-   },
-   {
-    "market": "Gesamtpunkte",
-    "pick": "Unter 223.5",
-    "odds": 1.8,
-    "line": 223.5,
-    "side": "under",
-    "pModel": 0.5163,
-    "pMarket": 0.5152,
-    "p": 0.5156,
-    "ev": -0.072,
-    "evRaw": -0.0707
-   }
-  ],
-  "best": {
-   "market": "Sieg",
-   "pick": "Utah Jazz",
-   "odds": 1.9,
-   "line": null,
-   "side": "home",
-   "pModel": 0.5529,
-   "pMarket": 0.4988,
-   "p": 0.515,
-   "ev": -0.0215,
-   "evRaw": 0.0505
-  },
-  "sideA": "Utah Jazz",
-  "pickLabel": "Dallas Mavericks @ Utah Jazz"
- },
- {
-  "id": "335ad5604b51b7742fd1dee92d78da35",
-  "sportKey": "basketball_nba",
-  "sport": "NBA",
-  "commence": "2026-11-23T00:10:00Z",
-  "away": "Orlando Magic",
-  "home": "Washington Wizards",
-  "abbrA": "ORL",
-  "abbrH": "WAS",
-  "margin": -4.4,
-  "total": 221.6,
-  "poss": 96.9,
-  "ptsA": 113.0,
-  "ptsH": 108.6,
-  "pModelHome": 0.3616,
-  "pMarketHome": 0.3433,
-  "pFinalHome": 0.3488,
-  "parts": [
-   {
-    "n": "Team-Stärke & Tempo",
-    "m": -6.6
-   },
-   {
-    "n": "Heimvorteil",
-    "m": 2.2
-   }
-  ],
-  "ratings": {
-   "away": {
-    "off": -1.0,
-    "def": -0.28,
-    "pace": 97.3,
-    "w": 0.43,
-    "netCur": -3.68,
-    "netPrior": 0.74
-   },
-   "home": {
-    "off": -3.71,
-    "def": -4.41,
-    "pace": 98.2,
-    "w": 0.46,
-    "netCur": -8.21,
-    "netPrior": -11.49
-   }
-  },
-  "kalshi": {
-   "a": 64.5,
-   "b": 34.5,
-   "vol": 29349
-  },
-  "polymarket": {
-   "pA": 0.655,
-   "pB": 0.345,
-   "volume": 20611
-  },
-  "bookKey": "tipico_de",
-  "bookName": "Tipico",
-  "whales": {
-   "trades": [],
-   "usdA": 0,
-   "usdB": 0
-  },
-  "injuries": {
-   "away": [
-    {
-     "player": "Jonathan Isaac",
-     "status": "Out",
-     "info": "Isaac (knee) is out for Sunday's game against the Wizards."
-    },
-    {
-     "player": "Izaiyah Nelson",
-     "status": "Out",
-     "info": "Head coach Sean Sweeney said Wednesday that Nelson (ankle) has been doing \"some on-court stuff,\" though Sweeney added that the work has been"
-    },
-    {
-     "player": "Noah Penda",
-     "status": "Out",
-     "info": "Penda (hamstring) is making progress but remains without a timetable to return to game action, Jason Beede of the Orlando Sentinel reports."
-    },
-    {
-     "player": "Paolo Banchero",
-     "status": "Out",
-     "info": "Banchero is expected to be sidelined for the next four-to-six weeks due to a right high-ankle sprain, Shams Charania of ESPN reports."
-    }
-   ],
-   "home": [
-    {
-     "player": "Tristan Vukcevic",
-     "status": "Out",
-     "info": "Vukcevic (hip) has been ruled out for Monday's game against Memphis."
-    },
-    {
-     "player": "Reece Beekman",
-     "status": "Out",
-     "info": "The Wizards announced Monday that Beekman sustained a right acromioclavicular joint injury and will be re-evaluated in approximately three w"
-    },
-    {
-     "player": "Justin Champagnie",
-     "status": "Out",
-     "info": "Champagnie (foot) is expected to miss several months, per Josh Robbins of The Athletic."
-    },
-    {
-     "player": "Jamir Watkins",
-     "status": "Out",
-     "info": "The Wizards announced Thursday that Watkins has undergone surgery for a torn ACL."
-    }
-   ]
-  },
-  "bets": [
-   {
-    "market": "Sieg",
-    "pick": "Orlando Magic",
-    "odds": 1.42,
-    "line": null,
-    "side": "away",
-    "pModel": 0.6384,
-    "pMarket": 0.6567,
-    "p": 0.6512,
-    "ev": -0.0753,
-    "evRaw": -0.0935
-   },
-   {
-    "market": "Sieg",
-    "pick": "Washington Wizards",
-    "odds": 2.8,
-    "line": null,
-    "side": "home",
-    "pModel": 0.3616,
-    "pMarket": 0.3433,
-    "p": 0.3488,
-    "ev": -0.0234,
-    "evRaw": 0.0125
-   },
-   {
-    "market": "Handicap",
-    "pick": "Orlando Magic -5.5",
-    "odds": 1.83,
-    "line": -5.5,
-    "side": "away",
-    "pModel": 0.4658,
-    "pMarket": 0.4907,
-    "p": 0.4833,
-    "ev": -0.1156,
-    "evRaw": -0.1476
-   },
-   {
-    "market": "Handicap",
-    "pick": "Washington Wizards +5.5",
-    "odds": 1.87,
-    "line": 5.5,
-    "side": "home",
-    "pModel": 0.5342,
-    "pMarket": 0.5093,
-    "p": 0.5167,
-    "ev": -0.0337,
-    "evRaw": -0.001
-   },
-   {
-    "market": "Gesamtpunkte",
-    "pick": "Über 219.5",
-    "odds": 1.85,
-    "line": 219.5,
-    "side": "over",
-    "pModel": 0.5459,
-    "pMarket": 0.5,
-    "p": 0.5138,
-    "ev": -0.0495,
-    "evRaw": 0.0099
-   },
-   {
-    "market": "Gesamtpunkte",
-    "pick": "Unter 219.5",
-    "odds": 1.85,
-    "line": 219.5,
-    "side": "under",
-    "pModel": 0.4541,
-    "pMarket": 0.5,
-    "p": 0.4862,
-    "ev": -0.1005,
-    "evRaw": -0.1599
-   }
-  ],
-  "best": {
-   "market": "Sieg",
-   "pick": "Washington Wizards",
-   "odds": 2.8,
-   "line": null,
-   "side": "home",
-   "pModel": 0.3616,
-   "pMarket": 0.3433,
-   "p": 0.3488,
-   "ev": -0.0234,
-   "evRaw": 0.0125
-  },
-  "sideA": "Washington Wizards",
-  "pickLabel": "Orlando Magic @ Washington Wizards"
- },
- {
-  "id": "15a079f55e23d26237844224f258c972",
-  "sportKey": "basketball_nba",
-  "sport": "NBA",
-  "commence": "2026-11-23T00:10:00Z",
-  "away": "Denver Nuggets",
-  "home": "Chicago Bulls",
-  "abbrA": "DEN",
-  "abbrH": "CHI",
-  "margin": -5.8,
-  "total": 236.5,
-  "poss": 101.1,
-  "ptsA": 121.1,
-  "ptsH": 115.4,
-  "pModelHome": 0.3217,
-  "pMarketHome": 0.228,
-  "pFinalHome": 0.2561,
-  "parts": [
-   {
-    "n": "Team-Stärke & Tempo",
-    "m": -8.3
-   },
-   {
-    "n": "Heimvorteil",
-    "m": 2.2
-   },
-   {
-    "n": "Ruhe & Reise",
-    "m": 0.3,
-    "info": "Ruhetage DEN 1, CHI 1"
-   }
-  ],
-  "ratings": {
-   "away": {
-    "off": 3.72,
-    "def": -0.53,
-    "pace": 97.1,
-    "w": 0.41,
-    "netCur": 2.75,
-    "netPrior": 5.0
-   },
-   "home": {
-    "off": -2.04,
-    "def": -2.97,
-    "pace": 102.7,
-    "w": 0.43,
-    "netCur": -6.97,
-    "netPrior": -5.04
-   }
-  },
-  "kalshi": {
-   "a": 77.0,
-   "b": 23.5,
-   "vol": 57645
-  },
-  "polymarket": {
-   "pA": 0.775,
-   "pB": 0.225,
-   "volume": 15125
-  },
-  "bookKey": "tipico_de",
-  "bookName": "Tipico",
-  "whales": {
-   "trades": [],
-   "usdA": 0,
-   "usdB": 0
-  },
-  "injuries": {
-   "away": [
-    {
-     "player": "Julian Strawther",
-     "status": "Out",
-     "info": "Strawther (knee) was diagnosed with a left knee sprain Friday and will be re-evaluated in six weeks, Vinny Benedetto of The Denver Gazette r"
-    }
-   ],
-   "home": [
-    {
-     "player": "Patrick Williams",
-     "status": "Day-To-Day",
-     "info": "Williams is probable for Sunday's game against the Nuggets due to a left thumb sprain."
-    },
-    {
-     "player": "Norman Powell",
-     "status": "Day-To-Day",
-     "info": "Powell is questionable for Sunday's game against the Nuggets due to a right hamstring strain."
-    },
-    {
-     "player": "Jalen Smith",
-     "status": "Day-To-Day",
-     "info": "Smith (illness) is out for Friday's game against the Wizards, Joel Lorenzi of The Athletic reports."
-    },
-    {
-     "player": "Tobe Awaka",
-     "status": "Out",
-     "info": "Awaka (back) has been ruled out for Wednesday's game against the Nets."
-    },
-    {
-     "player": "Caleb Wilson",
-     "status": "Out",
-     "info": "Wilson (hand) is expected to miss four to six weeks, Shams Charania of ESPN reports."
-    }
-   ]
-  },
-  "bets": [
-   {
-    "market": "Sieg",
-    "pick": "Denver Nuggets",
-    "odds": 1.25,
-    "line": null,
-    "side": "away",
-    "pModel": 0.6783,
-    "pMarket": 0.772,
-    "p": 0.7439,
-    "ev": -0.0701,
-    "evRaw": -0.1521
-   },
-   {
-    "market": "Sieg",
-    "pick": "Chicago Bulls",
-    "odds": 3.8,
-    "line": null,
-    "side": "home",
-    "pModel": 0.3217,
-    "pMarket": 0.228,
-    "p": 0.2561,
-    "ev": -0.0268,
-    "evRaw": 0.2224
-   },
-   {
-    "market": "Handicap",
-    "pick": "Denver Nuggets -8.5",
-    "odds": 1.83,
-    "line": -8.5,
-    "side": "away",
-    "pModel": 0.4141,
-    "pMarket": 0.5061,
-    "p": 0.4785,
-    "ev": -0.1244,
-    "evRaw": -0.2422
-   },
-   {
-    "market": "Handicap",
-    "pick": "Chicago Bulls +8.5",
-    "odds": 1.87,
-    "line": 8.5,
-    "side": "home",
-    "pModel": 0.5859,
-    "pMarket": 0.4939,
-    "p": 0.5215,
-    "ev": -0.0248,
-    "evRaw": 0.0956
-   },
-   {
-    "market": "Gesamtpunkte",
-    "pick": "Über 237.5",
-    "odds": 1.9,
-    "line": 237.5,
-    "side": "over",
-    "pModel": 0.4781,
-    "pMarket": 0.4986,
-    "p": 0.4925,
-    "ev": -0.0643,
-    "evRaw": -0.0916
-   },
-   {
-    "market": "Gesamtpunkte",
-    "pick": "Unter 237.5",
-    "odds": 1.8,
-    "line": 237.5,
-    "side": "under",
-    "pModel": 0.5219,
-    "pMarket": 0.5014,
-    "p": 0.5075,
-    "ev": -0.0865,
-    "evRaw": -0.0606
-   }
-  ],
-  "best": {
-   "market": "Handicap",
-   "pick": "Chicago Bulls +8.5",
-   "odds": 1.87,
-   "line": 8.5,
-   "side": "home",
-   "pModel": 0.5859,
-   "pMarket": 0.4939,
-   "p": 0.5215,
-   "ev": -0.0248,
-   "evRaw": 0.0956
-  },
-  "sideA": "Chicago Bulls",
-  "pickLabel": "Denver Nuggets @ Chicago Bulls"
- },
- {
-  "id": "031fa761cc38e1b5afd9309b731b38b2",
-  "sportKey": "basketball_nba",
-  "sport": "NBA",
-  "commence": "2026-11-23T01:10:00Z",
-  "away": "Indiana Pacers",
-  "home": "New York Knicks",
-  "abbrA": "IND",
-  "abbrH": "NYK",
-  "margin": 10.2,
-  "total": 214.9,
-  "poss": 96.0,
-  "ptsA": 102.4,
-  "ptsH": 112.6,
-  "pModelHome": 0.7927,
-  "pMarketHome": 0.7563,
-  "pFinalHome": 0.7672,
-  "parts": [
-   {
-    "n": "Team-Stärke & Tempo",
-    "m": 9.5
-   },
-   {
-    "n": "Heimvorteil",
-    "m": 2.2
-   },
-   {
-    "n": "Ruhe & Reise",
-    "m": -1.5,
-    "info": "Ruhetage IND 1, NYK 0"
-   }
-  ],
-  "ratings": {
-   "away": {
-    "off": -3.98,
-    "def": -1.04,
-    "pace": 100.5,
-    "w": 0.44,
-    "netCur": -4.66,
-    "netPrior": -7.6
-   },
-   "home": {
-    "off": 1.49,
-    "def": 3.37,
-    "pace": 94.2,
-    "w": 0.44,
-    "netCur": 5.54,
-    "netPrior": 6.18
-   }
-  },
-  "kalshi": {
-   "a": 25.5,
-   "b": 74.5,
-   "vol": 29019
-  },
-  "polymarket": {
-   "pA": 0.245,
-   "pB": 0.755,
-   "volume": 39719
-  },
-  "bookKey": "tipico_de",
-  "bookName": "Tipico",
-  "whales": {
-   "trades": [],
-   "usdA": 0,
-   "usdB": 0
-  },
-  "injuries": {
-   "away": [
-    {
-     "player": "T.J. McConnell",
-     "status": "Out",
-     "info": "McConnell (hamstring) is listed as out for Sunday's game in New York."
-    },
-    {
-     "player": "Pascal Siakam",
-     "status": "Day-To-Day",
-     "info": "Siakam (hip) is listed as questionable for Sunday's game against New York."
-    },
-    {
-     "player": "Tyrese Haliburton",
-     "status": "Out",
-     "info": "Haliburton (hamstring) is expected to miss at least two more weeks, Shams Charania of ESPN reports."
-    },
-    {
-     "player": "Johnny Furphy",
-     "status": "Out",
-     "info": "Furphy (knee) is practicing with the G League's Noblesville Boom, per Alex Golden of SI.com."
-    },
-    {
-     "player": "Ben Sheppard",
-     "status": "Out",
-     "info": "Head coach Rick Carlise confirmed Sheppard will miss \"months\" after undergoing surgery to repair a torn meniscus in his left knee, Tony East"
-    }
-   ],
-   "home": [
-    {
-     "player": "Karl-Anthony Towns",
-     "status": "Day-To-Day",
-     "info": "Towns (illness) won't play in Saturday's game versus the Trail Blazers."
-    },
-    {
-     "player": "Jordan Clarkson",
-     "status": "Day-To-Day",
-     "info": "Clarkson (foot) won't play in Saturday's game against Portland."
-    },
-    {
-     "player": "OG Anunoby",
-     "status": "Day-To-Day",
-     "info": "Anunoby (calf) has been ruled out for Saturday's game against the Trail Blazers."
-    }
-   ]
-  },
-  "bets": [
-   {
-    "market": "Sieg",
-    "pick": "Indiana Pacers",
-    "odds": 3.8,
-    "line": null,
-    "side": "away",
-    "pModel": 0.2073,
-    "pMarket": 0.2437,
-    "p": 0.2328,
-    "ev": -0.1154,
-    "evRaw": -0.2123
-   },
-   {
-    "market": "Sieg",
-    "pick": "New York Knicks",
-    "odds": 1.25,
-    "line": null,
-    "side": "home",
-    "pModel": 0.7927,
-    "pMarket": 0.7563,
-    "p": 0.7672,
-    "ev": -0.041,
-    "evRaw": -0.0091
-   },
-   {
-    "market": "Handicap",
-    "pick": "Indiana Pacers +8.5",
-    "odds": 1.93,
-    "line": 8.5,
-    "side": "away",
-    "pModel": 0.446,
-    "pMarket": 0.4946,
-    "p": 0.48,
-    "ev": -0.0736,
-    "evRaw": -0.1393
-   },
-   {
-    "market": "Handicap",
-    "pick": "New York Knicks -8.5",
-    "odds": 1.77,
-    "line": -8.5,
-    "side": "home",
-    "pModel": 0.554,
-    "pMarket": 0.5054,
-    "p": 0.52,
-    "ev": -0.0796,
-    "evRaw": -0.0194
-   },
-   {
-    "market": "Gesamtpunkte",
-    "pick": "Über 213.5",
-    "odds": 1.83,
-    "line": 213.5,
-    "side": "over",
-    "pModel": 0.5319,
-    "pMarket": 0.5061,
-    "p": 0.5138,
-    "ev": -0.0597,
-    "evRaw": -0.0266
-   },
-   {
-    "market": "Gesamtpunkte",
-    "pick": "Unter 213.5",
-    "odds": 1.87,
-    "line": 213.5,
-    "side": "under",
-    "pModel": 0.4681,
-    "pMarket": 0.4939,
-    "p": 0.4862,
-    "ev": -0.0909,
-    "evRaw": -0.1246
-   }
-  ],
-  "best": {
-   "market": "Sieg",
-   "pick": "New York Knicks",
-   "odds": 1.25,
-   "line": null,
-   "side": "home",
-   "pModel": 0.7927,
-   "pMarket": 0.7563,
-   "p": 0.7672,
-   "ev": -0.041,
-   "evRaw": -0.0091
-  },
-  "sideA": "New York Knicks",
-  "pickLabel": "Indiana Pacers @ New York Knicks"
  },
  {
   "id": "222a2887819bb18d9b9572aef63d9b9e",
@@ -1211,14 +251,14 @@
   "home": "Atlanta Hawks",
   "abbrA": "DET",
   "abbrH": "ATL",
-  "margin": -1.9,
+  "margin": 0.6,
   "total": 224.7,
   "poss": 100.5,
-  "ptsA": 113.3,
-  "ptsH": 111.4,
-  "pModelHome": 0.4394,
-  "pMarketHome": 0.4544,
-  "pFinalHome": 0.4499,
+  "ptsA": 112.0,
+  "ptsH": 112.7,
+  "pModelHome": 0.5205,
+  "pMarketHome": 0.4555,
+  "pFinalHome": 0.475,
   "parts": [
    {
     "n": "Team-Stärke & Tempo",
@@ -1227,6 +267,11 @@
    {
     "n": "Heimvorteil",
     "m": 2.2
+   },
+   {
+    "n": "Verletzungen",
+    "m": 2.6,
+    "info": "DET −3.3, ATL −0.8 Punkte"
    }
   ],
   "ratings": {
@@ -1248,9 +293,9 @@
    }
   },
   "kalshi": {
-   "a": 54.5,
+   "a": 53.5,
    "b": 45.5,
-   "vol": 130704
+   "vol": 131277
   },
   "polymarket": {
    "pA": 0.545,
@@ -1260,78 +305,150 @@
   "bookKey": "tipico_de",
   "bookName": "Tipico",
   "whales": {
-   "trades": [],
+   "trades": [
+    {
+     "side": "B",
+     "team": "Atlanta Hawks",
+     "usd": 2934,
+     "price": 0.46,
+     "buy": true,
+     "ts": 1795333433,
+     "wallet": "Valuable-Animal (0x2b34…176e)"
+    },
+    {
+     "side": "B",
+     "team": "Atlanta Hawks",
+     "usd": 1098,
+     "price": 0.46,
+     "buy": true,
+     "ts": 1795349189,
+     "wallet": "Monstrous-Dew (0x5b63…11a4)"
+    }
+   ],
    "usdA": 0,
-   "usdB": 0
+   "usdB": 4032
   },
   "injuries": {
    "away": [
     {
      "player": "Ronald Holland II",
      "status": "Out",
-     "info": "Holland (knee) is listed as questionable for Sunday's game against Atlanta."
+     "info": "Holland (knee) is listed as questionable for Sunday's game against Atlanta.",
+     "pOut": 0.45
     },
     {
      "player": "Ebuka Okorie",
      "status": "Out",
-     "info": "Okorie (oblique) is out for Sunday's game in Atlanta."
+     "info": "Okorie (oblique) is out for Sunday's game in Atlanta.",
+     "pOut": 1.0,
+     "value": 0.0,
+     "bpm": -1.8,
+     "mpg": 4.0,
+     "loss": 0.0
     },
     {
      "player": "Cade Cunningham",
      "status": "Day-To-Day",
-     "info": "Cunningham (knee) is probable to play Sunday in Atlanta."
+     "info": "Cunningham (knee) is probable to play Sunday in Atlanta.",
+     "pOut": 0.1,
+     "value": 5.1,
+     "bpm": 5.0,
+     "mpg": 34.9,
+     "loss": 0.41
     },
     {
      "player": "Taurean Prince",
      "status": "Out",
-     "info": "Prince (knee) underwent surgery to address lingering issues and has no timeline for a return, Hunter Patterson of The Athletic reports."
+     "info": "Prince (knee) underwent surgery to address lingering issues and has no timeline for a return, Hunter Patterson of The Athletic reports.",
+     "pOut": 1.0,
+     "value": 0.0,
+     "bpm": -2.1,
+     "mpg": 7.3,
+     "loss": 0.0
     },
     {
      "player": "Ugonna Onyenso",
      "status": "Day-To-Day",
-     "info": "Onyenso agreed to a two-way contract with the Pistons on Thursday."
+     "info": "Onyenso agreed to a two-way contract with the Pistons on Thursday.",
+     "pOut": 0.3
     },
     {
      "player": "Duncan Robinson",
      "status": "Out",
-     "info": "Robinson will be re-evaluated in one week due to a left quadriceps strain, Coty M. Davis of The Detroit News reports."
+     "info": "Robinson will be re-evaluated in one week due to a left quadriceps strain, Coty M. Davis of The Detroit News reports.",
+     "pOut": 1.0,
+     "value": 1.8,
+     "bpm": 0.8,
+     "mpg": 30.5,
+     "loss": 1.34
     },
     {
      "player": "Jalen Duren",
      "status": "Out",
-     "info": "Duren (hamstring) has begun on-court activity and will be re-evaluated in two weeks, Hunter Patterson of The Athletic reports."
+     "info": "Duren (hamstring) has begun on-court activity and will be re-evaluated in two weeks, Hunter Patterson of The Athletic reports.",
+     "pOut": 1.0,
+     "value": 3.4,
+     "bpm": 3.7,
+     "mpg": 28.2,
+     "loss": 1.55
     }
    ],
    "home": [
     {
      "player": "Kingston Flemings",
      "status": "Out",
-     "info": "Flemings (back) is questionable to play Sunday against the Pistons."
+     "info": "Flemings (back) is questionable to play Sunday against the Pistons.",
+     "pOut": 0.45,
+     "value": 0.0,
+     "bpm": -2.3,
+     "mpg": 21.5,
+     "loss": 0.0
     },
     {
      "player": "Jock Landale",
      "status": "Out",
-     "info": "Landale (hip) won't play Sunday against the Pistons."
+     "info": "Landale (hip) won't play Sunday against the Pistons.",
+     "pOut": 1.0,
+     "value": 0.3,
+     "bpm": -1.0,
+     "mpg": 15.4,
+     "loss": 0.2
     },
     {
      "player": "Asa Newell",
      "status": "Out",
-     "info": "Newell underwent surgery Tuesday for a plantar plate tear in his left great toe, and he will be re-evaluated in approximately four months, B"
+     "info": "Newell underwent surgery Tuesday for a plantar plate tear in his left great toe, and he will be re-evaluated in approximately four months, B",
+     "pOut": 1.0,
+     "value": 0.1,
+     "bpm": -1.5,
+     "mpg": 11.0,
+     "loss": 0.06
     },
     {
      "player": "CJ McCollum",
      "status": "Out",
-     "info": "McCollum (calf) will miss at least four weeks, per Brad Rowland of the Locked On Podcast Network."
+     "info": "McCollum (calf) will miss at least four weeks, per Brad Rowland of the Locked On Podcast Network.",
+     "pOut": 1.0,
+     "value": 0.5,
+     "bpm": -1.1,
+     "mpg": 26.4,
+     "loss": 0.38
     },
     {
      "player": "Mouhamed Gueye",
      "status": "Out",
-     "info": "Gueye (foot) is ready to begin on-court activities and will be re-evaluated in four weeks, Brad Rowland of the Locked On Podcast Network rep"
+     "info": "Gueye (foot) is ready to begin on-court activities and will be re-evaluated in four weeks, Brad Rowland of the Locked On Podcast Network rep",
+     "pOut": 1.0,
+     "value": 0.3,
+     "bpm": -1.2,
+     "mpg": 15.3,
+     "loss": 0.1
     },
     {
      "player": "Henri Veesaar",
      "status": "Out",
-     "info": "Veesaar was diagnosed with a torn right ACL and is expected to miss the 2026-27 season, the Hawks announced Monday."
+     "info": "Veesaar was diagnosed with a torn right ACL and is expected to miss the 2026-27 season, the Hawks announced Monday.",
+     "pOut": 1.0
     }
    ]
   },
@@ -1342,11 +459,11 @@
     "odds": 1.7,
     "line": null,
     "side": "away",
-    "pModel": 0.5606,
-    "pMarket": 0.5456,
-    "p": 0.5501,
-    "ev": -0.0648,
-    "evRaw": -0.0469
+    "pModel": 0.4795,
+    "pMarket": 0.5445,
+    "p": 0.525,
+    "ev": -0.1075,
+    "evRaw": -0.1849
    },
    {
     "market": "Sieg",
@@ -1354,11 +471,11 @@
     "odds": 2.1,
     "line": null,
     "side": "home",
-    "pModel": 0.4394,
-    "pMarket": 0.4544,
-    "p": 0.4499,
-    "ev": -0.0553,
-    "evRaw": -0.0773
+    "pModel": 0.5205,
+    "pMarket": 0.4555,
+    "p": 0.475,
+    "ev": -0.0024,
+    "evRaw": 0.0931
    },
    {
     "market": "Handicap",
@@ -1366,11 +483,11 @@
     "odds": 1.83,
     "line": -2.5,
     "side": "away",
-    "pModel": 0.4811,
+    "pModel": 0.4007,
     "pMarket": 0.5061,
-    "p": 0.4986,
-    "ev": -0.0876,
-    "evRaw": -0.1196
+    "p": 0.4745,
+    "ev": -0.1317,
+    "evRaw": -0.2667
    },
    {
     "market": "Handicap",
@@ -1378,11 +495,11 @@
     "odds": 1.87,
     "line": 2.5,
     "side": "home",
-    "pModel": 0.5189,
+    "pModel": 0.5993,
     "pMarket": 0.4939,
-    "p": 0.5014,
-    "ev": -0.0624,
-    "evRaw": -0.0296
+    "p": 0.5255,
+    "ev": -0.0173,
+    "evRaw": 0.1206
    },
    {
     "market": "Gesamtpunkte",
@@ -1415,13 +532,1294 @@
    "odds": 2.1,
    "line": null,
    "side": "home",
-   "pModel": 0.4394,
-   "pMarket": 0.4544,
-   "p": 0.4499,
-   "ev": -0.0553,
-   "evRaw": -0.0773
+   "pModel": 0.5205,
+   "pMarket": 0.4555,
+   "p": 0.475,
+   "ev": -0.0024,
+   "evRaw": 0.0931
   },
   "sideA": "Atlanta Hawks",
   "pickLabel": "Detroit Pistons @ Atlanta Hawks"
+ },
+ {
+  "id": "335ad5604b51b7742fd1dee92d78da35",
+  "sportKey": "basketball_nba",
+  "sport": "NBA",
+  "commence": "2026-11-23T00:10:00Z",
+  "away": "Orlando Magic",
+  "home": "Washington Wizards",
+  "abbrA": "ORL",
+  "abbrH": "WAS",
+  "margin": -3.6,
+  "total": 221.6,
+  "poss": 96.9,
+  "ptsA": 112.6,
+  "ptsH": 109.0,
+  "pModelHome": 0.3863,
+  "pMarketHome": 0.3433,
+  "pFinalHome": 0.3562,
+  "parts": [
+   {
+    "n": "Team-Stärke & Tempo",
+    "m": -6.6
+   },
+   {
+    "n": "Heimvorteil",
+    "m": 2.2
+   },
+   {
+    "n": "Verletzungen",
+    "m": 0.8,
+    "info": "ORL −1.2, WAS −0.4 Punkte"
+   }
+  ],
+  "ratings": {
+   "away": {
+    "off": -1.0,
+    "def": -0.28,
+    "pace": 97.3,
+    "w": 0.43,
+    "netCur": -3.68,
+    "netPrior": 0.74
+   },
+   "home": {
+    "off": -3.71,
+    "def": -4.41,
+    "pace": 98.2,
+    "w": 0.46,
+    "netCur": -8.21,
+    "netPrior": -11.49
+   }
+  },
+  "kalshi": {
+   "a": 64.5,
+   "b": 34.5,
+   "vol": 29439
+  },
+  "polymarket": {
+   "pA": 0.655,
+   "pB": 0.345,
+   "volume": 20611
+  },
+  "bookKey": "tipico_de",
+  "bookName": "Tipico",
+  "whales": {
+   "trades": [
+    {
+     "side": "B",
+     "team": "Washington Wizards",
+     "usd": 3000,
+     "price": 0.345,
+     "buy": true,
+     "ts": 1795333433,
+     "wallet": "Valuable-Animal (0x2b34…176e)"
+    },
+    {
+     "side": "A",
+     "team": "Orlando Magic",
+     "usd": 2000,
+     "price": 0.68,
+     "buy": true,
+     "ts": 1795317140,
+     "wallet": "Legitimate-Oyster-Outrigger (0x73c8…e1b1)"
+    }
+   ],
+   "usdA": 2000,
+   "usdB": 3000
+  },
+  "injuries": {
+   "away": [
+    {
+     "player": "Jonathan Isaac",
+     "status": "Out",
+     "info": "Isaac (knee) is out for Sunday's game against the Wizards.",
+     "pOut": 1.0,
+     "value": 0.2,
+     "bpm": -1.3,
+     "mpg": 10.0,
+     "loss": 0.06
+    },
+    {
+     "player": "Izaiyah Nelson",
+     "status": "Out",
+     "info": "Head coach Sean Sweeney said Wednesday that Nelson (ankle) has been doing \"some on-court stuff,\" though Sweeney added that the work has been",
+     "pOut": 0.4
+    },
+    {
+     "player": "Noah Penda",
+     "status": "Out",
+     "info": "Penda (hamstring) is making progress but remains without a timetable to return to game action, Jason Beede of the Orlando Sentinel reports.",
+     "pOut": 1.0,
+     "value": 0.2,
+     "bpm": -1.3,
+     "mpg": 12.8,
+     "loss": 0.08
+    },
+    {
+     "player": "Paolo Banchero",
+     "status": "Out",
+     "info": "Banchero is expected to be sidelined for the next four-to-six weeks due to a right high-ankle sprain, Shams Charania of ESPN reports.",
+     "pOut": 1.0,
+     "value": 2.3,
+     "bpm": 1.2,
+     "mpg": 34.8,
+     "loss": 1.06
+    }
+   ],
+   "home": [
+    {
+     "player": "Tristan Vukcevic",
+     "status": "Out",
+     "info": "Vukcevic (hip) has been ruled out for Monday's game against Memphis.",
+     "pOut": 0.4,
+     "value": 0.4,
+     "bpm": -0.5,
+     "mpg": 13.7,
+     "loss": 0.07
+    },
+    {
+     "player": "Reece Beekman",
+     "status": "Out",
+     "info": "The Wizards announced Monday that Beekman sustained a right acromioclavicular joint injury and will be re-evaluated in approximately three w",
+     "pOut": 1.0,
+     "value": 0.0,
+     "bpm": -1.0,
+     "mpg": 0.0,
+     "loss": 0.0
+    },
+    {
+     "player": "Justin Champagnie",
+     "status": "Out",
+     "info": "Champagnie (foot) is expected to miss several months, per Josh Robbins of The Athletic.",
+     "pOut": 1.0,
+     "value": 0.7,
+     "bpm": -0.3,
+     "mpg": 18.2,
+     "loss": 0.32
+    },
+    {
+     "player": "Jamir Watkins",
+     "status": "Out",
+     "info": "The Wizards announced Thursday that Watkins has undergone surgery for a torn ACL.",
+     "pOut": 1.0,
+     "value": 0.0,
+     "bpm": -2.5,
+     "mpg": 20.6,
+     "loss": 0.0
+    }
+   ]
+  },
+  "bets": [
+   {
+    "market": "Sieg",
+    "pick": "Orlando Magic",
+    "odds": 1.42,
+    "line": null,
+    "side": "away",
+    "pModel": 0.6137,
+    "pMarket": 0.6567,
+    "p": 0.6438,
+    "ev": -0.0858,
+    "evRaw": -0.1286
+   },
+   {
+    "market": "Sieg",
+    "pick": "Washington Wizards",
+    "odds": 2.8,
+    "line": null,
+    "side": "home",
+    "pModel": 0.3863,
+    "pMarket": 0.3433,
+    "p": 0.3562,
+    "ev": -0.0027,
+    "evRaw": 0.0817
+   },
+   {
+    "market": "Handicap",
+    "pick": "Orlando Magic -5.5",
+    "odds": 1.83,
+    "line": -5.5,
+    "side": "away",
+    "pModel": 0.44,
+    "pMarket": 0.4907,
+    "p": 0.4755,
+    "ev": -0.1298,
+    "evRaw": -0.1949
+   },
+   {
+    "market": "Handicap",
+    "pick": "Washington Wizards +5.5",
+    "odds": 1.87,
+    "line": 5.5,
+    "side": "home",
+    "pModel": 0.56,
+    "pMarket": 0.5093,
+    "p": 0.5245,
+    "ev": -0.0192,
+    "evRaw": 0.0473
+   },
+   {
+    "market": "Gesamtpunkte",
+    "pick": "Über 218.5",
+    "odds": 1.83,
+    "line": 218.5,
+    "side": "over",
+    "pModel": 0.5678,
+    "pMarket": 0.5061,
+    "p": 0.5246,
+    "ev": -0.04,
+    "evRaw": 0.0391
+   },
+   {
+    "market": "Gesamtpunkte",
+    "pick": "Unter 218.5",
+    "odds": 1.87,
+    "line": 218.5,
+    "side": "under",
+    "pModel": 0.4322,
+    "pMarket": 0.4939,
+    "p": 0.4754,
+    "ev": -0.111,
+    "evRaw": -0.1918
+   }
+  ],
+  "best": {
+   "market": "Sieg",
+   "pick": "Washington Wizards",
+   "odds": 2.8,
+   "line": null,
+   "side": "home",
+   "pModel": 0.3863,
+   "pMarket": 0.3433,
+   "p": 0.3562,
+   "ev": -0.0027,
+   "evRaw": 0.0817
+  },
+  "sideA": "Washington Wizards",
+  "pickLabel": "Orlando Magic @ Washington Wizards"
+ },
+ {
+  "id": "90da1cde4144fac00d41f2c0db2cc921",
+  "sportKey": "basketball_nba",
+  "sport": "NBA",
+  "commence": "2026-11-22T23:10:00Z",
+  "away": "Oklahoma City Thunder",
+  "home": "Miami Heat",
+  "abbrA": "OKC",
+  "abbrH": "MIA",
+  "margin": 3.1,
+  "total": 231.4,
+  "poss": 102.2,
+  "ptsA": 114.2,
+  "ptsH": 117.3,
+  "pModelHome": 0.5983,
+  "pMarketHome": 0.5964,
+  "pFinalHome": 0.597,
+  "parts": [
+   {
+    "n": "Team-Stärke & Tempo",
+    "m": -5.8
+   },
+   {
+    "n": "Heimvorteil",
+    "m": 2.2
+   },
+   {
+    "n": "Verletzungen",
+    "m": 6.1,
+    "info": "OKC −7.3, MIA −1.1 Punkte"
+   },
+   {
+    "n": "Ruhe & Reise",
+    "m": 0.6,
+    "info": "Ruhetage OKC 1, MIA 2"
+   }
+  ],
+  "ratings": {
+   "away": {
+    "off": 0.65,
+    "def": 5.96,
+    "pace": 99.0,
+    "w": 0.44,
+    "netCur": 5.29,
+    "netPrior": 10.95
+   },
+   "home": {
+    "off": 2.0,
+    "def": -1.05,
+    "pace": 101.8,
+    "w": 0.43,
+    "netCur": 0.15,
+    "netPrior": 2.2
+   }
+  },
+  "kalshi": {
+   "a": 41.0,
+   "b": 59.0,
+   "vol": 160571
+  },
+  "polymarket": null,
+  "bookKey": "tipico_de",
+  "bookName": "Tipico",
+  "whales": {
+   "trades": [],
+   "usdA": 0,
+   "usdB": 0
+  },
+  "injuries": {
+   "away": [
+    {
+     "player": "Shai Gilgeous-Alexander",
+     "status": "Day-To-Day",
+     "info": "Gilgeous-Alexander (back/neck) is listed as questionable for Sunday's game versus Miami.",
+     "pOut": 0.45,
+     "value": 7.5,
+     "bpm": 8.7,
+     "mpg": 33.4,
+     "loss": 2.8
+    },
+    {
+     "player": "Nikola Topic",
+     "status": "Out",
+     "info": "Topic (hip) is listed as out for Sunday's game versus the Heat.",
+     "pOut": 1.0
+    },
+    {
+     "player": "Jaylin Williams",
+     "status": "Out",
+     "info": "Williams (back) is listed as out for Sunday's game against Miami.",
+     "pOut": 1.0,
+     "value": 0.9,
+     "bpm": 0.6,
+     "mpg": 17.1,
+     "loss": 0.59
+    },
+    {
+     "player": "Alex Caruso",
+     "status": "Out",
+     "info": "Caruso (hip) won't play Sunday against the Heat.",
+     "pOut": 1.0,
+     "value": 1.5,
+     "bpm": 1.8,
+     "mpg": 19.3,
+     "loss": 1.09
+    },
+    {
+     "player": "Thomas Sorber",
+     "status": "Out",
+     "info": "Sorber underwent an arthroscopic knee procedure Tuesday to address inflammation at the patellofemoral joint in his right knee, and he's expe",
+     "pOut": 0.4
+    },
+    {
+     "player": "Cason Wallace",
+     "status": "Out",
+     "info": "Wallace underwent surgery Friday to repair a torn labrum in his left shoulder and will be re-evaluated before the end of the regular season,",
+     "pOut": 1.0,
+     "value": 0.9,
+     "bpm": 0.8,
+     "mpg": 16.3,
+     "loss": 0.45
+    },
+    {
+     "player": "Chet Holmgren",
+     "status": "Out",
+     "info": "Holmgren underwent a biological treatment Friday to address a small patellar tendon tear and will miss at least 8-10 weeks, Nick Crain of Sl",
+     "pOut": 1.0,
+     "value": 3.1,
+     "bpm": 3.0,
+     "mpg": 30.0,
+     "loss": 1.48
+    },
+    {
+     "player": "Jalen Williams",
+     "status": "Out",
+     "info": "Williams (leg) underwent successful surgery Wednesday to \"address a fractured left fibula and reconstruction of ankle ligaments following a ",
+     "pOut": 1.0,
+     "value": 1.8,
+     "bpm": 0.7,
+     "mpg": 31.7,
+     "loss": 0.85
+    }
+   ],
+   "home": [
+    {
+     "player": "Myron Gardner",
+     "status": "Day-To-Day",
+     "info": "Gardner (hamstring) is probable for Sunday's game against the Thunder.",
+     "pOut": 0.1,
+     "value": 0.3,
+     "bpm": -0.5,
+     "mpg": 10.0,
+     "loss": 0.02
+    },
+    {
+     "player": "Giannis Antetokounmpo",
+     "status": "Day-To-Day",
+     "info": "Antetokounmpo (groin) is listed as questionable for Sunday's game against Oklahoma City, Ira Winderman of the South Florida Sun Sentinel rep",
+     "pOut": 0.45,
+     "value": 5.8,
+     "bpm": 6.7,
+     "mpg": 32.1,
+     "loss": 1.13
+    }
+   ]
+  },
+  "bets": [
+   {
+    "market": "Sieg",
+    "pick": "Oklahoma City Thunder",
+    "odds": 2.25,
+    "line": null,
+    "side": "away",
+    "pModel": 0.4017,
+    "pMarket": 0.4036,
+    "p": 0.403,
+    "ev": -0.0932,
+    "evRaw": -0.0963
+   },
+   {
+    "market": "Sieg",
+    "pick": "Miami Heat",
+    "odds": 1.62,
+    "line": null,
+    "side": "home",
+    "pModel": 0.5983,
+    "pMarket": 0.5964,
+    "p": 0.597,
+    "ev": -0.0329,
+    "evRaw": -0.0307
+   },
+   {
+    "market": "Handicap",
+    "pick": "Oklahoma City Thunder +3.5",
+    "odds": 1.87,
+    "line": 3.5,
+    "side": "away",
+    "pModel": 0.5123,
+    "pMarket": 0.4906,
+    "p": 0.4971,
+    "ev": -0.0704,
+    "evRaw": -0.0419
+   },
+   {
+    "market": "Handicap",
+    "pick": "Miami Heat -3.5",
+    "odds": 1.83,
+    "line": -3.5,
+    "side": "home",
+    "pModel": 0.4877,
+    "pMarket": 0.5094,
+    "p": 0.5029,
+    "ev": -0.0798,
+    "evRaw": -0.1076
+   },
+   {
+    "market": "Gesamtpunkte",
+    "pick": "Über 231.5",
+    "odds": 1.8,
+    "line": 231.5,
+    "side": "over",
+    "pModel": 0.4985,
+    "pMarket": 0.5152,
+    "p": 0.5102,
+    "ev": -0.0816,
+    "evRaw": -0.1028
+   },
+   {
+    "market": "Gesamtpunkte",
+    "pick": "Unter 231.5",
+    "odds": 1.9,
+    "line": 231.5,
+    "side": "under",
+    "pModel": 0.5015,
+    "pMarket": 0.4848,
+    "p": 0.4898,
+    "ev": -0.0694,
+    "evRaw": -0.0471
+   }
+  ],
+  "best": {
+   "market": "Sieg",
+   "pick": "Miami Heat",
+   "odds": 1.62,
+   "line": null,
+   "side": "home",
+   "pModel": 0.5983,
+   "pMarket": 0.5964,
+   "p": 0.597,
+   "ev": -0.0329,
+   "evRaw": -0.0307
+  },
+  "sideA": "Miami Heat",
+  "pickLabel": "Oklahoma City Thunder @ Miami Heat"
+ },
+ {
+  "id": "15a079f55e23d26237844224f258c972",
+  "sportKey": "basketball_nba",
+  "sport": "NBA",
+  "commence": "2026-11-23T00:10:00Z",
+  "away": "Denver Nuggets",
+  "home": "Chicago Bulls",
+  "abbrA": "DEN",
+  "abbrH": "CHI",
+  "margin": -6.4,
+  "total": 236.5,
+  "poss": 101.1,
+  "ptsA": 121.4,
+  "ptsH": 115.1,
+  "pModelHome": 0.3048,
+  "pMarketHome": 0.228,
+  "pFinalHome": 0.251,
+  "parts": [
+   {
+    "n": "Team-Stärke & Tempo",
+    "m": -8.3
+   },
+   {
+    "n": "Heimvorteil",
+    "m": 2.2
+   },
+   {
+    "n": "Verletzungen",
+    "m": -0.6,
+    "info": "DEN −0.0, CHI −0.6 Punkte"
+   },
+   {
+    "n": "Ruhe & Reise",
+    "m": 0.3,
+    "info": "Ruhetage DEN 1, CHI 1"
+   }
+  ],
+  "ratings": {
+   "away": {
+    "off": 3.72,
+    "def": -0.53,
+    "pace": 97.1,
+    "w": 0.41,
+    "netCur": 2.75,
+    "netPrior": 5.0
+   },
+   "home": {
+    "off": -2.04,
+    "def": -2.97,
+    "pace": 102.7,
+    "w": 0.43,
+    "netCur": -6.97,
+    "netPrior": -5.04
+   }
+  },
+  "kalshi": {
+   "a": 77.0,
+   "b": 23.5,
+   "vol": 57647
+  },
+  "polymarket": {
+   "pA": 0.775,
+   "pB": 0.225,
+   "volume": 15125
+  },
+  "bookKey": "tipico_de",
+  "bookName": "Tipico",
+  "whales": {
+   "trades": [
+    {
+     "side": "A",
+     "team": "Denver Nuggets",
+     "usd": 1988,
+     "price": 0.77,
+     "buy": true,
+     "ts": 1795326680,
+     "wallet": "Unwieldy-Humor (0x6b77…ee2c)"
+    },
+    {
+     "side": "B",
+     "team": "Chicago Bulls",
+     "usd": 1012,
+     "price": 0.24,
+     "buy": true,
+     "ts": 1795317140,
+     "wallet": "Legitimate-Oyster-Outrigger (0x73c8…e1b1)"
+    }
+   ],
+   "usdA": 1988,
+   "usdB": 1012
+  },
+  "injuries": {
+   "away": [
+    {
+     "player": "Julian Strawther",
+     "status": "Out",
+     "info": "Strawther (knee) was diagnosed with a left knee sprain Friday and will be re-evaluated in six weeks, Vinny Benedetto of The Denver Gazette r",
+     "pOut": 1.0,
+     "value": 0.1,
+     "bpm": -1.8,
+     "mpg": 15.1,
+     "loss": 0.03
+    }
+   ],
+   "home": [
+    {
+     "player": "Patrick Williams",
+     "status": "Day-To-Day",
+     "info": "Williams is probable for Sunday's game against the Nuggets due to a left thumb sprain.",
+     "pOut": 0.1,
+     "value": 0.0,
+     "bpm": -3.2,
+     "mpg": 21.5,
+     "loss": 0.0
+    },
+    {
+     "player": "Norman Powell",
+     "status": "Day-To-Day",
+     "info": "Powell is questionable for Sunday's game against the Nuggets due to a right hamstring strain.",
+     "pOut": 0.45,
+     "value": 1.5,
+     "bpm": 0.5,
+     "mpg": 29.5,
+     "loss": 0.26
+    },
+    {
+     "player": "Jalen Smith",
+     "status": "Day-To-Day",
+     "info": "Smith (illness) is out for Friday's game against the Wizards, Joel Lorenzi of The Athletic reports.",
+     "pOut": 0.3,
+     "value": 1.1,
+     "bpm": 0.1,
+     "mpg": 24.6,
+     "loss": 0.25
+    },
+    {
+     "player": "Tobe Awaka",
+     "status": "Out",
+     "info": "Awaka (back) has been ruled out for Wednesday's game against the Nets.",
+     "pOut": 0.4,
+     "value": 0.2,
+     "bpm": -0.9,
+     "mpg": 10.2,
+     "loss": 0.01
+    },
+    {
+     "player": "Caleb Wilson",
+     "status": "Out",
+     "info": "Wilson (hand) is expected to miss four to six weeks, Shams Charania of ESPN reports.",
+     "pOut": 1.0,
+     "value": 0.4,
+     "bpm": -1.4,
+     "mpg": 30.8,
+     "loss": 0.11
+    }
+   ]
+  },
+  "bets": [
+   {
+    "market": "Sieg",
+    "pick": "Denver Nuggets",
+    "odds": 1.25,
+    "line": null,
+    "side": "away",
+    "pModel": 0.6952,
+    "pMarket": 0.772,
+    "p": 0.749,
+    "ev": -0.0638,
+    "evRaw": -0.131
+   },
+   {
+    "market": "Sieg",
+    "pick": "Chicago Bulls",
+    "odds": 3.8,
+    "line": null,
+    "side": "home",
+    "pModel": 0.3048,
+    "pMarket": 0.228,
+    "p": 0.251,
+    "ev": -0.046,
+    "evRaw": 0.1583
+   },
+   {
+    "market": "Handicap",
+    "pick": "Denver Nuggets -8.5",
+    "odds": 1.83,
+    "line": -8.5,
+    "side": "away",
+    "pModel": 0.4327,
+    "pMarket": 0.5061,
+    "p": 0.4841,
+    "ev": -0.1141,
+    "evRaw": -0.2081
+   },
+   {
+    "market": "Handicap",
+    "pick": "Chicago Bulls +8.5",
+    "odds": 1.87,
+    "line": 8.5,
+    "side": "home",
+    "pModel": 0.5673,
+    "pMarket": 0.4939,
+    "p": 0.5159,
+    "ev": -0.0352,
+    "evRaw": 0.0608
+   },
+   {
+    "market": "Gesamtpunkte",
+    "pick": "Über 237.5",
+    "odds": 1.9,
+    "line": 237.5,
+    "side": "over",
+    "pModel": 0.4781,
+    "pMarket": 0.4986,
+    "p": 0.4925,
+    "ev": -0.0643,
+    "evRaw": -0.0916
+   },
+   {
+    "market": "Gesamtpunkte",
+    "pick": "Unter 237.5",
+    "odds": 1.8,
+    "line": 237.5,
+    "side": "under",
+    "pModel": 0.5219,
+    "pMarket": 0.5014,
+    "p": 0.5075,
+    "ev": -0.0865,
+    "evRaw": -0.0606
+   }
+  ],
+  "best": {
+   "market": "Handicap",
+   "pick": "Chicago Bulls +8.5",
+   "odds": 1.87,
+   "line": 8.5,
+   "side": "home",
+   "pModel": 0.5673,
+   "pMarket": 0.4939,
+   "p": 0.5159,
+   "ev": -0.0352,
+   "evRaw": 0.0608
+  },
+  "sideA": "Chicago Bulls",
+  "pickLabel": "Denver Nuggets @ Chicago Bulls"
+ },
+ {
+  "id": "031fa761cc38e1b5afd9309b731b38b2",
+  "sportKey": "basketball_nba",
+  "sport": "NBA",
+  "commence": "2026-11-23T01:10:00Z",
+  "away": "Indiana Pacers",
+  "home": "New York Knicks",
+  "abbrA": "IND",
+  "abbrH": "NYK",
+  "margin": 10.3,
+  "total": 214.9,
+  "poss": 96.0,
+  "ptsA": 102.3,
+  "ptsH": 112.6,
+  "pModelHome": 0.7948,
+  "pMarketHome": 0.7563,
+  "pFinalHome": 0.7678,
+  "parts": [
+   {
+    "n": "Team-Stärke & Tempo",
+    "m": 9.5
+   },
+   {
+    "n": "Heimvorteil",
+    "m": 2.2
+   },
+   {
+    "n": "Verletzungen",
+    "m": 0.1,
+    "info": "IND −1.5, NYK −1.4 Punkte"
+   },
+   {
+    "n": "Ruhe & Reise",
+    "m": -1.5,
+    "info": "Ruhetage IND 1, NYK 0"
+   }
+  ],
+  "ratings": {
+   "away": {
+    "off": -3.98,
+    "def": -1.04,
+    "pace": 100.5,
+    "w": 0.44,
+    "netCur": -4.66,
+    "netPrior": -7.6
+   },
+   "home": {
+    "off": 1.49,
+    "def": 3.37,
+    "pace": 94.2,
+    "w": 0.44,
+    "netCur": 5.54,
+    "netPrior": 6.18
+   }
+  },
+  "kalshi": {
+   "a": 25.5,
+   "b": 74.5,
+   "vol": 29403
+  },
+  "polymarket": {
+   "pA": 0.245,
+   "pB": 0.755,
+   "volume": 39719
+  },
+  "bookKey": "tipico_de",
+  "bookName": "Tipico",
+  "whales": {
+   "trades": [
+    {
+     "side": "B",
+     "team": "New York Knicks",
+     "usd": 1981,
+     "price": 0.766,
+     "buy": true,
+     "ts": 1795298405,
+     "wallet": "Miserly-Clock (0xa6df…dda7)"
+    },
+    {
+     "side": "B",
+     "team": "New York Knicks",
+     "usd": 1447,
+     "price": 0.75,
+     "buy": true,
+     "ts": 1795319087,
+     "wallet": "Polite-Age (0xe558…dcd2)"
+    },
+    {
+     "side": "B",
+     "team": "New York Knicks",
+     "usd": 1429,
+     "price": 0.75,
+     "buy": true,
+     "ts": 1795319069,
+     "wallet": "Revolving-Wallet (0xf3a6…71bd)"
+    },
+    {
+     "side": "A",
+     "team": "Indiana Pacers",
+     "usd": 1101,
+     "price": 0.24,
+     "buy": true,
+     "ts": 1795341608,
+     "wallet": "Normal-Distance-Apparatus (0xc374…0f3e)"
+    }
+   ],
+   "usdA": 1101,
+   "usdB": 4857
+  },
+  "injuries": {
+   "away": [
+    {
+     "player": "T.J. McConnell",
+     "status": "Out",
+     "info": "McConnell (hamstring) is listed as out for Sunday's game in New York.",
+     "pOut": 1.0,
+     "value": 0.9,
+     "bpm": 1.2,
+     "mpg": 13.9,
+     "loss": 0.54
+    },
+    {
+     "player": "Pascal Siakam",
+     "status": "Day-To-Day",
+     "info": "Siakam (hip) is listed as questionable for Sunday's game against New York.",
+     "pOut": 0.45,
+     "value": 1.8,
+     "bpm": 0.7,
+     "mpg": 32.1,
+     "loss": 0.66
+    },
+    {
+     "player": "Tyrese Haliburton",
+     "status": "Out",
+     "info": "Haliburton (hamstring) is expected to miss at least two more weeks, Shams Charania of ESPN reports.",
+     "pOut": 1.0,
+     "value": 2.6,
+     "bpm": 1.7,
+     "mpg": 33.0,
+     "loss": 0.28
+    },
+    {
+     "player": "Johnny Furphy",
+     "status": "Out",
+     "info": "Furphy (knee) is practicing with the G League's Noblesville Boom, per Alex Golden of SI.com.",
+     "pOut": 1.0,
+     "value": 0.0,
+     "bpm": -2.4,
+     "mpg": 18.4,
+     "loss": 0.0
+    },
+    {
+     "player": "Ben Sheppard",
+     "status": "Out",
+     "info": "Head coach Rick Carlise confirmed Sheppard will miss \"months\" after undergoing surgery to repair a torn meniscus in his left knee, Tony East",
+     "pOut": 1.0,
+     "value": 0.0,
+     "bpm": -2.5,
+     "mpg": 21.4,
+     "loss": 0.0
+    }
+   ],
+   "home": [
+    {
+     "player": "Karl-Anthony Towns",
+     "status": "Day-To-Day",
+     "info": "Towns (illness) won't play in Saturday's game versus the Trail Blazers.",
+     "pOut": 0.3,
+     "value": 3.8,
+     "bpm": 3.5,
+     "mpg": 32.8,
+     "loss": 0.91
+    },
+    {
+     "player": "Jordan Clarkson",
+     "status": "Day-To-Day",
+     "info": "Clarkson (foot) won't play in Saturday's game against Portland.",
+     "pOut": 0.3,
+     "value": 0.0,
+     "bpm": -2.7,
+     "mpg": 9.8,
+     "loss": 0.0
+    },
+    {
+     "player": "OG Anunoby",
+     "status": "Day-To-Day",
+     "info": "Anunoby (calf) has been ruled out for Saturday's game against the Trail Blazers.",
+     "pOut": 0.3,
+     "value": 2.0,
+     "bpm": 0.8,
+     "mpg": 33.9,
+     "loss": 0.48
+    }
+   ]
+  },
+  "bets": [
+   {
+    "market": "Sieg",
+    "pick": "Indiana Pacers",
+    "odds": 3.8,
+    "line": null,
+    "side": "away",
+    "pModel": 0.2052,
+    "pMarket": 0.2437,
+    "p": 0.2322,
+    "ev": -0.1178,
+    "evRaw": -0.2204
+   },
+   {
+    "market": "Sieg",
+    "pick": "New York Knicks",
+    "odds": 1.25,
+    "line": null,
+    "side": "home",
+    "pModel": 0.7948,
+    "pMarket": 0.7563,
+    "p": 0.7678,
+    "ev": -0.0402,
+    "evRaw": -0.0065
+   },
+   {
+    "market": "Handicap",
+    "pick": "Indiana Pacers +8.5",
+    "odds": 1.93,
+    "line": 8.5,
+    "side": "away",
+    "pModel": 0.443,
+    "pMarket": 0.4946,
+    "p": 0.4791,
+    "ev": -0.0753,
+    "evRaw": -0.145
+   },
+   {
+    "market": "Handicap",
+    "pick": "New York Knicks -8.5",
+    "odds": 1.77,
+    "line": -8.5,
+    "side": "home",
+    "pModel": 0.557,
+    "pMarket": 0.5054,
+    "p": 0.5209,
+    "ev": -0.0781,
+    "evRaw": -0.0142
+   },
+   {
+    "market": "Gesamtpunkte",
+    "pick": "Über 213.5",
+    "odds": 1.83,
+    "line": 213.5,
+    "side": "over",
+    "pModel": 0.5319,
+    "pMarket": 0.5061,
+    "p": 0.5138,
+    "ev": -0.0597,
+    "evRaw": -0.0266
+   },
+   {
+    "market": "Gesamtpunkte",
+    "pick": "Unter 213.5",
+    "odds": 1.87,
+    "line": 213.5,
+    "side": "under",
+    "pModel": 0.4681,
+    "pMarket": 0.4939,
+    "p": 0.4862,
+    "ev": -0.0909,
+    "evRaw": -0.1246
+   }
+  ],
+  "best": {
+   "market": "Sieg",
+   "pick": "New York Knicks",
+   "odds": 1.25,
+   "line": null,
+   "side": "home",
+   "pModel": 0.7948,
+   "pMarket": 0.7563,
+   "p": 0.7678,
+   "ev": -0.0402,
+   "evRaw": -0.0065
+  },
+  "sideA": "New York Knicks",
+  "pickLabel": "Indiana Pacers @ New York Knicks"
+ },
+ {
+  "id": "1e7b9477c6c55aea5efd9c1a47039f5c",
+  "sportKey": "basketball_nba",
+  "sport": "NBA",
+  "commence": "2026-11-23T00:10:00Z",
+  "away": "Dallas Mavericks",
+  "home": "Utah Jazz",
+  "abbrA": "DAL",
+  "abbrH": "UTA",
+  "margin": 0.3,
+  "total": 222.8,
+  "poss": 98.8,
+  "ptsA": 111.2,
+  "ptsH": 111.5,
+  "pModelHome": 0.5086,
+  "pMarketHome": 0.4988,
+  "pFinalHome": 0.5017,
+  "parts": [
+   {
+    "n": "Team-Stärke & Tempo",
+    "m": -3.3
+   },
+   {
+    "n": "Heimvorteil inkl. Höhe",
+    "m": 3.0
+   },
+   {
+    "n": "Verletzungen",
+    "m": -1.4,
+    "info": "DAL −0.2, UTA −1.6 Punkte"
+   },
+   {
+    "n": "Ruhe & Reise",
+    "m": 2.0,
+    "info": "Ruhetage DAL 0, UTA 1"
+   }
+  ],
+  "ratings": {
+   "away": {
+    "off": -1.58,
+    "def": 0.33,
+    "pace": 98.7,
+    "w": 0.44,
+    "netCur": 1.78,
+    "netPrior": -5.25
+   },
+   "home": {
+    "off": -2.96,
+    "def": -1.67,
+    "pace": 98.7,
+    "w": 0.46,
+    "netCur": -3.62,
+    "netPrior": -7.84
+   }
+  },
+  "kalshi": {
+   "a": 49.5,
+   "b": 49.5,
+   "vol": 85444
+  },
+  "polymarket": {
+   "pA": 0.505,
+   "pB": 0.495,
+   "volume": 26112
+  },
+  "bookKey": "tipico_de",
+  "bookName": "Tipico",
+  "whales": {
+   "trades": [],
+   "usdA": 0,
+   "usdB": 0
+  },
+  "injuries": {
+   "away": [
+    {
+     "player": "P.J. Washington",
+     "status": "Out",
+     "info": "Washington (illness/shoulder) is listed as out for Saturday's game against the Clippers.",
+     "pOut": 0.4,
+     "value": 0.4,
+     "bpm": -1.3,
+     "mpg": 30.8,
+     "loss": 0.13
+    },
+    {
+     "player": "Tobi Lawal",
+     "status": "Out",
+     "info": "Lawal (groin) is out for Saturday's game against the Clippers.",
+     "pOut": 0.4,
+     "value": 0.1,
+     "bpm": -1.3,
+     "mpg": 4.5,
+     "loss": 0.01
+    },
+    {
+     "player": "Dereck Lively II",
+     "status": "Out",
+     "info": "Head coach Dusty May said Friday that Lively (foot) is moving well and progressing in his recovery, and the big man told May he's \"close\" to",
+     "pOut": 0.4,
+     "value": 0.4,
+     "bpm": -0.7,
+     "mpg": 16.4,
+     "loss": 0.07
+    },
+    {
+     "player": "Sergio de Larrea",
+     "status": "Out",
+     "info": "De Larrea (knee) is listed as out for Wednesday's game against the Warriors.",
+     "pOut": 0.4,
+     "value": 0.1,
+     "bpm": -1.5,
+     "mpg": 11.5,
+     "loss": 0.01
+    },
+    {
+     "player": "Tarik Biberovic",
+     "status": "Out",
+     "info": "Biberovic (heel) is out for Wednesday's game against the Warriors.",
+     "pOut": 0.4
+    }
+   ],
+   "home": [
+    {
+     "player": "Jusuf Nurkic",
+     "status": "Out",
+     "info": "Nurkic (foot) has been cleared for on-court work and will be re-evaluated in one week.",
+     "pOut": 1.0
+    },
+    {
+     "player": "Lauri Markkanen",
+     "status": "Out",
+     "info": "Markkanen has been diagnosed with a non-displaced fracture in his right hand and will be sidelined for at least one month, Shams Charania of",
+     "pOut": 1.0,
+     "value": 2.3,
+     "bpm": 1.5,
+     "mpg": 30.9,
+     "loss": 1.35
+    },
+    {
+     "player": "Jaren Jackson Jr.",
+     "status": "Out",
+     "info": "Jackson has been diagnosed with a torn MCL in his right knee and will be sidelined for 6-to-8 weeks, per Shams Charania of ESPN.",
+     "pOut": 1.0,
+     "value": 0.5,
+     "bpm": -1.0,
+     "mpg": 26.0,
+     "loss": 0.25
+    }
+   ]
+  },
+  "bets": [
+   {
+    "market": "Sieg",
+    "pick": "Dallas Mavericks",
+    "odds": 1.87,
+    "line": null,
+    "side": "away",
+    "pModel": 0.4914,
+    "pMarket": 0.5012,
+    "p": 0.4983,
+    "ev": -0.0682,
+    "evRaw": -0.0812
+   },
+   {
+    "market": "Sieg",
+    "pick": "Utah Jazz",
+    "odds": 1.9,
+    "line": null,
+    "side": "home",
+    "pModel": 0.5086,
+    "pMarket": 0.4988,
+    "p": 0.5017,
+    "ev": -0.0467,
+    "evRaw": -0.0336
+   },
+   {
+    "market": "Handicap",
+    "pick": "Dallas Mavericks -1.5",
+    "odds": 1.9,
+    "line": -1.5,
+    "side": "away",
+    "pModel": 0.4437,
+    "pMarket": 0.4848,
+    "p": 0.4724,
+    "ev": -0.1024,
+    "evRaw": -0.157
+   },
+   {
+    "market": "Handicap",
+    "pick": "Utah Jazz +1.5",
+    "odds": 1.8,
+    "line": 1.5,
+    "side": "home",
+    "pModel": 0.5563,
+    "pMarket": 0.5152,
+    "p": 0.5276,
+    "ev": -0.0504,
+    "evRaw": 0.0014
+   },
+   {
+    "market": "Gesamtpunkte",
+    "pick": "Über 223.5",
+    "odds": 1.9,
+    "line": 223.5,
+    "side": "over",
+    "pModel": 0.4837,
+    "pMarket": 0.4848,
+    "p": 0.4844,
+    "ev": -0.0796,
+    "evRaw": -0.081
+   },
+   {
+    "market": "Gesamtpunkte",
+    "pick": "Unter 223.5",
+    "odds": 1.8,
+    "line": 223.5,
+    "side": "under",
+    "pModel": 0.5163,
+    "pMarket": 0.5152,
+    "p": 0.5156,
+    "ev": -0.072,
+    "evRaw": -0.0707
+   }
+  ],
+  "best": {
+   "market": "Sieg",
+   "pick": "Utah Jazz",
+   "odds": 1.9,
+   "line": null,
+   "side": "home",
+   "pModel": 0.5086,
+   "pMarket": 0.4988,
+   "p": 0.5017,
+   "ev": -0.0467,
+   "evRaw": -0.0336
+  },
+  "sideA": "Utah Jazz",
+  "pickLabel": "Dallas Mavericks @ Utah Jazz"
  }
 ]
