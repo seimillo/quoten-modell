@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quoten-Modell · Tennis & NBA</title>
+<style>
+:root{--bg:#f6f6f3;--card:#fff;--ink:#1c1f23;--muted:#626873;--line:#e1e0db;--accent:#2f6b3f;--soft:#e3efe5;--bad:#a23b2f;--warn:#9a5b00;--warnsoft:#fbf0de}
+@media (prefers-color-scheme:dark){:root{--bg:#131517;--card:#1c1f22;--ink:#e9eaea;--muted:#9aa0a6;--line:#2e3236;--accent:#7cc48d;--soft:#213a28;--bad:#ec8a7e;--warn:#e2a64a;--warnsoft:#3a2e1a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line)}
+header .in{max-width:900px;margin:0 auto;padding:10px 14px 0}
+.brand{font-weight:700}
+nav{display:flex;gap:2px;overflow-x:auto;margin-top:6px}
+nav a{flex:1;text-align:center;padding:10px 8px;font-size:.9rem;font-weight:600;color:var(--muted);text-decoration:none;border-bottom:3px solid transparent;white-space:nowrap}
+nav a.on{color:var(--accent);border-bottom-color:var(--accent)}
+main{max-width:900px;margin:0 auto;padding:14px 14px 60px}
+h1{font-size:1.5rem;margin:8px 0 4px}
+h2{font-size:1.05rem;margin:0 0 10px}
+h3{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin:14px 0 6px}
+.muted,.hint{color:var(--muted)} .hint{font-size:.8rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:14px}
+.item{border:1px solid var(--line);border-radius:12px;background:var(--bg);margin-bottom:10px}
+.item summary{list-style:none;cursor:pointer;padding:12px;display:flex;justify-content:space-between;gap:8px}
+.item summary::-webkit-details-marker{display:none}
+.item .body{padding:0 12px 12px}
+.t{font-weight:700}
+.small{font-size:.8rem;color:var(--muted)}
+.tag{font-size:.75rem;padding:3px 8px;border-radius:20px;white-space:nowrap;align-self:flex-start}
+.tag.good{background:var(--soft);color:var(--accent)} .tag.none{border:1px solid var(--line);color:var(--muted)} .tag.warn{background:var(--warnsoft);color:var(--warn)}
+table{width:100%;border-collapse:collapse;font-size:.88rem;font-variant-numeric:tabular-nums}
+th,td{padding:6px 5px;border-bottom:1px solid var(--line);text-align:right;vertical-align:top}
+th:first-child,td:first-child{text-align:left}
+th{font-size:.72rem;color:var(--muted);font-weight:600}
+.pos{color:var(--accent);font-weight:600}.neg{color:var(--bad)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px}
+.kpi{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px}
+.kpi .k{font-size:.72rem;color:var(--muted)} .kpi .v{font-size:1.25rem;font-weight:700}
+@media (max-width:620px){.kpis{grid-template-columns:1fr 1fr}}
+[hidden]{display:none!important}
+footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:var(--muted)}
+.info li,.info p{font-size:.92rem}
+</style>
+</head>
+<body>
+<header><div class="in">
+  <div class="brand">📈 Quoten-Modell · Tennis & NBA</div>
+  <nav>
+    <a href="#start" data-nav="start">Übersicht</a>
+    <a href="#tennis" data-nav="tennis">Tennis</a>
+    <a href="#nba" data-nav="nba">NBA</a>
+    <a href="#geld" data-nav="geld">Großes Geld</a>
+    <a href="#treffer" data-nav="treffer">Treffer</a>
+    <a href="#methode" data-nav="methode">Methode</a>
+  </nav>
+</div></header>
+<main>
+<section data-view="start">
+  <h1>Wo sieht das Modell es anders als der Markt?</h1>
+  <p class="muted" id="stand">Lade Daten …</p>
+  <div class="kpis" id="kpis"></div>
+  <div class="card"><h2>Höchste Erwartungswerte</h2><div id="top"></div>
+  <p class="hint">Erwartungswert (EV) = Chance × Quote − 1 bei bet365. Die Chance ist eine Mischung aus Modell und Markt (Markt-Anker), darum sind die Werte bewusst vorsichtig.</p></div>
+</section>
+<section data-view="tennis"><div class="card"><h2>Tennis</h2><div id="tennisList"></div></div></section>
+<section data-view="nba"><div class="card"><h2>NBA</h2><div id="nbaList"></div></div></section>
+<section data-view="geld"><div class="card"><h2>Großes Geld auf Polymarket</h2>
+  <p class="hint">Einzelne Einsätze ab 1.000 $ in den letzten 48 Stunden auf Polymarket, plus die Kalshi-Preise. Prognosemärkte haben kleine Margen – dort handeln oft gut informierte Leute. Sie zählen im Markt-Anker zur Hälfte.</p>
+  <div id="whales"></div></div></section>
+<section data-view="treffer"><div class="card"><h2>Trefferliste</h2>
+  <p class="hint">Jede Prognose wird bis zum Spielbeginn aktualisiert, dann eingefroren und nach dem Spiel ausgewertet.</p>
+  <div id="trk"></div></div></section>
+<section data-view="methode" class="info"><div class="card"><h2>So rechnet das Modell</h2>
+  <h3>Tennis</h3>
+  <ol>
+    <li><b>Stärke:</b> Belag-Elo von Tennis Abstract (hElo/cElo/gElo – dort schon 50:50 mit der Gesamt-Elo gemischt). Belag aus dem Turniernamen, sonst Hartplatz.</li>
+    <li><b>Best of 5</b> bei Grand Slams der Männer (Umrechnung über die Satz-Chance).</li>
+    <li><b>Quotenbewegung:</b> Das Modell folgt der Bewegung seit dem ersten Abruf zur Hälfte.</li>
+    <li><b>Markt-Anker:</b> Mischung mit dem genauesten verfügbaren Markt (Pinnacle bzw. Betfair, sonst bet365; dazu Polymarket zur Hälfte). Gewicht des Modells: Elo ab 1900 → 50 %, ab 1700 → 40 %, ab 1500 → 30 %, darunter 25 %, ohne Elo 10 %.</li>
+  </ol>
+  <h3>NBA</h3>
+  <ol>
+    <li><b>Team-Stärke:</b> gegnerbereinigte Offensiv-/Defensiv-Ratings von Basketball-Reference, gemischt mit der gedämpften Vorsaison (Gewicht aktuell = Spiele/(Spiele+20)).</li>
+    <li><b>Tempo:</b> Ballbesitze = Tempo A × Tempo B / Liga-Tempo → Punkte je Team und Gesamtpunkte.</li>
+    <li><b>Heimvorteil</b> 2,2 Punkte, Denver/Utah +0,8 (Höhe).</li>
+    <li><b>Ruhe & Reise:</b> zweites Spiel an zwei Tagen −1,5 (auswärts −2,0), Ruhetag-Vorteil +0,3 je Tag, Reise nach Osten −0,3 je Zeitzone.</li>
+    <li><b>Wahrscheinlichkeiten:</b> Normalverteilung mit 12,5 Punkten Streuung (Differenz) und 18 Punkten (Gesamt).</li>
+    <li><b>Markt-Anker:</b> 30 % Modell, 70 % Markt (Pinnacle/Betfair bzw. bet365, beim Sieg dazu Kalshi und Polymarket zur Hälfte).</li>
+    <li><b>Verletzungen</b> werden angezeigt, aber nicht automatisch eingerechnet – dafür fehlt ein frei verfügbarer Wert pro Spieler. Der Markt preist sie meist schnell ein.</li>
+  </ol>
+  <h3>Grenzen</h3>
+  <p>Die Gewichte sind begründete Schätzungen, nicht an alten Spielen getestet. Die Trefferliste zeigt nach ein paar hundert Spielen, ob das Modell genauer ist als der Markt (Brier-Wert). Bis dahin: Lern- und Analyseprojekt, keine Wettempfehlung.</p>
+  <h3>Quellen</h3>
+  <p class="hint">Quoten: The Odds API (bet365, Pinnacle, Betfair) · Elo: Tennis Abstract · NBA-Ratings: Basketball-Reference · Verletzungen: ESPN · Prognosemärkte: Kalshi und Polymarket (öffentliche Schnittstellen)</p>
+</div></section>
+</main>
+<footer>Analyse- und Lernprojekt, keine Wettempfehlung. Wetten erst ab 18 · Hilfe: check-dein-spiel.de · 0800 1 37 27 00</footer>
+<script>
+(async function(){
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const f = (x,d=1) => x===null||x===undefined||isNaN(x) ? "–" : (Math.round(x*10**d)/10**d).toFixed(d).replace(".",",");
+const pct = (x,d=0) => f(x*100,d) + " %";
+const sg = (x,d=1) => (x>0?"+":x<0?"−":"±") + f(Math.abs(x),d);
+const cls = x => x>0.0005?"pos":x<-0.0005?"neg":"";
+const when = iso => new Date(iso).toLocaleString("de-DE",{weekday:"short",day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});
+async function load(n, d){ try{ const r = await fetch("data/"+n+"?v="+Date.now()); return r.ok ? await r.json() : d; }catch(e){ return d; } }
+const [tennis, nba, picks, status] = await Promise.all([load("tennis.json",[]), load("nba.json",[]), load("picks.json",{}), load("status.json",null)]);
+
+$("stand").textContent = status ? `Stand: ${new Date(status.updated).toLocaleString("de-DE")} · ${tennis.length} Tennis-Matches · ${nba.length} NBA-Spiele` + (status.credits && status.credits.remaining!=null ? ` · API-Credits übrig: ${f(status.credits.remaining,0)}` : "") : "Noch keine Daten – die Pipeline ist noch nicht gelaufen.";
+const st = status ? status.stats : null;
+$("kpis").innerHTML = st ? `
+  <div class="kpi"><div class="k">Prognosen gespeichert</div><div class="v">${st.total}</div></div>
+  <div class="kpi"><div class="k">Ausgewertet</div><div class="v">${st.settled}</div></div>
+  <div class="kpi"><div class="k">Brier Modell / Markt</div><div class="v">${f(st.brierModel,3)} / ${f(st.brierMarket,3)}</div></div>
+  <div class="kpi"><div class="k">Value-Wetten à 10 €</div><div class="v ${cls(st.profit)}">${sg(st.profit,2)} €</div><div class="hint">${st.valueBets} Wetten</div></div>` : "";
+
+function tag(b){ return b.ev>0 ? `<span class="tag good">${esc(b.pick)} ${sg(b.ev*100)} %</span>` : `<span class="tag none">kein Value</span>`; }
+function betsTable(bets){
+  return `<table><thead><tr><th>Wette</th><th>bet365</th><th>Modell</th><th>Gemischt</th><th>EV</th></tr></thead><tbody>${bets.map(b=>`<tr><td>${esc(b.market)}<div class="small">${esc(b.pick)}</div></td><td>${f(b.odds,2)}</td><td>${pct(b.pModel)}</td><td>${pct(b.p)}</td><td class="${cls(b.ev)}">${sg(b.ev*100)} %<div class="small">rein: ${sg(b.evRaw*100)} %</div></td></tr>`).join("")}</tbody></table>`;
+}
+function whaleLine(w, nA, nB){
+  if(!w || (!w.usdA && !w.usdB)) return "";
+  return `<div class="small">🐋 Großeinsätze 48 h: ${esc(nA)} ${f(w.usdA,0)} $ · ${esc(nB)} ${f(w.usdB,0)} $</div>`;
+}
+function tennisCard(m){
+  const parts = m.parts.map(p=>`<tr><td>${esc(p.n)}<div class="small">${esc(p.info||"")}</div></td><td>${p.pp===null?"–":sg(p.pp*100)+" Pkt."}</td></tr>`).join("");
+  return `<details class="item"><summary><div><div class="small">${esc(m.tour)} · ${esc(m.event)} · ${esc(m.surface)} · ${when(m.commence)}</div>
+    <div class="t">${esc(m.a)} – ${esc(m.b)}</div>
+    <div class="small">bet365 ${f(m.book.qa,2)} / ${f(m.book.qb,2)} · Modell ${pct(m.pModelA)} · Markt ${pct(m.pMarketA)}${m.polymarket?` · Polymarket ${pct(m.polymarket.pA)}`:""}</div>
+    ${whaleLine(m.whales, m.a, m.b)}</div>${tag(m.best)}</summary>
+    <div class="body"><h3>Wie die Chance für ${esc(m.a)} entsteht</h3><table><tbody>
+      <tr><td><b>Basis</b><div class="small">${m.kind==="elo"?"Elo-Formel":"Markt (keine Elo)"}</div></td><td><b>${pct(m.base,1)}</b></td></tr>${parts}
+      <tr><td><b>Ergebnis</b></td><td><b>${pct(m.pFinalA,1)}</b></td></tr></tbody></table>
+      <h3>Wetten</h3>${betsTable(m.bets)}</div></details>`;
+}
+function nbaCard(g){
+  const parts = g.parts.map(p=>`<tr><td>${esc(p.n)}<div class="small">${esc(p.info||"")}</div></td><td>${sg(p.m)}</td></tr>`).join("");
+  const inj = side => (g.injuries[side]||[]).filter(i=>!/^active$/i.test(i.status)).map(i=>`${esc(i.player)} (${esc(i.status)})`).join(", ") || "keine gemeldet";
+  return `<details class="item"><summary><div><div class="small">${when(g.commence)}</div>
+    <div class="t">${esc(g.away)} @ ${esc(g.home)}</div>
+    <div class="small">Modell: ${esc(g.abbrH)} ${sg(g.margin)} · ${f(g.total)} Punkte · Siegchance ${esc(g.abbrH)} ${pct(g.pModelHome)} · Markt ${pct(g.pMarketHome)}</div>
+    ${g.kalshi?`<div class="small">Kalshi: ${esc(g.abbrA)} ${f(g.kalshi.a,0)} % / ${esc(g.abbrH)} ${f(g.kalshi.b,0)} % · ${f(g.kalshi.vol,0)} Kontrakte</div>`:""}
+    ${whaleLine(g.whales, g.away, g.home)}</div>${tag(g.best)}</summary>
+    <div class="body"><h3>Punktdifferenz ${esc(g.abbrH)}</h3><table><tbody>${parts}
+      <tr><td><b>Ergebnis</b><div class="small">${esc(g.abbrA)} ${f(g.ptsA)} : ${f(g.ptsH)} ${esc(g.abbrH)} · ${f(g.poss)} Ballbesitze</div></td><td><b>${sg(g.margin)}</b></td></tr></tbody></table>
+      <h3>Wetten</h3>${betsTable(g.bets)}
+      <h3>Verletzungen (ESPN)</h3><p class="small">${esc(g.abbrA)}: ${inj("away")}<br>${esc(g.abbrH)}: ${inj("home")}</p></div></details>`;
+}
+$("tennisList").innerHTML = tennis.length ? tennis.map(tennisCard).join("") : `<p class="hint">Gerade keine ATP-/WTA-Matches mit Quoten. Challenger-Turniere deckt The Odds API nicht ab.</p>`;
+$("nbaList").innerHTML = nba.length ? nba.map(nbaCard).join("") : `<p class="hint">Gerade keine NBA-Spiele mit Quoten.</p>`;
+const all = [...tennis.map(m=>({...m, html:tennisCard(m)})), ...nba.map(g=>({...g, html:nbaCard(g)}))].sort((a,b)=>b.best.ev-a.best.ev);
+$("top").innerHTML = all.length ? all.slice(0,8).map(x=>x.html).join("") : `<p class="hint">Noch keine Daten.</p>`;
+
+const wl = [...tennis.map(m=>({lbl:`${m.a} – ${m.b}`, nA:m.a, nB:m.b, w:m.whales, pm:m.polymarket})), ...nba.map(g=>({lbl:`${g.away} @ ${g.home}`, nA:g.away, nB:g.home, w:g.whales, pm:g.polymarket, k:g.kalshi}))]
+  .filter(x=>(x.w && x.w.trades && x.w.trades.length) || x.k || x.pm);
+$("whales").innerHTML = wl.length ? wl.map(x=>`<div class="item" style="padding:12px"><div class="t">${esc(x.lbl)}</div>
+  ${x.pm?`<div class="small">Polymarket: ${esc(x.nA)} ${pct(x.pm.pA)} / ${esc(x.nB)} ${pct(x.pm.pB)} · Volumen ${f(x.pm.volume,0)} $</div>`:""}
+  ${x.k?`<div class="small">Kalshi: ${f(x.k.a,0)} % / ${f(x.k.b,0)} %</div>`:""}
+  ${x.w && x.w.trades.length ? `<table><thead><tr><th>Einsatz auf</th><th>Betrag</th><th>Preis</th><th>Wallet</th><th>Zeit</th></tr></thead><tbody>${x.w.trades.map(t=>`<tr><td>${esc(t.team)}${t.buy?"":" <span class='small'>(Verkauf Gegenseite)</span>"}</td><td>${f(t.usd,0)} $</td><td>${f(t.price*100,0)} ¢</td><td class="small">${esc(t.wallet)}</td><td class="small">${new Date(t.ts*1000).toLocaleString("de-DE",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"})}</td></tr>`).join("")}</tbody></table>` : `<p class="small">Keine Einzeleinsätze ab 1.000 $.</p>`}</div>`).join("") : `<p class="hint">Gerade keine passenden Prognosemärkte.</p>`;
+
+const rows = Object.values(picks).sort((a,b)=>String(b.commence).localeCompare(String(a.commence)));
+$("trk").innerHTML = rows.length ? `<table><thead><tr><th>Datum</th><th>Spiel</th><th>Modell</th><th>Markt</th><th>Beste Wette</th><th>Ergebnis</th></tr></thead><tbody>${rows.map(r=>`<tr>
+  <td>${esc(r.date)}<div class="small">${esc(r.sport)}</div></td><td>${esc(r.match)}<div class="small">Chance für ${esc(r.sideA)}</div></td>
+  <td>${pct(r.pModelA)}</td><td>${pct(r.pMarketA)}</td>
+  <td>${r.bet?`${esc(r.bet.pick)} @ ${f(r.bet.odds,2)}<div class="small">EV ${sg((r.bet.ev||0)*100)} %</div>`:"–"}</td>
+  <td>${r.result?`${r.result==="A"?esc(r.sideA)+" gewinnt":"Gegner gewinnt"}<div class="small">${esc(r.score||"")} · Wette ${r.betResult==="win"?"gewonnen":r.betResult==="loss"?"verloren":"zurück"}</div>`:"offen"}</td></tr>`).join("")}</tbody></table>
+  <p class="hint">Brier-Wert = Durchschnitt von (Prognose − Ergebnis)². Kleiner ist besser. Ist der Wert des Modells kleiner als der des Markts, war das Modell genauer.</p>` : `<p class="hint">Noch keine Prognosen gespeichert.</p>`;
+
+const VIEWS=["start","tennis","nba","geld","treffer","methode"];
+function show(){ const h=location.hash.slice(1), v=VIEWS.includes(h)?h:"start";
+  document.querySelectorAll("[data-view]").forEach(e=>e.hidden=e.dataset.view!==v);
+  document.querySelectorAll("[data-nav]").forEach(a=>a.classList.toggle("on",a.dataset.nav===v)); }
+addEventListener("hashchange", show); show();
+})();
+</script>
+</body>
+</html>
