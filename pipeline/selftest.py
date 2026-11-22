@@ -65,7 +65,7 @@ def patch():
         **{(f"atl spieler {i}", "ATL"): {"g": 15, "mp": 15 * m, "bpm": b, "order": 20 + i} for i, (m, b) in enumerate(
             [(34, 2.0), (32, 1.0), (30, 0.0), (28, -0.5), (26, -1.0), (22, -1.5), (20, -2.0), (16, -2.5), (14, -3.0), (10, -3.0)])},
         ("jalen duren", "DET"): {"g": 14, "mp": 420, "bpm": 2.5, "order": 99}}
-    S.nba_official_injuries = lambda names, now=None: ({"Detroit Pistons": [
+    S.nba_official_injuries = lambda names, now=None, known=None: ({"Detroit Pistons": [
         {"player": "Jalen Duren", "status": "Questionable", "info": "Injury/Illness - Ankle", "src": "NBA"}]},
         {"Atlanta Hawks"}, "2026-11-22 05:30 ET")
     S.espn_scoreboard = lambda d: [{"date": d.isoformat(), "start": PAST, "home": "Atlanta Hawks", "away": "Charlotte Hornets",

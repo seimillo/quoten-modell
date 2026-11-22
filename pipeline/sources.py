@@ -234,42 +234,74 @@ def _flip_name(n):
     return n.strip()
 
 
-def parse_nba_report(text, team_names):
-    """Text des PDFs → {Teamname: [Einträge]}, dazu die Teams mit „NOT YET SUBMITTED“."""
-    out, missing, team = {}, set(), None
-    names = sorted(team_names, key=len, reverse=True)
-    pat = re.compile(r"^(.+?,\s*[^,]+?)\s+(" + "|".join(NBA_STATUS) + r")\b\s*(.*)$")
-    for raw in text.splitlines():
-        line = raw.strip()
-        if not line or line.startswith(("Injury Report", "Page ", "Game Date")):
+SUFFIX = ("Jr.", "Sr.", "II", "III", "IV", "V")
+PARTICLES = ("de", "da", "van", "von", "der", "la", "le", "di", "del", "st.")
+
+
+def parse_nba_report(text, team_names, known=None):
+    """Text des PDFs (oft ein Wort pro Zeile) → {Teamname: [Einträge]}, dazu Teams mit „NOT YET SUBMITTED“.
+    known: Spielerschlüssel von Basketball-Reference, um mehrteilige Nachnamen richtig abzugrenzen."""
+    t = " ".join(text.split())
+    t = re.sub(r"(\w)-\s+(\w)", r"\1-\2", t)                      # „Gilgeous- Alexander“ → „Gilgeous-Alexander“
+    t = re.sub(r"Injury Report: \S+ \S+ [AP]M Page \d+ of \d+", " ", t)
+    t = re.sub(r"Game Date Game Time Matchup Team Player Name Current Status Reason", " ", t)
+    t = " ".join(t.split())
+    events = []
+    for name in team_names:
+        for m in re.finditer(re.escape(name) + r"\b", t):
+            events.append((m.start(), m.end(), "team", name))
+    for m in re.finditer(r"NOT YET SUBMITTED", t):
+        events.append((m.start(), m.end(), "nys", None))
+    st = "|".join(NBA_STATUS)
+    for m in re.finditer(r"([A-Za-z'.\-]+), ((?:[A-Za-z'.\-]+ ){1,2}?)(" + st + r")\b", t):
+        events.append((m.start(), m.end(), "player", m))
+    events.sort(key=lambda e: (e[0], -e[1]))
+    # Teamnamen, die in einem längeren Treffer stecken (z. B. Spielername), verwerfen
+    clean, last_end = [], -1
+    for e in events:
+        if e[0] < last_end:
             continue
-        rest = line
-        hit = None
-        for t in names:
-            i = line.rfind(t)
-            if i >= 0 and (hit is None or i > hit[1]):
-                hit = (t, i)
-        if hit:
-            team = hit[0]
-            rest = line[hit[1] + len(hit[0]):].strip()
+        clean.append(e)
+        last_end = e[1]
+    out, missing, team = {}, set(), None
+    for i, (s0, e0, kind, val) in enumerate(clean):
+        if kind == "team":
+            team = val
+            continue
         if team is None:
             continue
-        if rest.startswith("NOT YET SUBMITTED"):
+        if kind == "nys":
             missing.add(team)
             continue
-        m = pat.match(rest)
-        if not m:
-            if out.get(team) and rest and not re.match(r"^\d", rest):
-                out[team][-1]["info"] = (out[team][-1]["info"] + " " + rest).strip()   # umgebrochener Grund
-            continue
-        name = _flip_name(m.group(1))
-        if any(e["player"] == name for e in out.get(team, [])):
+        m = val
+        first = m.group(2).strip()
+        base = m.group(1)
+        prev = t[:s0].split()[-3:]
+        cands = [[base]] + [prev[-k:] + [base] for k in (1, 2, 3) if len(prev) >= k]
+        chosen = [base]
+        if known:
+            for c in cands:
+                full = f"{first} {' '.join(c)}"
+                if player_key(full) in known:
+                    chosen = c
+        if chosen == [base]:
+            if base in SUFFIX and prev:
+                chosen = prev[-1:] + [base]
+            elif prev and prev[-1].lower() in PARTICLES:
+                chosen = prev[-1:] + [base]
+        if chosen != [base] and out.get(team) and out[team][-1]["info"].endswith(" ".join(chosen[:-1])):
+            out[team][-1]["info"] = out[team][-1]["info"][: -len(" ".join(chosen[:-1]))].strip()
+        nxt = clean[i + 1][0] if i + 1 < len(clean) else len(t)
+        info = t[e0:nxt].strip()
+        info = re.sub(r"\s*\d{2}/\d{2}/\d{4}.*$|\s*\d{2}:\d{2} \(ET\).*$", "", info)
+        name = f"{first} {' '.join(chosen)}"
+        if any(x["player"] == name for x in out.get(team, [])):
             continue                                     # Spieler steht schon beim früheren Spiel
-        out.setdefault(team, []).append({"player": name, "status": m.group(2), "info": m.group(3).strip(), "src": "NBA"})
+        out.setdefault(team, []).append({"player": name, "status": m.group(3), "info": info, "src": "NBA"})
     return out, missing
 
 
-def nba_official_injuries(team_names, now=None):
+def nba_official_injuries(team_names, now=None, known=None):
     """Neuester Bericht: von jetzt (US-Ostküstenzeit) in 15-Minuten-Schritten rückwärts suchen."""
     import requests
     from datetime import timedelta
@@ -289,7 +321,7 @@ def nba_official_injuries(team_names, now=None):
             continue
         try:
             text = "\n".join(pg.extract_text() or "" for pg in PdfReader(io.BytesIO(r.content)).pages)
-            out, missing = parse_nba_report(text, team_names)
+            out, missing = parse_nba_report(text, team_names, known)
             if not out and not missing:                  # Format unbekannt → Rohtext zur Fehlersuche ablegen
                 from .common import DATA_DIR
                 with open(os.path.join(DATA_DIR, "debug_injury.txt"), "w", encoding="utf-8") as fh:

@@ -76,10 +76,10 @@ def nba_scores_from_history(picks, hist, now):
     return out
 
 
-def merged_injuries(now):
+def merged_injuries(now, known=None):
     """Offizieller NBA-Bericht, wo das Team schon gemeldet hat – sonst ESPN."""
     espn = {canon(k): v for k, v in S.espn_injuries().items()}
-    official, missing, stamp = S.nba_official_injuries(list(TEAMS) + list(ALIASES), now)
+    official, missing, stamp = S.nba_official_injuries(list(TEAMS) + list(ALIASES), now, known)
     official = {canon(k): v for k, v in official.items()}
     missing = {canon(k) for k in missing}
     out = {}
@@ -95,8 +95,8 @@ def nba_block(now, params, kalshi_nba, pm_nba, history):
     season = nba_season(now)
     cur, prior = S.bbref_ratings(season), S.bbref_ratings(season - 1)
     pace = S.bbref_pace(season)
-    injuries, stamp = merged_injuries(now)
     cur_pl, prior_pl = S.bbref_players(season), S.bbref_players(season - 1)
+    injuries, stamp = merged_injuries(now, {k for k, _ in list(cur_pl) + list(prior_pl)})
     events = S.odds_events("basketball_nba", "h2h,spreads,totals")
     upcoming = [e for e in events if parse_time(e["commence_time"]) > now]
     nba = model_games(upcoming, cur, prior, pace, [], injuries, kalshi_nba, pm_nba, cur_pl, prior_pl,
