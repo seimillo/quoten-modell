@@ -290,6 +290,10 @@ def nba_official_injuries(team_names, now=None):
         try:
             text = "\n".join(pg.extract_text() or "" for pg in PdfReader(io.BytesIO(r.content)).pages)
             out, missing = parse_nba_report(text, team_names)
+            if not out and not missing:                  # Format unbekannt → Rohtext zur Fehlersuche ablegen
+                from .common import DATA_DIR
+                with open(os.path.join(DATA_DIR, "debug_injury.txt"), "w", encoding="utf-8") as fh:
+                    fh.write(repr(text[:4000]))
             log(f"NBA-Verletzungsbericht {t:%d.%m. %H:%M} ET: {sum(len(v) for v in out.values())} Spieler, "
                 f"{len(missing)} Teams noch nicht gemeldet")
             return out, missing, f"{t:%Y-%m-%d %H:%M} ET"
