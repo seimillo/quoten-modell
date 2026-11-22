@@ -184,7 +184,44 @@ def bbref_pace(season):
         return {}
 
 
-# ---------------- ESPN (NBA-Verletzungen, nur zur Anzeige) ----------------
+BBREF_ABBR = {"BRK": "BKN", "CHO": "CHA", "PHO": "PHX"}
+
+
+def player_key(name):
+    import unicodedata
+    n = unicodedata.normalize("NFKD", str(name)).encode("ascii", "ignore").decode().lower()
+    n = re.sub(r"[^a-z ]", "", n.replace("-", " "))
+    return " ".join(w for w in n.split() if w not in ("jr", "sr", "ii", "iii", "iv"))
+
+
+def bbref_players(season):
+    """Fortgeschrittene Spielerwerte: {(Name, Kürzel): {g, mp, bpm}}."""
+    url = f"https://www.basketball-reference.com/leagues/NBA_{season}_advanced.html"
+    import time
+    time.sleep(3)                                        # Basketball-Reference erlaubt nur wenige Abrufe pro Minute
+    try:
+        html, _ = get(url, as_json=False)
+        html = html.replace("<!--", "").replace("-->", "")
+        df = max((_flatten(t) for t in pd.read_html(io.StringIO(html))), key=lambda t: ("BPM" in t.columns, len(t)))
+        tcol = "Team" if "Team" in df.columns else "Tm"
+        out = {}
+        for _, r in df.iterrows():
+            team = str(r.get(tcol, "")).strip()
+            if not re.fullmatch(r"[A-Z]{3}", team):          # 2TM/3TM-Summenzeilen, Kopfzeilen, Liga-Schnitt
+                continue
+            try:
+                g, mp, bpm = float(r["G"]), float(r["MP"]), float(r["BPM"])
+            except Exception:  # noqa: BLE001
+                continue
+            out[(player_key(r["Player"]), BBREF_ABBR.get(team, team))] = {"g": g, "mp": mp, "bpm": bpm}
+        log(f"Basketball-Reference Spieler {season}: {len(out)} Einträge")
+        return out
+    except Exception as e:  # noqa: BLE001
+        log(f"Basketball-Reference Spieler {season} fehlgeschlagen: {e}")
+        return {}
+
+
+# ---------------- ESPN (NBA-Verletzungen) ----------------
 
 def espn_injuries():
     url = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/injuries"
@@ -252,9 +289,11 @@ def polymarket_events(tag):
         return []
 
 
-def polymarket_trades(condition_id, limit=500):
+def polymarket_trades(condition_id, limit=1000, min_usd=1000):
+    """Data API v2 (v1 wurde am 2. 11. 2026 abgeschaltet): nur Trades ab min_usd Dollar."""
     try:
-        data, _ = get(f"{PM_DATA_BASE}/trades", {"market": condition_id, "limit": limit})
+        data, _ = get(f"{PM_DATA_BASE}/v2/trades", {"condition": condition_id, "limit": limit,
+                                                   "filter_type": "CASH", "filter_amount": min_usd})
         return data.get("data", data) if isinstance(data, dict) else data
     except Exception as e:  # noqa: BLE001
         log(f"Polymarket Trades {condition_id[:10]}… fehlgeschlagen: {e}")

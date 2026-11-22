@@ -48,10 +48,11 @@ def main():
         cur, prior = S.bbref_ratings(season), S.bbref_ratings(season - 1)
         pace = S.bbref_pace(season)
         injuries = S.espn_injuries()
+        cur_pl, prior_pl = S.bbref_players(season), S.bbref_players(season - 1)
         nba_scores = S.odds_scores("basketball_nba", 3)
         events = S.odds_events("basketball_nba", "h2h,spreads,totals")
         upcoming = [e for e in events if parse_time(e["commence_time"]) > now]
-        nba = model_games(upcoming, cur, prior, pace, nba_scores, injuries, kalshi_nba, pm_nba)
+        nba = model_games(upcoming, cur, prior, pace, nba_scores, injuries, kalshi_nba, pm_nba, cur_pl, prior_pl)
     else:
         log("NBA: aktuell keine Spiele bei The Odds API")
 

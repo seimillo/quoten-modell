@@ -87,7 +87,7 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
     <li><b>Ruhe & Reise:</b> zweites Spiel an zwei Tagen −1,5 (auswärts −2,0), Ruhetag-Vorteil +0,3 je Tag, Reise nach Osten −0,3 je Zeitzone.</li>
     <li><b>Wahrscheinlichkeiten:</b> Normalverteilung mit 12,5 Punkten Streuung (Differenz) und 18 Punkten (Gesamt).</li>
     <li><b>Markt-Anker:</b> 30 % Modell, 70 % Markt (Pinnacle/Betfair bzw. angezeigter Buchmacher, beim Sieg dazu Kalshi und Polymarket zur Hälfte).</li>
-    <li><b>Verletzungen</b> werden angezeigt, aber nicht automatisch eingerechnet – dafür fehlt ein frei verfügbarer Wert pro Spieler. Der Markt preist sie meist schnell ein.</li>
+    <li><b>Verletzungen:</b> Wert pro Spieler = (BPM + 2) × Minuten/48 (BPM von Basketball-Reference, aktuelle Saison mit Vorsaison gemischt und zur Mitte gezogen, höchstens 8 Punkte). Davon wird nur abgezogen, was noch in den Team-Ratings steckt, mal der Ausfall-Wahrscheinlichkeit aus dem ESPN-Status (Out 100 %, doubtful 75 %, questionable 45 %, Day-To-Day 30 %, probable 10 %).</li>
   </ol>
   <h3>Grenzen</h3>
   <p>Die Gewichte sind begründete Schätzungen, nicht an alten Spielen getestet. Die Trefferliste zeigt nach ein paar hundert Spielen, ob das Modell genauer ist als der Markt (Brier-Wert). Bis dahin: Lern- und Analyseprojekt, keine Wettempfehlung.</p>
@@ -137,7 +137,7 @@ function tennisCard(m){
 }
 function nbaCard(g){
   const parts = g.parts.map(p=>`<tr><td>${esc(p.n)}<div class="small">${esc(p.info||"")}</div></td><td>${sg(p.m)}</td></tr>`).join("");
-  const inj = side => (g.injuries[side]||[]).filter(i=>!/^active$/i.test(i.status)).map(i=>`${esc(i.player)} (${esc(i.status)})`).join(", ") || "keine gemeldet";
+  const inj = side => (g.injuries[side]||[]).filter(i=>!/^active$/i.test(i.status)).map(i=>`${esc(i.player)} (${esc(i.status)}${i.loss!=null?`, fehlt zu ${Math.round(i.pOut*100)} %, −${f(i.loss,1)} Pkt.`:""})`).join(", ") || "keine gemeldet";
   return `<details class="item"><summary><div><div class="small">${when(g.commence)}</div>
     <div class="t">${esc(g.away)} @ ${esc(g.home)}</div>
     <div class="small">Modell: ${esc(g.abbrH)} ${sg(g.margin)} · ${f(g.total)} Punkte · Siegchance ${esc(g.abbrH)} ${pct(g.pModelHome)} · Markt ${pct(g.pMarketHome)}</div>

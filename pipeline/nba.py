@@ -3,7 +3,7 @@ from datetime import timedelta
 
 from .common import devig_power, log, parse_time, phi
 from .markets import match_kalshi, match_polymarket, whales
-from .sources import BOOK_NAMES, book_prices, main_book
+from .sources import BOOK_NAMES, book_prices, main_book, player_key
 
 TEAMS = {  # Name bei The Odds API / Basketball-Reference: (Kürzel, Zeitzone relativ zu New York, Spitzname)
     "Atlanta Hawks": ("ATL", 0, "hawks"), "Boston Celtics": ("BOS", 0, "celtics"), "Brooklyn Nets": ("BKN", 0, "nets"),
@@ -55,13 +55,74 @@ def rating(team, cur, prior, pace, lg):
             "netPrior": (off_p + def_p) / 0.7 if p else None}
 
 
+WEEKDAYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+LONG_TERM = ("surgery", "re-evaluated", "weeks", "month", "season", "torn", "tear", "fracture", "rupture",
+             "stepping away", "indefinitely", "between", "return sometime")
+
+
+def out_prob(status, info, game_day):
+    """Wahrscheinlichkeit, dass der Spieler fehlt – aus ESPN-Status und Kurztext."""
+    st, txt = status.lower(), info.lower()
+    if st == "active":
+        return 0.0
+    if "probable" in txt:
+        return 0.1
+    if "doubtful" in txt:
+        return 0.75
+    if "questionable" in txt or "game-time" in txt:
+        return 0.45
+    if st == "out":
+        days = [d for d in WEEKDAYS if d in txt]
+        if days and WEEKDAYS[game_day] not in days and not any(k in txt for k in LONG_TERM):
+            return 0.4                                   # Meldung betraf ein früheres Spiel (z. B. Pause am Vortag)
+        return 1.0
+    return 0.3                                           # Day-To-Day ohne Zusatz
+
+
+def player_value(name, abbr, cur_pl, prior_pl):
+    """Punkte pro Spiel, die das Team ohne den Spieler verliert (BPM gegenüber Ersatzniveau −2)."""
+    k = player_key(name)
+    c = cur_pl.get((k, abbr))
+    p = next((v for (n, _), v in prior_pl.items() if n == k), None)
+    mp_c, mp_p = (c["mp"] if c else 0.0), (p["mp"] if p else 0.0)
+    if mp_c + mp_p == 0:
+        return None
+    bpm = (mp_c * (c["bpm"] if c else 0) + 0.5 * mp_p * (p["bpm"] if p else 0) - 300) / (mp_c + 0.5 * mp_p + 300)
+    if c and c["g"] >= 3:
+        mpg = c["mp"] / c["g"]
+    elif p and p["g"]:
+        mpg = p["mp"] / p["g"]
+    else:
+        mpg = 0.0
+    return {"value": max(0.0, min(8.0, (bpm + 2) * mpg / 48)), "bpm": round(bpm, 1), "mpg": round(mpg, 1),
+            "gCur": c["g"] if c else 0, "onPrior": bool(prior_pl.get((k, abbr)))}
+
+
+def injury_impact(team, abbr, entries, cur_team, w, cur_pl, prior_pl, game_day):
+    """Wertverlust durch Ausfälle. Was schon in den Team-Ratings fehlt, wird nicht doppelt abgezogen."""
+    total, rows = 0.0, []
+    team_g = max(1.0, cur_team["g"]) if cur_team else 1.0
+    for e in entries:
+        po = out_prob(e.get("status", ""), e.get("info", ""), game_day)
+        pv = player_value(e.get("player", ""), abbr, cur_pl, prior_pl)
+        row = {**e, "pOut": po}
+        if pv and po > 0:
+            in_ratings = w * min(1.0, pv["gCur"] / team_g) + (1 - w) * 0.7 * (1.0 if pv["onPrior"] else 0.0)
+            loss = pv["value"] * in_ratings * po
+            total += loss
+            row.update({"value": round(pv["value"], 1), "bpm": pv["bpm"], "mpg": pv["mpg"], "loss": round(loss, 2)})
+        rows.append(row)
+    return total, rows
+
+
 def _two(outcomes, a, b, key="name"):
     oa = next((o for o in outcomes if canon(o.get(key, "")) == a), None)
     ob = next((o for o in outcomes if canon(o.get(key, "")) == b), None)
     return oa, ob
 
 
-def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events):
+def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events, cur_pl=None, prior_pl=None):
+    cur_pl, prior_pl = cur_pl or {}, prior_pl or {}
     lg = {"cur": sum(v["ortg_a"] for v in cur.values()) / max(1, len(cur)),
           "prior": sum(v["ortg_a"] for v in prior.values()) / max(1, len(prior)) if prior else 115.0,
           "pace": sum(pace.values()) / max(1, len(pace)) if pace else 99.0}
@@ -82,6 +143,14 @@ def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events):
         pts_h += hca / 2; pts_a -= hca / 2
         parts.append({"n": "Heimvorteil" + (" inkl. Höhe" if hca > HCA else ""), "m": hca})
         gd = _et_date(ev["commence_time"])
+        inj_a = injuries.get(away, []) or injuries.get(TEAMS[away][2].title(), [])
+        inj_h = injuries.get(home, []) or injuries.get(TEAMS[home][2].title(), [])
+        loss_a, rows_a = injury_impact(away, TEAMS[away][0], inj_a, cur.get(away), A["w"], cur_pl, prior_pl, gd.weekday())
+        loss_h, rows_h = injury_impact(home, TEAMS[home][0], inj_h, cur.get(home), H["w"], cur_pl, prior_pl, gd.weekday())
+        if loss_a or loss_h:
+            pts_a += (loss_h - loss_a) / 2; pts_h += (loss_a - loss_h) / 2
+            parts.append({"n": "Verletzungen", "m": loss_a - loss_h,
+                          "info": f"{TEAMS[away][0]} −{loss_a:.1f}, {TEAMS[home][0]} −{loss_h:.1f} Punkte"})
         rest_a = (gd - last[away]).days - 1 if away in last else 2
         rest_h = (gd - last[home]).days - 1 if home in last else 2
         rest = 0.0
@@ -163,8 +232,7 @@ def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events):
                 add("Gesamtpunkte", f"Über {o['point']:g}", o["price"], p_over, m_over, line=o["point"], side="over")
                 add("Gesamtpunkte", f"Unter {u['point']:g}", u["price"], 1 - p_over, 1 - m_over, line=u["point"], side="under")
         best = max(bets, key=lambda b: b["ev"])
-        inj = {"away": injuries.get(away, []) or injuries.get(TEAMS[away][2].title(), []),
-               "home": injuries.get(home, []) or injuries.get(TEAMS[home][2].title(), [])}
+        inj = {"away": rows_a, "home": rows_h}
         games.append({
             "id": ev["id"], "sportKey": "basketball_nba", "sport": "NBA", "commence": ev["commence_time"], "away": away, "home": home,
             "abbrA": ab_a, "abbrH": ab_h, "margin": round(M, 1), "total": round(TOT, 1), "poss": round(poss, 1),

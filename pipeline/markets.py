@@ -68,6 +68,13 @@ def match_kalshi(k_events, abbr_a, abbr_b, key_a, key_b):
     return None
 
 
+def _wallet(t):
+    w = t.get("proxy_wallet") or t.get("proxyWallet") or ""
+    name = t.get("pseudonym") or t.get("name") or ""
+    short = w[:6] + "…" + w[-4:] if w else ""
+    return f"{name} ({short})" if name and short else short or name
+
+
 def whales(pm, side_a_name, side_b_name):
     """Großeinsätze der letzten Stunden für einen Polymarket-Markt."""
     if not pm or not pm.get("condition"):
@@ -95,7 +102,7 @@ def whales(pm, side_a_name, side_b_name):
         usd[eff] += amount
         trades.append({"side": eff, "team": side_a_name if eff == "A" else side_b_name, "usd": round(amount),
                        "price": round(float(t.get("price", 0)), 3), "buy": buy, "ts": int(ts),
-                       "wallet": (t.get("proxyWallet") or "")[:6] + "…" + (t.get("proxyWallet") or "")[-4:]})
+                       "wallet": _wallet(t)})
     trades.sort(key=lambda x: -x["usd"])
     return {"trades": trades[:10], "usdA": round(usd["A"]), "usdB": round(usd["B"])}
 

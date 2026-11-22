@@ -45,5 +45,5 @@ Sinkt das Guthaben unter 15, überspringt die Pipeline weitere Quoten-Abfragen.
 
 ## Grenzen
 - Challenger-Turniere sind bei The Odds API nicht enthalten.
-- NBA-Verletzungen werden angezeigt, aber nicht eingerechnet (kein frei verfügbarer Wert pro Spieler).
+- NBA-Verletzungen werden über den BPM-Wert der Spieler grob eingerechnet; Kaderwechsel und Minutenverteilung kennt das Modell nicht.
 - Die Gewichte im Modell sind begründete Schätzungen und noch nicht an alten Spielen getestet.
