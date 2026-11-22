@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-22T14:40:35.212185+00:00",
+ "updated": "2026-11-22T20:38:56.179772+00:00",
  "credits": {
-  "remaining": 476.0,
-  "used_now": 6.0
+  "remaining": 473.0,
+  "used_now": 3.0
  },
  "stats": {
   "total": 8,
@@ -14,26 +14,29 @@
   "clvAvg": null,
   "clvPos": null,
   "calibration": [],
+  "clvValueN": 0,
+  "clvValueAvg": null,
   "valueBets": 0,
   "profit": 0,
-  "roi": null
+  "roi": null,
+  "kellyBets": 0,
+  "kellyGrowth": 0
  },
  "log": [
   "Kalshi KXNBAGAME: 35 Events",
   "Polymarket nba: 100 Events",
   "Polymarket tennis: 100 Events",
+  "ESPN-Spielplan: 39 Tage abgefragt, 255 Spiele in der Saison",
   "Basketball-Reference Ratings 2027: 30 Teams",
   "Basketball-Reference Ratings 2026: 30 Teams",
   "Basketball-Reference Tempo 2027: 31 Teams",
-  "ESPN Verletzungen: 110 Einträge",
+  "ESPN Verletzungen: 109 Einträge",
+  "NBA-Verletzungsbericht 22.11. 15:30 ET: 0 Spieler, 0 Teams noch nicht gemeldet",
   "Basketball-Reference Spieler 2027: 476 Einträge",
   "Basketball-Reference Spieler 2026: 661 Einträge",
   "Quoten basketball_nba: 7 Events, 7 mit Buchmacher-Quoten",
-  "NBA: 7 Spiele bewertet",
-  "Tennis Abstract ATP: 555 Spieler",
-  "Tennis Abstract WTA: 504 Spieler",
-  "Quoten tennis_atp_finals: 1 Events, 1 mit Buchmacher-Quoten",
-  "Tennis: 1 Matches bewertet",
+  "NBA: 7 Spiele bewertet, 0 mit Value-Wette",
+  "Tennis: aktuell keine ATP/WTA-Turniere bei The Odds API",
   "Trefferliste: 0 Prognosen ausgewertet",
   "Kalibrierung: 0 NBA-Spiele, 0 Tennis-Matches ausgewertet, 0 Werte angepasst (Anpassung ab 40 Spielen)"
  ],
@@ -41,10 +44,14 @@
  "closeLog": [],
  "params": {
   "nba": {
-   "team_scale": 1.0,
+   "team_scale": 0.5,
+   "player_scale": 0.5,
    "hca": 2.2,
    "rest_scale": 1.0,
-   "inj_scale": 1.0,
+   "inj_scale": 0.5,
+   "sched_scale": 1.0,
+   "travel_scale": 0.3,
+   "form_scale": 0.15,
    "sd_margin": 12.5,
    "sd_total": 18.0,
    "total_bias": 0.0,

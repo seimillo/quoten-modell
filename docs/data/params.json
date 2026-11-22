@@ -1,9 +1,13 @@
 {
  "nba": {
-  "team_scale": 1.0,
+  "team_scale": 0.5,
+  "player_scale": 0.5,
   "hca": 2.2,
   "rest_scale": 1.0,
-  "inj_scale": 1.0,
+  "inj_scale": 0.5,
+  "sched_scale": 1.0,
+  "travel_scale": 0.3,
+  "form_scale": 0.15,
   "sd_margin": 12.5,
   "sd_total": 18.0,
   "total_bias": 0.0,
@@ -13,5 +17,6 @@
   "conf_scale": 1.0
  },
  "history": [],
- "n": {}
+ "n": {},
+ "version": 2
 }
