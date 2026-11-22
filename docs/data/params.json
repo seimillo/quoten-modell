@@ -1,0 +1,17 @@
+{
+ "nba": {
+  "team_scale": 1.0,
+  "hca": 2.2,
+  "rest_scale": 1.0,
+  "inj_scale": 1.0,
+  "sd_margin": 12.5,
+  "sd_total": 18.0,
+  "total_bias": 0.0,
+  "conf": 0.3
+ },
+ "tennis": {
+  "conf_scale": 1.0
+ },
+ "history": [],
+ "n": {}
+}

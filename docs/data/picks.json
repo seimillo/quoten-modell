@@ -19,11 +19,22 @@
    "odds": 3.8,
    "ev": 0.0858,
    "line": null,
-   "side": "home"
+   "side": "home",
+   "book": "tipico_de"
   },
   "result": null,
   "betResult": null,
-  "score": null
+  "score": null,
+  "pModelRaw": 0.3881,
+  "feat": {
+   "team": -5.379,
+   "alt": 0.0,
+   "rest": 2.0,
+   "inj": -2.373,
+   "TOTraw": 214.43,
+   "pModelRaw": 0.3881,
+   "pMarket": 0.2418
+  }
  },
  "90da1cde4144fac00d41f2c0db2cc921": {
   "id": "90da1cde4144fac00d41f2c0db2cc921",
@@ -37,19 +48,30 @@
   "away": "Oklahoma City Thunder",
   "a": null,
   "b": null,
-  "pModelA": 0.597,
-  "pMarketA": 0.5964,
+  "pModelA": 0.5962,
+  "pMarketA": 0.5953,
   "bet": {
    "market": "Sieg",
-   "pick": "Miami Heat",
-   "odds": 1.62,
-   "ev": -0.0329,
+   "pick": "Oklahoma City Thunder",
+   "odds": 2.4,
+   "ev": -0.031,
    "line": null,
-   "side": "home"
+   "side": "away",
+   "book": "tipico_de"
   },
   "result": null,
   "betResult": null,
-  "score": null
+  "score": null,
+  "pModelRaw": 0.5983,
+  "feat": {
+   "team": -5.79,
+   "alt": 0.0,
+   "rest": 0.6,
+   "inj": 6.103,
+   "TOTraw": 231.43,
+   "pModelRaw": 0.5983,
+   "pMarket": 0.5953
+  }
  },
  "1e7b9477c6c55aea5efd9c1a47039f5c": {
   "id": "1e7b9477c6c55aea5efd9c1a47039f5c",
@@ -63,19 +85,30 @@
   "away": "Dallas Mavericks",
   "a": null,
   "b": null,
-  "pModelA": 0.5017,
-  "pMarketA": 0.4988,
+  "pModelA": 0.5026,
+  "pMarketA": 0.5,
   "bet": {
    "market": "Sieg",
    "pick": "Utah Jazz",
    "odds": 1.9,
-   "ev": -0.0467,
+   "ev": -0.0451,
    "line": null,
-   "side": "home"
+   "side": "home",
+   "book": "tipico_de"
   },
   "result": null,
   "betResult": null,
-  "score": null
+  "score": null,
+  "pModelRaw": 0.5086,
+  "feat": {
+   "team": -3.339,
+   "alt": 0.8,
+   "rest": 2.0,
+   "inj": -1.391,
+   "TOTraw": 222.76,
+   "pModelRaw": 0.5086,
+   "pMarket": 0.5
+  }
  },
  "335ad5604b51b7742fd1dee92d78da35": {
   "id": "335ad5604b51b7742fd1dee92d78da35",
@@ -89,19 +122,30 @@
   "away": "Orlando Magic",
   "a": null,
   "b": null,
-  "pModelA": 0.3562,
-  "pMarketA": 0.3433,
+  "pModelA": 0.3566,
+  "pMarketA": 0.3438,
   "bet": {
-   "market": "Sieg",
-   "pick": "Washington Wizards",
-   "odds": 2.8,
-   "ev": -0.0027,
-   "line": null,
-   "side": "home"
+   "market": "Handicap",
+   "pick": "Washington Wizards +5.5",
+   "odds": 1.87,
+   "ev": -0.0157,
+   "line": 5.5,
+   "side": "home",
+   "book": "tipico_de"
   },
   "result": null,
   "betResult": null,
-  "score": null
+  "score": null,
+  "pModelRaw": 0.3863,
+  "feat": {
+   "team": -6.627,
+   "alt": 0.0,
+   "rest": 0.0,
+   "inj": 0.815,
+   "TOTraw": 221.57,
+   "pModelRaw": 0.3863,
+   "pMarket": 0.3438
+  }
  },
  "15a079f55e23d26237844224f258c972": {
   "id": "15a079f55e23d26237844224f258c972",
@@ -115,19 +159,30 @@
   "away": "Denver Nuggets",
   "a": null,
   "b": null,
-  "pModelA": 0.251,
-  "pMarketA": 0.228,
+  "pModelA": 0.253,
+  "pMarketA": 0.2308,
   "bet": {
    "market": "Handicap",
    "pick": "Chicago Bulls +8.5",
    "odds": 1.87,
    "ev": -0.0352,
    "line": 8.5,
-   "side": "home"
+   "side": "home",
+   "book": "tipico_de"
   },
   "result": null,
   "betResult": null,
-  "score": null
+  "score": null,
+  "pModelRaw": 0.3048,
+  "feat": {
+   "team": -8.287,
+   "alt": 0.0,
+   "rest": 0.3,
+   "inj": -0.595,
+   "TOTraw": 236.51,
+   "pModelRaw": 0.3048,
+   "pMarket": 0.2308
+  }
  },
  "031fa761cc38e1b5afd9309b731b38b2": {
   "id": "031fa761cc38e1b5afd9309b731b38b2",
@@ -141,19 +196,30 @@
   "away": "Indiana Pacers",
   "a": null,
   "b": null,
-  "pModelA": 0.7678,
-  "pMarketA": 0.7563,
+  "pModelA": 0.7706,
+  "pMarketA": 0.7603,
   "bet": {
    "market": "Sieg",
    "pick": "New York Knicks",
    "odds": 1.25,
-   "ev": -0.0402,
+   "ev": -0.0367,
    "line": null,
-   "side": "home"
+   "side": "home",
+   "book": "tipico_de"
   },
   "result": null,
   "betResult": null,
-  "score": null
+  "score": null,
+  "pModelRaw": 0.7948,
+  "feat": {
+   "team": 9.498,
+   "alt": 0.0,
+   "rest": -1.5,
+   "inj": 0.094,
+   "TOTraw": 214.94,
+   "pModelRaw": 0.7948,
+   "pMarket": 0.7603
+  }
  },
  "222a2887819bb18d9b9572aef63d9b9e": {
   "id": "222a2887819bb18d9b9572aef63d9b9e",
@@ -167,19 +233,30 @@
   "away": "Detroit Pistons",
   "a": null,
   "b": null,
-  "pModelA": 0.475,
-  "pMarketA": 0.4555,
+  "pModelA": 0.4742,
+  "pMarketA": 0.4544,
   "bet": {
    "market": "Sieg",
    "pick": "Atlanta Hawks",
    "odds": 2.1,
-   "ev": -0.0024,
+   "ev": -0.0041,
    "line": null,
-   "side": "home"
+   "side": "home",
+   "book": "tipico_de"
   },
   "result": null,
   "betResult": null,
-  "score": null
+  "score": null,
+  "pModelRaw": 0.5205,
+  "feat": {
+   "team": -4.107,
+   "alt": 0.0,
+   "rest": 0.0,
+   "inj": 2.55,
+   "TOTraw": 224.73,
+   "pModelRaw": 0.5205,
+   "pMarket": 0.4544
+  }
  },
  "61fd3eff03d345615f08909e038728e7": {
   "id": "61fd3eff03d345615f08909e038728e7",
@@ -201,10 +278,17 @@
    "odds": 1.48,
    "ev": -0.0292,
    "line": null,
-   "side": "B"
+   "side": "B",
+   "book": "winamax_de"
   },
   "result": null,
   "betResult": null,
-  "score": null
+  "score": null,
+  "pModelRaw": 0.344,
+  "feat": {
+   "pModelRaw": 0.344,
+   "pMarket": 0.344,
+   "confBase": 0.5
+  }
  }
 }

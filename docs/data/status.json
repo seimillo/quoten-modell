@@ -1,7 +1,7 @@
 {
- "updated": "2026-11-22T14:30:36.622534+00:00",
+ "updated": "2026-11-22T14:40:35.212185+00:00",
  "credits": {
-  "remaining": 482.0,
+  "remaining": 476.0,
   "used_now": 6.0
  },
  "stats": {
@@ -9,6 +9,11 @@
   "settled": 0,
   "brierModel": null,
   "brierMarket": null,
+  "brierRaw": null,
+  "clvN": 0,
+  "clvAvg": null,
+  "clvPos": null,
+  "calibration": [],
   "valueBets": 0,
   "profit": 0,
   "roi": null
@@ -29,6 +34,25 @@
   "Tennis Abstract WTA: 504 Spieler",
   "Quoten tennis_atp_finals: 1 Events, 1 mit Buchmacher-Quoten",
   "Tennis: 1 Matches bewertet",
-  "Trefferliste: 0 Prognosen ausgewertet"
- ]
+  "Trefferliste: 0 Prognosen ausgewertet",
+  "Kalibrierung: 0 NBA-Spiele, 0 Tennis-Matches ausgewertet, 0 Werte angepasst (Anpassung ab 40 Spielen)"
+ ],
+ "closeUpdated": null,
+ "closeLog": [],
+ "params": {
+  "nba": {
+   "team_scale": 1.0,
+   "hca": 2.2,
+   "rest_scale": 1.0,
+   "inj_scale": 1.0,
+   "sd_margin": 12.5,
+   "sd_total": 18.0,
+   "total_bias": 0.0,
+   "conf": 0.3
+  },
+  "tennis": {
+   "conf_scale": 1.0
+  },
+  "n": {}
+ }
 }

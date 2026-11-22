@@ -87,6 +87,11 @@
    "side": "B"
   },
   "sideA": "Alexander Zverev",
-  "pickLabel": "Alexander Zverev – Carlos Alcaraz"
+  "pickLabel": "Alexander Zverev – Carlos Alcaraz",
+  "feat": {
+   "pModelRaw": 0.344,
+   "pMarket": 0.344,
+   "confBase": 0.5
+  }
  }
 ]

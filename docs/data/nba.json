@@ -57,12 +57,12 @@
   "kalshi": {
    "a": 75.5,
    "b": 24.5,
-   "vol": 99394
+   "vol": 100565
   },
   "polymarket": {
    "pA": 0.755,
    "pB": 0.245,
-   "volume": 18449
+   "volume": 18589
   },
   "bookKey": "tipico_de",
   "bookName": "Tipico",
@@ -240,7 +240,17 @@
    "evRaw": 0.4749
   },
   "sideA": "Golden State Warriors",
-  "pickLabel": "Boston Celtics @ Golden State Warriors"
+  "pickLabel": "Boston Celtics @ Golden State Warriors",
+  "conf": 0.3,
+  "feat": {
+   "team": -5.379,
+   "alt": 0.0,
+   "rest": 2.0,
+   "inj": -2.373,
+   "TOTraw": 214.43,
+   "pModelRaw": 0.3881,
+   "pMarket": 0.2418
+  }
  },
  {
   "id": "222a2887819bb18d9b9572aef63d9b9e",
@@ -257,8 +267,8 @@
   "ptsA": 112.0,
   "ptsH": 112.7,
   "pModelHome": 0.5205,
-  "pMarketHome": 0.4555,
-  "pFinalHome": 0.475,
+  "pMarketHome": 0.4544,
+  "pFinalHome": 0.4742,
   "parts": [
    {
     "n": "Team-Stärke & Tempo",
@@ -293,14 +303,14 @@
    }
   },
   "kalshi": {
-   "a": 53.5,
+   "a": 54.5,
    "b": 45.5,
-   "vol": 131277
+   "vol": 131883
   },
   "polymarket": {
    "pA": 0.545,
    "pB": 0.455,
-   "volume": 29292
+   "volume": 29446
   },
   "bookKey": "tipico_de",
   "bookName": "Tipico",
@@ -460,9 +470,9 @@
     "line": null,
     "side": "away",
     "pModel": 0.4795,
-    "pMarket": 0.5445,
-    "p": 0.525,
-    "ev": -0.1075,
+    "pMarket": 0.5456,
+    "p": 0.5258,
+    "ev": -0.1062,
     "evRaw": -0.1849
    },
    {
@@ -472,9 +482,9 @@
     "line": null,
     "side": "home",
     "pModel": 0.5205,
-    "pMarket": 0.4555,
-    "p": 0.475,
-    "ev": -0.0024,
+    "pMarket": 0.4544,
+    "p": 0.4742,
+    "ev": -0.0041,
     "evRaw": 0.0931
    },
    {
@@ -504,26 +514,26 @@
    {
     "market": "Gesamtpunkte",
     "pick": "Über 223.5",
-    "odds": 1.83,
+    "odds": 1.85,
     "line": 223.5,
     "side": "over",
     "pModel": 0.5273,
-    "pMarket": 0.5061,
-    "p": 0.5125,
-    "ev": -0.0622,
-    "evRaw": -0.035
+    "pMarket": 0.5,
+    "p": 0.5082,
+    "ev": -0.0598,
+    "evRaw": -0.0244
    },
    {
     "market": "Gesamtpunkte",
     "pick": "Unter 223.5",
-    "odds": 1.87,
+    "odds": 1.85,
     "line": 223.5,
     "side": "under",
     "pModel": 0.4727,
-    "pMarket": 0.4939,
-    "p": 0.4875,
-    "ev": -0.0883,
-    "evRaw": -0.1161
+    "pMarket": 0.5,
+    "p": 0.4918,
+    "ev": -0.0902,
+    "evRaw": -0.1256
    }
   ],
   "best": {
@@ -533,13 +543,23 @@
    "line": null,
    "side": "home",
    "pModel": 0.5205,
-   "pMarket": 0.4555,
-   "p": 0.475,
-   "ev": -0.0024,
+   "pMarket": 0.4544,
+   "p": 0.4742,
+   "ev": -0.0041,
    "evRaw": 0.0931
   },
   "sideA": "Atlanta Hawks",
-  "pickLabel": "Detroit Pistons @ Atlanta Hawks"
+  "pickLabel": "Detroit Pistons @ Atlanta Hawks",
+  "conf": 0.3,
+  "feat": {
+   "team": -4.107,
+   "alt": 0.0,
+   "rest": 0.0,
+   "inj": 2.55,
+   "TOTraw": 224.73,
+   "pModelRaw": 0.5205,
+   "pMarket": 0.4544
+  }
  },
  {
   "id": "335ad5604b51b7742fd1dee92d78da35",
@@ -556,8 +576,8 @@
   "ptsA": 112.6,
   "ptsH": 109.0,
   "pModelHome": 0.3863,
-  "pMarketHome": 0.3433,
-  "pFinalHome": 0.3562,
+  "pMarketHome": 0.3438,
+  "pFinalHome": 0.3566,
   "parts": [
    {
     "n": "Team-Stärke & Tempo",
@@ -594,12 +614,12 @@
   "kalshi": {
    "a": 64.5,
    "b": 34.5,
-   "vol": 29439
+   "vol": 29892
   },
   "polymarket": {
    "pA": 0.655,
    "pB": 0.345,
-   "volume": 20611
+   "volume": 20687
   },
   "bookKey": "tipico_de",
   "bookName": "Tipico",
@@ -713,26 +733,26 @@
    {
     "market": "Sieg",
     "pick": "Orlando Magic",
-    "odds": 1.42,
+    "odds": 1.45,
     "line": null,
     "side": "away",
     "pModel": 0.6137,
-    "pMarket": 0.6567,
-    "p": 0.6438,
-    "ev": -0.0858,
-    "evRaw": -0.1286
+    "pMarket": 0.6562,
+    "p": 0.6434,
+    "ev": -0.067,
+    "evRaw": -0.1101
    },
    {
     "market": "Sieg",
     "pick": "Washington Wizards",
-    "odds": 2.8,
+    "odds": 2.7,
     "line": null,
     "side": "home",
     "pModel": 0.3863,
-    "pMarket": 0.3433,
-    "p": 0.3562,
-    "ev": -0.0027,
-    "evRaw": 0.0817
+    "pMarket": 0.3438,
+    "p": 0.3566,
+    "ev": -0.0373,
+    "evRaw": 0.043
    },
    {
     "market": "Handicap",
@@ -741,9 +761,9 @@
     "line": -5.5,
     "side": "away",
     "pModel": 0.44,
-    "pMarket": 0.4907,
-    "p": 0.4755,
-    "ev": -0.1298,
+    "pMarket": 0.4881,
+    "p": 0.4737,
+    "ev": -0.1332,
     "evRaw": -0.1949
    },
    {
@@ -753,50 +773,60 @@
     "line": 5.5,
     "side": "home",
     "pModel": 0.56,
-    "pMarket": 0.5093,
-    "p": 0.5245,
-    "ev": -0.0192,
+    "pMarket": 0.5119,
+    "p": 0.5263,
+    "ev": -0.0157,
     "evRaw": 0.0473
    },
    {
     "market": "Gesamtpunkte",
-    "pick": "Über 218.5",
-    "odds": 1.83,
-    "line": 218.5,
+    "pick": "Über 219.5",
+    "odds": 1.9,
+    "line": 219.5,
     "side": "over",
-    "pModel": 0.5678,
-    "pMarket": 0.5061,
-    "p": 0.5246,
-    "ev": -0.04,
-    "evRaw": 0.0391
+    "pModel": 0.5459,
+    "pMarket": 0.4848,
+    "p": 0.5031,
+    "ev": -0.0441,
+    "evRaw": 0.0371
    },
    {
     "market": "Gesamtpunkte",
-    "pick": "Unter 218.5",
-    "odds": 1.87,
-    "line": 218.5,
+    "pick": "Unter 219.5",
+    "odds": 1.8,
+    "line": 219.5,
     "side": "under",
-    "pModel": 0.4322,
-    "pMarket": 0.4939,
-    "p": 0.4754,
-    "ev": -0.111,
-    "evRaw": -0.1918
+    "pModel": 0.4541,
+    "pMarket": 0.5152,
+    "p": 0.4969,
+    "ev": -0.1056,
+    "evRaw": -0.1826
    }
   ],
   "best": {
-   "market": "Sieg",
-   "pick": "Washington Wizards",
-   "odds": 2.8,
-   "line": null,
+   "market": "Handicap",
+   "pick": "Washington Wizards +5.5",
+   "odds": 1.87,
+   "line": 5.5,
    "side": "home",
-   "pModel": 0.3863,
-   "pMarket": 0.3433,
-   "p": 0.3562,
-   "ev": -0.0027,
-   "evRaw": 0.0817
+   "pModel": 0.56,
+   "pMarket": 0.5119,
+   "p": 0.5263,
+   "ev": -0.0157,
+   "evRaw": 0.0473
   },
   "sideA": "Washington Wizards",
-  "pickLabel": "Orlando Magic @ Washington Wizards"
+  "pickLabel": "Orlando Magic @ Washington Wizards",
+  "conf": 0.3,
+  "feat": {
+   "team": -6.627,
+   "alt": 0.0,
+   "rest": 0.0,
+   "inj": 0.815,
+   "TOTraw": 221.57,
+   "pModelRaw": 0.3863,
+   "pMarket": 0.3438
+  }
  },
  {
   "id": "90da1cde4144fac00d41f2c0db2cc921",
@@ -813,8 +843,8 @@
   "ptsA": 114.2,
   "ptsH": 117.3,
   "pModelHome": 0.5983,
-  "pMarketHome": 0.5964,
-  "pFinalHome": 0.597,
+  "pMarketHome": 0.5953,
+  "pFinalHome": 0.5962,
   "parts": [
    {
     "n": "Team-Stärke & Tempo",
@@ -855,8 +885,8 @@
   },
   "kalshi": {
    "a": 41.0,
-   "b": 59.0,
-   "vol": 160571
+   "b": 58.5,
+   "vol": 162088
   },
   "polymarket": null,
   "bookKey": "tipico_de",
@@ -968,90 +998,100 @@
    {
     "market": "Sieg",
     "pick": "Oklahoma City Thunder",
-    "odds": 2.25,
+    "odds": 2.4,
     "line": null,
     "side": "away",
     "pModel": 0.4017,
-    "pMarket": 0.4036,
-    "p": 0.403,
-    "ev": -0.0932,
-    "evRaw": -0.0963
+    "pMarket": 0.4047,
+    "p": 0.4038,
+    "ev": -0.031,
+    "evRaw": -0.036
    },
    {
     "market": "Sieg",
     "pick": "Miami Heat",
-    "odds": 1.62,
+    "odds": 1.55,
     "line": null,
     "side": "home",
     "pModel": 0.5983,
-    "pMarket": 0.5964,
-    "p": 0.597,
-    "ev": -0.0329,
-    "evRaw": -0.0307
+    "pMarket": 0.5953,
+    "p": 0.5962,
+    "ev": -0.0758,
+    "evRaw": -0.0726
    },
    {
     "market": "Handicap",
-    "pick": "Oklahoma City Thunder +3.5",
-    "odds": 1.87,
-    "line": 3.5,
-    "side": "away",
-    "pModel": 0.5123,
-    "pMarket": 0.4906,
-    "p": 0.4971,
-    "ev": -0.0704,
-    "evRaw": -0.0419
-   },
-   {
-    "market": "Handicap",
-    "pick": "Miami Heat -3.5",
+    "pick": "Oklahoma City Thunder +4.5",
     "odds": 1.83,
-    "line": -3.5,
+    "line": 4.5,
+    "side": "away",
+    "pModel": 0.5442,
+    "pMarket": 0.5061,
+    "p": 0.5175,
+    "ev": -0.0529,
+    "evRaw": -0.0042
+   },
+   {
+    "market": "Handicap",
+    "pick": "Miami Heat -4.5",
+    "odds": 1.87,
+    "line": -4.5,
     "side": "home",
-    "pModel": 0.4877,
-    "pMarket": 0.5094,
-    "p": 0.5029,
-    "ev": -0.0798,
-    "evRaw": -0.1076
+    "pModel": 0.4558,
+    "pMarket": 0.4939,
+    "p": 0.4825,
+    "ev": -0.0978,
+    "evRaw": -0.1476
    },
    {
     "market": "Gesamtpunkte",
-    "pick": "Über 231.5",
-    "odds": 1.8,
-    "line": 231.5,
+    "pick": "Über 230.5",
+    "odds": 1.85,
+    "line": 230.5,
     "side": "over",
-    "pModel": 0.4985,
-    "pMarket": 0.5152,
-    "p": 0.5102,
-    "ev": -0.0816,
-    "evRaw": -0.1028
+    "pModel": 0.5206,
+    "pMarket": 0.5,
+    "p": 0.5062,
+    "ev": -0.0636,
+    "evRaw": -0.0368
    },
    {
     "market": "Gesamtpunkte",
-    "pick": "Unter 231.5",
-    "odds": 1.9,
-    "line": 231.5,
+    "pick": "Unter 230.5",
+    "odds": 1.85,
+    "line": 230.5,
     "side": "under",
-    "pModel": 0.5015,
-    "pMarket": 0.4848,
-    "p": 0.4898,
-    "ev": -0.0694,
-    "evRaw": -0.0471
+    "pModel": 0.4794,
+    "pMarket": 0.5,
+    "p": 0.4938,
+    "ev": -0.0864,
+    "evRaw": -0.1132
    }
   ],
   "best": {
    "market": "Sieg",
-   "pick": "Miami Heat",
-   "odds": 1.62,
+   "pick": "Oklahoma City Thunder",
+   "odds": 2.4,
    "line": null,
-   "side": "home",
-   "pModel": 0.5983,
-   "pMarket": 0.5964,
-   "p": 0.597,
-   "ev": -0.0329,
-   "evRaw": -0.0307
+   "side": "away",
+   "pModel": 0.4017,
+   "pMarket": 0.4047,
+   "p": 0.4038,
+   "ev": -0.031,
+   "evRaw": -0.036
   },
   "sideA": "Miami Heat",
-  "pickLabel": "Oklahoma City Thunder @ Miami Heat"
+  "pickLabel": "Oklahoma City Thunder @ Miami Heat",
+  "conf": 0.3,
+  "feat": {
+   "team": -5.79,
+   "alt": 0.0,
+   "rest": 0.6,
+   "inj": 6.103,
+   "TOTraw": 231.43,
+   "pModelRaw": 0.5983,
+   "pMarket": 0.5953
+  }
  },
  {
   "id": "15a079f55e23d26237844224f258c972",
@@ -1068,8 +1108,8 @@
   "ptsA": 121.4,
   "ptsH": 115.1,
   "pModelHome": 0.3048,
-  "pMarketHome": 0.228,
-  "pFinalHome": 0.251,
+  "pMarketHome": 0.2308,
+  "pFinalHome": 0.253,
   "parts": [
    {
     "n": "Team-Stärke & Tempo",
@@ -1109,14 +1149,14 @@
    }
   },
   "kalshi": {
-   "a": 77.0,
+   "a": 76.5,
    "b": 23.5,
-   "vol": 57647
+   "vol": 57943
   },
   "polymarket": {
-   "pA": 0.775,
-   "pB": 0.225,
-   "volume": 15125
+   "pA": 0.765,
+   "pB": 0.235,
+   "volume": 15136
   },
   "bookKey": "tipico_de",
   "bookName": "Tipico",
@@ -1218,9 +1258,9 @@
     "line": null,
     "side": "away",
     "pModel": 0.6952,
-    "pMarket": 0.772,
-    "p": 0.749,
-    "ev": -0.0638,
+    "pMarket": 0.7692,
+    "p": 0.747,
+    "ev": -0.0662,
     "evRaw": -0.131
    },
    {
@@ -1230,9 +1270,9 @@
     "line": null,
     "side": "home",
     "pModel": 0.3048,
-    "pMarket": 0.228,
-    "p": 0.251,
-    "ev": -0.046,
+    "pMarket": 0.2308,
+    "p": 0.253,
+    "ev": -0.0386,
     "evRaw": 0.1583
    },
    {
@@ -1266,9 +1306,9 @@
     "line": 237.5,
     "side": "over",
     "pModel": 0.4781,
-    "pMarket": 0.4986,
-    "p": 0.4925,
-    "ev": -0.0643,
+    "pMarket": 0.4973,
+    "p": 0.4915,
+    "ev": -0.0661,
     "evRaw": -0.0916
    },
    {
@@ -1278,9 +1318,9 @@
     "line": 237.5,
     "side": "under",
     "pModel": 0.5219,
-    "pMarket": 0.5014,
-    "p": 0.5075,
-    "ev": -0.0865,
+    "pMarket": 0.5027,
+    "p": 0.5085,
+    "ev": -0.0847,
     "evRaw": -0.0606
    }
   ],
@@ -1297,7 +1337,17 @@
    "evRaw": 0.0608
   },
   "sideA": "Chicago Bulls",
-  "pickLabel": "Denver Nuggets @ Chicago Bulls"
+  "pickLabel": "Denver Nuggets @ Chicago Bulls",
+  "conf": 0.3,
+  "feat": {
+   "team": -8.287,
+   "alt": 0.0,
+   "rest": 0.3,
+   "inj": -0.595,
+   "TOTraw": 236.51,
+   "pModelRaw": 0.3048,
+   "pMarket": 0.2308
+  }
  },
  {
   "id": "031fa761cc38e1b5afd9309b731b38b2",
@@ -1314,8 +1364,8 @@
   "ptsA": 102.3,
   "ptsH": 112.6,
   "pModelHome": 0.7948,
-  "pMarketHome": 0.7563,
-  "pFinalHome": 0.7678,
+  "pMarketHome": 0.7603,
+  "pFinalHome": 0.7706,
   "parts": [
    {
     "n": "Team-Stärke & Tempo",
@@ -1355,14 +1405,14 @@
    }
   },
   "kalshi": {
-   "a": 25.5,
+   "a": 24.5,
    "b": 74.5,
-   "vol": 29403
+   "vol": 29967
   },
   "polymarket": {
    "pA": 0.245,
    "pB": 0.755,
-   "volume": 39719
+   "volume": 39883
   },
   "bookKey": "tipico_de",
   "bookName": "Tipico",
@@ -1502,9 +1552,9 @@
     "line": null,
     "side": "away",
     "pModel": 0.2052,
-    "pMarket": 0.2437,
-    "p": 0.2322,
-    "ev": -0.1178,
+    "pMarket": 0.2397,
+    "p": 0.2294,
+    "ev": -0.1284,
     "evRaw": -0.2204
    },
    {
@@ -1514,9 +1564,9 @@
     "line": null,
     "side": "home",
     "pModel": 0.7948,
-    "pMarket": 0.7563,
-    "p": 0.7678,
-    "ev": -0.0402,
+    "pMarket": 0.7603,
+    "p": 0.7706,
+    "ev": -0.0367,
     "evRaw": -0.0065
    },
    {
@@ -1526,9 +1576,9 @@
     "line": 8.5,
     "side": "away",
     "pModel": 0.443,
-    "pMarket": 0.4946,
-    "p": 0.4791,
-    "ev": -0.0753,
+    "pMarket": 0.4933,
+    "p": 0.4782,
+    "ev": -0.077,
     "evRaw": -0.145
    },
    {
@@ -1538,34 +1588,34 @@
     "line": -8.5,
     "side": "home",
     "pModel": 0.557,
-    "pMarket": 0.5054,
-    "p": 0.5209,
-    "ev": -0.0781,
+    "pMarket": 0.5067,
+    "p": 0.5218,
+    "ev": -0.0764,
     "evRaw": -0.0142
    },
    {
     "market": "Gesamtpunkte",
     "pick": "Über 213.5",
-    "odds": 1.83,
+    "odds": 1.85,
     "line": 213.5,
     "side": "over",
     "pModel": 0.5319,
-    "pMarket": 0.5061,
-    "p": 0.5138,
-    "ev": -0.0597,
-    "evRaw": -0.0266
+    "pMarket": 0.5014,
+    "p": 0.5105,
+    "ev": -0.0555,
+    "evRaw": -0.016
    },
    {
     "market": "Gesamtpunkte",
     "pick": "Unter 213.5",
-    "odds": 1.87,
+    "odds": 1.85,
     "line": 213.5,
     "side": "under",
     "pModel": 0.4681,
-    "pMarket": 0.4939,
-    "p": 0.4862,
-    "ev": -0.0909,
-    "evRaw": -0.1246
+    "pMarket": 0.4986,
+    "p": 0.4895,
+    "ev": -0.0945,
+    "evRaw": -0.134
    }
   ],
   "best": {
@@ -1575,13 +1625,23 @@
    "line": null,
    "side": "home",
    "pModel": 0.7948,
-   "pMarket": 0.7563,
-   "p": 0.7678,
-   "ev": -0.0402,
+   "pMarket": 0.7603,
+   "p": 0.7706,
+   "ev": -0.0367,
    "evRaw": -0.0065
   },
   "sideA": "New York Knicks",
-  "pickLabel": "Indiana Pacers @ New York Knicks"
+  "pickLabel": "Indiana Pacers @ New York Knicks",
+  "conf": 0.3,
+  "feat": {
+   "team": 9.498,
+   "alt": 0.0,
+   "rest": -1.5,
+   "inj": 0.094,
+   "TOTraw": 214.94,
+   "pModelRaw": 0.7948,
+   "pMarket": 0.7603
+  }
  },
  {
   "id": "1e7b9477c6c55aea5efd9c1a47039f5c",
@@ -1598,8 +1658,8 @@
   "ptsA": 111.2,
   "ptsH": 111.5,
   "pModelHome": 0.5086,
-  "pMarketHome": 0.4988,
-  "pFinalHome": 0.5017,
+  "pMarketHome": 0.5,
+  "pFinalHome": 0.5026,
   "parts": [
    {
     "n": "Team-Stärke & Tempo",
@@ -1640,13 +1700,13 @@
   },
   "kalshi": {
    "a": 49.5,
-   "b": 49.5,
-   "vol": 85444
+   "b": 50.5,
+   "vol": 85992
   },
   "polymarket": {
    "pA": 0.505,
    "pB": 0.495,
-   "volume": 26112
+   "volume": 26367
   },
   "bookKey": "tipico_de",
   "bookName": "Tipico",
@@ -1741,9 +1801,9 @@
     "line": null,
     "side": "away",
     "pModel": 0.4914,
-    "pMarket": 0.5012,
-    "p": 0.4983,
-    "ev": -0.0682,
+    "pMarket": 0.5,
+    "p": 0.4974,
+    "ev": -0.0699,
     "evRaw": -0.0812
    },
    {
@@ -1753,9 +1813,9 @@
     "line": null,
     "side": "home",
     "pModel": 0.5086,
-    "pMarket": 0.4988,
-    "p": 0.5017,
-    "ev": -0.0467,
+    "pMarket": 0.5,
+    "p": 0.5026,
+    "ev": -0.0451,
     "evRaw": -0.0336
    },
    {
@@ -1814,12 +1874,22 @@
    "line": null,
    "side": "home",
    "pModel": 0.5086,
-   "pMarket": 0.4988,
-   "p": 0.5017,
-   "ev": -0.0467,
+   "pMarket": 0.5,
+   "p": 0.5026,
+   "ev": -0.0451,
    "evRaw": -0.0336
   },
   "sideA": "Utah Jazz",
-  "pickLabel": "Dallas Mavericks @ Utah Jazz"
+  "pickLabel": "Dallas Mavericks @ Utah Jazz",
+  "conf": 0.3,
+  "feat": {
+   "team": -3.339,
+   "alt": 0.8,
+   "rest": 2.0,
+   "inj": -1.391,
+   "TOTraw": 222.76,
+   "pModelRaw": 0.5086,
+   "pMarket": 0.5
+  }
  }
 ]
