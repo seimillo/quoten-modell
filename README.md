@@ -1,0 +1,1 @@
+# quoten-modell
