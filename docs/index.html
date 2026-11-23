@@ -81,7 +81,7 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
   <div id="whales"></div></div></section>
 <section data-view="meine"><div class="card"><h2>Meine Wetten</h2>
   <p class="hint">Trag hier ein, was du wirklich gesetzt hast – am schnellsten mit <b>＋</b> im Wettzettel, sonst in der Übersicht bei jedem Spiel unter „Wetten“. Spielerwetten werden mit den echten Spielerwerten ausgewertet. Ausgewertet wird automatisch nach dem Spiel. Gespeichert wird nur auf diesem Gerät im Browser; mit „Sichern“ und „Laden“ kannst du die Liste aufs andere Gerät mitnehmen.</p>
-  <div class="form"><label class="small" for="kasse">Deine Kasse (€)</label><input id="kasse" type="number" min="0" step="10" inputmode="decimal" placeholder="z. B. 200"><span class="small">– daraus rechnet der Wettzettel den Einsatz in €.</span></div>
+  <div class="form"><label class="small" for="kasse">Deine Kasse (€)</label><input id="kasse" type="number" min="0" step="10" inputmode="decimal" placeholder="z. B. 200"><label class="small" for="fest">Fester Einsatz (€)</label><input id="fest" type="number" min="0" step="1" inputmode="decimal" placeholder="z. B. 10"><span class="small">– ist er gesetzt, gilt er für jede Wette (statt Prozent der Kasse).</span></div>
   <div id="mine"></div>
   <div class="form"><button class="btn ghost" id="exp">Sichern (Datei)</button><label class="btn ghost">Laden<input type="file" id="imp" accept=".json,application/json" hidden></label></div>
 </div></section>
@@ -275,6 +275,8 @@ $("trk").innerHTML = rows.length ? `<table><thead><tr><th>Spiel</th><th>Wette</t
 // ---------- Meine Wetten (nur auf diesem Gerät) ----------
 const KEY="meineWetten"; let memMine=[];
 const kasse = () => { try{ return parseFloat(localStorage.getItem("kasse")||"")||0; }catch(e){ return 0; } };
+const fest = () => { try{ return parseFloat(localStorage.getItem("fest")||"")||0; }catch(e){ return 0; } };
+const einsatzEur = x => fest() || (kasse()&&x.stake ? Math.max(1,Math.round(kasse()*x.stake*2)/2) : 10);
 const getMine=()=>{ try{ return JSON.parse(localStorage.getItem(KEY)||"[]"); }catch(e){ return memMine; } };
 const setMine=a=>{ memMine=a; try{ localStorage.setItem(KEY, JSON.stringify(a)); }catch(e){} renderMine(); };
 const gameById = Object.fromEntries(nba.map(g=>[g.id,g]));
@@ -344,7 +346,9 @@ function renderMine(){
   const list = getMine().map(w=>({...w, res:settleMine(w), pv:w.type==="prop"?(settleProp(w)||{}).val:null}));
   const done = list.filter(w=>w.res), stake = done.reduce((s,w)=>s+w.stake,0);
   const gain = done.reduce((s,w)=>s+gainOf(w),0);
-  $("mine").innerHTML = list.length ? `<div class="kpis">
+  const offen = list.filter(w=>!w.res).reduce((s,w)=>s+w.stake,0);
+  const kas = kasse() ? `<div class="kpi"><div class="k">Kasse jetzt</div><div class="v ${cls(gain)}">${f(kasse()+gain,2)} €</div><div class="hint">Start ${f(kasse(),0)} € · ${f(offen,0)} € offen gesetzt</div></div>` : "";
+  $("mine").innerHTML = list.length ? `<div class="kpis">${kas}
     <div class="kpi"><div class="k">Wetten</div><div class="v">${list.length}</div><div class="hint">${list.length-done.length} offen</div></div>
     <div class="kpi"><div class="k">Gewinn</div><div class="v ${cls(gain)}">${sg(gain,2)} €</div><div class="hint">aus ${f(stake,0)} € Einsatz</div></div>
     <div class="kpi"><div class="k">Rendite</div><div class="v ${cls(gain)}">${stake?sg(gain/stake*100,1)+" %":"–"}</div></div>
@@ -377,6 +381,8 @@ document.addEventListener("click", e=>{
   }
 });
 $("kasse").value = kasse() || "";
+$("fest").value = fest() || "";
+$("fest").addEventListener("change", e=>{ try{ localStorage.setItem("fest", String(parseFloat(e.target.value)||"")); }catch(err){} location.reload(); });
 $("kasse").addEventListener("change", e=>{ try{ localStorage.setItem("kasse", String(parseFloat(e.target.value)||"")); }catch(err){} renderMine(); });
 $("imp").addEventListener("change", async e=>{
   const file=e.target.files[0]; if(!file) return;
@@ -429,10 +435,10 @@ $("slip").innerHTML = slip.length ? `<table><thead><tr><th>Wette</th><th>Quote</
   <td><button class="btn x slipadd" data-i="${i}" title="In Meine Wetten eintragen" aria-label="In Meine Wetten eintragen">＋</button>${x.kind} ${esc(x.pick)}<div class="small">${esc(x.game)} · ${new Date(x.t).toLocaleTimeString("de-DE",{hour:"2-digit",minute:"2-digit"})} Uhr · ${esc(x.market)}</div>${x.safe===true?`<div class="small pos">🟢 mittags sicher</div>`:x.safe===false?`<div class="small" style="color:var(--warn)">🟠 ${esc(x.risks.slice(0,2).join(" · "))}${x.risks.length>2?" …":""}</div>`:""}${preTxt(x.pre)}</td>
   <td><b>${f(x.odds,2)}</b><div class="small">${esc(x.book||"")}${x.link}</div>${x.pMin?`<div class="small">mind. <b>${f(1/x.pMin,2)}</b></div>`:""}</td>
   <td>${x.own!=null?`<b>${pct(x.own)}</b><div class="small">${esc(x.ownLbl)}</div>`:""}${x.mkt!=null?`<div class="small">${pct(x.mkt)} ${esc(x.mktLbl)}</div>`:""}<div class="small">${pct(1/x.odds)} laut Quote</div></td>
-  <td class="${cls(x.ev)}">${sg(x.ev*100,1)} %<div class="small">Einsatz ${f((x.stake||0)*100,1)} %${kasse()?` = ${f(kasse()*(x.stake||0),2)} €`:""}</div></td></tr>
+  <td class="${cls(x.ev)}">${sg(x.ev*100,1)} %<div class="small">${fest()?`Einsatz ${f(fest(),0)} € fest`:`Einsatz ${f((x.stake||0)*100,1)} %${kasse()?` = ${f(kasse()*(x.stake||0),2)} €`:""}`}</div></td></tr>
   <tr class="slipform" data-i="${i}" hidden><td colspan="4"><div class="form" style="margin-top:0">
     <label class="small">Quote <input class="sodds" type="number" step="0.01" inputmode="decimal" value="${x.odds.toFixed(2)}"></label>
-    <label class="small">Einsatz € <input class="sstake" type="number" step="0.5" inputmode="decimal" value="${kasse()&&x.stake?Math.max(1,Math.round(kasse()*x.stake*2)/2):10}"></label>
+    <label class="small">Einsatz € <input class="sstake" type="number" step="0.5" inputmode="decimal" value="${einsatzEur(x)}"></label>
     <button class="btn slipsave" data-i="${i}">Gesetzt</button></div></td></tr>`).join("")}</tbody></table>
   <p class="small">${slip.length} Wetten · zusammen ${f(sumStake*100,1)} % der Kasse</p>` : `<p class="hint">Heute keine Empfehlung – lieber keine Wette als eine schlechte.</p>`;
 
