@@ -146,9 +146,30 @@ def nba_block(now, params, kalshi_nba, pm_nba, history, recent_min=None):
 def props_block(nba, events, pstats, now, track=True):
     """Spielerwetten simulieren, speichern, ✓ in die Trefferliste (mittags) bzw. Schlussquote (abends)."""
     from . import props as PR
+    from .nba import canon
+    from .sources import book_prices
+    import statistics
     try:
         sd = nba[0].get("sdUsed", 13.0) if nba else 13.0
-        games = PR.evaluate(nba, events, pstats, {}, sd)
+        # Spielrahmen aus dem Markt: Gesamtpunkte und Handicap (Pinnacle, sonst Mittel aller Buchmacher)
+        by_id = {e["id"]: e for e in events}
+        framed = []
+        for g in nba:
+            e = by_id.get(g["id"])
+            g2 = dict(g)
+            if e:
+                tot = book_prices(e, "totals")
+                spr = book_prices(e, "spreads")
+                tl = [o["point"] for b, out in tot.items() for o in out if o["name"] == "Over" and o.get("point")]
+                sl = [o["point"] for b, out in spr.items() for o in out if canon(o["name"]) == g["home"] and o.get("point") is not None]
+                pin_t = next((o["point"] for o in tot.get("pinnacle", []) if o["name"] == "Over"), None)
+                pin_s = next((o["point"] for o in spr.get("pinnacle", []) if canon(o["name"]) == g["home"]), None)
+                T = pin_t if pin_t else (statistics.median(tl) if tl else None)
+                L = pin_s if pin_s is not None else (statistics.median(sl) if sl else None)
+                if T and L is not None:
+                    g2.update({"ptsH": (T - L) / 2, "ptsA": (T + L) / 2, "margin": -L, "frame": "Markt"})
+            framed.append(g2)
+        games = PR.evaluate(framed, events, pstats, {}, sd)
     except Exception as e:  # noqa: BLE001
         log(f"Spielerwetten fehlgeschlagen: {e}")
         return []

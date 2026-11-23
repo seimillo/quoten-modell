@@ -4,8 +4,9 @@ Pro Spieler:
 - Minuten: letzte 10 Spiele (70 %) und Saison (30 %), Ausfall-Wahrscheinlichkeit aus dem Verletzungsbericht.
   Die Minuten aller verfügbaren Spieler werden auf 240 pro Team hochgerechnet – fehlt ein Starter,
   bekommen die anderen seine Minuten.
-- Werte pro Minute (Punkte, Rebounds, Assists, Dreier): Saison, zur Liga-Mitte gezogen (80 Minuten, im Rücktest am besten).
-- Team-Rahmen aus dem Spielmodell: erwartete Team-Punkte, Tempo, Punktdifferenz.
+- Werte pro Minute (Punkte, Rebounds, Assists, Dreier): Saison, zur Liga-Mitte gezogen (40 Minuten).
+- Team-Rahmen aus dem Markt (Gesamtpunkte- und Handicap-Linie von Pinnacle): erwartete Team-Punkte und
+  Punktdifferenz – der Markt ist darin sehr genau; die Simulation verteilt die Punkte auf die Spieler.
 Pro Durchlauf: Punktdifferenz und Tempo gemeinsam für beide Teams, Team-Form, Blowouts (Starter spielen
 weniger), Minuten mit Zufall, dann jeder Wert als Gamma-Poisson-Zufallszahl (mehr Streuung als Poisson).
 Ergebnis: für jede angebotene Linie die Chance auf „über“ und „unter“.
@@ -20,7 +21,7 @@ from .nba import TEAMS
 from .sources import BOOK_NAMES, player_key
 
 N_SIM = 10000
-K_RATE = 80.0                       # Minuten, mit denen die Liga-Mitte in die Rate eingeht
+K_RATE = 40.0                       # Minuten, mit denen die Liga-Mitte in die Rate eingeht
 # Zusätzliche Streuung je Wert: Varianz ≈ (1 + PHI) × Erwartung. Punkte fallen in 2er- und 3er-Schritten,
 # darum wächst ihre Streuung mit der Erwartung, aber nicht quadratisch. Gemessen im Rücktest (props_backtest.py).
 PHI = {"pts": 1.6, "reb": 0.5, "ast": 0.5, "fg3m": 0.6}
