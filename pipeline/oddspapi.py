@@ -9,7 +9,7 @@ Die Quoten werden ins Format von The Odds API umgebaut und an deren Spiele angeh
 import os
 import time
 
-from .common import get, load_json, log, now_utc, parse_time, save_json
+from .common import load_json, log, now_utc, parse_time, save_json
 
 BASE = "https://api.oddspapi.io/v4"
 NBA_TOURNAMENT = 132
@@ -35,11 +35,18 @@ def _get(path, **params):
     if u["requests"] >= BUDGET:
         raise RuntimeError(f"Monatsbudget erreicht ({u['requests']} Abfragen)")
     params["apiKey"] = _key()
-    u["requests"] += 1
-    save_json("oddspapi_usage.json", u)
-    time.sleep(1.1)                                   # OddsPapi verlangt ~1 s Pause zwischen Abfragen
-    data, _ = get(f"{BASE}/{path}", params, tries=1, timeout=60)   # jede Wiederholung kostet eine Abfrage
-    return data
+    import requests
+    from .common import UA
+    for wait in (1.2, 6, 20, 45):                     # Pause; bei „zu schnell“ (429) länger warten und neu versuchen
+        time.sleep(wait)
+        r = requests.get(f"{BASE}/{path}", params=params, headers=UA, timeout=60)
+        if r.status_code == 429:
+            continue
+        u["requests"] += 1
+        save_json("oddspapi_usage.json", u)
+        r.raise_for_status()
+        return r.json()
+    raise RuntimeError(f"OddsPapi bremst weiter (429) bei {path}")
 
 
 def participants():

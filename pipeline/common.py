@@ -37,7 +37,7 @@ def get(url, params=None, as_json=True, tries=3, timeout=30):
     for i in range(tries):
         try:
             r = requests.get(url, params=params, headers=UA, timeout=timeout)
-            if r.status_code == 429:
+            if r.status_code == 429 and i < tries - 1:
                 time.sleep(5 * (i + 1))
                 continue
             r.raise_for_status()
