@@ -36,8 +36,8 @@ W_GRID = [round(i * 0.05, 2) for i in range(21)]
 CONF_PRIOR_N, CONF_MIN_N, CONF_MAX = 400, 200, 0.7
 ONE_SIDED_MARGIN = 0.07             # angenommene Marge, wenn nur „über“ angeboten wird
 MIN_EV, MIN_ODDS, MAX_ODDS = 0.05, 1.5, 3.5
-# In der deutschen App nicht spielbar (vom Nutzer geprüft): bet365 hat keine Rebounds/Assists für Spieler
-NOT_IN_APP = {("op_bet365", "reb"), ("op_bet365", "ast")}
+# In der deutschen App nicht spielbar (vom Nutzer geprüft): bet365 hat für Spieler nur Punkte (keine Rebounds, Assists, Dreier)
+NOT_IN_APP = {("op_bet365", "reb"), ("op_bet365", "ast"), ("op_bet365", "fg3m")}
 MIN_EV_ONE_SIDED = 0.10             # nur „über“ angeboten → Marge unsicher → strengere Schwelle
 LEAGUE_POSS = 99.5
 KELLY_FRAC, KELLY_CAP = 0.25, 0.01
