@@ -63,11 +63,15 @@ def notify_value_bets(nba, title="Neue Wetten (✓ Modell, ⚡ besser als Pinnac
 def notify_changes(nba):
     """Abend-Update: Empfehlungen, die sich seit mittags geändert haben."""
     lines = []
+    sent = load_json("notified.json", {})
     for g in nba:
         mb = g.get("middayBest") or {}
-        if mb.get("value") and not any(b.get("value") and b["pick"] == mb.get("pick") for b in g["bets"]):
+        k = f"W|{g['id']}|{mb.get('pick')}"
+        if mb.get("value") and k not in sent and not any(b.get("value") and b["pick"] == mb.get("pick") for b in g["bets"]):
             lines.append(f"⚠ {g['abbrA']} @ {g['abbrH']}: {mb['pick']} ist kein ✓ mehr (neue Verletzungsmeldung/Quote)")
-    send("Abend-Update: Änderungen", lines, tags=("basketball", "warning"), priority=4)
+            sent[k] = g["commence"]
+    if send("Abend-Update: Änderungen", lines, tags=("basketball", "warning"), priority=4):
+        save_json("notified.json", dict(sorted(sent.items(), key=lambda kv: kv[1])[-400:]))
     notify_value_bets(nba, "Abend-Update: neue ✓-Wetten")
 
 
@@ -135,3 +139,20 @@ def notify_props_results(rows):
                      f"{'gewonnen' if t['result'] == 'win' else 'verloren' if t['result'] == 'loss' else 'zurück'} ({g:+.2f} €)")
     lines.append(f"Summe bei 10 € je Wette: {total:+.2f} €")
     send("Ergebnisse Spielerwetten", lines, tags=("basketball", "moneybag"))
+
+
+def notify_props_pregame(checked, new, limit=6):
+    """Kurz vor Spielbeginn: Mittags-Tipps bestätigt oder zurückziehen, dazu neue ✓."""
+    lines = []
+    sym = {"bestätigt": "✅", "schwächer": "➖", "zurückziehen": "❌"}
+    for t, pre in checked:
+        side = "über" if t["side"] == "over" else "unter"
+        st = pre["status"]
+        lines.append(f"{sym.get(st, '⚠️')} {t['player']} {side} {t['line']:g} {t['statName']}: {st}"
+                     + (f" (EV jetzt {pre['ev'] * 100:+.1f} %)" if pre.get("ev") is not None else ""))
+    for g, p in sorted(new, key=lambda x: -x[1]["ev"])[:limit]:
+        side = "über" if p["side"] == "over" else "unter"
+        lines.append(f"🆕 {p['player']} {side} {p['line']:g} {p['statName']} @ {p['odds']:.2f} {p['bookName']} · "
+                     f"EV {p['ev'] * 100:+.1f} % · {_time(g['commence'])} Uhr")
+    if lines:
+        send("Spielerwetten vor Spielbeginn", lines, tags=("basketball", "stopwatch"), priority=3)

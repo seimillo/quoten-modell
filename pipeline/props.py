@@ -14,6 +14,8 @@ Bewertung wie bei Spielen: Mischung Simulation/Markt, EV, ✓ nur bei klaren Fä
 """
 from datetime import date
 
+import math
+
 import numpy as np
 
 from .common import devig_power, load_json, log, now_utc, parse_time, save_json
@@ -27,7 +29,11 @@ K_RATE = 40.0                       # Minuten, mit denen die Liga-Mitte in die R
 PHI = {"pts": 1.6, "reb": 0.5, "ast": 0.5, "fg3m": 0.6}
 STATS = ("pts", "reb", "ast", "fg3m")
 STAT_NAME = {"pts": "Punkte", "reb": "Rebounds", "ast": "Assists", "fg3m": "Dreier"}
-CONF_P = 0.3                        # Gewicht der Simulation gegenüber dem Markt
+CONF_P = 0.3                        # Start-Gewicht der Simulation gegenüber dem Markt
+# Vertrauen je Abweichung Simulation ↔ Markt: wird täglich aus allen simulierten Linien gelernt (ersetzt den alten Schutz)
+GAP_BUCKETS = ((0.0, 0.05), (0.05, 0.10), (0.10, 0.15), (0.15, 1.01))
+W_GRID = [round(i * 0.05, 2) for i in range(21)]
+CONF_PRIOR_N, CONF_MIN_N, CONF_MAX = 400, 200, 0.7
 ONE_SIDED_MARGIN = 0.07             # angenommene Marge, wenn nur „über“ angeboten wird
 MIN_EV, MIN_ODDS, MAX_ODDS = 0.05, 1.5, 3.5
 MIN_EV_ONE_SIDED = 0.10             # nur „über“ angeboten → Marge unsicher → strengere Schwelle
@@ -182,6 +188,20 @@ def opponent_factors(pstats, before):
     return out
 
 
+def conf_table():
+    """Gelerntes Gewicht der Simulation je Abweichungsklasse (Standard CONF_P, solange zu wenig Daten)."""
+    Pp = load_json("props_params.json", {})
+    t = Pp.get("confGap") or {}
+    return [float((t.get(f"{lo:.2f}") or {}).get("w", CONF_P)) for lo, _ in GAP_BUCKETS]
+
+
+def conf_for(gap, table):
+    for (lo, hi), w in zip(GAP_BUCKETS, table):
+        if lo <= gap < hi:
+            return w
+    return table[-1]
+
+
 def corrections():
     """Gelernte Korrekturfaktoren je Wert (1.0 = keine Korrektur)."""
     c = load_json("props_params.json", {}).get("corr", {})
@@ -251,6 +271,7 @@ def evaluate(games, events, pstats, injuries_by_team, sd_margin, seed=7, tot_cur
     rng = np.random.default_rng(seed)
     lg = league_rates(pstats)
     corr = corrections()
+    ctab = conf_table()
     ev_by_id = {e["id"]: e for e in events}
     out = []
     for g in games:
@@ -314,7 +335,8 @@ def evaluate(games, events, pstats, injuries_by_team, sd_margin, seed=7, tot_cur
                     anchored = True
                 else:
                     c["pMkt"] = min(0.97, (1 / c["odds"]) / (1 + ONE_SIDED_MARGIN))
-            p = CONF_P * p_sim + (1 - CONF_P) * c["pMkt"]
+            w = conf_for(abs(p_sim - c["pMkt"]), ctab)
+            p = w * p_sim + (1 - w) * c["pMkt"]
             ev = p * c["odds"] - 1
             props.append({"player": r["name"], "key": k, "team": team, "stat": stat, "statName": STAT_NAME[stat],
                           "line": line, "side": side, "odds": c["odds"], "book": c["book"],
@@ -322,7 +344,7 @@ def evaluate(games, events, pstats, injuries_by_team, sd_margin, seed=7, tot_cur
                           "mean": round(float(vals.mean()), 1), "median": float(np.median(vals)),
                           "expMin": round(float(sims[k]["min"][played].mean()) if played.any() else 0.0, 1),
                           "pOut": round(r["pOut"], 2), "gp": r["gp"],
-                          "pSim": round(p_sim, 4), "pMkt": round(c["pMkt"], 4), "p": round(p, 4), "ev": round(ev, 4),
+                          "pSim": round(p_sim, 4), "pMkt": round(c["pMkt"], 4), "p": round(p, 4), "ev": round(ev, 4), "w": w,
                           "evRaw": round(p_sim * c["odds"] - 1, 4)})
         # ✓: klare Fälle, eine pro Spieler, höchstens 3 pro Spiel
         cands = sorted([p for p in props if p["ev"] >= (MIN_EV if (p["twoSided"] or p["anchored"]) else MIN_EV_ONE_SIDED) and MIN_ODDS <= p["odds"] <= MAX_ODDS and p["gp"] >= 5
@@ -336,6 +358,14 @@ def evaluate(games, events, pstats, injuries_by_team, sd_margin, seed=7, tot_cur
             p["stake"] = round(min(KELLY_CAP, KELLY_FRAC * p["ev"] / (p["odds"] - 1)), 4)
             p["checkApp"] = p["stat"] != "pts"
         props.sort(key=lambda x: (-bool(x.get("value")), -x["ev"]))
+        lines_out = {}
+        for p in sorted(props, key=lambda x: not x["twoSided"]):
+            if not (p["twoSided"] or p["anchored"]):
+                continue
+            ov = p["side"] == "over"
+            lines_out.setdefault((p["key"], p["stat"], p["line"]),
+                                 [p["team"], p["key"], p["stat"], p["line"],
+                                  round(p["pSim"] if ov else 1 - p["pSim"], 4), round(p["pMkt"] if ov else 1 - p["pMkt"], 4)])
         summary = {}
         for k, sv in sims.items():
             pl = sv["min"] > 0
@@ -345,7 +375,7 @@ def evaluate(games, events, pstats, injuries_by_team, sd_margin, seed=7, tot_cur
                                                  float(np.percentile(sv[s_][pl], 75))] for s_ in STATS}
         out.append({"id": g["id"], "commence": g["commence"], "label": f"{g['abbrA']} @ {g['abbrH']}", "simSummary": summary,
                     "home": g["home"], "away": g["away"], "nProps": len(props), "props": props[:60],
-                    "links": (e or {}).get("links", {})})
+                    "links": (e or {}).get("links", {}), "_lines": list(lines_out.values())})
     n_val = sum(1 for x in out for p in x["props"] if p.get("value"))
     log(f"Spielerwetten: {sum(x['nProps'] for x in out)} Linien in {len(out)} Spielen simuliert, {n_val} ✓")
     return out
@@ -357,20 +387,61 @@ def _pid(game_id, p):
     return f"{game_id}|{p['key']}|{p['stat']}|{p['line']}|{p['side']}"
 
 
-def track(prop_games, now=None):
-    """✓-Spielerwetten bis Spielbeginn speichern (beste Quote zuletzt)."""
+def track(prop_games, now=None, src="mittags"):
+    """✓-Spielerwetten speichern. Schon gespeicherte bleiben unverändert (zählt die erste Empfehlung)."""
     now = now or now_utc()
     T = load_json("props_picks.json", {})
+    new = []
     for g in prop_games:
         if parse_time(g["commence"]) <= now:
             continue
         for p in g["props"]:
-            if p.get("value"):
-                T[_pid(g["id"], p)] = {**{k: p[k] for k in ("player", "key", "team", "stat", "statName", "line", "side",
+            if p.get("value") and _pid(g["id"], p) not in T:
+                new.append((g, p))
+                T[_pid(g["id"], p)] = {"src": src, **{k: p[k] for k in ("player", "key", "team", "stat", "statName", "line", "side",
                                                                "odds", "book", "bookName", "pSim", "p", "ev", "stake", "mean")},
                                        "game": g["label"], "commence": g["commence"], "result": None, "value": None}
     save_json("props_picks.json", T)
-    return T
+    return new
+
+
+def recheck(prop_games, now=None):
+    """Kurz vor Spielbeginn: gilt die Empfehlung von mittags noch? (neue Ausfälle, Aufstellungen, Quoten)"""
+    now = now or now_utc()
+    T = load_json("props_picks.json", {})
+    by = {_pid(g["id"], p): p for g in prop_games for p in g["props"]}
+    by_loose = {}
+    for g in prop_games:
+        for p in g["props"]:
+            by_loose.setdefault((g["id"], p["key"], p["stat"], p["side"]), []).append(p)
+    out = []
+    for pid, t in T.items():
+        if t.get("result") or parse_time(t["commence"]) <= now or t.get("src") != "mittags":
+            continue
+        p = by.get(pid)
+        if p is None:
+            gid = pid.split("|", 1)[0]
+            alt = by_loose.get((gid, t["key"], t["stat"], t["side"]))
+            if not alt:
+                status = "nicht mehr angeboten"
+            else:
+                a = min(alt, key=lambda x: abs(x["line"] - t["line"]))
+                status = f"Linie jetzt {a['line']:g}"
+                t["pre"] = {"status": status, "line": a["line"], "odds": a["odds"], "ev": a["ev"], "pSim": a["pSim"],
+                            "at": now.isoformat(timespec="minutes")}
+                out.append((t, t["pre"]))
+                continue
+            t["pre"] = {"status": status, "at": now.isoformat(timespec="minutes")}
+        else:
+            status = "bestätigt" if p.get("value") else "schwächer" if p["ev"] > 0 else "zurückziehen"
+            t["pre"] = {"status": status, "odds": p["odds"], "ev": p["ev"], "pSim": p["pSim"], "pOut": p["pOut"],
+                        "at": now.isoformat(timespec="minutes")}
+        out.append((t, t["pre"]))
+    save_json("props_picks.json", T)
+    log("Spielerwetten vor Spielbeginn: " + ", ".join(f"{sum(1 for _, x in out if x['status'] == k)} {k}"
+                                                     for k in ("bestätigt", "schwächer", "zurückziehen")) +
+        f", {len(out)} geprüft")
+    return out
 
 
 def settle(pstats, now=None):
@@ -418,7 +489,8 @@ def record_close(prop_games, now=None):
             continue
         p = by.get(pid)
         if p:
-            t["close"] = {"odds": p["odds"], "pMkt": p["pMkt"], "clv": round(t["odds"] * p["pMkt"] - 1, 4)}
+            t["close"] = {"odds": p["odds"], "pMkt": p["pMkt"], "clv": round(t["odds"] * p["pMkt"] - 1, 4),
+                          "book": p["bookName"], "at": now.isoformat(timespec="minutes")}
             n += 1
     save_json("props_picks.json", T)
     log(f"Spielerwetten Schlussquoten: {n}")
@@ -431,11 +503,90 @@ def stats(T=None):
     clv = [t["close"]["clv"] for t in T.values() if t.get("close")]
     profit = sum(pr(t) for t in done)
     hit = [t for t in done if t["result"] != "push"]
-    return {"bets": len(T), "settled": len(done), "profit": round(profit, 2),
+    by = {}
+    for key, rows in (("mittags", [t for t in done if t.get("src", "mittags") == "mittags"]),
+                      ("vorSpiel", [t for t in done if t.get("src") == "vor Spielbeginn"]),
+                      ("bestaetigt", [t for t in done if (t.get("pre") or {}).get("status") == "bestätigt"]),
+                      ("zurueck", [t for t in done if (t.get("pre") or {}).get("status") in ("zurückziehen", "schwächer")])):
+        h = [t for t in rows if t["result"] != "push"]
+        by[key] = {"n": len(h), "profit": round(sum(pr(t) for t in rows), 2),
+                   "roi": round(sum(pr(t) for t in rows) / (10 * len(h)), 4) if h else None}
+    return {"by": by, "clvPos": round(sum(1 for c in clv if c > 0) / len(clv), 3) if clv else None,"bets": len(T), "settled": len(done), "profit": round(profit, 2),
             "roi": round(profit / (10 * len(hit)), 4) if hit else None,
             "hit": round(sum(1 for t in hit if t["result"] == "win") / len(hit), 3) if hit else None,
             "expHit": round(sum(t["p"] for t in hit) / len(hit), 3) if hit else None,
             "clv": round(sum(clv) / len(clv), 4) if clv else None, "clvN": len(clv)}
+
+
+# ---------------- Vertrauen je Abweichung aus allen simulierten Linien ----------------
+
+def save_lines(prop_games, now=None):
+    """Mittags: alle Linien mit echtem Marktmaßstab merken (Simulation und Markt, je P(über))."""
+    now = now or now_utc()
+    D = load_json("props_lines.json", {"open": []})
+    have = {(r[0], r[2], r[3], r[4], r[5]) for r in D["open"]}
+    for g in prop_games:
+        if parse_time(g["commence"]) <= now:
+            continue
+        for row in g.get("_lines") or []:
+            r = [g["commence"]] + row
+            if (r[0], r[2], r[3], r[4], r[5]) not in have:
+                D["open"].append(r)
+    save_json("props_lines.json", D)
+
+
+def learn_conf(pstats, now=None):
+    """Abgerechnete Linien in Summen je Abweichungsklasse verdichten (Log-Score je Gewicht), dann Gewicht wählen."""
+    now = now or now_utc()
+    D = load_json("props_lines.json", {"open": []})
+    Pp = load_json("props_params.json", {"corr": {}, "history": []})
+    agg = Pp.get("confAgg") or {f"{lo:.2f}": {"n": 0, "ll": [0.0] * len(W_GRID), "y": 0, "ps": 0.0, "pm": 0.0}
+                                for lo, _ in GAP_BUCKETS}
+    keep, used = [], 0
+    for r in D["open"]:
+        commence, team, key, stat, line, ps, pm = r
+        if (now - parse_time(commence)).total_seconds() < 6 * 3600:
+            keep.append(r)
+            continue
+        P = pstats["players"].get(f"{team}|{key}")
+        d = parse_time(commence).date()
+        hit = [g for g in (P or {}).get("games", []) if abs((date.fromisoformat(g[0]) - d).days) <= 1]
+        if not hit:
+            if (now - parse_time(commence)).days < 2:
+                keep.append(r)
+            continue                                       # nicht gespielt → zählt nicht
+        v = hit[-1][IDX[stat]]
+        if v == line:
+            continue
+        y = 1 if v > line else 0
+        gap = abs(ps - pm)
+        lo = next(lo for lo, hi in GAP_BUCKETS if lo <= gap < hi)
+        a = agg[f"{lo:.2f}"]
+        a["n"] += 1
+        a["y"] += y
+        a["ps"] += ps
+        a["pm"] += pm
+        for i, w in enumerate(W_GRID):
+            p = min(0.99, max(0.01, w * ps + (1 - w) * pm))
+            a["ll"][i] += math.log(p if y else 1 - p)
+        used += 1
+    D["open"] = keep
+    save_json("props_lines.json", D)
+    table = {}
+    for lo, hi in GAP_BUCKETS:
+        a = agg[f"{lo:.2f}"]
+        if not a["n"]:
+            table[f"{lo:.2f}"] = {"w": CONF_P, "n": 0}
+            continue
+        w_fit = W_GRID[max(range(len(W_GRID)), key=lambda i: a["ll"][i])]
+        w = (a["n"] * w_fit + CONF_PRIOR_N * CONF_P) / (a["n"] + CONF_PRIOR_N) if a["n"] >= CONF_MIN_N else CONF_P
+        table[f"{lo:.2f}"] = {"w": round(min(CONF_MAX, w), 3), "wFit": w_fit, "n": a["n"], "hi": hi,
+                              "hit": round(a["y"] / a["n"], 3), "sim": round(a["ps"] / a["n"], 3), "mkt": round(a["pm"] / a["n"], 3)}
+    Pp["confAgg"], Pp["confGap"] = agg, table
+    save_json("props_params.json", Pp)
+    log(f"Vertrauen in die Simulation: {used} neue Linien ausgewertet · " +
+        ", ".join(f"Abweichung ab {float(k) * 100:.0f} %: {v['w']:.2f} (n={v['n']})" for k, v in table.items()))
+    return table
 
 
 # ---------------- Tägliches Lernen aus allen Spielern ----------------

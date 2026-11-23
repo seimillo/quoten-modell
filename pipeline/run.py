@@ -114,18 +114,19 @@ def merged_injuries(now, known=None):
     return out, stamp
 
 
-def nba_block(now, params, kalshi_nba, pm_nba, history, recent_min=None):
+def nba_block(now, params, kalshi_nba, pm_nba, history, recent_min=None, op="normal"):
     season = nba_season(now)
     cur, prior = S.bbref_ratings(season), S.bbref_ratings(season - 1)
     pace = S.bbref_pace(season)
     cur_pl, prior_pl = S.bbref_players(season), S.bbref_players(season - 1)
     injuries, stamp = merged_injuries(now, {k for k, _ in list(cur_pl) + list(prior_pl)})
     events = S.odds_events("basketball_nba", "h2h,spreads,totals")
-    try:
-        from . import oddspapi
-        oddspapi.attach([e for e in events if parse_time(e["commence_time"]) > now])
-    except Exception as e:  # noqa: BLE001
-        log(f"OddsPapi fehlgeschlagen: {e}")
+    if op != "off":                                   # Abendlauf ohne OddsPapi (Kontingent), vor Spielbeginn mit allen
+        try:
+            from . import oddspapi
+            oddspapi.attach([e for e in events if parse_time(e["commence_time"]) > now], extra=(op == "extra"))
+        except Exception as e:  # noqa: BLE001
+            log(f"OddsPapi fehlgeschlagen: {e}")
     upcoming = [e for e in events if parse_time(e["commence_time"]) > now]
     P = dict(params["nba"])
     msd = market_sd(upcoming)
@@ -143,8 +144,9 @@ def nba_block(now, params, kalshi_nba, pm_nba, history, recent_min=None):
     return nba, events
 
 
-def props_block(nba, events, pstats, now, track=True):
-    """Spielerwetten simulieren, speichern, ✓ in die Trefferliste (mittags) bzw. Schlussquote (abends)."""
+def props_block(nba, events, pstats, now, mode="mittags"):
+    """Spielerwetten simulieren und speichern. mittags: ✓ in die Trefferliste, Linien fürs Lernen merken.
+    vor Spielbeginn: Mittags-✓ nachprüfen, neue ✓ aufnehmen, Schlussquoten (CLV)."""
     from . import props as PR
     from .nba import canon
     from .sources import book_prices
@@ -176,19 +178,43 @@ def props_block(nba, events, pstats, now, track=True):
     except Exception as e:  # noqa: BLE001
         log(f"Spielerwetten fehlgeschlagen: {e}")
         return []
-    save_json("props.json", {"updated": now.isoformat(), "games": games})
-    if track:
+    if mode == "mittags":
+        PR.save_lines(games, now)
+    for g in games:
+        g.pop("_lines", None)
+    old = load_json("props.json", {})
+    keep = [g for g in old.get("games", []) if parse_time(g["commence"]) <= now] if mode != "mittags" else []
+    ids = {g["id"] for g in games}
+    save_json("props.json", {"updated": now.isoformat(), "mode": mode, "games": games + [g for g in keep if g["id"] not in ids]})
+    if mode == "mittags":
         PR.track(games, now)
         PR.save_sims(games, now)
-    else:
-        PR.record_close(games, now)
+        return games
+    checked = PR.recheck(games, now)
+    new = PR.track(games, now, src="vor Spielbeginn")
+    PR.record_close(games, now)
+    from .notify import notify_props_pregame
+    notify_props_pregame(checked, new)
     return games
+
+
+def player_results(pstats, now, days=12):
+    """Kleine Datei mit den letzten Spielerwerten – damit „Meine Wetten“ Spielerwetten selbst auswerten kann."""
+    cut = (now.date() - timedelta(days=days)).isoformat()
+    out = {}
+    for k, P in pstats["players"].items():
+        rows = [g[:6] for g in P.get("games", []) if g[0] >= cut]
+        if rows:
+            out[k] = rows
+    return {"updated": now.isoformat(), "cols": ["date", "min", "pts", "reb", "ast", "fg3m"], "players": out}
 
 
 def main():
     mode = os.environ.get("RUN_MODE")
     if mode == "close":
         return main_close()
+    if mode == "pregame":
+        return main_close(pregame=True)
     if mode == "late":
         return main_late()
     if mode == "histodds":
@@ -247,7 +273,7 @@ def main():
         nba, events_all = nba_block(now, params, kalshi_nba, pm_nba, history, recent_min)
         for g in nba:
             g["middayBest"] = g["best"]
-        prop_games = props_block(nba, events_all, pstats, now, track=True)
+        prop_games = props_block(nba, events_all, pstats, now, "mittags")
     else:
         log("NBA: aktuell keine Spiele bei The Odds API")
 
@@ -260,6 +286,8 @@ def main():
     T_before = {k for k, t in load_json("props_picks.json", {}).items() if not t.get("result")}
     T = PR.settle(pstats, now)
     PR.learn(pstats, now)
+    PR.learn_conf(pstats, now)
+    save_json("player_results.json", player_results(pstats, now))
     from .notify import notify_props, notify_props_results
     notify_props_results([T[k] for k in T_before if k in T and T[k].get("result")])
     notify_props(prop_games)
@@ -277,8 +305,9 @@ def main():
     log("Fertig.")
 
 
-def main_close():
-    """Abendlauf nach dem NBA-Verletzungsbericht von 17:30 Uhr US-Zeit:
+def main_close(pregame=False):
+    """Abendlauf (pregame=False, 23:37 Uhr, ohne OddsPapi) bzw. Lauf kurz vor Spielbeginn (pregame=True, ca. 0:22 Uhr,
+    mit allen OddsPapi-Anbietern und Spielerwetten). Nach dem NBA-Verletzungsbericht von 17:30 Uhr US-Zeit:
     NBA neu rechnen (neue Ausfälle, neue Quoten), Änderungen gegenüber mittags markieren,
     Schlussquoten holen und den CLV der Mittags-Prognosen speichern. Die Prognosen selbst bleiben die von mittags."""
     now = now_utc()
@@ -290,14 +319,16 @@ def main_close():
     nba = None
     try:
         nba, nba_events = nba_block(now, params, S.kalshi_events("KXNBAGAME"), S.polymarket_events("nba"),
-                                    load_json("games.json", []))
-        from . import playerstats
-        props_block(nba, nba_events, playerstats.load(), now, track=False)
+                                    load_json("games.json", []), op="extra" if pregame else "off")
+        if pregame:
+            from . import playerstats
+            props_block(nba, nba_events, playerstats.load(), now, "vor Spielbeginn")
         events += nba_events
         for g in nba:
             mb = (old.get(g["id"]) or {}).get("middayBest")
             g["middayBest"] = mb
             g["eveningUpdate"] = now.isoformat()
+            g["updateKind"] = "vor Spielbeginn" if pregame else "abends"
             g["changed"] = bool(mb) and (mb.get("pick") != g["best"]["pick"] or bool(mb.get("value")) != bool(g["best"]["value"]))
         log(f"Abend-Update NBA: {sum(1 for g in nba if g['changed'])} Spiele mit geänderter Empfehlung")
         notify_changes(nba)
@@ -310,9 +341,11 @@ def main_close():
         save_json("nba.json", nba + [g for g in started if g["id"] not in ids])
     save_json("picks.json", picks)
     old = load_json("status.json", {})
-    save_json("status.json", {**old, "closeUpdated": now.isoformat(), "credits": S.CREDITS, "stats": stats(picks),
-                              "closeLog": LOG[-30:]})
-    notify_problems(LOG, S.CREDITS, "Abendlauf")
+    from . import props as PR
+    extra = {"pregameUpdated": now.isoformat(), "pregameLog": LOG[-30:], "propStats": PR.stats()} if pregame else \
+        {"closeUpdated": now.isoformat(), "closeLog": LOG[-30:]}
+    save_json("status.json", {**old, **extra, "credits": S.CREDITS, "stats": stats(picks)})
+    notify_problems(LOG, S.CREDITS, "Lauf vor Spielbeginn" if pregame else "Abendlauf")
     log("Fertig (Schlussquoten).")
 
 

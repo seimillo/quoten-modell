@@ -1,7 +1,7 @@
 """OddsPapi (API v4): zusätzliche deutsche Buchmacher, vor allem bet365.de und bwin.de.
 
 Gratis-Stufe: 250 Abfragen im Monat, pro Abfrage EIN Buchmacher für die ganze NBA (odds-by-tournaments).
-Pro Lauf also 2 Abfragen (bet365.de, bwin.de) – mittags und abends = rund 120 im Monat.
+Mittags 2 Abfragen (bet365.de, bwin.de), kurz vor Spielbeginn 4 (dazu betano.de, 888sport.de) = rund 180 im Monat.
 Teilnehmer- und Marktliste werden einmal geholt und zwischengespeichert.
 Ein Monatsbudget (BUDGET) verhindert, dass das Kontingent ausgeht.
 Die Quoten werden ins Format von The Odds API umgebaut und an deren Spiele angehängt.
@@ -15,6 +15,8 @@ BASE = "https://api.oddspapi.io/v4"
 NBA_TOURNAMENT = 132
 SPORT_BASKETBALL = 11
 BOOKS = {"bet365.de": "bet365", "bwin.de": "bwin"}     # Slug → Schlüssel-Endung (op_bet365, op_bwin)
+# Nur im Lauf kurz vor Spielbeginn: weitere deutsche Anbieter mit Spielerwetten (Betano: Punkte, 888sport: Punkte/Rebounds/Assists)
+EXTRA_BOOKS = {"betano.de": "betano", "888sport.de": "888sport"}
 BUDGET = 230                                          # von 250 im Monat; Rest als Reserve
 
 
@@ -181,8 +183,8 @@ def _book_markets(bo, mk, p1_is_home, home, away):
     return [{"key": k, "outcomes": v} for k, v in (("h2h", h2h), ("spreads", spreads), ("totals", totals)) if v]
 
 
-def attach(events):
-    """Holt bet365.de und bwin.de für alle NBA-Spiele und hängt sie an die Spiele von The Odds API."""
+def attach(events, extra=False):
+    """Holt bet365.de und bwin.de (vor Spielbeginn zusätzlich Betano, 888sport) und hängt sie an die Spiele von The Odds API."""
     if not _key():
         log("Kein ODDSPAPI_KEY gesetzt – OddsPapi aus.")
         return events
@@ -198,7 +200,8 @@ def attach(events):
     for e in events:
         by_teams[frozenset((canon(e["home_team"]), canon(e["away_team"])))] = e
     added, lines_ok, lines_bad, refreshed = 0, 0, 0, False
-    for slug, key in BOOKS.items():
+    books = {**BOOKS, **(EXTRA_BOOKS if extra else {})}
+    for slug, key in books.items():
         try:
             data = _get("odds-by-tournaments", tournamentIds=NBA_TOURNAMENT, bookmaker=slug, oddsFormat="decimal")
         except Exception as e:  # noqa: BLE001
@@ -243,6 +246,6 @@ def attach(events):
             added += 1
     n_props = sum(len(e.get("props", [])) for e in events)
     log(f"OddsPapi: {n_props} Spielerwetten-Linien")
-    log(f"OddsPapi: {added} Buchmacher-Einträge an {len(events)} Spiele gehängt (bet365.de, bwin.de) · "
+    log(f"OddsPapi: {added} Buchmacher-Einträge an {len(events)} Spiele gehängt ({', '.join(books)}) · "
         f"Handicap-Linien plausibel {lines_ok}, verworfen {lines_bad} · {_usage()['requests']} von 250 Abfragen diesen Monat")
     return events

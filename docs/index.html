@@ -68,19 +68,20 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
   <p class="muted" id="stand">Lade Daten …</p>
   <div class="kpis" id="kpis"></div>
   <div class="card" id="slipCard"><h2>Wettzettel heute</h2><div id="slip"></div>
-  <p class="hint">Alle Empfehlungen auf einen Blick: ✓ = Modell sieht Vorteil (Spiele), ⚡ = Quote besser als die faire Pinnacle-Quote, 🏀 = Spielerwette aus der Simulation. „Chance“: fett die eigene Einschätzung (Simulation, Modell bzw. faire Pinnacle-Quote), darunter die faire Chance der Buchmacher (ohne Marge) und die Chance, die in der angebotenen Quote steckt (1 ÷ Quote). Liegt die eigene Einschätzung über der Quoten-Chance, ist der EV positiv. Einsatz in Prozent deiner Kasse (¼-Kelly). Erst im Probelauf unter „Meine Wetten“ testen; echte Wetten erst ab 18.</p></div>
+  <p class="hint">Alle Empfehlungen auf einen Blick: ✓ = Modell sieht Vorteil (Spiele), ⚡ = Quote besser als die faire Pinnacle-Quote, 🏀 = Spielerwette aus der Simulation. „Chance“: fett die eigene Einschätzung (Simulation, Modell bzw. faire Pinnacle-Quote), darunter die faire Chance der Buchmacher (ohne Marge) und die Chance, die in der angebotenen Quote steckt (1 ÷ Quote). Liegt die eigene Einschätzung über der Quoten-Chance, ist der EV positiv. Einsatz in Prozent deiner Kasse (¼-Kelly). Mit <b>＋</b> trägst du eine Wette direkt in „Meine Wetten“ ein. Bei 🏀 steht nach dem Lauf kurz vor Spielbeginn (ca. 0:22 Uhr), ob der Tipp noch gilt.</p></div>
   <div class="card"><h2>Alle Spiele</h2><div id="top"></div>
   <p class="hint">Erwartungswert (EV) = Chance × Quote − 1 zur besten Quote aller Buchmacher mit deutscher Lizenz (Tipico, Winamax, Betano, Betway, LeoVegas, 888sport). ✓ = strenge Auswahl: EV ≥ 3 % (Gesamtpunkte 5 %) und auch gegenüber Pinnacle nicht schlechter, höchstens eine Wette pro Spiel. Die Chance ist eine Mischung aus Modell und Markt (Markt-Anker), darum sind die Werte bewusst vorsichtig.</p></div>
 </section>
 <section data-view="spieler"><div class="card"><h2>Spielerwetten (Simulation)</h2>
-  <p class="hint">Jedes Spiel wird 10.000-mal simuliert: Minuten, Tempo, Blowouts, Ausfälle, dann Punkte, Rebounds, Assists und Dreier je Spieler. Verglichen mit den Quoten von bet365.de und bwin.de. ✓ nur bei EV ≥ 5 % (≥ 10 %, wenn nur „über“ angeboten wird und es keine bwin-Linie als Maßstab gibt), Quote 1,50–3,50, mindestens 18 erwarteten Minuten und gesundem Spieler; höchstens 3 pro Spiel. Rebounds, Assists und Dreier: bitte vor dem Setzen in der App prüfen, ob die Wette dort wirklich angeboten wird.</p>
+  <p class="hint">Jedes Spiel wird 10.000-mal simuliert: Minuten, Tempo, Blowouts, Ausfälle, dann Punkte, Rebounds, Assists und Dreier je Spieler. Verglichen mit den Quoten von bet365.de und bwin.de. ✓ nur bei EV ≥ 5 % (≥ 10 %, wenn nur „über“ angeboten wird und es keine bwin-Linie als Maßstab gibt), Quote 1,50–3,50, mindestens 18 erwarteten Minuten und gesundem Spieler; höchstens 3 pro Spiel. Rebounds, Assists und Dreier: bitte vor dem Setzen in der App prüfen, ob die Wette dort wirklich angeboten wird. Kurz vor Spielbeginn (ca. 0:22 Uhr) prüft ein zweiter Lauf jeden Tipp mit den neuesten Ausfällen nach und vergleicht zusätzlich Betano und 888sport.</p>
   <div id="propKpis"></div><div id="propBt"></div><div id="propList"></div>
   <h3>Trefferliste Spielerwetten</h3><div id="propTrk"></div></div></section>
 <section data-view="geld"><div class="card"><h2>Großes Geld auf Polymarket</h2>
   <p class="hint">Einzelne Einsätze ab 1.000 $ in den letzten 48 Stunden auf Polymarket, plus die Kalshi-Preise. Prognosemärkte haben kleine Margen – dort handeln oft gut informierte Leute. Sie zählen im Markt-Anker zur Hälfte.</p>
   <div id="whales"></div></div></section>
 <section data-view="meine"><div class="card"><h2>Meine Wetten</h2>
-  <p class="hint">Trag hier ein, was du wirklich gesetzt hast – in der Übersicht bei jedem Spiel unter „Wetten“ (Spiel antippen). Ausgewertet wird automatisch nach dem Spiel. Gespeichert wird nur auf diesem Gerät im Browser; mit „Sichern“ und „Laden“ kannst du die Liste aufs andere Gerät mitnehmen.</p>
+  <p class="hint">Trag hier ein, was du wirklich gesetzt hast – am schnellsten mit <b>＋</b> im Wettzettel, sonst in der Übersicht bei jedem Spiel unter „Wetten“. Spielerwetten werden mit den echten Spielerwerten ausgewertet. Ausgewertet wird automatisch nach dem Spiel. Gespeichert wird nur auf diesem Gerät im Browser; mit „Sichern“ und „Laden“ kannst du die Liste aufs andere Gerät mitnehmen.</p>
+  <div class="form"><label class="small" for="kasse">Deine Kasse (€)</label><input id="kasse" type="number" min="0" step="10" inputmode="decimal" placeholder="z. B. 200"><span class="small">– daraus rechnet der Wettzettel den Einsatz in €.</span></div>
   <div id="mine"></div>
   <div class="form"><button class="btn ghost" id="exp">Sichern (Datei)</button><label class="btn ghost">Laden<input type="file" id="imp" accept=".json,application/json" hidden></label></div>
 </div></section>
@@ -105,10 +106,12 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
     <li><b>Markt-Anker:</b> anfangs 30 % Modell, 70 % Markt (Pinnacle/Betfair bzw. angezeigter Buchmacher, beim Sieg dazu Kalshi und Polymarket zur Hälfte).</li>
     <li><b>Verletzungen:</b> Wert pro Spieler = (BPM + 2) × Minuten/48 (BPM von Basketball-Reference, aktuelle Saison mit Vorsaison gemischt und zur Mitte gezogen, höchstens 8 Punkte). Davon wird nur abgezogen, was noch in den Team-Ratings steckt, mal der Ausfall-Wahrscheinlichkeit aus dem offiziellen NBA-Verletzungsbericht (alle 15 Minuten, Out 100 %, Doubtful 75 %, Questionable 45 %, Probable 10 %), für noch nicht gemeldete Teams aus ESPN (Day-To-Day 30 %).</li>
     <li><b>Beste Quote:</b> Jede Wette wird bei allen Buchmachern mit deutscher Lizenz (GGL-Whitelist) verglichen: Tipico, Winamax, Betano, Betway, LeoVegas und 888sport. Betano, Betway, LeoVegas und 888sport liefert die Schnittstelle nur als UK- bzw. Schweden-Version, die deutschen Quoten können leicht abweichen. Pinnacle und Betfair dienen nur als Vergleichsmarkt und mit der besten Quote bewertet – bei Handicap und Gesamtpunkten auch über verschiedene Linien.</li>
-    <li><b>Spielerwetten:</b> Monte-Carlo-Simulation mit 10.000 Durchläufen pro Spiel. Minuten aus den letzten 10 Spielen (70 %) und der Saison (30 %), auf 240 Teamminuten hochgerechnet; Werte pro Minute aus allen Spielberichten der Saison (ESPN), leicht zur Liga-Mitte gezogen; ausgewertet nur Durchläufe, in denen der Spieler spielt (sonst Wette zurück); Team-Punkte und Punktdifferenz aus der Gesamtpunkte- und Handicap-Linie des Marktes (Pinnacle), Tempo aus dem Spielmodell; Blowouts, Ausfälle und Streuung je Durchlauf. Fehlt ein Spieler, gehen seine Würfe, Rebounds und Assists je Durchlauf an die Mitspieler – mehr an die, die ohnehin viel davon haben. Rebounds, Assists und Dreier berücksichtigen, wie viel der Gegner zulässt. Grundlage der Raten: volle Saison und eigene Vorsaison (Basketball-Reference). Gewicht 30 % Simulation, 70 % Markt (bis die Trefferliste zeigt, ob die Simulation trifft). Bietet bet365 nur „über“ an, wird eine Marge von 7 % angenommen.</li>
+    <li><b>Spielerwetten:</b> Monte-Carlo-Simulation mit 10.000 Durchläufen pro Spiel. Minuten aus den letzten 10 Spielen (70 %) und der Saison (30 %), auf 240 Teamminuten hochgerechnet; Werte pro Minute aus allen Spielberichten der Saison (ESPN), leicht zur Liga-Mitte gezogen; ausgewertet nur Durchläufe, in denen der Spieler spielt (sonst Wette zurück); Team-Punkte und Punktdifferenz aus der Gesamtpunkte- und Handicap-Linie des Marktes (Pinnacle), Tempo aus dem Spielmodell; Blowouts, Ausfälle und Streuung je Durchlauf. Fehlt ein Spieler, gehen seine Würfe, Rebounds und Assists je Durchlauf an die Mitspieler – mehr an die, die ohnehin viel davon haben. Rebounds, Assists und Dreier berücksichtigen, wie viel der Gegner zulässt. Grundlage der Raten: volle Saison und eigene Vorsaison (Basketball-Reference). Gewicht der Simulation gelernt je Abweichung vom Markt (siehe unten, Start 30 %). Bietet bet365 nur „über“ an, wird eine Marge von 7 % angenommen.</li>
     <li><b>⚡-Wetten:</b> unabhängig vom Modell – die Quote liegt mindestens 1,5 % über der fairen Pinnacle-Quote (ohne Marge). Nur bei Tipico, Winamax und bet365, weil diese die Wettsteuer selbst tragen. Eine pro Spiel, Einsatz ¼-Kelly, eigene Trefferliste.</li>
     <li><b>Strenge Auswahl (✓):</b> höchstens eine Wette pro Spiel (die mit dem höchsten EV), EV ≥ 3 % – bei Gesamtpunkten 5 %, weil dieser Teil noch nicht gegen Quoten getestet ist – <i>und</i> die Quote ist auch gegenüber der fairen Pinnacle-Quote nicht schlechter. Ohne Pinnacle-Quote: EV ≥ 5 %. Einsatz: ¼-Kelly (Vorteil ÷ (Quote − 1) ÷ 4), höchstens 2 % der Kasse.</li>
-    <li><b>Abend-Update 23:37 Uhr:</b> nach dem Bericht von 17:30 Uhr US-Zeit neu gerechnet. Ändert sich eine Empfehlung, steht beim Spiel ein ⚠. Die Trefferliste zählt die Empfehlung von mittags, der Abendlauf liefert die Schlussquote für den CLV.</li>
+    <li><b>Abend-Update 23:37 Uhr:</b> nach dem Bericht von 17:30 Uhr US-Zeit neu gerechnet. Ändert sich eine Empfehlung, steht beim Spiel ein ⚠. Die Trefferliste zählt die Empfehlung von mittags.</li>
+    <li><b>Lauf kurz vor Spielbeginn (ca. 0:22 Uhr, 18:22 Uhr US-Ostküste):</b> neueste Ausfälle, alle Quoten inklusive Betano und 888sport. Jede 🏀-Empfehlung von mittags wird nachgeprüft (✅ bestätigt, ➖ schwächer, ❌ zurückziehen, Push-Nachricht), neue ✓ kommen dazu. Dieser Lauf liefert auch die Schlussquoten für den CLV.</li>
+    <li><b>Vertrauen in die Simulation:</b> Jeden Tag werden alle simulierten Spielerlinien mit echtem Marktmaßstab (oft über 500) mit dem echten Ergebnis verglichen – getrennt danach, wie weit Simulation und Markt auseinanderliegen. Daraus lernt das Modell, wie stark es der Simulation je Abweichung trauen darf (Start 30 %, höchstens 70 %, ab 200 Linien je Klasse, vorsichtig zum Startwert gezogen). Das ersetzt den früheren festen Schutz gegen zu große Abweichungen.</li>
   </ol>
   <h3>Grenzen</h3>
   <p>Die Gewichte sind begründete Schätzungen, nicht an alten Spielen getestet. Die Trefferliste zeigt nach ein paar hundert Spielen, ob das Modell genauer ist als der Markt (Brier-Wert). Bis dahin: Lern- und Analyseprojekt, keine Wettempfehlung.</p>
@@ -271,10 +274,29 @@ $("trk").innerHTML = rows.length ? `<table><thead><tr><th>Spiel</th><th>Wette</t
 
 // ---------- Meine Wetten (nur auf diesem Gerät) ----------
 const KEY="meineWetten"; let memMine=[];
+const kasse = () => { try{ return parseFloat(localStorage.getItem("kasse")||"")||0; }catch(e){ return 0; } };
 const getMine=()=>{ try{ return JSON.parse(localStorage.getItem(KEY)||"[]"); }catch(e){ return memMine; } };
 const setMine=a=>{ memMine=a; try{ localStorage.setItem(KEY, JSON.stringify(a)); }catch(e){} renderMine(); };
 const gameById = Object.fromEntries(nba.map(g=>[g.id,g]));
+const SIDX = {pts:2, reb:3, ast:4, fg3m:5};
+function settleProp(w){
+  const t = PT[w.pid]; if(t && t.result) return {res:t.result, val:t.value};
+  const rows = (PRES.players||{})[`${w.team}|${w.key}`] || [];
+  const d0 = new Date(new Date(w.commence).getTime() - 5*3600e3).toISOString().slice(0,10);
+  const g = rows.find(r=>Math.abs((new Date(r[0]) - new Date(d0))/864e5) <= 1);
+  if(!g) return (Date.now() - new Date(w.commence).getTime() > 2*864e5) ? {res:"push", val:"–"} : null;
+  const v = g[SIDX[w.stat]];
+  return {res: v===w.line ? "push" : ((v > w.line) === (w.side==="over") ? "win" : "loss"), val:v};
+}
+function clvMine(w){
+  if(w.type==="prop"){ const t = PT[w.pid]; return t && t.close ? w.odds*t.close.pMkt-1 : null; }
+  const r = picksAll[w.gameId]; if(!r) return null;
+  if(r.bet && r.close && r.bet.pick===w.pick) return w.odds*r.close.pFair-1;
+  if(r.flash && r.flashClose && r.flash.pick===w.pick) return w.odds*r.flashClose.pFair-1;
+  return null;
+}
 function settleMine(w){
+  if(w.type==="prop"){ const s = settleProp(w); return s && s.res; }
   const r = picksAll[w.gameId]; if(!r || !r.score) return null;
   const [h,a] = r.score.split(":").map(Number); let d;
   if(w.market==="Sieg") d = w.side==="home" ? h-a : a-h;
@@ -282,10 +304,46 @@ function settleMine(w){
   else d = (w.side==="over" ? 1 : -1) * (h+a-Number(w.line));
   return d>0?"win":d<0?"loss":"push";
 }
+const gainOf = w => w.res==="win"?w.stake*(w.odds-1):w.res==="loss"?-w.stake:0;
+const kindOf = w => w.kind || (w.value ? "✓" : "eigene");
+function mineExtra(list, done){
+  if(!done.length) return "";
+  // je Art
+  const kinds = {}; for(const w of done){ const k=kindOf(w); (kinds[k]=kinds[k]||[]).push(w); }
+  const byKind = Object.entries(kinds).map(([k,ws])=>{ const st=ws.reduce((s,w)=>s+w.stake,0), g=ws.reduce((s,w)=>s+gainOf(w),0);
+    return `<tr><td>${esc(k==="eigene"?"eigene Wahl":k==="🏀"?"🏀 Spieler":k==="⚡"?"⚡ besser als Pinnacle":"✓ Modell")}</td><td>${ws.length}</td><td>${f(st,0)} €</td><td class="${cls(g)}">${sg(g,2)} €</td><td class="${cls(g)}">${st?sg(g/st*100,1)+" %":"–"}</td></tr>`; }).join("");
+  // CLV
+  const cl = list.map(clvMine).filter(x=>x!=null);
+  // Modell im gleichen Zeitraum (je 10 €)
+  const from = done.reduce((m,w)=>w.commence<m?w.commence:m, done[0].commence), to = done.reduce((m,w)=>w.commence>m?w.commence:m, done[0].commence);
+  const inR = c => c>=from && c<=to;
+  const mg = Object.values(picks).filter(r=>r.bet&&r.bet.value&&r.betResult&&r.betResult!=="push"&&inR(r.commence));
+  const mp = Object.values(PT).filter(t=>t.result&&t.result!=="push"&&inR(t.commence));
+  const mGain = mg.reduce((s,r)=>s+(r.betResult==="win"?10*(r.bet.odds-1):-10),0) + mp.reduce((s,t)=>s+(t.result==="win"?10*(t.odds-1):-10),0);
+  const mN = mg.length + mp.length;
+  const st = done.reduce((s,w)=>s+w.stake,0), g = done.reduce((s,w)=>s+gainOf(w),0);
+  // Verlauf
+  const days = {}; for(const w of done){ const d = new Date(w.commence).toLocaleDateString("sv-SE",{timeZone:"Europe/Berlin"}); days[d]=(days[d]||0)+gainOf(w); }
+  let cum = 0; const pts = Object.keys(days).sort().map(d=>({d, v:(cum+=days[d])}));
+  let chart = "";
+  if(pts.length>=2){
+    const W=600,H=160,P=28, lo=Math.min(0,...pts.map(p=>p.v)), hi=Math.max(0,...pts.map(p=>p.v)), sp=(hi-lo)||1;
+    const X=i=>P+i*(W-2*P)/(pts.length-1), Y=v=>H-P-(v-lo)*(H-2*P)/sp;
+    chart = `<h3>Dein Gewinn über die Zeit</h3><div class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Gewinn kumuliert, zuletzt ${f(cum,2)} Euro">
+      <line x1="${P}" x2="${W-P}" y1="${Y(0)}" y2="${Y(0)}" stroke="var(--line)"/>
+      <polyline fill="none" stroke="var(--chart)" stroke-width="2.5" points="${pts.map((p,i)=>X(i)+","+Y(p.v)).join(" ")}"/>
+      <text x="${W-P}" y="${Y(cum)-6}" text-anchor="end" font-size="13" fill="var(--ink)">${sg(cum,2)} €</text>
+      <text x="${P}" y="${H-6}" font-size="11" fill="var(--muted)">${pts[0].d.slice(5).split("-").reverse().join(".")}</text>
+      <text x="${W-P}" y="${H-6}" text-anchor="end" font-size="11" fill="var(--muted)">${pts[pts.length-1].d.slice(5).split("-").reverse().join(".")}</text></svg></div>`;
+  }
+  return `<h3>Auswertung</h3><table><thead><tr><th>Art</th><th>Wetten</th><th>Einsatz</th><th>Gewinn</th><th>Rendite</th></tr></thead><tbody>${byKind}</tbody></table>
+    <p class="small">${cl.length?`<b>Dein CLV:</b> <span class="${cls(cl.reduce((a,b)=>a+b,0)/cl.length)}">${sg(cl.reduce((a,b)=>a+b,0)/cl.length*100,1)} %</span> im Schnitt (${cl.length} Wetten mit Schlussquote, ${pct(cl.filter(x=>x>0).length/cl.length)} positiv) – der beste frühe Hinweis, ob du gute Quoten erwischst. `:""}
+    <b>Vergleich:</b> Du ${st?sg(g/st*100,1)+" %":"–"} Rendite · alle ✓-Tipps des Modells im selben Zeitraum (je 10 €) ${mN?sg(mGain/(10*mN)*100,1)+" % aus "+mN+" Wetten":"– noch keine ausgewertet"}.</p>${chart}`;
+}
 function renderMine(){
-  const list = getMine().map(w=>({...w, res:settleMine(w)}));
+  const list = getMine().map(w=>({...w, res:settleMine(w), pv:w.type==="prop"?(settleProp(w)||{}).val:null}));
   const done = list.filter(w=>w.res), stake = done.reduce((s,w)=>s+w.stake,0);
-  const gain = done.reduce((s,w)=>s+(w.res==="win"?w.stake*(w.odds-1):w.res==="loss"?-w.stake:0),0);
+  const gain = done.reduce((s,w)=>s+gainOf(w),0);
   $("mine").innerHTML = list.length ? `<div class="kpis">
     <div class="kpi"><div class="k">Wetten</div><div class="v">${list.length}</div><div class="hint">${list.length-done.length} offen</div></div>
     <div class="kpi"><div class="k">Gewinn</div><div class="v ${cls(gain)}">${sg(gain,2)} €</div><div class="hint">aus ${f(stake,0)} € Einsatz</div></div>
@@ -293,10 +351,10 @@ function renderMine(){
     <div class="kpi"><div class="k">Trefferquote</div><div class="v">${done.length?pct(done.filter(w=>w.res==="win").length/done.length):"–"}</div></div></div>
     <table><thead><tr><th>Spiel</th><th>Wette</th><th>Quote</th><th>Ergebnis</th><th></th></tr></thead><tbody>${list.sort((a,b)=>String(b.commence).localeCompare(String(a.commence))).map(w=>`<tr>
     <td>${esc(w.label)}<div class="small">${new Date(w.commence).toLocaleDateString("de-DE",{day:"2-digit",month:"2-digit"})}</div></td>
-    <td>${w.value?"✓ ":""}${esc(w.pick)}<div class="small">${esc(w.market)} · ${f(w.stake,0)} €</div></td>
-    <td><b>${f(w.odds,2)}</b><div class="small">${esc(w.book||"")}</div></td>
-    <td>${!w.res?'<span class="small">offen</span>':w.res==="win"?`<b class="pos">+${f(w.stake*(w.odds-1),2)} €</b>`:w.res==="loss"?`<b class="neg">−${f(w.stake,2)} €</b>`:"zurück"}</td>
-    <td><button class="btn x del" data-ts="${w.ts}" title="Löschen">✕</button></td></tr>`).join("")}</tbody></table>` : `<p class="hint">Noch keine eigenen Wetten eingetragen.</p>`;
+    <td>${kindOf(w)==="eigene"?"":esc(kindOf(w))+" "}${esc(w.pick)}<div class="small">${esc(w.market)} · ${f(w.stake,2)} €</div>${w.type==="prop"?preTxt((PT[w.pid]||{}).pre):""}</td>
+    <td><b>${f(w.odds,2)}</b><div class="small">${esc(w.book||"")}</div>${clvMine(w)!=null?`<div class="small ${cls(clvMine(w))}">CLV ${sg(clvMine(w)*100,1)} %</div>`:""}</td>
+    <td>${!w.res?'<span class="small">offen</span>':w.res==="win"?`<b class="pos">+${f(w.stake*(w.odds-1),2)} €</b>`:w.res==="loss"?`<b class="neg">−${f(w.stake,2)} €</b>`:"zurück"}${w.pv!=null&&w.pv!=="–"?`<div class="small">echt ${w.pv}</div>`:""}</td>
+    <td><button class="btn x del" data-ts="${w.ts}" title="Löschen">✕</button></td></tr>`).join("")}</tbody></table>${mineExtra(list, done)}` : `<p class="hint">Noch keine eigenen Wetten eingetragen.</p>`;
 }
 document.addEventListener("change", e=>{
   if(!e.target.classList.contains("bsel")) return;
@@ -309,7 +367,7 @@ document.addEventListener("click", e=>{
     const odds=parseFloat(box.querySelector(".bodds").value), stake=parseFloat(box.querySelector(".bstake").value);
     if(!(odds>1) || !(stake>0)){ e.target.textContent="Quote/Einsatz prüfen"; return; }
     setMine([...getMine(), {ts:Date.now(), gameId:g.id, label:`${g.abbrA} @ ${g.abbrH}`, commence:g.commence, market:b.market, side:b.side,
-      line:b.line, pick:b.pick, odds, stake, book:b.bookName, value:!!b.value, ev:b.ev}]);
+      line:b.line, pick:b.pick, odds, stake, book:b.bookName, value:!!b.value, kind:b.value?"✓":"eigene", type:"game", ev:b.ev}]);
     e.target.textContent="✓ gespeichert"; setTimeout(()=>e.target.textContent="Gesetzt",1500);
   }
   if(e.target.classList.contains("del")){ setMine(getMine().filter(w=>String(w.ts)!==e.target.dataset.ts)); }
@@ -318,12 +376,13 @@ document.addEventListener("click", e=>{
     a.download="meine-wetten.json"; a.click();
   }
 });
+$("kasse").value = kasse() || "";
+$("kasse").addEventListener("change", e=>{ try{ localStorage.setItem("kasse", String(parseFloat(e.target.value)||"")); }catch(err){} renderMine(); });
 $("imp").addEventListener("change", async e=>{
   const file=e.target.files[0]; if(!file) return;
   try{ const add=JSON.parse(await file.text()); const have=new Set(getMine().map(w=>w.ts));
        setMine([...getMine(), ...add.filter(w=>w && w.gameId && !have.has(w.ts))]); }catch(err){ $("mine").insertAdjacentHTML("afterbegin",'<p class="neg">Datei nicht lesbar.</p>'); }
 });
-renderMine();
 
 // ---------- Spielerwetten ----------
 const PROPS = await load("props.json", {games:[]});
@@ -334,36 +393,68 @@ $("propKpis").innerHTML = ps ? `<div class="kpis">
   <div class="kpi"><div class="k">✓-Spielerwetten</div><div class="v">${ps.bets}</div><div class="hint">${ps.settled} ausgewertet</div></div>
   <div class="kpi"><div class="k">Gewinn à 10 €</div><div class="v ${cls(ps.profit||0)}">${ps.settled?sg(ps.profit,2)+" €":"–"}</div><div class="hint">Rendite ${ps.roi==null?"–":sg(ps.roi*100,1)+" %"}</div></div>
   <div class="kpi"><div class="k">Trefferquote</div><div class="v">${ps.hit==null?"–":pct(ps.hit)}</div><div class="hint">erwartet ${ps.expHit==null?"–":pct(ps.expHit)}</div></div>
-  <div class="kpi"><div class="k">CLV</div><div class="v ${cls(ps.clv||0)}">${ps.clv==null?"–":sg(ps.clv*100,1)+" %"}</div><div class="hint">${ps.clvN} Wetten</div></div></div>` : "";
+  <div class="kpi"><div class="k">Schlussquote geschlagen (CLV)</div><div class="v ${cls(ps.clv||0)}">${ps.clv==null?"–":sg(ps.clv*100,1)+" %"}</div><div class="hint">${ps.clvN} Wetten${ps.clvPos!=null?` · ${pct(ps.clvPos)} mit gefallener Quote`:""}</div></div></div>
+  ${ps.by && (ps.by.bestaetigt.n||ps.by.zurueck.n||ps.by.vorSpiel.n) ? `<p class="small">Rendite je Gruppe: vor Spielbeginn bestätigt ${ps.by.bestaetigt.roi==null?"–":sg(ps.by.bestaetigt.roi*100,1)+" %"} (${ps.by.bestaetigt.n}) · abgeschwächt/zurückgezogen ${ps.by.zurueck.roi==null?"–":sg(ps.by.zurueck.roi*100,1)+" %"} (${ps.by.zurueck.n}) · erst vor Spielbeginn ✓ ${ps.by.vorSpiel.roi==null?"–":sg(ps.by.vorSpiel.roi*100,1)+" %"} (${ps.by.vorSpiel.n})</p>`:""}
+  <p class="small"><b>CLV</b> = deine Quote × faire Schluss-Chance − 1 (Lauf kurz vor Spielbeginn). Positiv heißt: die Quote ist danach gefallen – das ist nach wenigen Tagen aussagekräftiger als Gewinn und Verlust.</p>` : "";
 // ---------- Wettzettel ----------
-const LINK = (links, book) => { const l = links||{}; const u = book && book.includes("bet365") ? l.op_bet365 : book && book.includes("bwin") ? l.op_bwin : (l.op_bet365||l.op_bwin); return u ? ` <a href="${esc(u)}" target="_blank" rel="noopener">öffnen</a>` : ""; };
+const LINK = (links, book) => { const l = links||{}; const u = (book && l[book]) || (book && book.includes("bet365") ? l.op_bet365 : book && book.includes("bwin") ? l.op_bwin : (l.op_bet365||l.op_bwin)); return u ? ` <a href="${esc(u)}" target="_blank" rel="noopener">öffnen</a>` : ""; };
+const PRE = {"bestätigt":"✅ bestätigt","schwächer":"➖ schwächer","zurückziehen":"❌ zurückziehen","nicht mehr angeboten":"⚠️ nicht mehr angeboten"};
+const preTxt = pre => pre ? `<div class="small">Vor Spielbeginn: ${PRE[pre.status]||"⚠️ "+esc(pre.status)}${pre.ev!=null?` · EV jetzt ${sg(pre.ev*100,1)} %`:""}</div>` : "";
+const pidOf = (gid,p) => `${gid}|${p.key}|${p.stat}|${p.line}|${p.side}`;
 const slip = [];
 const nowMs = Date.now();
 for (const g of nba) {
   if (new Date(g.commence).getTime() < nowMs) continue;
-  if (g.best && g.best.value) slip.push({t:g.commence, kind:"✓", game:`${g.abbrA} @ ${g.abbrH}`, pick:g.best.pick, market:g.best.market, odds:g.best.odds, book:g.best.bookName, stake:g.best.stake, ev:g.best.ev, link:LINK(g.links, g.best.book),
+  const gl = {type:"game", gameId:g.id, label:`${g.abbrA} @ ${g.abbrH}`, commence:g.commence};
+  if (g.best && g.best.value) slip.push({log:{...gl, market:g.best.market, side:g.best.side, line:g.best.line, pick:g.best.pick, kind:"✓", value:true},
+    t:g.commence, kind:"✓", game:`${g.abbrA} @ ${g.abbrH}`, pick:g.best.pick, market:g.best.market, odds:g.best.odds, book:g.best.bookName, stake:g.best.stake, ev:g.best.ev, link:LINK(g.links, g.best.book),
     own:g.best.pModel, ownLbl:"Modell", mkt:g.best.pMarket, mktLbl:"Markt fair"});
-  if (g.flash) slip.push({t:g.commence, kind:"⚡", game:`${g.abbrA} @ ${g.abbrH}`, pick:g.flash.pick, market:g.flash.market, odds:g.flash.odds, book:g.flash.bookName, stake:g.flash.stake, ev:g.flash.evPin, link:LINK(g.links, g.flash.book),
+  if (g.flash) slip.push({log:{...gl, market:g.flash.market, side:g.flash.side, line:g.flash.line, pick:g.flash.pick, kind:"⚡"},
+    t:g.commence, kind:"⚡", game:`${g.abbrA} @ ${g.abbrH}`, pick:g.flash.pick, market:g.flash.market, odds:g.flash.odds, book:g.flash.bookName, stake:g.flash.stake, ev:g.flash.evPin, link:LINK(g.links, g.flash.book),
     own:g.flash.pPin, ownLbl:"Pinnacle fair", mkt:null, mktLbl:""});
 }
 for (const g of PROPS.games) {
   if (new Date(g.commence).getTime() < nowMs) continue;
-  for (const p of g.props.filter(p=>p.value)) slip.push({t:g.commence, kind:"🏀", game:g.label, pick:`${p.player} ${p.side==="over"?"über":"unter"} ${String(p.line).replace(".",",")} ${p.statName}${p.checkApp?" (in App prüfen)":""}`, market:"Spieler", odds:p.odds, book:p.bookName, stake:p.stake, ev:p.ev, link:LINK(g.links, p.book),
+  for (const p of g.props.filter(p=>p.value)) slip.push({pre:(PT[pidOf(g.id,p)]||{}).pre,
+    log:{type:"prop", gameId:g.id, pid:pidOf(g.id,p), label:g.label, commence:g.commence, market:"Spieler", team:p.team, key:p.key, stat:p.stat,
+         statName:p.statName, line:p.line, side:p.side, player:p.player, pick:`${p.player} ${p.side==="over"?"über":"unter"} ${String(p.line).replace(".",",")} ${p.statName}`, kind:"🏀", value:true},
+    t:g.commence, kind:"🏀", game:g.label, pick:`${p.player} ${p.side==="over"?"über":"unter"} ${String(p.line).replace(".",",")} ${p.statName}${p.checkApp?" (in App prüfen)":""}`, market:"Spieler", odds:p.odds, book:p.bookName, stake:p.stake, ev:p.ev, link:LINK(g.links, p.book),
     own:p.pSim, ownLbl:"Simulation", mkt:p.pMkt, mktLbl:p.anchored?"bwin fair":p.twoSided?"Buchmacher fair":"Buchm. geschätzt"});
 }
 slip.sort((a,b)=>String(a.t).localeCompare(String(b.t)) || b.ev-a.ev);
 const sumStake = slip.reduce((s,x)=>s+(x.stake||0),0);
-$("slip").innerHTML = slip.length ? `<table><thead><tr><th>Wette</th><th>Quote</th><th>Chance</th><th>EV</th></tr></thead><tbody>${slip.map(x=>`<tr>
-  <td>${x.kind} ${esc(x.pick)}<div class="small">${esc(x.game)} · ${new Date(x.t).toLocaleTimeString("de-DE",{hour:"2-digit",minute:"2-digit"})} Uhr · ${esc(x.market)}</div></td>
+$("slip").innerHTML = slip.length ? `<table><thead><tr><th>Wette</th><th>Quote</th><th>Chance</th><th>EV</th></tr></thead><tbody>${slip.map((x,i)=>`<tr>
+  <td><button class="btn x slipadd" data-i="${i}" title="In Meine Wetten eintragen" aria-label="In Meine Wetten eintragen">＋</button>${x.kind} ${esc(x.pick)}<div class="small">${esc(x.game)} · ${new Date(x.t).toLocaleTimeString("de-DE",{hour:"2-digit",minute:"2-digit"})} Uhr · ${esc(x.market)}</div>${preTxt(x.pre)}</td>
   <td><b>${f(x.odds,2)}</b><div class="small">${esc(x.book||"")}${x.link}</div></td>
   <td>${x.own!=null?`<b>${pct(x.own)}</b><div class="small">${esc(x.ownLbl)}</div>`:""}${x.mkt!=null?`<div class="small">${pct(x.mkt)} ${esc(x.mktLbl)}</div>`:""}<div class="small">${pct(1/x.odds)} laut Quote</div></td>
-  <td class="${cls(x.ev)}">${sg(x.ev*100,1)} %<div class="small">Einsatz ${f((x.stake||0)*100,1)} %</div></td></tr>`).join("")}</tbody></table>
+  <td class="${cls(x.ev)}">${sg(x.ev*100,1)} %<div class="small">Einsatz ${f((x.stake||0)*100,1)} %${kasse()?` = ${f(kasse()*(x.stake||0),2)} €`:""}</div></td></tr>
+  <tr class="slipform" data-i="${i}" hidden><td colspan="4"><div class="form" style="margin-top:0">
+    <label class="small">Quote <input class="sodds" type="number" step="0.01" inputmode="decimal" value="${x.odds.toFixed(2)}"></label>
+    <label class="small">Einsatz € <input class="sstake" type="number" step="0.5" inputmode="decimal" value="${kasse()&&x.stake?Math.max(1,Math.round(kasse()*x.stake*2)/2):10}"></label>
+    <button class="btn slipsave" data-i="${i}">Gesetzt</button></div></td></tr>`).join("")}</tbody></table>
   <p class="small">${slip.length} Wetten · zusammen ${f(sumStake*100,1)} % der Kasse</p>` : `<p class="hint">Heute keine Empfehlung – lieber keine Wette als eine schlechte.</p>`;
 
+document.addEventListener("click", e=>{
+  const b = e.target.closest(".slipadd, .slipsave"); if(!b) return;
+  const i = b.dataset.i, row = document.querySelector(`.slipform[data-i="${i}"]`);
+  if(b.classList.contains("slipadd")){ row.hidden = !row.hidden; return; }
+  const odds = parseFloat(row.querySelector(".sodds").value), stake = parseFloat(row.querySelector(".sstake").value), x = slip[+i];
+  if(!(odds>1) || !(stake>0)){ b.textContent="Quote/Einsatz prüfen"; return; }
+  setMine([...getMine(), {ts:Date.now(), ...x.log, odds, stake, book:x.book, ev:x.ev}]);
+  b.textContent="✓ gespeichert"; setTimeout(()=>{ row.hidden=true; b.textContent="Gesetzt"; },1200);
+});
 const PB = await load("props_backtest.json", null);
 const PP = await load("props_params.json", null);
 if(PB){ const r = PB.results[String(PB.bestK)] || Object.values(PB.results)[0];
-  $("propBt").innerHTML = `<p class="small"><b>Rücktest:</b> ${f(r.n,0)} Spieler-Einsätze seit 8. November, jeweils mit dem Wissen vom Vortag. Abweichung des Simulations-Schnitts vom echten Wert: Punkte ${sg(r.bias.pts,2)}, Rebounds ${sg(r.bias.reb,2)}, Assists ${sg(r.bias.ast,2)}, Dreier ${sg(r.bias.fg3m,2)} · mittlerer Fehler Punkte ${f(r.mae.pts,1)}${r.cover50?` · die mittleren 50 % der Simulation treffen bei Punkten ${pct(r.cover50.pts)} (Ziel 50 %)`:""}. Streuung und Angleichung an den Ligaschnitt wurden daran eingestellt.</p>` + (PP && PP.check && PP.check.n ? `<p class="small"><b>Live-Kontrolle:</b> ${PP.check.n} Spieler-Einsätze seit Start · echte Werte im Verhältnis zur Simulation: Punkte ${f(PP.check.pts.ratio,3)}, Rebounds ${f(PP.check.reb.ratio,3)}, Assists ${f(PP.check.ast.ratio,3)}, Dreier ${f(PP.check.fg3m.ratio,3)} (1,000 = genau) · Korrektur ab 150 Einsätzen.</p>` : ""); }
+  $("propBt").innerHTML = `<p class="small"><b>Rücktest:</b> ${f(r.n,0)} Spieler-Einsätze seit 8. November, jeweils mit dem Wissen vom Vortag. Abweichung des Simulations-Schnitts vom echten Wert: Punkte ${sg(r.bias.pts,2)}, Rebounds ${sg(r.bias.reb,2)}, Assists ${sg(r.bias.ast,2)}, Dreier ${sg(r.bias.fg3m,2)} · mittlerer Fehler Punkte ${f(r.mae.pts,1)}${r.cover50?` · die mittleren 50 % der Simulation treffen bei Punkten ${pct(r.cover50.pts)} (Ziel 50 %)`:""}. Streuung und Angleichung an den Ligaschnitt wurden daran eingestellt.</p>` + (PP && PP.check && PP.check.n ? `<p class="small"><b>Live-Kontrolle:</b> ${PP.check.n} Spieler-Einsätze seit Start · echte Werte im Verhältnis zur Simulation: Punkte ${f(PP.check.pts.ratio,3)}, Rebounds ${f(PP.check.reb.ratio,3)}, Assists ${f(PP.check.ast.ratio,3)}, Dreier ${f(PP.check.fg3m.ratio,3)} (1,000 = genau) · Korrektur ab 150 Einsätzen.</p>` : "") + confTable(); }
+function confTable(){
+  const t = PP && PP.confGap; if(!t) return `<p class="small"><b>Vertrauen in die Simulation:</b> wird ab dem ersten ausgewerteten Spieltag gelernt (Start 30 %).</p>`;
+  const rows = Object.entries(t).sort((a,b)=>+a[0]-+b[0]);
+  return `<h3>Vertrauen in die Simulation (gelernt)</h3><table><thead><tr><th>Abweichung Sim ↔ Markt</th><th>Linien</th><th>Sim Ø</th><th>Markt Ø</th><th>echt „über“</th><th>Gewicht Sim</th></tr></thead><tbody>${rows.map(([lo,v])=>`<tr>
+    <td>${f(+lo*100,0)}${v.hi&&v.hi<1?"–"+f(v.hi*100,0):"+"} Pkt.</td><td>${f(v.n,0)}</td><td>${v.n?pct(v.sim):"–"}</td><td>${v.n?pct(v.mkt):"–"}</td><td>${v.n?pct(v.hit):"–"}</td>
+    <td><b>${pct(v.w)}</b>${v.n&&v.n<200?`<div class="small">ab 200 Linien</div>`:v.wFit!=null?`<div class="small">bestes ${pct(v.wFit)}</div>`:""}</td></tr>`).join("")}</tbody></table>
+    <p class="small">Liegt „echt über“ näher an „Sim Ø“ als an „Markt Ø“, trifft die Simulation besser – dann steigt ihr Gewicht. Große Abweichungen bekommen meist weniger Gewicht.</p>`;
+}
 function propRow(p){
   return `<tr><td>${p.value?"✓ ":""}${esc(p.player)}<div class="small">${esc(p.team)} · ${f(p.expMin,0)} Min. erwartet${p.pOut>0?` · fehlt zu ${pct(p.pOut)}`:""}</div></td>
   <td>${esc(sideTxt(p))}<div class="small">Sim Ø ${f(p.mean,1)}${p.checkApp?" · in App prüfen":""}</div></td>
@@ -376,15 +467,17 @@ $("propList").innerHTML = PROPS.games.length ? PROPS.games.map(g=>{
   return `<details class="item"${g.props.some(p=>p.value)?" open":""}><summary><div><div class="small">${when(g.commence)}</div><div class="t">${esc(g.label)}</div>
     <div class="small">${g.nProps} Linien simuliert</div></div>${g.props.some(p=>p.value)?`<span class="tag good">✓ ${g.props.filter(p=>p.value).length}</span>`:`<span class="tag none">kein ✓</span>`}</summary>
     <div class="body"><table><thead><tr><th>Spieler</th><th>Wette</th><th>Quote</th><th>Chance</th><th>EV</th></tr></thead><tbody>${top.map(propRow).join("")}</tbody></table>
-    <p class="small">${Object.entries(g.links||{}).map(([k,u])=>u?`<a href="${esc(u)}" target="_blank" rel="noopener">${k.includes("bet365")?"bet365":"bwin"} öffnen</a>`:"").join(" · ")}</p></div></details>`;
+    <p class="small">${Object.entries(g.links||{}).map(([k,u])=>u?`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(k.replace("op_",""))} öffnen</a>`:"").join(" · ")}</p></div></details>`;
 }).join("") : `<p class="hint">Noch keine Spielerwetten – sie kommen mit dem nächsten Lauf.</p>`;
 const prow = Object.values(PT).sort((a,b)=>String(b.commence).localeCompare(String(a.commence)));
-$("propTrk").innerHTML = prow.length ? `<table><thead><tr><th>Spieler</th><th>Wette</th><th>Quote</th><th>Ergebnis</th></tr></thead><tbody>${prow.map(t=>`<tr>
-  <td>${esc(t.player)}<div class="small">${esc(t.game)} · ${new Date(t.commence).toLocaleDateString("de-DE",{day:"2-digit",month:"2-digit"})}</div></td>
-  <td>${esc(sideTxt(t))}<div class="small">Sim Ø ${f(t.mean,1)} · EV ${sg(t.ev*100,1)} %</div></td>
-  <td><b>${f(t.odds,2)}</b><div class="small">${esc(t.bookName)}${t.close?` · CLV ${sg(t.close.clv*100,1)} %`:""}</div></td>
+$("propTrk").innerHTML = prow.length ? `<table><thead><tr><th>Spieler</th><th>Wette</th><th>Quote → Schluss</th><th>Ergebnis</th></tr></thead><tbody>${prow.map(t=>`<tr>
+  <td>${esc(t.player)}<div class="small">${esc(t.game)} · ${new Date(t.commence).toLocaleDateString("de-DE",{day:"2-digit",month:"2-digit"})}${t.src==="vor Spielbeginn"?" · erst vor Spielbeginn":""}</div></td>
+  <td>${esc(sideTxt(t))}<div class="small">Sim Ø ${f(t.mean,1)} · EV ${sg(t.ev*100,1)} %</div>${preTxt(t.pre)}</td>
+  <td><b>${f(t.odds,2)}</b><div class="small">${esc(t.bookName)}</div>${t.close?`<div class="small">Schluss ${f(t.close.odds,2)} · fair ${f(1/t.close.pMkt,2)}</div><div class="small ${cls(t.close.clv)}">CLV ${sg(t.close.clv*100,1)} %</div>`:`<div class="small">${t.result?"–":"Schluss folgt"}</div>`}</td>
   <td>${!t.result?'<span class="small">offen</span>':t.result==="win"?`<b class="pos">gewonnen</b><div class="small">${t.value} · +${f((t.odds-1)*10,2)} €</div>`:t.result==="loss"?`<b class="neg">verloren</b><div class="small">${t.value} · −10,00 €</div>`:`zurück<div class="small">nicht gespielt</div>`}</td></tr>`).join("")}</tbody></table>` : `<p class="hint">Noch keine ✓-Spielerwetten.</p>`;
 
+const PRES = await load("player_results.json", {players:{}});
+renderMine();
 const VIEWS=["start","spieler","geld","treffer","meine","methode"];
 function show(){ const h=location.hash.slice(1), v=VIEWS.includes(h)?h:"start";
   document.querySelectorAll("[data-view]").forEach(e=>e.hidden=e.dataset.view!==v);
