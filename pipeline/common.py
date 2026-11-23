@@ -15,7 +15,18 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(ROOT, "docs", "data")
 
 
+def mask(msg):
+    """Schlüssel nie in Meldungen: apiKey=… und die Werte der geheimen Umgebungsvariablen schwärzen."""
+    msg = re.sub(r"(api[_-]?key=)[^&\s'\"]+", r"\1***", str(msg), flags=re.I)
+    for var in ("ODDS_API_KEY", "ODDSPAPI_KEY", "NTFY_TOPIC"):
+        v = os.environ.get(var, "").strip()
+        if len(v) >= 8:
+            msg = msg.replace(v, "***")
+    return msg
+
+
 def log(msg):
+    msg = mask(msg)
     print(msg, flush=True)
     LOG.append(msg)
 
