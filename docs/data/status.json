@@ -106,5 +106,11 @@
    "conf": 0.3
   },
   "n": {}
- }
+ },
+ "backtestLog": [
+  "ESPN-Spielplan: 4 Tage abgefragt, 262 Spiele in der Saison",
+  "Rücktest: Saison 2025/26 geladen, 1231 Spiele",
+  "Rücktest: 1337 Spiele · Test-Brier Basis 0.1951 → voll 0.1946 · Trefferquote 70.7%",
+  "Rücktest: 8 Startwerte gesetzt"
+ ]
 }

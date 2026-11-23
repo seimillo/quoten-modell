@@ -1,0 +1,66 @@
+{
+ "date": "2026-11-23",
+ "games": 1337,
+ "seasons": [
+  {
+   "season": "2025/26",
+   "games": 1231,
+   "used": 1075
+  },
+  {
+   "season": "2026/27",
+   "games": 262,
+   "used": 262
+  }
+ ],
+ "train": 935,
+ "test": 402,
+ "base": {
+  "brier": 0.1951,
+  "logloss": 0.575,
+  "hit": 0.699,
+  "n": 402
+ },
+ "full": {
+  "brier": 0.1946,
+  "logloss": 0.5746,
+  "hit": 0.7065,
+  "n": 402
+ },
+ "coin": {
+  "brier": 0.25
+ },
+ "drop": {
+  "rest": 0.0004,
+  "sched": 0.0001,
+  "travel": -0.0001,
+  "form": -0.0005
+ },
+ "coef": {
+  "strength": {
+   "value": 1.023,
+   "se": 0.06
+  },
+  "hca": {
+   "value": 1.481,
+   "se": 0.411
+  },
+  "rest": {
+   "value": 0.699,
+   "se": 0.45
+  },
+  "sched": {
+   "value": 0.702,
+   "se": 0.393
+  },
+  "travel": {
+   "value": -0.059,
+   "se": 0.642
+  },
+  "form": {
+   "value": 0.468,
+   "se": 0.135
+  }
+ },
+ "sd": 14.64
+}

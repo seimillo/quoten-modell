@@ -1,19 +1,83 @@
 {
  "nba": {
-  "team_scale": 0.5,
-  "player_scale": 0.5,
-  "hca": 2.2,
-  "rest_scale": 1.0,
+  "team_scale": 0.5114,
+  "player_scale": 0.5114,
+  "hca": 1.4807,
+  "rest_scale": 0.6994,
   "inj_scale": 0.5,
-  "sched_scale": 1.0,
-  "travel_scale": 0.3,
-  "form_scale": 0.15,
-  "sd_margin": 12.5,
+  "sched_scale": 0.7021,
+  "travel_scale": 0.0,
+  "form_scale": 0.4683,
+  "sd_margin": 14.6358,
   "sd_total": 18.0,
   "total_bias": 0.0,
   "conf": 0.3
  },
- "history": [],
+ "history": [
+  {
+   "date": "2026-11-23",
+   "source": "Rücktest",
+   "changes": [
+    {
+     "sport": "NBA",
+     "key": "team_scale",
+     "old": 0.5,
+     "new": 0.5114,
+     "target": 0.5114
+    },
+    {
+     "sport": "NBA",
+     "key": "player_scale",
+     "old": 0.5,
+     "new": 0.5114,
+     "target": 0.5114
+    },
+    {
+     "sport": "NBA",
+     "key": "hca",
+     "old": 2.2,
+     "new": 1.4807,
+     "target": 1.4807
+    },
+    {
+     "sport": "NBA",
+     "key": "rest_scale",
+     "old": 1.0,
+     "new": 0.6994,
+     "target": 0.6994
+    },
+    {
+     "sport": "NBA",
+     "key": "sched_scale",
+     "old": 1.0,
+     "new": 0.7021,
+     "target": 0.7021
+    },
+    {
+     "sport": "NBA",
+     "key": "travel_scale",
+     "old": 0.3,
+     "new": 0.0,
+     "target": 0.0
+    },
+    {
+     "sport": "NBA",
+     "key": "form_scale",
+     "old": 0.15,
+     "new": 0.4683,
+     "target": 0.4683
+    },
+    {
+     "sport": "NBA",
+     "key": "sd_margin",
+     "old": 12.5,
+     "new": 14.6358,
+     "target": 14.6358
+    }
+   ]
+  }
+ ],
  "n": {},
- "version": 2
+ "version": 2,
+ "backtest": "2026-11-23"
 }
