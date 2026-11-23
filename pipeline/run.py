@@ -147,6 +147,15 @@ def main():
         return main_close()
     if mode == "late":
         return main_late()
+    if mode == "histodds":
+        from .histodds import run as hist
+        try:
+            hist()
+        except Exception as e:  # noqa: BLE001
+            log(f"Historische Quoten fehlgeschlagen: {e}")
+        old = load_json("status.json", {})
+        save_json("status.json", {**old, "histLog": LOG[-15:]})
+        return
     if mode == "discover":
         from .oddspapi_discover import main as discover
         return discover()

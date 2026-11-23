@@ -181,7 +181,14 @@ const LBL = {team_scale:"Gewicht Team-Ratings", player_scale:"Gewicht Aufstellun
 const params = await load("params.json", null);
 const bt = await load("backtest.json", null);
 const FN = {strength:"Stärke (Team + Aufstellung)", hca:"Heimvorteil", rest:"Ruhe & Zeitzone", sched:"Spielplan-Dichte", travel:"Reise", form:"Form"};
-$("bt").innerHTML = bt ? `<h3>Rücktest auf ${f(bt.games,0)} vergangenen Spielen</h3>
+const bo = bt && bt.odds;
+const btOdds = bo ? `<h3>Rücktest mit echten Quoten (${bo.games} Spiele, nur Sieg-Wetten)</h3>
+  <div class="kpis"><div class="kpi"><div class="k">✓-Wetten</div><div class="v">${bo.bets}</div><div class="hint">Quote ${bo.decisionHours} h vor Beginn</div></div>
+  <div class="kpi"><div class="k">Gewinn je 1 € Einsatz</div><div class="v ${cls(bo.roi||0)}">${bo.roi==null?"–":sg(bo.roi*100,1)+" %"}</div><div class="hint">${sg(bo.profit,2)} Einheiten</div></div>
+  <div class="kpi"><div class="k">CLV der ✓-Wetten</div><div class="v ${cls(bo.clvAvg||0)}">${bo.clvAvg==null?"–":sg(bo.clvAvg*100,1)+" %"}</div><div class="hint">${bo.clvPos==null?"":pct(bo.clvPos)+" schlagen Pinnacle"}</div></div>
+  <div class="kpi"><div class="k">Brier</div><div class="v">${f(bo.brier.mix,4)}</div><div class="hint">Modell+Markt · Markt ${f(bo.brier.marketDecision,4)} · Pinnacle-Schluss ${f(bo.brier.pinnacleClose,4)}</div></div></div>
+  <p class="hint">Quoten von bet365.de und Tipico ${bo.decisionHours} Stunden vor Spielbeginn (etwa zur Zeit des Mittagslaufs), Schlussquote von Pinnacle ohne Marge. Modell ohne Spielerwerte und Verletzungen (gibt es für die Vergangenheit nicht). ${bo.bets<50?"Wenige Wetten – das Ergebnis schwankt noch stark.":""}</p>` : "";
+$("bt").innerHTML = bt ? btOdds + `<h3>Rücktest auf ${f(bt.games,0)} vergangenen Spielen</h3>
   <p class="small">${bt.seasons.map(x=>`${esc(x.season)}: ${x.used} Spiele`).join(" · ")} · geschätzt auf ${bt.train}, geprüft auf den letzten ${bt.test} Spielen · Stand ${esc(bt.date)}</p>
   <div class="kpis"><div class="kpi"><div class="k">Trefferquote Sieger</div><div class="v">${pct(bt.full.hit)}</div><div class="hint">nur Stärke + Heimvorteil: ${pct(bt.base.hit)}</div></div>
   <div class="kpi"><div class="k">Brier (Test)</div><div class="v">${f(bt.full.brier,4)}</div><div class="hint">Basis ${f(bt.base.brier,4)} · Münzwurf 0,25</div></div></div>

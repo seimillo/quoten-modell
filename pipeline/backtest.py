@@ -208,6 +208,9 @@ def run_backtest(apply=True):
     report = {"date": now.date().isoformat(), "games": len(rows), "seasons": seasons, "train": len(train), "test": len(test),
               "base": ev_base, "full": ev_full, "coin": ev_coin, "drop": drop, "coef": coef, "sd": round(sd, 2),
               "totals": totals}
+    prev = load_json("backtest.json", {})
+    if prev.get("odds"):
+        report["odds"] = prev["odds"]                   # Ergebnis des Quoten-Rücktests behalten
     save_json("backtest.json", report)
     log(f"Rücktest: {len(rows)} Spiele · Test-Brier Basis {ev_base['brier']} → voll {ev_full['brier']} · "
         f"Trefferquote {ev_full['hit']:.1%}")
