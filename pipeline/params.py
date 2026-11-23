@@ -17,13 +17,11 @@ DEFAULTS = {
     "nba": {"team_scale": 0.5, "player_scale": 0.5, "hca": 2.2, "rest_scale": 1.0, "inj_scale": 0.5,
             "sched_scale": 1.0, "travel_scale": 0.3, "form_scale": 0.15,
             "sd_margin": 12.5, "sd_total": 18.0, "total_bias": 0.0, "conf": 0.3},
-    "tennis": {"conf_scale": 1.0},
 }
 BOUNDS = {
     "nba": {"team_scale": (0.0, 1.5), "player_scale": (0.0, 1.5), "hca": (0.0, 4.5), "rest_scale": (0.0, 2.5),
             "inj_scale": (0.0, 2.0), "sched_scale": (0.0, 3.0), "travel_scale": (0.0, 1.5), "form_scale": (0.0, 0.6),
             "sd_margin": (10.0, 15.0), "sd_total": (14.0, 22.0), "total_bias": (-6.0, 6.0), "conf": (0.05, 0.8)},
-    "tennis": {"conf_scale": (0.2, 2.0)},
 }
 MIN_GAMES = 40
 HALF = 300          # bei 300 Spielen ist die Schrittweite halb so groß wie maximal
@@ -114,20 +112,10 @@ def calibrate(picks, params):
             if abs(new - old) > 1e-4:
                 changes.append({"sport": "NBA", "key": key, "old": old, "new": new, "target": round(tgt, 3)})
         params["n"]["nba"] = n
-    ten = [r for r in picks.values() if r.get("sport") == "Tennis" and r.get("result") and r.get("feat")]
-    if len(ten) >= MIN_GAMES:
-        rows = [(r["feat"]["pModelRaw"], r["feat"]["pMarket"], 1 if r["result"] == "A" else 0) for r in ten]
-        confs = [r["feat"]["confBase"] for r in ten if r["feat"].get("confBase")]
-        avg_conf = sum(confs) / len(confs) if confs else 0.4
-        tgt = _best_weight(rows) / avg_conf
-        old, new = _move(params, "tennis", "conf_scale", tgt, len(ten))
-        if abs(new - old) > 1e-4:
-            changes.append({"sport": "Tennis", "key": "conf_scale", "old": old, "new": new, "target": round(tgt, 3)})
-        params["n"]["tennis"] = len(ten)
     if changes:
         params["history"] = (params["history"] + [{"date": now_utc().date().isoformat(), "changes": changes}])[-120:]
-    log(f"Kalibrierung: {len(nba)} NBA-Spiele, {len(ten)} Tennis-Matches ausgewertet, {len(changes)} Werte angepasst"
-        + ("" if len(nba) >= MIN_GAMES or len(ten) >= MIN_GAMES else f" (Anpassung ab {MIN_GAMES} Spielen)"))
+    log(f"Kalibrierung: {len(nba)} NBA-Spiele ausgewertet, {len(changes)} Werte angepasst"
+        + ("" if len(nba) >= MIN_GAMES else f" (Anpassung ab {MIN_GAMES} Spielen)"))
     return params
 
 

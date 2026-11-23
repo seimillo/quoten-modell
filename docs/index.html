@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Quoten-Modell · Tennis & NBA</title>
+<title>NBA-Quoten-Modell</title>
 <style>
 :root{--bg:#f6f6f3;--card:#fff;--ink:#1c1f23;--muted:#626873;--line:#e1e0db;--accent:#2f6b3f;--soft:#e3efe5;--bad:#a23b2f;--warn:#9a5b00;--warnsoft:#fbf0de}
 @media (prefers-color-scheme:dark){:root{--bg:#131517;--card:#1c1f22;--ink:#e9eaea;--muted:#9aa0a6;--line:#2e3236;--accent:#7cc48d;--soft:#213a28;--bad:#ec8a7e;--warn:#e2a64a;--warnsoft:#3a2e1a}}
@@ -45,10 +45,9 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
 </head>
 <body>
 <header><div class="in">
-  <div class="brand">📈 Quoten-Modell · Tennis & NBA</div>
+  <div class="brand">📈 NBA-Quoten-Modell</div>
   <nav>
     <a href="#start" data-nav="start">Übersicht</a>
-    <a href="#tennis" data-nav="tennis">Tennis</a>
     <a href="#nba" data-nav="nba">NBA</a>
     <a href="#geld" data-nav="geld">Großes Geld</a>
     <a href="#treffer" data-nav="treffer">Treffer</a>
@@ -61,9 +60,8 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
   <p class="muted" id="stand">Lade Daten …</p>
   <div class="kpis" id="kpis"></div>
   <div class="card"><h2>Höchste Erwartungswerte</h2><div id="top"></div>
-  <p class="hint">Erwartungswert (EV) = Chance × Quote − 1 beim angezeigten Buchmacher (bevorzugt Tipico, sonst Winamax, William Hill, Betsson …). Die Chance ist eine Mischung aus Modell und Markt (Markt-Anker), darum sind die Werte bewusst vorsichtig.</p></div>
+  <p class="hint">Erwartungswert (EV) = Chance × Quote − 1 zur besten Quote aller Buchmacher (Tipico, Winamax, William Hill, Betsson, Unibet …). ✓ = strenge Auswahl: EV ≥ 3 % und auch gegenüber Pinnacle nicht schlechter. Die Chance ist eine Mischung aus Modell und Markt (Markt-Anker), darum sind die Werte bewusst vorsichtig.</p></div>
 </section>
-<section data-view="tennis"><div class="card"><h2>Tennis</h2><div id="tennisList"></div></div></section>
 <section data-view="nba"><div class="card"><h2>NBA</h2><div id="nbaList"></div></div></section>
 <section data-view="geld"><div class="card"><h2>Großes Geld auf Polymarket</h2>
   <p class="hint">Einzelne Einsätze ab 1.000 $ in den letzten 48 Stunden auf Polymarket, plus die Kalshi-Preise. Prognosemärkte haben kleine Margen – dort handeln oft gut informierte Leute. Sie zählen im Markt-Anker zur Hälfte.</p>
@@ -73,13 +71,6 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
   <div id="learn"></div>
   <div id="trk"></div></div></section>
 <section data-view="methode" class="info"><div class="card"><h2>So rechnet das Modell</h2>
-  <h3>Tennis</h3>
-  <ol>
-    <li><b>Stärke:</b> Belag-Elo von Tennis Abstract (hElo/cElo/gElo – dort schon 50:50 mit der Gesamt-Elo gemischt). Belag aus dem Turniernamen, sonst Hartplatz.</li>
-    <li><b>Best of 5</b> bei Grand Slams der Männer (Umrechnung über die Satz-Chance).</li>
-    <li><b>Quotenbewegung:</b> Das Modell folgt der Bewegung seit dem ersten Abruf zur Hälfte.</li>
-    <li><b>Markt-Anker:</b> Mischung mit dem genauesten verfügbaren Markt (Pinnacle bzw. Betfair, sonst der angezeigte Buchmacher; dazu Polymarket zur Hälfte). Gewicht des Modells: Elo ab 1900 → 50 %, ab 1700 → 40 %, ab 1500 → 30 %, darunter 25 %, ohne Elo 10 %.</li>
-  </ol>
   <h3>NBA</h3>
   <ol>
     <li><b>Team-Stärke:</b> gegnerbereinigte Offensiv-/Defensiv-Ratings von Basketball-Reference, gemischt mit der gedämpften Vorsaison (Gewicht aktuell = Spiele/(Spiele+20)).</li>
@@ -100,7 +91,7 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
   <h3>Grenzen</h3>
   <p>Die Gewichte sind begründete Schätzungen, nicht an alten Spielen getestet. Die Trefferliste zeigt nach ein paar hundert Spielen, ob das Modell genauer ist als der Markt (Brier-Wert). Bis dahin: Lern- und Analyseprojekt, keine Wettempfehlung.</p>
   <h3>Quellen</h3>
-  <p class="hint">Quoten: The Odds API (Tipico, Winamax, William Hill, Betsson, Unibet, 888sport u. a., dazu Pinnacle und Betfair; bet365 bietet die Schnittstelle nicht an) · Elo: Tennis Abstract · NBA-Ratings: Basketball-Reference · Verletzungen: offizieller NBA-Bericht und ESPN · Spielplan: ESPN · Prognosemärkte: Kalshi und Polymarket (öffentliche Schnittstellen)</p>
+  <p class="hint">Quoten: The Odds API (Tipico, Winamax, William Hill, Betsson, Unibet, 888sport u. a., dazu Pinnacle und Betfair; bet365 bietet die Schnittstelle nicht an) · NBA-Ratings: Basketball-Reference · Verletzungen: offizieller NBA-Bericht und ESPN · Spielplan: ESPN · Prognosemärkte: Kalshi und Polymarket (öffentliche Schnittstellen)</p>
 </div></section>
 </main>
 <footer>Analyse- und Lernprojekt, keine Wettempfehlung. Wetten erst ab 18 · Hilfe: check-dein-spiel.de · 0800 1 37 27 00</footer>
@@ -114,9 +105,10 @@ const sg = (x,d=1) => (x>0?"+":x<0?"−":"±") + f(Math.abs(x),d);
 const cls = x => x>0.0005?"pos":x<-0.0005?"neg":"";
 const when = iso => new Date(iso).toLocaleString("de-DE",{weekday:"short",day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});
 async function load(n, d){ try{ const r = await fetch("data/"+n+"?v="+Date.now()); return r.ok ? await r.json() : d; }catch(e){ return d; } }
-const [tennis, nba, picks, status] = await Promise.all([load("tennis.json",[]), load("nba.json",[]), load("picks.json",{}), load("status.json",null)]);
+const [nba, picksAll, status] = await Promise.all([load("nba.json",[]), load("picks.json",{}), load("status.json",null)]);
+const picks = Object.fromEntries(Object.entries(picksAll).filter(([k,v])=>v.sport==="NBA"));
 
-$("stand").textContent = status ? `Stand: ${new Date(status.updated).toLocaleString("de-DE")} · ${tennis.length} Tennis-Matches · ${nba.length} NBA-Spiele` + (status.credits && status.credits.remaining!=null ? ` · API-Credits übrig: ${f(status.credits.remaining,0)}` : "") : "Noch keine Daten – die Pipeline ist noch nicht gelaufen.";
+$("stand").textContent = status ? `Stand: ${new Date(status.updated).toLocaleString("de-DE")} · ${nba.length} NBA-Spiele` + (status.credits && status.credits.remaining!=null ? ` · API-Credits übrig: ${f(status.credits.remaining,0)}` : "") : "Noch keine Daten – die Pipeline ist noch nicht gelaufen.";
 const st = status ? status.stats : null;
 $("kpis").innerHTML = st ? `
   <div class="kpi"><div class="k">Prognosen gespeichert</div><div class="v">${st.total}</div></div>
@@ -142,17 +134,6 @@ function whaleLine(w, nA, nB){
   if(!w || (!w.usdA && !w.usdB)) return "";
   return `<div class="small">🐋 Großeinsätze 48 h: ${esc(nA)} ${f(w.usdA,0)} $ · ${esc(nB)} ${f(w.usdB,0)} $</div>`;
 }
-function tennisCard(m){
-  const parts = m.parts.map(p=>`<tr><td>${esc(p.n)}<div class="small">${esc(p.info||"")}</div></td><td>${p.pp===null?"–":sg(p.pp*100)+" Pkt."}</td></tr>`).join("");
-  return `<details class="item"><summary><div><div class="small">${esc(m.tour)} · ${esc(m.event)} · ${esc(m.surface)} · ${when(m.commence)}</div>
-    <div class="t">${esc(m.a)} – ${esc(m.b)}</div>
-    <div class="small">${esc(m.book.name||'Quote')} ${f(m.book.qa,2)} / ${f(m.book.qb,2)} · Modell ${pct(m.pModelA)} · Markt ${pct(m.pMarketA)}${m.polymarket?` · Polymarket ${pct(m.polymarket.pA)}`:""}</div>
-    ${whaleLine(m.whales, m.a, m.b)}</div>${tag(m.best)}</summary>
-    <div class="body"><h3>Wie die Chance für ${esc(m.a)} entsteht</h3><table><tbody>
-      <tr><td><b>Basis</b><div class="small">${m.kind==="elo"?"Elo-Formel":"Markt (keine Elo)"}</div></td><td><b>${pct(m.base,1)}</b></td></tr>${parts}
-      <tr><td><b>Ergebnis</b></td><td><b>${pct(m.pFinalA,1)}</b></td></tr></tbody></table>
-      <h3>Wetten <span class="small">(Quoten: ${esc(m.book.name||"")})</span></h3>${betsTable(m.bets)}</div></details>`;
-}
 function nbaCard(g){
   const parts = g.parts.map(p=>`<tr><td>${esc(p.n)}<div class="small">${esc(p.info||"")}</div></td><td>${sg(p.m)}</td></tr>`).join("");
   const inj = side => (g.injuries[side]||[]).filter(i=>!/^(active|available)$/i.test(i.status)).map(i=>`${esc(i.player)} (${esc(i.status)}${i.src==="NBA"?" · NBA":""}${i.loss!=null?`, fehlt zu ${Math.round(i.pOut*100)} %, −${f(i.loss,1)} Pkt.`:""})`).join(", ") || "keine gemeldet";
@@ -167,12 +148,11 @@ function nbaCard(g){
       ${g.schedule?`<h3>Spielplan</h3><p class="small">${["away","home"].map(sd=>{const x=g.schedule[sd];return `${esc(sd==="away"?g.abbrA:g.abbrH)}: ${x.rest} Ruhetag(e)${x.dens?` · ${x.dens>1?"4 in 6 & 3 in 4":"3 in 4 / 4 in 6"}`:""}${x.km?` · ${f(x.km,0)} km Reise (gewichtet)`:""}`}).join("<br>")}</p>`:""}
       <h3>Verletzungen <span class="small">(${g.injuryReport?`offizieller NBA-Bericht ${esc(g.injuryReport)}, sonst ESPN`:"ESPN"})</span></h3><p class="small">${esc(g.abbrA)}: ${inj("away")}<br>${esc(g.abbrH)}: ${inj("home")}</p></div></details>`;
 }
-$("tennisList").innerHTML = tennis.length ? tennis.map(tennisCard).join("") : `<p class="hint">Gerade keine ATP-/WTA-Matches mit Quoten. Challenger-Turniere deckt The Odds API nicht ab.</p>`;
 $("nbaList").innerHTML = nba.length ? nba.map(nbaCard).join("") : `<p class="hint">Gerade keine NBA-Spiele mit Quoten.</p>`;
-const all = [...tennis.map(m=>({...m, html:tennisCard(m)})), ...nba.map(g=>({...g, html:nbaCard(g)}))].sort((a,b)=>(b.best.value?1:0)-(a.best.value?1:0) || b.best.ev-a.best.ev);
+const all = [...nba.map(g=>({...g, html:nbaCard(g)}))].sort((a,b)=>(b.best.value?1:0)-(a.best.value?1:0) || b.best.ev-a.best.ev);
 $("top").innerHTML = all.length ? all.slice(0,8).map(x=>x.html).join("") : `<p class="hint">Noch keine Daten.</p>`;
 
-const wl = [...tennis.map(m=>({lbl:`${m.a} – ${m.b}`, nA:m.a, nB:m.b, w:m.whales, pm:m.polymarket})), ...nba.map(g=>({lbl:`${g.away} @ ${g.home}`, nA:g.away, nB:g.home, w:g.whales, pm:g.polymarket, k:g.kalshi}))]
+const wl = [...nba.map(g=>({lbl:`${g.away} @ ${g.home}`, nA:g.away, nB:g.home, w:g.whales, pm:g.polymarket, k:g.kalshi}))]
   .filter(x=>(x.w && x.w.trades && x.w.trades.length) || x.k || x.pm);
 $("whales").innerHTML = wl.length ? wl.map(x=>`<div class="item" style="padding:12px"><div class="t">${esc(x.lbl)}</div>
   ${x.pm?`<div class="small">Polymarket: ${esc(x.nA)} ${pct(x.pm.pA)} / ${esc(x.nB)} ${pct(x.pm.pB)} · Volumen ${f(x.pm.volume,0)} $</div>`:""}
@@ -181,7 +161,7 @@ $("whales").innerHTML = wl.length ? wl.map(x=>`<div class="item" style="padding:
 
 const LBL = {team_scale:"Gewicht Team-Ratings", player_scale:"Gewicht Aufstellung (Spieler)", hca:"Heimvorteil (Punkte)", rest_scale:"Faktor Ruhe & Zeitzone", inj_scale:"Gewicht Verletzungen",
   sched_scale:"Punkte je 3-in-4/4-in-6", travel_scale:"Punkte je 1.000 km Reise", form_scale:"Faktor Form",
-  sd_margin:"Streuung Punktedifferenz", sd_total:"Streuung Gesamtpunkte", total_bias:"Korrektur Gesamtpunkte", conf:"Modellgewicht NBA", conf_scale:"Faktor Modellgewicht Tennis"};
+  sd_margin:"Streuung Punktedifferenz", sd_total:"Streuung Gesamtpunkte", total_bias:"Korrektur Gesamtpunkte", conf:"Modellgewicht gegenüber Markt"};
 const params = await load("params.json", null);
 $("learn").innerHTML = st ? `<h3>Lernt das Modell?</h3><div class="kpis">
   <div class="kpi"><div class="k">Schlussquote geschlagen (CLV)</div><div class="v ${cls(st.clvAvg||0)}">${st.clvAvg==null?"–":sg(st.clvAvg*100)+" %"}</div><div class="hint">${st.clvN||0} Wetten · ${st.clvPos==null?"–":pct(st.clvPos)} besser als die Schlussquote</div></div>
@@ -189,20 +169,20 @@ $("learn").innerHTML = st ? `<h3>Lernt das Modell?</h3><div class="kpis">
   <div class="kpi"><div class="k">Kasse mit Kelly-Einsätzen</div><div class="v ${cls(st.kellyGrowth||0)}">${sg((st.kellyGrowth||0)*100)} %</div><div class="hint">${st.kellyBets||0} Wetten</div></div>
   <div class="kpi"><div class="k">Brier reines Modell</div><div class="v">${f(st.brierRaw,3)}</div><div class="hint">ohne Markt-Anker</div></div></div>
   ${(st.calibration||[]).length?`<h3>Kalibrierung</h3><table><thead><tr><th>Modell sagt</th><th>Spiele</th><th>Ø Prognose</th><th>tatsächlich</th></tr></thead><tbody>${st.calibration.map(c=>`<tr><td>${pct(c.from)}–${pct(c.to)}</td><td>${c.n}</td><td>${pct(c.pred)}</td><td>${pct(c.real)}</td></tr>`).join("")}</tbody></table>`:""}
-  ${params?`<h3>Gelernte Werte</h3><table><thead><tr><th>Wert</th><th>aktuell</th><th>Start</th></tr></thead><tbody>${[["nba","team_scale",0.5],["nba","player_scale",0.5],["nba","hca",2.2],["nba","rest_scale",1],["nba","inj_scale",0.5],["nba","sched_scale",1],["nba","travel_scale",0.3],["nba","form_scale",0.15],["nba","sd_margin",12.5],["nba","sd_total",18],["nba","total_bias",0],["nba","conf",0.3],["tennis","conf_scale",1]].map(([sp,k,d])=>`<tr><td>${LBL[k]}</td><td>${f(params[sp][k],2)}</td><td class="small">${f(d,2)}</td></tr>`).join("")}</tbody></table>
-  <p class="hint">Angepasst wird ab 40 ausgewerteten Spielen pro Sportart, jeden Tag nur ein kleines Stück. Bisher: ${(params.n&&params.n.nba)||0} NBA-Spiele, ${(params.n&&params.n.tennis)||0} Tennis-Matches.</p>
+  ${params?`<h3>Gelernte Werte</h3><table><thead><tr><th>Wert</th><th>aktuell</th><th>Start</th></tr></thead><tbody>${[["nba","team_scale",0.5],["nba","player_scale",0.5],["nba","hca",2.2],["nba","rest_scale",1],["nba","inj_scale",0.5],["nba","sched_scale",1],["nba","travel_scale",0.3],["nba","form_scale",0.15],["nba","sd_margin",12.5],["nba","sd_total",18],["nba","total_bias",0],["nba","conf",0.3]].map(([sp,k,d])=>`<tr><td>${LBL[k]}</td><td>${f(params[sp][k],2)}</td><td class="small">${f(d,2)}</td></tr>`).join("")}</tbody></table>
+  <p class="hint">Angepasst wird ab 40 ausgewerteten Spielen, jeden Tag nur ein kleines Stück. Bisher: ${(params.n&&params.n.nba)||0} Spiele.</p>
   ${(params.history||[]).length?`<details><summary>Änderungen</summary><table><tbody>${params.history.slice(-30).reverse().map(h=>h.changes.map(c=>`<tr><td class="small">${esc(h.date)}</td><td>${LBL[c.key]||esc(c.key)}</td><td>${f(c.old,3)} → ${f(c.new,3)}</td><td class="small">Ziel ${f(c.target,2)}</td></tr>`).join("")).join("")}</tbody></table></details>`:""}`:""}
-  <p class="hint"><b>CLV</b> vergleicht deine Quote mit der fairen Quote kurz vor Spielbeginn (22:47 Uhr). Wer die Schlussquote dauerhaft schlägt, hat einen echten Vorteil – das zeigt sich nach 2–3 Wochen, Gewinn und Verlust erst nach Monaten. Ohne Vorteil liegt der CLV etwa bei minus der halben Buchmacher-Marge (rund −2 bis −3 %).</p>` : "";
+  <p class="hint"><b>CLV</b> vergleicht deine Quote mit der fairen Quote kurz vor Spielbeginn (23:37 Uhr). Wer die Schlussquote dauerhaft schlägt, hat einen echten Vorteil – das zeigt sich nach 2–3 Wochen, Gewinn und Verlust erst nach Monaten. Ohne Vorteil liegt der CLV etwa bei minus der halben Buchmacher-Marge (rund −2 bis −3 %).</p>` : "";
 
 const rows = Object.values(picks).sort((a,b)=>String(b.commence).localeCompare(String(a.commence)));
 $("trk").innerHTML = rows.length ? `<table><thead><tr><th>Datum</th><th>Spiel</th><th>Modell</th><th>Markt</th><th>Beste Wette</th><th>Ergebnis</th></tr></thead><tbody>${rows.map(r=>`<tr>
-  <td>${esc(r.date)}<div class="small">${esc(r.sport)}</div></td><td>${esc(r.match)}<div class="small">Chance für ${esc(r.sideA)}</div></td>
+  <td>${esc(r.date)}</td><td>${esc(r.match)}<div class="small">Chance für ${esc(r.sideA)}</div></td>
   <td>${pct(r.pModelA)}</td><td>${pct(r.pMarketA)}</td>
   <td>${r.bet?`${esc(r.bet.pick)} @ ${f(r.bet.odds,2)}<div class="small">EV ${sg((r.bet.ev||0)*100)} %${r.close?` · CLV <span class="${cls(r.close.clv)}">${sg(r.close.clv*100)} %</span>`:""}</div>`:"–"}</td>
   <td>${r.result?`${r.result==="A"?esc(r.sideA)+" gewinnt":"Gegner gewinnt"}<div class="small">${esc(r.score||"")} · Wette ${r.betResult==="win"?"gewonnen":r.betResult==="loss"?"verloren":"zurück"}</div>`:"offen"}</td></tr>`).join("")}</tbody></table>
   <p class="hint">Brier-Wert = Durchschnitt von (Prognose − Ergebnis)². Kleiner ist besser. Ist der Wert des Modells kleiner als der des Markts, war das Modell genauer.</p>` : `<p class="hint">Noch keine Prognosen gespeichert.</p>`;
 
-const VIEWS=["start","tennis","nba","geld","treffer","methode"];
+const VIEWS=["start","nba","geld","treffer","methode"];
 function show(){ const h=location.hash.slice(1), v=VIEWS.includes(h)?h:"start";
   document.querySelectorAll("[data-view]").forEach(e=>e.hidden=e.dataset.view!==v);
   document.querySelectorAll("[data-nav]").forEach(a=>a.classList.toggle("on",a.dataset.nav===v)); }

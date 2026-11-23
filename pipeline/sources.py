@@ -101,33 +101,6 @@ def book_prices(event, market):
     return out
 
 
-# ---------------- Tennis Abstract (Elo) ----------------
-
-def tennis_elo(tour="atp"):
-    url = f"https://tennisabstract.com/reports/{tour}_elo_ratings.html"
-    try:
-        html, _ = get(url, as_json=False)
-        tables = pd.read_html(io.StringIO(html))
-        df = max(tables, key=len)
-        df.columns = [str(c).strip() for c in df.columns]
-        out = {}
-        for _, row in df.iterrows():
-            name = str(row.get("Player", "")).replace("\xa0", " ").strip()
-            if not name or name == "nan":
-                continue
-            def num(col):
-                try:
-                    return float(row[col])
-                except Exception:  # noqa: BLE001
-                    return None
-            out[name] = {"elo": num("Elo"), "hElo": num("hElo"), "cElo": num("cElo"), "gElo": num("gElo")}
-        log(f"Tennis Abstract {tour.upper()}: {len(out)} Spieler")
-        return out
-    except Exception as e:  # noqa: BLE001
-        log(f"Tennis Abstract {tour} fehlgeschlagen: {e}")
-        return {}
-
-
 # ---------------- Basketball-Reference (Team-Ratings, Tempo) ----------------
 
 def _flatten(df):

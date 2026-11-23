@@ -19,8 +19,7 @@ def bm(key, markets):
 
 
 FAKE = {
-    "sports": [{"key": "basketball_nba", "active": True, "title": "NBA"},
-               {"key": "tennis_atp_finals", "active": True, "title": "ATP Finals"}],
+    "sports": [{"key": "basketball_nba", "active": True, "title": "NBA"}],
     "basketball_nba": [{
         "id": "nba1", "commence_time": T1, "home_team": "Atlanta Hawks", "away_team": "Detroit Pistons",
         "bookmakers": [
@@ -31,9 +30,6 @@ FAKE = {
                            "spreads": [{"name": "Detroit Pistons", "price": 1.95, "point": -3.0}, {"name": "Atlanta Hawks", "price": 1.85, "point": 3.0}]}),
             bm("pinnacle", {"h2h": [{"name": "Detroit Pistons", "price": 1.80}, {"name": "Atlanta Hawks", "price": 2.10}],
                             "spreads": [{"name": "Detroit Pistons", "price": 1.93, "point": -2.5}, {"name": "Atlanta Hawks", "price": 1.97, "point": 2.5}]})]}],
-    "tennis_atp_finals": [{
-        "id": "ten1", "commence_time": T1, "home_team": "Carlos Alcaraz", "away_team": "Alexander Zverev",
-        "bookmakers": [bm("tipico_de", {"h2h": [{"name": "Carlos Alcaraz", "price": 1.41}, {"name": "Alexander Zverev", "price": 2.75}]})]}],
     "scores_nba": [{"id": "old1", "completed": True, "commence_time": PAST, "home_team": "Atlanta Hawks", "away_team": "Charlotte Hornets",
                     "scores": [{"name": "Atlanta Hawks", "score": "111"}, {"name": "Charlotte Hornets", "score": "97"}]}],
 }
@@ -46,14 +42,12 @@ def patch():
     S.kalshi_events = lambda s: [{"ticker": "KXNBAGAME-26NOV22DETATL", "title": "Detroit vs Atlanta", "markets": [
         {"ticker": "KXNBAGAME-26NOV22DETATL-DET", "title": "Detroit", "price": 54, "volume": 100000},
         {"ticker": "KXNBAGAME-26NOV22DETATL-ATL", "title": "Atlanta", "price": 46, "volume": 96477}]}]
-    S.polymarket_events = lambda tag: [{"title": "Zverev vs. Alcaraz", "slug": "atp-zverev-alcaraz", "markets": [
-        {"question": "Zverev vs. Alcaraz", "outcomes": json.dumps(["Zverev", "Alcaraz"]), "outcomePrices": json.dumps(["0.34", "0.67"]),
-         "conditionId": "0xabc", "volume": "30939"}]}] if tag == "tennis" else []
+    S.polymarket_events = lambda tag: [{"title": "Pistons vs. Hawks", "slug": "nba-det-atl", "markets": [
+        {"question": "Pistons vs. Hawks", "outcomes": json.dumps(["Pistons", "Hawks"]), "outcomePrices": json.dumps(["0.55", "0.45"]),
+         "conditionId": "0xabc", "volume": "30939"}]}] if tag == "nba" else []
     S.polymarket_trades = lambda c, limit=1000, min_usd=1000: [
-        {"proxyWallet": "0x1234567890abcdef", "side": "BUY", "size": 20000, "price": 0.67, "timestamp": NOW.timestamp(), "outcome": "Alcaraz"},
-        {"proxyWallet": "0xfeedbeef00112233", "side": "BUY", "size": 100, "price": 0.34, "timestamp": NOW.timestamp(), "outcome": "Zverev"}]
-    S.tennis_elo = lambda tour: {"Carlos Alcaraz": {"elo": 2194.9, "hElo": 2142.2, "cElo": None, "gElo": None},
-                                 "Alexander Zverev": {"elo": 2089.6, "hElo": 2030.1, "cElo": None, "gElo": None}} if tour == "atp" else {}
+        {"proxyWallet": "0x1234567890abcdef", "side": "BUY", "size": 20000, "price": 0.67, "timestamp": NOW.timestamp(), "outcome": "Pistons"},
+        {"proxyWallet": "0xfeedbeef00112233", "side": "BUY", "size": 100, "price": 0.34, "timestamp": NOW.timestamp(), "outcome": "Hawks"}]
     S.bbref_ratings = lambda season: {
         "Atlanta Hawks": {"g": 15, "ortg_a": 111.41, "drtg_a": 112.11}, "Detroit Pistons": {"g": 14, "ortg_a": 115.22, "drtg_a": 110.58},
         "Charlotte Hornets": {"g": 14, "ortg_a": 102.76, "drtg_a": 114.83}} if season >= run.nba_season(NOW) else {
@@ -88,17 +82,16 @@ def main():
                                               "bet": {"market": "Handicap", "pick": "Atlanta Hawks -9.5", "odds": 1.9, "ev": 0.02, "line": -9.5, "side": "home"},
                                               "result": None, "betResult": None}})
     run.main()
-    for f in ("nba.json", "tennis.json", "picks.json", "status.json"):
+    for f in ("nba.json", "picks.json", "status.json"):
         with open(os.path.join(tmp, f), encoding="utf-8") as fh:
             data = json.load(fh)
         print(f"--- {f}:", json.dumps(data, ensure_ascii=False)[:600])
     nba = json.load(open(os.path.join(tmp, "nba.json")))
-    ten = json.load(open(os.path.join(tmp, "tennis.json")))
     picks = json.load(open(os.path.join(tmp, "picks.json")))
     assert nba and nba[0]["kalshi"], "NBA-Spiel oder Kalshi-Zuordnung fehlt"
-    assert ten and ten[0]["polymarket"] and ten[0]["whales"]["trades"], "Tennis-Polymarket/Whales fehlen"
+    assert nba[0]["polymarket"] and nba[0]["whales"]["trades"], "Polymarket/Whales fehlen"
     assert picks["old1"]["result"] == "A" and picks["old1"]["betResult"] == "win", "Auswertung falsch"
-    assert "nba1" in picks and "ten1" in picks, "neue Prognosen fehlen"
+    assert "nba1" in picks, "neue Prognose fehlt"
     assert picks["nba1"].get("feat"), "Modellteile fehlen in der Trefferliste"
     g = nba[0]
     print("--- Teile:", [(x["n"], x["m"]) for x in g["parts"]])

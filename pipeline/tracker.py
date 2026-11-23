@@ -143,13 +143,7 @@ def close_prob(rec, ev, sd_margin=12.5, sd_total=18.0):
             p_over = phi(_z(p) - (float(bet.get("line") or 0) - oo["point"]) / sd_total)
             return p_over if side == "over" else 1 - p_over
         return None
-    a, b = ev["home_team"], ev["away_team"]
-    p, _, _ = _fair_pair(book_prices(ev, "h2h"), a, b, book)
-    if p is None:
-        return None
-    if rec.get("a") and rec["a"] != a:                   # Reihenfolge gedreht
-        p = 1 - p
-    return p if side == "A" else 1 - p
+    return None
 
 
 def record_close(picks, events, params=None):

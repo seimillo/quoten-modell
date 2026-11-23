@@ -2,7 +2,7 @@
 import json
 import time
 
-from .common import last_name, norm
+from .common import norm
 from .sources import polymarket_trades
 
 WHALE_USD = 1000      # ab diesem Einsatz gilt ein Trade als Großeinsatz
@@ -105,7 +105,3 @@ def whales(pm, side_a_name, side_b_name):
                        "wallet": _wallet(t)})
     trades.sort(key=lambda x: -x["usd"])
     return {"trades": trades[:10], "usdA": round(usd["A"]), "usdB": round(usd["B"])}
-
-
-def tennis_keys(name):
-    return last_name(name)

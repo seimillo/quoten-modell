@@ -1,4 +1,4 @@
-"""Tägliche Pipeline: Daten holen → Modelle rechnen → Trefferliste pflegen → JSON für die Website schreiben.
+"""Tägliche NBA-Pipeline: Daten holen → Modell rechnen → Trefferliste pflegen → JSON für die Website schreiben.
 
 Aufruf:  python -m pipeline.run            (braucht ODDS_API_KEY als Umgebungsvariable)
          python -m pipeline.selftest       (Offline-Test mit Beispieldaten)
@@ -9,27 +9,12 @@ from datetime import date, timedelta
 from . import sources as S
 from .common import LOG, load_json, log, now_utc, parse_time, save_json
 from .nba import ALIASES, TEAMS, _et_date, canon, model_games
-from .tennis import model_matches
 
 from .params import calibrate, load_params, save_params
 from .tracker import record_close, settle, stats, update_picks
 
-MAX_TENNIS_KEYS = 4   # spart API-Credits (Gratis-Plan: 500 pro Monat)
-
-
 def nba_season(dt):
     return dt.year + 1 if dt.month >= 9 else dt.year
-
-
-def scores_map(score_events):
-    out = {}
-    for g in score_events:
-        if g.get("completed") and g.get("scores"):
-            try:
-                out[g["id"]] = {canon(s["name"]): float(s["score"]) for s in g["scores"]}
-            except Exception:  # noqa: BLE001
-                pass
-    return out
 
 
 def update_history(now):
@@ -111,8 +96,7 @@ def main():
     if mode == "close":
         return main_close()
     now = now_utc()
-    picks = load_json("picks.json", {})
-    openings = load_json("openings.json", {})
+    picks = {k: v for k, v in load_json("picks.json", {}).items() if v.get("sport") == "NBA"}
     params = load_params()
 
     sports = S.odds_sports()
@@ -121,7 +105,6 @@ def main():
     # ---------- Prognosemärkte ----------
     kalshi_nba = S.kalshi_events("KXNBAGAME")
     pm_nba = S.polymarket_events("nba")
-    pm_tennis = S.polymarket_events("tennis")
 
     # ---------- NBA ----------
     nba = []
@@ -133,42 +116,18 @@ def main():
     else:
         log("NBA: aktuell keine Spiele bei The Odds API")
 
-    # ---------- Tennis ----------
-    tennis_keys = [k for k in active if k.startswith(("tennis_atp", "tennis_wta"))][:MAX_TENNIS_KEYS]
-    tennis = []
-    if tennis_keys:
-        elo_atp, elo_wta = S.tennis_elo("atp"), S.tennis_elo("wta")
-        sport_events = []
-        for k in tennis_keys:
-            evs = [e for e in S.odds_events(k, "h2h") if parse_time(e["commence_time"]) > now]
-            sport_events.append((k, active[k].get("title", k), evs))
-        tennis = model_matches(sport_events, elo_atp, elo_wta, pm_tennis, openings, params["tennis"])
-    else:
-        log("Tennis: aktuell keine ATP/WTA-Turniere bei The Odds API")
-
     # ---------- Trefferliste ----------
-    update_picks(picks, nba + tennis)
-    scores = nba_scores_from_history(picks, history, now)
-    open_keys = {r.get("sportKey") for r in picks.values()
-                 if not r.get("result") and r.get("sportKey", "").startswith("tennis") and parse_time(r["commence"]) < now}
-    for k in sorted(open_keys)[:2]:
-        scores.update(scores_map(S.odds_scores(k, 3)))
-    settle(picks, scores)
+    update_picks(picks, nba)
+    settle(picks, nba_scores_from_history(picks, history, now))
     params = calibrate(picks, params)                 # Modell lernt aus allen ausgewerteten Spielen
     save_params(params)
 
-    # alte Eröffnungsquoten aufräumen (nur noch offene Events behalten)
-    live_ids = {m["id"] for m in tennis}
-    openings = {k: v for k, v in openings.items() if k in live_ids}
-
     save_json("nba.json", nba)
-    save_json("tennis.json", tennis)
     save_json("picks.json", picks)
-    save_json("openings.json", openings)
     old = load_json("status.json", {})
     save_json("status.json", {"updated": now.isoformat(), "credits": S.CREDITS, "stats": stats(picks), "log": LOG[-60:],
                               "closeUpdated": old.get("closeUpdated"), "closeLog": old.get("closeLog", []),
-                              "params": {k: params[k] for k in ("nba", "tennis", "n")}})
+                              "params": {k: params[k] for k in ("nba", "n")}})
     log("Fertig.")
 
 
@@ -179,9 +138,6 @@ def main_close():
     now = now_utc()
     picks = load_json("picks.json", {})
     params = load_params()
-    open_recs = [r for r in picks.values() if not r.get("result") and parse_time(r["commence"]) > now]
-    keys = sorted({r.get("sportKey") for r in open_recs if r.get("sportKey")})
-    tennis_keys = [k for k in keys if k != "basketball_nba"][:2]
     S.odds_sports()                                   # liest nur das Credit-Guthaben aus, kostet nichts
     events = []
     old = {g["id"]: g for g in load_json("nba.json", [])}
@@ -198,8 +154,6 @@ def main_close():
         log(f"Abend-Update NBA: {sum(1 for g in nba if g['changed'])} Spiele mit geänderter Empfehlung")
     except Exception as e:  # noqa: BLE001
         log(f"Abend-Update NBA fehlgeschlagen: {e}")
-    for k in tennis_keys:
-        events += S.odds_events(k, "h2h")
     record_close(picks, events, params)
     if nba is not None:
         started = [g for g in old.values() if parse_time(g["commence"]) <= now]   # schon laufende Spiele behalten
