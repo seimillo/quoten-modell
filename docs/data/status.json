@@ -1,7 +1,7 @@
 {
  "updated": "2026-11-23T15:48:22.995490+00:00",
  "credits": {
-  "remaining": 410.0,
+  "remaining": 407.0,
   "used_now": 3.0
  },
  "stats": {
@@ -10,9 +10,9 @@
   "brierModel": 0.24514616,
   "brierMarket": 0.25242116000000003,
   "brierRaw": 0.23125814,
-  "clvN": 6,
-  "clvAvg": -0.0116,
-  "clvPos": 0.167,
+  "clvN": 16,
+  "clvAvg": -0.0223,
+  "clvPos": 0.188,
   "calibration": [
    {
     "from": 0.0,
@@ -50,8 +50,8 @@
     "real": 1.0
    }
   ],
-  "clvValueN": 0,
-  "clvValueAvg": null,
+  "clvValueN": 1,
+  "clvValueAvg": 0.0214,
   "valueBets": 0,
   "profit": 0,
   "roi": null,
@@ -61,8 +61,8 @@
   "flashSettled": 0,
   "flashProfit": 0,
   "flashRoi": null,
-  "flashClv": null,
-  "flashClvN": 0
+  "flashClv": 0.0214,
+  "flashClvN": 1
  },
  "log": [
   "Kalshi KXNBAGAME: 31 Events",
@@ -113,15 +113,15 @@
     "roi": null
    }
   },
-  "clvPos": null,
-  "bets": 10,
+  "clvPos": 0.3,
+  "bets": 12,
   "settled": 0,
   "profit": 0,
   "roi": null,
   "hit": null,
   "expHit": null,
-  "clv": null,
-  "clvN": 0
+  "clv": -0.0325,
+  "clvN": 10
  },
  "closeUpdated": "2026-11-22T23:16:37.761556+00:00",
  "closeLog": [
@@ -155,5 +155,29 @@
    "conf": 0.15
   },
   "n": {}
- }
+ },
+ "pregameUpdated": "2026-11-23T15:49:13.273360+00:00",
+ "pregameLog": [
+  "Kalshi KXNBAGAME: 31 Events",
+  "Polymarket nba: 100 Events",
+  "Basketball-Reference Ratings 2027: 30 Teams",
+  "Basketball-Reference Ratings 2026: 30 Teams",
+  "Basketball-Reference Tempo 2027: 31 Teams",
+  "Basketball-Reference Spieler 2027: 476 Einträge",
+  "Basketball-Reference Spieler 2026: 661 Einträge",
+  "ESPN Verletzungen: 104 Einträge",
+  "NBA-Verletzungsbericht 23.11. 10:45 ET: 74 Spieler, 10 Teams noch nicht gemeldet",
+  "Quoten basketball_nba: 10 Events, 10 mit Buchmacher-Quoten",
+  "OddsPapi: 2404 Spielerwetten-Linien",
+  "OddsPapi: 38 Buchmacher-Einträge an 10 Spiele gehängt (bet365.de, bwin.de, betano.de, 888sport.de) · Handicap-Linien plausibel 28, verworfen 0 · 142 von 250 Abfragen diesen Monat",
+  "Streuung: Markt 12.7, Modell nutzt 13.65",
+  "NBA: 10 Spiele bewertet, 3 mit Value-Wette",
+  "Spielerwetten: 2453 Linien in 10 Spielen simuliert, 9 ✓",
+  "Spielerwetten vor Spielbeginn: 3 bestätigt, 1 schwächer, 0 zurückziehen, 4 geprüft",
+  "Spielerwetten Schlussquoten: 10",
+  "Push-Nachricht „Spielerwetten vor Spielbeginn“: gesendet",
+  "Abend-Update NBA: 7 Spiele mit geänderter Empfehlung",
+  "Push-Nachricht „Abend-Update: neue ✓-Wetten“: gesendet",
+  "Schlussquoten: 10 Prognosen mit CLV"
+ ]
 }

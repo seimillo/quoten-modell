@@ -18,7 +18,14 @@
   "game": "SAS @ SAC",
   "commence": "2026-11-24T03:10:00Z",
   "result": null,
-  "value": null
+  "value": null,
+  "close": {
+   "odds": 3.3,
+   "pMkt": 0.3094,
+   "clv": 0.021,
+   "book": "bet365",
+   "at": "2026-11-23T15:49+00:00"
+  }
  },
  "db2311c331296d3328d71b842167dea4|derrick jones|pts|9.5|over": {
   "player": "Derrick Jones Jr.",
@@ -39,7 +46,14 @@
   "game": "LAC @ HOU",
   "commence": "2026-11-24T01:40:00Z",
   "result": null,
-  "value": null
+  "value": null,
+  "close": {
+   "odds": 2.8,
+   "pMkt": 0.384,
+   "clv": 0.0752,
+   "book": "bet365",
+   "at": "2026-11-23T15:49+00:00"
+  }
  },
  "db2311c331296d3328d71b842167dea4|kevin durant|pts|24.5|over": {
   "player": "Kevin Durant",
@@ -81,7 +95,14 @@
   "game": "CLE @ CHI",
   "commence": "2026-11-24T01:10:00Z",
   "result": null,
-  "value": null
+  "value": null,
+  "close": {
+   "odds": 1.91,
+   "pMkt": 0.4881,
+   "clv": -0.0726,
+   "book": "bwin",
+   "at": "2026-11-23T15:49+00:00"
+  }
  },
  "b8dfee1fca57ec870528a14c792ad73a|jarrett allen|pts|14.5|under": {
   "player": "Jarrett Allen",
@@ -123,7 +144,14 @@
   "game": "MEM @ CHA",
   "commence": "2026-11-24T00:10:00Z",
   "result": null,
-  "value": null
+  "value": null,
+  "close": {
+   "odds": 2.85,
+   "pMkt": 0.3081,
+   "clv": -0.1219,
+   "book": "bet365",
+   "at": "2026-11-23T15:49+00:00"
+  }
  },
  "3e9dc52cb055c0154839c4aec417955b|walker kessler|pts|14.5|over": {
   "src": "mittags",
@@ -145,7 +173,22 @@
   "game": "UTA @ LAL",
   "commence": "2026-11-24T03:10:00Z",
   "result": null,
-  "value": null
+  "value": null,
+  "pre": {
+   "status": "schwächer",
+   "odds": 2.3,
+   "ev": 0.0049,
+   "pSim": 0.4444,
+   "pOut": 0.1,
+   "at": "2026-11-23T15:49+00:00"
+  },
+  "close": {
+   "odds": 2.3,
+   "pMkt": 0.4337,
+   "clv": -0.0025,
+   "book": "bet365",
+   "at": "2026-11-23T15:49+00:00"
+  }
  },
  "3e9dc52cb055c0154839c4aec417955b|ziaire williams|pts|9.5|over": {
   "src": "mittags",
@@ -167,7 +210,22 @@
   "game": "UTA @ LAL",
   "commence": "2026-11-24T03:10:00Z",
   "result": null,
-  "value": null
+  "value": null,
+  "pre": {
+   "status": "bestätigt",
+   "odds": 2.95,
+   "ev": 0.0735,
+   "pSim": 0.4675,
+   "pOut": 0.0,
+   "at": "2026-11-23T15:49+00:00"
+  },
+  "close": {
+   "odds": 2.95,
+   "pMkt": 0.3195,
+   "clv": -0.0575,
+   "book": "bet365",
+   "at": "2026-11-23T15:49+00:00"
+  }
  },
  "3e9dc52cb055c0154839c4aec417955b|darryn peterson|pts|18.5|under": {
   "src": "mittags",
@@ -189,7 +247,22 @@
   "game": "UTA @ LAL",
   "commence": "2026-11-24T03:10:00Z",
   "result": null,
-  "value": null
+  "value": null,
+  "pre": {
+   "status": "bestätigt",
+   "odds": 1.87,
+   "ev": 0.0524,
+   "pSim": 0.7093,
+   "pOut": 0.0,
+   "at": "2026-11-23T15:49+00:00"
+  },
+  "close": {
+   "odds": 1.87,
+   "pMkt": 0.5,
+   "clv": -0.065,
+   "book": "bwin",
+   "at": "2026-11-23T15:49+00:00"
+  }
  },
  "b8dfee1fca57ec870528a14c792ad73a|jarrett allen|pts|15.5|under": {
   "src": "mittags",
@@ -211,6 +284,79 @@
   "game": "CLE @ CHI",
   "commence": "2026-11-24T01:10:00Z",
   "result": null,
-  "value": null
+  "value": null,
+  "pre": {
+   "status": "bestätigt",
+   "odds": 1.8,
+   "ev": 0.0553,
+   "pSim": 0.736,
+   "pOut": 0.0,
+   "at": "2026-11-23T15:49+00:00"
+  },
+  "close": {
+   "odds": 1.8,
+   "pMkt": 0.5221,
+   "clv": -0.0602,
+   "book": "bwin",
+   "at": "2026-11-23T15:49+00:00"
+  }
+ },
+ "17f31499f145cd9d3232819395d29448|domantas sabonis|reb|13.5|under": {
+  "src": "vor Spielbeginn",
+  "player": "Domantas Sabonis",
+  "key": "domantas sabonis",
+  "team": "SAC",
+  "stat": "reb",
+  "statName": "Rebounds",
+  "line": 13.5,
+  "side": "under",
+  "odds": 1.833,
+  "book": "op_888sport",
+  "bookName": "888sport",
+  "pSim": 0.7614,
+  "p": 0.5747,
+  "ev": 0.0535,
+  "stake": 0.01,
+  "mean": 10.7,
+  "game": "SAS @ SAC",
+  "commence": "2026-11-24T03:10:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 1.833,
+   "pMkt": 0.4947,
+   "clv": -0.0932,
+   "book": "888sport",
+   "at": "2026-11-23T15:49+00:00"
+  }
+ },
+ "ac6fb079d66ef35a2a77e22b5e94ef8d|anfernee simons|pts|9.5|over": {
+  "src": "vor Spielbeginn",
+  "player": "Anfernee Simons",
+  "key": "anfernee simons",
+  "team": "PHI",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 9.5,
+  "side": "over",
+  "odds": 2.35,
+  "book": "op_bet365",
+  "bookName": "bet365",
+  "pSim": 0.5277,
+  "p": 0.4717,
+  "ev": 0.1084,
+  "stake": 0.01,
+  "mean": 10.7,
+  "game": "POR @ PHI",
+  "commence": "2026-11-24T00:10:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 2.35,
+   "pMkt": 0.4476,
+   "clv": 0.0519,
+   "book": "bet365",
+   "at": "2026-11-23T15:49+00:00"
+  }
  }
 }
