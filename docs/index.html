@@ -68,7 +68,7 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
   <p class="muted" id="stand">Lade Daten …</p>
   <div class="kpis" id="kpis"></div>
   <div class="card" id="slipCard"><h2>Wettzettel heute</h2><div id="slip"></div>
-  <p class="hint">Alle Empfehlungen auf einen Blick: ✓ = Modell sieht Vorteil (Spiele), ⚡ = Quote besser als die faire Pinnacle-Quote, 🏀 = Spielerwette aus der Simulation. „Chance“: fett die eigene Einschätzung (Simulation, Modell bzw. faire Pinnacle-Quote), darunter die faire Chance der Buchmacher (ohne Marge) und die Chance, die in der angebotenen Quote steckt (1 ÷ Quote). Liegt die eigene Einschätzung über der Quoten-Chance, ist der EV positiv. Einsatz in Prozent deiner Kasse (¼-Kelly). Mit <b>＋</b> trägst du eine Wette direkt in „Meine Wetten“ ein. Bei 🏀 steht nach dem Lauf kurz vor Spielbeginn (ca. 0:22 Uhr), ob der Tipp noch gilt. <b>🟢 mittags sicher</b>: beide Teams haben ihren Verletzungsbericht abgegeben, der Spieler ist gesund und kein wichtiger Mitspieler oder Gegner ist fraglich – solche Tipps ändern sich bis abends selten. 🟠 = kann sich noch ändern (Grund steht dabei); wer nur mittags setzen kann, nimmt am besten nur 🟢.</p></div>
+  <p class="hint">Alle Empfehlungen auf einen Blick: ✓ = Modell sieht Vorteil (Spiele), ⚡ = Quote besser als die faire Pinnacle-Quote, 🏀 = Spielerwette aus der Simulation. „Chance“: fett die eigene Einschätzung (Simulation, Modell bzw. faire Pinnacle-Quote), darunter die faire Chance der Buchmacher (ohne Marge) und die Chance, die in der angebotenen Quote steckt (1 ÷ Quote). Liegt die eigene Einschätzung über der Quoten-Chance, ist der EV positiv. Einsatz in Prozent deiner Kasse (¼-Kelly). <b>„mind.“</b> = Mindestquote: Steht die Quote in der App darunter, ist der Vorteil weg – dann nicht setzen. Quoten vom Mittagslauf um ca. 11:47 Uhr. Mit <b>＋</b> trägst du eine Wette direkt in „Meine Wetten“ ein. Bei 🏀 steht nach dem Lauf kurz vor Spielbeginn (ca. 0:22 Uhr), ob der Tipp noch gilt. <b>🟢 mittags sicher</b>: beide Teams haben ihren Verletzungsbericht abgegeben, der Spieler ist gesund und kein wichtiger Mitspieler oder Gegner ist fraglich – solche Tipps ändern sich bis abends selten. 🟠 = kann sich noch ändern (Grund steht dabei); wer nur mittags setzen kann, nimmt am besten nur 🟢.</p></div>
   <div class="card"><h2>Alle Spiele</h2><div id="top"></div>
   <p class="hint">Erwartungswert (EV) = Chance × Quote − 1 zur besten Quote aller Buchmacher mit deutscher Lizenz (Tipico, Winamax, Betano, Betway, LeoVegas, 888sport). ✓ = strenge Auswahl: EV ≥ 3 % (Gesamtpunkte 5 %) und auch gegenüber Pinnacle nicht schlechter, höchstens eine Wette pro Spiel. Die Chance ist eine Mischung aus Modell und Markt (Markt-Anker), darum sind die Werte bewusst vorsichtig.</p></div>
 </section>
@@ -408,10 +408,10 @@ for (const g of nba) {
   if (new Date(g.commence).getTime() < nowMs) continue;
   const gl = {type:"game", gameId:g.id, label:`${g.abbrA} @ ${g.abbrH}`, commence:g.commence};
   if (g.best && g.best.value) slip.push({log:{...gl, market:g.best.market, side:g.best.side, line:g.best.line, pick:g.best.pick, kind:"✓", value:true},
-    t:g.commence, kind:"✓", game:`${g.abbrA} @ ${g.abbrH}`, pick:g.best.pick, market:g.best.market, odds:g.best.odds, book:g.best.bookName, stake:g.best.stake, ev:g.best.ev, link:LINK(g.links, g.best.book),
+    t:g.commence, kind:"✓", pMin:g.best.p, game:`${g.abbrA} @ ${g.abbrH}`, pick:g.best.pick, market:g.best.market, odds:g.best.odds, book:g.best.bookName, stake:g.best.stake, ev:g.best.ev, link:LINK(g.links, g.best.book),
     own:g.best.pModel, ownLbl:"Modell", mkt:g.best.pMarket, mktLbl:"Markt fair"});
   if (g.flash) slip.push({log:{...gl, market:g.flash.market, side:g.flash.side, line:g.flash.line, pick:g.flash.pick, kind:"⚡"},
-    t:g.commence, kind:"⚡", game:`${g.abbrA} @ ${g.abbrH}`, pick:g.flash.pick, market:g.flash.market, odds:g.flash.odds, book:g.flash.bookName, stake:g.flash.stake, ev:g.flash.evPin, link:LINK(g.links, g.flash.book),
+    t:g.commence, kind:"⚡", pMin:g.flash.pPin, game:`${g.abbrA} @ ${g.abbrH}`, pick:g.flash.pick, market:g.flash.market, odds:g.flash.odds, book:g.flash.bookName, stake:g.flash.stake, ev:g.flash.evPin, link:LINK(g.links, g.flash.book),
     own:g.flash.pPin, ownLbl:"Pinnacle fair", mkt:null, mktLbl:""});
 }
 for (const g of PROPS.games) {
@@ -419,7 +419,7 @@ for (const g of PROPS.games) {
   for (const p of g.props.filter(p=>p.value)) slip.push({pre:(PT[pidOf(g.id,p)]||{}).pre,
     log:{type:"prop", gameId:g.id, pid:pidOf(g.id,p), label:g.label, commence:g.commence, market:"Spieler", team:p.team, key:p.key, stat:p.stat,
          statName:p.statName, line:p.line, side:p.side, player:p.player, pick:`${p.player} ${p.side==="over"?"über":"unter"} ${String(p.line).replace(".",",")} ${p.statName}`, kind:"🏀", value:true},
-    t:g.commence, kind:"🏀", game:g.label, pick:`${p.player} ${p.side==="over"?"über":"unter"} ${String(p.line).replace(".",",")} ${p.statName}${p.checkApp?" (in App prüfen)":""}`, market:"Spieler",
+    t:g.commence, kind:"🏀", pMin:p.p, game:g.label, pick:`${p.player} ${p.side==="over"?"über":"unter"} ${String(p.line).replace(".",",")} ${p.statName}${p.checkApp?" (in App prüfen)":""}`, market:"Spieler",
     safe:p.safe, risks:p.risks||[], odds:p.odds, book:p.bookName, stake:p.stake, ev:p.ev, link:LINK(g.links, p.book),
     own:p.pSim, ownLbl:"Simulation", mkt:p.pMkt, mktLbl:p.anchored?"bwin fair":p.twoSided?"Buchmacher fair":"Buchm. geschätzt"});
 }
@@ -427,7 +427,7 @@ slip.sort((a,b)=>String(a.t).localeCompare(String(b.t)) || b.ev-a.ev);
 const sumStake = slip.reduce((s,x)=>s+(x.stake||0),0);
 $("slip").innerHTML = slip.length ? `<table><thead><tr><th>Wette</th><th>Quote</th><th>Chance</th><th>EV</th></tr></thead><tbody>${slip.map((x,i)=>`<tr>
   <td><button class="btn x slipadd" data-i="${i}" title="In Meine Wetten eintragen" aria-label="In Meine Wetten eintragen">＋</button>${x.kind} ${esc(x.pick)}<div class="small">${esc(x.game)} · ${new Date(x.t).toLocaleTimeString("de-DE",{hour:"2-digit",minute:"2-digit"})} Uhr · ${esc(x.market)}</div>${x.safe===true?`<div class="small pos">🟢 mittags sicher</div>`:x.safe===false?`<div class="small" style="color:var(--warn)">🟠 ${esc(x.risks.slice(0,2).join(" · "))}${x.risks.length>2?" …":""}</div>`:""}${preTxt(x.pre)}</td>
-  <td><b>${f(x.odds,2)}</b><div class="small">${esc(x.book||"")}${x.link}</div></td>
+  <td><b>${f(x.odds,2)}</b><div class="small">${esc(x.book||"")}${x.link}</div>${x.pMin?`<div class="small">mind. <b>${f(1/x.pMin,2)}</b></div>`:""}</td>
   <td>${x.own!=null?`<b>${pct(x.own)}</b><div class="small">${esc(x.ownLbl)}</div>`:""}${x.mkt!=null?`<div class="small">${pct(x.mkt)} ${esc(x.mktLbl)}</div>`:""}<div class="small">${pct(1/x.odds)} laut Quote</div></td>
   <td class="${cls(x.ev)}">${sg(x.ev*100,1)} %<div class="small">Einsatz ${f((x.stake||0)*100,1)} %${kasse()?` = ${f(kasse()*(x.stake||0),2)} €`:""}</div></td></tr>
   <tr class="slipform" data-i="${i}" hidden><td colspan="4"><div class="form" style="margin-top:0">

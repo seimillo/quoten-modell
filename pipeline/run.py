@@ -216,6 +216,12 @@ def player_results(pstats, now, days=12):
 
 def main():
     mode = os.environ.get("RUN_MODE")
+    if os.environ.get("MIDDAY_CHECK"):
+        from zoneinfo import ZoneInfo
+        from datetime import datetime
+        if datetime.now(ZoneInfo("Europe/Berlin")).hour != 11:
+            log("Mittagslauf für die andere Jahreszeit – übersprungen")
+            return
     if mode == "close":
         return main_close()
     if mode == "pregame":
