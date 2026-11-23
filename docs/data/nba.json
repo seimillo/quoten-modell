@@ -102,12 +102,12 @@
   "kalshi": {
    "a": 13.5,
    "b": 86.5,
-   "vol": 357324
+   "vol": 358352
   },
   "polymarket": {
    "pA": 0.135,
    "pB": 0.865,
-   "volume": 14939
+   "volume": 14976
   },
   "bookKey": "tipico_de",
   "bookName": "Tipico",
@@ -246,19 +246,19 @@
    },
    {
     "market": "Handicap",
-    "pick": "Utah Jazz +13.5",
-    "odds": 1.91,
-    "line": 13.5,
+    "pick": "Utah Jazz +14.5",
+    "odds": 1.83,
+    "line": 14.5,
     "side": "away",
-    "book": "sport888",
-    "bookName": "888sport",
-    "pModel": 0.5351,
-    "pMarket": 0.4787,
-    "p": 0.4872,
-    "ev": -0.0695,
-    "evRaw": 0.022,
-    "evPin": -0.0857,
-    "pPin": 0.4787,
+    "book": "leovegas_se",
+    "bookName": "LeoVegas",
+    "pModel": 0.564,
+    "pMarket": 0.5079,
+    "p": 0.5163,
+    "ev": -0.0551,
+    "evRaw": 0.0322,
+    "evPin": -0.0705,
+    "pPin": 0.5079,
     "mainOdds": 1.75,
     "mainBook": "Tipico",
     "nBooks": 3,
@@ -269,17 +269,17 @@
    {
     "market": "Handicap",
     "pick": "Los Angeles Lakers -13.5",
-    "odds": 1.92,
+    "odds": 1.91,
     "line": -13.5,
     "side": "home",
-    "book": "leovegas_se",
-    "bookName": "LeoVegas",
+    "book": "sport888",
+    "bookName": "888sport",
     "pModel": 0.4649,
     "pMarket": 0.5213,
     "p": 0.5128,
-    "ev": -0.0154,
-    "evRaw": -0.1073,
-    "evPin": 0.0009,
+    "ev": -0.0205,
+    "evRaw": -0.112,
+    "evPin": -0.0043,
     "pPin": 0.5213,
     "mainOdds": 1.95,
     "mainBook": "Tipico",
@@ -290,19 +290,19 @@
    },
    {
     "market": "Gesamtpunkte",
-    "pick": "Über 226.5",
-    "odds": 1.91,
-    "line": 226.5,
+    "pick": "Über 225.5",
+    "odds": 1.9,
+    "line": 225.5,
     "side": "over",
-    "book": "sport888",
-    "bookName": "888sport",
-    "pModel": 0.5723,
-    "pMarket": 0.4855,
-    "p": 0.4986,
-    "ev": -0.0478,
-    "evRaw": 0.0931,
-    "evPin": -0.0726,
-    "pPin": 0.4855,
+    "book": "betano_uk",
+    "bookName": "Betano",
+    "pModel": 0.5926,
+    "pMarket": 0.509,
+    "p": 0.5216,
+    "ev": -0.009,
+    "evRaw": 0.126,
+    "evPin": -0.0328,
+    "pPin": 0.509,
     "mainOdds": 1.83,
     "mainBook": "Tipico",
     "nBooks": 3,
@@ -312,19 +312,19 @@
    },
    {
     "market": "Gesamtpunkte",
-    "pick": "Unter 226.5",
-    "odds": 1.91,
-    "line": 226.5,
+    "pick": "Unter 225.5",
+    "odds": 1.95,
+    "line": 225.5,
     "side": "under",
     "book": "sport888",
     "bookName": "888sport",
-    "pModel": 0.4277,
-    "pMarket": 0.5145,
-    "p": 0.5014,
-    "ev": -0.0422,
-    "evRaw": -0.1831,
-    "evPin": -0.0174,
-    "pPin": 0.5145,
+    "pModel": 0.4074,
+    "pMarket": 0.491,
+    "p": 0.4784,
+    "ev": -0.0671,
+    "evRaw": -0.2056,
+    "evPin": -0.0426,
+    "pPin": 0.491,
     "mainOdds": 1.87,
     "mainBook": "Tipico",
     "nBooks": 3,
@@ -376,9 +376,9 @@
   "links": {
    "op_bwin": "https://sports.bwin.de/en/sports/events/20099887"
   },
-  "injuryReport": "2026-11-23 09:00 ET",
+  "injuryReport": "2026-11-23 09:15 ET",
   "sdUsed": 13.66,
-  "sdMarket": 12.686399680890856,
+  "sdMarket": 12.677049217964985,
   "middayBest": {
    "market": "Sieg",
    "pick": "Utah Jazz",
@@ -500,7 +500,7 @@
   "kalshi": {
    "a": 41.5,
    "b": 58.5,
-   "vol": 164169
+   "vol": 166604
   },
   "polymarket": null,
   "bookKey": "tipico_de",
@@ -790,9 +790,9 @@
    "op_bet365": "https://www.bet365.de/#/AC/B18/C20604387/D19/E27310833/F19/I0/",
    "op_bwin": "https://sports.bwin.de/en/sports/events/20099880"
   },
-  "injuryReport": "2026-11-23 09:00 ET",
+  "injuryReport": "2026-11-23 09:15 ET",
   "sdUsed": 13.66,
-  "sdMarket": 12.686399680890856,
+  "sdMarket": 12.677049217964985,
   "middayBest": {
    "market": "Sieg",
    "pick": "Portland Trail Blazers",
@@ -914,7 +914,7 @@
   "kalshi": {
    "a": 63.5,
    "b": 36.5,
-   "vol": 84630
+   "vol": 85084
   },
   "polymarket": null,
   "bookKey": "tipico_de",
@@ -1243,9 +1243,9 @@
    "op_bet365": "https://www.bet365.de/#/AC/B18/C20604387/D19/E27310834/F19/I0/",
    "op_bwin": "https://sports.bwin.de/en/sports/events/20099881"
   },
-  "injuryReport": "2026-11-23 09:00 ET",
+  "injuryReport": "2026-11-23 09:15 ET",
   "sdUsed": 13.66,
-  "sdMarket": 12.686399680890856,
+  "sdMarket": 12.677049217964985,
   "middayBest": {
    "market": "Sieg",
    "pick": "Indiana Pacers",
@@ -1367,7 +1367,7 @@
   "kalshi": {
    "a": 80.5,
    "b": 19.5,
-   "vol": 124201
+   "vol": 125448
   },
   "polymarket": {
    "pA": 1.0,
@@ -1559,7 +1559,7 @@
    {
     "market": "Handicap",
     "pick": "Sacramento Kings +10.5",
-    "odds": 1.95,
+    "odds": 1.94,
     "line": 10.5,
     "side": "home",
     "book": "leovegas_se",
@@ -1567,9 +1567,9 @@
     "pModel": 0.4837,
     "pMarket": 0.4948,
     "p": 0.4931,
-    "ev": -0.0384,
-    "evRaw": -0.0567,
-    "evPin": -0.0352,
+    "ev": -0.0433,
+    "evRaw": -0.0615,
+    "evPin": -0.0401,
     "pPin": 0.4948,
     "mainOdds": 1.83,
     "mainBook": "Tipico",
@@ -1667,9 +1667,9 @@
    "op_bet365": "https://www.bet365.de/#/AC/B18/C20604387/D19/E27310841/F19/I0/",
    "op_bwin": "https://sports.bwin.de/en/sports/events/20099888"
   },
-  "injuryReport": "2026-11-23 09:00 ET",
+  "injuryReport": "2026-11-23 09:15 ET",
   "sdUsed": 13.66,
-  "sdMarket": 12.686399680890856,
+  "sdMarket": 12.677049217964985,
   "middayBest": {
    "market": "Sieg",
    "pick": "San Antonio Spurs",
@@ -1796,12 +1796,12 @@
   "kalshi": {
    "a": 59.5,
    "b": 40.5,
-   "vol": 31465
+   "vol": 31756
   },
   "polymarket": {
    "pA": 0.585,
    "pB": 0.415,
-   "volume": 26805
+   "volume": 27213
   },
   "bookKey": "tipico_de",
   "bookName": "Tipico",
@@ -2125,9 +2125,9 @@
    "op_bet365": "https://www.bet365.de/#/AC/B18/C20604387/D19/E27310838/F19/I0/",
    "op_bwin": "https://sports.bwin.de/en/sports/events/20099885"
   },
-  "injuryReport": "2026-11-23 09:00 ET",
+  "injuryReport": "2026-11-23 09:15 ET",
   "sdUsed": 13.66,
-  "sdMarket": 12.686399680890856,
+  "sdMarket": 12.677049217964985,
   "middayBest": {
    "market": "Sieg",
    "pick": "Phoenix Suns",
@@ -2249,12 +2249,12 @@
   "kalshi": {
    "a": 16.5,
    "b": 84.5,
-   "vol": 58935
+   "vol": 59121
   },
   "polymarket": {
    "pA": 0.155,
    "pB": 0.845,
-   "volume": 27318
+   "volume": 27724
   },
   "bookKey": "tipico_de",
   "bookName": "Tipico",
@@ -2407,17 +2407,17 @@
    {
     "market": "Handicap",
     "pick": "Los Angeles Clippers +12.5",
-    "odds": 1.91,
+    "odds": 1.92,
     "line": 12.5,
     "side": "away",
-    "book": "sport888",
-    "bookName": "888sport",
+    "book": "leovegas_se",
+    "bookName": "LeoVegas",
     "pModel": 0.5023,
     "pMarket": 0.5053,
     "p": 0.5049,
-    "ev": -0.0357,
-    "evRaw": -0.0406,
-    "evPin": -0.0348,
+    "ev": -0.0306,
+    "evRaw": -0.0356,
+    "evPin": -0.0298,
     "pPin": 0.5053,
     "mainOdds": 1.77,
     "mainBook": "Tipico",
@@ -2537,9 +2537,9 @@
    "op_bet365": "https://www.bet365.de/#/AC/B18/C20604387/D19/E27310839/F19/I0/",
    "op_bwin": "https://sports.bwin.de/en/sports/events/20099886"
   },
-  "injuryReport": "2026-11-23 09:00 ET",
+  "injuryReport": "2026-11-23 09:15 ET",
   "sdUsed": 13.66,
-  "sdMarket": 12.686399680890856,
+  "sdMarket": 12.677049217964985,
   "middayBest": {
    "market": "Gesamtpunkte",
    "pick": "Über 224.5",
@@ -2578,8 +2578,8 @@
   "ptsA": 107.7,
   "ptsH": 117.1,
   "pModelHome": 0.7532,
-  "pMarketHome": 0.7955,
-  "pFinalHome": 0.7892,
+  "pMarketHome": 0.7956,
+  "pFinalHome": 0.7893,
   "parts": [
    {
     "n": "Team-Stärke & Tempo",
@@ -2666,12 +2666,12 @@
   "kalshi": {
    "a": 20.5,
    "b": 79.5,
-   "vol": 71990
+   "vol": 74081
   },
   "polymarket": {
    "pA": 0.205,
    "pB": 0.795,
-   "volume": 55518
+   "volume": 55880
   },
   "bookKey": "tipico_de",
   "bookName": "Tipico",
@@ -2836,18 +2836,18 @@
    {
     "market": "Sieg",
     "pick": "Milwaukee Bucks",
-    "odds": 4.7,
+    "odds": 4.75,
     "line": null,
     "side": "away",
-    "book": "winamax_de",
-    "bookName": "Winamax",
+    "book": "op_bwin",
+    "bookName": "bwin",
     "pModel": 0.2468,
-    "pMarket": 0.2045,
-    "p": 0.2108,
-    "ev": -0.0092,
-    "evRaw": 0.16,
-    "evPin": -0.0415,
-    "pPin": 0.2039,
+    "pMarket": 0.2044,
+    "p": 0.2107,
+    "ev": 0.001,
+    "evRaw": 0.1724,
+    "evPin": -0.0321,
+    "pPin": 0.2038,
     "mainOdds": 4.1,
     "mainBook": "Tipico",
     "nBooks": 7,
@@ -2864,12 +2864,12 @@
     "book": "tipico_de",
     "bookName": "Tipico",
     "pModel": 0.7532,
-    "pMarket": 0.7955,
-    "p": 0.7892,
-    "ev": -0.0372,
+    "pMarket": 0.7956,
+    "p": 0.7893,
+    "ev": -0.0371,
     "evRaw": -0.0811,
-    "evPin": -0.0288,
-    "pPin": 0.7961,
+    "evPin": -0.0286,
+    "pPin": 0.7962,
     "mainOdds": 1.22,
     "mainBook": "Tipico",
     "nBooks": 7,
@@ -2886,12 +2886,12 @@
     "book": "leovegas_se",
     "bookName": "LeoVegas",
     "pModel": 0.5335,
-    "pMarket": 0.5066,
-    "p": 0.5106,
-    "ev": -0.0144,
+    "pMarket": 0.5053,
+    "p": 0.5096,
+    "ev": -0.0166,
     "evRaw": 0.0297,
-    "evPin": -0.0222,
-    "pPin": 0.5066,
+    "evPin": -0.0247,
+    "pPin": 0.5053,
     "mainOdds": 1.9,
     "mainBook": "Tipico",
     "nBooks": 3,
@@ -2908,12 +2908,12 @@
     "book": "sport888",
     "bookName": "888sport",
     "pModel": 0.4665,
-    "pMarket": 0.4934,
-    "p": 0.4894,
-    "ev": -0.0653,
+    "pMarket": 0.4947,
+    "p": 0.4904,
+    "ev": -0.0632,
     "evRaw": -0.109,
-    "evPin": -0.0576,
-    "pPin": 0.4934,
+    "evPin": -0.0552,
+    "pPin": 0.4947,
     "mainOdds": 1.8,
     "mainBook": "Tipico",
     "nBooks": 3,
@@ -2967,24 +2967,24 @@
    }
   ],
   "best": {
-   "market": "Gesamtpunkte",
-   "pick": "Über 222.5",
-   "odds": 1.91,
-   "line": 222.5,
-   "side": "over",
-   "book": "sport888",
-   "bookName": "888sport",
-   "pModel": 0.5476,
-   "pMarket": 0.5198,
-   "p": 0.5239,
-   "ev": 0.0007,
-   "evRaw": 0.0458,
-   "evPin": -0.0072,
-   "pPin": 0.5198,
-   "mainOdds": 1.9,
+   "market": "Sieg",
+   "pick": "Milwaukee Bucks",
+   "odds": 4.75,
+   "line": null,
+   "side": "away",
+   "book": "op_bwin",
+   "bookName": "bwin",
+   "pModel": 0.2468,
+   "pMarket": 0.2044,
+   "p": 0.2107,
+   "ev": 0.001,
+   "evRaw": 0.1724,
+   "evPin": -0.0321,
+   "pPin": 0.2038,
+   "mainOdds": 4.1,
    "mainBook": "Tipico",
-   "nBooks": 3,
-   "why": "EV unter 5 %",
+   "nBooks": 7,
+   "why": "EV unter 3 %",
    "value": false,
    "stake": 0.0
   },
@@ -3004,33 +3004,33 @@
    "form": -1.112,
    "TOTraw": 224.79,
    "pModelRaw": 0.7532,
-   "pMarket": 0.7955
+   "pMarket": 0.7956
   },
   "links": {
    "op_bwin": "https://sports.bwin.de/en/sports/events/20099882"
   },
-  "injuryReport": "2026-11-23 09:00 ET",
+  "injuryReport": "2026-11-23 09:15 ET",
   "sdUsed": 13.66,
-  "sdMarket": 12.686399680890856,
+  "sdMarket": 12.677049217964985,
   "middayBest": {
-   "market": "Gesamtpunkte",
-   "pick": "Über 222.5",
-   "odds": 1.91,
-   "line": 222.5,
-   "side": "over",
-   "book": "sport888",
-   "bookName": "888sport",
-   "pModel": 0.5476,
-   "pMarket": 0.5198,
-   "p": 0.5239,
-   "ev": 0.0007,
-   "evRaw": 0.0458,
-   "evPin": -0.0072,
-   "pPin": 0.5198,
-   "mainOdds": 1.9,
+   "market": "Sieg",
+   "pick": "Milwaukee Bucks",
+   "odds": 4.75,
+   "line": null,
+   "side": "away",
+   "book": "op_bwin",
+   "bookName": "bwin",
+   "pModel": 0.2468,
+   "pMarket": 0.2044,
+   "p": 0.2107,
+   "ev": 0.001,
+   "evRaw": 0.1724,
+   "evPin": -0.0321,
+   "pPin": 0.2038,
+   "mainOdds": 4.1,
    "mainBook": "Tipico",
-   "nBooks": 3,
-   "why": "EV unter 5 %",
+   "nBooks": 7,
+   "why": "EV unter 3 %",
    "value": false,
    "stake": 0.0
   }
@@ -3133,12 +3133,12 @@
   "kalshi": {
    "a": 74.5,
    "b": 25.0,
-   "vol": 38515
+   "vol": 38814
   },
   "polymarket": {
    "pA": 0.745,
    "pB": 0.255,
-   "volume": 15667
+   "volume": 15881
   },
   "bookKey": "tipico_de",
   "bookName": "Tipico",
@@ -3417,9 +3417,9 @@
   "links": {
    "op_bwin": "https://sports.bwin.de/en/sports/events/20099884"
   },
-  "injuryReport": "2026-11-23 09:00 ET",
+  "injuryReport": "2026-11-23 09:15 ET",
   "sdUsed": 13.66,
-  "sdMarket": 12.686399680890856,
+  "sdMarket": 12.677049217964985,
   "middayBest": {
    "market": "Gesamtpunkte",
    "pick": "Über 240.5",
@@ -3536,12 +3536,12 @@
   "kalshi": {
    "a": 16.5,
    "b": 83.5,
-   "vol": 57311
+   "vol": 58506
   },
   "polymarket": {
    "pA": 0.165,
    "pB": 0.835,
-   "volume": 21441
+   "volume": 22888
   },
   "bookKey": "tipico_de",
   "bookName": "Tipico",
@@ -3854,9 +3854,9 @@
    "op_bet365": "https://www.bet365.de/#/AC/B18/C20604387/D19/E27310836/F19/I0/",
    "op_bwin": "https://sports.bwin.de/en/sports/events/20099883"
   },
-  "injuryReport": "2026-11-23 09:00 ET",
+  "injuryReport": "2026-11-23 09:15 ET",
   "sdUsed": 13.66,
-  "sdMarket": 12.686399680890856,
+  "sdMarket": 12.677049217964985,
   "middayBest": {
    "market": "Gesamtpunkte",
    "pick": "Unter 224.5",
@@ -3983,12 +3983,12 @@
   "kalshi": {
    "a": 58.5,
    "b": 41.5,
-   "vol": 76513
+   "vol": 77204
   },
   "polymarket": {
    "pA": 0.585,
    "pB": 0.415,
-   "volume": 57584
+   "volume": 57825
   },
   "bookKey": "tipico_de",
   "bookName": "Tipico",
@@ -4352,9 +4352,9 @@
    "op_bet365": "https://www.bet365.de/#/AC/B18/C20604387/D19/E27310832/F19/I0/",
    "op_bwin": "https://sports.bwin.de/en/sports/events/20099879"
   },
-  "injuryReport": "2026-11-23 09:00 ET",
+  "injuryReport": "2026-11-23 09:15 ET",
   "sdUsed": 13.66,
-  "sdMarket": 12.686399680890856,
+  "sdMarket": 12.677049217964985,
   "middayBest": {
    "market": "Sieg",
    "pick": "Memphis Grizzlies",

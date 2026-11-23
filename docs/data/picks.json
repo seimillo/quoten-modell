@@ -787,8 +787,8 @@
   "away": "Milwaukee Bucks",
   "a": null,
   "b": null,
-  "pModelA": 0.7892,
-  "pMarketA": 0.7955,
+  "pModelA": 0.7893,
+  "pMarketA": 0.7956,
   "pModelRaw": 0.7532,
   "feat": {
    "team": 7.959,
@@ -801,20 +801,20 @@
    "form": -1.112,
    "TOTraw": 224.79,
    "pModelRaw": 0.7532,
-   "pMarket": 0.7955
+   "pMarket": 0.7956
   },
   "bet": {
-   "market": "Gesamtpunkte",
-   "pick": "Über 222.5",
-   "odds": 1.91,
-   "ev": 0.0007,
-   "line": 222.5,
-   "side": "over",
-   "book": "sport888",
-   "bookName": "888sport",
+   "market": "Sieg",
+   "pick": "Milwaukee Bucks",
+   "odds": 4.75,
+   "ev": 0.001,
+   "line": null,
+   "side": "away",
+   "book": "op_bwin",
+   "bookName": "bwin",
    "value": false,
    "stake": 0.0,
-   "evPin": -0.0072
+   "evPin": -0.0321
   },
   "result": null,
   "betResult": null,
