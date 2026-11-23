@@ -1,7 +1,7 @@
 {
- "updated": "2026-11-23T12:37:19.464007+00:00",
+ "updated": "2026-11-23T12:44:33.506382+00:00",
  "credits": {
-  "remaining": 446.0,
+  "remaining": 443.0,
   "used_now": 3.0
  },
  "stats": {
@@ -62,7 +62,7 @@
   "Kalshi KXNBAGAME: 31 Events",
   "Polymarket nba: 100 Events",
   "ESPN-Spielplan: 4 Tage abgefragt, 262 Spiele in der Saison",
-  "ESPN-Boxscores: 120 neue Spiele, Minuten für 438 Spieler",
+  "ESPN-Boxscores: 36 neue Spiele, Minuten für 450 Spieler",
   "Basketball-Reference Ratings 2027: 30 Teams",
   "Basketball-Reference Ratings 2026: 30 Teams",
   "Basketball-Reference Tempo 2027: 31 Teams",
@@ -71,9 +71,9 @@
   "ESPN Verletzungen: 104 Einträge",
   "NBA-Verletzungsbericht 23.11. 07:30 ET: 74 Spieler, 10 Teams noch nicht gemeldet",
   "Quoten basketball_nba: 10 Events, 10 mit Buchmacher-Quoten",
-  "OddsPapi Buchmacher-Liste fehlgeschlagen: 401 Client Error: Unauthorized for url: https://v5.oddspapi.io/en/bookmakers?apiKey=***",
-  "OddsPapi Marktliste fehlgeschlagen: 401 Client Error: Unauthorized for url: https://v5.oddspapi.io/en/markets?sportId=11&apiKey=***",
-  "OddsPapi: 0 von 10 Spielen zugeordnet",
+  "OddsPapi Marktliste: 962 Märkte (Sieg, Handicap, Gesamtpunkte)",
+  "OddsPapi Teilnehmerliste: 30 NBA-Teams",
+  "OddsPapi: 15 Buchmacher-Einträge an 10 Spiele gehängt (bet365.de, bwin.de) · Handicap-Linien plausibel 5, verworfen 0 · 4 von 250 Abfragen diesen Monat",
   "Streuung: Markt 12.7, Modell nutzt 13.69",
   "NBA: 10 Spiele bewertet, 1 mit Value-Wette",
   "Trefferliste: 0 Prognosen ausgewertet",

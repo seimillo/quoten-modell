@@ -1,0 +1,8662 @@
+{
+ "markets": {
+  "111": {
+   "type": "moneyline",
+   "line": 0.0,
+   "name": "Winner (incl. overtime)",
+   "outcomes": {
+    "112": "2",
+    "111": "1"
+   }
+  },
+  "116": {
+   "type": "totals",
+   "line": 100.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "117": "Under",
+    "116": "Over"
+   }
+  },
+  "118": {
+   "type": "totals",
+   "line": 101.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "119": "Under",
+    "118": "Over"
+   }
+  },
+  "1110": {
+   "type": "totals",
+   "line": 102.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1110": "Over",
+    "1111": "Under"
+   }
+  },
+  "1112": {
+   "type": "totals",
+   "line": 103.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112": "Over",
+    "1113": "Under"
+   }
+  },
+  "1114": {
+   "type": "totals",
+   "line": 104.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1115": "Under",
+    "1114": "Over"
+   }
+  },
+  "1116": {
+   "type": "totals",
+   "line": 105.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1116": "Over",
+    "1117": "Under"
+   }
+  },
+  "1118": {
+   "type": "totals",
+   "line": 106.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1119": "Under",
+    "1118": "Over"
+   }
+  },
+  "1120": {
+   "type": "totals",
+   "line": 107.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1121": "Under",
+    "1120": "Over"
+   }
+  },
+  "1122": {
+   "type": "totals",
+   "line": 108.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1122": "Over",
+    "1123": "Under"
+   }
+  },
+  "1124": {
+   "type": "totals",
+   "line": 109.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1124": "Over",
+    "1125": "Under"
+   }
+  },
+  "1126": {
+   "type": "totals",
+   "line": 110.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1127": "Under",
+    "1126": "Over"
+   }
+  },
+  "1128": {
+   "type": "totals",
+   "line": 111.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1128": "Over",
+    "1129": "Under"
+   }
+  },
+  "1130": {
+   "type": "totals",
+   "line": 112.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1130": "Over",
+    "1131": "Under"
+   }
+  },
+  "1132": {
+   "type": "totals",
+   "line": 113.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1132": "Over",
+    "1133": "Under"
+   }
+  },
+  "1134": {
+   "type": "totals",
+   "line": 114.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1135": "Under",
+    "1134": "Over"
+   }
+  },
+  "1136": {
+   "type": "totals",
+   "line": 115.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1137": "Under",
+    "1136": "Over"
+   }
+  },
+  "1138": {
+   "type": "totals",
+   "line": 116.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1139": "Under",
+    "1138": "Over"
+   }
+  },
+  "1140": {
+   "type": "totals",
+   "line": 117.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1140": "Over",
+    "1141": "Under"
+   }
+  },
+  "1142": {
+   "type": "totals",
+   "line": 118.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1143": "Under",
+    "1142": "Over"
+   }
+  },
+  "1144": {
+   "type": "totals",
+   "line": 119.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1144": "Over",
+    "1145": "Under"
+   }
+  },
+  "1146": {
+   "type": "totals",
+   "line": 120.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1146": "Over",
+    "1147": "Under"
+   }
+  },
+  "1148": {
+   "type": "totals",
+   "line": 121.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1148": "Over",
+    "1149": "Under"
+   }
+  },
+  "1150": {
+   "type": "totals",
+   "line": 122.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1151": "Under",
+    "1150": "Over"
+   }
+  },
+  "1152": {
+   "type": "totals",
+   "line": 123.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1152": "Over",
+    "1153": "Under"
+   }
+  },
+  "1154": {
+   "type": "totals",
+   "line": 124.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1154": "Over",
+    "1155": "Under"
+   }
+  },
+  "1156": {
+   "type": "totals",
+   "line": 125.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1156": "Over",
+    "1157": "Under"
+   }
+  },
+  "1158": {
+   "type": "totals",
+   "line": 126.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1158": "Over",
+    "1159": "Under"
+   }
+  },
+  "1160": {
+   "type": "totals",
+   "line": 127.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1160": "Over",
+    "1161": "Under"
+   }
+  },
+  "1162": {
+   "type": "totals",
+   "line": 128.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1163": "Under",
+    "1162": "Over"
+   }
+  },
+  "1164": {
+   "type": "totals",
+   "line": 129.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1164": "Over",
+    "1165": "Under"
+   }
+  },
+  "1166": {
+   "type": "totals",
+   "line": 130.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1166": "Over",
+    "1167": "Under"
+   }
+  },
+  "1168": {
+   "type": "totals",
+   "line": 131.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1169": "Under",
+    "1168": "Over"
+   }
+  },
+  "1170": {
+   "type": "totals",
+   "line": 132.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1171": "Under",
+    "1170": "Over"
+   }
+  },
+  "1172": {
+   "type": "totals",
+   "line": 133.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1173": "Under",
+    "1172": "Over"
+   }
+  },
+  "1174": {
+   "type": "totals",
+   "line": 134.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1174": "Over",
+    "1175": "Under"
+   }
+  },
+  "1176": {
+   "type": "totals",
+   "line": 135.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1177": "Under",
+    "1176": "Over"
+   }
+  },
+  "1178": {
+   "type": "totals",
+   "line": 136.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1179": "Under",
+    "1178": "Over"
+   }
+  },
+  "1180": {
+   "type": "totals",
+   "line": 137.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1180": "Over",
+    "1181": "Under"
+   }
+  },
+  "1182": {
+   "type": "totals",
+   "line": 138.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1183": "Under",
+    "1182": "Over"
+   }
+  },
+  "1184": {
+   "type": "totals",
+   "line": 139.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1185": "Under",
+    "1184": "Over"
+   }
+  },
+  "1186": {
+   "type": "totals",
+   "line": 140.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1187": "Under",
+    "1186": "Over"
+   }
+  },
+  "1188": {
+   "type": "totals",
+   "line": 141.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1188": "Over",
+    "1189": "Under"
+   }
+  },
+  "1190": {
+   "type": "totals",
+   "line": 142.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1191": "Under",
+    "1190": "Over"
+   }
+  },
+  "1192": {
+   "type": "totals",
+   "line": 143.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1193": "Under",
+    "1192": "Over"
+   }
+  },
+  "1194": {
+   "type": "totals",
+   "line": 144.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1195": "Under",
+    "1194": "Over"
+   }
+  },
+  "1196": {
+   "type": "totals",
+   "line": 145.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1196": "Over",
+    "1197": "Under"
+   }
+  },
+  "1198": {
+   "type": "totals",
+   "line": 146.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1198": "Over",
+    "1199": "Under"
+   }
+  },
+  "11100": {
+   "type": "totals",
+   "line": 147.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11101": "Under",
+    "11100": "Over"
+   }
+  },
+  "11102": {
+   "type": "totals",
+   "line": 148.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11102": "Over",
+    "11103": "Under"
+   }
+  },
+  "11104": {
+   "type": "totals",
+   "line": 149.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11105": "Under",
+    "11104": "Over"
+   }
+  },
+  "11106": {
+   "type": "totals",
+   "line": 150.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11107": "Under",
+    "11106": "Over"
+   }
+  },
+  "11108": {
+   "type": "totals",
+   "line": 151.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11108": "Over",
+    "11109": "Under"
+   }
+  },
+  "11110": {
+   "type": "totals",
+   "line": 152.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11111": "Under",
+    "11110": "Over"
+   }
+  },
+  "11112": {
+   "type": "totals",
+   "line": 153.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11113": "Under",
+    "11112": "Over"
+   }
+  },
+  "11114": {
+   "type": "totals",
+   "line": 154.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11115": "Under",
+    "11114": "Over"
+   }
+  },
+  "11116": {
+   "type": "totals",
+   "line": 155.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11116": "Over",
+    "11117": "Under"
+   }
+  },
+  "11118": {
+   "type": "totals",
+   "line": 156.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11119": "Under",
+    "11118": "Over"
+   }
+  },
+  "11120": {
+   "type": "totals",
+   "line": 157.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11121": "Under",
+    "11120": "Over"
+   }
+  },
+  "11122": {
+   "type": "totals",
+   "line": 158.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11123": "Under",
+    "11122": "Over"
+   }
+  },
+  "11124": {
+   "type": "totals",
+   "line": 159.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11125": "Under",
+    "11124": "Over"
+   }
+  },
+  "11126": {
+   "type": "totals",
+   "line": 160.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11127": "Under",
+    "11126": "Over"
+   }
+  },
+  "11128": {
+   "type": "totals",
+   "line": 161.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11129": "Under",
+    "11128": "Over"
+   }
+  },
+  "11130": {
+   "type": "totals",
+   "line": 162.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11130": "Over",
+    "11131": "Under"
+   }
+  },
+  "11132": {
+   "type": "totals",
+   "line": 163.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11133": "Under",
+    "11132": "Over"
+   }
+  },
+  "11134": {
+   "type": "totals",
+   "line": 164.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11135": "Under",
+    "11134": "Over"
+   }
+  },
+  "11136": {
+   "type": "totals",
+   "line": 165.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11136": "Over",
+    "11137": "Under"
+   }
+  },
+  "11138": {
+   "type": "totals",
+   "line": 166.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11139": "Under",
+    "11138": "Over"
+   }
+  },
+  "11140": {
+   "type": "totals",
+   "line": 167.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11141": "Under",
+    "11140": "Over"
+   }
+  },
+  "11142": {
+   "type": "totals",
+   "line": 168.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11142": "Over",
+    "11143": "Under"
+   }
+  },
+  "11144": {
+   "type": "totals",
+   "line": 169.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11145": "Under",
+    "11144": "Over"
+   }
+  },
+  "11146": {
+   "type": "totals",
+   "line": 170.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11147": "Under",
+    "11146": "Over"
+   }
+  },
+  "11148": {
+   "type": "totals",
+   "line": 171.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11149": "Under",
+    "11148": "Over"
+   }
+  },
+  "11150": {
+   "type": "totals",
+   "line": 172.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11151": "Under",
+    "11150": "Over"
+   }
+  },
+  "11152": {
+   "type": "totals",
+   "line": 173.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11153": "Under",
+    "11152": "Over"
+   }
+  },
+  "11154": {
+   "type": "totals",
+   "line": 174.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11154": "Over",
+    "11155": "Under"
+   }
+  },
+  "11156": {
+   "type": "totals",
+   "line": 175.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11157": "Under",
+    "11156": "Over"
+   }
+  },
+  "11158": {
+   "type": "totals",
+   "line": 176.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11159": "Under",
+    "11158": "Over"
+   }
+  },
+  "11160": {
+   "type": "totals",
+   "line": 177.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11160": "Over",
+    "11161": "Under"
+   }
+  },
+  "11162": {
+   "type": "totals",
+   "line": 178.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11163": "Under",
+    "11162": "Over"
+   }
+  },
+  "11164": {
+   "type": "totals",
+   "line": 179.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11165": "Under",
+    "11164": "Over"
+   }
+  },
+  "11166": {
+   "type": "totals",
+   "line": 180.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11166": "Over",
+    "11167": "Under"
+   }
+  },
+  "11168": {
+   "type": "totals",
+   "line": 181.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11169": "Under",
+    "11168": "Over"
+   }
+  },
+  "11170": {
+   "type": "totals",
+   "line": 182.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11171": "Under",
+    "11170": "Over"
+   }
+  },
+  "11172": {
+   "type": "totals",
+   "line": 183.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11173": "Under",
+    "11172": "Over"
+   }
+  },
+  "11174": {
+   "type": "totals",
+   "line": 184.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11175": "Under",
+    "11174": "Over"
+   }
+  },
+  "11176": {
+   "type": "totals",
+   "line": 185.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11176": "Over",
+    "11177": "Under"
+   }
+  },
+  "11178": {
+   "type": "totals",
+   "line": 186.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11179": "Under",
+    "11178": "Over"
+   }
+  },
+  "11180": {
+   "type": "totals",
+   "line": 187.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11180": "Over",
+    "11181": "Under"
+   }
+  },
+  "11182": {
+   "type": "totals",
+   "line": 188.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11182": "Over",
+    "11183": "Under"
+   }
+  },
+  "11184": {
+   "type": "totals",
+   "line": 189.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11185": "Under",
+    "11184": "Over"
+   }
+  },
+  "11186": {
+   "type": "totals",
+   "line": 190.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11186": "Over",
+    "11187": "Under"
+   }
+  },
+  "11188": {
+   "type": "totals",
+   "line": 191.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11188": "Over",
+    "11189": "Under"
+   }
+  },
+  "11190": {
+   "type": "totals",
+   "line": 192.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11190": "Over",
+    "11191": "Under"
+   }
+  },
+  "11192": {
+   "type": "totals",
+   "line": 193.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11193": "Under",
+    "11192": "Over"
+   }
+  },
+  "11194": {
+   "type": "totals",
+   "line": 194.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11194": "Over",
+    "11195": "Under"
+   }
+  },
+  "11196": {
+   "type": "totals",
+   "line": 195.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11197": "Under",
+    "11196": "Over"
+   }
+  },
+  "11198": {
+   "type": "totals",
+   "line": 196.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11198": "Over",
+    "11199": "Under"
+   }
+  },
+  "11200": {
+   "type": "totals",
+   "line": 197.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11201": "Under",
+    "11200": "Over"
+   }
+  },
+  "11202": {
+   "type": "totals",
+   "line": 198.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11203": "Under",
+    "11202": "Over"
+   }
+  },
+  "11204": {
+   "type": "totals",
+   "line": 199.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11205": "Under",
+    "11204": "Over"
+   }
+  },
+  "11206": {
+   "type": "totals",
+   "line": 200.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11206": "Over",
+    "11207": "Under"
+   }
+  },
+  "11208": {
+   "type": "totals",
+   "line": 201.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11209": "Under",
+    "11208": "Over"
+   }
+  },
+  "11210": {
+   "type": "totals",
+   "line": 202.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11211": "Under",
+    "11210": "Over"
+   }
+  },
+  "11212": {
+   "type": "totals",
+   "line": 203.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11212": "Over",
+    "11213": "Under"
+   }
+  },
+  "11214": {
+   "type": "totals",
+   "line": 204.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11214": "Over",
+    "11215": "Under"
+   }
+  },
+  "11216": {
+   "type": "totals",
+   "line": 205.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11217": "Under",
+    "11216": "Over"
+   }
+  },
+  "11218": {
+   "type": "totals",
+   "line": 206.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11218": "Over",
+    "11219": "Under"
+   }
+  },
+  "11220": {
+   "type": "totals",
+   "line": 207.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11221": "Under",
+    "11220": "Over"
+   }
+  },
+  "11222": {
+   "type": "totals",
+   "line": 208.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11223": "Under",
+    "11222": "Over"
+   }
+  },
+  "11224": {
+   "type": "totals",
+   "line": 209.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11225": "Under",
+    "11224": "Over"
+   }
+  },
+  "11226": {
+   "type": "totals",
+   "line": 210.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11227": "Under",
+    "11226": "Over"
+   }
+  },
+  "11228": {
+   "type": "totals",
+   "line": 211.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11229": "Under",
+    "11228": "Over"
+   }
+  },
+  "11230": {
+   "type": "totals",
+   "line": 212.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11230": "Over",
+    "11231": "Under"
+   }
+  },
+  "11232": {
+   "type": "totals",
+   "line": 213.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11233": "Under",
+    "11232": "Over"
+   }
+  },
+  "11234": {
+   "type": "totals",
+   "line": 214.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11235": "Under",
+    "11234": "Over"
+   }
+  },
+  "11236": {
+   "type": "totals",
+   "line": 215.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11236": "Over",
+    "11237": "Under"
+   }
+  },
+  "11238": {
+   "type": "totals",
+   "line": 216.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11239": "Under",
+    "11238": "Over"
+   }
+  },
+  "11240": {
+   "type": "totals",
+   "line": 217.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11241": "Under",
+    "11240": "Over"
+   }
+  },
+  "11242": {
+   "type": "totals",
+   "line": 218.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11243": "Under",
+    "11242": "Over"
+   }
+  },
+  "11244": {
+   "type": "totals",
+   "line": 219.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11245": "Under",
+    "11244": "Over"
+   }
+  },
+  "11246": {
+   "type": "totals",
+   "line": 220.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11247": "Under",
+    "11246": "Over"
+   }
+  },
+  "11248": {
+   "type": "totals",
+   "line": 221.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11249": "Under",
+    "11248": "Over"
+   }
+  },
+  "11250": {
+   "type": "totals",
+   "line": 222.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11251": "Under",
+    "11250": "Over"
+   }
+  },
+  "11252": {
+   "type": "totals",
+   "line": 223.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11252": "Over",
+    "11253": "Under"
+   }
+  },
+  "11254": {
+   "type": "totals",
+   "line": 224.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11254": "Over",
+    "11255": "Under"
+   }
+  },
+  "11256": {
+   "type": "totals",
+   "line": 225.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11257": "Under",
+    "11256": "Over"
+   }
+  },
+  "11258": {
+   "type": "totals",
+   "line": 226.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11258": "Over",
+    "11259": "Under"
+   }
+  },
+  "11260": {
+   "type": "totals",
+   "line": 227.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11260": "Over",
+    "11261": "Under"
+   }
+  },
+  "11262": {
+   "type": "totals",
+   "line": 228.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11263": "Under",
+    "11262": "Over"
+   }
+  },
+  "11264": {
+   "type": "totals",
+   "line": 229.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11264": "Over",
+    "11265": "Under"
+   }
+  },
+  "11266": {
+   "type": "totals",
+   "line": 230.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11267": "Under",
+    "11266": "Over"
+   }
+  },
+  "11268": {
+   "type": "totals",
+   "line": 231.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11269": "Under",
+    "11268": "Over"
+   }
+  },
+  "11270": {
+   "type": "totals",
+   "line": 232.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11270": "Over",
+    "11271": "Under"
+   }
+  },
+  "11272": {
+   "type": "totals",
+   "line": 233.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11272": "Over",
+    "11273": "Under"
+   }
+  },
+  "11274": {
+   "type": "totals",
+   "line": 234.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11275": "Under",
+    "11274": "Over"
+   }
+  },
+  "11276": {
+   "type": "totals",
+   "line": 235.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11277": "Under",
+    "11276": "Over"
+   }
+  },
+  "11278": {
+   "type": "totals",
+   "line": 236.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11279": "Under",
+    "11278": "Over"
+   }
+  },
+  "11280": {
+   "type": "totals",
+   "line": 237.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11281": "Under",
+    "11280": "Over"
+   }
+  },
+  "11282": {
+   "type": "totals",
+   "line": 238.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11283": "Under",
+    "11282": "Over"
+   }
+  },
+  "11284": {
+   "type": "totals",
+   "line": 239.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11285": "Under",
+    "11284": "Over"
+   }
+  },
+  "11286": {
+   "type": "totals",
+   "line": 240.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11286": "Over",
+    "11287": "Under"
+   }
+  },
+  "11288": {
+   "type": "totals",
+   "line": 241.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11289": "Under",
+    "11288": "Over"
+   }
+  },
+  "11290": {
+   "type": "totals",
+   "line": 242.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11290": "Over",
+    "11291": "Under"
+   }
+  },
+  "11292": {
+   "type": "totals",
+   "line": 243.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11292": "Over",
+    "11293": "Under"
+   }
+  },
+  "11294": {
+   "type": "totals",
+   "line": 244.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11295": "Under",
+    "11294": "Over"
+   }
+  },
+  "11296": {
+   "type": "totals",
+   "line": 245.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11297": "Under",
+    "11296": "Over"
+   }
+  },
+  "11298": {
+   "type": "totals",
+   "line": 246.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11298": "Over",
+    "11299": "Under"
+   }
+  },
+  "11300": {
+   "type": "totals",
+   "line": 247.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11300": "Over",
+    "11301": "Under"
+   }
+  },
+  "11302": {
+   "type": "totals",
+   "line": 248.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11302": "Over",
+    "11303": "Under"
+   }
+  },
+  "11304": {
+   "type": "totals",
+   "line": 249.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11305": "Under",
+    "11304": "Over"
+   }
+  },
+  "11306": {
+   "type": "totals",
+   "line": 250.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11307": "Under",
+    "11306": "Over"
+   }
+  },
+  "11308": {
+   "type": "totals",
+   "line": 251.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11309": "Under",
+    "11308": "Over"
+   }
+  },
+  "11310": {
+   "type": "totals",
+   "line": 252.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11310": "Over",
+    "11311": "Under"
+   }
+  },
+  "11312": {
+   "type": "totals",
+   "line": 253.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11312": "Over",
+    "11313": "Under"
+   }
+  },
+  "11314": {
+   "type": "totals",
+   "line": 254.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11314": "Over",
+    "11315": "Under"
+   }
+  },
+  "11316": {
+   "type": "totals",
+   "line": 255.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11316": "Over",
+    "11317": "Under"
+   }
+  },
+  "11318": {
+   "type": "totals",
+   "line": 256.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11319": "Under",
+    "11318": "Over"
+   }
+  },
+  "11320": {
+   "type": "totals",
+   "line": 257.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11320": "Over",
+    "11321": "Under"
+   }
+  },
+  "11322": {
+   "type": "totals",
+   "line": 258.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11323": "Under",
+    "11322": "Over"
+   }
+  },
+  "11324": {
+   "type": "totals",
+   "line": 259.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "11325": "Under",
+    "11324": "Over"
+   }
+  },
+  "11356": {
+   "type": "spreads",
+   "line": -25.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11357": "2",
+    "11356": "1"
+   }
+  },
+  "11358": {
+   "type": "spreads",
+   "line": -24.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11359": "2",
+    "11358": "1"
+   }
+  },
+  "11360": {
+   "type": "spreads",
+   "line": -24.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11361": "2",
+    "11360": "1"
+   }
+  },
+  "11362": {
+   "type": "spreads",
+   "line": -23.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11363": "2",
+    "11362": "1"
+   }
+  },
+  "11364": {
+   "type": "spreads",
+   "line": -23.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11364": "1",
+    "11365": "2"
+   }
+  },
+  "11366": {
+   "type": "spreads",
+   "line": -22.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11367": "2",
+    "11366": "1"
+   }
+  },
+  "11368": {
+   "type": "spreads",
+   "line": -22.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11368": "1",
+    "11369": "2"
+   }
+  },
+  "11370": {
+   "type": "spreads",
+   "line": -21.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11371": "2",
+    "11370": "1"
+   }
+  },
+  "11372": {
+   "type": "spreads",
+   "line": -21.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11373": "2",
+    "11372": "1"
+   }
+  },
+  "11374": {
+   "type": "spreads",
+   "line": -20.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11375": "2",
+    "11374": "1"
+   }
+  },
+  "11376": {
+   "type": "spreads",
+   "line": -20.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11377": "2",
+    "11376": "1"
+   }
+  },
+  "11378": {
+   "type": "spreads",
+   "line": -19.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11379": "2",
+    "11378": "1"
+   }
+  },
+  "11380": {
+   "type": "spreads",
+   "line": -19.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11381": "2",
+    "11380": "1"
+   }
+  },
+  "11382": {
+   "type": "spreads",
+   "line": -18.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11382": "1",
+    "11383": "2"
+   }
+  },
+  "11384": {
+   "type": "spreads",
+   "line": -18.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11384": "1",
+    "11385": "2"
+   }
+  },
+  "11386": {
+   "type": "spreads",
+   "line": -17.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11387": "2",
+    "11386": "1"
+   }
+  },
+  "11388": {
+   "type": "spreads",
+   "line": -17.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11389": "2",
+    "11388": "1"
+   }
+  },
+  "11390": {
+   "type": "spreads",
+   "line": -16.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11391": "2",
+    "11390": "1"
+   }
+  },
+  "11392": {
+   "type": "spreads",
+   "line": -16.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11392": "1",
+    "11393": "2"
+   }
+  },
+  "11394": {
+   "type": "spreads",
+   "line": -15.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11394": "1",
+    "11395": "2"
+   }
+  },
+  "11396": {
+   "type": "spreads",
+   "line": -15.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11397": "2",
+    "11396": "1"
+   }
+  },
+  "11398": {
+   "type": "spreads",
+   "line": -14.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11398": "1",
+    "11399": "2"
+   }
+  },
+  "11400": {
+   "type": "spreads",
+   "line": -14.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11400": "1",
+    "11401": "2"
+   }
+  },
+  "11402": {
+   "type": "spreads",
+   "line": -13.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11402": "1",
+    "11403": "2"
+   }
+  },
+  "11404": {
+   "type": "spreads",
+   "line": -13.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11404": "1",
+    "11405": "2"
+   }
+  },
+  "11406": {
+   "type": "spreads",
+   "line": -12.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11406": "1",
+    "11407": "2"
+   }
+  },
+  "11408": {
+   "type": "spreads",
+   "line": -12.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11409": "2",
+    "11408": "1"
+   }
+  },
+  "11410": {
+   "type": "spreads",
+   "line": -11.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11411": "2",
+    "11410": "1"
+   }
+  },
+  "11412": {
+   "type": "spreads",
+   "line": -11.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11412": "1",
+    "11413": "2"
+   }
+  },
+  "11414": {
+   "type": "spreads",
+   "line": -10.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11415": "2",
+    "11414": "1"
+   }
+  },
+  "11416": {
+   "type": "spreads",
+   "line": -10.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11416": "1",
+    "11417": "2"
+   }
+  },
+  "11418": {
+   "type": "spreads",
+   "line": -9.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11419": "2",
+    "11418": "1"
+   }
+  },
+  "11420": {
+   "type": "spreads",
+   "line": -9.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11421": "2",
+    "11420": "1"
+   }
+  },
+  "11422": {
+   "type": "spreads",
+   "line": -8.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11423": "2",
+    "11422": "1"
+   }
+  },
+  "11424": {
+   "type": "spreads",
+   "line": -8.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11425": "2",
+    "11424": "1"
+   }
+  },
+  "11426": {
+   "type": "spreads",
+   "line": -7.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11427": "2",
+    "11426": "1"
+   }
+  },
+  "11428": {
+   "type": "spreads",
+   "line": -7.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11429": "2",
+    "11428": "1"
+   }
+  },
+  "11430": {
+   "type": "spreads",
+   "line": -6.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11430": "1",
+    "11431": "2"
+   }
+  },
+  "11432": {
+   "type": "spreads",
+   "line": -6.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11433": "2",
+    "11432": "1"
+   }
+  },
+  "11434": {
+   "type": "spreads",
+   "line": -5.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11434": "1",
+    "11435": "2"
+   }
+  },
+  "11436": {
+   "type": "spreads",
+   "line": -5.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11436": "1",
+    "11437": "2"
+   }
+  },
+  "11438": {
+   "type": "spreads",
+   "line": -4.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11438": "1",
+    "11439": "2"
+   }
+  },
+  "11440": {
+   "type": "spreads",
+   "line": -4.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11440": "1",
+    "11441": "2"
+   }
+  },
+  "11442": {
+   "type": "spreads",
+   "line": -3.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11443": "2",
+    "11442": "1"
+   }
+  },
+  "11444": {
+   "type": "spreads",
+   "line": -3.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11444": "1",
+    "11445": "2"
+   }
+  },
+  "11446": {
+   "type": "spreads",
+   "line": -2.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11447": "2",
+    "11446": "1"
+   }
+  },
+  "11448": {
+   "type": "spreads",
+   "line": -2.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11448": "1",
+    "11449": "2"
+   }
+  },
+  "11450": {
+   "type": "spreads",
+   "line": -1.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11450": "1",
+    "11451": "2"
+   }
+  },
+  "11452": {
+   "type": "spreads",
+   "line": -1.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11452": "1",
+    "11453": "2"
+   }
+  },
+  "11454": {
+   "type": "spreads",
+   "line": -0.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11455": "2",
+    "11454": "1"
+   }
+  },
+  "11456": {
+   "type": "spreads",
+   "line": 0.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11456": "1",
+    "11457": "2"
+   }
+  },
+  "11458": {
+   "type": "spreads",
+   "line": 0.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11458": "1",
+    "11459": "2"
+   }
+  },
+  "11460": {
+   "type": "spreads",
+   "line": 1.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11460": "1",
+    "11461": "2"
+   }
+  },
+  "11462": {
+   "type": "spreads",
+   "line": 1.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11462": "1",
+    "11463": "2"
+   }
+  },
+  "11464": {
+   "type": "spreads",
+   "line": 2.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11464": "1",
+    "11465": "2"
+   }
+  },
+  "11466": {
+   "type": "spreads",
+   "line": 2.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11467": "2",
+    "11466": "1"
+   }
+  },
+  "11468": {
+   "type": "spreads",
+   "line": 3.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11468": "1",
+    "11469": "2"
+   }
+  },
+  "11470": {
+   "type": "spreads",
+   "line": 3.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11471": "2",
+    "11470": "1"
+   }
+  },
+  "11472": {
+   "type": "spreads",
+   "line": 4.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11473": "2",
+    "11472": "1"
+   }
+  },
+  "11474": {
+   "type": "spreads",
+   "line": 4.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11475": "2",
+    "11474": "1"
+   }
+  },
+  "11476": {
+   "type": "spreads",
+   "line": 5.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11477": "2",
+    "11476": "1"
+   }
+  },
+  "11478": {
+   "type": "spreads",
+   "line": 5.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11478": "1",
+    "11479": "2"
+   }
+  },
+  "11480": {
+   "type": "spreads",
+   "line": 6.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11481": "2",
+    "11480": "1"
+   }
+  },
+  "11482": {
+   "type": "spreads",
+   "line": 6.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11483": "2",
+    "11482": "1"
+   }
+  },
+  "11484": {
+   "type": "spreads",
+   "line": 7.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11484": "1",
+    "11485": "2"
+   }
+  },
+  "11486": {
+   "type": "spreads",
+   "line": 7.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11486": "1",
+    "11487": "2"
+   }
+  },
+  "11488": {
+   "type": "spreads",
+   "line": 8.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11488": "1",
+    "11489": "2"
+   }
+  },
+  "11490": {
+   "type": "spreads",
+   "line": 8.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11491": "2",
+    "11490": "1"
+   }
+  },
+  "11492": {
+   "type": "spreads",
+   "line": 9.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11493": "2",
+    "11492": "1"
+   }
+  },
+  "11494": {
+   "type": "spreads",
+   "line": 9.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11494": "1",
+    "11495": "2"
+   }
+  },
+  "11496": {
+   "type": "spreads",
+   "line": 10.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11496": "1",
+    "11497": "2"
+   }
+  },
+  "11498": {
+   "type": "spreads",
+   "line": 10.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11499": "2",
+    "11498": "1"
+   }
+  },
+  "11500": {
+   "type": "spreads",
+   "line": 11.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11500": "1",
+    "11501": "2"
+   }
+  },
+  "11502": {
+   "type": "spreads",
+   "line": 11.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11502": "1",
+    "11503": "2"
+   }
+  },
+  "11504": {
+   "type": "spreads",
+   "line": 12.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11505": "2",
+    "11504": "1"
+   }
+  },
+  "11506": {
+   "type": "spreads",
+   "line": 12.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11507": "2",
+    "11506": "1"
+   }
+  },
+  "11508": {
+   "type": "spreads",
+   "line": 13.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11508": "1",
+    "11509": "2"
+   }
+  },
+  "11510": {
+   "type": "spreads",
+   "line": 13.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11511": "2",
+    "11510": "1"
+   }
+  },
+  "11512": {
+   "type": "spreads",
+   "line": 14.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11512": "1",
+    "11513": "2"
+   }
+  },
+  "11514": {
+   "type": "spreads",
+   "line": 14.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11515": "2",
+    "11514": "1"
+   }
+  },
+  "11516": {
+   "type": "spreads",
+   "line": 15.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11516": "1",
+    "11517": "2"
+   }
+  },
+  "11518": {
+   "type": "spreads",
+   "line": 15.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11519": "2",
+    "11518": "1"
+   }
+  },
+  "11520": {
+   "type": "spreads",
+   "line": 16.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11521": "2",
+    "11520": "1"
+   }
+  },
+  "11522": {
+   "type": "spreads",
+   "line": 16.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11522": "1",
+    "11523": "2"
+   }
+  },
+  "11524": {
+   "type": "spreads",
+   "line": 17.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11525": "2",
+    "11524": "1"
+   }
+  },
+  "11526": {
+   "type": "spreads",
+   "line": 17.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11527": "2",
+    "11526": "1"
+   }
+  },
+  "11528": {
+   "type": "spreads",
+   "line": 18.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11528": "1",
+    "11529": "2"
+   }
+  },
+  "11530": {
+   "type": "spreads",
+   "line": 18.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11531": "2",
+    "11530": "1"
+   }
+  },
+  "11532": {
+   "type": "spreads",
+   "line": 19.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11533": "2",
+    "11532": "1"
+   }
+  },
+  "11534": {
+   "type": "spreads",
+   "line": 19.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11534": "1",
+    "11535": "2"
+   }
+  },
+  "11536": {
+   "type": "spreads",
+   "line": 20.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11536": "1",
+    "11537": "2"
+   }
+  },
+  "11538": {
+   "type": "spreads",
+   "line": 20.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11539": "2",
+    "11538": "1"
+   }
+  },
+  "11540": {
+   "type": "spreads",
+   "line": 21.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11540": "1",
+    "11541": "2"
+   }
+  },
+  "11542": {
+   "type": "spreads",
+   "line": 21.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11542": "1",
+    "11543": "2"
+   }
+  },
+  "11544": {
+   "type": "spreads",
+   "line": 22.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11545": "2",
+    "11544": "1"
+   }
+  },
+  "11546": {
+   "type": "spreads",
+   "line": 22.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11546": "1",
+    "11547": "2"
+   }
+  },
+  "11548": {
+   "type": "spreads",
+   "line": 23.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11548": "1",
+    "11549": "2"
+   }
+  },
+  "11550": {
+   "type": "spreads",
+   "line": 23.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11551": "2",
+    "11550": "1"
+   }
+  },
+  "11552": {
+   "type": "spreads",
+   "line": 24.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11552": "1",
+    "11553": "2"
+   }
+  },
+  "11554": {
+   "type": "spreads",
+   "line": 24.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11554": "1",
+    "11555": "2"
+   }
+  },
+  "11556": {
+   "type": "spreads",
+   "line": 25.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "11557": "2",
+    "11556": "1"
+   }
+  },
+  "112878": {
+   "type": "totals",
+   "line": 100.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112878": "Over",
+    "112879": "Under"
+   }
+  },
+  "112880": {
+   "type": "totals",
+   "line": 101.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112880": "Over",
+    "112881": "Under"
+   }
+  },
+  "112882": {
+   "type": "totals",
+   "line": 102.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112883": "Under",
+    "112882": "Over"
+   }
+  },
+  "112884": {
+   "type": "totals",
+   "line": 103.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112885": "Under",
+    "112884": "Over"
+   }
+  },
+  "112886": {
+   "type": "totals",
+   "line": 104.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112887": "Under",
+    "112886": "Over"
+   }
+  },
+  "112888": {
+   "type": "totals",
+   "line": 105.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112888": "Over",
+    "112889": "Under"
+   }
+  },
+  "112890": {
+   "type": "totals",
+   "line": 106.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112891": "Under",
+    "112890": "Over"
+   }
+  },
+  "112892": {
+   "type": "totals",
+   "line": 107.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112893": "Under",
+    "112892": "Over"
+   }
+  },
+  "112894": {
+   "type": "totals",
+   "line": 108.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112895": "Under",
+    "112894": "Over"
+   }
+  },
+  "112896": {
+   "type": "totals",
+   "line": 109.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112897": "Under",
+    "112896": "Over"
+   }
+  },
+  "112898": {
+   "type": "totals",
+   "line": 110.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112898": "Over",
+    "112899": "Under"
+   }
+  },
+  "112900": {
+   "type": "totals",
+   "line": 111.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112900": "Over",
+    "112901": "Under"
+   }
+  },
+  "112902": {
+   "type": "totals",
+   "line": 112.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112903": "Under",
+    "112902": "Over"
+   }
+  },
+  "112904": {
+   "type": "totals",
+   "line": 113.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112905": "Under",
+    "112904": "Over"
+   }
+  },
+  "112906": {
+   "type": "totals",
+   "line": 114.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112907": "Under",
+    "112906": "Over"
+   }
+  },
+  "112908": {
+   "type": "totals",
+   "line": 115.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112908": "Over",
+    "112909": "Under"
+   }
+  },
+  "112910": {
+   "type": "totals",
+   "line": 116.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112911": "Under",
+    "112910": "Over"
+   }
+  },
+  "112912": {
+   "type": "totals",
+   "line": 117.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112913": "Under",
+    "112912": "Over"
+   }
+  },
+  "112914": {
+   "type": "totals",
+   "line": 118.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112914": "Over",
+    "112915": "Under"
+   }
+  },
+  "112916": {
+   "type": "totals",
+   "line": 119.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112917": "Under",
+    "112916": "Over"
+   }
+  },
+  "112918": {
+   "type": "totals",
+   "line": 120.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112919": "Under",
+    "112918": "Over"
+   }
+  },
+  "112920": {
+   "type": "totals",
+   "line": 121.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112921": "Under",
+    "112920": "Over"
+   }
+  },
+  "112922": {
+   "type": "totals",
+   "line": 122.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112923": "Under",
+    "112922": "Over"
+   }
+  },
+  "112924": {
+   "type": "totals",
+   "line": 123.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112924": "Over",
+    "112925": "Under"
+   }
+  },
+  "112926": {
+   "type": "totals",
+   "line": 124.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112927": "Under",
+    "112926": "Over"
+   }
+  },
+  "112928": {
+   "type": "totals",
+   "line": 125.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112928": "Over",
+    "112929": "Under"
+   }
+  },
+  "112930": {
+   "type": "totals",
+   "line": 126.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112930": "Over",
+    "112931": "Under"
+   }
+  },
+  "112932": {
+   "type": "totals",
+   "line": 127.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112932": "Over",
+    "112933": "Under"
+   }
+  },
+  "112934": {
+   "type": "totals",
+   "line": 128.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112935": "Under",
+    "112934": "Over"
+   }
+  },
+  "112936": {
+   "type": "totals",
+   "line": 129.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112937": "Under",
+    "112936": "Over"
+   }
+  },
+  "112938": {
+   "type": "totals",
+   "line": 130.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112938": "Over",
+    "112939": "Under"
+   }
+  },
+  "112940": {
+   "type": "totals",
+   "line": 131.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112941": "Under",
+    "112940": "Over"
+   }
+  },
+  "112942": {
+   "type": "totals",
+   "line": 132.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112943": "Under",
+    "112942": "Over"
+   }
+  },
+  "112944": {
+   "type": "totals",
+   "line": 133.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112944": "Over",
+    "112945": "Under"
+   }
+  },
+  "112946": {
+   "type": "totals",
+   "line": 134.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112946": "Over",
+    "112947": "Under"
+   }
+  },
+  "112948": {
+   "type": "totals",
+   "line": 135.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112949": "Under",
+    "112948": "Over"
+   }
+  },
+  "112950": {
+   "type": "totals",
+   "line": 136.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112951": "Under",
+    "112950": "Over"
+   }
+  },
+  "112952": {
+   "type": "totals",
+   "line": 137.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112952": "Over",
+    "112953": "Under"
+   }
+  },
+  "112954": {
+   "type": "totals",
+   "line": 138.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112955": "Under",
+    "112954": "Over"
+   }
+  },
+  "112956": {
+   "type": "totals",
+   "line": 139.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112957": "Under",
+    "112956": "Over"
+   }
+  },
+  "112958": {
+   "type": "totals",
+   "line": 140.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112959": "Under",
+    "112958": "Over"
+   }
+  },
+  "112960": {
+   "type": "totals",
+   "line": 141.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112961": "Under",
+    "112960": "Over"
+   }
+  },
+  "112962": {
+   "type": "totals",
+   "line": 142.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112962": "Over",
+    "112963": "Under"
+   }
+  },
+  "112964": {
+   "type": "totals",
+   "line": 143.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112964": "Over",
+    "112965": "Under"
+   }
+  },
+  "112966": {
+   "type": "totals",
+   "line": 144.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112966": "Over",
+    "112967": "Under"
+   }
+  },
+  "112968": {
+   "type": "totals",
+   "line": 145.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112969": "Under",
+    "112968": "Over"
+   }
+  },
+  "112970": {
+   "type": "totals",
+   "line": 146.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112970": "Over",
+    "112971": "Under"
+   }
+  },
+  "112972": {
+   "type": "totals",
+   "line": 147.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112972": "Over",
+    "112973": "Under"
+   }
+  },
+  "112974": {
+   "type": "totals",
+   "line": 148.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112974": "Over",
+    "112975": "Under"
+   }
+  },
+  "112976": {
+   "type": "totals",
+   "line": 149.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112976": "Over",
+    "112977": "Under"
+   }
+  },
+  "112978": {
+   "type": "totals",
+   "line": 150.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112978": "Over",
+    "112979": "Under"
+   }
+  },
+  "112980": {
+   "type": "totals",
+   "line": 151.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112980": "Over",
+    "112981": "Under"
+   }
+  },
+  "112982": {
+   "type": "totals",
+   "line": 152.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112982": "Over",
+    "112983": "Under"
+   }
+  },
+  "112984": {
+   "type": "totals",
+   "line": 153.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112984": "Over",
+    "112985": "Under"
+   }
+  },
+  "112986": {
+   "type": "totals",
+   "line": 154.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112986": "Over",
+    "112987": "Under"
+   }
+  },
+  "112988": {
+   "type": "totals",
+   "line": 155.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112989": "Under",
+    "112988": "Over"
+   }
+  },
+  "112990": {
+   "type": "totals",
+   "line": 156.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112991": "Under",
+    "112990": "Over"
+   }
+  },
+  "112992": {
+   "type": "totals",
+   "line": 157.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112992": "Over",
+    "112993": "Under"
+   }
+  },
+  "112994": {
+   "type": "totals",
+   "line": 158.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112994": "Over",
+    "112995": "Under"
+   }
+  },
+  "112996": {
+   "type": "totals",
+   "line": 159.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112996": "Over",
+    "112997": "Under"
+   }
+  },
+  "112998": {
+   "type": "totals",
+   "line": 160.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "112999": "Under",
+    "112998": "Over"
+   }
+  },
+  "113000": {
+   "type": "totals",
+   "line": 161.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113001": "Under",
+    "113000": "Over"
+   }
+  },
+  "113002": {
+   "type": "totals",
+   "line": 162.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113002": "Over",
+    "113003": "Under"
+   }
+  },
+  "113004": {
+   "type": "totals",
+   "line": 163.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113005": "Under",
+    "113004": "Over"
+   }
+  },
+  "113006": {
+   "type": "totals",
+   "line": 164.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113006": "Over",
+    "113007": "Under"
+   }
+  },
+  "113008": {
+   "type": "totals",
+   "line": 165.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113009": "Under",
+    "113008": "Over"
+   }
+  },
+  "113010": {
+   "type": "totals",
+   "line": 166.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113011": "Under",
+    "113010": "Over"
+   }
+  },
+  "113012": {
+   "type": "totals",
+   "line": 167.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113013": "Under",
+    "113012": "Over"
+   }
+  },
+  "113014": {
+   "type": "totals",
+   "line": 168.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113015": "Under",
+    "113014": "Over"
+   }
+  },
+  "113016": {
+   "type": "totals",
+   "line": 169.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113016": "Over",
+    "113017": "Under"
+   }
+  },
+  "113018": {
+   "type": "totals",
+   "line": 170.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113019": "Under",
+    "113018": "Over"
+   }
+  },
+  "113020": {
+   "type": "totals",
+   "line": 171.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113020": "Over",
+    "113021": "Under"
+   }
+  },
+  "113022": {
+   "type": "totals",
+   "line": 172.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113022": "Over",
+    "113023": "Under"
+   }
+  },
+  "113024": {
+   "type": "totals",
+   "line": 173.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113024": "Over",
+    "113025": "Under"
+   }
+  },
+  "113026": {
+   "type": "totals",
+   "line": 174.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113027": "Under",
+    "113026": "Over"
+   }
+  },
+  "113028": {
+   "type": "totals",
+   "line": 175.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113029": "Under",
+    "113028": "Over"
+   }
+  },
+  "113030": {
+   "type": "totals",
+   "line": 176.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113031": "Under",
+    "113030": "Over"
+   }
+  },
+  "113032": {
+   "type": "totals",
+   "line": 177.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113033": "Under",
+    "113032": "Over"
+   }
+  },
+  "113034": {
+   "type": "totals",
+   "line": 178.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113035": "Under",
+    "113034": "Over"
+   }
+  },
+  "113036": {
+   "type": "totals",
+   "line": 179.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113036": "Over",
+    "113037": "Under"
+   }
+  },
+  "113038": {
+   "type": "totals",
+   "line": 180.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113038": "Over",
+    "113039": "Under"
+   }
+  },
+  "113040": {
+   "type": "totals",
+   "line": 181.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113041": "Under",
+    "113040": "Over"
+   }
+  },
+  "113042": {
+   "type": "totals",
+   "line": 182.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113042": "Over",
+    "113043": "Under"
+   }
+  },
+  "113044": {
+   "type": "totals",
+   "line": 183.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113045": "Under",
+    "113044": "Over"
+   }
+  },
+  "113046": {
+   "type": "totals",
+   "line": 184.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113047": "Under",
+    "113046": "Over"
+   }
+  },
+  "113048": {
+   "type": "totals",
+   "line": 185.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113048": "Over",
+    "113049": "Under"
+   }
+  },
+  "113050": {
+   "type": "totals",
+   "line": 186.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113050": "Over",
+    "113051": "Under"
+   }
+  },
+  "113052": {
+   "type": "totals",
+   "line": 187.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113052": "Over",
+    "113053": "Under"
+   }
+  },
+  "113054": {
+   "type": "totals",
+   "line": 188.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113055": "Under",
+    "113054": "Over"
+   }
+  },
+  "113056": {
+   "type": "totals",
+   "line": 189.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113056": "Over",
+    "113057": "Under"
+   }
+  },
+  "113058": {
+   "type": "totals",
+   "line": 190.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113058": "Over",
+    "113059": "Under"
+   }
+  },
+  "113060": {
+   "type": "totals",
+   "line": 191.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113061": "Under",
+    "113060": "Over"
+   }
+  },
+  "113062": {
+   "type": "totals",
+   "line": 192.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113063": "Under",
+    "113062": "Over"
+   }
+  },
+  "113064": {
+   "type": "totals",
+   "line": 193.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113064": "Over",
+    "113065": "Under"
+   }
+  },
+  "113066": {
+   "type": "totals",
+   "line": 194.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113067": "Under",
+    "113066": "Over"
+   }
+  },
+  "113068": {
+   "type": "totals",
+   "line": 195.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113068": "Over",
+    "113069": "Under"
+   }
+  },
+  "113070": {
+   "type": "totals",
+   "line": 196.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113071": "Under",
+    "113070": "Over"
+   }
+  },
+  "113072": {
+   "type": "totals",
+   "line": 197.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113073": "Under",
+    "113072": "Over"
+   }
+  },
+  "113074": {
+   "type": "totals",
+   "line": 198.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113074": "Over",
+    "113075": "Under"
+   }
+  },
+  "113076": {
+   "type": "totals",
+   "line": 199.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113076": "Over",
+    "113077": "Under"
+   }
+  },
+  "113078": {
+   "type": "totals",
+   "line": 200.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113079": "Under",
+    "113078": "Over"
+   }
+  },
+  "113080": {
+   "type": "totals",
+   "line": 201.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113080": "Over",
+    "113081": "Under"
+   }
+  },
+  "113082": {
+   "type": "totals",
+   "line": 202.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113083": "Under",
+    "113082": "Over"
+   }
+  },
+  "113084": {
+   "type": "totals",
+   "line": 203.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113085": "Under",
+    "113084": "Over"
+   }
+  },
+  "113086": {
+   "type": "totals",
+   "line": 204.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113086": "Over",
+    "113087": "Under"
+   }
+  },
+  "113088": {
+   "type": "totals",
+   "line": 205.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113089": "Under",
+    "113088": "Over"
+   }
+  },
+  "113090": {
+   "type": "totals",
+   "line": 206.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113090": "Over",
+    "113091": "Under"
+   }
+  },
+  "113092": {
+   "type": "totals",
+   "line": 207.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113093": "Under",
+    "113092": "Over"
+   }
+  },
+  "113094": {
+   "type": "totals",
+   "line": 208.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113094": "Over",
+    "113095": "Under"
+   }
+  },
+  "113096": {
+   "type": "totals",
+   "line": 209.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113096": "Over",
+    "113097": "Under"
+   }
+  },
+  "113098": {
+   "type": "totals",
+   "line": 210.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113098": "Over",
+    "113099": "Under"
+   }
+  },
+  "113100": {
+   "type": "totals",
+   "line": 211.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113100": "Over",
+    "113101": "Under"
+   }
+  },
+  "113102": {
+   "type": "totals",
+   "line": 212.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113103": "Under",
+    "113102": "Over"
+   }
+  },
+  "113104": {
+   "type": "totals",
+   "line": 213.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113104": "Over",
+    "113105": "Under"
+   }
+  },
+  "113106": {
+   "type": "totals",
+   "line": 214.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113107": "Under",
+    "113106": "Over"
+   }
+  },
+  "113108": {
+   "type": "totals",
+   "line": 215.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113109": "Under",
+    "113108": "Over"
+   }
+  },
+  "113110": {
+   "type": "totals",
+   "line": 216.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113111": "Under",
+    "113110": "Over"
+   }
+  },
+  "113112": {
+   "type": "totals",
+   "line": 217.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113113": "Under",
+    "113112": "Over"
+   }
+  },
+  "113114": {
+   "type": "totals",
+   "line": 218.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113114": "Over",
+    "113115": "Under"
+   }
+  },
+  "113116": {
+   "type": "totals",
+   "line": 219.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113116": "Over",
+    "113117": "Under"
+   }
+  },
+  "113118": {
+   "type": "totals",
+   "line": 220.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113118": "Over",
+    "113119": "Under"
+   }
+  },
+  "113120": {
+   "type": "totals",
+   "line": 221.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113121": "Under",
+    "113120": "Over"
+   }
+  },
+  "113122": {
+   "type": "totals",
+   "line": 222.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113123": "Under",
+    "113122": "Over"
+   }
+  },
+  "113124": {
+   "type": "totals",
+   "line": 223.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113125": "Under",
+    "113124": "Over"
+   }
+  },
+  "113126": {
+   "type": "totals",
+   "line": 224.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113127": "Under",
+    "113126": "Over"
+   }
+  },
+  "113128": {
+   "type": "totals",
+   "line": 225.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113129": "Under",
+    "113128": "Over"
+   }
+  },
+  "113130": {
+   "type": "totals",
+   "line": 226.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113130": "Over",
+    "113131": "Under"
+   }
+  },
+  "113132": {
+   "type": "totals",
+   "line": 227.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113132": "Over",
+    "113133": "Under"
+   }
+  },
+  "113134": {
+   "type": "totals",
+   "line": 228.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113135": "Under",
+    "113134": "Over"
+   }
+  },
+  "113136": {
+   "type": "totals",
+   "line": 229.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113137": "Under",
+    "113136": "Over"
+   }
+  },
+  "113138": {
+   "type": "totals",
+   "line": 230.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113139": "Under",
+    "113138": "Over"
+   }
+  },
+  "113140": {
+   "type": "totals",
+   "line": 231.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113141": "Under",
+    "113140": "Over"
+   }
+  },
+  "113142": {
+   "type": "totals",
+   "line": 232.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113142": "Over",
+    "113143": "Under"
+   }
+  },
+  "113144": {
+   "type": "totals",
+   "line": 233.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113144": "Over",
+    "113145": "Under"
+   }
+  },
+  "113146": {
+   "type": "totals",
+   "line": 234.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113146": "Over",
+    "113147": "Under"
+   }
+  },
+  "113148": {
+   "type": "totals",
+   "line": 235.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113148": "Over",
+    "113149": "Under"
+   }
+  },
+  "113150": {
+   "type": "totals",
+   "line": 236.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113150": "Over",
+    "113151": "Under"
+   }
+  },
+  "113152": {
+   "type": "totals",
+   "line": 237.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113152": "Over",
+    "113153": "Under"
+   }
+  },
+  "113154": {
+   "type": "totals",
+   "line": 238.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113155": "Under",
+    "113154": "Over"
+   }
+  },
+  "113156": {
+   "type": "totals",
+   "line": 239.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113157": "Under",
+    "113156": "Over"
+   }
+  },
+  "113158": {
+   "type": "totals",
+   "line": 240.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113158": "Over",
+    "113159": "Under"
+   }
+  },
+  "113160": {
+   "type": "totals",
+   "line": 241.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113161": "Under",
+    "113160": "Over"
+   }
+  },
+  "113162": {
+   "type": "totals",
+   "line": 242.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113163": "Under",
+    "113162": "Over"
+   }
+  },
+  "113164": {
+   "type": "totals",
+   "line": 243.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113164": "Over",
+    "113165": "Under"
+   }
+  },
+  "113166": {
+   "type": "totals",
+   "line": 244.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113167": "Under",
+    "113166": "Over"
+   }
+  },
+  "113168": {
+   "type": "totals",
+   "line": 245.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113168": "Over",
+    "113169": "Under"
+   }
+  },
+  "113170": {
+   "type": "totals",
+   "line": 246.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113170": "Over",
+    "113171": "Under"
+   }
+  },
+  "113172": {
+   "type": "totals",
+   "line": 247.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113172": "Over",
+    "113173": "Under"
+   }
+  },
+  "113174": {
+   "type": "totals",
+   "line": 248.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113175": "Under",
+    "113174": "Over"
+   }
+  },
+  "113176": {
+   "type": "totals",
+   "line": 249.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113176": "Over",
+    "113177": "Under"
+   }
+  },
+  "113178": {
+   "type": "totals",
+   "line": 250.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113178": "Over",
+    "113179": "Under"
+   }
+  },
+  "113180": {
+   "type": "totals",
+   "line": 251.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113181": "Under",
+    "113180": "Over"
+   }
+  },
+  "113182": {
+   "type": "totals",
+   "line": 252.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113182": "Over",
+    "113183": "Under"
+   }
+  },
+  "113184": {
+   "type": "totals",
+   "line": 253.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113185": "Under",
+    "113184": "Over"
+   }
+  },
+  "113186": {
+   "type": "totals",
+   "line": 254.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113186": "Over",
+    "113187": "Under"
+   }
+  },
+  "113188": {
+   "type": "totals",
+   "line": 255.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113189": "Under",
+    "113188": "Over"
+   }
+  },
+  "113190": {
+   "type": "totals",
+   "line": 256.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113190": "Over",
+    "113191": "Under"
+   }
+  },
+  "113192": {
+   "type": "totals",
+   "line": 257.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113193": "Under",
+    "113192": "Over"
+   }
+  },
+  "113194": {
+   "type": "totals",
+   "line": 258.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113195": "Under",
+    "113194": "Over"
+   }
+  },
+  "113196": {
+   "type": "totals",
+   "line": 259.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113197": "Under",
+    "113196": "Over"
+   }
+  },
+  "113198": {
+   "type": "totals",
+   "line": 260.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113198": "Over",
+    "113199": "Under"
+   }
+  },
+  "113200": {
+   "type": "totals",
+   "line": 260.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113201": "Under",
+    "113200": "Over"
+   }
+  },
+  "113202": {
+   "type": "totals",
+   "line": 261.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113202": "Over",
+    "113203": "Under"
+   }
+  },
+  "113204": {
+   "type": "totals",
+   "line": 261.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113204": "Over",
+    "113205": "Under"
+   }
+  },
+  "113206": {
+   "type": "totals",
+   "line": 262.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113207": "Under",
+    "113206": "Over"
+   }
+  },
+  "113208": {
+   "type": "totals",
+   "line": 262.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113208": "Over",
+    "113209": "Under"
+   }
+  },
+  "113210": {
+   "type": "totals",
+   "line": 263.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113210": "Over",
+    "113211": "Under"
+   }
+  },
+  "113212": {
+   "type": "totals",
+   "line": 263.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113213": "Under",
+    "113212": "Over"
+   }
+  },
+  "113214": {
+   "type": "totals",
+   "line": 264.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113215": "Under",
+    "113214": "Over"
+   }
+  },
+  "113216": {
+   "type": "totals",
+   "line": 264.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113217": "Under",
+    "113216": "Over"
+   }
+  },
+  "113218": {
+   "type": "totals",
+   "line": 265.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113219": "Under",
+    "113218": "Over"
+   }
+  },
+  "113220": {
+   "type": "totals",
+   "line": 265.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113220": "Over",
+    "113221": "Under"
+   }
+  },
+  "113222": {
+   "type": "totals",
+   "line": 266.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113223": "Under",
+    "113222": "Over"
+   }
+  },
+  "113224": {
+   "type": "totals",
+   "line": 266.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113224": "Over",
+    "113225": "Under"
+   }
+  },
+  "113226": {
+   "type": "totals",
+   "line": 267.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113226": "Over",
+    "113227": "Under"
+   }
+  },
+  "113228": {
+   "type": "totals",
+   "line": 267.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113229": "Under",
+    "113228": "Over"
+   }
+  },
+  "113230": {
+   "type": "totals",
+   "line": 268.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113230": "Over",
+    "113231": "Under"
+   }
+  },
+  "113232": {
+   "type": "totals",
+   "line": 268.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113233": "Under",
+    "113232": "Over"
+   }
+  },
+  "113234": {
+   "type": "totals",
+   "line": 269.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113235": "Under",
+    "113234": "Over"
+   }
+  },
+  "113236": {
+   "type": "totals",
+   "line": 269.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113236": "Over",
+    "113237": "Under"
+   }
+  },
+  "113238": {
+   "type": "totals",
+   "line": 270.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113239": "Under",
+    "113238": "Over"
+   }
+  },
+  "113240": {
+   "type": "totals",
+   "line": 270.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113241": "Under",
+    "113240": "Over"
+   }
+  },
+  "113242": {
+   "type": "totals",
+   "line": 271.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113243": "Under",
+    "113242": "Over"
+   }
+  },
+  "113244": {
+   "type": "totals",
+   "line": 271.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113244": "Over",
+    "113245": "Under"
+   }
+  },
+  "113246": {
+   "type": "totals",
+   "line": 272.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113246": "Over",
+    "113247": "Under"
+   }
+  },
+  "113248": {
+   "type": "totals",
+   "line": 272.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113249": "Under",
+    "113248": "Over"
+   }
+  },
+  "113250": {
+   "type": "totals",
+   "line": 273.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113251": "Under",
+    "113250": "Over"
+   }
+  },
+  "113252": {
+   "type": "totals",
+   "line": 273.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113252": "Over",
+    "113253": "Under"
+   }
+  },
+  "113254": {
+   "type": "totals",
+   "line": 274.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113255": "Under",
+    "113254": "Over"
+   }
+  },
+  "113256": {
+   "type": "totals",
+   "line": 274.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113256": "Over",
+    "113257": "Under"
+   }
+  },
+  "113258": {
+   "type": "totals",
+   "line": 275.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113258": "Over",
+    "113259": "Under"
+   }
+  },
+  "113260": {
+   "type": "totals",
+   "line": 275.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113260": "Over",
+    "113261": "Under"
+   }
+  },
+  "113262": {
+   "type": "totals",
+   "line": 276.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113263": "Under",
+    "113262": "Over"
+   }
+  },
+  "113264": {
+   "type": "totals",
+   "line": 276.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113265": "Under",
+    "113264": "Over"
+   }
+  },
+  "113266": {
+   "type": "totals",
+   "line": 277.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113266": "Over",
+    "113267": "Under"
+   }
+  },
+  "113268": {
+   "type": "totals",
+   "line": 277.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113269": "Under",
+    "113268": "Over"
+   }
+  },
+  "113270": {
+   "type": "totals",
+   "line": 278.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113271": "Under",
+    "113270": "Over"
+   }
+  },
+  "113272": {
+   "type": "totals",
+   "line": 278.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113272": "Over",
+    "113273": "Under"
+   }
+  },
+  "113274": {
+   "type": "totals",
+   "line": 279.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113275": "Under",
+    "113274": "Over"
+   }
+  },
+  "113276": {
+   "type": "totals",
+   "line": 279.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113276": "Over",
+    "113277": "Under"
+   }
+  },
+  "113278": {
+   "type": "totals",
+   "line": 280.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113279": "Under",
+    "113278": "Over"
+   }
+  },
+  "113280": {
+   "type": "totals",
+   "line": 280.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113281": "Under",
+    "113280": "Over"
+   }
+  },
+  "113282": {
+   "type": "totals",
+   "line": 281.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113282": "Over",
+    "113283": "Under"
+   }
+  },
+  "113284": {
+   "type": "totals",
+   "line": 281.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113284": "Over",
+    "113285": "Under"
+   }
+  },
+  "113286": {
+   "type": "totals",
+   "line": 282.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113287": "Under",
+    "113286": "Over"
+   }
+  },
+  "113288": {
+   "type": "totals",
+   "line": 282.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113288": "Over",
+    "113289": "Under"
+   }
+  },
+  "113290": {
+   "type": "totals",
+   "line": 283.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113291": "Under",
+    "113290": "Over"
+   }
+  },
+  "113292": {
+   "type": "totals",
+   "line": 283.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113292": "Over",
+    "113293": "Under"
+   }
+  },
+  "113294": {
+   "type": "totals",
+   "line": 284.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113294": "Over",
+    "113295": "Under"
+   }
+  },
+  "113296": {
+   "type": "totals",
+   "line": 284.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113296": "Over",
+    "113297": "Under"
+   }
+  },
+  "113298": {
+   "type": "totals",
+   "line": 285.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113298": "Over",
+    "113299": "Under"
+   }
+  },
+  "113300": {
+   "type": "totals",
+   "line": 285.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113301": "Under",
+    "113300": "Over"
+   }
+  },
+  "113302": {
+   "type": "totals",
+   "line": 286.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113303": "Under",
+    "113302": "Over"
+   }
+  },
+  "113304": {
+   "type": "totals",
+   "line": 286.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113304": "Over",
+    "113305": "Under"
+   }
+  },
+  "113306": {
+   "type": "totals",
+   "line": 287.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113306": "Over",
+    "113307": "Under"
+   }
+  },
+  "113308": {
+   "type": "totals",
+   "line": 287.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113308": "Over",
+    "113309": "Under"
+   }
+  },
+  "113310": {
+   "type": "totals",
+   "line": 288.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113311": "Under",
+    "113310": "Over"
+   }
+  },
+  "113312": {
+   "type": "totals",
+   "line": 288.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113313": "Under",
+    "113312": "Over"
+   }
+  },
+  "113314": {
+   "type": "totals",
+   "line": 289.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113314": "Over",
+    "113315": "Under"
+   }
+  },
+  "113316": {
+   "type": "totals",
+   "line": 289.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113316": "Over",
+    "113317": "Under"
+   }
+  },
+  "113318": {
+   "type": "totals",
+   "line": 290.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113318": "Over",
+    "113319": "Under"
+   }
+  },
+  "113320": {
+   "type": "totals",
+   "line": 290.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113320": "Over",
+    "113321": "Under"
+   }
+  },
+  "113322": {
+   "type": "totals",
+   "line": 291.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113323": "Under",
+    "113322": "Over"
+   }
+  },
+  "113324": {
+   "type": "totals",
+   "line": 291.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113325": "Under",
+    "113324": "Over"
+   }
+  },
+  "113326": {
+   "type": "totals",
+   "line": 292.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113326": "Over",
+    "113327": "Under"
+   }
+  },
+  "113328": {
+   "type": "totals",
+   "line": 292.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113329": "Under",
+    "113328": "Over"
+   }
+  },
+  "113330": {
+   "type": "totals",
+   "line": 293.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113330": "Over",
+    "113331": "Under"
+   }
+  },
+  "113332": {
+   "type": "totals",
+   "line": 293.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113333": "Under",
+    "113332": "Over"
+   }
+  },
+  "113334": {
+   "type": "totals",
+   "line": 294.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113334": "Over",
+    "113335": "Under"
+   }
+  },
+  "113336": {
+   "type": "totals",
+   "line": 294.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113337": "Under",
+    "113336": "Over"
+   }
+  },
+  "113338": {
+   "type": "totals",
+   "line": 295.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113339": "Under",
+    "113338": "Over"
+   }
+  },
+  "113340": {
+   "type": "totals",
+   "line": 295.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113341": "Under",
+    "113340": "Over"
+   }
+  },
+  "113342": {
+   "type": "totals",
+   "line": 296.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113342": "Over",
+    "113343": "Under"
+   }
+  },
+  "113344": {
+   "type": "totals",
+   "line": 296.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113345": "Under",
+    "113344": "Over"
+   }
+  },
+  "113346": {
+   "type": "totals",
+   "line": 297.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113346": "Over",
+    "113347": "Under"
+   }
+  },
+  "113348": {
+   "type": "totals",
+   "line": 297.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113348": "Over",
+    "113349": "Under"
+   }
+  },
+  "113350": {
+   "type": "totals",
+   "line": 298.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113350": "Over",
+    "113351": "Under"
+   }
+  },
+  "113352": {
+   "type": "totals",
+   "line": 298.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113353": "Under",
+    "113352": "Over"
+   }
+  },
+  "113354": {
+   "type": "totals",
+   "line": 299.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113354": "Over",
+    "113355": "Under"
+   }
+  },
+  "113356": {
+   "type": "totals",
+   "line": 299.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113357": "Under",
+    "113356": "Over"
+   }
+  },
+  "113358": {
+   "type": "totals",
+   "line": 300.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "113359": "Under",
+    "113358": "Over"
+   }
+  },
+  "113360": {
+   "type": "spreads",
+   "line": -40.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113360": "1",
+    "113361": "2"
+   }
+  },
+  "113362": {
+   "type": "spreads",
+   "line": -39.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113363": "2",
+    "113362": "1"
+   }
+  },
+  "113364": {
+   "type": "spreads",
+   "line": -39.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113364": "1",
+    "113365": "2"
+   }
+  },
+  "113366": {
+   "type": "spreads",
+   "line": -38.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113367": "2",
+    "113366": "1"
+   }
+  },
+  "113368": {
+   "type": "spreads",
+   "line": -38.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113369": "2",
+    "113368": "1"
+   }
+  },
+  "113370": {
+   "type": "spreads",
+   "line": -37.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113371": "2",
+    "113370": "1"
+   }
+  },
+  "113372": {
+   "type": "spreads",
+   "line": -37.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113372": "1",
+    "113373": "2"
+   }
+  },
+  "113374": {
+   "type": "spreads",
+   "line": -36.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113375": "2",
+    "113374": "1"
+   }
+  },
+  "113376": {
+   "type": "spreads",
+   "line": -36.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113376": "1",
+    "113377": "2"
+   }
+  },
+  "113378": {
+   "type": "spreads",
+   "line": -35.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113379": "2",
+    "113378": "1"
+   }
+  },
+  "113380": {
+   "type": "spreads",
+   "line": -35.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113381": "2",
+    "113380": "1"
+   }
+  },
+  "113382": {
+   "type": "spreads",
+   "line": -34.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113382": "1",
+    "113383": "2"
+   }
+  },
+  "113384": {
+   "type": "spreads",
+   "line": -34.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113385": "2",
+    "113384": "1"
+   }
+  },
+  "113386": {
+   "type": "spreads",
+   "line": -33.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113387": "2",
+    "113386": "1"
+   }
+  },
+  "113388": {
+   "type": "spreads",
+   "line": -33.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113389": "2",
+    "113388": "1"
+   }
+  },
+  "113390": {
+   "type": "spreads",
+   "line": -32.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113390": "1",
+    "113391": "2"
+   }
+  },
+  "113392": {
+   "type": "spreads",
+   "line": -32.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113393": "2",
+    "113392": "1"
+   }
+  },
+  "113394": {
+   "type": "spreads",
+   "line": -31.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113394": "1",
+    "113395": "2"
+   }
+  },
+  "113396": {
+   "type": "spreads",
+   "line": -31.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113397": "2",
+    "113396": "1"
+   }
+  },
+  "113398": {
+   "type": "spreads",
+   "line": -30.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113399": "2",
+    "113398": "1"
+   }
+  },
+  "113400": {
+   "type": "spreads",
+   "line": -30.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113401": "2",
+    "113400": "1"
+   }
+  },
+  "113402": {
+   "type": "spreads",
+   "line": -29.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113403": "2",
+    "113402": "1"
+   }
+  },
+  "113404": {
+   "type": "spreads",
+   "line": -29.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113405": "2",
+    "113404": "1"
+   }
+  },
+  "113406": {
+   "type": "spreads",
+   "line": -28.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113406": "1",
+    "113407": "2"
+   }
+  },
+  "113408": {
+   "type": "spreads",
+   "line": -28.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113408": "1",
+    "113409": "2"
+   }
+  },
+  "113410": {
+   "type": "spreads",
+   "line": -27.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113411": "2",
+    "113410": "1"
+   }
+  },
+  "113412": {
+   "type": "spreads",
+   "line": -27.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113412": "1",
+    "113413": "2"
+   }
+  },
+  "113414": {
+   "type": "spreads",
+   "line": -26.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113415": "2",
+    "113414": "1"
+   }
+  },
+  "113416": {
+   "type": "spreads",
+   "line": -26.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113417": "2",
+    "113416": "1"
+   }
+  },
+  "113418": {
+   "type": "spreads",
+   "line": -25.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113418": "1",
+    "113419": "2"
+   }
+  },
+  "113420": {
+   "type": "spreads",
+   "line": 25.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113421": "2",
+    "113420": "1"
+   }
+  },
+  "113422": {
+   "type": "spreads",
+   "line": 26.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113422": "1",
+    "113423": "2"
+   }
+  },
+  "113424": {
+   "type": "spreads",
+   "line": 26.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113425": "2",
+    "113424": "1"
+   }
+  },
+  "113426": {
+   "type": "spreads",
+   "line": 27.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113426": "1",
+    "113427": "2"
+   }
+  },
+  "113428": {
+   "type": "spreads",
+   "line": 27.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113429": "2",
+    "113428": "1"
+   }
+  },
+  "113430": {
+   "type": "spreads",
+   "line": 28.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113431": "2",
+    "113430": "1"
+   }
+  },
+  "113432": {
+   "type": "spreads",
+   "line": 28.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113433": "2",
+    "113432": "1"
+   }
+  },
+  "113434": {
+   "type": "spreads",
+   "line": 29.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113435": "2",
+    "113434": "1"
+   }
+  },
+  "113436": {
+   "type": "spreads",
+   "line": 29.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113437": "2",
+    "113436": "1"
+   }
+  },
+  "113438": {
+   "type": "spreads",
+   "line": 30.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113439": "2",
+    "113438": "1"
+   }
+  },
+  "113440": {
+   "type": "spreads",
+   "line": 30.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113440": "1",
+    "113441": "2"
+   }
+  },
+  "113442": {
+   "type": "spreads",
+   "line": 31.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113443": "2",
+    "113442": "1"
+   }
+  },
+  "113444": {
+   "type": "spreads",
+   "line": 31.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113444": "1",
+    "113445": "2"
+   }
+  },
+  "113446": {
+   "type": "spreads",
+   "line": 32.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113447": "2",
+    "113446": "1"
+   }
+  },
+  "113448": {
+   "type": "spreads",
+   "line": 32.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113449": "2",
+    "113448": "1"
+   }
+  },
+  "113450": {
+   "type": "spreads",
+   "line": 33.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113450": "1",
+    "113451": "2"
+   }
+  },
+  "113452": {
+   "type": "spreads",
+   "line": 33.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113452": "1",
+    "113453": "2"
+   }
+  },
+  "113454": {
+   "type": "spreads",
+   "line": 34.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113454": "1",
+    "113455": "2"
+   }
+  },
+  "113456": {
+   "type": "spreads",
+   "line": 34.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113456": "1",
+    "113457": "2"
+   }
+  },
+  "113458": {
+   "type": "spreads",
+   "line": 35.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113459": "2",
+    "113458": "1"
+   }
+  },
+  "113460": {
+   "type": "spreads",
+   "line": 35.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113461": "2",
+    "113460": "1"
+   }
+  },
+  "113462": {
+   "type": "spreads",
+   "line": 36.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113463": "2",
+    "113462": "1"
+   }
+  },
+  "113464": {
+   "type": "spreads",
+   "line": 36.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113465": "2",
+    "113464": "1"
+   }
+  },
+  "113466": {
+   "type": "spreads",
+   "line": 37.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113467": "2",
+    "113466": "1"
+   }
+  },
+  "113468": {
+   "type": "spreads",
+   "line": 37.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113469": "2",
+    "113468": "1"
+   }
+  },
+  "113470": {
+   "type": "spreads",
+   "line": 38.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113470": "1",
+    "113471": "2"
+   }
+  },
+  "113472": {
+   "type": "spreads",
+   "line": 38.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113472": "1",
+    "113473": "2"
+   }
+  },
+  "113474": {
+   "type": "spreads",
+   "line": 39.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113475": "2",
+    "113474": "1"
+   }
+  },
+  "113476": {
+   "type": "spreads",
+   "line": 39.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113476": "1",
+    "113477": "2"
+   }
+  },
+  "113478": {
+   "type": "spreads",
+   "line": 40.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "113479": "2",
+    "113478": "1"
+   }
+  },
+  "117880": {
+   "type": "spreads",
+   "line": -80.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117881": "2",
+    "117880": "1"
+   }
+  },
+  "117882": {
+   "type": "spreads",
+   "line": -79.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117883": "2",
+    "117882": "1"
+   }
+  },
+  "117884": {
+   "type": "spreads",
+   "line": -79.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117884": "1",
+    "117885": "2"
+   }
+  },
+  "117886": {
+   "type": "spreads",
+   "line": -78.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117887": "2",
+    "117886": "1"
+   }
+  },
+  "117888": {
+   "type": "spreads",
+   "line": -78.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117889": "2",
+    "117888": "1"
+   }
+  },
+  "117890": {
+   "type": "spreads",
+   "line": -77.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117890": "1",
+    "117891": "2"
+   }
+  },
+  "117892": {
+   "type": "spreads",
+   "line": -77.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117892": "1",
+    "117893": "2"
+   }
+  },
+  "117894": {
+   "type": "spreads",
+   "line": -76.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117894": "1",
+    "117895": "2"
+   }
+  },
+  "117896": {
+   "type": "spreads",
+   "line": -76.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117896": "1",
+    "117897": "2"
+   }
+  },
+  "117898": {
+   "type": "spreads",
+   "line": -75.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117899": "2",
+    "117898": "1"
+   }
+  },
+  "117900": {
+   "type": "spreads",
+   "line": -75.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117900": "1",
+    "117901": "2"
+   }
+  },
+  "117902": {
+   "type": "spreads",
+   "line": -74.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117902": "1",
+    "117903": "2"
+   }
+  },
+  "117904": {
+   "type": "spreads",
+   "line": -74.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117905": "2",
+    "117904": "1"
+   }
+  },
+  "117906": {
+   "type": "spreads",
+   "line": -73.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117907": "2",
+    "117906": "1"
+   }
+  },
+  "117908": {
+   "type": "spreads",
+   "line": -73.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117909": "2",
+    "117908": "1"
+   }
+  },
+  "117910": {
+   "type": "spreads",
+   "line": -72.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117911": "2",
+    "117910": "1"
+   }
+  },
+  "117912": {
+   "type": "spreads",
+   "line": -72.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117912": "1",
+    "117913": "2"
+   }
+  },
+  "117914": {
+   "type": "spreads",
+   "line": -71.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117914": "1",
+    "117915": "2"
+   }
+  },
+  "117916": {
+   "type": "spreads",
+   "line": -71.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117916": "1",
+    "117917": "2"
+   }
+  },
+  "117918": {
+   "type": "spreads",
+   "line": -70.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117918": "1",
+    "117919": "2"
+   }
+  },
+  "117920": {
+   "type": "spreads",
+   "line": -70.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117920": "1",
+    "117921": "2"
+   }
+  },
+  "117922": {
+   "type": "spreads",
+   "line": -69.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117922": "1",
+    "117923": "2"
+   }
+  },
+  "117924": {
+   "type": "spreads",
+   "line": -69.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117925": "2",
+    "117924": "1"
+   }
+  },
+  "117926": {
+   "type": "spreads",
+   "line": -68.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117926": "1",
+    "117927": "2"
+   }
+  },
+  "117928": {
+   "type": "spreads",
+   "line": -68.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117929": "2",
+    "117928": "1"
+   }
+  },
+  "117930": {
+   "type": "spreads",
+   "line": -67.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117930": "1",
+    "117931": "2"
+   }
+  },
+  "117932": {
+   "type": "spreads",
+   "line": -67.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117932": "1",
+    "117933": "2"
+   }
+  },
+  "117934": {
+   "type": "spreads",
+   "line": -66.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117934": "1",
+    "117935": "2"
+   }
+  },
+  "117936": {
+   "type": "spreads",
+   "line": -66.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117936": "1",
+    "117937": "2"
+   }
+  },
+  "117938": {
+   "type": "spreads",
+   "line": -65.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117938": "1",
+    "117939": "2"
+   }
+  },
+  "117940": {
+   "type": "spreads",
+   "line": -65.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117941": "2",
+    "117940": "1"
+   }
+  },
+  "117942": {
+   "type": "spreads",
+   "line": -64.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117943": "2",
+    "117942": "1"
+   }
+  },
+  "117944": {
+   "type": "spreads",
+   "line": -64.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117945": "2",
+    "117944": "1"
+   }
+  },
+  "117946": {
+   "type": "spreads",
+   "line": -63.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117946": "1",
+    "117947": "2"
+   }
+  },
+  "117948": {
+   "type": "spreads",
+   "line": -63.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117948": "1",
+    "117949": "2"
+   }
+  },
+  "117950": {
+   "type": "spreads",
+   "line": -62.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117950": "1",
+    "117951": "2"
+   }
+  },
+  "117952": {
+   "type": "spreads",
+   "line": -62.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117952": "1",
+    "117953": "2"
+   }
+  },
+  "117954": {
+   "type": "spreads",
+   "line": -61.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117954": "1",
+    "117955": "2"
+   }
+  },
+  "117956": {
+   "type": "spreads",
+   "line": -61.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117956": "1",
+    "117957": "2"
+   }
+  },
+  "117958": {
+   "type": "spreads",
+   "line": -60.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117958": "1",
+    "117959": "2"
+   }
+  },
+  "117960": {
+   "type": "spreads",
+   "line": -60.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117961": "2",
+    "117960": "1"
+   }
+  },
+  "117962": {
+   "type": "spreads",
+   "line": -59.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117962": "1",
+    "117963": "2"
+   }
+  },
+  "117964": {
+   "type": "spreads",
+   "line": -59.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117964": "1",
+    "117965": "2"
+   }
+  },
+  "117966": {
+   "type": "spreads",
+   "line": -58.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117966": "1",
+    "117967": "2"
+   }
+  },
+  "117968": {
+   "type": "spreads",
+   "line": -58.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117968": "1",
+    "117969": "2"
+   }
+  },
+  "117970": {
+   "type": "spreads",
+   "line": -57.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117971": "2",
+    "117970": "1"
+   }
+  },
+  "117972": {
+   "type": "spreads",
+   "line": -57.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117972": "1",
+    "117973": "2"
+   }
+  },
+  "117974": {
+   "type": "spreads",
+   "line": -56.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117974": "1",
+    "117975": "2"
+   }
+  },
+  "117976": {
+   "type": "spreads",
+   "line": -56.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117976": "1",
+    "117977": "2"
+   }
+  },
+  "117978": {
+   "type": "spreads",
+   "line": -55.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117978": "1",
+    "117979": "2"
+   }
+  },
+  "117980": {
+   "type": "spreads",
+   "line": -55.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117981": "2",
+    "117980": "1"
+   }
+  },
+  "117982": {
+   "type": "spreads",
+   "line": -54.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117982": "1",
+    "117983": "2"
+   }
+  },
+  "117984": {
+   "type": "spreads",
+   "line": -54.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117984": "1",
+    "117985": "2"
+   }
+  },
+  "117986": {
+   "type": "spreads",
+   "line": -53.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117986": "1",
+    "117987": "2"
+   }
+  },
+  "117988": {
+   "type": "spreads",
+   "line": -53.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117988": "1",
+    "117989": "2"
+   }
+  },
+  "117990": {
+   "type": "spreads",
+   "line": -52.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117991": "2",
+    "117990": "1"
+   }
+  },
+  "117992": {
+   "type": "spreads",
+   "line": -52.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117992": "1",
+    "117993": "2"
+   }
+  },
+  "117994": {
+   "type": "spreads",
+   "line": -51.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117994": "1",
+    "117995": "2"
+   }
+  },
+  "117996": {
+   "type": "spreads",
+   "line": -51.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117997": "2",
+    "117996": "1"
+   }
+  },
+  "117998": {
+   "type": "spreads",
+   "line": -50.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "117998": "1",
+    "117999": "2"
+   }
+  },
+  "118000": {
+   "type": "spreads",
+   "line": -50.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118000": "1",
+    "118001": "2"
+   }
+  },
+  "118002": {
+   "type": "spreads",
+   "line": -49.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118003": "2",
+    "118002": "1"
+   }
+  },
+  "118004": {
+   "type": "spreads",
+   "line": -49.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118005": "2",
+    "118004": "1"
+   }
+  },
+  "118006": {
+   "type": "spreads",
+   "line": -48.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118006": "1",
+    "118007": "2"
+   }
+  },
+  "118008": {
+   "type": "spreads",
+   "line": -48.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118009": "2",
+    "118008": "1"
+   }
+  },
+  "118010": {
+   "type": "spreads",
+   "line": -47.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118011": "2",
+    "118010": "1"
+   }
+  },
+  "118012": {
+   "type": "spreads",
+   "line": -47.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118012": "1",
+    "118013": "2"
+   }
+  },
+  "118014": {
+   "type": "spreads",
+   "line": -46.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118015": "2",
+    "118014": "1"
+   }
+  },
+  "118016": {
+   "type": "spreads",
+   "line": -46.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118016": "1",
+    "118017": "2"
+   }
+  },
+  "118018": {
+   "type": "spreads",
+   "line": -45.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118019": "2",
+    "118018": "1"
+   }
+  },
+  "118020": {
+   "type": "spreads",
+   "line": -45.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118020": "1",
+    "118021": "2"
+   }
+  },
+  "118022": {
+   "type": "spreads",
+   "line": -44.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118022": "1",
+    "118023": "2"
+   }
+  },
+  "118024": {
+   "type": "spreads",
+   "line": -44.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118024": "1",
+    "118025": "2"
+   }
+  },
+  "118026": {
+   "type": "spreads",
+   "line": -43.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118027": "2",
+    "118026": "1"
+   }
+  },
+  "118028": {
+   "type": "spreads",
+   "line": -43.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118029": "2",
+    "118028": "1"
+   }
+  },
+  "118030": {
+   "type": "spreads",
+   "line": -42.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118031": "2",
+    "118030": "1"
+   }
+  },
+  "118032": {
+   "type": "spreads",
+   "line": -42.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118033": "2",
+    "118032": "1"
+   }
+  },
+  "118034": {
+   "type": "spreads",
+   "line": -41.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118035": "2",
+    "118034": "1"
+   }
+  },
+  "118036": {
+   "type": "spreads",
+   "line": -41.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118036": "1",
+    "118037": "2"
+   }
+  },
+  "118038": {
+   "type": "spreads",
+   "line": -40.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118038": "1",
+    "118039": "2"
+   }
+  },
+  "118040": {
+   "type": "spreads",
+   "line": 40.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118040": "1",
+    "118041": "2"
+   }
+  },
+  "118042": {
+   "type": "spreads",
+   "line": 41.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118042": "1",
+    "118043": "2"
+   }
+  },
+  "118044": {
+   "type": "spreads",
+   "line": 41.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118044": "1",
+    "118045": "2"
+   }
+  },
+  "118046": {
+   "type": "spreads",
+   "line": 42.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118047": "2",
+    "118046": "1"
+   }
+  },
+  "118048": {
+   "type": "spreads",
+   "line": 42.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118048": "1",
+    "118049": "2"
+   }
+  },
+  "118050": {
+   "type": "spreads",
+   "line": 43.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118050": "1",
+    "118051": "2"
+   }
+  },
+  "118052": {
+   "type": "spreads",
+   "line": 43.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118053": "2",
+    "118052": "1"
+   }
+  },
+  "118054": {
+   "type": "spreads",
+   "line": 44.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118054": "1",
+    "118055": "2"
+   }
+  },
+  "118056": {
+   "type": "spreads",
+   "line": 44.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118057": "2",
+    "118056": "1"
+   }
+  },
+  "118058": {
+   "type": "spreads",
+   "line": 45.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118059": "2",
+    "118058": "1"
+   }
+  },
+  "118060": {
+   "type": "spreads",
+   "line": 45.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118060": "1",
+    "118061": "2"
+   }
+  },
+  "118062": {
+   "type": "spreads",
+   "line": 46.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118063": "2",
+    "118062": "1"
+   }
+  },
+  "118064": {
+   "type": "spreads",
+   "line": 46.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118065": "2",
+    "118064": "1"
+   }
+  },
+  "118066": {
+   "type": "spreads",
+   "line": 47.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118066": "1",
+    "118067": "2"
+   }
+  },
+  "118068": {
+   "type": "spreads",
+   "line": 47.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118069": "2",
+    "118068": "1"
+   }
+  },
+  "118070": {
+   "type": "spreads",
+   "line": 48.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118070": "1",
+    "118071": "2"
+   }
+  },
+  "118072": {
+   "type": "spreads",
+   "line": 48.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118072": "1",
+    "118073": "2"
+   }
+  },
+  "118074": {
+   "type": "spreads",
+   "line": 49.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118075": "2",
+    "118074": "1"
+   }
+  },
+  "118076": {
+   "type": "spreads",
+   "line": 49.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118076": "1",
+    "118077": "2"
+   }
+  },
+  "118078": {
+   "type": "spreads",
+   "line": 50.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118078": "1",
+    "118079": "2"
+   }
+  },
+  "118080": {
+   "type": "spreads",
+   "line": 50.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118080": "1",
+    "118081": "2"
+   }
+  },
+  "118082": {
+   "type": "spreads",
+   "line": 51.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118082": "1",
+    "118083": "2"
+   }
+  },
+  "118084": {
+   "type": "spreads",
+   "line": 51.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118085": "2",
+    "118084": "1"
+   }
+  },
+  "118086": {
+   "type": "spreads",
+   "line": 52.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118087": "2",
+    "118086": "1"
+   }
+  },
+  "118088": {
+   "type": "spreads",
+   "line": 52.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118088": "1",
+    "118089": "2"
+   }
+  },
+  "118090": {
+   "type": "spreads",
+   "line": 53.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118090": "1",
+    "118091": "2"
+   }
+  },
+  "118092": {
+   "type": "spreads",
+   "line": 53.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118092": "1",
+    "118093": "2"
+   }
+  },
+  "118094": {
+   "type": "spreads",
+   "line": 54.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118095": "2",
+    "118094": "1"
+   }
+  },
+  "118096": {
+   "type": "spreads",
+   "line": 54.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118097": "2",
+    "118096": "1"
+   }
+  },
+  "118098": {
+   "type": "spreads",
+   "line": 55.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118099": "2",
+    "118098": "1"
+   }
+  },
+  "118100": {
+   "type": "spreads",
+   "line": 55.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118101": "2",
+    "118100": "1"
+   }
+  },
+  "118102": {
+   "type": "spreads",
+   "line": 56.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118102": "1",
+    "118103": "2"
+   }
+  },
+  "118104": {
+   "type": "spreads",
+   "line": 56.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118105": "2",
+    "118104": "1"
+   }
+  },
+  "118106": {
+   "type": "spreads",
+   "line": 57.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118107": "2",
+    "118106": "1"
+   }
+  },
+  "118108": {
+   "type": "spreads",
+   "line": 57.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118109": "2",
+    "118108": "1"
+   }
+  },
+  "118110": {
+   "type": "spreads",
+   "line": 58.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118110": "1",
+    "118111": "2"
+   }
+  },
+  "118112": {
+   "type": "spreads",
+   "line": 58.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118113": "2",
+    "118112": "1"
+   }
+  },
+  "118114": {
+   "type": "spreads",
+   "line": 59.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118115": "2",
+    "118114": "1"
+   }
+  },
+  "118116": {
+   "type": "spreads",
+   "line": 59.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118117": "2",
+    "118116": "1"
+   }
+  },
+  "118118": {
+   "type": "spreads",
+   "line": 60.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118119": "2",
+    "118118": "1"
+   }
+  },
+  "118120": {
+   "type": "spreads",
+   "line": 60.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118121": "2",
+    "118120": "1"
+   }
+  },
+  "118122": {
+   "type": "spreads",
+   "line": 61.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118122": "1",
+    "118123": "2"
+   }
+  },
+  "118124": {
+   "type": "spreads",
+   "line": 61.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118125": "2",
+    "118124": "1"
+   }
+  },
+  "118126": {
+   "type": "spreads",
+   "line": 62.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118126": "1",
+    "118127": "2"
+   }
+  },
+  "118128": {
+   "type": "spreads",
+   "line": 62.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118129": "2",
+    "118128": "1"
+   }
+  },
+  "118130": {
+   "type": "spreads",
+   "line": 63.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118130": "1",
+    "118131": "2"
+   }
+  },
+  "118132": {
+   "type": "spreads",
+   "line": 63.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118133": "2",
+    "118132": "1"
+   }
+  },
+  "118134": {
+   "type": "spreads",
+   "line": 64.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118135": "2",
+    "118134": "1"
+   }
+  },
+  "118136": {
+   "type": "spreads",
+   "line": 64.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118137": "2",
+    "118136": "1"
+   }
+  },
+  "118138": {
+   "type": "spreads",
+   "line": 65.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118139": "2",
+    "118138": "1"
+   }
+  },
+  "118140": {
+   "type": "spreads",
+   "line": 65.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118141": "2",
+    "118140": "1"
+   }
+  },
+  "118142": {
+   "type": "spreads",
+   "line": 66.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118142": "1",
+    "118143": "2"
+   }
+  },
+  "118144": {
+   "type": "spreads",
+   "line": 66.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118144": "1",
+    "118145": "2"
+   }
+  },
+  "118146": {
+   "type": "spreads",
+   "line": 67.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118147": "2",
+    "118146": "1"
+   }
+  },
+  "118148": {
+   "type": "spreads",
+   "line": 67.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118148": "1",
+    "118149": "2"
+   }
+  },
+  "118150": {
+   "type": "spreads",
+   "line": 68.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118151": "2",
+    "118150": "1"
+   }
+  },
+  "118152": {
+   "type": "spreads",
+   "line": 68.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118153": "2",
+    "118152": "1"
+   }
+  },
+  "118154": {
+   "type": "spreads",
+   "line": 69.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118154": "1",
+    "118155": "2"
+   }
+  },
+  "118156": {
+   "type": "spreads",
+   "line": 69.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118156": "1",
+    "118157": "2"
+   }
+  },
+  "118158": {
+   "type": "spreads",
+   "line": 70.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118158": "1",
+    "118159": "2"
+   }
+  },
+  "118160": {
+   "type": "spreads",
+   "line": 70.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118160": "1",
+    "118161": "2"
+   }
+  },
+  "118162": {
+   "type": "spreads",
+   "line": 71.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118163": "2",
+    "118162": "1"
+   }
+  },
+  "118164": {
+   "type": "spreads",
+   "line": 71.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118164": "1",
+    "118165": "2"
+   }
+  },
+  "118166": {
+   "type": "spreads",
+   "line": 72.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118167": "2",
+    "118166": "1"
+   }
+  },
+  "118168": {
+   "type": "spreads",
+   "line": 72.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118169": "2",
+    "118168": "1"
+   }
+  },
+  "118170": {
+   "type": "spreads",
+   "line": 73.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118170": "1",
+    "118171": "2"
+   }
+  },
+  "118172": {
+   "type": "spreads",
+   "line": 73.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118173": "2",
+    "118172": "1"
+   }
+  },
+  "118174": {
+   "type": "spreads",
+   "line": 74.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118175": "2",
+    "118174": "1"
+   }
+  },
+  "118176": {
+   "type": "spreads",
+   "line": 74.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118176": "1",
+    "118177": "2"
+   }
+  },
+  "118178": {
+   "type": "spreads",
+   "line": 75.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118178": "1",
+    "118179": "2"
+   }
+  },
+  "118180": {
+   "type": "spreads",
+   "line": 75.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118181": "2",
+    "118180": "1"
+   }
+  },
+  "118182": {
+   "type": "spreads",
+   "line": 76.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118182": "1",
+    "118183": "2"
+   }
+  },
+  "118184": {
+   "type": "spreads",
+   "line": 76.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118185": "2",
+    "118184": "1"
+   }
+  },
+  "118186": {
+   "type": "spreads",
+   "line": 77.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118187": "2",
+    "118186": "1"
+   }
+  },
+  "118188": {
+   "type": "spreads",
+   "line": 77.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118188": "1",
+    "118189": "2"
+   }
+  },
+  "118190": {
+   "type": "spreads",
+   "line": 78.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118191": "2",
+    "118190": "1"
+   }
+  },
+  "118192": {
+   "type": "spreads",
+   "line": 78.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118193": "2",
+    "118192": "1"
+   }
+  },
+  "118194": {
+   "type": "spreads",
+   "line": 79.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118194": "1",
+    "118195": "2"
+   }
+  },
+  "118196": {
+   "type": "spreads",
+   "line": 79.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118197": "2",
+    "118196": "1"
+   }
+  },
+  "118198": {
+   "type": "spreads",
+   "line": 80.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "118199": "2",
+    "118198": "1"
+   }
+  },
+  "1112852": {
+   "type": "totals",
+   "line": 0.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112852": "Over",
+    "1112853": "Under"
+   }
+  },
+  "1112854": {
+   "type": "totals",
+   "line": 1.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112855": "Under",
+    "1112854": "Over"
+   }
+  },
+  "1112856": {
+   "type": "totals",
+   "line": 1.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112857": "Under",
+    "1112856": "Over"
+   }
+  },
+  "1112858": {
+   "type": "totals",
+   "line": 2.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112858": "Over",
+    "1112859": "Under"
+   }
+  },
+  "1112860": {
+   "type": "totals",
+   "line": 2.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112860": "Over",
+    "1112861": "Under"
+   }
+  },
+  "1112862": {
+   "type": "totals",
+   "line": 3.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112863": "Under",
+    "1112862": "Over"
+   }
+  },
+  "1112864": {
+   "type": "totals",
+   "line": 3.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112864": "Over",
+    "1112865": "Under"
+   }
+  },
+  "1112866": {
+   "type": "totals",
+   "line": 4.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112867": "Under",
+    "1112866": "Over"
+   }
+  },
+  "1112868": {
+   "type": "totals",
+   "line": 4.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112868": "Over",
+    "1112869": "Under"
+   }
+  },
+  "1112870": {
+   "type": "totals",
+   "line": 5.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112871": "Under",
+    "1112870": "Over"
+   }
+  },
+  "1112872": {
+   "type": "totals",
+   "line": 5.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112873": "Under",
+    "1112872": "Over"
+   }
+  },
+  "1112874": {
+   "type": "totals",
+   "line": 6.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112874": "Over",
+    "1112875": "Under"
+   }
+  },
+  "1112876": {
+   "type": "totals",
+   "line": 6.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112876": "Over",
+    "1112877": "Under"
+   }
+  },
+  "1112878": {
+   "type": "totals",
+   "line": 7.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112879": "Under",
+    "1112878": "Over"
+   }
+  },
+  "1112880": {
+   "type": "totals",
+   "line": 7.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112881": "Under",
+    "1112880": "Over"
+   }
+  },
+  "1112882": {
+   "type": "totals",
+   "line": 8.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112882": "Over",
+    "1112883": "Under"
+   }
+  },
+  "1112884": {
+   "type": "totals",
+   "line": 8.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112885": "Under",
+    "1112884": "Over"
+   }
+  },
+  "1112886": {
+   "type": "totals",
+   "line": 9.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112886": "Over",
+    "1112887": "Under"
+   }
+  },
+  "1112888": {
+   "type": "totals",
+   "line": 9.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112888": "Over",
+    "1112889": "Under"
+   }
+  },
+  "1112890": {
+   "type": "totals",
+   "line": 10.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112890": "Over",
+    "1112891": "Under"
+   }
+  },
+  "1112892": {
+   "type": "totals",
+   "line": 10.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112892": "Over",
+    "1112893": "Under"
+   }
+  },
+  "1112894": {
+   "type": "totals",
+   "line": 11.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112894": "Over",
+    "1112895": "Under"
+   }
+  },
+  "1112896": {
+   "type": "totals",
+   "line": 11.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112897": "Under",
+    "1112896": "Over"
+   }
+  },
+  "1112898": {
+   "type": "totals",
+   "line": 12.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112899": "Under",
+    "1112898": "Over"
+   }
+  },
+  "1112900": {
+   "type": "totals",
+   "line": 12.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112900": "Over",
+    "1112901": "Under"
+   }
+  },
+  "1112902": {
+   "type": "totals",
+   "line": 13.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112902": "Over",
+    "1112903": "Under"
+   }
+  },
+  "1112904": {
+   "type": "totals",
+   "line": 13.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112904": "Over",
+    "1112905": "Under"
+   }
+  },
+  "1112906": {
+   "type": "totals",
+   "line": 14.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112907": "Under",
+    "1112906": "Over"
+   }
+  },
+  "1112908": {
+   "type": "totals",
+   "line": 14.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112908": "Over",
+    "1112909": "Under"
+   }
+  },
+  "1112910": {
+   "type": "totals",
+   "line": 15.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112911": "Under",
+    "1112910": "Over"
+   }
+  },
+  "1112912": {
+   "type": "totals",
+   "line": 15.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112912": "Over",
+    "1112913": "Under"
+   }
+  },
+  "1112914": {
+   "type": "totals",
+   "line": 16.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112915": "Under",
+    "1112914": "Over"
+   }
+  },
+  "1112916": {
+   "type": "totals",
+   "line": 16.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112916": "Over",
+    "1112917": "Under"
+   }
+  },
+  "1112918": {
+   "type": "totals",
+   "line": 17.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112918": "Over",
+    "1112919": "Under"
+   }
+  },
+  "1112920": {
+   "type": "totals",
+   "line": 17.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112920": "Over",
+    "1112921": "Under"
+   }
+  },
+  "1112922": {
+   "type": "totals",
+   "line": 18.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112922": "Over",
+    "1112923": "Under"
+   }
+  },
+  "1112924": {
+   "type": "totals",
+   "line": 18.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112925": "Under",
+    "1112924": "Over"
+   }
+  },
+  "1112926": {
+   "type": "totals",
+   "line": 19.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112926": "Over",
+    "1112927": "Under"
+   }
+  },
+  "1112928": {
+   "type": "totals",
+   "line": 19.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112928": "Over",
+    "1112929": "Under"
+   }
+  },
+  "1112930": {
+   "type": "totals",
+   "line": 20.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112931": "Under",
+    "1112930": "Over"
+   }
+  },
+  "1112932": {
+   "type": "totals",
+   "line": 20.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112932": "Over",
+    "1112933": "Under"
+   }
+  },
+  "1112934": {
+   "type": "totals",
+   "line": 21.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112934": "Over",
+    "1112935": "Under"
+   }
+  },
+  "1112936": {
+   "type": "totals",
+   "line": 21.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112936": "Over",
+    "1112937": "Under"
+   }
+  },
+  "1112938": {
+   "type": "totals",
+   "line": 22.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112938": "Over",
+    "1112939": "Under"
+   }
+  },
+  "1112940": {
+   "type": "totals",
+   "line": 22.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112941": "Under",
+    "1112940": "Over"
+   }
+  },
+  "1112942": {
+   "type": "totals",
+   "line": 23.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112942": "Over",
+    "1112943": "Under"
+   }
+  },
+  "1112944": {
+   "type": "totals",
+   "line": 23.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112945": "Under",
+    "1112944": "Over"
+   }
+  },
+  "1112946": {
+   "type": "totals",
+   "line": 24.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112947": "Under",
+    "1112946": "Over"
+   }
+  },
+  "1112948": {
+   "type": "totals",
+   "line": 24.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112948": "Over",
+    "1112949": "Under"
+   }
+  },
+  "1112950": {
+   "type": "totals",
+   "line": 25.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112950": "Over",
+    "1112951": "Under"
+   }
+  },
+  "1112952": {
+   "type": "totals",
+   "line": 25.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112952": "Over",
+    "1112953": "Under"
+   }
+  },
+  "1112954": {
+   "type": "totals",
+   "line": 26.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112955": "Under",
+    "1112954": "Over"
+   }
+  },
+  "1112956": {
+   "type": "totals",
+   "line": 26.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112957": "Under",
+    "1112956": "Over"
+   }
+  },
+  "1112958": {
+   "type": "totals",
+   "line": 27.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112959": "Under",
+    "1112958": "Over"
+   }
+  },
+  "1112960": {
+   "type": "totals",
+   "line": 27.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112961": "Under",
+    "1112960": "Over"
+   }
+  },
+  "1112962": {
+   "type": "totals",
+   "line": 28.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112963": "Under",
+    "1112962": "Over"
+   }
+  },
+  "1112964": {
+   "type": "totals",
+   "line": 28.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112965": "Under",
+    "1112964": "Over"
+   }
+  },
+  "1112966": {
+   "type": "totals",
+   "line": 29.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112967": "Under",
+    "1112966": "Over"
+   }
+  },
+  "1112968": {
+   "type": "totals",
+   "line": 29.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112969": "Under",
+    "1112968": "Over"
+   }
+  },
+  "1112970": {
+   "type": "totals",
+   "line": 30.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112971": "Under",
+    "1112970": "Over"
+   }
+  },
+  "1112972": {
+   "type": "totals",
+   "line": 30.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112972": "Over",
+    "1112973": "Under"
+   }
+  },
+  "1112974": {
+   "type": "totals",
+   "line": 31.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112975": "Under",
+    "1112974": "Over"
+   }
+  },
+  "1112976": {
+   "type": "totals",
+   "line": 31.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112977": "Under",
+    "1112976": "Over"
+   }
+  },
+  "1112978": {
+   "type": "totals",
+   "line": 32.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112979": "Under",
+    "1112978": "Over"
+   }
+  },
+  "1112980": {
+   "type": "totals",
+   "line": 32.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112981": "Under",
+    "1112980": "Over"
+   }
+  },
+  "1112982": {
+   "type": "totals",
+   "line": 33.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112982": "Over",
+    "1112983": "Under"
+   }
+  },
+  "1112984": {
+   "type": "totals",
+   "line": 33.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112985": "Under",
+    "1112984": "Over"
+   }
+  },
+  "1112986": {
+   "type": "totals",
+   "line": 34.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112986": "Over",
+    "1112987": "Under"
+   }
+  },
+  "1112988": {
+   "type": "totals",
+   "line": 34.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112989": "Under",
+    "1112988": "Over"
+   }
+  },
+  "1112990": {
+   "type": "totals",
+   "line": 35.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112990": "Over",
+    "1112991": "Under"
+   }
+  },
+  "1112992": {
+   "type": "totals",
+   "line": 35.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112992": "Over",
+    "1112993": "Under"
+   }
+  },
+  "1112994": {
+   "type": "totals",
+   "line": 36.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112995": "Under",
+    "1112994": "Over"
+   }
+  },
+  "1112996": {
+   "type": "totals",
+   "line": 36.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112997": "Under",
+    "1112996": "Over"
+   }
+  },
+  "1112998": {
+   "type": "totals",
+   "line": 37.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1112999": "Under",
+    "1112998": "Over"
+   }
+  },
+  "1113000": {
+   "type": "totals",
+   "line": 37.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113001": "Under",
+    "1113000": "Over"
+   }
+  },
+  "1113002": {
+   "type": "totals",
+   "line": 38.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113002": "Over",
+    "1113003": "Under"
+   }
+  },
+  "1113004": {
+   "type": "totals",
+   "line": 38.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113004": "Over",
+    "1113005": "Under"
+   }
+  },
+  "1113006": {
+   "type": "totals",
+   "line": 39.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113006": "Over",
+    "1113007": "Under"
+   }
+  },
+  "1113008": {
+   "type": "totals",
+   "line": 39.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113008": "Over",
+    "1113009": "Under"
+   }
+  },
+  "1113010": {
+   "type": "totals",
+   "line": 40.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113010": "Over",
+    "1113011": "Under"
+   }
+  },
+  "1113012": {
+   "type": "totals",
+   "line": 40.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113012": "Over",
+    "1113013": "Under"
+   }
+  },
+  "1113014": {
+   "type": "totals",
+   "line": 41.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113014": "Over",
+    "1113015": "Under"
+   }
+  },
+  "1113016": {
+   "type": "totals",
+   "line": 41.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113017": "Under",
+    "1113016": "Over"
+   }
+  },
+  "1113018": {
+   "type": "totals",
+   "line": 42.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113018": "Over",
+    "1113019": "Under"
+   }
+  },
+  "1113020": {
+   "type": "totals",
+   "line": 42.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113020": "Over",
+    "1113021": "Under"
+   }
+  },
+  "1113022": {
+   "type": "totals",
+   "line": 43.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113023": "Under",
+    "1113022": "Over"
+   }
+  },
+  "1113024": {
+   "type": "totals",
+   "line": 43.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113025": "Under",
+    "1113024": "Over"
+   }
+  },
+  "1113026": {
+   "type": "totals",
+   "line": 44.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113026": "Over",
+    "1113027": "Under"
+   }
+  },
+  "1113028": {
+   "type": "totals",
+   "line": 44.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113028": "Over",
+    "1113029": "Under"
+   }
+  },
+  "1113030": {
+   "type": "totals",
+   "line": 45.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113030": "Over",
+    "1113031": "Under"
+   }
+  },
+  "1113032": {
+   "type": "totals",
+   "line": 45.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113033": "Under",
+    "1113032": "Over"
+   }
+  },
+  "1113034": {
+   "type": "totals",
+   "line": 46.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113035": "Under",
+    "1113034": "Over"
+   }
+  },
+  "1113036": {
+   "type": "totals",
+   "line": 46.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113036": "Over",
+    "1113037": "Under"
+   }
+  },
+  "1113038": {
+   "type": "totals",
+   "line": 47.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113039": "Under",
+    "1113038": "Over"
+   }
+  },
+  "1113040": {
+   "type": "totals",
+   "line": 47.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113040": "Over",
+    "1113041": "Under"
+   }
+  },
+  "1113042": {
+   "type": "totals",
+   "line": 48.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113042": "Over",
+    "1113043": "Under"
+   }
+  },
+  "1113044": {
+   "type": "totals",
+   "line": 48.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113045": "Under",
+    "1113044": "Over"
+   }
+  },
+  "1113046": {
+   "type": "totals",
+   "line": 49.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113047": "Under",
+    "1113046": "Over"
+   }
+  },
+  "1113048": {
+   "type": "totals",
+   "line": 49.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113049": "Under",
+    "1113048": "Over"
+   }
+  },
+  "1113050": {
+   "type": "totals",
+   "line": 50.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113050": "Over",
+    "1113051": "Under"
+   }
+  },
+  "1113052": {
+   "type": "totals",
+   "line": 50.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113053": "Under",
+    "1113052": "Over"
+   }
+  },
+  "1113054": {
+   "type": "totals",
+   "line": 51.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113055": "Under",
+    "1113054": "Over"
+   }
+  },
+  "1113056": {
+   "type": "totals",
+   "line": 51.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113057": "Under",
+    "1113056": "Over"
+   }
+  },
+  "1113058": {
+   "type": "totals",
+   "line": 52.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113058": "Over",
+    "1113059": "Under"
+   }
+  },
+  "1113060": {
+   "type": "totals",
+   "line": 52.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113060": "Over",
+    "1113061": "Under"
+   }
+  },
+  "1113062": {
+   "type": "totals",
+   "line": 53.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113062": "Over",
+    "1113063": "Under"
+   }
+  },
+  "1113064": {
+   "type": "totals",
+   "line": 53.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113064": "Over",
+    "1113065": "Under"
+   }
+  },
+  "1113066": {
+   "type": "totals",
+   "line": 54.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113067": "Under",
+    "1113066": "Over"
+   }
+  },
+  "1113068": {
+   "type": "totals",
+   "line": 54.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113069": "Under",
+    "1113068": "Over"
+   }
+  },
+  "1113070": {
+   "type": "totals",
+   "line": 55.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113070": "Over",
+    "1113071": "Under"
+   }
+  },
+  "1113072": {
+   "type": "totals",
+   "line": 55.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113072": "Over",
+    "1113073": "Under"
+   }
+  },
+  "1113074": {
+   "type": "totals",
+   "line": 56.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113075": "Under",
+    "1113074": "Over"
+   }
+  },
+  "1113076": {
+   "type": "totals",
+   "line": 56.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113077": "Under",
+    "1113076": "Over"
+   }
+  },
+  "1113078": {
+   "type": "totals",
+   "line": 57.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113079": "Under",
+    "1113078": "Over"
+   }
+  },
+  "1113080": {
+   "type": "totals",
+   "line": 57.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113081": "Under",
+    "1113080": "Over"
+   }
+  },
+  "1113082": {
+   "type": "totals",
+   "line": 58.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113082": "Over",
+    "1113083": "Under"
+   }
+  },
+  "1113084": {
+   "type": "totals",
+   "line": 58.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113085": "Under",
+    "1113084": "Over"
+   }
+  },
+  "1113086": {
+   "type": "totals",
+   "line": 59.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113087": "Under",
+    "1113086": "Over"
+   }
+  },
+  "1113088": {
+   "type": "totals",
+   "line": 59.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113089": "Under",
+    "1113088": "Over"
+   }
+  },
+  "1113090": {
+   "type": "totals",
+   "line": 60.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113090": "Over",
+    "1113091": "Under"
+   }
+  },
+  "1113092": {
+   "type": "totals",
+   "line": 60.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113092": "Over",
+    "1113093": "Under"
+   }
+  },
+  "1113094": {
+   "type": "totals",
+   "line": 61.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113094": "Over",
+    "1113095": "Under"
+   }
+  },
+  "1113096": {
+   "type": "totals",
+   "line": 61.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113097": "Under",
+    "1113096": "Over"
+   }
+  },
+  "1113098": {
+   "type": "totals",
+   "line": 62.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113098": "Over",
+    "1113099": "Under"
+   }
+  },
+  "1113100": {
+   "type": "totals",
+   "line": 62.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113101": "Under",
+    "1113100": "Over"
+   }
+  },
+  "1113102": {
+   "type": "totals",
+   "line": 63.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113102": "Over",
+    "1113103": "Under"
+   }
+  },
+  "1113104": {
+   "type": "totals",
+   "line": 63.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113105": "Under",
+    "1113104": "Over"
+   }
+  },
+  "1113106": {
+   "type": "totals",
+   "line": 64.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113106": "Over",
+    "1113107": "Under"
+   }
+  },
+  "1113108": {
+   "type": "totals",
+   "line": 64.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113108": "Over",
+    "1113109": "Under"
+   }
+  },
+  "1113110": {
+   "type": "totals",
+   "line": 65.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113111": "Under",
+    "1113110": "Over"
+   }
+  },
+  "1113112": {
+   "type": "totals",
+   "line": 65.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113113": "Under",
+    "1113112": "Over"
+   }
+  },
+  "1113114": {
+   "type": "totals",
+   "line": 66.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113115": "Under",
+    "1113114": "Over"
+   }
+  },
+  "1113116": {
+   "type": "totals",
+   "line": 66.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113116": "Over",
+    "1113117": "Under"
+   }
+  },
+  "1113118": {
+   "type": "totals",
+   "line": 67.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113119": "Under",
+    "1113118": "Over"
+   }
+  },
+  "1113120": {
+   "type": "totals",
+   "line": 67.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113121": "Under",
+    "1113120": "Over"
+   }
+  },
+  "1113122": {
+   "type": "totals",
+   "line": 68.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113122": "Over",
+    "1113123": "Under"
+   }
+  },
+  "1113124": {
+   "type": "totals",
+   "line": 68.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113125": "Under",
+    "1113124": "Over"
+   }
+  },
+  "1113126": {
+   "type": "totals",
+   "line": 69.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113126": "Over",
+    "1113127": "Under"
+   }
+  },
+  "1113128": {
+   "type": "totals",
+   "line": 69.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113128": "Over",
+    "1113129": "Under"
+   }
+  },
+  "1113130": {
+   "type": "totals",
+   "line": 70.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113130": "Over",
+    "1113131": "Under"
+   }
+  },
+  "1113132": {
+   "type": "totals",
+   "line": 70.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113133": "Under",
+    "1113132": "Over"
+   }
+  },
+  "1113134": {
+   "type": "totals",
+   "line": 71.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113135": "Under",
+    "1113134": "Over"
+   }
+  },
+  "1113136": {
+   "type": "totals",
+   "line": 71.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113137": "Under",
+    "1113136": "Over"
+   }
+  },
+  "1113138": {
+   "type": "totals",
+   "line": 72.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113139": "Under",
+    "1113138": "Over"
+   }
+  },
+  "1113140": {
+   "type": "totals",
+   "line": 72.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113140": "Over",
+    "1113141": "Under"
+   }
+  },
+  "1113142": {
+   "type": "totals",
+   "line": 73.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113143": "Under",
+    "1113142": "Over"
+   }
+  },
+  "1113144": {
+   "type": "totals",
+   "line": 73.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113144": "Over",
+    "1113145": "Under"
+   }
+  },
+  "1113146": {
+   "type": "totals",
+   "line": 74.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113147": "Under",
+    "1113146": "Over"
+   }
+  },
+  "1113148": {
+   "type": "totals",
+   "line": 74.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113149": "Under",
+    "1113148": "Over"
+   }
+  },
+  "1113150": {
+   "type": "totals",
+   "line": 75.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113150": "Over",
+    "1113151": "Under"
+   }
+  },
+  "1113152": {
+   "type": "totals",
+   "line": 75.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113153": "Under",
+    "1113152": "Over"
+   }
+  },
+  "1113154": {
+   "type": "totals",
+   "line": 76.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113155": "Under",
+    "1113154": "Over"
+   }
+  },
+  "1113156": {
+   "type": "totals",
+   "line": 76.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113156": "Over",
+    "1113157": "Under"
+   }
+  },
+  "1113158": {
+   "type": "totals",
+   "line": 77.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113159": "Under",
+    "1113158": "Over"
+   }
+  },
+  "1113160": {
+   "type": "totals",
+   "line": 77.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113161": "Under",
+    "1113160": "Over"
+   }
+  },
+  "1113162": {
+   "type": "totals",
+   "line": 78.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113162": "Over",
+    "1113163": "Under"
+   }
+  },
+  "1113164": {
+   "type": "totals",
+   "line": 78.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113165": "Under",
+    "1113164": "Over"
+   }
+  },
+  "1113166": {
+   "type": "totals",
+   "line": 79.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113166": "Over",
+    "1113167": "Under"
+   }
+  },
+  "1113168": {
+   "type": "totals",
+   "line": 79.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113168": "Over",
+    "1113169": "Under"
+   }
+  },
+  "1113170": {
+   "type": "totals",
+   "line": 80.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113170": "Over",
+    "1113171": "Under"
+   }
+  },
+  "1113172": {
+   "type": "totals",
+   "line": 80.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113173": "Under",
+    "1113172": "Over"
+   }
+  },
+  "1113174": {
+   "type": "totals",
+   "line": 81.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113175": "Under",
+    "1113174": "Over"
+   }
+  },
+  "1113176": {
+   "type": "totals",
+   "line": 81.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113176": "Over",
+    "1113177": "Under"
+   }
+  },
+  "1113178": {
+   "type": "totals",
+   "line": 82.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113179": "Under",
+    "1113178": "Over"
+   }
+  },
+  "1113180": {
+   "type": "totals",
+   "line": 82.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113181": "Under",
+    "1113180": "Over"
+   }
+  },
+  "1113182": {
+   "type": "totals",
+   "line": 83.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113182": "Over",
+    "1113183": "Under"
+   }
+  },
+  "1113184": {
+   "type": "totals",
+   "line": 83.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113185": "Under",
+    "1113184": "Over"
+   }
+  },
+  "1113186": {
+   "type": "totals",
+   "line": 84.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113186": "Over",
+    "1113187": "Under"
+   }
+  },
+  "1113188": {
+   "type": "totals",
+   "line": 84.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113188": "Over",
+    "1113189": "Under"
+   }
+  },
+  "1113190": {
+   "type": "totals",
+   "line": 85.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113191": "Under",
+    "1113190": "Over"
+   }
+  },
+  "1113192": {
+   "type": "totals",
+   "line": 85.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113192": "Over",
+    "1113193": "Under"
+   }
+  },
+  "1113194": {
+   "type": "totals",
+   "line": 86.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113195": "Under",
+    "1113194": "Over"
+   }
+  },
+  "1113196": {
+   "type": "totals",
+   "line": 86.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113197": "Under",
+    "1113196": "Over"
+   }
+  },
+  "1113198": {
+   "type": "totals",
+   "line": 87.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113199": "Under",
+    "1113198": "Over"
+   }
+  },
+  "1113200": {
+   "type": "totals",
+   "line": 87.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113201": "Under",
+    "1113200": "Over"
+   }
+  },
+  "1113202": {
+   "type": "totals",
+   "line": 88.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113203": "Under",
+    "1113202": "Over"
+   }
+  },
+  "1113204": {
+   "type": "totals",
+   "line": 88.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113204": "Over",
+    "1113205": "Under"
+   }
+  },
+  "1113206": {
+   "type": "totals",
+   "line": 89.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113206": "Over",
+    "1113207": "Under"
+   }
+  },
+  "1113208": {
+   "type": "totals",
+   "line": 89.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113209": "Under",
+    "1113208": "Over"
+   }
+  },
+  "1113210": {
+   "type": "totals",
+   "line": 90.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113211": "Under",
+    "1113210": "Over"
+   }
+  },
+  "1113212": {
+   "type": "totals",
+   "line": 90.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113213": "Under",
+    "1113212": "Over"
+   }
+  },
+  "1113214": {
+   "type": "totals",
+   "line": 91.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113215": "Under",
+    "1113214": "Over"
+   }
+  },
+  "1113216": {
+   "type": "totals",
+   "line": 91.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113217": "Under",
+    "1113216": "Over"
+   }
+  },
+  "1113218": {
+   "type": "totals",
+   "line": 92.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113218": "Over",
+    "1113219": "Under"
+   }
+  },
+  "1113220": {
+   "type": "totals",
+   "line": 92.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113220": "Over",
+    "1113221": "Under"
+   }
+  },
+  "1113222": {
+   "type": "totals",
+   "line": 93.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113223": "Under",
+    "1113222": "Over"
+   }
+  },
+  "1113224": {
+   "type": "totals",
+   "line": 93.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113225": "Under",
+    "1113224": "Over"
+   }
+  },
+  "1113226": {
+   "type": "totals",
+   "line": 94.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113226": "Over",
+    "1113227": "Under"
+   }
+  },
+  "1113228": {
+   "type": "totals",
+   "line": 94.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113229": "Under",
+    "1113228": "Over"
+   }
+  },
+  "1113230": {
+   "type": "totals",
+   "line": 95.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113231": "Under",
+    "1113230": "Over"
+   }
+  },
+  "1113232": {
+   "type": "totals",
+   "line": 95.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113233": "Under",
+    "1113232": "Over"
+   }
+  },
+  "1113234": {
+   "type": "totals",
+   "line": 96.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113234": "Over",
+    "1113235": "Under"
+   }
+  },
+  "1113236": {
+   "type": "totals",
+   "line": 96.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113237": "Under",
+    "1113236": "Over"
+   }
+  },
+  "1113238": {
+   "type": "totals",
+   "line": 97.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113238": "Over",
+    "1113239": "Under"
+   }
+  },
+  "1113240": {
+   "type": "totals",
+   "line": 97.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113241": "Under",
+    "1113240": "Over"
+   }
+  },
+  "1113242": {
+   "type": "totals",
+   "line": 98.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113242": "Over",
+    "1113243": "Under"
+   }
+  },
+  "1113244": {
+   "type": "totals",
+   "line": 98.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113244": "Over",
+    "1113245": "Under"
+   }
+  },
+  "1113246": {
+   "type": "totals",
+   "line": 99.0,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113246": "Over",
+    "1113247": "Under"
+   }
+  },
+  "1113248": {
+   "type": "totals",
+   "line": 99.5,
+   "name": "Over Under (incl. overtime)",
+   "outcomes": {
+    "1113248": "Over",
+    "1113249": "Under"
+   }
+  },
+  "1115530": {
+   "type": "spreads",
+   "line": -90.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115531": "2",
+    "1115530": "1"
+   }
+  },
+  "1115532": {
+   "type": "spreads",
+   "line": -89.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115532": "1",
+    "1115533": "2"
+   }
+  },
+  "1115534": {
+   "type": "spreads",
+   "line": -89.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115535": "2",
+    "1115534": "1"
+   }
+  },
+  "1115536": {
+   "type": "spreads",
+   "line": -88.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115536": "1",
+    "1115537": "2"
+   }
+  },
+  "1115538": {
+   "type": "spreads",
+   "line": -88.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115538": "1",
+    "1115539": "2"
+   }
+  },
+  "1115540": {
+   "type": "spreads",
+   "line": -87.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115540": "1",
+    "1115541": "2"
+   }
+  },
+  "1115542": {
+   "type": "spreads",
+   "line": -87.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115542": "1",
+    "1115543": "2"
+   }
+  },
+  "1115544": {
+   "type": "spreads",
+   "line": -86.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115545": "2",
+    "1115544": "1"
+   }
+  },
+  "1115546": {
+   "type": "spreads",
+   "line": -86.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115546": "1",
+    "1115547": "2"
+   }
+  },
+  "1115548": {
+   "type": "spreads",
+   "line": -85.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115549": "2",
+    "1115548": "1"
+   }
+  },
+  "1115550": {
+   "type": "spreads",
+   "line": -85.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115551": "2",
+    "1115550": "1"
+   }
+  },
+  "1115552": {
+   "type": "spreads",
+   "line": -84.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115552": "1",
+    "1115553": "2"
+   }
+  },
+  "1115554": {
+   "type": "spreads",
+   "line": -84.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115555": "2",
+    "1115554": "1"
+   }
+  },
+  "1115556": {
+   "type": "spreads",
+   "line": -83.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115556": "1",
+    "1115557": "2"
+   }
+  },
+  "1115558": {
+   "type": "spreads",
+   "line": -83.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115558": "1",
+    "1115559": "2"
+   }
+  },
+  "1115560": {
+   "type": "spreads",
+   "line": -82.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115561": "2",
+    "1115560": "1"
+   }
+  },
+  "1115562": {
+   "type": "spreads",
+   "line": -82.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115562": "1",
+    "1115563": "2"
+   }
+  },
+  "1115564": {
+   "type": "spreads",
+   "line": -81.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115565": "2",
+    "1115564": "1"
+   }
+  },
+  "1115566": {
+   "type": "spreads",
+   "line": -81.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115566": "1",
+    "1115567": "2"
+   }
+  },
+  "1115568": {
+   "type": "spreads",
+   "line": -80.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115568": "1",
+    "1115569": "2"
+   }
+  },
+  "1115570": {
+   "type": "spreads",
+   "line": 80.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115571": "2",
+    "1115570": "1"
+   }
+  },
+  "1115572": {
+   "type": "spreads",
+   "line": 81.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115573": "2",
+    "1115572": "1"
+   }
+  },
+  "1115574": {
+   "type": "spreads",
+   "line": 81.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115575": "2",
+    "1115574": "1"
+   }
+  },
+  "1115576": {
+   "type": "spreads",
+   "line": 82.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115576": "1",
+    "1115577": "2"
+   }
+  },
+  "1115578": {
+   "type": "spreads",
+   "line": 82.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115579": "2",
+    "1115578": "1"
+   }
+  },
+  "1115580": {
+   "type": "spreads",
+   "line": 83.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115580": "1",
+    "1115581": "2"
+   }
+  },
+  "1115582": {
+   "type": "spreads",
+   "line": 83.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115583": "2",
+    "1115582": "1"
+   }
+  },
+  "1115584": {
+   "type": "spreads",
+   "line": 84.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115584": "1",
+    "1115585": "2"
+   }
+  },
+  "1115586": {
+   "type": "spreads",
+   "line": 84.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115587": "2",
+    "1115586": "1"
+   }
+  },
+  "1115588": {
+   "type": "spreads",
+   "line": 85.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115588": "1",
+    "1115589": "2"
+   }
+  },
+  "1115590": {
+   "type": "spreads",
+   "line": 85.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115591": "2",
+    "1115590": "1"
+   }
+  },
+  "1115592": {
+   "type": "spreads",
+   "line": 86.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115593": "2",
+    "1115592": "1"
+   }
+  },
+  "1115594": {
+   "type": "spreads",
+   "line": 86.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115595": "2",
+    "1115594": "1"
+   }
+  },
+  "1115596": {
+   "type": "spreads",
+   "line": 87.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115597": "2",
+    "1115596": "1"
+   }
+  },
+  "1115598": {
+   "type": "spreads",
+   "line": 87.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115599": "2",
+    "1115598": "1"
+   }
+  },
+  "1115600": {
+   "type": "spreads",
+   "line": 88.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115601": "2",
+    "1115600": "1"
+   }
+  },
+  "1115602": {
+   "type": "spreads",
+   "line": 88.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115603": "2",
+    "1115602": "1"
+   }
+  },
+  "1115604": {
+   "type": "spreads",
+   "line": 89.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115604": "1",
+    "1115605": "2"
+   }
+  },
+  "1115606": {
+   "type": "spreads",
+   "line": 89.5,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115607": "2",
+    "1115606": "1"
+   }
+  },
+  "1115608": {
+   "type": "spreads",
+   "line": 90.0,
+   "name": "Handicap (incl. overtime)",
+   "outcomes": {
+    "1115609": "2",
+    "1115608": "1"
+   }
+  }
+ }
+}
