@@ -1,0 +1,4726 @@
+{
+ "111678": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 4.5,
+  "period": "result",
+  "outcomes": {
+   "111678": "Over",
+   "111679": "Under"
+  }
+ },
+ "111680": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 5.5,
+  "period": "result",
+  "outcomes": {
+   "111680": "Over",
+   "111681": "Under"
+  }
+ },
+ "111682": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 6.5,
+  "period": "result",
+  "outcomes": {
+   "111683": "Under",
+   "111682": "Over"
+  }
+ },
+ "111684": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 7.5,
+  "period": "result",
+  "outcomes": {
+   "111685": "Under",
+   "111684": "Over"
+  }
+ },
+ "111686": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 8.5,
+  "period": "result",
+  "outcomes": {
+   "111686": "Over",
+   "111687": "Under"
+  }
+ },
+ "111688": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 9.5,
+  "period": "result",
+  "outcomes": {
+   "111688": "Over",
+   "111689": "Under"
+  }
+ },
+ "111690": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 10.5,
+  "period": "result",
+  "outcomes": {
+   "111691": "Under",
+   "111690": "Over"
+  }
+ },
+ "111692": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 11.5,
+  "period": "result",
+  "outcomes": {
+   "111692": "Over",
+   "111693": "Under"
+  }
+ },
+ "111694": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 12.5,
+  "period": "result",
+  "outcomes": {
+   "111695": "Under",
+   "111694": "Over"
+  }
+ },
+ "111696": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 13.5,
+  "period": "result",
+  "outcomes": {
+   "111696": "Over",
+   "111697": "Under"
+  }
+ },
+ "111698": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 14.5,
+  "period": "result",
+  "outcomes": {
+   "111698": "Over",
+   "111699": "Under"
+  }
+ },
+ "111700": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 15.5,
+  "period": "result",
+  "outcomes": {
+   "111700": "Over",
+   "111701": "Under"
+  }
+ },
+ "111702": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 16.5,
+  "period": "result",
+  "outcomes": {
+   "111703": "Under",
+   "111702": "Over"
+  }
+ },
+ "111704": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 17.5,
+  "period": "result",
+  "outcomes": {
+   "111704": "Over",
+   "111705": "Under"
+  }
+ },
+ "111706": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 18.5,
+  "period": "result",
+  "outcomes": {
+   "111707": "Under",
+   "111706": "Over"
+  }
+ },
+ "111708": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 19.5,
+  "period": "result",
+  "outcomes": {
+   "111709": "Under",
+   "111708": "Over"
+  }
+ },
+ "111710": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 20.5,
+  "period": "result",
+  "outcomes": {
+   "111711": "Under",
+   "111710": "Over"
+  }
+ },
+ "111712": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 21.5,
+  "period": "result",
+  "outcomes": {
+   "111712": "Over",
+   "111713": "Under"
+  }
+ },
+ "111714": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 22.5,
+  "period": "result",
+  "outcomes": {
+   "111714": "Over",
+   "111715": "Under"
+  }
+ },
+ "111716": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 23.5,
+  "period": "result",
+  "outcomes": {
+   "111717": "Under",
+   "111716": "Over"
+  }
+ },
+ "111718": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 24.5,
+  "period": "result",
+  "outcomes": {
+   "111718": "Over",
+   "111719": "Under"
+  }
+ },
+ "111720": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 25.5,
+  "period": "result",
+  "outcomes": {
+   "111720": "Over",
+   "111721": "Under"
+  }
+ },
+ "111722": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 26.5,
+  "period": "result",
+  "outcomes": {
+   "111723": "Under",
+   "111722": "Over"
+  }
+ },
+ "111724": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 27.5,
+  "period": "result",
+  "outcomes": {
+   "111724": "Over",
+   "111725": "Under"
+  }
+ },
+ "111726": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 28.5,
+  "period": "result",
+  "outcomes": {
+   "111727": "Under",
+   "111726": "Over"
+  }
+ },
+ "111728": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 29.5,
+  "period": "result",
+  "outcomes": {
+   "111728": "Over",
+   "111729": "Under"
+  }
+ },
+ "111730": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 30.5,
+  "period": "result",
+  "outcomes": {
+   "111731": "Under",
+   "111730": "Over"
+  }
+ },
+ "111732": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 31.5,
+  "period": "result",
+  "outcomes": {
+   "111732": "Over",
+   "111733": "Under"
+  }
+ },
+ "111734": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 32.5,
+  "period": "result",
+  "outcomes": {
+   "111734": "Over",
+   "111735": "Under"
+  }
+ },
+ "111736": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 33.5,
+  "period": "result",
+  "outcomes": {
+   "111736": "Over",
+   "111737": "Under"
+  }
+ },
+ "111738": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 34.5,
+  "period": "result",
+  "outcomes": {
+   "111738": "Over",
+   "111739": "Under"
+  }
+ },
+ "111740": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 35.5,
+  "period": "result",
+  "outcomes": {
+   "111740": "Over",
+   "111741": "Under"
+  }
+ },
+ "111742": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 36.5,
+  "period": "result",
+  "outcomes": {
+   "111743": "Under",
+   "111742": "Over"
+  }
+ },
+ "111744": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 37.5,
+  "period": "result",
+  "outcomes": {
+   "111745": "Under",
+   "111744": "Over"
+  }
+ },
+ "111746": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 38.5,
+  "period": "result",
+  "outcomes": {
+   "111747": "Under",
+   "111746": "Over"
+  }
+ },
+ "111748": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 39.5,
+  "period": "result",
+  "outcomes": {
+   "111749": "Under",
+   "111748": "Over"
+  }
+ },
+ "111750": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 40.5,
+  "period": "result",
+  "outcomes": {
+   "111751": "Under",
+   "111750": "Over"
+  }
+ },
+ "111752": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 41.5,
+  "period": "result",
+  "outcomes": {
+   "111752": "Over",
+   "111753": "Under"
+  }
+ },
+ "111754": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 42.5,
+  "period": "result",
+  "outcomes": {
+   "111755": "Under",
+   "111754": "Over"
+  }
+ },
+ "111756": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 43.5,
+  "period": "result",
+  "outcomes": {
+   "111757": "Under",
+   "111756": "Over"
+  }
+ },
+ "111758": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 44.5,
+  "period": "result",
+  "outcomes": {
+   "111759": "Under",
+   "111758": "Over"
+  }
+ },
+ "111760": {
+  "name": "Over Under Player Points (incl. overtime)",
+  "type": "playertotals-points",
+  "line": 45.5,
+  "period": "result",
+  "outcomes": {
+   "111761": "Under",
+   "111760": "Over"
+  }
+ },
+ "111762": {
+  "name": "Over Under Player Rebounds (incl. overtime)",
+  "type": "playertotals-rebounds",
+  "line": 0.5,
+  "period": "result",
+  "outcomes": {
+   "111762": "Over",
+   "111763": "Under"
+  }
+ },
+ "111764": {
+  "name": "Over Under Player Rebounds (incl. overtime)",
+  "type": "playertotals-rebounds",
+  "line": 1.5,
+  "period": "result",
+  "outcomes": {
+   "111765": "Under",
+   "111764": "Over"
+  }
+ },
+ "111766": {
+  "name": "Over Under Player Rebounds (incl. overtime)",
+  "type": "playertotals-rebounds",
+  "line": 2.5,
+  "period": "result",
+  "outcomes": {
+   "111766": "Over",
+   "111767": "Under"
+  }
+ },
+ "111768": {
+  "name": "Over Under Player Rebounds (incl. overtime)",
+  "type": "playertotals-rebounds",
+  "line": 3.5,
+  "period": "result",
+  "outcomes": {
+   "111768": "Over",
+   "111769": "Under"
+  }
+ },
+ "111770": {
+  "name": "Over Under Player Rebounds (incl. overtime)",
+  "type": "playertotals-rebounds",
+  "line": 4.5,
+  "period": "result",
+  "outcomes": {
+   "111771": "Under",
+   "111770": "Over"
+  }
+ },
+ "111772": {
+  "name": "Over Under Player Rebounds (incl. overtime)",
+  "type": "playertotals-rebounds",
+  "line": 5.5,
+  "period": "result",
+  "outcomes": {
+   "111773": "Under",
+   "111772": "Over"
+  }
+ },
+ "111774": {
+  "name": "Over Under Player Rebounds (incl. overtime)",
+  "type": "playertotals-rebounds",
+  "line": 6.5,
+  "period": "result",
+  "outcomes": {
+   "111774": "Over",
+   "111775": "Under"
+  }
+ },
+ "111776": {
+  "name": "Over Under Player Rebounds (incl. overtime)",
+  "type": "playertotals-rebounds",
+  "line": 7.5,
+  "period": "result",
+  "outcomes": {
+   "111777": "Under",
+   "111776": "Over"
+  }
+ },
+ "111778": {
+  "name": "Over Under Player Rebounds (incl. overtime)",
+  "type": "playertotals-rebounds",
+  "line": 8.5,
+  "period": "result",
+  "outcomes": {
+   "111779": "Under",
+   "111778": "Over"
+  }
+ },
+ "111780": {
+  "name": "Over Under Player Rebounds (incl. overtime)",
+  "type": "playertotals-rebounds",
+  "line": 9.5,
+  "period": "result",
+  "outcomes": {
+   "111780": "Over",
+   "111781": "Under"
+  }
+ },
+ "111782": {
+  "name": "Over Under Player Rebounds (incl. overtime)",
+  "type": "playertotals-rebounds",
+  "line": 10.5,
+  "period": "result",
+  "outcomes": {
+   "111782": "Over",
+   "111783": "Under"
+  }
+ },
+ "111784": {
+  "name": "Over Under Player Rebounds (incl. overtime)",
+  "type": "playertotals-rebounds",
+  "line": 11.5,
+  "period": "result",
+  "outcomes": {
+   "111784": "Over",
+   "111785": "Under"
+  }
+ },
+ "111786": {
+  "name": "Over Under Player Rebounds (incl. overtime)",
+  "type": "playertotals-rebounds",
+  "line": 12.5,
+  "period": "result",
+  "outcomes": {
+   "111786": "Over",
+   "111787": "Under"
+  }
+ },
+ "111788": {
+  "name": "Over Under Player Rebounds (incl. overtime)",
+  "type": "playertotals-rebounds",
+  "line": 13.5,
+  "period": "result",
+  "outcomes": {
+   "111789": "Under",
+   "111788": "Over"
+  }
+ },
+ "111790": {
+  "name": "Over Under Player Rebounds (incl. overtime)",
+  "type": "playertotals-rebounds",
+  "line": 14.5,
+  "period": "result",
+  "outcomes": {
+   "111791": "Under",
+   "111790": "Over"
+  }
+ },
+ "111792": {
+  "name": "Over Under Player 3 Point FG (incl. overtime)",
+  "type": "playertotals-3pointers",
+  "line": 0.5,
+  "period": "result",
+  "outcomes": {
+   "111792": "Over",
+   "111793": "Under"
+  }
+ },
+ "111794": {
+  "name": "Over Under Player 3 Point FG (incl. overtime)",
+  "type": "playertotals-3pointers",
+  "line": 1.5,
+  "period": "result",
+  "outcomes": {
+   "111795": "Under",
+   "111794": "Over"
+  }
+ },
+ "111796": {
+  "name": "Over Under Player 3 Point FG (incl. overtime)",
+  "type": "playertotals-3pointers",
+  "line": 2.5,
+  "period": "result",
+  "outcomes": {
+   "111797": "Under",
+   "111796": "Over"
+  }
+ },
+ "111798": {
+  "name": "Over Under Player 3 Point FG (incl. overtime)",
+  "type": "playertotals-3pointers",
+  "line": 3.5,
+  "period": "result",
+  "outcomes": {
+   "111799": "Under",
+   "111798": "Over"
+  }
+ },
+ "111800": {
+  "name": "Over Under Player 3 Point FG (incl. overtime)",
+  "type": "playertotals-3pointers",
+  "line": 4.5,
+  "period": "result",
+  "outcomes": {
+   "111800": "Over",
+   "111801": "Under"
+  }
+ },
+ "111802": {
+  "name": "Over Under Player 3 Point FG (incl. overtime)",
+  "type": "playertotals-3pointers",
+  "line": 5.5,
+  "period": "result",
+  "outcomes": {
+   "111802": "Over",
+   "111803": "Under"
+  }
+ },
+ "111804": {
+  "name": "Over Under Player 3 Point FG (incl. overtime)",
+  "type": "playertotals-3pointers",
+  "line": 6.5,
+  "period": "result",
+  "outcomes": {
+   "111805": "Under",
+   "111804": "Over"
+  }
+ },
+ "111806": {
+  "name": "Over Under Player 3 Point FG (incl. overtime)",
+  "type": "playertotals-3pointers",
+  "line": 7.5,
+  "period": "result",
+  "outcomes": {
+   "111807": "Under",
+   "111806": "Over"
+  }
+ },
+ "111808": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 10.5,
+  "period": "result",
+  "outcomes": {
+   "111808": "Over",
+   "111809": "Under"
+  }
+ },
+ "111810": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 11.5,
+  "period": "result",
+  "outcomes": {
+   "111811": "Under",
+   "111810": "Over"
+  }
+ },
+ "111812": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 12.5,
+  "period": "result",
+  "outcomes": {
+   "111812": "Over",
+   "111813": "Under"
+  }
+ },
+ "111814": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 13.5,
+  "period": "result",
+  "outcomes": {
+   "111815": "Under",
+   "111814": "Over"
+  }
+ },
+ "111816": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 14.5,
+  "period": "result",
+  "outcomes": {
+   "111817": "Under",
+   "111816": "Over"
+  }
+ },
+ "111818": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 15.5,
+  "period": "result",
+  "outcomes": {
+   "111818": "Over",
+   "111819": "Under"
+  }
+ },
+ "111820": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 16.5,
+  "period": "result",
+  "outcomes": {
+   "111820": "Over",
+   "111821": "Under"
+  }
+ },
+ "111822": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 17.5,
+  "period": "result",
+  "outcomes": {
+   "111822": "Over",
+   "111823": "Under"
+  }
+ },
+ "111824": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 18.5,
+  "period": "result",
+  "outcomes": {
+   "111824": "Over",
+   "111825": "Under"
+  }
+ },
+ "111826": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 19.5,
+  "period": "result",
+  "outcomes": {
+   "111827": "Under",
+   "111826": "Over"
+  }
+ },
+ "111828": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 20.5,
+  "period": "result",
+  "outcomes": {
+   "111828": "Over",
+   "111829": "Under"
+  }
+ },
+ "111830": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 21.5,
+  "period": "result",
+  "outcomes": {
+   "111830": "Over",
+   "111831": "Under"
+  }
+ },
+ "111832": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 22.5,
+  "period": "result",
+  "outcomes": {
+   "111832": "Over",
+   "111833": "Under"
+  }
+ },
+ "111834": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 23.5,
+  "period": "result",
+  "outcomes": {
+   "111834": "Over",
+   "111835": "Under"
+  }
+ },
+ "111836": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 24.5,
+  "period": "result",
+  "outcomes": {
+   "111837": "Under",
+   "111836": "Over"
+  }
+ },
+ "111838": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 25.5,
+  "period": "result",
+  "outcomes": {
+   "111838": "Over",
+   "111839": "Under"
+  }
+ },
+ "111840": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 26.5,
+  "period": "result",
+  "outcomes": {
+   "111840": "Over",
+   "111841": "Under"
+  }
+ },
+ "111842": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 27.5,
+  "period": "result",
+  "outcomes": {
+   "111843": "Under",
+   "111842": "Over"
+  }
+ },
+ "111844": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 28.5,
+  "period": "result",
+  "outcomes": {
+   "111845": "Under",
+   "111844": "Over"
+  }
+ },
+ "111846": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 29.5,
+  "period": "result",
+  "outcomes": {
+   "111847": "Under",
+   "111846": "Over"
+  }
+ },
+ "111848": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 30.5,
+  "period": "result",
+  "outcomes": {
+   "111849": "Under",
+   "111848": "Over"
+  }
+ },
+ "111850": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 31.5,
+  "period": "result",
+  "outcomes": {
+   "111851": "Under",
+   "111850": "Over"
+  }
+ },
+ "111852": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 32.5,
+  "period": "result",
+  "outcomes": {
+   "111852": "Over",
+   "111853": "Under"
+  }
+ },
+ "111854": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 33.5,
+  "period": "result",
+  "outcomes": {
+   "111854": "Over",
+   "111855": "Under"
+  }
+ },
+ "111856": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 34.5,
+  "period": "result",
+  "outcomes": {
+   "111857": "Under",
+   "111856": "Over"
+  }
+ },
+ "111858": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 35.5,
+  "period": "result",
+  "outcomes": {
+   "111859": "Under",
+   "111858": "Over"
+  }
+ },
+ "111860": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 36.5,
+  "period": "result",
+  "outcomes": {
+   "111860": "Over",
+   "111861": "Under"
+  }
+ },
+ "111862": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 37.5,
+  "period": "result",
+  "outcomes": {
+   "111862": "Over",
+   "111863": "Under"
+  }
+ },
+ "111864": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 38.5,
+  "period": "result",
+  "outcomes": {
+   "111865": "Under",
+   "111864": "Over"
+  }
+ },
+ "111866": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 39.5,
+  "period": "result",
+  "outcomes": {
+   "111867": "Under",
+   "111866": "Over"
+  }
+ },
+ "111868": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 40.5,
+  "period": "result",
+  "outcomes": {
+   "111868": "Over",
+   "111869": "Under"
+  }
+ },
+ "111870": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 41.5,
+  "period": "result",
+  "outcomes": {
+   "111871": "Under",
+   "111870": "Over"
+  }
+ },
+ "111872": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 42.5,
+  "period": "result",
+  "outcomes": {
+   "111872": "Over",
+   "111873": "Under"
+  }
+ },
+ "111874": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 43.5,
+  "period": "result",
+  "outcomes": {
+   "111874": "Over",
+   "111875": "Under"
+  }
+ },
+ "111876": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 44.5,
+  "period": "result",
+  "outcomes": {
+   "111876": "Over",
+   "111877": "Under"
+  }
+ },
+ "111878": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 45.5,
+  "period": "result",
+  "outcomes": {
+   "111878": "Over",
+   "111879": "Under"
+  }
+ },
+ "111880": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 46.5,
+  "period": "result",
+  "outcomes": {
+   "111881": "Under",
+   "111880": "Over"
+  }
+ },
+ "111882": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 47.5,
+  "period": "result",
+  "outcomes": {
+   "111882": "Over",
+   "111883": "Under"
+  }
+ },
+ "111884": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 48.5,
+  "period": "result",
+  "outcomes": {
+   "111884": "Over",
+   "111885": "Under"
+  }
+ },
+ "111886": {
+  "name": "Over Under Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsassreb",
+  "line": 49.5,
+  "period": "result",
+  "outcomes": {
+   "111887": "Under",
+   "111886": "Over"
+  }
+ },
+ "111888": {
+  "name": "Over Under Player Assists (incl. overtime)",
+  "type": "playertotals-assists",
+  "line": 0.5,
+  "period": "result",
+  "outcomes": {
+   "111889": "Under",
+   "111888": "Over"
+  }
+ },
+ "111890": {
+  "name": "Over Under Player Assists (incl. overtime)",
+  "type": "playertotals-assists",
+  "line": 1.5,
+  "period": "result",
+  "outcomes": {
+   "111890": "Over",
+   "111891": "Under"
+  }
+ },
+ "111892": {
+  "name": "Over Under Player Assists (incl. overtime)",
+  "type": "playertotals-assists",
+  "line": 2.5,
+  "period": "result",
+  "outcomes": {
+   "111893": "Under",
+   "111892": "Over"
+  }
+ },
+ "111894": {
+  "name": "Over Under Player Assists (incl. overtime)",
+  "type": "playertotals-assists",
+  "line": 3.5,
+  "period": "result",
+  "outcomes": {
+   "111894": "Over",
+   "111895": "Under"
+  }
+ },
+ "111896": {
+  "name": "Over Under Player Assists (incl. overtime)",
+  "type": "playertotals-assists",
+  "line": 4.5,
+  "period": "result",
+  "outcomes": {
+   "111897": "Under",
+   "111896": "Over"
+  }
+ },
+ "111898": {
+  "name": "Over Under Player Assists (incl. overtime)",
+  "type": "playertotals-assists",
+  "line": 5.5,
+  "period": "result",
+  "outcomes": {
+   "111898": "Over",
+   "111899": "Under"
+  }
+ },
+ "111900": {
+  "name": "Over Under Player Assists (incl. overtime)",
+  "type": "playertotals-assists",
+  "line": 6.5,
+  "period": "result",
+  "outcomes": {
+   "111901": "Under",
+   "111900": "Over"
+  }
+ },
+ "111902": {
+  "name": "Over Under Player Assists (incl. overtime)",
+  "type": "playertotals-assists",
+  "line": 7.5,
+  "period": "result",
+  "outcomes": {
+   "111902": "Over",
+   "111903": "Under"
+  }
+ },
+ "111904": {
+  "name": "Over Under Player Assists (incl. overtime)",
+  "type": "playertotals-assists",
+  "line": 8.5,
+  "period": "result",
+  "outcomes": {
+   "111904": "Over",
+   "111905": "Under"
+  }
+ },
+ "111906": {
+  "name": "Over Under Player Assists (incl. overtime)",
+  "type": "playertotals-assists",
+  "line": 9.5,
+  "period": "result",
+  "outcomes": {
+   "111906": "Over",
+   "111907": "Under"
+  }
+ },
+ "111908": {
+  "name": "Over Under Player Assists (incl. overtime)",
+  "type": "playertotals-assists",
+  "line": 10.5,
+  "period": "result",
+  "outcomes": {
+   "111908": "Over",
+   "111909": "Under"
+  }
+ },
+ "111910": {
+  "name": "Over Under Player Assists (incl. overtime)",
+  "type": "playertotals-assists",
+  "line": 11.5,
+  "period": "result",
+  "outcomes": {
+   "111911": "Under",
+   "111910": "Over"
+  }
+ },
+ "111912": {
+  "name": "Over Under Player Assists (incl. overtime)",
+  "type": "playertotals-assists",
+  "line": 12.5,
+  "period": "result",
+  "outcomes": {
+   "111913": "Under",
+   "111912": "Over"
+  }
+ },
+ "111914": {
+  "name": "Over Under Player Assists (incl. overtime)",
+  "type": "playertotals-assists",
+  "line": 13.5,
+  "period": "result",
+  "outcomes": {
+   "111915": "Under",
+   "111914": "Over"
+  }
+ },
+ "111916": {
+  "name": "Over Under Player Assists (incl. overtime)",
+  "type": "playertotals-assists",
+  "line": 14.5,
+  "period": "result",
+  "outcomes": {
+   "111917": "Under",
+   "111916": "Over"
+  }
+ },
+ "111918": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 0.5,
+  "period": "result",
+  "outcomes": {
+   "111919": "Under",
+   "111918": "Over"
+  }
+ },
+ "111920": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 1.5,
+  "period": "result",
+  "outcomes": {
+   "111921": "Under",
+   "111920": "Over"
+  }
+ },
+ "111922": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 2.5,
+  "period": "result",
+  "outcomes": {
+   "111923": "Under",
+   "111922": "Over"
+  }
+ },
+ "111924": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 3.5,
+  "period": "result",
+  "outcomes": {
+   "111924": "Over",
+   "111925": "Under"
+  }
+ },
+ "111926": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 4.5,
+  "period": "result",
+  "outcomes": {
+   "111927": "Under",
+   "111926": "Over"
+  }
+ },
+ "111928": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 5.5,
+  "period": "result",
+  "outcomes": {
+   "111928": "Over",
+   "111929": "Under"
+  }
+ },
+ "111930": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 6.5,
+  "period": "result",
+  "outcomes": {
+   "111931": "Under",
+   "111930": "Over"
+  }
+ },
+ "111932": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 7.5,
+  "period": "result",
+  "outcomes": {
+   "111933": "Under",
+   "111932": "Over"
+  }
+ },
+ "111934": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 8.5,
+  "period": "result",
+  "outcomes": {
+   "111935": "Under",
+   "111934": "Over"
+  }
+ },
+ "111936": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 9.5,
+  "period": "result",
+  "outcomes": {
+   "111936": "Over",
+   "111937": "Under"
+  }
+ },
+ "111938": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 10.5,
+  "period": "result",
+  "outcomes": {
+   "111939": "Under",
+   "111938": "Over"
+  }
+ },
+ "111940": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 11.5,
+  "period": "result",
+  "outcomes": {
+   "111941": "Under",
+   "111940": "Over"
+  }
+ },
+ "111942": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 12.5,
+  "period": "result",
+  "outcomes": {
+   "111943": "Under",
+   "111942": "Over"
+  }
+ },
+ "111944": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 13.5,
+  "period": "result",
+  "outcomes": {
+   "111944": "Over",
+   "111945": "Under"
+  }
+ },
+ "111946": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 14.5,
+  "period": "result",
+  "outcomes": {
+   "111946": "Over",
+   "111947": "Under"
+  }
+ },
+ "111948": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 15.5,
+  "period": "result",
+  "outcomes": {
+   "111948": "Over",
+   "111949": "Under"
+  }
+ },
+ "111950": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 16.5,
+  "period": "result",
+  "outcomes": {
+   "111950": "Over",
+   "111951": "Under"
+  }
+ },
+ "111952": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 17.5,
+  "period": "result",
+  "outcomes": {
+   "111952": "Over",
+   "111953": "Under"
+  }
+ },
+ "111954": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 18.5,
+  "period": "result",
+  "outcomes": {
+   "111954": "Over",
+   "111955": "Under"
+  }
+ },
+ "111956": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 19.5,
+  "period": "result",
+  "outcomes": {
+   "111957": "Under",
+   "111956": "Over"
+  }
+ },
+ "111958": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 20.5,
+  "period": "result",
+  "outcomes": {
+   "111958": "Over",
+   "111959": "Under"
+  }
+ },
+ "111960": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 21.5,
+  "period": "result",
+  "outcomes": {
+   "111960": "Over",
+   "111961": "Under"
+  }
+ },
+ "111962": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 22.5,
+  "period": "result",
+  "outcomes": {
+   "111962": "Over",
+   "111963": "Under"
+  }
+ },
+ "111964": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 23.5,
+  "period": "result",
+  "outcomes": {
+   "111965": "Under",
+   "111964": "Over"
+  }
+ },
+ "111966": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 24.5,
+  "period": "result",
+  "outcomes": {
+   "111967": "Under",
+   "111966": "Over"
+  }
+ },
+ "111968": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 25.5,
+  "period": "result",
+  "outcomes": {
+   "111969": "Under",
+   "111968": "Over"
+  }
+ },
+ "111970": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 26.5,
+  "period": "result",
+  "outcomes": {
+   "111970": "Over",
+   "111971": "Under"
+  }
+ },
+ "111972": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 27.5,
+  "period": "result",
+  "outcomes": {
+   "111973": "Under",
+   "111972": "Over"
+  }
+ },
+ "111974": {
+  "name": "Over Under Player Assists + Rebounds (incl. overtime)",
+  "type": "playertotals-assreb",
+  "line": 28.5,
+  "period": "result",
+  "outcomes": {
+   "111974": "Over",
+   "111975": "Under"
+  }
+ },
+ "111976": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 0.5,
+  "period": "result",
+  "outcomes": {
+   "111977": "Under",
+   "111976": "Over"
+  }
+ },
+ "111978": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 1.5,
+  "period": "result",
+  "outcomes": {
+   "111979": "Under",
+   "111978": "Over"
+  }
+ },
+ "111980": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 2.5,
+  "period": "result",
+  "outcomes": {
+   "111980": "Over",
+   "111981": "Under"
+  }
+ },
+ "111982": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 3.5,
+  "period": "result",
+  "outcomes": {
+   "111983": "Under",
+   "111982": "Over"
+  }
+ },
+ "111984": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 4.5,
+  "period": "result",
+  "outcomes": {
+   "111985": "Under",
+   "111984": "Over"
+  }
+ },
+ "111986": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 5.5,
+  "period": "result",
+  "outcomes": {
+   "111987": "Under",
+   "111986": "Over"
+  }
+ },
+ "111988": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 6.5,
+  "period": "result",
+  "outcomes": {
+   "111988": "Over",
+   "111989": "Under"
+  }
+ },
+ "111990": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 7.5,
+  "period": "result",
+  "outcomes": {
+   "111991": "Under",
+   "111990": "Over"
+  }
+ },
+ "111992": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 8.5,
+  "period": "result",
+  "outcomes": {
+   "111993": "Under",
+   "111992": "Over"
+  }
+ },
+ "111994": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 9.5,
+  "period": "result",
+  "outcomes": {
+   "111994": "Over",
+   "111995": "Under"
+  }
+ },
+ "111996": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 10.5,
+  "period": "result",
+  "outcomes": {
+   "111996": "Over",
+   "111997": "Under"
+  }
+ },
+ "111998": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 11.5,
+  "period": "result",
+  "outcomes": {
+   "111999": "Under",
+   "111998": "Over"
+  }
+ },
+ "112000": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 12.5,
+  "period": "result",
+  "outcomes": {
+   "112001": "Under",
+   "112000": "Over"
+  }
+ },
+ "112002": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 13.5,
+  "period": "result",
+  "outcomes": {
+   "112003": "Under",
+   "112002": "Over"
+  }
+ },
+ "112004": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 14.5,
+  "period": "result",
+  "outcomes": {
+   "112005": "Under",
+   "112004": "Over"
+  }
+ },
+ "112006": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 15.5,
+  "period": "result",
+  "outcomes": {
+   "112007": "Under",
+   "112006": "Over"
+  }
+ },
+ "112008": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 16.5,
+  "period": "result",
+  "outcomes": {
+   "112008": "Over",
+   "112009": "Under"
+  }
+ },
+ "112010": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 17.5,
+  "period": "result",
+  "outcomes": {
+   "112010": "Over",
+   "112011": "Under"
+  }
+ },
+ "112012": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 18.5,
+  "period": "result",
+  "outcomes": {
+   "112013": "Under",
+   "112012": "Over"
+  }
+ },
+ "112014": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 19.5,
+  "period": "result",
+  "outcomes": {
+   "112014": "Over",
+   "112015": "Under"
+  }
+ },
+ "112016": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 20.5,
+  "period": "result",
+  "outcomes": {
+   "112017": "Under",
+   "112016": "Over"
+  }
+ },
+ "112018": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 21.5,
+  "period": "result",
+  "outcomes": {
+   "112018": "Over",
+   "112019": "Under"
+  }
+ },
+ "112020": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 22.5,
+  "period": "result",
+  "outcomes": {
+   "112020": "Over",
+   "112021": "Under"
+  }
+ },
+ "112022": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 23.5,
+  "period": "result",
+  "outcomes": {
+   "112022": "Over",
+   "112023": "Under"
+  }
+ },
+ "112024": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 24.5,
+  "period": "result",
+  "outcomes": {
+   "112025": "Under",
+   "112024": "Over"
+  }
+ },
+ "112026": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 25.5,
+  "period": "result",
+  "outcomes": {
+   "112026": "Over",
+   "112027": "Under"
+  }
+ },
+ "112028": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 26.5,
+  "period": "result",
+  "outcomes": {
+   "112029": "Under",
+   "112028": "Over"
+  }
+ },
+ "112030": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 27.5,
+  "period": "result",
+  "outcomes": {
+   "112030": "Over",
+   "112031": "Under"
+  }
+ },
+ "112032": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 28.5,
+  "period": "result",
+  "outcomes": {
+   "112033": "Under",
+   "112032": "Over"
+  }
+ },
+ "112034": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 29.5,
+  "period": "result",
+  "outcomes": {
+   "112035": "Under",
+   "112034": "Over"
+  }
+ },
+ "112036": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 30.5,
+  "period": "result",
+  "outcomes": {
+   "112036": "Over",
+   "112037": "Under"
+  }
+ },
+ "112038": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 31.5,
+  "period": "result",
+  "outcomes": {
+   "112038": "Over",
+   "112039": "Under"
+  }
+ },
+ "112040": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 32.5,
+  "period": "result",
+  "outcomes": {
+   "112041": "Under",
+   "112040": "Over"
+  }
+ },
+ "112042": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 33.5,
+  "period": "result",
+  "outcomes": {
+   "112042": "Over",
+   "112043": "Under"
+  }
+ },
+ "112044": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 34.5,
+  "period": "result",
+  "outcomes": {
+   "112044": "Over",
+   "112045": "Under"
+  }
+ },
+ "112046": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 35.5,
+  "period": "result",
+  "outcomes": {
+   "112047": "Under",
+   "112046": "Over"
+  }
+ },
+ "112048": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 36.5,
+  "period": "result",
+  "outcomes": {
+   "112048": "Over",
+   "112049": "Under"
+  }
+ },
+ "112050": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 37.5,
+  "period": "result",
+  "outcomes": {
+   "112051": "Under",
+   "112050": "Over"
+  }
+ },
+ "112052": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 38.5,
+  "period": "result",
+  "outcomes": {
+   "112052": "Over",
+   "112053": "Under"
+  }
+ },
+ "112054": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 39.5,
+  "period": "result",
+  "outcomes": {
+   "112054": "Over",
+   "112055": "Under"
+  }
+ },
+ "112056": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 40.5,
+  "period": "result",
+  "outcomes": {
+   "112056": "Over",
+   "112057": "Under"
+  }
+ },
+ "112058": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 41.5,
+  "period": "result",
+  "outcomes": {
+   "112058": "Over",
+   "112059": "Under"
+  }
+ },
+ "112060": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 42.5,
+  "period": "result",
+  "outcomes": {
+   "112060": "Over",
+   "112061": "Under"
+  }
+ },
+ "112062": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 43.5,
+  "period": "result",
+  "outcomes": {
+   "112062": "Over",
+   "112063": "Under"
+  }
+ },
+ "112064": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 44.5,
+  "period": "result",
+  "outcomes": {
+   "112064": "Over",
+   "112065": "Under"
+  }
+ },
+ "112066": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 45.5,
+  "period": "result",
+  "outcomes": {
+   "112066": "Over",
+   "112067": "Under"
+  }
+ },
+ "112068": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 46.5,
+  "period": "result",
+  "outcomes": {
+   "112069": "Under",
+   "112068": "Over"
+  }
+ },
+ "112070": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 47.5,
+  "period": "result",
+  "outcomes": {
+   "112071": "Under",
+   "112070": "Over"
+  }
+ },
+ "112072": {
+  "name": "Over Under Player Points + Rebounds (incl. overtime)",
+  "type": "playertotals-ptsreb",
+  "line": 48.5,
+  "period": "result",
+  "outcomes": {
+   "112072": "Over",
+   "112073": "Under"
+  }
+ },
+ "112074": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 0.5,
+  "period": "result",
+  "outcomes": {
+   "112074": "Over",
+   "112075": "Under"
+  }
+ },
+ "112076": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 1.5,
+  "period": "result",
+  "outcomes": {
+   "112076": "Over",
+   "112077": "Under"
+  }
+ },
+ "112078": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 2.5,
+  "period": "result",
+  "outcomes": {
+   "112078": "Over",
+   "112079": "Under"
+  }
+ },
+ "112080": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 3.5,
+  "period": "result",
+  "outcomes": {
+   "112081": "Under",
+   "112080": "Over"
+  }
+ },
+ "112082": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 4.5,
+  "period": "result",
+  "outcomes": {
+   "112082": "Over",
+   "112083": "Under"
+  }
+ },
+ "112084": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 5.5,
+  "period": "result",
+  "outcomes": {
+   "112084": "Over",
+   "112085": "Under"
+  }
+ },
+ "112086": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 6.5,
+  "period": "result",
+  "outcomes": {
+   "112087": "Under",
+   "112086": "Over"
+  }
+ },
+ "112088": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 7.5,
+  "period": "result",
+  "outcomes": {
+   "112089": "Under",
+   "112088": "Over"
+  }
+ },
+ "112090": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 8.5,
+  "period": "result",
+  "outcomes": {
+   "112090": "Over",
+   "112091": "Under"
+  }
+ },
+ "112092": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 9.5,
+  "period": "result",
+  "outcomes": {
+   "112092": "Over",
+   "112093": "Under"
+  }
+ },
+ "112094": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 10.5,
+  "period": "result",
+  "outcomes": {
+   "112095": "Under",
+   "112094": "Over"
+  }
+ },
+ "112096": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 11.5,
+  "period": "result",
+  "outcomes": {
+   "112096": "Over",
+   "112097": "Under"
+  }
+ },
+ "112098": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 12.5,
+  "period": "result",
+  "outcomes": {
+   "112098": "Over",
+   "112099": "Under"
+  }
+ },
+ "112100": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 13.5,
+  "period": "result",
+  "outcomes": {
+   "112101": "Under",
+   "112100": "Over"
+  }
+ },
+ "112102": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 14.5,
+  "period": "result",
+  "outcomes": {
+   "112102": "Over",
+   "112103": "Under"
+  }
+ },
+ "112104": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 15.5,
+  "period": "result",
+  "outcomes": {
+   "112105": "Under",
+   "112104": "Over"
+  }
+ },
+ "112106": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 16.5,
+  "period": "result",
+  "outcomes": {
+   "112106": "Over",
+   "112107": "Under"
+  }
+ },
+ "112108": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 17.5,
+  "period": "result",
+  "outcomes": {
+   "112108": "Over",
+   "112109": "Under"
+  }
+ },
+ "112110": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 18.5,
+  "period": "result",
+  "outcomes": {
+   "112110": "Over",
+   "112111": "Under"
+  }
+ },
+ "112112": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 19.5,
+  "period": "result",
+  "outcomes": {
+   "112112": "Over",
+   "112113": "Under"
+  }
+ },
+ "112114": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 20.5,
+  "period": "result",
+  "outcomes": {
+   "112114": "Over",
+   "112115": "Under"
+  }
+ },
+ "112116": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 21.5,
+  "period": "result",
+  "outcomes": {
+   "112117": "Under",
+   "112116": "Over"
+  }
+ },
+ "112118": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 22.5,
+  "period": "result",
+  "outcomes": {
+   "112118": "Over",
+   "112119": "Under"
+  }
+ },
+ "112120": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 23.5,
+  "period": "result",
+  "outcomes": {
+   "112121": "Under",
+   "112120": "Over"
+  }
+ },
+ "112122": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 24.5,
+  "period": "result",
+  "outcomes": {
+   "112122": "Over",
+   "112123": "Under"
+  }
+ },
+ "112124": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 25.5,
+  "period": "result",
+  "outcomes": {
+   "112124": "Over",
+   "112125": "Under"
+  }
+ },
+ "112126": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 26.5,
+  "period": "result",
+  "outcomes": {
+   "112127": "Under",
+   "112126": "Over"
+  }
+ },
+ "112128": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 27.5,
+  "period": "result",
+  "outcomes": {
+   "112129": "Under",
+   "112128": "Over"
+  }
+ },
+ "112130": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 28.5,
+  "period": "result",
+  "outcomes": {
+   "112130": "Over",
+   "112131": "Under"
+  }
+ },
+ "112132": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 29.5,
+  "period": "result",
+  "outcomes": {
+   "112133": "Under",
+   "112132": "Over"
+  }
+ },
+ "112134": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 30.5,
+  "period": "result",
+  "outcomes": {
+   "112134": "Over",
+   "112135": "Under"
+  }
+ },
+ "112136": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 31.5,
+  "period": "result",
+  "outcomes": {
+   "112137": "Under",
+   "112136": "Over"
+  }
+ },
+ "112138": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 32.5,
+  "period": "result",
+  "outcomes": {
+   "112138": "Over",
+   "112139": "Under"
+  }
+ },
+ "112140": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 33.5,
+  "period": "result",
+  "outcomes": {
+   "112140": "Over",
+   "112141": "Under"
+  }
+ },
+ "112142": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 34.5,
+  "period": "result",
+  "outcomes": {
+   "112142": "Over",
+   "112143": "Under"
+  }
+ },
+ "112144": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 35.5,
+  "period": "result",
+  "outcomes": {
+   "112144": "Over",
+   "112145": "Under"
+  }
+ },
+ "112146": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 36.5,
+  "period": "result",
+  "outcomes": {
+   "112147": "Under",
+   "112146": "Over"
+  }
+ },
+ "112148": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 37.5,
+  "period": "result",
+  "outcomes": {
+   "112148": "Over",
+   "112149": "Under"
+  }
+ },
+ "112150": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 38.5,
+  "period": "result",
+  "outcomes": {
+   "112150": "Over",
+   "112151": "Under"
+  }
+ },
+ "112152": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 39.5,
+  "period": "result",
+  "outcomes": {
+   "112153": "Under",
+   "112152": "Over"
+  }
+ },
+ "112154": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 40.5,
+  "period": "result",
+  "outcomes": {
+   "112155": "Under",
+   "112154": "Over"
+  }
+ },
+ "112156": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 41.5,
+  "period": "result",
+  "outcomes": {
+   "112157": "Under",
+   "112156": "Over"
+  }
+ },
+ "112158": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 42.5,
+  "period": "result",
+  "outcomes": {
+   "112158": "Over",
+   "112159": "Under"
+  }
+ },
+ "112160": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 43.5,
+  "period": "result",
+  "outcomes": {
+   "112161": "Under",
+   "112160": "Over"
+  }
+ },
+ "112162": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 44.5,
+  "period": "result",
+  "outcomes": {
+   "112163": "Under",
+   "112162": "Over"
+  }
+ },
+ "112164": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 45.5,
+  "period": "result",
+  "outcomes": {
+   "112165": "Under",
+   "112164": "Over"
+  }
+ },
+ "112166": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 46.5,
+  "period": "result",
+  "outcomes": {
+   "112166": "Over",
+   "112167": "Under"
+  }
+ },
+ "112168": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 47.5,
+  "period": "result",
+  "outcomes": {
+   "112168": "Over",
+   "112169": "Under"
+  }
+ },
+ "112170": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 48.5,
+  "period": "result",
+  "outcomes": {
+   "112171": "Under",
+   "112170": "Over"
+  }
+ },
+ "112172": {
+  "name": "Over Under Player Points + Assists (incl. overtime)",
+  "type": "playertotals-ptsass",
+  "line": 49.5,
+  "period": "result",
+  "outcomes": {
+   "112173": "Under",
+   "112172": "Over"
+  }
+ },
+ "112174": {
+  "name": "Over Under Player Steals (incl. overtime)",
+  "type": "playertotals-steals",
+  "line": 0.5,
+  "period": "result",
+  "outcomes": {
+   "112174": "Over",
+   "112175": "Under"
+  }
+ },
+ "112176": {
+  "name": "Over Under Player Steals (incl. overtime)",
+  "type": "playertotals-steals",
+  "line": 1.5,
+  "period": "result",
+  "outcomes": {
+   "112176": "Over",
+   "112177": "Under"
+  }
+ },
+ "112178": {
+  "name": "Over Under Player Steals (incl. overtime)",
+  "type": "playertotals-steals",
+  "line": 2.5,
+  "period": "result",
+  "outcomes": {
+   "112179": "Under",
+   "112178": "Over"
+  }
+ },
+ "112180": {
+  "name": "Over Under Player Steals (incl. overtime)",
+  "type": "playertotals-steals",
+  "line": 3.5,
+  "period": "result",
+  "outcomes": {
+   "112180": "Over",
+   "112181": "Under"
+  }
+ },
+ "112182": {
+  "name": "Over Under Player Steals (incl. overtime)",
+  "type": "playertotals-steals",
+  "line": 4.5,
+  "period": "result",
+  "outcomes": {
+   "112182": "Over",
+   "112183": "Under"
+  }
+ },
+ "112184": {
+  "name": "Over Under Player Steals (incl. overtime)",
+  "type": "playertotals-steals",
+  "line": 5.5,
+  "period": "result",
+  "outcomes": {
+   "112184": "Over",
+   "112185": "Under"
+  }
+ },
+ "112186": {
+  "name": "Over Under Player Steals (incl. overtime)",
+  "type": "playertotals-steals",
+  "line": 6.5,
+  "period": "result",
+  "outcomes": {
+   "112187": "Under",
+   "112186": "Over"
+  }
+ },
+ "112188": {
+  "name": "Over Under Player Steals (incl. overtime)",
+  "type": "playertotals-steals",
+  "line": 7.5,
+  "period": "result",
+  "outcomes": {
+   "112188": "Over",
+   "112189": "Under"
+  }
+ },
+ "112190": {
+  "name": "Over Under Player Steals (incl. overtime)",
+  "type": "playertotals-steals",
+  "line": 8.5,
+  "period": "result",
+  "outcomes": {
+   "112191": "Under",
+   "112190": "Over"
+  }
+ },
+ "112192": {
+  "name": "Over Under Player Steals (incl. overtime)",
+  "type": "playertotals-steals",
+  "line": 9.5,
+  "period": "result",
+  "outcomes": {
+   "112192": "Over",
+   "112193": "Under"
+  }
+ },
+ "112194": {
+  "name": "Over Under Player Blocks (incl. overtime)",
+  "type": "playertotals-blocks",
+  "line": 0.5,
+  "period": "result",
+  "outcomes": {
+   "112194": "Over",
+   "112195": "Under"
+  }
+ },
+ "112196": {
+  "name": "Over Under Player Blocks (incl. overtime)",
+  "type": "playertotals-blocks",
+  "line": 1.5,
+  "period": "result",
+  "outcomes": {
+   "112197": "Under",
+   "112196": "Over"
+  }
+ },
+ "112198": {
+  "name": "Over Under Player Blocks (incl. overtime)",
+  "type": "playertotals-blocks",
+  "line": 2.5,
+  "period": "result",
+  "outcomes": {
+   "112199": "Under",
+   "112198": "Over"
+  }
+ },
+ "112200": {
+  "name": "Over Under Player Blocks (incl. overtime)",
+  "type": "playertotals-blocks",
+  "line": 3.5,
+  "period": "result",
+  "outcomes": {
+   "112200": "Over",
+   "112201": "Under"
+  }
+ },
+ "112202": {
+  "name": "Over Under Player Blocks (incl. overtime)",
+  "type": "playertotals-blocks",
+  "line": 4.5,
+  "period": "result",
+  "outcomes": {
+   "112203": "Under",
+   "112202": "Over"
+  }
+ },
+ "112204": {
+  "name": "Over Under Player Blocks (incl. overtime)",
+  "type": "playertotals-blocks",
+  "line": 5.5,
+  "period": "result",
+  "outcomes": {
+   "112205": "Under",
+   "112204": "Over"
+  }
+ },
+ "112206": {
+  "name": "Over Under Player Blocks (incl. overtime)",
+  "type": "playertotals-blocks",
+  "line": 6.5,
+  "period": "result",
+  "outcomes": {
+   "112206": "Over",
+   "112207": "Under"
+  }
+ },
+ "112208": {
+  "name": "Over Under Player Blocks (incl. overtime)",
+  "type": "playertotals-blocks",
+  "line": 7.5,
+  "period": "result",
+  "outcomes": {
+   "112209": "Under",
+   "112208": "Over"
+  }
+ },
+ "112210": {
+  "name": "Over Under Player Blocks (incl. overtime)",
+  "type": "playertotals-blocks",
+  "line": 8.5,
+  "period": "result",
+  "outcomes": {
+   "112210": "Over",
+   "112211": "Under"
+  }
+ },
+ "112212": {
+  "name": "Over Under Player Blocks (incl. overtime)",
+  "type": "playertotals-blocks",
+  "line": 9.5,
+  "period": "result",
+  "outcomes": {
+   "112212": "Over",
+   "112213": "Under"
+  }
+ },
+ "112214": {
+  "name": "Over Under Player Turnovers (incl. overtime)",
+  "type": "playertotals-turnovers",
+  "line": 0.5,
+  "period": "result",
+  "outcomes": {
+   "112214": "Over",
+   "112215": "Under"
+  }
+ },
+ "112216": {
+  "name": "Over Under Player Turnovers (incl. overtime)",
+  "type": "playertotals-turnovers",
+  "line": 1.5,
+  "period": "result",
+  "outcomes": {
+   "112217": "Under",
+   "112216": "Over"
+  }
+ },
+ "112218": {
+  "name": "Over Under Player Turnovers (incl. overtime)",
+  "type": "playertotals-turnovers",
+  "line": 2.5,
+  "period": "result",
+  "outcomes": {
+   "112218": "Over",
+   "112219": "Under"
+  }
+ },
+ "112220": {
+  "name": "Over Under Player Turnovers (incl. overtime)",
+  "type": "playertotals-turnovers",
+  "line": 3.5,
+  "period": "result",
+  "outcomes": {
+   "112221": "Under",
+   "112220": "Over"
+  }
+ },
+ "112222": {
+  "name": "Over Under Player Turnovers (incl. overtime)",
+  "type": "playertotals-turnovers",
+  "line": 4.5,
+  "period": "result",
+  "outcomes": {
+   "112223": "Under",
+   "112222": "Over"
+  }
+ },
+ "112224": {
+  "name": "Over Under Player Turnovers (incl. overtime)",
+  "type": "playertotals-turnovers",
+  "line": 5.5,
+  "period": "result",
+  "outcomes": {
+   "112224": "Over",
+   "112225": "Under"
+  }
+ },
+ "112226": {
+  "name": "Over Under Player Turnovers (incl. overtime)",
+  "type": "playertotals-turnovers",
+  "line": 6.5,
+  "period": "result",
+  "outcomes": {
+   "112227": "Under",
+   "112226": "Over"
+  }
+ },
+ "112228": {
+  "name": "Over Under Player Turnovers (incl. overtime)",
+  "type": "playertotals-turnovers",
+  "line": 7.5,
+  "period": "result",
+  "outcomes": {
+   "112229": "Under",
+   "112228": "Over"
+  }
+ },
+ "112230": {
+  "name": "Over Under Player Turnovers (incl. overtime)",
+  "type": "playertotals-turnovers",
+  "line": 8.5,
+  "period": "result",
+  "outcomes": {
+   "112230": "Over",
+   "112231": "Under"
+  }
+ },
+ "112232": {
+  "name": "Over Under Player Turnovers (incl. overtime)",
+  "type": "playertotals-turnovers",
+  "line": 9.5,
+  "period": "result",
+  "outcomes": {
+   "112232": "Over",
+   "112233": "Under"
+  }
+ },
+ "112234": {
+  "name": "Over Under Player Steals + Blocks (incl. overtime)",
+  "type": "playertotals-stlblo",
+  "line": 0.5,
+  "period": "result",
+  "outcomes": {
+   "112235": "Under",
+   "112234": "Over"
+  }
+ },
+ "112236": {
+  "name": "Over Under Player Steals + Blocks (incl. overtime)",
+  "type": "playertotals-stlblo",
+  "line": 1.5,
+  "period": "result",
+  "outcomes": {
+   "112236": "Over",
+   "112237": "Under"
+  }
+ },
+ "112238": {
+  "name": "Over Under Player Steals + Blocks (incl. overtime)",
+  "type": "playertotals-stlblo",
+  "line": 2.5,
+  "period": "result",
+  "outcomes": {
+   "112239": "Under",
+   "112238": "Over"
+  }
+ },
+ "112240": {
+  "name": "Over Under Player Steals + Blocks (incl. overtime)",
+  "type": "playertotals-stlblo",
+  "line": 3.5,
+  "period": "result",
+  "outcomes": {
+   "112241": "Under",
+   "112240": "Over"
+  }
+ },
+ "112242": {
+  "name": "Over Under Player Steals + Blocks (incl. overtime)",
+  "type": "playertotals-stlblo",
+  "line": 4.5,
+  "period": "result",
+  "outcomes": {
+   "112243": "Under",
+   "112242": "Over"
+  }
+ },
+ "112244": {
+  "name": "Over Under Player Steals + Blocks (incl. overtime)",
+  "type": "playertotals-stlblo",
+  "line": 5.5,
+  "period": "result",
+  "outcomes": {
+   "112245": "Under",
+   "112244": "Over"
+  }
+ },
+ "112246": {
+  "name": "Over Under Player Steals + Blocks (incl. overtime)",
+  "type": "playertotals-stlblo",
+  "line": 6.5,
+  "period": "result",
+  "outcomes": {
+   "112246": "Over",
+   "112247": "Under"
+  }
+ },
+ "112248": {
+  "name": "Over Under Player Steals + Blocks (incl. overtime)",
+  "type": "playertotals-stlblo",
+  "line": 7.5,
+  "period": "result",
+  "outcomes": {
+   "112249": "Under",
+   "112248": "Over"
+  }
+ },
+ "112250": {
+  "name": "Over Under Player Steals + Blocks (incl. overtime)",
+  "type": "playertotals-stlblo",
+  "line": 8.5,
+  "period": "result",
+  "outcomes": {
+   "112251": "Under",
+   "112250": "Over"
+  }
+ },
+ "112252": {
+  "name": "Over Under Player Steals + Blocks (incl. overtime)",
+  "type": "playertotals-stlblo",
+  "line": 9.5,
+  "period": "result",
+  "outcomes": {
+   "112253": "Under",
+   "112252": "Over"
+  }
+ },
+ "112254": {
+  "name": "Player Points (incl. overtime)",
+  "type": "players-points",
+  "line": 0.0,
+  "period": "result",
+  "outcomes": {
+   "112291": "37+",
+   "112278": "24+",
+   "112287": "33+",
+   "112300": "46+",
+   "112288": "34+",
+   "112275": "21+",
+   "112260": "6+",
+   "112282": "28+",
+   "112298": "44+",
+   "112271": "17+",
+   "112295": "41+",
+   "112280": "26+",
+   "112257": "3+",
+   "112274": "20+",
+   "112285": "31+",
+   "112299": "45+",
+   "112290": "36+",
+   "112256": "2+",
+   "112268": "14+",
+   "112266": "12+",
+   "112261": "7+",
+   "112284": "30+",
+   "112270": "16+",
+   "112262": "8+",
+   "112263": "9+",
+   "112267": "13+",
+   "112303": "49+",
+   "112269": "15+",
+   "112293": "39+",
+   "112276": "22+",
+   "112294": "40+",
+   "112254": "0",
+   "112302": "48+",
+   "112258": "4+",
+   "112289": "35+",
+   "112255": "1+",
+   "112292": "38+",
+   "112279": "25+",
+   "112265": "11+",
+   "112283": "29+",
+   "112304": "50+",
+   "112297": "43+",
+   "112259": "5+",
+   "112281": "27+",
+   "112272": "18+",
+   "112264": "10+",
+   "112301": "47+",
+   "112277": "23+",
+   "112286": "32+",
+   "112296": "42+",
+   "112273": "19+"
+  }
+ },
+ "112305": {
+  "name": "Player Rebounds (incl. overtime)",
+  "type": "players-rebounds",
+  "line": 0.0,
+  "period": "result",
+  "outcomes": {
+   "112312": "7+",
+   "112310": "5+",
+   "112314": "9+",
+   "112315": "10+",
+   "112305": "0",
+   "112308": "3+",
+   "112316": "11+",
+   "112306": "1+",
+   "112307": "2+",
+   "112309": "4+",
+   "112311": "6+",
+   "112313": "8+"
+  }
+ },
+ "112317": {
+  "name": "Player 3 Point FG (incl. overtime)",
+  "type": "players-3pointers",
+  "line": 0.0,
+  "period": "result",
+  "outcomes": {
+   "112321": "4+",
+   "112317": "0",
+   "112319": "2+",
+   "112325": "8+",
+   "112326": "9+",
+   "112327": "10+",
+   "112318": "1+",
+   "112322": "5+",
+   "112323": "6+",
+   "112324": "7+",
+   "112320": "3+"
+  }
+ },
+ "112328": {
+  "name": "Player Points + Assists + Rebounds (incl. overtime)",
+  "type": "players-ptsassreb",
+  "line": 0.0,
+  "period": "result",
+  "outcomes": {
+   "112328": "0",
+   "112335": "7+",
+   "112340": "12+",
+   "112387": "59+",
+   "112329": "1+",
+   "112379": "51+",
+   "112383": "55+",
+   "112376": "48+",
+   "112347": "19+",
+   "112360": "32+",
+   "112377": "49+",
+   "112342": "14+",
+   "112331": "3+",
+   "112378": "50+",
+   "112386": "58+",
+   "112348": "20+",
+   "112366": "38+",
+   "112363": "35+",
+   "112361": "33+",
+   "112358": "30+",
+   "112365": "37+",
+   "112374": "46+",
+   "112336": "8+",
+   "112350": "22+",
+   "112384": "56+",
+   "112334": "6+",
+   "112351": "23+",
+   "112353": "25+",
+   "112367": "39+",
+   "112341": "13+",
+   "112339": "11+",
+   "112354": "26+",
+   "112369": "41+",
+   "112344": "16+",
+   "112338": "10+",
+   "112371": "43+",
+   "112337": "9+",
+   "112333": "5+",
+   "112359": "31+",
+   "112343": "15+",
+   "112368": "40+",
+   "112381": "53+",
+   "112364": "36+",
+   "112372": "44+",
+   "112355": "27+",
+   "112385": "57+",
+   "112362": "34+",
+   "112370": "42+",
+   "112382": "54+",
+   "112375": "47+",
+   "112373": "45+",
+   "112349": "21+",
+   "112346": "18+",
+   "112345": "17+",
+   "112332": "4+",
+   "112380": "52+",
+   "112352": "24+",
+   "112330": "2+",
+   "112356": "28+",
+   "112388": "60+",
+   "112357": "29+"
+  }
+ },
+ "112389": {
+  "name": "Player Assists (incl. overtime)",
+  "type": "players-assists",
+  "line": 0.0,
+  "period": "result",
+  "outcomes": {
+   "112395": "6+",
+   "112399": "10+",
+   "112398": "9+",
+   "112402": "13+",
+   "112390": "1+",
+   "112403": "14+",
+   "112393": "4+",
+   "112396": "7+",
+   "112389": "0",
+   "112400": "11+",
+   "112401": "12+",
+   "112391": "2+",
+   "112404": "15+",
+   "112394": "5+",
+   "112397": "8+",
+   "112392": "3+"
+  }
+ },
+ "112405": {
+  "name": "Player Assists + Rebounds (incl. overtime)",
+  "type": "players-assreb",
+  "line": 0.0,
+  "period": "result",
+  "outcomes": {
+   "112415": "10+",
+   "112431": "26+",
+   "112412": "7+",
+   "112427": "22+",
+   "112420": "15+",
+   "112424": "19+",
+   "112414": "9+",
+   "112422": "17+",
+   "112405": "0",
+   "112418": "13+",
+   "112410": "5+",
+   "112409": "4+",
+   "112426": "21+",
+   "112406": "1+",
+   "112430": "25+",
+   "112423": "18+",
+   "112413": "8+",
+   "112429": "24+",
+   "112407": "2+",
+   "112434": "29+",
+   "112408": "3+",
+   "112417": "12+",
+   "112425": "20+",
+   "112416": "11+",
+   "112432": "27+",
+   "112411": "6+",
+   "112421": "16+",
+   "112435": "30+",
+   "112428": "23+",
+   "112433": "28+",
+   "112419": "14+"
+  }
+ },
+ "112436": {
+  "name": "Player Points + Rebounds (incl. overtime)",
+  "type": "players-ptsreb",
+  "line": 0.0,
+  "period": "result",
+  "outcomes": {
+   "112480": "44+",
+   "112447": "11+",
+   "112455": "19+",
+   "112476": "40+",
+   "112485": "49+",
+   "112466": "30+",
+   "112448": "12+",
+   "112493": "57+",
+   "112436": "0",
+   "112468": "32+",
+   "112465": "29+",
+   "112438": "2+",
+   "112439": "3+",
+   "112459": "23+",
+   "112483": "47+",
+   "112492": "56+",
+   "112458": "22+",
+   "112470": "34+",
+   "112441": "5+",
+   "112463": "27+",
+   "112453": "17+",
+   "112484": "48+",
+   "112440": "4+",
+   "112474": "38+",
+   "112496": "60+",
+   "112454": "18+",
+   "112477": "41+",
+   "112495": "59+",
+   "112460": "24+",
+   "112471": "35+",
+   "112462": "26+",
+   "112452": "16+",
+   "112473": "37+",
+   "112469": "33+",
+   "112461": "25+",
+   "112451": "15+",
+   "112481": "45+",
+   "112467": "31+",
+   "112450": "14+",
+   "112491": "55+",
+   "112444": "8+",
+   "112489": "53+",
+   "112478": "42+",
+   "112487": "51+",
+   "112472": "36+",
+   "112446": "10+",
+   "112475": "39+",
+   "112442": "6+",
+   "112486": "50+",
+   "112482": "46+",
+   "112445": "9+",
+   "112437": "1+",
+   "112457": "21+",
+   "112494": "58+",
+   "112449": "13+",
+   "112488": "52+",
+   "112456": "20+",
+   "112479": "43+",
+   "112490": "54+",
+   "112464": "28+",
+   "112443": "7+"
+  }
+ },
+ "112497": {
+  "name": "Player Points + Assists (incl. overtime)",
+  "type": "players-ptsass",
+  "line": 0.0,
+  "period": "result",
+  "outcomes": {
+   "112528": "31+",
+   "112555": "58+",
+   "112503": "6+",
+   "112525": "28+",
+   "112546": "49+",
+   "112539": "42+",
+   "112519": "22+",
+   "112518": "21+",
+   "112527": "30+",
+   "112501": "4+",
+   "112526": "29+",
+   "112508": "11+",
+   "112535": "38+",
+   "112524": "27+",
+   "112556": "59+",
+   "112534": "37+",
+   "112545": "48+",
+   "112498": "1+",
+   "112521": "24+",
+   "112506": "9+",
+   "112532": "35+",
+   "112544": "47+",
+   "112522": "25+",
+   "112557": "60+",
+   "112552": "55+",
+   "112553": "56+",
+   "112547": "50+",
+   "112548": "51+",
+   "112497": "0",
+   "112520": "23+",
+   "112538": "41+",
+   "112500": "3+",
+   "112543": "46+",
+   "112523": "26+",
+   "112509": "12+",
+   "112530": "33+",
+   "112507": "10+",
+   "112510": "13+",
+   "112550": "53+",
+   "112542": "45+",
+   "112514": "17+",
+   "112541": "44+",
+   "112511": "14+",
+   "112536": "39+",
+   "112517": "20+",
+   "112505": "8+",
+   "112549": "52+",
+   "112531": "34+",
+   "112554": "57+",
+   "112533": "36+",
+   "112537": "40+",
+   "112512": "15+",
+   "112499": "2+",
+   "112551": "54+",
+   "112529": "32+",
+   "112504": "7+",
+   "112516": "19+",
+   "112513": "16+",
+   "112540": "43+",
+   "112515": "18+",
+   "112502": "5+"
+  }
+ },
+ "112558": {
+  "name": "Player Steals (incl. overtime)",
+  "type": "players-steals",
+  "line": 0.0,
+  "period": "result",
+  "outcomes": {
+   "112558": "0",
+   "112563": "5+",
+   "112566": "8+",
+   "112561": "3+",
+   "112565": "7+",
+   "112562": "4+",
+   "112568": "10+",
+   "112560": "2+",
+   "112564": "6+",
+   "112567": "9+",
+   "112559": "1+"
+  }
+ },
+ "112569": {
+  "name": "Player Blocks (incl. overtime)",
+  "type": "players-blocks",
+  "line": 0.0,
+  "period": "result",
+  "outcomes": {
+   "112573": "4+",
+   "112574": "5+",
+   "112570": "1+",
+   "112577": "8+",
+   "112579": "10+",
+   "112572": "3+",
+   "112575": "6+",
+   "112576": "7+",
+   "112571": "2+",
+   "112569": "0",
+   "112578": "9+"
+  }
+ },
+ "112580": {
+  "name": "Player Turnovers (incl. overtime)",
+  "type": "players-turnovers",
+  "line": 0.0,
+  "period": "result",
+  "outcomes": {
+   "112590": "10+",
+   "112588": "8+",
+   "112580": "0",
+   "112581": "1+",
+   "112584": "4+",
+   "112586": "6+",
+   "112583": "3+",
+   "112587": "7+",
+   "112585": "5+",
+   "112589": "9+",
+   "112582": "2+"
+  }
+ },
+ "112591": {
+  "name": "Player Steals + Blocks (incl. overtime)",
+  "type": "players-stlblo",
+  "line": 0.0,
+  "period": "result",
+  "outcomes": {
+   "112591": "0",
+   "112592": "1+",
+   "112598": "7+",
+   "112597": "6+",
+   "112600": "9+",
+   "112593": "2+",
+   "112595": "4+",
+   "112601": "10+",
+   "112596": "5+",
+   "112594": "3+",
+   "112599": "8+"
+  }
+ },
+ "112602": {
+  "name": "Player Double - Double",
+  "type": "players-doubledouble",
+  "line": 0.0,
+  "period": "result",
+  "outcomes": {
+   "112602": "Yes",
+   "1118112": "No"
+  }
+ },
+ "112603": {
+  "name": "Player Triple - Double",
+  "type": "players-tripletriple",
+  "line": 0.0,
+  "period": "result",
+  "outcomes": {
+   "112603": "Yes",
+   "1118115": "No"
+  }
+ },
+ "112604": {
+  "name": "Player First Point",
+  "type": "players-firstpoint",
+  "line": 0.0,
+  "period": "result",
+  "outcomes": {
+   "1118114": "No",
+   "112604": "Yes"
+  }
+ },
+ "112605": {
+  "name": "Player First 3 Point FG",
+  "type": "players-first3pointer",
+  "line": 0.0,
+  "period": "result",
+  "outcomes": {
+   "1118113": "No",
+   "112605": "Yes"
+  }
+ },
+ "112606": {
+  "name": "Over Under Player Points First Quarter",
+  "type": "playertotals-points",
+  "line": 0.5,
+  "period": "p1",
+  "outcomes": {
+   "112607": "Under",
+   "112606": "Over"
+  }
+ },
+ "112608": {
+  "name": "Over Under Player Points First Quarter",
+  "type": "playertotals-points",
+  "line": 1.5,
+  "period": "p1",
+  "outcomes": {
+   "112609": "Under",
+   "112608": "Over"
+  }
+ },
+ "112610": {
+  "name": "Over Under Player Points First Quarter",
+  "type": "playertotals-points",
+  "line": 2.5,
+  "period": "p1",
+  "outcomes": {
+   "112610": "Over",
+   "112611": "Under"
+  }
+ },
+ "112612": {
+  "name": "Over Under Player Points First Quarter",
+  "type": "playertotals-points",
+  "line": 3.5,
+  "period": "p1",
+  "outcomes": {
+   "112613": "Under",
+   "112612": "Over"
+  }
+ },
+ "112614": {
+  "name": "Over Under Player Points First Quarter",
+  "type": "playertotals-points",
+  "line": 4.5,
+  "period": "p1",
+  "outcomes": {
+   "112614": "Over",
+   "112615": "Under"
+  }
+ },
+ "112616": {
+  "name": "Over Under Player Points First Quarter",
+  "type": "playertotals-points",
+  "line": 5.5,
+  "period": "p1",
+  "outcomes": {
+   "112617": "Under",
+   "112616": "Over"
+  }
+ },
+ "112618": {
+  "name": "Over Under Player Points First Quarter",
+  "type": "playertotals-points",
+  "line": 6.5,
+  "period": "p1",
+  "outcomes": {
+   "112618": "Over",
+   "112619": "Under"
+  }
+ },
+ "112620": {
+  "name": "Over Under Player Points First Quarter",
+  "type": "playertotals-points",
+  "line": 7.5,
+  "period": "p1",
+  "outcomes": {
+   "112620": "Over",
+   "112621": "Under"
+  }
+ },
+ "112622": {
+  "name": "Over Under Player Points First Quarter",
+  "type": "playertotals-points",
+  "line": 8.5,
+  "period": "p1",
+  "outcomes": {
+   "112623": "Under",
+   "112622": "Over"
+  }
+ },
+ "112624": {
+  "name": "Over Under Player Points First Quarter",
+  "type": "playertotals-points",
+  "line": 9.5,
+  "period": "p1",
+  "outcomes": {
+   "112624": "Over",
+   "112625": "Under"
+  }
+ },
+ "112626": {
+  "name": "Over Under Player Points First Quarter",
+  "type": "playertotals-points",
+  "line": 10.5,
+  "period": "p1",
+  "outcomes": {
+   "112627": "Under",
+   "112626": "Over"
+  }
+ },
+ "112628": {
+  "name": "Over Under Player Points First Quarter",
+  "type": "playertotals-points",
+  "line": 11.5,
+  "period": "p1",
+  "outcomes": {
+   "112629": "Under",
+   "112628": "Over"
+  }
+ },
+ "112630": {
+  "name": "Over Under Player Points First Quarter",
+  "type": "playertotals-points",
+  "line": 12.5,
+  "period": "p1",
+  "outcomes": {
+   "112630": "Over",
+   "112631": "Under"
+  }
+ },
+ "112632": {
+  "name": "Over Under Player Points First Quarter",
+  "type": "playertotals-points",
+  "line": 13.5,
+  "period": "p1",
+  "outcomes": {
+   "112632": "Over",
+   "112633": "Under"
+  }
+ },
+ "112634": {
+  "name": "Over Under Player Points First Quarter",
+  "type": "playertotals-points",
+  "line": 14.5,
+  "period": "p1",
+  "outcomes": {
+   "112634": "Over",
+   "112635": "Under"
+  }
+ },
+ "112636": {
+  "name": "Over Under Player Points First Quarter",
+  "type": "playertotals-points",
+  "line": 15.5,
+  "period": "p1",
+  "outcomes": {
+   "112637": "Under",
+   "112636": "Over"
+  }
+ },
+ "112638": {
+  "name": "Over Under Player Points First Quarter",
+  "type": "playertotals-points",
+  "line": 16.5,
+  "period": "p1",
+  "outcomes": {
+   "112639": "Under",
+   "112638": "Over"
+  }
+ },
+ "112640": {
+  "name": "Over Under Player Points First Quarter",
+  "type": "playertotals-points",
+  "line": 17.5,
+  "period": "p1",
+  "outcomes": {
+   "112640": "Over",
+   "112641": "Under"
+  }
+ },
+ "112642": {
+  "name": "Over Under Player Points First Quarter",
+  "type": "playertotals-points",
+  "line": 18.5,
+  "period": "p1",
+  "outcomes": {
+   "112643": "Under",
+   "112642": "Over"
+  }
+ },
+ "112644": {
+  "name": "Over Under Player Points First Quarter",
+  "type": "playertotals-points",
+  "line": 19.5,
+  "period": "p1",
+  "outcomes": {
+   "112644": "Over",
+   "112645": "Under"
+  }
+ },
+ "112646": {
+  "name": "Over Under Player Rebounds First Quarter",
+  "type": "playertotals-rebounds",
+  "line": 0.5,
+  "period": "p1",
+  "outcomes": {
+   "112647": "Under",
+   "112646": "Over"
+  }
+ },
+ "112648": {
+  "name": "Over Under Player Rebounds First Quarter",
+  "type": "playertotals-rebounds",
+  "line": 1.5,
+  "period": "p1",
+  "outcomes": {
+   "112648": "Over",
+   "112649": "Under"
+  }
+ },
+ "112650": {
+  "name": "Over Under Player Rebounds First Quarter",
+  "type": "playertotals-rebounds",
+  "line": 2.5,
+  "period": "p1",
+  "outcomes": {
+   "112651": "Under",
+   "112650": "Over"
+  }
+ },
+ "112652": {
+  "name": "Over Under Player Rebounds First Quarter",
+  "type": "playertotals-rebounds",
+  "line": 3.5,
+  "period": "p1",
+  "outcomes": {
+   "112653": "Under",
+   "112652": "Over"
+  }
+ },
+ "112654": {
+  "name": "Over Under Player Rebounds First Quarter",
+  "type": "playertotals-rebounds",
+  "line": 4.5,
+  "period": "p1",
+  "outcomes": {
+   "112655": "Under",
+   "112654": "Over"
+  }
+ },
+ "112656": {
+  "name": "Over Under Player Rebounds First Quarter",
+  "type": "playertotals-rebounds",
+  "line": 5.5,
+  "period": "p1",
+  "outcomes": {
+   "112656": "Over",
+   "112657": "Under"
+  }
+ },
+ "112658": {
+  "name": "Over Under Player Rebounds First Quarter",
+  "type": "playertotals-rebounds",
+  "line": 6.5,
+  "period": "p1",
+  "outcomes": {
+   "112659": "Under",
+   "112658": "Over"
+  }
+ },
+ "112660": {
+  "name": "Over Under Player 3 Point FG First Quarter",
+  "type": "playertotals-3pointer",
+  "line": 0.5,
+  "period": "p1",
+  "outcomes": {
+   "112661": "Under",
+   "112660": "Over"
+  }
+ },
+ "112662": {
+  "name": "Over Under Player 3 Point FG First Quarter",
+  "type": "playertotals-3pointer",
+  "line": 1.5,
+  "period": "p1",
+  "outcomes": {
+   "112662": "Over",
+   "112663": "Under"
+  }
+ },
+ "112664": {
+  "name": "Over Under Player 3 Point FG First Quarter",
+  "type": "playertotals-3pointer",
+  "line": 2.5,
+  "period": "p1",
+  "outcomes": {
+   "112664": "Over",
+   "112665": "Under"
+  }
+ },
+ "112666": {
+  "name": "Over Under Player 3 Point FG First Quarter",
+  "type": "playertotals-3pointer",
+  "line": 3.5,
+  "period": "p1",
+  "outcomes": {
+   "112666": "Over",
+   "112667": "Under"
+  }
+ },
+ "112668": {
+  "name": "Over Under Player 3 Point FG First Quarter",
+  "type": "playertotals-3pointer",
+  "line": 4.5,
+  "period": "p1",
+  "outcomes": {
+   "112668": "Over",
+   "112669": "Under"
+  }
+ },
+ "112670": {
+  "name": "Over Under Player 3 Point FG First Quarter",
+  "type": "playertotals-3pointer",
+  "line": 5.5,
+  "period": "p1",
+  "outcomes": {
+   "112671": "Under",
+   "112670": "Over"
+  }
+ },
+ "112672": {
+  "name": "Over Under Player 3 Point FG First Quarter",
+  "type": "playertotals-3pointer",
+  "line": 6.5,
+  "period": "p1",
+  "outcomes": {
+   "112673": "Under",
+   "112672": "Over"
+  }
+ },
+ "112674": {
+  "name": "Over Under Player Points + Assists + Rebounds First Quarter",
+  "type": "playertotals-ptsassreb",
+  "line": 0.5,
+  "period": "p1",
+  "outcomes": {
+   "112674": "Over",
+   "112675": "Under"
+  }
+ },
+ "112676": {
+  "name": "Over Under Player Points + Assists + Rebounds First Quarter",
+  "type": "playertotals-ptsassreb",
+  "line": 1.5,
+  "period": "p1",
+  "outcomes": {
+   "112677": "Under",
+   "112676": "Over"
+  }
+ },
+ "112678": {
+  "name": "Over Under Player Points + Assists + Rebounds First Quarter",
+  "type": "playertotals-ptsassreb",
+  "line": 2.5,
+  "period": "p1",
+  "outcomes": {
+   "112679": "Under",
+   "112678": "Over"
+  }
+ },
+ "112680": {
+  "name": "Over Under Player Points + Assists + Rebounds First Quarter",
+  "type": "playertotals-ptsassreb",
+  "line": 3.5,
+  "period": "p1",
+  "outcomes": {
+   "112681": "Under",
+   "112680": "Over"
+  }
+ },
+ "112682": {
+  "name": "Over Under Player Points + Assists + Rebounds First Quarter",
+  "type": "playertotals-ptsassreb",
+  "line": 4.5,
+  "period": "p1",
+  "outcomes": {
+   "112683": "Under",
+   "112682": "Over"
+  }
+ },
+ "112684": {
+  "name": "Over Under Player Points + Assists + Rebounds First Quarter",
+  "type": "playertotals-ptsassreb",
+  "line": 5.5,
+  "period": "p1",
+  "outcomes": {
+   "112685": "Under",
+   "112684": "Over"
+  }
+ },
+ "112686": {
+  "name": "Over Under Player Points + Assists + Rebounds First Quarter",
+  "type": "playertotals-ptsassreb",
+  "line": 6.5,
+  "period": "p1",
+  "outcomes": {
+   "112686": "Over",
+   "112687": "Under"
+  }
+ },
+ "112688": {
+  "name": "Over Under Player Points + Assists + Rebounds First Quarter",
+  "type": "playertotals-ptsassreb",
+  "line": 7.5,
+  "period": "p1",
+  "outcomes": {
+   "112689": "Under",
+   "112688": "Over"
+  }
+ },
+ "112690": {
+  "name": "Over Under Player Points + Assists + Rebounds First Quarter",
+  "type": "playertotals-ptsassreb",
+  "line": 8.5,
+  "period": "p1",
+  "outcomes": {
+   "112691": "Under",
+   "112690": "Over"
+  }
+ },
+ "112692": {
+  "name": "Over Under Player Points + Assists + Rebounds First Quarter",
+  "type": "playertotals-ptsassreb",
+  "line": 9.5,
+  "period": "p1",
+  "outcomes": {
+   "112692": "Over",
+   "112693": "Under"
+  }
+ },
+ "112694": {
+  "name": "Over Under Player Points + Assists + Rebounds First Quarter",
+  "type": "playertotals-ptsassreb",
+  "line": 10.5,
+  "period": "p1",
+  "outcomes": {
+   "112695": "Under",
+   "112694": "Over"
+  }
+ },
+ "112696": {
+  "name": "Over Under Player Points + Assists + Rebounds First Quarter",
+  "type": "playertotals-ptsassreb",
+  "line": 11.5,
+  "period": "p1",
+  "outcomes": {
+   "112696": "Over",
+   "112697": "Under"
+  }
+ },
+ "112698": {
+  "name": "Over Under Player Points + Assists + Rebounds First Quarter",
+  "type": "playertotals-ptsassreb",
+  "line": 12.5,
+  "period": "p1",
+  "outcomes": {
+   "112698": "Over",
+   "112699": "Under"
+  }
+ },
+ "112700": {
+  "name": "Over Under Player Points + Assists + Rebounds First Quarter",
+  "type": "playertotals-ptsassreb",
+  "line": 13.5,
+  "period": "p1",
+  "outcomes": {
+   "112701": "Under",
+   "112700": "Over"
+  }
+ },
+ "112702": {
+  "name": "Over Under Player Points + Assists + Rebounds First Quarter",
+  "type": "playertotals-ptsassreb",
+  "line": 14.5,
+  "period": "p1",
+  "outcomes": {
+   "112703": "Under",
+   "112702": "Over"
+  }
+ },
+ "112704": {
+  "name": "Over Under Player Points + Assists + Rebounds First Quarter",
+  "type": "playertotals-ptsassreb",
+  "line": 15.5,
+  "period": "p1",
+  "outcomes": {
+   "112705": "Under",
+   "112704": "Over"
+  }
+ },
+ "112706": {
+  "name": "Over Under Player Points + Assists + Rebounds First Quarter",
+  "type": "playertotals-ptsassreb",
+  "line": 16.5,
+  "period": "p1",
+  "outcomes": {
+   "112706": "Over",
+   "112707": "Under"
+  }
+ },
+ "112708": {
+  "name": "Over Under Player Points + Assists + Rebounds First Quarter",
+  "type": "playertotals-ptsassreb",
+  "line": 17.5,
+  "period": "p1",
+  "outcomes": {
+   "112708": "Over",
+   "112709": "Under"
+  }
+ },
+ "112710": {
+  "name": "Over Under Player Points + Assists + Rebounds First Quarter",
+  "type": "playertotals-ptsassreb",
+  "line": 18.5,
+  "period": "p1",
+  "outcomes": {
+   "112710": "Over",
+   "112711": "Under"
+  }
+ },
+ "112712": {
+  "name": "Over Under Player Points + Assists + Rebounds First Quarter",
+  "type": "playertotals-ptsassreb",
+  "line": 19.5,
+  "period": "p1",
+  "outcomes": {
+   "112713": "Under",
+   "112712": "Over"
+  }
+ },
+ "112714": {
+  "name": "Over Under Player Assists First Quarter",
+  "type": "playertotals-assists",
+  "line": 0.5,
+  "period": "p1",
+  "outcomes": {
+   "112715": "Under",
+   "112714": "Over"
+  }
+ },
+ "112716": {
+  "name": "Over Under Player Assists First Quarter",
+  "type": "playertotals-assists",
+  "line": 1.5,
+  "period": "p1",
+  "outcomes": {
+   "112717": "Under",
+   "112716": "Over"
+  }
+ },
+ "112718": {
+  "name": "Over Under Player Assists First Quarter",
+  "type": "playertotals-assists",
+  "line": 2.5,
+  "period": "p1",
+  "outcomes": {
+   "112719": "Under",
+   "112718": "Over"
+  }
+ },
+ "112720": {
+  "name": "Over Under Player Assists First Quarter",
+  "type": "playertotals-assists",
+  "line": 3.5,
+  "period": "p1",
+  "outcomes": {
+   "112720": "Over",
+   "112721": "Under"
+  }
+ },
+ "112722": {
+  "name": "Over Under Player Assists First Quarter",
+  "type": "playertotals-assists",
+  "line": 4.5,
+  "period": "p1",
+  "outcomes": {
+   "112723": "Under",
+   "112722": "Over"
+  }
+ },
+ "112724": {
+  "name": "Over Under Player Assists First Quarter",
+  "type": "playertotals-assists",
+  "line": 5.5,
+  "period": "p1",
+  "outcomes": {
+   "112724": "Over",
+   "112725": "Under"
+  }
+ },
+ "112726": {
+  "name": "Over Under Player Assists First Quarter",
+  "type": "playertotals-assists",
+  "line": 6.5,
+  "period": "p1",
+  "outcomes": {
+   "112727": "Under",
+   "112726": "Over"
+  }
+ },
+ "112728": {
+  "name": "Over Under Player Assists + Rebounds First Quarter",
+  "type": "playertotals-assreb",
+  "line": 0.5,
+  "period": "p1",
+  "outcomes": {
+   "112728": "Over",
+   "112729": "Under"
+  }
+ },
+ "112730": {
+  "name": "Over Under Player Assists + Rebounds First Quarter",
+  "type": "playertotals-assreb",
+  "line": 1.5,
+  "period": "p1",
+  "outcomes": {
+   "112731": "Under",
+   "112730": "Over"
+  }
+ },
+ "112732": {
+  "name": "Over Under Player Assists + Rebounds First Quarter",
+  "type": "playertotals-assreb",
+  "line": 2.5,
+  "period": "p1",
+  "outcomes": {
+   "112733": "Under",
+   "112732": "Over"
+  }
+ },
+ "112734": {
+  "name": "Over Under Player Assists + Rebounds First Quarter",
+  "type": "playertotals-assreb",
+  "line": 3.5,
+  "period": "p1",
+  "outcomes": {
+   "112735": "Under",
+   "112734": "Over"
+  }
+ },
+ "112736": {
+  "name": "Over Under Player Assists + Rebounds First Quarter",
+  "type": "playertotals-assreb",
+  "line": 4.5,
+  "period": "p1",
+  "outcomes": {
+   "112737": "Under",
+   "112736": "Over"
+  }
+ },
+ "112738": {
+  "name": "Over Under Player Assists + Rebounds First Quarter",
+  "type": "playertotals-assreb",
+  "line": 5.5,
+  "period": "p1",
+  "outcomes": {
+   "112739": "Under",
+   "112738": "Over"
+  }
+ },
+ "112740": {
+  "name": "Over Under Player Assists + Rebounds First Quarter",
+  "type": "playertotals-assreb",
+  "line": 6.5,
+  "period": "p1",
+  "outcomes": {
+   "112740": "Over",
+   "112741": "Under"
+  }
+ },
+ "112742": {
+  "name": "Over Under Player Assists + Rebounds First Quarter",
+  "type": "playertotals-assreb",
+  "line": 7.5,
+  "period": "p1",
+  "outcomes": {
+   "112742": "Over",
+   "112743": "Under"
+  }
+ },
+ "112744": {
+  "name": "Over Under Player Assists + Rebounds First Quarter",
+  "type": "playertotals-assreb",
+  "line": 8.5,
+  "period": "p1",
+  "outcomes": {
+   "112744": "Over",
+   "112745": "Under"
+  }
+ },
+ "112746": {
+  "name": "Over Under Player Assists + Rebounds First Quarter",
+  "type": "playertotals-assreb",
+  "line": 9.5,
+  "period": "p1",
+  "outcomes": {
+   "112746": "Over",
+   "112747": "Under"
+  }
+ },
+ "112748": {
+  "name": "Over Under Player Assists + Rebounds First Quarter",
+  "type": "playertotals-assreb",
+  "line": 10.5,
+  "period": "p1",
+  "outcomes": {
+   "112749": "Under",
+   "112748": "Over"
+  }
+ },
+ "112750": {
+  "name": "Over Under Player Assists + Rebounds First Quarter",
+  "type": "playertotals-assreb",
+  "line": 11.5,
+  "period": "p1",
+  "outcomes": {
+   "112750": "Over",
+   "112751": "Under"
+  }
+ },
+ "112752": {
+  "name": "Over Under Player Assists + Rebounds First Quarter",
+  "type": "playertotals-assreb",
+  "line": 12.5,
+  "period": "p1",
+  "outcomes": {
+   "112752": "Over",
+   "112753": "Under"
+  }
+ },
+ "112754": {
+  "name": "Over Under Player Assists + Rebounds First Quarter",
+  "type": "playertotals-assreb",
+  "line": 13.5,
+  "period": "p1",
+  "outcomes": {
+   "112755": "Under",
+   "112754": "Over"
+  }
+ },
+ "112756": {
+  "name": "Over Under Player Assists + Rebounds First Quarter",
+  "type": "playertotals-assreb",
+  "line": 14.5,
+  "period": "p1",
+  "outcomes": {
+   "112757": "Under",
+   "112756": "Over"
+  }
+ },
+ "112758": {
+  "name": "Over Under Player Points + Rebounds First Quarter",
+  "type": "playertotals-ptsreb",
+  "line": 0.5,
+  "period": "p1",
+  "outcomes": {
+   "112759": "Under",
+   "112758": "Over"
+  }
+ },
+ "112760": {
+  "name": "Over Under Player Points + Rebounds First Quarter",
+  "type": "playertotals-ptsreb",
+  "line": 1.5,
+  "period": "p1",
+  "outcomes": {
+   "112760": "Over",
+   "112761": "Under"
+  }
+ },
+ "112762": {
+  "name": "Over Under Player Points + Rebounds First Quarter",
+  "type": "playertotals-ptsreb",
+  "line": 2.5,
+  "period": "p1",
+  "outcomes": {
+   "112762": "Over",
+   "112763": "Under"
+  }
+ },
+ "112764": {
+  "name": "Over Under Player Points + Rebounds First Quarter",
+  "type": "playertotals-ptsreb",
+  "line": 3.5,
+  "period": "p1",
+  "outcomes": {
+   "112765": "Under",
+   "112764": "Over"
+  }
+ },
+ "112766": {
+  "name": "Over Under Player Points + Rebounds First Quarter",
+  "type": "playertotals-ptsreb",
+  "line": 4.5,
+  "period": "p1",
+  "outcomes": {
+   "112767": "Under",
+   "112766": "Over"
+  }
+ },
+ "112768": {
+  "name": "Over Under Player Points + Rebounds First Quarter",
+  "type": "playertotals-ptsreb",
+  "line": 5.5,
+  "period": "p1",
+  "outcomes": {
+   "112768": "Over",
+   "112769": "Under"
+  }
+ },
+ "112770": {
+  "name": "Over Under Player Points + Rebounds First Quarter",
+  "type": "playertotals-ptsreb",
+  "line": 6.5,
+  "period": "p1",
+  "outcomes": {
+   "112771": "Under",
+   "112770": "Over"
+  }
+ },
+ "112772": {
+  "name": "Over Under Player Points + Rebounds First Quarter",
+  "type": "playertotals-ptsreb",
+  "line": 7.5,
+  "period": "p1",
+  "outcomes": {
+   "112773": "Under",
+   "112772": "Over"
+  }
+ },
+ "112774": {
+  "name": "Over Under Player Points + Rebounds First Quarter",
+  "type": "playertotals-ptsreb",
+  "line": 8.5,
+  "period": "p1",
+  "outcomes": {
+   "112775": "Under",
+   "112774": "Over"
+  }
+ },
+ "112776": {
+  "name": "Over Under Player Points + Rebounds First Quarter",
+  "type": "playertotals-ptsreb",
+  "line": 9.5,
+  "period": "p1",
+  "outcomes": {
+   "112777": "Under",
+   "112776": "Over"
+  }
+ },
+ "112778": {
+  "name": "Over Under Player Points + Rebounds First Quarter",
+  "type": "playertotals-ptsreb",
+  "line": 10.5,
+  "period": "p1",
+  "outcomes": {
+   "112778": "Over",
+   "112779": "Under"
+  }
+ },
+ "112780": {
+  "name": "Over Under Player Points + Rebounds First Quarter",
+  "type": "playertotals-ptsreb",
+  "line": 11.5,
+  "period": "p1",
+  "outcomes": {
+   "112780": "Over",
+   "112781": "Under"
+  }
+ },
+ "112782": {
+  "name": "Over Under Player Points + Rebounds First Quarter",
+  "type": "playertotals-ptsreb",
+  "line": 12.5,
+  "period": "p1",
+  "outcomes": {
+   "112783": "Under",
+   "112782": "Over"
+  }
+ },
+ "112784": {
+  "name": "Over Under Player Points + Rebounds First Quarter",
+  "type": "playertotals-ptsreb",
+  "line": 13.5,
+  "period": "p1",
+  "outcomes": {
+   "112785": "Under",
+   "112784": "Over"
+  }
+ },
+ "112786": {
+  "name": "Over Under Player Points + Rebounds First Quarter",
+  "type": "playertotals-ptsreb",
+  "line": 14.5,
+  "period": "p1",
+  "outcomes": {
+   "112786": "Over",
+   "112787": "Under"
+  }
+ },
+ "112788": {
+  "name": "Over Under Player Points + Rebounds First Quarter",
+  "type": "playertotals-ptsreb",
+  "line": 15.5,
+  "period": "p1",
+  "outcomes": {
+   "112788": "Over",
+   "112789": "Under"
+  }
+ },
+ "112790": {
+  "name": "Over Under Player Points + Rebounds First Quarter",
+  "type": "playertotals-ptsreb",
+  "line": 16.5,
+  "period": "p1",
+  "outcomes": {
+   "112790": "Over",
+   "112791": "Under"
+  }
+ },
+ "112792": {
+  "name": "Over Under Player Points + Rebounds First Quarter",
+  "type": "playertotals-ptsreb",
+  "line": 17.5,
+  "period": "p1",
+  "outcomes": {
+   "112793": "Under",
+   "112792": "Over"
+  }
+ },
+ "112794": {
+  "name": "Over Under Player Points + Rebounds First Quarter",
+  "type": "playertotals-ptsreb",
+  "line": 18.5,
+  "period": "p1",
+  "outcomes": {
+   "112795": "Under",
+   "112794": "Over"
+  }
+ },
+ "112796": {
+  "name": "Over Under Player Points + Rebounds First Quarter",
+  "type": "playertotals-ptsreb",
+  "line": 19.5,
+  "period": "p1",
+  "outcomes": {
+   "112797": "Under",
+   "112796": "Over"
+  }
+ },
+ "112798": {
+  "name": "Over Under Player Points + Assists First Quarter",
+  "type": "playertotals-ptsass",
+  "line": 0.5,
+  "period": "p1",
+  "outcomes": {
+   "112799": "Under",
+   "112798": "Over"
+  }
+ },
+ "112800": {
+  "name": "Over Under Player Points + Assists First Quarter",
+  "type": "playertotals-ptsass",
+  "line": 1.5,
+  "period": "p1",
+  "outcomes": {
+   "112801": "Under",
+   "112800": "Over"
+  }
+ },
+ "112802": {
+  "name": "Over Under Player Points + Assists First Quarter",
+  "type": "playertotals-ptsass",
+  "line": 2.5,
+  "period": "p1",
+  "outcomes": {
+   "112803": "Under",
+   "112802": "Over"
+  }
+ },
+ "112804": {
+  "name": "Over Under Player Points + Assists First Quarter",
+  "type": "playertotals-ptsass",
+  "line": 3.5,
+  "period": "p1",
+  "outcomes": {
+   "112804": "Over",
+   "112805": "Under"
+  }
+ },
+ "112806": {
+  "name": "Over Under Player Points + Assists First Quarter",
+  "type": "playertotals-ptsass",
+  "line": 4.5,
+  "period": "p1",
+  "outcomes": {
+   "112807": "Under",
+   "112806": "Over"
+  }
+ },
+ "112808": {
+  "name": "Over Under Player Points + Assists First Quarter",
+  "type": "playertotals-ptsass",
+  "line": 5.5,
+  "period": "p1",
+  "outcomes": {
+   "112809": "Under",
+   "112808": "Over"
+  }
+ },
+ "112810": {
+  "name": "Over Under Player Points + Assists First Quarter",
+  "type": "playertotals-ptsass",
+  "line": 6.5,
+  "period": "p1",
+  "outcomes": {
+   "112810": "Over",
+   "112811": "Under"
+  }
+ },
+ "112812": {
+  "name": "Over Under Player Points + Assists First Quarter",
+  "type": "playertotals-ptsass",
+  "line": 7.5,
+  "period": "p1",
+  "outcomes": {
+   "112813": "Under",
+   "112812": "Over"
+  }
+ },
+ "112814": {
+  "name": "Over Under Player Points + Assists First Quarter",
+  "type": "playertotals-ptsass",
+  "line": 8.5,
+  "period": "p1",
+  "outcomes": {
+   "112815": "Under",
+   "112814": "Over"
+  }
+ },
+ "112816": {
+  "name": "Over Under Player Points + Assists First Quarter",
+  "type": "playertotals-ptsass",
+  "line": 9.5,
+  "period": "p1",
+  "outcomes": {
+   "112816": "Over",
+   "112817": "Under"
+  }
+ },
+ "112818": {
+  "name": "Over Under Player Points + Assists First Quarter",
+  "type": "playertotals-ptsass",
+  "line": 10.5,
+  "period": "p1",
+  "outcomes": {
+   "112819": "Under",
+   "112818": "Over"
+  }
+ },
+ "112820": {
+  "name": "Over Under Player Points + Assists First Quarter",
+  "type": "playertotals-ptsass",
+  "line": 11.5,
+  "period": "p1",
+  "outcomes": {
+   "112821": "Under",
+   "112820": "Over"
+  }
+ },
+ "112822": {
+  "name": "Over Under Player Points + Assists First Quarter",
+  "type": "playertotals-ptsass",
+  "line": 12.5,
+  "period": "p1",
+  "outcomes": {
+   "112822": "Over",
+   "112823": "Under"
+  }
+ },
+ "112824": {
+  "name": "Over Under Player Points + Assists First Quarter",
+  "type": "playertotals-ptsass",
+  "line": 13.5,
+  "period": "p1",
+  "outcomes": {
+   "112824": "Over",
+   "112825": "Under"
+  }
+ },
+ "112826": {
+  "name": "Over Under Player Points + Assists First Quarter",
+  "type": "playertotals-ptsass",
+  "line": 14.5,
+  "period": "p1",
+  "outcomes": {
+   "112827": "Under",
+   "112826": "Over"
+  }
+ },
+ "112828": {
+  "name": "Over Under Player Points + Assists First Quarter",
+  "type": "playertotals-ptsass",
+  "line": 15.5,
+  "period": "p1",
+  "outcomes": {
+   "112829": "Under",
+   "112828": "Over"
+  }
+ },
+ "112830": {
+  "name": "Over Under Player Points + Assists First Quarter",
+  "type": "playertotals-ptsass",
+  "line": 16.5,
+  "period": "p1",
+  "outcomes": {
+   "112830": "Over",
+   "112831": "Under"
+  }
+ },
+ "112832": {
+  "name": "Over Under Player Points + Assists First Quarter",
+  "type": "playertotals-ptsass",
+  "line": 17.5,
+  "period": "p1",
+  "outcomes": {
+   "112832": "Over",
+   "112833": "Under"
+  }
+ },
+ "112834": {
+  "name": "Over Under Player Points + Assists First Quarter",
+  "type": "playertotals-ptsass",
+  "line": 18.5,
+  "period": "p1",
+  "outcomes": {
+   "112834": "Over",
+   "112835": "Under"
+  }
+ },
+ "112836": {
+  "name": "Over Under Player Points + Assists First Quarter",
+  "type": "playertotals-ptsass",
+  "line": 19.5,
+  "period": "p1",
+  "outcomes": {
+   "112836": "Over",
+   "112837": "Under"
+  }
+ },
+ "112838": {
+  "name": "Over Under Player Steals First Quarter",
+  "type": "playertotals-steals",
+  "line": 0.5,
+  "period": "p1",
+  "outcomes": {
+   "112838": "Over",
+   "112839": "Under"
+  }
+ },
+ "112840": {
+  "name": "Over Under Player Steals First Quarter",
+  "type": "playertotals-steals",
+  "line": 1.5,
+  "period": "p1",
+  "outcomes": {
+   "112841": "Under",
+   "112840": "Over"
+  }
+ },
+ "112842": {
+  "name": "Over Under Player Steals First Quarter",
+  "type": "playertotals-steals",
+  "line": 2.5,
+  "period": "p1",
+  "outcomes": {
+   "112843": "Under",
+   "112842": "Over"
+  }
+ },
+ "112844": {
+  "name": "Over Under Player Steals First Quarter",
+  "type": "playertotals-steals",
+  "line": 3.5,
+  "period": "p1",
+  "outcomes": {
+   "112845": "Under",
+   "112844": "Over"
+  }
+ },
+ "112846": {
+  "name": "Over Under Player Steals First Quarter",
+  "type": "playertotals-steals",
+  "line": 4.5,
+  "period": "p1",
+  "outcomes": {
+   "112847": "Under",
+   "112846": "Over"
+  }
+ },
+ "112848": {
+  "name": "Over Under Player Blocks First Quarter",
+  "type": "playertotals-blocks",
+  "line": 0.5,
+  "period": "p1",
+  "outcomes": {
+   "112848": "Over",
+   "112849": "Under"
+  }
+ },
+ "112850": {
+  "name": "Over Under Player Blocks First Quarter",
+  "type": "playertotals-blocks",
+  "line": 1.5,
+  "period": "p1",
+  "outcomes": {
+   "112851": "Under",
+   "112850": "Over"
+  }
+ },
+ "112852": {
+  "name": "Over Under Player Blocks First Quarter",
+  "type": "playertotals-blocks",
+  "line": 2.5,
+  "period": "p1",
+  "outcomes": {
+   "112852": "Over",
+   "112853": "Under"
+  }
+ },
+ "112854": {
+  "name": "Over Under Player Blocks First Quarter",
+  "type": "playertotals-blocks",
+  "line": 3.5,
+  "period": "p1",
+  "outcomes": {
+   "112855": "Under",
+   "112854": "Over"
+  }
+ },
+ "112856": {
+  "name": "Over Under Player Blocks First Quarter",
+  "type": "playertotals-blocks",
+  "line": 4.5,
+  "period": "p1",
+  "outcomes": {
+   "112857": "Under",
+   "112856": "Over"
+  }
+ },
+ "112858": {
+  "name": "Over Under Player Turnovers First Quarter",
+  "type": "playertotals-turnovers",
+  "line": 0.5,
+  "period": "p1",
+  "outcomes": {
+   "112858": "Over",
+   "112859": "Under"
+  }
+ },
+ "112860": {
+  "name": "Over Under Player Turnovers First Quarter",
+  "type": "playertotals-turnovers",
+  "line": 1.5,
+  "period": "p1",
+  "outcomes": {
+   "112860": "Over",
+   "112861": "Under"
+  }
+ },
+ "112862": {
+  "name": "Over Under Player Turnovers First Quarter",
+  "type": "playertotals-turnovers",
+  "line": 2.5,
+  "period": "p1",
+  "outcomes": {
+   "112862": "Over",
+   "112863": "Under"
+  }
+ },
+ "112864": {
+  "name": "Over Under Player Turnovers First Quarter",
+  "type": "playertotals-turnovers",
+  "line": 3.5,
+  "period": "p1",
+  "outcomes": {
+   "112865": "Under",
+   "112864": "Over"
+  }
+ },
+ "112866": {
+  "name": "Over Under Player Turnovers First Quarter",
+  "type": "playertotals-turnovers",
+  "line": 4.5,
+  "period": "p1",
+  "outcomes": {
+   "112867": "Under",
+   "112866": "Over"
+  }
+ },
+ "112868": {
+  "name": "Over Under Player Steals + Blocks First Quarter",
+  "type": "playertotals-stlblo",
+  "line": 0.5,
+  "period": "p1",
+  "outcomes": {
+   "112868": "Over",
+   "112869": "Under"
+  }
+ },
+ "112870": {
+  "name": "Over Under Player Steals + Blocks First Quarter",
+  "type": "playertotals-stlblo",
+  "line": 1.5,
+  "period": "p1",
+  "outcomes": {
+   "112870": "Over",
+   "112871": "Under"
+  }
+ },
+ "112872": {
+  "name": "Over Under Player Steals + Blocks First Quarter",
+  "type": "playertotals-stlblo",
+  "line": 2.5,
+  "period": "p1",
+  "outcomes": {
+   "112873": "Under",
+   "112872": "Over"
+  }
+ },
+ "112874": {
+  "name": "Over Under Player Steals + Blocks First Quarter",
+  "type": "playertotals-stlblo",
+  "line": 3.5,
+  "period": "p1",
+  "outcomes": {
+   "112875": "Under",
+   "112874": "Over"
+  }
+ },
+ "112876": {
+  "name": "Over Under Player Steals + Blocks First Quarter",
+  "type": "playertotals-stlblo",
+  "line": 4.5,
+  "period": "p1",
+  "outcomes": {
+   "112876": "Over",
+   "112877": "Under"
+  }
+ }
+}

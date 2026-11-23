@@ -1,0 +1,363 @@
+{
+ "bet365.de": {
+  "games": 11,
+  "markets": {
+   "Player Points (incl. overtime) [players-points, result]": {
+    "quotes": 521,
+    "players": 82,
+    "example": {
+     "player": "Edey, Zach",
+     "line": 0.0,
+     "outcome": "20+",
+     "price": 17.0
+    }
+   },
+   "Over Under Player Points (incl. overtime) [playertotals-points, result]": {
+    "quotes": 516,
+    "players": 82,
+    "example": {
+     "player": "White, Coby",
+     "line": 9.5,
+     "outcome": "Over",
+     "price": 1.068
+    }
+   },
+   "Player 3 Point FG (incl. overtime) [players-3pointers, result]": {
+    "quotes": 497,
+    "players": 75,
+    "example": {
+     "player": "Jerome, Ty",
+     "line": 0.0,
+     "outcome": "3+",
+     "price": 1.87
+    }
+   },
+   "Over Under Player 3 Point FG (incl. overtime) [playertotals-3pointers, result]": {
+    "quotes": 487,
+    "players": 75,
+    "example": {
+     "player": "Spencer, Cam",
+     "line": 5.5,
+     "outcome": "Over",
+     "price": 29.0
+    }
+   },
+   "Over Under Player Points First Quarter [playertotals-points, p1]": {
+    "quotes": 327,
+    "players": 82,
+    "example": {
+     "player": "O'Neale, Royce",
+     "line": 2.5,
+     "outcome": "Over",
+     "price": 2.1
+    }
+   },
+   "Player Assists (incl. overtime) [players-assists, result]": {
+    "quotes": 317,
+    "players": 82,
+    "example": {
+     "player": "White, Coby",
+     "line": 0.0,
+     "outcome": "13+",
+     "price": 36.0
+    }
+   },
+   "Over Under Player Assists (incl. overtime) [playertotals-assists, result]": {
+    "quotes": 317,
+    "players": 82,
+    "example": {
+     "player": "Coward, Cedric",
+     "line": 6.5,
+     "outcome": "Over",
+     "price": 9.0
+    }
+   },
+   "Over Under Player Rebounds (incl. overtime) [playertotals-rebounds, result]": {
+    "quotes": 311,
+    "players": 82,
+    "example": {
+     "player": "Miller, Brandon",
+     "line": 9.5,
+     "outcome": "Over",
+     "price": 17.0
+    }
+   },
+   "Player Rebounds (incl. overtime) [players-rebounds, result]": {
+    "quotes": 311,
+    "players": 82,
+    "example": {
+     "player": "Miller, Brandon",
+     "line": 0.0,
+     "outcome": "7+",
+     "price": 4.75
+    }
+   },
+   "Over Under Player Rebounds First Quarter [playertotals-rebounds, p1]": {
+    "quotes": 234,
+    "players": 82,
+    "example": {
+     "player": "Reid, Naz",
+     "line": 0.5,
+     "outcome": "Over",
+     "price": 1.041
+    }
+   },
+   "Over Under Player Assists First Quarter [playertotals-assists, p1]": {
+    "quotes": 207,
+    "players": 82,
+    "example": {
+     "player": "Wells, Jaylen",
+     "line": 2.5,
+     "outcome": "Over",
+     "price": 36.0
+    }
+   },
+   "Over Under Player Steals (incl. overtime) [playertotals-steals, result]": {
+    "quotes": 198,
+    "players": 36,
+    "example": {
+     "player": "Jerome, Ty",
+     "line": 1.5,
+     "outcome": "Over",
+     "price": 3.1
+    }
+   },
+   "Player Steals (incl. overtime) [players-steals, result]": {
+    "quotes": 198,
+    "players": 36,
+    "example": {
+     "player": "Hendricks, Taylor",
+     "line": 0.0,
+     "outcome": "5+",
+     "price": 36.0
+    }
+   },
+   "Over Under Player Blocks (incl. overtime) [playertotals-blocks, result]": {
+    "quotes": 173,
+    "players": 36,
+    "example": {
+     "player": "Kalkbrenner, Ryan",
+     "line": 1.5,
+     "outcome": "Over",
+     "price": 3.3
+    }
+   },
+   "Player Blocks (incl. overtime) [players-blocks, result]": {
+    "quotes": 173,
+    "players": 36,
+    "example": {
+     "player": "Kalkbrenner, Ryan",
+     "line": 0.0,
+     "outcome": "1+",
+     "price": 1.49
+    }
+   },
+   "Player Double - Double [players-doubledouble, result]": {
+    "quotes": 68,
+    "players": 68,
+    "example": {
+     "player": "Diabate, Moussa",
+     "line": 0.0,
+     "outcome": "Yes",
+     "price": 3.1
+    }
+   },
+   "Player First Point [players-firstpoint, result]": {
+    "quotes": 59,
+    "players": 59,
+    "example": {
+     "player": "Edey, Zach",
+     "line": 0.0,
+     "outcome": "Yes",
+     "price": 5.75
+    }
+   },
+   "Player Triple - Double [players-tripletriple, result]": {
+    "quotes": 11,
+    "players": 11,
+    "example": {
+     "player": "Avdija, Deni",
+     "line": 0.0,
+     "outcome": "Yes",
+     "price": 19.0
+    }
+   }
+  }
+ },
+ "bwin.de": {
+  "games": 10,
+  "markets": {
+   "Player Points (incl. overtime) [players-points, result]": {
+    "quotes": 412,
+    "players": 89,
+    "example": {
+     "player": "Jerome, Ty",
+     "line": 0.0,
+     "outcome": "40+",
+     "price": 19.0
+    }
+   },
+   "Over Under Player Points (incl. overtime) [playertotals-points, result]": {
+    "quotes": 186,
+    "players": 89,
+    "example": {
+     "player": "Miller, Brandon",
+     "line": 21.5,
+     "outcome": "Under",
+     "price": 1.91
+    }
+   }
+  }
+ },
+ "tipico": {
+  "games": 10,
+  "markets": {}
+ },
+ "winamax.de": {
+  "games": 15,
+  "markets": {
+   "Over Under Player Blocks (incl. overtime) [playertotals-blocks, result]": {
+    "quotes": 263,
+    "players": 102,
+    "example": {
+     "player": "Stewart, Isaiah",
+     "line": 3.5,
+     "outcome": "Under",
+     "price": 36.0
+    }
+   }
+  }
+ },
+ "betano.de": {
+  "games": 22,
+  "markets": {
+   "Player Points (incl. overtime) [players-points, result]": {
+    "quotes": 891,
+    "players": 101,
+    "example": {
+     "player": "Jerome, Ty",
+     "line": 0.0,
+     "outcome": "19+",
+     "price": 1.47
+    }
+   },
+   "Over Under Player Points (incl. overtime) [playertotals-points, result]": {
+    "quotes": 224,
+    "players": 101,
+    "example": {
+     "player": "Coward, Cedric",
+     "line": 16.5,
+     "outcome": "Over",
+     "price": 1.88
+    }
+   },
+   "Player Double - Double [players-doubledouble, result]": {
+    "quotes": 76,
+    "players": 76,
+    "example": {
+     "player": "Diabate, Moussa",
+     "line": 0.0,
+     "outcome": "Yes",
+     "price": 3.35
+    }
+   },
+   "Player Triple - Double [players-tripletriple, result]": {
+    "quotes": 9,
+    "players": 9,
+    "example": {
+     "player": "James, LeBron",
+     "line": 0.0,
+     "outcome": "Yes",
+     "price": 12.0
+    }
+   }
+  }
+ },
+ "betway.de": {
+  "games": 10,
+  "markets": {}
+ },
+ "888sport.de": {
+  "games": 15,
+  "markets": {
+   "Over Under Player Points (incl. overtime) [playertotals-points, result]": {
+    "quotes": 152,
+    "players": 56,
+    "example": {
+     "player": "White, Coby",
+     "line": 15.5,
+     "outcome": "Over",
+     "price": 1.73
+    }
+   },
+   "Over Under Player Points + Assists + Rebounds (incl. overtime) [playertotals-ptsassreb, result]": {
+    "quotes": 78,
+    "players": 28,
+    "example": {
+     "player": "Coward, Cedric",
+     "line": 26.5,
+     "outcome": "Under",
+     "price": 1.8
+    }
+   },
+   "Over Under Player Points + Assists (incl. overtime) [playertotals-ptsass, result]": {
+    "quotes": 72,
+    "players": 28,
+    "example": {
+     "player": "Miller, Brandon",
+     "line": 24.5,
+     "outcome": "Over",
+     "price": 1.8
+    }
+   },
+   "Over Under Player Points + Rebounds (incl. overtime) [playertotals-ptsreb, result]": {
+    "quotes": 70,
+    "players": 28,
+    "example": {
+     "player": "Jerome, Ty",
+     "line": 23.5,
+     "outcome": "Over",
+     "price": 1.8
+    }
+   },
+   "Over Under Player Rebounds (incl. overtime) [playertotals-rebounds, result]": {
+    "quotes": 62,
+    "players": 28,
+    "example": {
+     "player": "Reid, Naz",
+     "line": 7.5,
+     "outcome": "Under",
+     "price": 2.05
+    }
+   },
+   "Over Under Player Assists (incl. overtime) [playertotals-assists, result]": {
+    "quotes": 62,
+    "players": 28,
+    "example": {
+     "player": "Spencer, Cam",
+     "line": 4.5,
+     "outcome": "Under",
+     "price": 2.1
+    }
+   },
+   "Over Under Player Assists + Rebounds (incl. overtime) [playertotals-assreb, result]": {
+    "quotes": 62,
+    "players": 28,
+    "example": {
+     "player": "Diabate, Moussa",
+     "line": 11.5,
+     "outcome": "Over",
+     "price": 1.833
+    }
+   }
+  }
+ },
+ "sportwetten.de": {
+  "games": 10,
+  "markets": {}
+ },
+ "merkurbets": {
+  "games": 10,
+  "markets": {}
+ }
+}
