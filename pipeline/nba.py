@@ -213,6 +213,21 @@ def schedule(team, gd, hist, host):
     return {"rest": rest, "dens": dens, "km": dist * weight, "n": len(h)}
 
 
+def rest_points(rest_a, rest_h, home, away):
+    """Ruhe-Vorteil für das Heimteam in Punkten (vor dem gelernten Faktor)."""
+    rest = 0.0
+    if rest_a == 0:
+        rest += 2.0
+    if rest_h == 0:
+        rest -= 1.5
+    if rest_a > 0 and rest_h > 0:
+        rest += 0.3 * max(-2, min(2, rest_h - rest_a))
+    tz = TEAMS[home][1] - TEAMS[away][1]
+    if tz > 0 and rest_a <= 1:
+        rest += 0.3 * tz
+    return rest
+
+
 def form(team, hist, expect):
     """Ø Abweichung der letzten 10 Spiele vom erwarteten Ergebnis, zur Null gezogen."""
     res = []
@@ -328,17 +343,7 @@ def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events, c
         sa_, sh_ = schedule(away, gd, hist, home), schedule(home, gd, hist, home)
         rest_a = sa_["rest"] if sa_["n"] else ((gd - last[away]).days - 1 if away in last else 2)
         rest_h = sh_["rest"] if sh_["n"] else ((gd - last[home]).days - 1 if home in last else 2)
-        rest = 0.0
-        if rest_a == 0:
-            rest += 2.0
-        if rest_h == 0:
-            rest -= 1.5
-        if rest_a > 0 and rest_h > 0:
-            rest += 0.3 * max(-2, min(2, rest_h - rest_a))
-        tz = TEAMS[home][1] - TEAMS[away][1]
-        if tz > 0 and rest_a <= 1:
-            rest += 0.3 * tz
-        rest_raw = rest
+        rest_raw = rest_points(rest_a, rest_h, home, away)
         sched_raw = sa_["dens"] - sh_["dens"]
         travel_raw = (sa_["km"] - sh_["km"]) / 1000
         form_raw = form(home, hist, expect) - form(away, hist, expect)

@@ -95,6 +95,13 @@ def main():
     mode = os.environ.get("RUN_MODE")
     if mode == "close":
         return main_close()
+    if mode == "backtest":
+        from .backtest import run_backtest
+        update_history(now_utc())
+        run_backtest()
+        old = load_json("status.json", {})
+        save_json("status.json", {**old, "backtestLog": LOG[-20:]})
+        return
     now = now_utc()
     picks = {k: v for k, v in load_json("picks.json", {}).items() if v.get("sport") == "NBA"}
     params = load_params()

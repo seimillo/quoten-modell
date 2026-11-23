@@ -7,9 +7,9 @@ on:
   workflow_dispatch:           # manuell starten: Reiter „Actions“ → „Tägliches Update“ → „Run workflow“
     inputs:
       mode:
-        description: "full = Modelle rechnen, close = nur Schlussquoten"
+        description: "full = Modell rechnen, close = Abend-Update + Schlussquoten, backtest = Rücktest (keine Credits)"
         type: choice
-        options: [full, close]
+        options: [full, close, backtest]
         default: full
 
 permissions:

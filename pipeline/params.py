@@ -36,6 +36,8 @@ def load_params():
     out["history"] = p.get("history", [])
     out["n"] = p.get("n", {})
     out["version"] = VERSION
+    if p.get("backtest"):
+        out["backtest"] = p["backtest"]
     return out
 
 

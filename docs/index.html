@@ -69,6 +69,7 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
 <section data-view="treffer"><div class="card"><h2>Trefferliste</h2>
   <p class="hint">Jede Prognose wird bis zum Spielbeginn aktualisiert, dann eingefroren und nach dem Spiel ausgewertet.</p>
   <div id="learn"></div>
+  <div id="bt"></div>
   <div id="trk"></div></div></section>
 <section data-view="methode" class="info"><div class="card"><h2>So rechnet das Modell</h2>
   <h3>NBA</h3>
@@ -163,6 +164,14 @@ const LBL = {team_scale:"Gewicht Team-Ratings", player_scale:"Gewicht Aufstellun
   sched_scale:"Punkte je 3-in-4/4-in-6", travel_scale:"Punkte je 1.000 km Reise", form_scale:"Faktor Form",
   sd_margin:"Streuung Punktedifferenz", sd_total:"Streuung Gesamtpunkte", total_bias:"Korrektur Gesamtpunkte", conf:"Modellgewicht gegenüber Markt"};
 const params = await load("params.json", null);
+const bt = await load("backtest.json", null);
+const FN = {strength:"Stärke (Team + Aufstellung)", hca:"Heimvorteil", rest:"Ruhe & Zeitzone", sched:"Spielplan-Dichte", travel:"Reise", form:"Form"};
+$("bt").innerHTML = bt ? `<h3>Rücktest auf ${f(bt.games,0)} vergangenen Spielen</h3>
+  <p class="small">${bt.seasons.map(x=>`${esc(x.season)}: ${x.used} Spiele`).join(" · ")} · geschätzt auf ${bt.train}, geprüft auf den letzten ${bt.test} Spielen · Stand ${esc(bt.date)}</p>
+  <div class="kpis"><div class="kpi"><div class="k">Trefferquote Sieger</div><div class="v">${pct(bt.full.hit)}</div><div class="hint">nur Stärke + Heimvorteil: ${pct(bt.base.hit)}</div></div>
+  <div class="kpi"><div class="k">Brier (Test)</div><div class="v">${f(bt.full.brier,4)}</div><div class="hint">Basis ${f(bt.base.brier,4)} · Münzwurf 0,25</div></div></div>
+  <table><thead><tr><th>Faktor</th><th>gelernt</th><th>Nutzen im Test</th></tr></thead><tbody>${Object.entries(bt.coef).map(([k,c])=>`<tr><td>${FN[k]||esc(k)}</td><td>${f(c.value,2)} <span class="small">± ${f(c.se,2)}</span></td><td class="small">${bt.drop[k]==null?"–":bt.drop[k]>0?`<span class="pos">hilft</span> (${f(bt.drop[k]*10000,1)})`:`<span class="neg">hilft nicht</span> (${f(bt.drop[k]*10000,1)})`}</td></tr>`).join("")}</tbody></table>
+  <p class="hint">Jedes Spiel wurde nur mit dem Wissen vom Vortag gerechnet (eigene Team-Stärken aus den Ergebnissen). Spielerwerte, Verletzungen und Quoten gibt es für die Vergangenheit nicht – die lernt das Modell weiter täglich. „Nutzen im Test“: um wie viel der Brier-Wert (×10.000) schlechter wird, wenn man den Faktor weglässt. Die Ergebnisse wurden als Startwerte übernommen.</p>` : "";
 $("learn").innerHTML = st ? `<h3>Lernt das Modell?</h3><div class="kpis">
   <div class="kpi"><div class="k">Schlussquote geschlagen (CLV)</div><div class="v ${cls(st.clvAvg||0)}">${st.clvAvg==null?"–":sg(st.clvAvg*100)+" %"}</div><div class="hint">${st.clvN||0} Wetten · ${st.clvPos==null?"–":pct(st.clvPos)} besser als die Schlussquote</div></div>
   <div class="kpi"><div class="k">CLV der ✓-Wetten</div><div class="v ${cls(st.clvValueAvg||0)}">${st.clvValueAvg==null?"–":sg(st.clvValueAvg*100)+" %"}</div><div class="hint">${st.clvValueN||0} Wetten</div></div>
@@ -171,7 +180,7 @@ $("learn").innerHTML = st ? `<h3>Lernt das Modell?</h3><div class="kpis">
   ${(st.calibration||[]).length?`<h3>Kalibrierung</h3><table><thead><tr><th>Modell sagt</th><th>Spiele</th><th>Ø Prognose</th><th>tatsächlich</th></tr></thead><tbody>${st.calibration.map(c=>`<tr><td>${pct(c.from)}–${pct(c.to)}</td><td>${c.n}</td><td>${pct(c.pred)}</td><td>${pct(c.real)}</td></tr>`).join("")}</tbody></table>`:""}
   ${params?`<h3>Gelernte Werte</h3><table><thead><tr><th>Wert</th><th>aktuell</th><th>Start</th></tr></thead><tbody>${[["nba","team_scale",0.5],["nba","player_scale",0.5],["nba","hca",2.2],["nba","rest_scale",1],["nba","inj_scale",0.5],["nba","sched_scale",1],["nba","travel_scale",0.3],["nba","form_scale",0.15],["nba","sd_margin",12.5],["nba","sd_total",18],["nba","total_bias",0],["nba","conf",0.3]].map(([sp,k,d])=>`<tr><td>${LBL[k]}</td><td>${f(params[sp][k],2)}</td><td class="small">${f(d,2)}</td></tr>`).join("")}</tbody></table>
   <p class="hint">Angepasst wird ab 40 ausgewerteten Spielen, jeden Tag nur ein kleines Stück. Bisher: ${(params.n&&params.n.nba)||0} Spiele.</p>
-  ${(params.history||[]).length?`<details><summary>Änderungen</summary><table><tbody>${params.history.slice(-30).reverse().map(h=>h.changes.map(c=>`<tr><td class="small">${esc(h.date)}</td><td>${LBL[c.key]||esc(c.key)}</td><td>${f(c.old,3)} → ${f(c.new,3)}</td><td class="small">Ziel ${f(c.target,2)}</td></tr>`).join("")).join("")}</tbody></table></details>`:""}`:""}
+  ${(params.history||[]).length?`<details><summary>Änderungen</summary><table><tbody>${params.history.slice(-30).reverse().map(h=>h.changes.map(c=>`<tr><td class="small">${esc(h.date)}${h.source?" · "+esc(h.source):""}</td><td>${LBL[c.key]||esc(c.key)}</td><td>${f(c.old,3)} → ${f(c.new,3)}</td><td class="small">Ziel ${f(c.target,2)}</td></tr>`).join("")).join("")}</tbody></table></details>`:""}`:""}
   <p class="hint"><b>CLV</b> vergleicht deine Quote mit der fairen Quote kurz vor Spielbeginn (23:37 Uhr). Wer die Schlussquote dauerhaft schlägt, hat einen echten Vorteil – das zeigt sich nach 2–3 Wochen, Gewinn und Verlust erst nach Monaten. Ohne Vorteil liegt der CLV etwa bei minus der halben Buchmacher-Marge (rund −2 bis −3 %).</p>` : "";
 
 const rows = Object.values(picks).sort((a,b)=>String(b.commence).localeCompare(String(a.commence)));
