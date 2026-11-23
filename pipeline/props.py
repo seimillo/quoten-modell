@@ -27,6 +27,7 @@ STAT_NAME = {"pts": "Punkte", "reb": "Rebounds", "ast": "Assists", "fg3m": "Drei
 CONF_P = 0.3                        # Gewicht der Simulation gegenüber dem Markt
 ONE_SIDED_MARGIN = 0.07             # angenommene Marge, wenn nur „über“ angeboten wird
 MIN_EV, MIN_ODDS, MAX_ODDS = 0.05, 1.5, 3.5
+MIN_EV_ONE_SIDED = 0.10             # nur „über“ angeboten → Marge unsicher → strengere Schwelle
 LEAGUE_POSS = 99.5
 KELLY_FRAC, KELLY_CAP = 0.25, 0.01
 IDX = {"min": 1, "pts": 2, "reb": 3, "ast": 4, "fg3m": 5}
@@ -188,7 +189,7 @@ def evaluate(games, events, pstats, injuries_by_team, sd_margin, seed=7):
                           "pSim": round(p_sim, 4), "pMkt": round(c["pMkt"], 4), "p": round(p, 4), "ev": round(ev, 4),
                           "evRaw": round(p_sim * c["odds"] - 1, 4)})
         # ✓: klare Fälle, eine pro Spieler, höchstens 3 pro Spiel
-        cands = sorted([p for p in props if p["ev"] >= MIN_EV and MIN_ODDS <= p["odds"] <= MAX_ODDS and p["gp"] >= 5
+        cands = sorted([p for p in props if p["ev"] >= (MIN_EV if p["twoSided"] else MIN_EV_ONE_SIDED) and MIN_ODDS <= p["odds"] <= MAX_ODDS and p["gp"] >= 5
                         and p["expMin"] >= 18 and p["pOut"] <= 0.15], key=lambda x: -x["ev"])
         seen = set()
         for p in cands:
