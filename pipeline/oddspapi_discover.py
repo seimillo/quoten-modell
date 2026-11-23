@@ -50,7 +50,7 @@ def main():
     out["odds_slug"] = slug
     out["odds"] = {"status": o["status"], "body": trim(o["body"])}
     save_json("oddspapi_discovery.json", out)
-    print("fertig", {k: (v.get("status") if isinstance(v, dict) else len(v)) for k, v in out.items()})
+    print("fertig", list(out))
 
 
 if __name__ == "__main__":
