@@ -175,11 +175,14 @@ $("learn").innerHTML = st ? `<h3>Lernt das Modell?</h3><div class="kpis">
   <p class="hint"><b>CLV</b> vergleicht deine Quote mit der fairen Quote kurz vor Spielbeginn (23:37 Uhr). Wer die Schlussquote dauerhaft schlägt, hat einen echten Vorteil – das zeigt sich nach 2–3 Wochen, Gewinn und Verlust erst nach Monaten. Ohne Vorteil liegt der CLV etwa bei minus der halben Buchmacher-Marge (rund −2 bis −3 %).</p>` : "";
 
 const rows = Object.values(picks).sort((a,b)=>String(b.commence).localeCompare(String(a.commence)));
-$("trk").innerHTML = rows.length ? `<table><thead><tr><th>Datum</th><th>Spiel</th><th>Modell</th><th>Markt</th><th>Beste Wette</th><th>Ergebnis</th></tr></thead><tbody>${rows.map(r=>`<tr>
-  <td>${esc(r.date)}</td><td>${esc(r.match)}<div class="small">Chance für ${esc(r.sideA)}</div></td>
-  <td>${pct(r.pModelA)}</td><td>${pct(r.pMarketA)}</td>
-  <td>${r.bet?`${esc(r.bet.pick)} @ ${f(r.bet.odds,2)}<div class="small">EV ${sg((r.bet.ev||0)*100)} %${r.close?` · CLV <span class="${cls(r.close.clv)}">${sg(r.close.clv*100)} %</span>`:""}</div>`:"–"}</td>
-  <td>${r.result?`${r.result==="A"?esc(r.sideA)+" gewinnt":"Gegner gewinnt"}<div class="small">${esc(r.score||"")} · Wette ${r.betResult==="win"?"gewonnen":r.betResult==="loss"?"verloren":"zurück"}</div>`:"offen"}</td></tr>`).join("")}</tbody></table>
+$("trk").innerHTML = rows.length ? `<table><thead><tr><th>Spiel</th><th>Wette</th><th>Quote</th><th>Ergebnis</th></tr></thead><tbody>${rows.map(r=>{
+  const b=r.bet||{}, won=r.betResult==="win", lost=r.betResult==="loss";
+  const res = !r.result ? `<span class="small">offen</span>` : `${won?'<b class="pos">gewonnen</b>':lost?'<b class="neg">verloren</b>':"zurück"}<div class="small">${esc(r.score||"")}${b.odds?` · ${won?"+"+f((b.odds-1)*10,2):lost?"−10,00":"±0"} €`:""}</div>`;
+  return `<tr>
+  <td>${esc(r.match)}<div class="small">${new Date(r.commence).toLocaleDateString("de-DE",{day:"2-digit",month:"2-digit"})} · Modell ${pct(r.pModelA)}, Markt ${pct(r.pMarketA)} für ${esc((r.sideA||"").split(" ").pop())}</div></td>
+  <td>${b.pick?`${b.value?"✓ ":""}${esc(b.pick)}<div class="small">${esc(b.market||"")} · EV ${sg((b.ev||0)*100)} %</div>`:"–"}</td>
+  <td>${b.odds?`<b>${f(b.odds,2)}</b><div class="small">${esc(b.bookName||"")}</div>${r.close?`<div class="small">Schluss fair ${f(r.close.fairOdds,2)} · CLV <span class="${cls(r.close.clv)}">${sg(r.close.clv*100)} %</span></div>`:""}`:"–"}</td>
+  <td>${res}</td></tr>`}).join("")}</tbody></table>
   <p class="hint">Brier-Wert = Durchschnitt von (Prognose − Ergebnis)². Kleiner ist besser. Ist der Wert des Modells kleiner als der des Markts, war das Modell genauer.</p>` : `<p class="hint">Noch keine Prognosen gespeichert.</p>`;
 
 const VIEWS=["start","nba","geld","treffer","methode"];
