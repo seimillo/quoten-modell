@@ -1,7 +1,7 @@
 {
- "updated": "2026-11-23T12:44:33.506382+00:00",
+ "updated": "2026-11-23T13:05:47.768033+00:00",
  "credits": {
-  "remaining": 443.0,
+  "remaining": 440.0,
   "used_now": 3.0
  },
  "stats": {
@@ -62,19 +62,17 @@
   "Kalshi KXNBAGAME: 31 Events",
   "Polymarket nba: 100 Events",
   "ESPN-Spielplan: 4 Tage abgefragt, 262 Spiele in der Saison",
-  "ESPN-Boxscores: 36 neue Spiele, Minuten für 450 Spieler",
+  "ESPN-Boxscores: 0 neue Spiele, Minuten für 450 Spieler",
   "Basketball-Reference Ratings 2027: 30 Teams",
   "Basketball-Reference Ratings 2026: 30 Teams",
   "Basketball-Reference Tempo 2027: 31 Teams",
   "Basketball-Reference Spieler 2027: 476 Einträge",
   "Basketball-Reference Spieler 2026: 661 Einträge",
   "ESPN Verletzungen: 104 Einträge",
-  "NBA-Verletzungsbericht 23.11. 07:30 ET: 74 Spieler, 10 Teams noch nicht gemeldet",
+  "NBA-Verletzungsbericht 23.11. 08:00 ET: 74 Spieler, 10 Teams noch nicht gemeldet",
   "Quoten basketball_nba: 10 Events, 10 mit Buchmacher-Quoten",
-  "OddsPapi Marktliste: 962 Märkte (Sieg, Handicap, Gesamtpunkte)",
-  "OddsPapi Teilnehmerliste: 30 NBA-Teams",
-  "OddsPapi: 15 Buchmacher-Einträge an 10 Spiele gehängt (bet365.de, bwin.de) · Handicap-Linien plausibel 5, verworfen 0 · 4 von 250 Abfragen diesen Monat",
-  "Streuung: Markt 12.7, Modell nutzt 13.69",
+  "OddsPapi: 15 Buchmacher-Einträge an 10 Spiele gehängt (bet365.de, bwin.de) · Handicap-Linien plausibel 5, verworfen 0 · 108 von 250 Abfragen diesen Monat",
+  "Streuung: Markt 12.5, Modell nutzt 13.56",
   "NBA: 10 Spiele bewertet, 1 mit Value-Wette",
   "Trefferliste: 0 Prognosen ausgewertet",
   "Kalibrierung: 7 NBA-Spiele ausgewertet, 0 Werte angepasst (Anpassung ab 40 Spielen)"
@@ -108,12 +106,8 @@
    "sd_margin": 14.6358,
    "sd_total": 19.19,
    "total_bias": 0.0,
-   "conf": 0.3
+   "conf": 0.15
   },
   "n": {}
- },
- "histLog": [
-  "Historische Quoten: 100 Spiele zugeordnet, frage höchstens 100 ab",
-  "Historische Quoten: 100 Spiele · 8 ✓-Wetten · ROI -0.575 · CLV 0.1194"
- ]
+ }
 }
