@@ -11,7 +11,7 @@
   "sd_margin": 14.6358,
   "sd_total": 19.19,
   "total_bias": 0.0,
-  "conf": 0.3
+  "conf": 0.15
  },
  "history": [
   {
@@ -106,6 +106,19 @@
      "old": 18.0,
      "new": 19.19,
      "target": 19.19
+    }
+   ]
+  },
+  {
+   "date": "2026-11-23",
+   "source": "Quoten-Rücktest",
+   "changes": [
+    {
+     "sport": "NBA",
+     "key": "conf",
+     "old": 0.3,
+     "new": 0.15,
+     "target": 0.0
     }
    ]
   }
