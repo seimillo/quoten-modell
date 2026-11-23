@@ -130,5 +130,9 @@
    "conf": 0.15
   },
   "n": {}
- }
+ },
+ "propsBacktestLog": [
+  "Basketball-Reference Saisonwerte 2026: 582 Spieler",
+  "Spieler-Rücktest K=40.0: 2301 Spielerspiele, Streuung {'pts': 2.5, 'reb': 1.0, 'ast': 2.5, 'fg3m': 1.6}, Log-Score {'pts': -3.0731, 'reb': -2.2244, 'ast': -1.7837, 'fg3m': -1.3736}, Abweichung {'pts': 0.05, 'reb': 0.08, 'ast': 0.05, 'fg3m': -0.04}"
+ ]
 }
