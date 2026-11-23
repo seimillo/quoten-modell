@@ -191,6 +191,12 @@ def opponent_factors(pstats, before):
     return out
 
 
+def _et(iso):
+    """US-Ostküsten-Datum eines Spiels – so stehen die Spiele in den Spielberichten."""
+    from zoneinfo import ZoneInfo
+    return parse_time(iso).astimezone(ZoneInfo("America/New_York")).date()
+
+
 def conf_table():
     """Gelerntes Gewicht der Simulation je Abweichungsklasse (Standard CONF_P, solange zu wenig Daten)."""
     Pp = load_json("props_params.json", {})
@@ -495,10 +501,10 @@ def settle(pstats, now=None):
         if t.get("result") or parse_time(t["commence"]) > now:
             continue
         P = pstats["players"].get(f"{t['team']}|{t['key']}")
-        d_et = (parse_time(t["commence"]).date())
+        d_et = _et(t["commence"])
         game = None
         for gm in (P or {}).get("games", []):
-            if abs((date.fromisoformat(gm[0]) - d_et).days) <= 1:
+            if date.fromisoformat(gm[0]) == d_et:          # genau dieser Spieltag (nicht das Spiel vom Vortag)
                 game = gm
         if game is None:
             if (now - parse_time(t["commence"])).days >= 2:
@@ -593,8 +599,8 @@ def learn_conf(pstats, now=None):
             keep.append(r)
             continue
         P = pstats["players"].get(f"{team}|{key}")
-        d = parse_time(commence).date()
-        hit = [g for g in (P or {}).get("games", []) if abs((date.fromisoformat(g[0]) - d).days) <= 1]
+        d = _et(commence)
+        hit = [g for g in (P or {}).get("games", []) if date.fromisoformat(g[0]) == d]
         if not hit:
             if (now - parse_time(commence)).days < 2:
                 keep.append(r)
@@ -661,8 +667,8 @@ def learn(pstats, now=None):
             continue
         _, team, pk = key.split("|", 2)
         P = pstats["players"].get(f"{team}|{pk}")
-        d = parse_time(v["commence"]).date()
-        hit = [g for g in (P or {}).get("games", []) if abs((date.fromisoformat(g[0]) - d).days) <= 1]
+        d = _et(v["commence"])
+        hit = [g for g in (P or {}).get("games", []) if date.fromisoformat(g[0]) == d]
         if hit:
             g = hit[-1]
             v["actual"] = {s: g[IDX[s]] for s in STATS}

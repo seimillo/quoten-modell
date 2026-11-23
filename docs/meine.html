@@ -120,8 +120,9 @@ const SIDX = {pts:2, reb:3, ast:4, fg3m:5};
 function settleProp(w){
   const t = PT[w.pid]; if(t && t.result) return {res:t.result, val:t.value};
   const rows = (PRES.players||{})[`${w.team}|${w.key}`] || [];
-  const d0 = new Date(new Date(w.commence).getTime() - 5*3600e3).toISOString().slice(0,10);
-  const g = rows.find(r=>Math.abs((new Date(r[0]) - new Date(d0))/864e5) <= 1);
+  if (Date.now() < new Date(w.commence).getTime() + 2.5*3600e3) return null;      // Spiel läuft noch oder hat nicht begonnen
+  const d0 = new Date(w.commence).toLocaleDateString("sv-SE",{timeZone:"America/New_York"}); // Spieltag wie in den Spielberichten
+  const g = rows.find(r=>r[0]===d0);
   if(!g) return (Date.now() - new Date(w.commence).getTime() > 2*864e5) ? {res:"push", val:"nicht gespielt"} : null;
   const v = g[SIDX[w.stat]];
   return {res: v===w.line ? "push" : ((v > w.line) === (w.side==="over") ? "win" : "loss"), val:v};
