@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NBA-Quoten-Modell</title>
 <style>
-:root{--bg:#f6f6f3;--card:#fff;--ink:#1c1f23;--muted:#626873;--line:#e1e0db;--accent:#2f6b3f;--soft:#e3efe5;--bad:#a23b2f;--warn:#9a5b00;--warnsoft:#fbf0de}
-@media (prefers-color-scheme:dark){:root{--bg:#131517;--card:#1c1f22;--ink:#e9eaea;--muted:#9aa0a6;--line:#2e3236;--accent:#7cc48d;--soft:#213a28;--bad:#ec8a7e;--warn:#e2a64a;--warnsoft:#3a2e1a}}
+:root{--chart:#2e7d46;--bg:#f6f6f3;--card:#fff;--ink:#1c1f23;--muted:#626873;--line:#e1e0db;--accent:#2f6b3f;--soft:#e3efe5;--bad:#a23b2f;--warn:#9a5b00;--warnsoft:#fbf0de}
+@media (prefers-color-scheme:dark){:root{--chart:#46a05b;--bg:#131517;--card:#1c1f22;--ink:#e9eaea;--muted:#9aa0a6;--line:#2e3236;--accent:#7cc48d;--soft:#213a28;--bad:#ec8a7e;--warn:#e2a64a;--warnsoft:#3a2e1a}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 header{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line)}
@@ -41,6 +41,8 @@ th{font-size:.72rem;color:var(--muted);font-weight:600}
 [hidden]{display:none!important}
 footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:var(--muted)}
 .info li,.info p{font-size:.92rem}
+.chart{position:relative;margin:6px 0 4px} .chart svg{width:100%;height:auto;display:block}
+.chart .tip{position:absolute;pointer-events:none;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:6px 8px;font-size:.78rem;box-shadow:0 2px 8px rgba(0,0,0,.12);display:none;white-space:nowrap}
 .form{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-top:8px}
 .form select,.form input{font:inherit;font-size:.85rem;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:inherit}
 .form select{flex:1 1 180px;min-width:0} .form input{width:80px}
@@ -65,7 +67,7 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
   <p class="muted" id="stand">Lade Daten …</p>
   <div class="kpis" id="kpis"></div>
   <div class="card"><h2>Alle Spiele</h2><div id="top"></div>
-  <p class="hint">Erwartungswert (EV) = Chance × Quote − 1 zur besten Quote aller Buchmacher mit deutscher Lizenz (Tipico, Winamax, Betano, Betway, LeoVegas, 888sport). ✓ = strenge Auswahl: EV ≥ 3 % und auch gegenüber Pinnacle nicht schlechter. Die Chance ist eine Mischung aus Modell und Markt (Markt-Anker), darum sind die Werte bewusst vorsichtig.</p></div>
+  <p class="hint">Erwartungswert (EV) = Chance × Quote − 1 zur besten Quote aller Buchmacher mit deutscher Lizenz (Tipico, Winamax, Betano, Betway, LeoVegas, 888sport). ✓ = strenge Auswahl: EV ≥ 3 % (Gesamtpunkte 5 %) und auch gegenüber Pinnacle nicht schlechter, höchstens eine Wette pro Spiel. Die Chance ist eine Mischung aus Modell und Markt (Markt-Anker), darum sind die Werte bewusst vorsichtig.</p></div>
 </section>
 <section data-view="geld"><div class="card"><h2>Großes Geld auf Polymarket</h2>
   <p class="hint">Einzelne Einsätze ab 1.000 $ in den letzten 48 Stunden auf Polymarket, plus die Kalshi-Preise. Prognosemärkte haben kleine Margen – dort handeln oft gut informierte Leute. Sie zählen im Markt-Anker zur Hälfte.</p>
@@ -78,6 +80,7 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
 <section data-view="treffer"><div class="card"><h2>Trefferliste</h2>
   <p class="hint">Jede Prognose wird bis zum Spielbeginn aktualisiert, dann eingefroren und nach dem Spiel ausgewertet.</p>
   <div id="learn"></div>
+  <div id="clvchart"></div>
   <div id="bt"></div>
   <div id="trk"></div></div></section>
 <section data-view="methode" class="info"><div class="card"><h2>So rechnet das Modell</h2>
@@ -95,7 +98,7 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
     <li><b>Markt-Anker:</b> anfangs 30 % Modell, 70 % Markt (Pinnacle/Betfair bzw. angezeigter Buchmacher, beim Sieg dazu Kalshi und Polymarket zur Hälfte).</li>
     <li><b>Verletzungen:</b> Wert pro Spieler = (BPM + 2) × Minuten/48 (BPM von Basketball-Reference, aktuelle Saison mit Vorsaison gemischt und zur Mitte gezogen, höchstens 8 Punkte). Davon wird nur abgezogen, was noch in den Team-Ratings steckt, mal der Ausfall-Wahrscheinlichkeit aus dem offiziellen NBA-Verletzungsbericht (alle 15 Minuten, Out 100 %, Doubtful 75 %, Questionable 45 %, Probable 10 %), für noch nicht gemeldete Teams aus ESPN (Day-To-Day 30 %).</li>
     <li><b>Beste Quote:</b> Jede Wette wird bei allen Buchmachern mit deutscher Lizenz (GGL-Whitelist) verglichen: Tipico, Winamax, Betano, Betway, LeoVegas und 888sport. Betano, Betway, LeoVegas und 888sport liefert die Schnittstelle nur als UK- bzw. Schweden-Version, die deutschen Quoten können leicht abweichen. Pinnacle und Betfair dienen nur als Vergleichsmarkt und mit der besten Quote bewertet – bei Handicap und Gesamtpunkten auch über verschiedene Linien.</li>
-    <li><b>Strenge Auswahl (✓):</b> EV ≥ 3 % <i>und</i> die Quote ist auch gegenüber der fairen Pinnacle-Quote nicht schlechter. Ohne Pinnacle-Quote: EV ≥ 5 %. Einsatz: ¼-Kelly (Vorteil ÷ (Quote − 1) ÷ 4), höchstens 2 % der Kasse.</li>
+    <li><b>Strenge Auswahl (✓):</b> höchstens eine Wette pro Spiel (die mit dem höchsten EV), EV ≥ 3 % – bei Gesamtpunkten 5 %, weil dieser Teil noch nicht gegen Quoten getestet ist – <i>und</i> die Quote ist auch gegenüber der fairen Pinnacle-Quote nicht schlechter. Ohne Pinnacle-Quote: EV ≥ 5 %. Einsatz: ¼-Kelly (Vorteil ÷ (Quote − 1) ÷ 4), höchstens 2 % der Kasse.</li>
     <li><b>Abend-Update 23:37 Uhr:</b> nach dem Bericht von 17:30 Uhr US-Zeit neu gerechnet. Ändert sich eine Empfehlung, steht beim Spiel ein ⚠. Die Trefferliste zählt die Empfehlung von mittags, der Abendlauf liefert die Schlussquote für den CLV.</li>
   </ol>
   <h3>Grenzen</h3>
@@ -134,7 +137,7 @@ function changeTag(g){
   return g.changed ? `<div class="small" style="color:var(--warn)">⚠ Abend-Update ${new Date(g.eveningUpdate).toLocaleTimeString("de-DE",{hour:"2-digit",minute:"2-digit"})}: Empfehlung geändert (mittags: ${esc(g.middayBest.pick)}${g.middayBest.value?" ✓":""})</div>`
                    : `<div class="small">Abend-Update ${new Date(g.eveningUpdate).toLocaleTimeString("de-DE",{hour:"2-digit",minute:"2-digit"})}: Empfehlung unverändert</div>`; }
 function betsTable(bets){
-  const why = b => b.value ? `<b class="pos">✓ Einsatz ${f(b.stake*100,1)} % der Kasse</b>` : (b.ev<0.03?"EV unter 3 %":b.evPin!=null&&b.evPin<0?"Pinnacle sieht es anders":"ohne Pinnacle EV unter 5 %");
+  const why = b => b.value ? `<b class="pos">✓ Einsatz ${f(b.stake*100,1)} % der Kasse</b>` : esc(b.why || (b.ev<0.03?"EV unter 3 %":b.evPin!=null&&b.evPin<0?"Pinnacle sieht es anders":"ohne Pinnacle EV unter 5 %"));
   return `<table><thead><tr><th>Wette</th><th>Quote</th><th>Chance</th><th>EV</th></tr></thead><tbody>${bets.map(b=>`<tr><td>${esc(b.market)}<div class="small">${esc(b.pick)}</div><div class="small">${why(b)}</div></td>
     <td>${f(b.odds,2)}<div class="small">${esc(b.bookName||"")}</div>${b.mainOdds&&b.mainBook!==b.bookName?`<div class="small">${esc(b.mainBook)} ${f(b.mainOdds,2)}</div>`:""}</td>
     <td>${pct(b.p)}<div class="small">Modell ${pct(b.pModel)}</div></td>
@@ -183,6 +186,7 @@ $("bt").innerHTML = bt ? `<h3>Rücktest auf ${f(bt.games,0)} vergangenen Spielen
   <div class="kpis"><div class="kpi"><div class="k">Trefferquote Sieger</div><div class="v">${pct(bt.full.hit)}</div><div class="hint">nur Stärke + Heimvorteil: ${pct(bt.base.hit)}</div></div>
   <div class="kpi"><div class="k">Brier (Test)</div><div class="v">${f(bt.full.brier,4)}</div><div class="hint">Basis ${f(bt.base.brier,4)} · Münzwurf 0,25</div></div></div>
   <table><thead><tr><th>Faktor</th><th>gelernt</th><th>Nutzen im Test</th></tr></thead><tbody>${Object.entries(bt.coef).map(([k,c])=>`<tr><td>${FN[k]||esc(k)}</td><td>${f(c.value,2)} <span class="small">± ${f(c.se,2)}</span></td><td class="small">${bt.drop[k]==null?"–":bt.drop[k]>0?`<span class="pos">hilft</span> (${f(bt.drop[k]*10000,1)})`:`<span class="neg">hilft nicht</span> (${f(bt.drop[k]*10000,1)})`}</td></tr>`).join("")}</tbody></table>
+  ${bt.totals&&bt.totals.rmseModel?`<p class="small">Gesamtpunkte: durchschnittlicher Fehler ${f(bt.totals.rmseModel,1)} Punkte (nur Liga-Schnitt: ${f(bt.totals.rmseNaive,1)}) · Streuung ${f(bt.totals.sd,1)}</p>`:""}
   <p class="hint">Jedes Spiel wurde nur mit dem Wissen vom Vortag gerechnet (eigene Team-Stärken aus den Ergebnissen). Spielerwerte, Verletzungen und Quoten gibt es für die Vergangenheit nicht – die lernt das Modell weiter täglich. „Nutzen im Test“: um wie viel der Brier-Wert (×10.000) schlechter wird, wenn man den Faktor weglässt. Übernommen wurden Stärke, Heimvorteil und Streuung sowie die Zusatzfaktoren, die im Test geholfen haben; die anderen behalten ihren Startwert.</p>` : "";
 $("learn").innerHTML = st ? `<h3>Lernt das Modell?</h3><div class="kpis">
   <div class="kpi"><div class="k">Schlussquote geschlagen (CLV)</div><div class="v ${cls(st.clvAvg||0)}">${st.clvAvg==null?"–":sg(st.clvAvg*100)+" %"}</div><div class="hint">${st.clvN||0} Wetten · ${st.clvPos==null?"–":pct(st.clvPos)} besser als die Schlussquote</div></div>
@@ -193,7 +197,7 @@ $("learn").innerHTML = st ? `<h3>Lernt das Modell?</h3><div class="kpis">
   ${params?`<h3>Gelernte Werte</h3><table><thead><tr><th>Wert</th><th>aktuell</th><th>Start</th></tr></thead><tbody>${[["nba","team_scale",0.5],["nba","player_scale",0.5],["nba","hca",2.2],["nba","rest_scale",1],["nba","inj_scale",0.5],["nba","sched_scale",1],["nba","travel_scale",0.3],["nba","form_scale",0.15],["nba","sd_margin",12.5],["nba","sd_total",18],["nba","total_bias",0],["nba","conf",0.3]].map(([sp,k,d])=>`<tr><td>${LBL[k]}</td><td>${f(params[sp][k],2)}</td><td class="small">${f(d,2)}</td></tr>`).join("")}</tbody></table>
   <p class="hint">Angepasst wird ab 40 ausgewerteten Spielen, jeden Tag nur ein kleines Stück. Bisher: ${(params.n&&params.n.nba)||0} Spiele.</p>
   ${(params.history||[]).length?`<details><summary>Änderungen</summary><table><tbody>${params.history.slice(-30).reverse().map(h=>h.changes.map(c=>`<tr><td class="small">${esc(h.date)}${h.source?" · "+esc(h.source):""}</td><td>${LBL[c.key]||esc(c.key)}</td><td>${f(c.old,3)} → ${f(c.new,3)}</td><td class="small">Ziel ${f(c.target,2)}</td></tr>`).join("")).join("")}</tbody></table></details>`:""}`:""}
-  <p class="hint"><b>CLV</b> vergleicht deine Quote mit der fairen Quote kurz vor Spielbeginn (23:37 Uhr). Wer die Schlussquote dauerhaft schlägt, hat einen echten Vorteil – das zeigt sich nach 2–3 Wochen, Gewinn und Verlust erst nach Monaten. Ohne Vorteil liegt der CLV etwa bei minus der halben Buchmacher-Marge (rund −2 bis −3 %).</p>` : "";
+  <p class="hint"><b>CLV</b> vergleicht deine Quote mit der fairen Quote kurz vor Spielbeginn (23:37 Uhr bzw. 3:47 Uhr für späte Spiele). Wer die Schlussquote dauerhaft schlägt, hat einen echten Vorteil – das zeigt sich nach 2–3 Wochen, Gewinn und Verlust erst nach Monaten. Ohne Vorteil liegt der CLV etwa bei minus der halben Buchmacher-Marge (rund −2 bis −3 %).</p>` : "";
 
 const rows = Object.values(picks).sort((a,b)=>String(b.commence).localeCompare(String(a.commence)));
 $("trk").innerHTML = rows.length ? `<table><thead><tr><th>Spiel</th><th>Wette</th><th>Quote</th><th>Ergebnis</th></tr></thead><tbody>${rows.map(r=>{
@@ -205,6 +209,45 @@ $("trk").innerHTML = rows.length ? `<table><thead><tr><th>Spiel</th><th>Wette</t
   <td>${b.odds?`<b>${f(b.odds,2)}</b><div class="small">${esc(b.bookName||"")}</div>${r.close?`<div class="small">Schluss fair ${f(r.close.fairOdds,2)} · CLV <span class="${cls(r.close.clv)}">${sg(r.close.clv*100)} %</span></div>`:""}`:"–"}</td>
   <td>${res}</td></tr>`}).join("")}</tbody></table>
   <p class="hint">Brier-Wert = Durchschnitt von (Prognose − Ergebnis)². Kleiner ist besser. Ist der Wert des Modells kleiner als der des Markts, war das Modell genauer.</p>` : `<p class="hint">Noch keine Prognosen gespeichert.</p>`;
+
+// ---------- CLV-Verlauf ----------
+(function(){
+  const rows = Object.values(picks).filter(r=>r.close && r.commence)
+    .map(r=>({d:new Date(r.commence).toLocaleDateString("sv-SE",{timeZone:"Europe/Berlin"}), c:r.close.clv, v:!!(r.bet&&r.bet.value)}));
+  const byDay = {}; rows.forEach(r=>(byDay[r.d]=byDay[r.d]||[]).push(r.c));
+  const days = Object.keys(byDay).sort(); let sum=0, n=0;
+  const pts = days.map(d=>{ byDay[d].forEach(c=>{sum+=c;n++;}); const day=byDay[d].reduce((a,b)=>a+b,0)/byDay[d].length; return {d, cum:sum/n, day, n:byDay[d].length, total:n}; });
+  if(pts.length < 2){ $("clvchart").innerHTML = rows.length ? `<p class="hint">Der CLV-Verlauf erscheint ab dem zweiten Tag mit Schlussquoten.</p>` : ""; return; }
+  const W=420,H=210,L=50,R=12,T=16,B=26;
+  const vals=pts.map(p=>p.cum).concat([0]); let lo=Math.min(...vals), hi=Math.max(...vals); const pad=Math.max(0.005,(hi-lo)*0.15); lo-=pad; hi+=pad;
+  const x=i=>L+(W-L-R)*(pts.length===1?0.5:i/(pts.length-1)), y=v=>T+(H-T-B)*(hi-v)/(hi-lo);
+  const step=(hi-lo)>0.06?0.02:(hi-lo)>0.03?0.01:0.005; const ticks=[]; for(let t=Math.ceil(lo/step)*step;t<=hi+1e-9;t+=step) ticks.push(t);
+  const fmt=v=>(v>0?"+":v<0?"−":"±")+f(Math.abs(v*100),1)+" %";
+  const dl=d=>{const [yy,mm,dd]=d.split("-");return dd+"."+mm+".";};
+  const xl=pts.map((p,i)=>({i,p})).filter(o=>o.i===0||o.i===pts.length-1||pts.length<=8||o.i%Math.ceil(pts.length/6)===0);
+  const path=pts.map((p,i)=>(i?"L":"M")+x(i).toFixed(1)+","+y(p.cum).toFixed(1)).join("");
+  $("clvchart").innerHTML = `<h3>CLV-Verlauf (Durchschnitt aller Empfehlungen bis zum Tag)</h3><div class="chart" id="cc">
+  <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Durchschnittlicher CLV über die Zeit, zuletzt ${fmt(pts[pts.length-1].cum)}">
+    ${ticks.map(t=>`<line x1="${L}" x2="${W-R}" y1="${y(t)}" y2="${y(t)}" stroke="var(--line)" stroke-width="${Math.abs(t)<1e-9?1.5:1}"/><text x="${L-6}" y="${y(t)+4}" text-anchor="end" font-size="12" fill="var(--muted)">${fmt(t)}</text>`).join("")}
+    ${xl.map(o=>`<text x="${x(o.i)}" y="${H-8}" text-anchor="middle" font-size="12" fill="var(--muted)">${dl(o.p.d)}</text>`).join("")}
+    <path d="${path}" fill="none" stroke="var(--chart)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    ${pts.map((p,i)=>`<circle cx="${x(i)}" cy="${y(p.cum)}" r="4" fill="var(--chart)" stroke="var(--card)" stroke-width="2"/>`).join("")}
+    <text x="${x(pts.length-1)-6}" y="${y(pts[pts.length-1].cum)-10}" text-anchor="end" font-size="13" font-weight="700" fill="var(--ink)">${fmt(pts[pts.length-1].cum)}</text>
+    <line id="ccx" y1="${T}" y2="${H-B}" stroke="var(--muted)" stroke-width="1" visibility="hidden"/>
+    <rect x="${L}" y="${T}" width="${W-L-R}" height="${H-T-B}" fill="transparent" id="cchit"/>
+  </svg><div class="tip" id="cct"></div></div>
+  <p class="hint">Über der Nulllinie = die Empfehlungen schlagen im Schnitt die faire Schlussquote. Ohne Vorteil liegt der Wert etwa bei −2 bis −3 %.</p>
+  <details><summary class="small">Als Tabelle</summary><table><thead><tr><th>Tag</th><th>Wetten</th><th>CLV am Tag</th><th>Schnitt bisher</th></tr></thead><tbody>${pts.slice().reverse().map(p=>`<tr><td>${dl(p.d)}</td><td>${p.n}</td><td class="${cls(p.day)}">${fmt(p.day)}</td><td>${fmt(p.cum)}</td></tr>`).join("")}</tbody></table></details>`;
+  const svg=document.querySelector("#cc svg"), tip=$("cct"), vline=document.getElementById("ccx");
+  const move=e=>{ const r=svg.getBoundingClientRect(), sx=(e.clientX-r.left)*W/r.width;
+    let i=Math.round((sx-L)/((W-L-R)/Math.max(1,pts.length-1))); i=Math.max(0,Math.min(pts.length-1,i)); const p=pts[i];
+    vline.setAttribute("x1",x(i)); vline.setAttribute("x2",x(i)); vline.setAttribute("visibility","visible");
+    tip.style.display="block"; tip.innerHTML=`<b>${dl(p.d)}</b><br>Schnitt bisher ${fmt(p.cum)}<br>an dem Tag ${fmt(p.day)} · ${p.n} Wetten`;
+    const px=x(i)*r.width/W, py=y(p.cum)*r.height/H; const tw=tip.offsetWidth; tip.style.left=(px>r.width/2?Math.max(0,px-tw-10):Math.min(r.width-tw,px+10))+"px"; tip.style.top=Math.max(0,py-50)+"px"; };
+  const hit=document.getElementById("cchit");
+  hit.addEventListener("pointermove",move); hit.addEventListener("pointerdown",move);
+  hit.addEventListener("pointerleave",()=>{tip.style.display="none"; vline.setAttribute("visibility","hidden");});
+})();
 
 // ---------- Meine Wetten (nur auf diesem Gerät) ----------
 const KEY="meineWetten"; let memMine=[];

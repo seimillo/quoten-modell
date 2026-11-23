@@ -8,10 +8,11 @@ from datetime import date, timedelta
 
 from . import sources as S
 from .common import LOG, load_json, log, now_utc, parse_time, save_json
-from .nba import ALIASES, TEAMS, _et_date, canon, model_games
+from .nba import ALIASES, TEAMS, _et_date, canon, market_sd, model_games
+from .params import MIN_GAMES
 
 from .params import calibrate, load_params, save_params
-from .notify import notify_changes, notify_results, notify_value_bets
+from .notify import notify_changes, notify_problems, notify_results, notify_value_bets
 from .tracker import record_close, settle, stats, update_picks
 
 def nba_season(dt):
@@ -25,6 +26,8 @@ def update_history(now):
     start = date(nba_season(now) - 1, 10, 15)
     have = {g["date"] for g in hist}
     days = [today - timedelta(days=i) for i in range(0, 4)]
+    days += [date.fromisoformat(g["date"]) for g in hist                     # ältere Einträge ohne Spiel-ID nachladen
+             if not g.get("eid") and g["date"] >= (today - timedelta(days=21)).isoformat()]
     if len(have) < 10:                                  # erster Lauf: Saison nachholen
         d = start
         while d < today:
@@ -47,6 +50,35 @@ def update_history(now):
     return hist
 
 
+def update_minutes(hist, now, max_new=120):
+    """Minuten der letzten Spiele je Spieler aus ESPN-Boxscores (für die heutige Aufstellung)."""
+    from .sources import player_key
+    M = load_json("minutes.json", {"done": [], "players": {}})
+    done = set(M["done"])
+    since = ((now - timedelta(days=21)).date()).isoformat()
+    todo = [g for g in hist if g.get("done") and g.get("eid") and g["date"] >= since and g["eid"] not in done][-max_new:]
+    ok = 0
+    for g in todo:
+        box = S.espn_boxscore(g["eid"])
+        if box is None:
+            continue
+        ok += 1
+        done.add(g["eid"])
+        for team, players in box.items():
+            t = canon(team)
+            if t not in TEAMS:
+                continue
+            for name, m in players.items():
+                key = f"{TEAMS[t][0]}|{player_key(name)}"
+                M["players"].setdefault(key, []).append([g["date"], m])
+    for k, v in M["players"].items():
+        M["players"][k] = sorted(v)[-12:]
+    M["done"] = sorted(done)[-1500:]
+    save_json("minutes.json", M)
+    log(f"ESPN-Boxscores: {ok} neue Spiele, Minuten für {len(M['players'])} Spieler")
+    return {k: [m for _, m in v] for k, v in M["players"].items()}
+
+
 def nba_scores_from_history(picks, hist, now):
     """Ergebnisse für offene NBA-Prognosen aus dem ESPN-Spielplan (spart die Credits für den Ergebnis-Abruf)."""
     out = {}
@@ -60,6 +92,11 @@ def nba_scores_from_history(picks, hist, now):
                 out[pid] = {r["home"]: float(g["hs"]), r["away"]: float(g["as"])}
                 break
     return out
+
+
+def load_minutes():
+    M = load_json("minutes.json", {"players": {}})
+    return {k: [m for _, m in v] for k, v in M.get("players", {}).items()}
 
 
 def merged_injuries(now, known=None):
@@ -77,7 +114,7 @@ def merged_injuries(now, known=None):
     return out, stamp
 
 
-def nba_block(now, params, kalshi_nba, pm_nba, history):
+def nba_block(now, params, kalshi_nba, pm_nba, history, recent_min=None):
     season = nba_season(now)
     cur, prior = S.bbref_ratings(season), S.bbref_ratings(season - 1)
     pace = S.bbref_pace(season)
@@ -85,10 +122,17 @@ def nba_block(now, params, kalshi_nba, pm_nba, history):
     injuries, stamp = merged_injuries(now, {k for k, _ in list(cur_pl) + list(prior_pl)})
     events = S.odds_events("basketball_nba", "h2h,spreads,totals")
     upcoming = [e for e in events if parse_time(e["commence_time"]) > now]
+    P = dict(params["nba"])
+    msd = market_sd(upcoming)
+    if msd and params.get("n", {}).get("nba", 0) < MIN_GAMES:
+        # Bis die Kalibrierung genug echte Spiele hat: Mitte zwischen Rücktest (einfacheres Modell) und Markt
+        P["sd_margin"] = round(0.5 * (P["sd_margin"] + msd), 2)
+    log(f"Streuung: Markt {msd if msd is None else round(msd, 1)}, Modell nutzt {P['sd_margin']}")
     nba = model_games(upcoming, cur, prior, pace, [], injuries, kalshi_nba, pm_nba, cur_pl, prior_pl,
-                      params["nba"], history)
+                      P, history, recent_min or load_minutes())
     for g in nba:
         g["injuryReport"] = stamp
+        g["sdUsed"], g["sdMarket"] = P["sd_margin"], msd
     return nba, events
 
 
@@ -96,6 +140,8 @@ def main():
     mode = os.environ.get("RUN_MODE")
     if mode == "close":
         return main_close()
+    if mode == "late":
+        return main_late()
     if mode == "backtest":
         from .backtest import run_backtest
         update_history(now_utc())
@@ -117,8 +163,9 @@ def main():
     # ---------- NBA ----------
     nba = []
     history = update_history(now)
+    recent_min = update_minutes(history, now)
     if "basketball_nba" in active:
-        nba, _ = nba_block(now, params, kalshi_nba, pm_nba, history)
+        nba, _ = nba_block(now, params, kalshi_nba, pm_nba, history, recent_min)
         for g in nba:
             g["middayBest"] = g["best"]
     else:
@@ -139,6 +186,7 @@ def main():
     save_json("status.json", {"updated": now.isoformat(), "credits": S.CREDITS, "stats": stats(picks), "log": LOG[-60:],
                               "closeUpdated": old.get("closeUpdated"), "closeLog": old.get("closeLog", []),
                               "params": {k: params[k] for k in ("nba", "n")}})
+    notify_problems(LOG, S.CREDITS, "Mittagslauf")
     log("Fertig.")
 
 
@@ -175,7 +223,27 @@ def main_close():
     old = load_json("status.json", {})
     save_json("status.json", {**old, "closeUpdated": now.isoformat(), "credits": S.CREDITS, "stats": stats(picks),
                               "closeLog": LOG[-30:]})
+    notify_problems(LOG, S.CREDITS, "Abendlauf")
     log("Fertig (Schlussquoten).")
+
+
+def main_late():
+    """Nachtlauf (ca. 3:47 Uhr): nur Schlussquoten für Spiele, die erst danach beginnen (Westküste).
+    Kein Modell, keine Push-Nachrichten außer bei Problemen. Kostet nur dann Credits, wenn noch Spiele offen sind."""
+    now = now_utc()
+    picks = load_json("picks.json", {})
+    open_later = [r for r in picks.values() if not r.get("result") and parse_time(r["commence"]) > now
+                  and parse_time(r["commence"]) < now + timedelta(hours=3)]
+    if not open_later:
+        log("Nachtlauf: keine Spiele mehr offen – keine Abfrage")
+        return
+    params = load_params()
+    record_close(picks, S.odds_events("basketball_nba", "h2h,spreads,totals"), params)
+    save_json("picks.json", picks)
+    old = load_json("status.json", {})
+    save_json("status.json", {**old, "lateUpdated": now.isoformat(), "credits": S.CREDITS, "stats": stats(picks)})
+    notify_problems(LOG, S.CREDITS, "Nachtlauf")
+    log(f"Fertig (Nachtlauf, {len(open_later)} späte Spiele).")
 
 
 if __name__ == "__main__":

@@ -63,7 +63,8 @@ def patch():
         {"player": "Jalen Duren", "status": "Questionable", "info": "Injury/Illness - Ankle", "src": "NBA"}]},
         {"Atlanta Hawks"}, "2026-11-22 05:30 ET")
     S.espn_scoreboard = lambda d: [{"date": d.isoformat(), "start": PAST, "home": "Atlanta Hawks", "away": "Charlotte Hornets",
-                                    "done": True, "neutral": False, "hs": 111, "as": 97}] if d.isoformat() == ET_PAST else []
+                                    "done": True, "neutral": False, "hs": 111, "as": 97, "eid": "401"}] if d.isoformat() == ET_PAST else []
+    S.espn_boxscore = lambda eid: {"Detroit Pistons": {"Det Spieler 0": 38.0}}
     S.espn_injuries = lambda: {"Detroit Pistons": [{"player": "Jalen Duren", "status": "Out", "info": "Oberschenkel"}]}
     # Nach dem Patch neu binden, weil run und markets die Funktionen beim Import übernommen haben
     import pipeline.markets as M

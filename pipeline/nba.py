@@ -164,12 +164,17 @@ def rosters(cur_pl):
     return out
 
 
-def lineup_net(abbr, roster, prior_by_name, avail):
-    """Netto-Rating pro 100 Ballbesitze aus den heute verfügbaren Spielern: Σ BPM × Minuten/48 (240 Minuten)."""
+def lineup_net(abbr, roster, prior_by_name, avail, recent=None):
+    """Netto-Rating pro 100 Ballbesitze aus den heute verfügbaren Spielern: Σ BPM × Minuten/48 (240 Minuten).
+    Minuten: 60 % Schnitt der letzten 8 Einsätze (ESPN-Boxscores), 40 % Saisonschnitt – Rotationen ändern sich."""
     players = []
+    recent = recent or {}
     for k, c in roster.get(abbr, []):
         p = prior_by_name.get(k)
         mpg = c["mp"] / c["g"] if c["g"] >= 3 else (min(p["mp"] / p["g"], 24.0) if p and p["g"] else c["mp"] / max(1, c["g"]))
+        last = recent.get(f"{abbr}|{k}", [])[-8:]
+        if len(last) >= 3:
+            mpg = 0.6 * sum(last) / len(last) + 0.4 * mpg
         players.append((k, _shrunk_bpm(c, p), mpg * (1 - avail.get(k, 0.0))))
     if not players:
         return None, 0.0
@@ -240,14 +245,18 @@ def form(team, hist, expect):
 
 # ---------------- Wetten: beste Quote, Pinnacle-Check, Kelly ----------------
 MIN_EV, MIN_EV_NO_SHARP, KELLY_FRAC, KELLY_CAP = 0.03, 0.05, 0.25, 0.02
+MIN_EV_TOTAL = 0.05       # Gesamtpunkte: noch nicht gegen Quoten getestet → strengere Schwelle
 
 
 def judge(b):
     """Strenge Auswahl: EV ≥ 3 % und die Quote ist auch gegen Pinnacle fair (sonst EV ≥ 5 %). Einsatz: ¼-Kelly, max. 2 %."""
+    need = MIN_EV_TOTAL if b.get("market") == "Gesamtpunkte" else MIN_EV
     if b.get("evPin") is not None:
-        ok = b["ev"] >= MIN_EV and b["evPin"] >= 0
+        ok = b["ev"] >= need and b["evPin"] >= 0
+        b["why"] = None if ok else (f"EV unter {need * 100:.0f} %" if b["ev"] < need else "Pinnacle sieht es anders")
     else:
-        ok = b["ev"] >= MIN_EV_NO_SHARP
+        ok = b["ev"] >= max(need, MIN_EV_NO_SHARP)
+        b["why"] = None if ok else f"ohne Pinnacle EV unter {max(need, MIN_EV_NO_SHARP) * 100:.0f} %"
     b["value"] = bool(ok)
     k = b["ev"] / (b["odds"] - 1) if b["odds"] > 1 else 0
     b["stake"] = round(min(KELLY_CAP, KELLY_FRAC * k), 4) if ok else 0.0
@@ -272,8 +281,28 @@ def sharp_pair(prices, n1, n2):
     return None, None, None
 
 
+def market_sd(events):
+    """Streuung, die Pinnacle einpreist: Handicap-Linie und Siegchance passen nur bei einer Streuung zusammen."""
+    out = []
+    for ev in events:
+        home, away = canon(ev["home_team"]), canon(ev["away_team"])
+        p, _, _ = sharp_pair(book_prices(ev, "h2h"), home, away)
+        sh = next((o for o in (book_prices(ev, "spreads").get("pinnacle") or []) if canon(o["name"]) == home), None)
+        if p is None or not sh or sh.get("point") is None or abs(sh["point"]) < 2 or not 0.08 < p < 0.92:
+            continue
+        z = _z(p)
+        if abs(z) > 0.05:
+            sd = -sh["point"] / z
+            if 8 < sd < 20:
+                out.append(sd)
+    if len(out) < 3:
+        return None
+    out.sort()
+    return out[len(out) // 2]
+
+
 def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events, cur_pl=None, prior_pl=None, P=None,
-                history=None):
+                history=None, recent_min=None):
     cur_pl, prior_pl = cur_pl or {}, prior_pl or {}
     P = {**{"team_scale": 0.5, "player_scale": 0.5, "hca": HCA, "rest_scale": 1.0, "inj_scale": 0.5, "sched_scale": 1.0,
             "travel_scale": 0.3, "form_scale": 0.15, "sd_margin": SD_MARGIN, "sd_total": SD_TOTAL, "total_bias": 0.0,
@@ -320,8 +349,8 @@ def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events, c
         inj_raw = loss_a - loss_h
         av_a = {player_key(r["player"]): r["pOut"] for r in rows_a}
         av_h = {player_key(r["player"]): r["pOut"] for r in rows_h}
-        net_a, min_a = lineup_net(TEAMS[away][0], ros, prior_by_name, av_a)
-        net_h, min_h = lineup_net(TEAMS[home][0], ros, prior_by_name, av_h)
+        net_a, min_a = lineup_net(TEAMS[away][0], ros, prior_by_name, av_a, recent_min)
+        net_h, min_h = lineup_net(TEAMS[home][0], ros, prior_by_name, av_h, recent_min)
         if net_a is not None and net_h is not None:
             player_raw = poss / 100 * (net_h - net_a)
             ts, ps = P["team_scale"], P["player_scale"]
@@ -447,7 +476,11 @@ def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events, c
 
         if not bets:
             continue
-        values = [b for b in bets if b["value"]]
+        values = sorted([b for b in bets if b["value"]], key=lambda b: -b["ev"])
+        for b in values[1:]:                            # nur eine Wette pro Spiel – sonst doppeltes Risiko
+            b["value"], b["stake"] = False, 0.0
+            b["why"] = f"nur eine Wette pro Spiel: {values[0]['pick']} ist besser"
+        values = values[:1]
         best = max(values or bets, key=lambda b: b["ev"])
         games.append({
             "id": ev["id"], "sportKey": "basketball_nba", "sport": "NBA", "commence": ev["commence_time"], "away": away, "home": home,

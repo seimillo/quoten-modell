@@ -65,6 +65,33 @@ def ratings(games, prior):
     return {t: float(sol[idx[t]]) for t in teams}, float(sol[n])
 
 
+def points_ratings(games):
+    """Angriff/Abwehr in Punkten: Heimpunkte = Schnitt + HV/2 + Angriff Heim + Abwehr Gast (positiv = lässt mehr zu)."""
+    teams = sorted(TEAMS)
+    idx = {t: i for i, t in enumerate(teams)}
+    n = len(teams)
+    rows, y = [], []
+    for g in games:
+        h, a = idx[canon(g["home"])], idx[canon(g["away"])]
+        neutral = 0.0 if g.get("neutral") else 0.5
+        for att, de, pts, sgn in ((h, a, g["hs"], 1), (a, h, g["as"], -1)):
+            r = np.zeros(2 * n + 2)
+            r[att] = 1
+            r[n + de] = 1
+            r[2 * n] = 1
+            r[2 * n + 1] = sgn * neutral
+            rows.append(r)
+            y.append(pts)
+    lam = math.sqrt(PRIOR_GAMES)
+    for i in range(2 * n):
+        r = np.zeros(2 * n + 2)
+        r[i] = lam
+        rows.append(r)
+        y.append(0.0)
+    sol = np.linalg.lstsq(np.array(rows), np.array(y, dtype=float), rcond=None)[0]
+    return {t: (float(sol[idx[t]]), float(sol[n + idx[t]])) for t in teams}, float(sol[2 * n])
+
+
 def features(season_games, prior, skip):
     """Merkmale je Spiel, jeweils mit dem Stand vom Vortag."""
     by_day = {}
@@ -74,6 +101,7 @@ def features(season_games, prior, skip):
     for day in sorted(by_day):
         d = date.fromisoformat(day)
         R, hca = ratings(done, prior) if done else (dict(prior), 2.5)
+        PR, mu = points_ratings(done) if len(done) >= 30 else ({}, None)
         hist = team_history(season_games, d)
 
         def expect(team, opp, home):
@@ -88,7 +116,10 @@ def features(season_games, prior, skip):
                             "strength": R.get(h, 0.0) - R.get(a, 0.0), "hca": 0.0 if g.get("neutral") else 1.0,
                             "rest": rest_points(sa_["rest"], sh_["rest"], h, a),
                             "sched": sa_["dens"] - sh_["dens"], "travel": (sa_["km"] - sh_["km"]) / 1000,
-                            "form": form(h, hist, expect) - form(a, hist, expect)})
+                            "form": form(h, hist, expect) - form(a, hist, expect),
+                            "tot": g["hs"] + g["as"],
+                            "totPred": (2 * mu + sum(PR[h]) + sum(PR[a])) if mu is not None else None,
+                            "totNaive": 2 * mu if mu is not None else None})
         done += by_day[day]
     final, _ = ratings(done, prior)
     return out, final
@@ -164,10 +195,19 @@ def run_backtest(apply=True):
         b, _, sd_ = fit(train, ks)
         drop[k] = round(evaluate(test, ks, b, sd_)["brier"] - ev_full["brier"], 5)
 
+    # Gesamtpunkte: eigenes Modell (Angriff/Abwehr) gegen den bloßen Liga-Schnitt, im Testzeitraum
+    tr = [r for r in train if r["totPred"] is not None]
+    te = [r for r in test if r["totPred"] is not None]
+    bias_t = float(np.mean([r["tot"] - r["totPred"] for r in tr])) if tr else 0.0
+    rmse = lambda rs, key, b=0.0: round(float(np.sqrt(np.mean([(r["tot"] - r[key] - b) ** 2 for r in rs]))), 2) if rs else None
+    totals = {"rmseModel": rmse(te, "totPred", bias_t), "rmseNaive": rmse(te, "totNaive"), "n": len(te),
+              "sd": rmse([r for r in rows if r["totPred"] is not None], "totPred", bias_t)}
+
     beta, se, sd = fit(rows, KEYS)
     coef = {k: {"value": round(float(b), 3), "se": round(float(s), 3)} for k, b, s in zip(KEYS, beta, se)}
     report = {"date": now.date().isoformat(), "games": len(rows), "seasons": seasons, "train": len(train), "test": len(test),
-              "base": ev_base, "full": ev_full, "coin": ev_coin, "drop": drop, "coef": coef, "sd": round(sd, 2)}
+              "base": ev_base, "full": ev_full, "coin": ev_coin, "drop": drop, "coef": coef, "sd": round(sd, 2),
+              "totals": totals}
     save_json("backtest.json", report)
     log(f"Rücktest: {len(rows)} Spiele · Test-Brier Basis {ev_base['brier']} → voll {ev_full['brier']} · "
         f"Trefferquote {ev_full['hit']:.1%}")
@@ -179,6 +219,8 @@ def run_backtest(apply=True):
         S_ = float(beta[0])
         new = {"team_scale": clip("team_scale", S_ / 2), "player_scale": clip("player_scale", S_ / 2),
                "hca": clip("hca", float(beta[1])), "sd_margin": clip("sd_margin", sd)}
+        if totals["sd"]:
+            new["sd_total"] = clip("sd_total", totals["sd"])
         # Zusatzfaktoren nur übernehmen, wenn sie im Test wirklich geholfen haben – sonst Startwert behalten
         for i, (k, pk) in enumerate((("rest", "rest_scale"), ("sched", "sched_scale"), ("travel", "travel_scale"),
                                       ("form", "form_scale")), start=2):

@@ -297,6 +297,7 @@ def nba_official_injuries(team_names, now=None, known=None):
             text = "\n".join(pg.extract_text() or "" for pg in PdfReader(io.BytesIO(r.content)).pages)
             out, missing = parse_nba_report(text, team_names, known)
             if not out and not missing:                  # Format unbekannt → Rohtext zur Fehlersuche ablegen
+                log("NBA-Verletzungsbericht: Format unbekannt – 0 Spieler erkannt")
                 from .common import DATA_DIR
                 with open(os.path.join(DATA_DIR, "debug_injury.txt"), "w", encoding="utf-8") as fh:
                     fh.write(repr(text[:4000]))
@@ -327,11 +328,40 @@ def espn_scoreboard(day):
         if "home" not in cs or "away" not in cs:
             continue
         done = bool(((ev.get("status") or {}).get("type") or {}).get("completed"))
-        games.append({"date": day.isoformat(), "start": ev.get("date"), "home": cs["home"]["team"]["displayName"],
+        games.append({"date": day.isoformat(), "start": ev.get("date"), "eid": ev.get("id"), "home": cs["home"]["team"]["displayName"],
                       "away": cs["away"]["team"]["displayName"], "done": done, "neutral": bool(comp.get("neutralSite")),
                       "hs": int(cs["home"].get("score") or 0) if done else None,
                       "as": int(cs["away"].get("score") or 0) if done else None})
     return games
+
+
+def espn_boxscore(eid):
+    """Gespielte Minuten je Spieler eines Spiels: {Teamname: {Spielername: Minuten}}."""
+    url = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/summary"
+    try:
+        data, _ = get(url, {"event": eid})
+    except Exception as e:  # noqa: BLE001
+        log(f"ESPN-Boxscore {eid} fehlgeschlagen: {e}")
+        return None
+    out = {}
+    for team in (data.get("boxscore") or {}).get("players", []):
+        name = (team.get("team") or {}).get("displayName")
+        for st in team.get("statistics", [])[:1]:
+            labels = [str(x).upper() for x in (st.get("labels") or st.get("names") or [])]
+            if "MIN" not in labels:
+                continue
+            i = labels.index("MIN")
+            for a in st.get("athletes", []):
+                if a.get("didNotPlay") or not a.get("stats"):
+                    continue
+                raw = str(a["stats"][i])
+                try:
+                    m = float(raw.split(":")[0]) + (float(raw.split(":")[1]) / 60 if ":" in raw else 0)
+                except ValueError:
+                    continue
+                if m > 0:
+                    out.setdefault(name, {})[(a.get("athlete") or {}).get("displayName", "")] = round(m, 1)
+    return out
 
 
 # ---------------- ESPN (NBA-Verletzungen) ----------------

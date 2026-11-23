@@ -4,12 +4,13 @@ on:
   schedule:
     - cron: "17 11 * * *"     # täglich 12:17 Uhr deutscher Winterzeit (13:17 Sommerzeit): Modelle rechnen + lernen
     - cron: "37 22 * * *"     # täglich 23:37 Uhr: nach dem NBA-Verletzungsbericht neu rechnen + Schlussquoten (CLV)
+    - cron: "47 2 * * *"      # täglich 3:47 Uhr: Schlussquoten der späten Spiele (Westküste)
   workflow_dispatch:           # manuell starten: Reiter „Actions“ → „Tägliches Update“ → „Run workflow“
     inputs:
       mode:
         description: "full = Modell rechnen, close = Abend-Update + Schlussquoten, backtest = Rücktest (keine Credits)"
         type: choice
-        options: [full, close, backtest]
+        options: [full, close, late, backtest]
         default: full
 
 permissions:
@@ -36,7 +37,7 @@ jobs:
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
-          RUN_MODE: ${{ inputs.mode || (github.event.schedule == '37 22 * * *' && 'close' || 'full') }}
+          RUN_MODE: ${{ inputs.mode || (github.event.schedule == '37 22 * * *' && 'close' || github.event.schedule == '47 2 * * *' && 'late' || 'full') }}
         run: python -m pipeline.run
       - name: Ergebnisse speichern
         run: |
@@ -47,3 +48,12 @@ jobs:
           git commit -m "Daten-Update $(date -u +'%Y-%m-%d %H:%M') UTC"
           git pull --rebase -X theirs -q || git rebase --abort || true
           git push
+      - name: Warnung bei Abbruch
+        if: failure()
+        run: |
+          curl -s -H "Title: Pipeline abgebrochen" -H "Tags: rotating_light" -H "Priority: 4" \
+            -d "Der Lauf ($RUN_MODE) ist mit einem Fehler abgebrochen. Details im Reiter Actions auf GitHub." \
+            "https://ntfy.sh/${NTFY_TOPIC:-quoten-b6a776bab3f5}"
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          RUN_MODE: ${{ inputs.mode || github.event.schedule }}

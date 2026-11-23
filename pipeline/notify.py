@@ -80,3 +80,18 @@ def notify_results(settled):
         lines.append(f"{r['match']}: {b['pick']} @ {b['odds']:.2f} – {word} ({g:+.2f} €)")
     lines.append(f"Summe bei 10 € je Wette: {total:+.2f} €")
     send("Ergebnisse der ✓-Wetten", lines, tags=("basketball", "moneybag"))
+
+
+PROBLEM_WORDS = ("fehlgeschlagen", "nicht lesbar", "nicht gefunden", "übersprungen", "Kein ODDS_API_KEY", "Format unbekannt")
+IGNORE = ("Polymarket Trades", "Push-Nachricht")
+
+
+def notify_problems(log_lines, credits=None, mode="Lauf"):
+    """Warnt, wenn eine Datenquelle ausgefallen ist oder die Credits knapp werden."""
+    lines = [l for l in log_lines if any(w in l for w in PROBLEM_WORDS) and not any(i in l for i in IGNORE)]
+    lines = list(dict.fromkeys(lines))[:8]
+    rem = (credits or {}).get("remaining")
+    if rem is not None and rem < 60:
+        lines.append(f"Nur noch {rem:.0f} Credits bei The Odds API übrig.")
+    if lines:
+        send(f"Warnung: {mode} mit Problemen", lines, tags=("warning",), priority=3)
