@@ -131,5 +131,10 @@
    "conf": 0.15
   },
   "n": {}
- }
+ },
+ "propsBacktestLog": [
+  "Variante Gegner je Team: {'n': 2301, 'score': {'pts': -3.1126, 'reb': -2.2249, 'ast': -1.7854, 'fg3m': -1.3739}, 'mae': {'pts': 4.621, 'reb': 1.905, 'ast': 1.325, 'fg3m': 0.92}, 'cover50': {'pts': 0.502, 'reb': 0.634, 'ast': 0.723, 'fg3m': 0.773}}",
+  "Variante Gegner je Rolle: {'n': 2301, 'score': {'pts': -3.1124, 'reb': -2.2257, 'ast': -1.7845, 'fg3m': -1.3731}, 'mae': {'pts': 4.626, 'reb': 1.905, 'ast': 1.324, 'fg3m': 0.92}, 'cover50': {'pts': 0.502, 'reb': 0.63, 'ast': 0.725, 'fg3m': 0.775}}",
+  "Variante ohne Wissen, wer spielt: {'n': 2302, 'score': {'pts': -3.1382, 'reb': -2.2485, 'ast': -1.8023, 'fg3m': -1.3885}, 'mae': {'pts': 4.642, 'reb': 1.874, 'ast': 1.31, 'fg3m': 0.907}, 'cover50': {'pts': 0.488, 'reb': 0.622, 'ast': 0.711, 'fg3m': 0.762}}"
+ ]
 }
