@@ -71,20 +71,101 @@
  },
  "odds": {
   "date": "2026-11-23",
-  "games": 1,
+  "games": 100,
   "decisionHours": 10,
   "brier": {
-   "model": 0.0354,
-   "mix": 0.0262,
-   "marketDecision": 0.0227,
-   "pinnacleClose": 0.027
+   "model": 0.2145,
+   "mix": 0.2014,
+   "marketDecision": 0.1978,
+   "pinnacleClose": 0.1988
   },
-  "bets": 0,
-  "profit": 0,
-  "roi": null,
-  "clvAvg": null,
-  "clvPos": null,
-  "list": [],
-  "requests": 7
+  "bets": 8,
+  "profit": -4.6,
+  "roi": -0.575,
+  "clvAvg": 0.1194,
+  "clvPos": 0.75,
+  "list": [
+   {
+    "date": "2026-11-19",
+    "game": "Golden State Warriors @ Memphis Grizzlies",
+    "side": "away",
+    "book": "bet365.de",
+    "odds": 3.75,
+    "ev": 0.2842,
+    "clv": 0.3276,
+    "profit": -1.0
+   },
+   {
+    "date": "2026-11-18",
+    "game": "Atlanta Hawks @ Oklahoma City Thunder",
+    "side": "away",
+    "book": "bet365.de",
+    "odds": 3.4,
+    "ev": 0.0448,
+    "clv": -0.0155,
+    "profit": 2.4
+   },
+   {
+    "date": "2026-11-18",
+    "game": "Golden State Warriors @ Dallas Mavericks",
+    "side": "away",
+    "book": "bet365.de",
+    "odds": 2.85,
+    "ev": 0.2209,
+    "clv": 0.0234,
+    "profit": -1.0
+   },
+   {
+    "date": "2026-11-13",
+    "game": "Golden State Warriors @ San Antonio Spurs",
+    "side": "away",
+    "book": "bet365.de",
+    "odds": 6.5,
+    "ev": 0.4899,
+    "clv": -0.0967,
+    "profit": -1.0
+   },
+   {
+    "date": "2026-11-12",
+    "game": "Toronto Raptors @ Philadelphia 76ers",
+    "side": "away",
+    "book": "bet365.de",
+    "odds": 4.4,
+    "ev": 0.2915,
+    "clv": 0.2646,
+    "profit": -1.0
+   },
+   {
+    "date": "2026-11-11",
+    "game": "Boston Celtics @ Toronto Raptors",
+    "side": "home",
+    "book": "bet365.de",
+    "odds": 3.3,
+    "ev": 0.1735,
+    "clv": 0.1962,
+    "profit": -1.0
+   },
+   {
+    "date": "2026-11-09",
+    "game": "Los Angeles Lakers @ Atlanta Hawks",
+    "side": "home",
+    "book": "bet365.de",
+    "odds": 2.029,
+    "ev": 0.0541,
+    "clv": 0.1401,
+    "profit": -1.0
+   },
+   {
+    "date": "2026-11-08",
+    "game": "Brooklyn Nets @ Dallas Mavericks",
+    "side": "away",
+    "book": "bet365.de",
+    "odds": 4.3,
+    "ev": 0.1435,
+    "clv": 0.1157,
+    "profit": -1.0
+   }
+  ],
+  "requests": 106
  }
 }
