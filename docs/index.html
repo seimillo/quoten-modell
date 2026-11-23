@@ -341,7 +341,7 @@ function propRow(p){
   <td class="${cls(p.ev)}">${sg(p.ev*100,1)} %${p.value?`<div class="small">Einsatz ${f(p.stake*100,1)} %</div>`:""}</td></tr>`;
 }
 $("propList").innerHTML = PROPS.games.length ? PROPS.games.map(g=>{
-  const top = g.props.filter(p=>p.value).concat(g.props.filter(p=>!p.value).slice(0,8));
+  const top = g.props.filter(p=>p.value).concat(g.props.filter(p=>!p.value && p.odds>=1.4 && p.odds<=4).slice(0,8));
   return `<details class="item"${g.props.some(p=>p.value)?" open":""}><summary><div><div class="small">${when(g.commence)}</div><div class="t">${esc(g.label)}</div>
     <div class="small">${g.nProps} Linien simuliert</div></div>${g.props.some(p=>p.value)?`<span class="tag good">✓ ${g.props.filter(p=>p.value).length}</span>`:`<span class="tag none">kein ✓</span>`}</summary>
     <div class="body"><table><thead><tr><th>Spieler</th><th>Wette</th><th>Quote</th><th>Chance</th><th>EV</th></tr></thead><tbody>${top.map(propRow).join("")}</tbody></table>
