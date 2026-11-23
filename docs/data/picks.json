@@ -452,8 +452,8 @@
   "away": "Oklahoma City Thunder",
   "a": null,
   "b": null,
-  "pModelA": 0.3762,
-  "pMarketA": 0.3584,
+  "pModelA": 0.3749,
+  "pMarketA": 0.3566,
   "pModelRaw": 0.4177,
   "feat": {
    "team": -11.222,
@@ -466,13 +466,13 @@
    "form": 1.669,
    "TOTraw": 222.71,
    "pModelRaw": 0.4177,
-   "pMarket": 0.3584
+   "pMarket": 0.3566
   },
   "bet": {
    "market": "Sieg",
    "pick": "Indiana Pacers",
    "odds": 2.75,
-   "ev": 0.0345,
+   "ev": 0.031,
    "line": null,
    "side": "home",
    "book": "sport888",
@@ -516,15 +516,15 @@
   "bet": {
    "market": "Gesamtpunkte",
    "pick": "Über 238.5",
-   "odds": 1.87,
-   "ev": 0.007,
+   "odds": 1.85,
+   "ev": -0.002,
    "line": 238.5,
    "side": "over",
    "book": "tipico_de",
    "bookName": "Tipico",
    "value": false,
    "stake": 0.0,
-   "evPin": -0.065
+   "evPin": -0.0725
   },
   "result": null,
   "betResult": null,
@@ -607,14 +607,14 @@
    "market": "Sieg",
    "pick": "Utah Jazz",
    "odds": 7.5,
-   "ev": 0.128,
+   "ev": 0.1279,
    "line": null,
    "side": "away",
    "book": "betway",
    "bookName": "Betway",
    "value": false,
    "stake": 0.0,
-   "evPin": -0.1083
+   "evPin": -0.1087
   },
   "result": null,
   "betResult": null,
@@ -722,8 +722,8 @@
   "away": "Memphis Grizzlies",
   "a": null,
   "b": null,
-  "pModelA": 0.3928,
-  "pMarketA": 0.3932,
+  "pModelA": 0.3905,
+  "pMarketA": 0.3898,
   "pModelRaw": 0.392,
   "feat": {
    "team": -4.368,
@@ -736,20 +736,20 @@
    "form": -6.66,
    "TOTraw": 217.55,
    "pModelRaw": 0.392,
-   "pMarket": 0.3932
+   "pMarket": 0.3898
   },
   "bet": {
    "market": "Handicap",
    "pick": "Memphis Grizzlies -3.5",
    "odds": 1.91,
-   "ev": -0.0152,
+   "ev": -0.0134,
    "line": -3.5,
    "side": "away",
    "book": "sport888",
    "bookName": "888sport",
    "value": false,
    "stake": 0.0,
-   "evPin": -0.0138
+   "evPin": -0.0113
   },
   "result": null,
   "betResult": null,
@@ -767,8 +767,8 @@
   "away": "Milwaukee Bucks",
   "a": null,
   "b": null,
-  "pModelA": 0.7859,
-  "pMarketA": 0.8062,
+  "pModelA": 0.7836,
+  "pMarketA": 0.8029,
   "pModelRaw": 0.7386,
   "feat": {
    "team": 7.959,
@@ -781,20 +781,20 @@
    "form": -1.112,
    "TOTraw": 224.79,
    "pModelRaw": 0.7386,
-   "pMarket": 0.8062
+   "pMarket": 0.8029
   },
   "bet": {
    "market": "Sieg",
    "pick": "Milwaukee Bucks",
    "odds": 4.75,
-   "ev": 0.0168,
+   "ev": 0.028,
    "line": null,
    "side": "away",
    "book": "betway",
    "bookName": "Betway",
    "value": false,
    "stake": 0.0,
-   "evPin": -0.1116
+   "evPin": -0.0819
   },
   "result": null,
   "betResult": null,
