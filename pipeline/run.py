@@ -123,7 +123,7 @@ def nba_block(now, params, kalshi_nba, pm_nba, history, recent_min=None):
     events = S.odds_events("basketball_nba", "h2h,spreads,totals")
     try:
         from . import oddspapi
-        oddspapi.merge(events, oddspapi.nba_events())
+        oddspapi.attach([e for e in events if parse_time(e["commence_time"]) > now])
     except Exception as e:  # noqa: BLE001
         log(f"OddsPapi fehlgeschlagen: {e}")
     upcoming = [e for e in events if parse_time(e["commence_time"]) > now]

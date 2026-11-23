@@ -1,201 +1,188 @@
-"""OddsPapi: zusätzliche Buchmacher (bet365 DE, bwin DE, Winamax DE, Betway DE, 888sport DE …).
+"""OddsPapi (API v4): zusätzliche deutsche Buchmacher, vor allem bet365.de und bwin.de.
 
-Sparsam: pro Lauf EINE Abfrage für alle NBA-Spiele (/fixtures/odds/main mit tournamentId),
-dazu einmalig die Buchmacher- und Marktlisten (werden zwischengespeichert).
-Die Quoten werden in das Format von The Odds API umgebaut und an deren Spiele angehängt,
-sodass das Modell sie wie alle anderen Buchmacher behandelt.
+Gratis-Stufe: 250 Abfragen im Monat, pro Abfrage EIN Buchmacher für die ganze NBA (odds-by-tournaments).
+Pro Lauf also 2 Abfragen (bet365.de, bwin.de) – mittags und abends = rund 120 im Monat.
+Teilnehmer- und Marktliste werden einmal geholt und zwischengespeichert.
+Ein Monatsbudget (BUDGET) verhindert, dass das Kontingent ausgeht.
+Die Quoten werden ins Format von The Odds API umgebaut und an deren Spiele angehängt.
 """
 import os
-import re
+import time
 
 from .common import get, load_json, log, now_utc, parse_time, save_json
 
-BASE = "https://v5.oddspapi.io/en"
+BASE = "https://api.oddspapi.io/v4"
 NBA_TOURNAMENT = 132
 SPORT_BASKETBALL = 11
-# gewünschte Marken → wir suchen die deutsche Version (Slug/Name mit „de“), sonst die Hauptversion
-WANTED = ["bet365", "bwin", "winamax", "betway", "888sport", "betano", "tipico", "interwetten", "leovegas", "pinnacle"]
-USED = {"requests": 0}
+BOOKS = {"bet365.de": "bet365", "bwin.de": "bwin"}     # Slug → Schlüssel-Endung (op_bet365, op_bwin)
+BUDGET = 230                                          # von 250 im Monat; Rest als Reserve
 
 
 def _key():
     return os.environ.get("ODDSPAPI_KEY", "").strip()
 
 
-def _get(path, params=None):
-    p = dict(params or {})
-    p["apiKey"] = _key()
-    USED["requests"] += 1
-    data, _ = get(f"{BASE}/{path}", p, tries=1, timeout=60)   # jede Wiederholung kostet eine Abfrage
+def _usage():
+    u = load_json("oddspapi_usage.json", {})
+    month = now_utc().strftime("%Y-%m")
+    if u.get("month") != month:
+        u = {"month": month, "requests": 0}
+    return u
+
+
+def _get(path, **params):
+    u = _usage()
+    if u["requests"] >= BUDGET:
+        raise RuntimeError(f"Monatsbudget erreicht ({u['requests']} Abfragen)")
+    params["apiKey"] = _key()
+    u["requests"] += 1
+    save_json("oddspapi_usage.json", u)
+    time.sleep(1.1)                                   # OddsPapi verlangt ~1 s Pause zwischen Abfragen
+    data, _ = get(f"{BASE}/{path}", params, tries=1, timeout=60)   # jede Wiederholung kostet eine Abfrage
     return data
 
 
-def bookmakers():
-    """Slugs der gewünschten Buchmacher (deutsche Version bevorzugt). Liste wird 30 Tage zwischengespeichert."""
-    cache = load_json("oddspapi_books.json", {})
-    if not cache.get("all") or cache.get("ts", "") < (now_utc().date().isoformat()[:8] + "00"):
-        try:
-            data = _get("bookmakers")
-            items = data if isinstance(data, list) else data.get("bookmakers", data.get("data", []))
-            cache = {"ts": now_utc().date().isoformat(),
-                     "all": [{"slug": b.get("slug") or b.get("bookmaker") or b.get("id"), "name": b.get("bookmakerName") or b.get("name", "")}
-                             for b in items if isinstance(b, dict)]}
-            save_json("oddspapi_books.json", cache)
-        except Exception as e:  # noqa: BLE001
-            log(f"OddsPapi Buchmacher-Liste fehlgeschlagen: {e}")
-            if not cache.get("all"):
-                return {}
-    chosen = {}
-    for brand in WANTED:
-        cands = [b for b in cache["all"] if b["slug"] and brand in str(b["slug"]).lower().replace(".", "")]
-        de = [b for b in cands if re.search(r"(^|[^a-z])de($|[^a-z])|\.de\b|_de\b|-de\b", str(b["slug"]).lower() + " " + str(b["name"]).lower())]
-        pick = (de or [b for b in cands if str(b["slug"]).lower().replace(".", "") == brand] or cands[:1])
-        if pick:
-            chosen[pick[0]["slug"]] = brand
-    return chosen
+def participants():
+    """Teilnehmer-ID → Teamname (einmal holen, dann zwischenspeichern; neue IDs lösen einen neuen Abruf aus)."""
+    cache = load_json("oddspapi_participants.json", {})
+    return cache
 
 
-def markets():
-    """Marktdefinitionen Basketball: marketId → (Typ, Linie, Zeitraum, {outcomeId: Name})."""
-    cache = load_json("oddspapi_markets.json", {})
-    if not cache.get("markets"):
-        try:
-            data = _get("markets", {"sportId": SPORT_BASKETBALL})
-            items = data if isinstance(data, list) else data.get("markets", data.get("data", []))
-            cache = {"markets": {str(m["marketId"]): {"type": m.get("marketType"), "line": m.get("handicap"),
-                                                      "period": m.get("period"), "name": m.get("marketName"),
-                                                      "prop": m.get("playerProp"),
-                                                      "outcomes": {str(o["outcomeId"]): o.get("outcomeName")
-                                                                   for o in m.get("outcomes", [])}}
-                                 for m in items if isinstance(m, dict) and "marketId" in m}}
-            save_json("oddspapi_markets.json", cache)
-        except Exception as e:  # noqa: BLE001
-            log(f"OddsPapi Marktliste fehlgeschlagen: {e}")
-            return {}
-    return cache["markets"]
-
-
-def _participants(fx):
-    ps = fx.get("participants") or {}
-    if isinstance(ps, dict):
-        h = ps.get("participant1Name") or (ps.get("1") or {}).get("name") or (ps.get("home") or {}).get("name")
-        a = ps.get("participant2Name") or (ps.get("2") or {}).get("name") or (ps.get("away") or {}).get("name")
+def _refresh_participants():
+    try:
+        data = _get("participants", sportId=SPORT_BASKETBALL)
+    except Exception as e:  # noqa: BLE001
+        log(f"OddsPapi Teilnehmerliste fehlgeschlagen: {e}")
+        return load_json("oddspapi_participants.json", {})
+    items = data if isinstance(data, list) else data.get("participants", data.get("data", data))
+    out = {}
+    if isinstance(items, dict):                       # Form {id: name}
+        out = {str(k): (v if isinstance(v, str) else v.get("participantName") or v.get("name")) for k, v in items.items()}
     else:
-        h = (ps[0] or {}).get("name") if ps else None
-        a = (ps[1] or {}).get("name") if len(ps) > 1 else None
-    return h or fx.get("participant1Name"), a or fx.get("participant2Name")
-
-
-def _full_game(m):
-    per = str(m.get("period") or "").lower()
-    name = str(m.get("name") or "").lower()
-    return (per in ("", "result", "ft", "fulltime", "full time", "match", "0", "game", "fullgame", "full_game")
-            or "incl. overtime" in name or "incl overtime" in name) and not m.get("prop")
-
-
-def to_events(fixtures, mk, books):
-    """OddsPapi-Spiele → Format von The Odds API (h2h / spreads / totals je Buchmacher)."""
-    out = []
-    for fx in fixtures:
-        home, away = _participants(fx)
-        if not home or not away:
-            continue
-        rot = {}
-        bms = []
-        for slug, quotes in (fx.get("odds") or {}).items():
-            if slug not in books:
-                continue
-            rotated = ((fx.get("bookmakers") or {}).get(slug) or {}).get("participantsRotated")
-            by_market = {}
-            for q in (quotes.values() if isinstance(quotes, dict) else quotes):
-                if not q.get("active", True) or q.get("marketActive") is False or not q.get("price") or q.get("playerId") not in (None, 0, "0"):
-                    continue
-                m = mk.get(str(q.get("marketId")))
-                if not m or not _full_game(m):
-                    continue
-                by_market.setdefault(str(q["marketId"]), {})[str(q["outcomeId"])] = (float(q["price"]), bool(q.get("mainLine")))
-            h2h, spreads, totals = [], [], []
-            for mid, outs in by_market.items():
-                m = mk[mid]
-                ids = sorted(m["outcomes"], key=int)
-                if len(ids) != 2 or not all(i in outs for i in ids):
-                    continue
-                o1, o2 = outs[ids[0]][0], outs[ids[1]][0]
-                main = outs[ids[0]][1] or outs[ids[1]][1]
-                t = str(m["type"] or "").lower()
-                first_home = not rotated
-                if t in ("moneyline", "12", "winner"):
-                    h2h = [{"name": home, "price": o1 if first_home else o2}, {"name": away, "price": o2 if first_home else o1}]
-                elif t in ("spreads", "handicap", "asian handicap") and main and m["line"] is not None:
-                    L = float(m["line"])
-                    hp, ap = (o1, o2) if first_home else (o2, o1)
-                    spreads = [{"name": home, "price": hp, "point": L if first_home else -L},
-                               {"name": away, "price": ap, "point": -L if first_home else L}]
-                elif t in ("totals", "total", "over/under") and main and m["line"] is not None:
-                    n1 = str(m["outcomes"][ids[0]] or "").lower()
-                    over, under = (o1, o2) if n1.startswith("o") or "over" in n1 else (o2, o1)
-                    totals = [{"name": "Over", "price": over, "point": float(m["line"])},
-                              {"name": "Under", "price": under, "point": float(m["line"])}]
-            markets_ = [{"key": k, "outcomes": v} for k, v in (("h2h", h2h), ("spreads", spreads), ("totals", totals)) if v]
-            if markets_:
-                bms.append({"key": "op_" + books[slug], "title": books[slug], "markets": markets_})
-        st = fx.get("startTime")
-        if isinstance(st, (int, float)):
-            from datetime import datetime, timezone
-            st = datetime.fromtimestamp(st / 1000 if st > 1e11 else st, tz=timezone.utc).isoformat().replace("+00:00", "Z")
-        out.append({"home_team": home, "away_team": away, "commence_time": st, "bookmakers": bms})
+        for p in items:
+            if isinstance(p, dict):
+                pid = p.get("participantId") or p.get("id")
+                name = p.get("participantName") or p.get("name")
+                if pid and name:
+                    out[str(pid)] = name
+    from .nba import TEAMS, canon
+    out = {k: canon(v) for k, v in out.items() if canon(v) in TEAMS}   # nur NBA-Teams behalten
+    save_json("oddspapi_participants.json", out)
+    log(f"OddsPapi Teilnehmerliste: {len(out)} NBA-Teams")
     return out
 
 
-def nba_events():
+def markets():
+    """Marktdefinitionen Basketball (ganzes Spiel inkl. Verlängerung): marketId → Typ, Linie, Ausgänge."""
+    cache = load_json("oddspapi_markets.json", {})
+    if cache.get("markets"):
+        return cache["markets"]
+    try:
+        data = _get("markets", sportId=SPORT_BASKETBALL)
+    except Exception as e:  # noqa: BLE001
+        log(f"OddsPapi Marktliste fehlgeschlagen: {e}")
+        return {}
+    items = data if isinstance(data, list) else data.get("markets", data.get("data", []))
+    mk = {}
+    for m in items:
+        if not isinstance(m, dict) or m.get("playerProp") or str(m.get("period")) != "result":
+            continue
+        t = str(m.get("marketType") or "").lower()
+        if t not in ("moneyline", "spreads", "spread", "handicap", "totals"):
+            continue
+        mk[str(m["marketId"])] = {"type": t, "line": m.get("handicap"), "name": m.get("marketName"),
+                                  "outcomes": {str(o["outcomeId"]): str(o.get("outcomeName")) for o in m.get("outcomes", [])}}
+    save_json("oddspapi_markets.json", {"markets": mk})
+    log(f"OddsPapi Marktliste: {len(mk)} Märkte (Sieg, Handicap, Gesamtpunkte)")
+    return mk
+
+
+def _book_markets(bo, mk, p1_is_home, home, away):
+    """Ein Buchmacher-Eintrag einer Partie → h2h/spreads/totals im Format von The Odds API (nur Hauptlinien)."""
+    h2h, spreads, totals = [], [], []
+    for mid, m in (bo.get("markets") or {}).items():
+        d = mk.get(str(mid))
+        if not d or m.get("marketActive") is False:
+            continue
+        prices, main = {}, False
+        for oid, o in (m.get("outcomes") or {}).items():
+            pl = ((o.get("players") or {}).get("0")) or {}
+            if pl.get("active") is False or not pl.get("price"):
+                continue
+            prices[d["outcomes"].get(str(oid), str(oid))] = float(pl["price"])
+            main = main or bool(pl.get("mainLine"))
+        if len(prices) != 2:
+            continue
+        if d["type"] == "moneyline" and {"1", "2"} <= set(prices):
+            ph, pa = (prices["1"], prices["2"]) if p1_is_home else (prices["2"], prices["1"])
+            h2h = [{"name": home, "price": ph}, {"name": away, "price": pa}]
+        elif d["type"] in ("spreads", "spread", "handicap") and main and {"1", "2"} <= set(prices) and d["line"] is not None:
+            L = float(d["line"])                                 # Linie gilt für Teilnehmer 1
+            if p1_is_home:
+                spreads = [{"name": home, "price": prices["1"], "point": L}, {"name": away, "price": prices["2"], "point": -L}]
+            else:
+                spreads = [{"name": home, "price": prices["2"], "point": -L}, {"name": away, "price": prices["1"], "point": L}]
+        elif d["type"] == "totals" and main and {"Over", "Under"} <= set(prices) and d["line"] is not None:
+            totals = [{"name": "Over", "price": prices["Over"], "point": float(d["line"])},
+                      {"name": "Under", "price": prices["Under"], "point": float(d["line"])}]
+    return [{"key": k, "outcomes": v} for k, v in (("h2h", h2h), ("spreads", spreads), ("totals", totals)) if v]
+
+
+def attach(events):
+    """Holt bet365.de und bwin.de für alle NBA-Spiele und hängt sie an die Spiele von The Odds API."""
     if not _key():
         log("Kein ODDSPAPI_KEY gesetzt – OddsPapi aus.")
-        return []
-    books = bookmakers()
+        return events
+    if not events:
+        return events
     mk = markets()
-    if not books or not mk:
-        return []
-    try:
-        data = _get("fixtures/odds/main", {"tournamentId": NBA_TOURNAMENT, "bookmakers": ",".join(books)})
-    except Exception as e:  # noqa: BLE001
-        log(f"OddsPapi Quoten fehlgeschlagen: {e}")
-        return []
-    fixtures = data if isinstance(data, list) else data.get("data", [])
-    if fixtures and not load_json("debug_oddspapi.json", None):
-        save_json("debug_oddspapi.json", {"books": books, "sample": fixtures[0]})   # einmalig zur Kontrolle
-    evs = to_events(fixtures, mk, books)
-    n_b = sum(len(e["bookmakers"]) for e in evs)
-    log(f"OddsPapi: {len(evs)} Spiele, {n_b} Buchmacher-Einträge ({', '.join(sorted(set(books.values())))}), "
-        f"{USED['requests']} Abfragen")
-    return evs
-
-
-def merge(events, extra):
-    """Hängt die OddsPapi-Buchmacher an die passenden Spiele von The Odds API (gleiche Teams, ±12 Stunden)."""
+    if not mk:
+        return events
+    names = participants()
     from .nba import canon
-    n = 0
+    by_teams = {}
     for e in events:
-        for x in extra:
-            if canon(x["home_team"]) == canon(e["home_team"]) and canon(x["away_team"]) == canon(e["away_team"]):
-                try:
-                    if abs((parse_time(x["commence_time"]) - parse_time(e["commence_time"])).total_seconds()) > 12 * 3600:
-                        continue
-                except Exception:  # noqa: BLE001
-                    pass
-                have = {b["key"] for b in e.get("bookmakers", [])}
-                for b in x["bookmakers"]:
-                    if b["key"] not in have:
-                        e.setdefault("bookmakers", []).append(_rename(b))
-                n += 1
-                break
-    log(f"OddsPapi: {n} von {len(events)} Spielen zugeordnet")
+        by_teams[frozenset((canon(e["home_team"]), canon(e["away_team"])))] = e
+    added, lines_ok, lines_bad, refreshed = 0, 0, 0, False
+    for slug, key in BOOKS.items():
+        try:
+            data = _get("odds-by-tournaments", tournamentIds=NBA_TOURNAMENT, bookmaker=slug, oddsFormat="decimal")
+        except Exception as e:  # noqa: BLE001
+            log(f"OddsPapi {slug} fehlgeschlagen: {e}")
+            continue
+        fixtures = data if isinstance(data, list) else data.get("data", [])
+        missing = {str(f.get(k)) for f in fixtures for k in ("participant1Id", "participant2Id")} - set(names)
+        if missing and not refreshed:
+            names, refreshed = _refresh_participants(), True
+        for fx in fixtures:
+            p1, p2 = names.get(str(fx.get("participant1Id"))), names.get(str(fx.get("participant2Id")))
+            e = by_teams.get(frozenset((p1, p2))) if p1 and p2 else None
+            bo = (fx.get("bookmakerOdds") or {}).get(slug)
+            if not e or not bo or bo.get("suspended"):
+                continue
+            try:
+                if abs((parse_time(fx["startTime"]) - parse_time(e["commence_time"])).total_seconds()) > 12 * 3600:
+                    continue
+            except Exception:  # noqa: BLE001
+                pass
+            home, away = canon(e["home_team"]), canon(e["away_team"])
+            mkts = _book_markets(bo, mk, p1 == home, e["home_team"], e["away_team"])
+            if not mkts:
+                continue
+            # Plausibilität: Handicap-Linie wie bei den anderen Buchmachern?
+            sp = next((m for m in mkts if m["key"] == "spreads"), None)
+            ref = next((o.get("point") for b in e.get("bookmakers", []) for m in b.get("markets", [])
+                        if m["key"] == "spreads" for o in m["outcomes"] if o["name"] == e["home_team"]), None)
+            if sp and ref is not None:
+                mine = next(o["point"] for o in sp["outcomes"] if o["name"] == e["home_team"])
+                if abs(mine - ref) <= 3:
+                    lines_ok += 1
+                else:
+                    lines_bad += 1
+                    mkts = [m for m in mkts if m["key"] != "spreads"]   # Vorzeichen unklar → Handicap weglassen
+            e.setdefault("bookmakers", []).append({"key": "op_" + key, "title": key, "markets": mkts,
+                                                    "link": bo.get("fixturePath")})
+            added += 1
+    log(f"OddsPapi: {added} Buchmacher-Einträge an {len(events)} Spiele gehängt (bet365.de, bwin.de) · "
+        f"Handicap-Linien plausibel {lines_ok}, verworfen {lines_bad} · {_usage()['requests']} von 250 Abfragen diesen Monat")
     return events
-
-
-def _rename(b):
-    from .nba import canon
-    for m in b["markets"]:
-        for o in m["outcomes"]:
-            if o["name"] not in ("Over", "Under"):
-                o["name"] = canon(o["name"])
-    return b
