@@ -416,7 +416,7 @@ def recheck(prop_games, now=None):
             by_loose.setdefault((g["id"], p["key"], p["stat"], p["side"]), []).append(p)
     out = []
     for pid, t in T.items():
-        if t.get("result") or parse_time(t["commence"]) <= now or t.get("src") != "mittags":
+        if t.get("result") or parse_time(t["commence"]) <= now or t.get("src", "mittags") != "mittags":
             continue
         p = by.get(pid)
         if p is None:
