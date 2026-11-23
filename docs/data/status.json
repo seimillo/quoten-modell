@@ -1,7 +1,7 @@
 {
- "updated": "2026-11-23T13:42:51.661319+00:00",
+ "updated": "2026-11-23T14:08:34.476899+00:00",
  "credits": {
-  "remaining": 425.0,
+  "remaining": 422.0,
   "used_now": 3.0
  },
  "stats": {
@@ -57,7 +57,7 @@
   "roi": null,
   "kellyBets": 0,
   "kellyGrowth": 0,
-  "flashBets": 0,
+  "flashBets": 1,
   "flashSettled": 0,
   "flashProfit": 0,
   "flashRoi": null,
@@ -76,18 +76,21 @@
   "Basketball-Reference Spieler 2027: 476 Einträge",
   "Basketball-Reference Spieler 2026: 661 Einträge",
   "ESPN Verletzungen: 104 Einträge",
-  "NBA-Verletzungsbericht 23.11. 08:30 ET: 74 Spieler, 10 Teams noch nicht gemeldet",
+  "NBA-Verletzungsbericht 23.11. 09:00 ET: 74 Spieler, 10 Teams noch nicht gemeldet",
   "Quoten basketball_nba: 10 Events, 10 mit Buchmacher-Quoten",
-  "OddsPapi: 1912 Spielerwetten-Linien",
-  "OddsPapi: 17 Buchmacher-Einträge an 10 Spiele gehängt (bet365.de, bwin.de) · Handicap-Linien plausibel 7, verworfen 0 · 128 von 250 Abfragen diesen Monat",
-  "Streuung: Markt 12.5, Modell nutzt 13.56",
-  "NBA: 10 Spiele bewertet, 1 mit Value-Wette",
-  "Spielerwetten: 1972 Linien in 9 Spielen simuliert, 7 ✓",
+  "OddsPapi: 1916 Spielerwetten-Linien",
+  "OddsPapi: 17 Buchmacher-Einträge an 10 Spiele gehängt (bet365.de, bwin.de) · Handicap-Linien plausibel 7, verworfen 0 · 130 von 250 Abfragen diesen Monat",
+  "Streuung: Markt 12.7, Modell nutzt 13.66",
+  "NBA: 10 Spiele bewertet, 0 mit Value-Wette",
+  "Spielerwetten: 1976 Linien in 9 Spielen simuliert, 12 ✓",
   "Trefferliste: 0 Prognosen ausgewertet",
+  "Push-Nachricht „Neue Wetten (✓ Modell, ⚡ besser als Pinnacle)“: gesendet",
+  "Spielerwetten lernen: 0 Spieler-Einsätze geprüft (Anpassung ab 150)",
+  "Push-Nachricht „Spielerwetten ✓“: gesendet",
   "Kalibrierung: 7 NBA-Spiele ausgewertet, 0 Werte angepasst (Anpassung ab 40 Spielen)"
  ],
  "propStats": {
-  "bets": 7,
+  "bets": 12,
   "settled": 0,
   "profit": 0,
   "roi": null,

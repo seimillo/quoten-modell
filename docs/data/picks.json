@@ -362,9 +362,9 @@
   "away": "Portland Trail Blazers",
   "a": null,
   "b": null,
-  "pModelA": 0.58,
-  "pMarketA": 0.5914,
-  "pModelRaw": 0.5156,
+  "pModelA": 0.5819,
+  "pMarketA": 0.5936,
+  "pModelRaw": 0.5155,
   "feat": {
    "team": -3.523,
    "player": 0.489,
@@ -375,26 +375,37 @@
    "travel": 0.069,
    "form": -1.053,
    "TOTraw": 228.19,
-   "pModelRaw": 0.5156,
-   "pMarket": 0.5914
+   "pModelRaw": 0.5155,
+   "pMarket": 0.5936
   },
   "bet": {
    "market": "Sieg",
    "pick": "Portland Trail Blazers",
    "odds": 2.48,
-   "ev": 0.0415,
+   "ev": 0.037,
    "line": null,
    "side": "away",
    "book": "op_bet365",
    "bookName": "bet365",
-   "value": true,
-   "stake": 0.007,
-   "evPin": 0.0046
+   "value": false,
+   "stake": 0.0,
+   "evPin": -0.0134
   },
   "result": null,
   "betResult": null,
   "score": null,
-  "flashResult": null
+  "flashResult": null,
+  "flash": {
+   "market": "Gesamtpunkte",
+   "pick": "Über 229.5",
+   "odds": 1.84,
+   "line": 229.5,
+   "side": "over",
+   "book": "op_bet365",
+   "bookName": "bet365",
+   "evPin": 0.0154,
+   "stake": 0.0046
+  }
  },
  "db2311c331296d3328d71b842167dea4": {
   "id": "db2311c331296d3328d71b842167dea4",
@@ -408,9 +419,9 @@
   "away": "Los Angeles Clippers",
   "a": null,
   "b": null,
-  "pModelA": 0.8398,
+  "pModelA": 0.8395,
   "pMarketA": 0.8433,
-  "pModelRaw": 0.8202,
+  "pModelRaw": 0.8184,
   "feat": {
    "team": 7.918,
    "player": 11.331,
@@ -421,7 +432,7 @@
    "travel": 0.182,
    "form": 1.564,
    "TOTraw": 228.34,
-   "pModelRaw": 0.8202,
+   "pModelRaw": 0.8184,
    "pMarket": 0.8433
   },
   "bet": {
@@ -454,9 +465,9 @@
   "away": "Oklahoma City Thunder",
   "a": null,
   "b": null,
-  "pModelA": 0.3721,
+  "pModelA": 0.3722,
   "pMarketA": 0.3646,
-  "pModelRaw": 0.4144,
+  "pModelRaw": 0.4151,
   "feat": {
    "team": -11.222,
    "player": -4.672,
@@ -467,14 +478,14 @@
    "travel": 0.614,
    "form": 1.669,
    "TOTraw": 222.71,
-   "pModelRaw": 0.4144,
+   "pModelRaw": 0.4151,
    "pMarket": 0.3646
   },
   "bet": {
    "market": "Sieg",
    "pick": "Indiana Pacers",
    "odds": 2.75,
-   "ev": 0.0232,
+   "ev": 0.0234,
    "line": null,
    "side": "home",
    "book": "sport888",
@@ -500,9 +511,9 @@
   "away": "Cleveland Cavaliers",
   "a": null,
   "b": null,
-  "pModelA": 0.2549,
-  "pMarketA": 0.2481,
-  "pModelRaw": 0.293,
+  "pModelA": 0.2556,
+  "pMarketA": 0.2488,
+  "pModelRaw": 0.2943,
   "feat": {
    "team": -7.32,
    "player": -7.155,
@@ -513,21 +524,21 @@
    "travel": 0.0,
    "form": 1.719,
    "TOTraw": 244.4,
-   "pModelRaw": 0.293,
-   "pMarket": 0.2481
+   "pModelRaw": 0.2943,
+   "pMarket": 0.2488
   },
   "bet": {
    "market": "Gesamtpunkte",
    "pick": "Über 240.5",
    "odds": 1.91,
-   "ev": -0.0219,
+   "ev": -0.0153,
    "line": 240.5,
    "side": "over",
    "book": "sport888",
    "bookName": "888sport",
    "value": false,
    "stake": 0.0,
-   "evPin": -0.045
+   "evPin": -0.0372
   },
   "result": null,
   "betResult": null,
@@ -546,9 +557,9 @@
   "away": "Phoenix Suns",
   "a": null,
   "b": null,
-  "pModelA": 0.3967,
-  "pMarketA": 0.409,
-  "pModelRaw": 0.3269,
+  "pModelA": 0.3972,
+  "pMarketA": 0.4094,
+  "pModelRaw": 0.3281,
   "feat": {
    "team": -5.847,
    "player": -3.534,
@@ -559,21 +570,21 @@
    "travel": -0.405,
    "form": -6.468,
    "TOTraw": 232.35,
-   "pModelRaw": 0.3269,
-   "pMarket": 0.409
+   "pModelRaw": 0.3281,
+   "pMarket": 0.4094
   },
   "bet": {
    "market": "Sieg",
    "pick": "Phoenix Suns",
    "odds": 1.67,
-   "ev": 0.0075,
+   "ev": 0.0067,
    "line": null,
    "side": "away",
-   "book": "sport888",
-   "bookName": "888sport",
+   "book": "op_bwin",
+   "bookName": "bwin",
    "value": false,
    "stake": 0.0,
-   "evPin": -0.0065
+   "evPin": -0.0126
   },
   "result": null,
   "betResult": null,
@@ -592,9 +603,9 @@
   "away": "Utah Jazz",
   "a": null,
   "b": null,
-  "pModelA": 0.8648,
-  "pMarketA": 0.8731,
-  "pModelRaw": 0.8178,
+  "pModelA": 0.865,
+  "pMarketA": 0.8737,
+  "pModelRaw": 0.816,
   "feat": {
    "team": 7.002,
    "player": 8.288,
@@ -605,21 +616,21 @@
    "travel": 0.935,
    "form": -0.077,
    "TOTraw": 230.0,
-   "pModelRaw": 0.8178,
-   "pMarket": 0.8731
+   "pModelRaw": 0.816,
+   "pMarket": 0.8737
   },
   "bet": {
    "market": "Sieg",
    "pick": "Utah Jazz",
-   "odds": 7.5,
-   "ev": 0.0137,
+   "odds": 8.0,
+   "ev": 0.0796,
    "line": null,
    "side": "away",
    "book": "betway",
    "bookName": "Betway",
    "value": false,
    "stake": 0.0,
-   "evPin": -0.1096
+   "evPin": -0.0591
   },
   "result": null,
   "betResult": null,
@@ -638,9 +649,9 @@
   "away": "San Antonio Spurs",
   "a": null,
   "b": null,
-  "pModelA": 0.1514,
-  "pMarketA": 0.1415,
-  "pModelRaw": 0.2074,
+  "pModelA": 0.1522,
+  "pMarketA": 0.1422,
+  "pModelRaw": 0.2091,
   "feat": {
    "team": -15.911,
    "player": -11.605,
@@ -651,21 +662,21 @@
    "travel": 1.174,
    "form": -1.346,
    "TOTraw": 224.53,
-   "pModelRaw": 0.2074,
-   "pMarket": 0.1415
+   "pModelRaw": 0.2091,
+   "pMarket": 0.1422
   },
   "bet": {
    "market": "Sieg",
    "pick": "San Antonio Spurs",
    "odds": 1.2,
-   "ev": 0.0183,
+   "ev": 0.0173,
    "line": null,
    "side": "away",
    "book": "op_bwin",
    "bookName": "bwin",
    "value": false,
    "stake": 0.0,
-   "evPin": -0.0227
+   "evPin": -0.0243
   },
   "result": null,
   "betResult": null,
@@ -684,9 +695,9 @@
   "away": "Brooklyn Nets",
   "a": null,
   "b": null,
-  "pModelA": 0.8319,
-  "pMarketA": 0.8363,
-  "pModelRaw": 0.8069,
+  "pModelA": 0.8315,
+  "pMarketA": 0.8362,
+  "pModelRaw": 0.8052,
   "feat": {
    "team": 14.101,
    "player": 8.95,
@@ -697,21 +708,21 @@
    "travel": 0.0,
    "form": 0.398,
    "TOTraw": 223.19,
-   "pModelRaw": 0.8069,
-   "pMarket": 0.8363
+   "pModelRaw": 0.8052,
+   "pMarket": 0.8362
   },
   "bet": {
    "market": "Gesamtpunkte",
    "pick": "Unter 224.5",
-   "odds": 1.95,
-   "ev": 0.0139,
+   "odds": 1.91,
+   "ev": -0.0176,
    "line": 224.5,
    "side": "under",
    "book": "sport888",
    "bookName": "888sport",
    "value": false,
    "stake": 0.0,
-   "evPin": 0.0114
+   "evPin": -0.022
   },
   "result": null,
   "betResult": null,
@@ -730,9 +741,9 @@
   "away": "Memphis Grizzlies",
   "a": null,
   "b": null,
-  "pModelA": 0.4067,
-  "pMarketA": 0.4119,
-  "pModelRaw": 0.3776,
+  "pModelA": 0.4088,
+  "pMarketA": 0.4141,
+  "pModelRaw": 0.3784,
   "feat": {
    "team": -4.368,
    "player": -6.374,
@@ -743,21 +754,21 @@
    "travel": 0.756,
    "form": -6.66,
    "TOTraw": 217.55,
-   "pModelRaw": 0.3776,
-   "pMarket": 0.4119
+   "pModelRaw": 0.3784,
+   "pMarket": 0.4141
   },
   "bet": {
    "market": "Sieg",
-   "pick": "Charlotte Hornets",
-   "odds": 2.43,
-   "ev": -0.0117,
+   "pick": "Memphis Grizzlies",
+   "odds": 1.64,
+   "ev": -0.0304,
    "line": null,
-   "side": "home",
-   "book": "leovegas_se",
-   "bookName": "LeoVegas",
+   "side": "away",
+   "book": "winamax_de",
+   "bookName": "Winamax",
    "value": false,
    "stake": 0.0,
-   "evPin": -0.0068
+   "evPin": -0.0377
   },
   "result": null,
   "betResult": null,
@@ -776,9 +787,9 @@
   "away": "Milwaukee Bucks",
   "a": null,
   "b": null,
-  "pModelA": 0.7911,
-  "pMarketA": 0.7975,
-  "pModelRaw": 0.7548,
+  "pModelA": 0.7892,
+  "pMarketA": 0.7955,
+  "pModelRaw": 0.7532,
   "feat": {
    "team": 7.959,
    "player": 6.749,
@@ -789,21 +800,21 @@
    "travel": 0.271,
    "form": -1.112,
    "TOTraw": 224.79,
-   "pModelRaw": 0.7548,
-   "pMarket": 0.7975
+   "pModelRaw": 0.7532,
+   "pMarket": 0.7955
   },
   "bet": {
    "market": "Gesamtpunkte",
    "pick": "Über 222.5",
    "odds": 1.91,
-   "ev": -0.0035,
+   "ev": 0.0007,
    "line": 222.5,
    "side": "over",
    "book": "sport888",
    "bookName": "888sport",
    "value": false,
    "stake": 0.0,
-   "evPin": -0.0122
+   "evPin": -0.0072
   },
   "result": null,
   "betResult": null,
