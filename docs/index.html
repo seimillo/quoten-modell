@@ -53,7 +53,6 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
   <div class="brand">📈 NBA-Quoten-Modell</div>
   <nav>
     <a href="#start" data-nav="start">Übersicht</a>
-    <a href="#nba" data-nav="nba">NBA</a>
     <a href="#geld" data-nav="geld">Großes Geld</a>
     <a href="#treffer" data-nav="treffer">Treffer</a>
     <a href="#meine" data-nav="meine">Meine Wetten</a>
@@ -65,15 +64,14 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
   <h1>Wo sieht das Modell es anders als der Markt?</h1>
   <p class="muted" id="stand">Lade Daten …</p>
   <div class="kpis" id="kpis"></div>
-  <div class="card"><h2>Höchste Erwartungswerte</h2><div id="top"></div>
+  <div class="card"><h2>Alle Spiele</h2><div id="top"></div>
   <p class="hint">Erwartungswert (EV) = Chance × Quote − 1 zur besten Quote aller Buchmacher mit deutscher Lizenz (Tipico, Winamax, Betano, Betway, LeoVegas, 888sport). ✓ = strenge Auswahl: EV ≥ 3 % und auch gegenüber Pinnacle nicht schlechter. Die Chance ist eine Mischung aus Modell und Markt (Markt-Anker), darum sind die Werte bewusst vorsichtig.</p></div>
 </section>
-<section data-view="nba"><div class="card"><h2>NBA</h2><div id="nbaList"></div></div></section>
 <section data-view="geld"><div class="card"><h2>Großes Geld auf Polymarket</h2>
   <p class="hint">Einzelne Einsätze ab 1.000 $ in den letzten 48 Stunden auf Polymarket, plus die Kalshi-Preise. Prognosemärkte haben kleine Margen – dort handeln oft gut informierte Leute. Sie zählen im Markt-Anker zur Hälfte.</p>
   <div id="whales"></div></div></section>
 <section data-view="meine"><div class="card"><h2>Meine Wetten</h2>
-  <p class="hint">Trag hier ein, was du wirklich gesetzt hast – im Reiter NBA bei jedem Spiel unter „Wetten“. Ausgewertet wird automatisch nach dem Spiel. Gespeichert wird nur auf diesem Gerät im Browser; mit „Sichern“ und „Laden“ kannst du die Liste aufs andere Gerät mitnehmen.</p>
+  <p class="hint">Trag hier ein, was du wirklich gesetzt hast – in der Übersicht bei jedem Spiel unter „Wetten“ (Spiel antippen). Ausgewertet wird automatisch nach dem Spiel. Gespeichert wird nur auf diesem Gerät im Browser; mit „Sichern“ und „Laden“ kannst du die Liste aufs andere Gerät mitnehmen.</p>
   <div id="mine"></div>
   <div class="form"><button class="btn ghost" id="exp">Sichern (Datei)</button><label class="btn ghost">Laden<input type="file" id="imp" accept=".json,application/json" hidden></label></div>
 </div></section>
@@ -164,9 +162,8 @@ function nbaCard(g){
       ${g.schedule?`<h3>Spielplan</h3><p class="small">${["away","home"].map(sd=>{const x=g.schedule[sd];return `${esc(sd==="away"?g.abbrA:g.abbrH)}: ${x.rest} Ruhetag(e)${x.dens?` · ${x.dens>1?"4 in 6 & 3 in 4":"3 in 4 / 4 in 6"}`:""}${x.km?` · ${f(x.km,0)} km Reise (gewichtet)`:""}`}).join("<br>")}</p>`:""}
       <h3>Verletzungen <span class="small">(${g.injuryReport?`offizieller NBA-Bericht ${esc(g.injuryReport)}, sonst ESPN`:"ESPN"})</span></h3><p class="small">${esc(g.abbrA)}: ${inj("away")}<br>${esc(g.abbrH)}: ${inj("home")}</p></div></details>`;
 }
-$("nbaList").innerHTML = nba.length ? nba.map(nbaCard).join("") : `<p class="hint">Gerade keine NBA-Spiele mit Quoten.</p>`;
 const all = [...nba.map(g=>({...g, html:nbaCard(g)}))].sort((a,b)=>(b.best.value?1:0)-(a.best.value?1:0) || b.best.ev-a.best.ev);
-$("top").innerHTML = all.length ? all.slice(0,8).map(x=>x.html).join("") : `<p class="hint">Noch keine Daten.</p>`;
+$("top").innerHTML = all.length ? all.map(x=>x.html).join("") : `<p class="hint">Gerade keine NBA-Spiele mit Quoten.</p>`;
 
 const wl = [...nba.map(g=>({lbl:`${g.away} @ ${g.home}`, nA:g.away, nB:g.home, w:g.whales, pm:g.polymarket, k:g.kalshi}))]
   .filter(x=>(x.w && x.w.trades && x.w.trades.length) || x.k || x.pm);
@@ -265,7 +262,7 @@ $("imp").addEventListener("change", async e=>{
 });
 renderMine();
 
-const VIEWS=["start","nba","geld","treffer","meine","methode"];
+const VIEWS=["start","geld","treffer","meine","methode"];
 function show(){ const h=location.hash.slice(1), v=VIEWS.includes(h)?h:"start";
   document.querySelectorAll("[data-view]").forEach(e=>e.hidden=e.dataset.view!==v);
   document.querySelectorAll("[data-nav]").forEach(a=>a.classList.toggle("on",a.dataset.nav===v)); }

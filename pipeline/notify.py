@@ -16,7 +16,7 @@ def send(title, lines, tags=("basketball",), priority=3):
         return False
     try:
         r = requests.post("https://ntfy.sh/", json={"topic": TOPIC, "title": title, "message": "\n".join(lines),
-                                                    "tags": list(tags), "priority": priority, "click": SITE + "#nba"},
+                                                    "tags": list(tags), "priority": priority, "click": SITE},
                           timeout=15)
         log(f"Push-Nachricht „{title}“: {'gesendet' if r.ok else 'Fehler ' + str(r.status_code)}")
         return r.ok
