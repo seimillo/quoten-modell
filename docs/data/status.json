@@ -1,7 +1,7 @@
 {
- "updated": "2026-11-23T11:45:24.233376+00:00",
+ "updated": "2026-11-23T11:58:12.865568+00:00",
  "credits": {
-  "remaining": 458.0,
+  "remaining": 452.0,
   "used_now": 3.0
  },
  "stats": {
@@ -72,6 +72,7 @@
   "Quoten basketball_nba: 10 Events, 10 mit Buchmacher-Quoten",
   "NBA: 10 Spiele bewertet, 1 mit Value-Wette",
   "Trefferliste: 0 Prognosen ausgewertet",
+  "Push-Nachricht „Neue ✓-Wetten“: gesendet",
   "Kalibrierung: 7 NBA-Spiele ausgewertet, 0 Werte angepasst (Anpassung ab 40 Spielen)"
  ],
  "closeUpdated": "2026-11-22T23:16:37.761556+00:00",
@@ -92,24 +93,19 @@
  ],
  "params": {
   "nba": {
-   "team_scale": 0.5,
-   "player_scale": 0.5,
-   "hca": 2.2,
-   "rest_scale": 1.0,
+   "team_scale": 0.5114,
+   "player_scale": 0.5114,
+   "hca": 1.4807,
+   "rest_scale": 0.6994,
    "inj_scale": 0.5,
-   "sched_scale": 1.0,
+   "sched_scale": 0.7021,
    "travel_scale": 0.3,
    "form_scale": 0.15,
-   "sd_margin": 12.5,
+   "sd_margin": 14.6358,
    "sd_total": 18.0,
    "total_bias": 0.0,
    "conf": 0.3
   },
   "n": {}
- },
- "backtestLog": [
-  "ESPN-Spielplan: 4 Tage abgefragt, 262 Spiele in der Saison",
-  "Rücktest: 1337 Spiele · Test-Brier Basis 0.1951 → voll 0.1946 · Trefferquote 70.7%",
-  "Rücktest: 2 Startwerte gesetzt"
- ]
+ }
 }
