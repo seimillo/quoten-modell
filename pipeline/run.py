@@ -156,6 +156,12 @@ def main():
         old = load_json("status.json", {})
         save_json("status.json", {**old, "histLog": LOG[-15:]})
         return
+    if mode == "props_survey":
+        from .props_survey import main as survey
+        survey()
+        old = load_json("status.json", {})
+        save_json("status.json", {**old, "surveyLog": LOG[-15:]})
+        return
     if mode == "discover":
         from .oddspapi_discover import main as discover
         return discover()
