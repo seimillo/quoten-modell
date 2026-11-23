@@ -57,6 +57,11 @@ def notify_value_bets(nba, title="Neue Wetten (✓ Modell, ⚡ besser als Pinnac
                 lines.append(_line(g, b))
                 keys.append((_key(g, b), g["commence"]))
         fl = g.get("flash")
+        if fl and any(b.get("value") and b["pick"] == fl["pick"] for b in g["bets"]):
+            if lines and lines[-1].find(fl["pick"]) >= 0 and "⚡" not in lines[-1]:
+                lines[-1] = "⚡" + lines[-1] + " · auch besser als Pinnacle"
+            keys.append(("⚡" + _key(g, fl), g["commence"]))      # dieselbe Wette nicht doppelt melden
+            continue
         if fl and "⚡" + _key(g, fl) not in sent:
             lines.append(f"⚡ {g['abbrA']} @ {g['abbrH']} {_time(g['commence'])} Uhr: {fl['pick']} @ {fl['odds']:.2f} "
                          f"{fl.get('bookName', '')} · {fl['evPin'] * 100:+.1f} % über Pinnacle · Einsatz {fl['stake'] * 100:.1f} %")
