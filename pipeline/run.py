@@ -121,6 +121,11 @@ def nba_block(now, params, kalshi_nba, pm_nba, history, recent_min=None):
     cur_pl, prior_pl = S.bbref_players(season), S.bbref_players(season - 1)
     injuries, stamp = merged_injuries(now, {k for k, _ in list(cur_pl) + list(prior_pl)})
     events = S.odds_events("basketball_nba", "h2h,spreads,totals")
+    try:
+        from . import oddspapi
+        oddspapi.merge(events, oddspapi.nba_events())
+    except Exception as e:  # noqa: BLE001
+        log(f"OddsPapi fehlgeschlagen: {e}")
     upcoming = [e for e in events if parse_time(e["commence_time"]) > now]
     P = dict(params["nba"])
     msd = market_sd(upcoming)

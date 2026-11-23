@@ -19,8 +19,14 @@ SHARP = ["pinnacle", "betfair_ex_eu"]              # nur als Vergleichsmarkt, in
 # nur als UK-/SE-Version – deren Quoten können leicht von der deutschen Seite abweichen (5 % Wettsteuer).
 SOFT = ["tipico_de", "winamax_de", "betano_uk", "betway", "leovegas_se", "sport888"]
 BOOKS = ",".join(SHARP + SOFT)                     # 8 Buchmacher = Kosten wie eine Region
+# Zusätzlich über OddsPapi (deutsche Versionen, wo vorhanden) – Schlüssel „op_<Marke>“
+OP_BRANDS = {"bet365": "bet365", "bwin": "bwin", "winamax": "Winamax", "betway": "Betway", "888sport": "888sport",
+             "betano": "Betano", "tipico": "Tipico", "interwetten": "Interwetten", "leovegas": "LeoVegas"}
+SOFT = SOFT + [f"op_{k}" for k in OP_BRANDS]
+SHARP = SHARP + ["op_pinnacle"]
 BOOK_NAMES = {"tipico_de": "Tipico", "winamax_de": "Winamax", "betano_uk": "Betano", "betway": "Betway",
-              "leovegas_se": "LeoVegas", "sport888": "888sport", "pinnacle": "Pinnacle", "betfair_ex_eu": "Betfair"}
+              "leovegas_se": "LeoVegas", "sport888": "888sport", "pinnacle": "Pinnacle", "betfair_ex_eu": "Betfair",
+              **{f"op_{k}": v for k, v in OP_BRANDS.items()}, "op_pinnacle": "Pinnacle"}
 CREDITS = {"remaining": None, "used_now": 0}
 
 
