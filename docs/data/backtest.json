@@ -68,5 +68,23 @@
   "rmseNaive": 20.38,
   "n": 372,
   "sd": 19.19
+ },
+ "odds": {
+  "date": "2026-11-23",
+  "games": 1,
+  "decisionHours": 10,
+  "brier": {
+   "model": 0.0354,
+   "mix": 0.0262,
+   "marketDecision": 0.0227,
+   "pinnacleClose": 0.027
+  },
+  "bets": 0,
+  "profit": 0,
+  "roi": null,
+  "clvAvg": null,
+  "clvPos": null,
+  "list": [],
+  "requests": 7
  }
 }

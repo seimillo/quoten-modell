@@ -111,5 +111,11 @@
    "conf": 0.3
   },
   "n": {}
- }
+ },
+ "histLog": [
+  "Historische Quoten: 236 NBA-Spiele bei OddsPapi gefunden",
+  "Historische Quoten: 100 Spiele zugeordnet, frage höchstens 100 ab",
+  "Historische Quoten abgebrochen: exceptions must derive from BaseException",
+  "Historische Quoten: 1 Spiele · 0 ✓-Wetten · ROI None · CLV None"
+ ]
 }
