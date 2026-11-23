@@ -147,6 +147,9 @@ def main():
         return main_close()
     if mode == "late":
         return main_late()
+    if mode == "discover":
+        from .oddspapi_discover import main as discover
+        return discover()
     if mode == "backtest":
         from .backtest import run_backtest
         update_history(now_utc())

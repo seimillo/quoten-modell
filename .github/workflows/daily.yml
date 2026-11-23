@@ -38,6 +38,7 @@ jobs:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           ODDSPAPI_KEY: ${{ secrets.ODDSPAPI_KEY }}
+          ODDSPAPI_KEY: ${{ secrets.ODDSPAPI_KEY }}
           RUN_MODE: ${{ inputs.mode || (github.event.schedule == '37 22 * * *' && 'close' || github.event.schedule == '47 2 * * *' && 'late' || 'full') }}
         run: python -m pipeline.run
       - name: Ergebnisse speichern
@@ -57,4 +58,5 @@ jobs:
             "https://ntfy.sh/${NTFY_TOPIC:-quoten-b6a776bab3f5}"
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          ODDSPAPI_KEY: ${{ secrets.ODDSPAPI_KEY }}
           RUN_MODE: ${{ inputs.mode || github.event.schedule }}
