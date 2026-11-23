@@ -4,7 +4,7 @@ Pro Spieler:
 - Minuten: letzte 10 Spiele (70 %) und Saison (30 %), Ausfall-Wahrscheinlichkeit aus dem Verletzungsbericht.
   Die Minuten aller verfügbaren Spieler werden auf 240 pro Team hochgerechnet – fehlt ein Starter,
   bekommen die anderen seine Minuten.
-- Werte pro Minute (Punkte, Rebounds, Assists, Dreier): Saison, zur Liga-Mitte gezogen (150 Minuten).
+- Werte pro Minute (Punkte, Rebounds, Assists, Dreier): Saison, leicht zur Liga-Mitte gezogen (40 Minuten).
 - Team-Rahmen aus dem Spielmodell: erwartete Team-Punkte, Tempo, Punktdifferenz.
 Pro Durchlauf: Punktdifferenz und Tempo gemeinsam für beide Teams, Team-Form, Blowouts (Starter spielen
 weniger), Minuten mit Zufall, dann jeder Wert als Gamma-Poisson-Zufallszahl (mehr Streuung als Poisson).
@@ -20,7 +20,7 @@ from .nba import TEAMS
 from .sources import BOOK_NAMES, player_key
 
 N_SIM = 10000
-K_RATE = 150.0                      # Minuten, mit denen die Liga-Mitte in die Rate eingeht
+K_RATE = 40.0                       # Minuten, mit denen die Liga-Mitte in die Rate eingeht
 DISPERSION = {"pts": 7.0, "reb": 9.0, "ast": 7.0, "fg3m": 5.0}   # Gamma-Form: kleiner = mehr Streuung
 STATS = ("pts", "reb", "ast", "fg3m")
 STAT_NAME = {"pts": "Punkte", "reb": "Rebounds", "ast": "Assists", "fg3m": "Dreier"}
@@ -67,13 +67,28 @@ def roster(pstats, abbr, before, lg, injuries):
         played_recent = [g for g in recent if g[1] > 0]
         if not played_recent and not any(g[0] in last5 for g in games):
             continue                                # lange nicht gespielt und nicht gemeldet → nicht im Kader
-        m_season = sum(g[1] for g in games) / len(games)
-        m_recent = sum(g[1] for g in played_recent) / len(played_recent) if played_recent else m_season
+        # Rotationsspieler (≥ 20 Min., wenn sie spielen): Schnitt der Spiele mit Einsatz.
+        # Bankspieler: nicht eingesetzte Teamspiele zählen als 0 Minuten (sonst zu viele Teamminuten).
+        m_played = (sum(g[1] for g in played_recent) / len(played_recent)) if played_recent else \
+            sum(g[1] for g in games) / len(games)
+        m_all = sum(g[1] for g in recent) / max(1, len(dates))
+        all_dates = [d for d in _team_dates(pstats, abbr) if d < before]
+        m_season_played = sum(g[1] for g in games) / len(games)
+        m_season_all = sum(g[1] for g in games) / max(1, len(all_dates))
+        if m_played >= 20:
+            m_recent, m_season = m_played, m_season_played
+        else:
+            m_recent, m_season = m_all, m_season_all
         exp_min = 0.7 * m_recent + 0.3 * m_season
         pkey = k.split("|", 1)[1]
         p_out = out_p.get(pkey, 0.0)
-        if pkey not in out_p and dates and not any(g[0] in last5 for g in games):
-            p_out = 0.85                            # die letzten 5 Teamspiele gefehlt, aber nicht gemeldet
+        if pkey not in out_p and dates:
+            last3 = set(dates[-3:])
+            r3 = sum(1 for g in games if g[0] in last3 and g[1] > 0) / max(1, len(last3))
+            if r3 == 0:
+                p_out = 0.85                        # die letzten 3 Teamspiele gefehlt, aber nicht gemeldet
+            elif r3 < 1:
+                p_out = 0.3 * (1 - r3)
         tot_min = sum(g[1] for g in games)
         rates = {s: (sum(g[IDX[s]] for g in games) + K_RATE * lg[s]) / (tot_min + K_RATE) for s in STATS}
         rows.append({"key": pkey, "name": P["name"], "min": exp_min, "pOut": p_out, "rates": rates, "gp": len(games)})
@@ -93,7 +108,7 @@ def simulate(game, home_rows, away_rows, sd_margin, rng):
         avail = np.array([1 - r["pOut"] for r in rows])
         base_min = np.array([r["min"] for r in rows])
         exp_tot = float((base_min * avail).sum())
-        scale = min(1.25, max(0.8, 240 / exp_tot)) if exp_tot > 0 else 1.0
+        scale = min(1.3, max(0.7, 240 / exp_tot)) if exp_tot > 0 else 1.0
         exp_min = np.minimum(base_min * scale, 42)
         exp_pts = float((exp_min * avail * np.array([r["rates"]["pts"] for r in rows])).sum())
         f_pts = target / exp_pts if exp_pts > 0 else 1.0
@@ -159,7 +174,8 @@ def evaluate(games, events, pstats, injuries_by_team, sd_margin, seed=7):
         props = []
         for (k, stat, line, side), c in lines.items():
             r, team = info[k]
-            vals = sims[k][stat]
+            played = sims[k]["min"] > 0               # spielt er nicht, wird die Wette zurückgezahlt
+            vals = sims[k][stat][played] if played.any() else sims[k][stat]
             p_over = float((vals > line).mean())
             p_sim = p_over if side == "over" else 1 - p_over
             p = CONF_P * p_sim + (1 - CONF_P) * c["pMkt"]
@@ -168,7 +184,7 @@ def evaluate(games, events, pstats, injuries_by_team, sd_margin, seed=7):
                           "line": line, "side": side, "odds": c["odds"], "book": c["book"],
                           "bookName": BOOK_NAMES.get(c["book"], c["book"]), "twoSided": c["twoSided"],
                           "mean": round(float(vals.mean()), 1), "median": float(np.median(vals)),
-                          "expMin": round(float(sims[k]["min"].mean()), 1), "pOut": round(r["pOut"], 2), "gp": r["gp"],
+                          "expMin": round(float(sims[k]["min"][sims[k]["min"] > 0].mean()) if (sims[k]["min"] > 0).any() else 0.0, 1), "pOut": round(r["pOut"], 2), "gp": r["gp"],
                           "pSim": round(p_sim, 4), "pMkt": round(c["pMkt"], 4), "p": round(p, 4), "ev": round(ev, 4),
                           "evRaw": round(p_sim * c["odds"] - 1, 4)})
         # ✓: klare Fälle, eine pro Spieler, höchstens 3 pro Spiel
