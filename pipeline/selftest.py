@@ -71,6 +71,7 @@ def patch():
 
 
 def main():
+    os.environ["NO_NOTIFY"] = "1"
     tmp = tempfile.mkdtemp()
     common.DATA_DIR = tmp
     patch()

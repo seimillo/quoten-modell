@@ -178,9 +178,11 @@ def run_backtest(apply=True):
         clip = lambda k, v: round(max(B[k][0], min(B[k][1], v)), 4)
         S_ = float(beta[0])
         new = {"team_scale": clip("team_scale", S_ / 2), "player_scale": clip("player_scale", S_ / 2),
-               "hca": clip("hca", float(beta[1])), "rest_scale": clip("rest_scale", float(beta[2])),
-               "sched_scale": clip("sched_scale", float(beta[3])), "travel_scale": clip("travel_scale", float(beta[4])),
-               "form_scale": clip("form_scale", float(beta[5])), "sd_margin": clip("sd_margin", sd)}
+               "hca": clip("hca", float(beta[1])), "sd_margin": clip("sd_margin", sd)}
+        # Zusatzfaktoren nur übernehmen, wenn sie im Test wirklich geholfen haben – sonst Startwert behalten
+        for i, (k, pk) in enumerate((("rest", "rest_scale"), ("sched", "sched_scale"), ("travel", "travel_scale"),
+                                      ("form", "form_scale")), start=2):
+            new[pk] = clip(pk, float(beta[i])) if drop.get(k, 0) > 0 else START[k]
         changes = [{"sport": "NBA", "key": k, "old": P["nba"][k], "new": v, "target": v} for k, v in new.items()
                    if abs(P["nba"][k] - v) > 1e-4]
         P["nba"].update(new)

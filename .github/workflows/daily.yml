@@ -35,6 +35,7 @@ jobs:
       - name: Daten holen und Modelle rechnen
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           RUN_MODE: ${{ inputs.mode || (github.event.schedule == '37 22 * * *' && 'close' || 'full') }}
         run: python -m pipeline.run
       - name: Ergebnisse speichern
@@ -44,4 +45,5 @@ jobs:
           git add docs/data
           if git diff --cached --quiet; then echo "Keine Änderungen"; exit 0; fi
           git commit -m "Daten-Update $(date -u +'%Y-%m-%d %H:%M') UTC"
+          git pull --rebase -q || true
           git push

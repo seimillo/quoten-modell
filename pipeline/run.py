@@ -11,6 +11,7 @@ from .common import LOG, load_json, log, now_utc, parse_time, save_json
 from .nba import ALIASES, TEAMS, _et_date, canon, model_games
 
 from .params import calibrate, load_params, save_params
+from .notify import notify_changes, notify_results, notify_value_bets
 from .tracker import record_close, settle, stats, update_picks
 
 def nba_season(dt):
@@ -125,7 +126,10 @@ def main():
 
     # ---------- Trefferliste ----------
     update_picks(picks, nba)
+    open_ids = {k for k, r in picks.items() if not r.get("result")}
     settle(picks, nba_scores_from_history(picks, history, now))
+    notify_results([picks[k] for k in open_ids if picks[k].get("result")])
+    notify_value_bets(nba)
     params = calibrate(picks, params)                 # Modell lernt aus allen ausgewerteten Spielen
     save_params(params)
 
@@ -159,6 +163,7 @@ def main_close():
             g["eveningUpdate"] = now.isoformat()
             g["changed"] = bool(mb) and (mb.get("pick") != g["best"]["pick"] or bool(mb.get("value")) != bool(g["best"]["value"]))
         log(f"Abend-Update NBA: {sum(1 for g in nba if g['changed'])} Spiele mit geänderter Empfehlung")
+        notify_changes(nba)
     except Exception as e:  # noqa: BLE001
         log(f"Abend-Update NBA fehlgeschlagen: {e}")
     record_close(picks, events, params)

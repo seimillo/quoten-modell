@@ -41,6 +41,11 @@ th{font-size:.72rem;color:var(--muted);font-weight:600}
 [hidden]{display:none!important}
 footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:var(--muted)}
 .info li,.info p{font-size:.92rem}
+.form{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-top:8px}
+.form select,.form input{font:inherit;font-size:.85rem;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:inherit}
+.form select{flex:1 1 180px;min-width:0} .form input{width:80px}
+.btn{font:inherit;font-size:.85rem;padding:6px 12px;border-radius:8px;border:1px solid var(--accent);background:var(--accent);color:#fff;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--accent)} .btn.x{border:none;background:none;color:var(--muted);padding:2px 6px}
 </style>
 </head>
 <body>
@@ -51,6 +56,7 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
     <a href="#nba" data-nav="nba">NBA</a>
     <a href="#geld" data-nav="geld">Großes Geld</a>
     <a href="#treffer" data-nav="treffer">Treffer</a>
+    <a href="#meine" data-nav="meine">Meine Wetten</a>
     <a href="#methode" data-nav="methode">Methode</a>
   </nav>
 </div></header>
@@ -66,6 +72,11 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
 <section data-view="geld"><div class="card"><h2>Großes Geld auf Polymarket</h2>
   <p class="hint">Einzelne Einsätze ab 1.000 $ in den letzten 48 Stunden auf Polymarket, plus die Kalshi-Preise. Prognosemärkte haben kleine Margen – dort handeln oft gut informierte Leute. Sie zählen im Markt-Anker zur Hälfte.</p>
   <div id="whales"></div></div></section>
+<section data-view="meine"><div class="card"><h2>Meine Wetten</h2>
+  <p class="hint">Trag hier ein, was du wirklich gesetzt hast – im Reiter NBA bei jedem Spiel unter „Wetten“. Ausgewertet wird automatisch nach dem Spiel. Gespeichert wird nur auf diesem Gerät im Browser; mit „Sichern“ und „Laden“ kannst du die Liste aufs andere Gerät mitnehmen.</p>
+  <div id="mine"></div>
+  <div class="form"><button class="btn ghost" id="exp">Sichern (Datei)</button><label class="btn ghost">Laden<input type="file" id="imp" accept=".json,application/json" hidden></label></div>
+</div></section>
 <section data-view="treffer"><div class="card"><h2>Trefferliste</h2>
   <p class="hint">Jede Prognose wird bis zum Spielbeginn aktualisiert, dann eingefroren und nach dem Spiel ausgewertet.</p>
   <div id="learn"></div>
@@ -146,6 +157,10 @@ function nbaCard(g){
     <div class="body"><h3>Punktdifferenz ${esc(g.abbrH)}</h3><table><tbody>${parts}
       <tr><td><b>Ergebnis</b><div class="small">${esc(g.abbrA)} ${f(g.ptsA)} : ${f(g.ptsH)} ${esc(g.abbrH)} · ${f(g.poss)} Ballbesitze</div></td><td><b>${sg(g.margin)}</b></td></tr></tbody></table>
       <h3>Wetten</h3>${betsTable(g.bets)}
+      <div class="form" data-game="${esc(g.id)}"><select class="bsel">${g.bets.map((b,i)=>`<option value="${i}">${b.value?"✓ ":""}${esc(b.market)}: ${esc(b.pick)}</option>`).join("")}</select>
+        <input type="number" class="bodds" step="0.01" min="1.01" value="${f(g.bets[0].odds,2).replace(",",".")}" aria-label="Quote">
+        <input type="number" class="bstake" step="1" min="0" value="10" aria-label="Einsatz in Euro"><span class="small">€</span>
+        <button class="btn addbet">Gesetzt</button></div>
       ${g.schedule?`<h3>Spielplan</h3><p class="small">${["away","home"].map(sd=>{const x=g.schedule[sd];return `${esc(sd==="away"?g.abbrA:g.abbrH)}: ${x.rest} Ruhetag(e)${x.dens?` · ${x.dens>1?"4 in 6 & 3 in 4":"3 in 4 / 4 in 6"}`:""}${x.km?` · ${f(x.km,0)} km Reise (gewichtet)`:""}`}).join("<br>")}</p>`:""}
       <h3>Verletzungen <span class="small">(${g.injuryReport?`offizieller NBA-Bericht ${esc(g.injuryReport)}, sonst ESPN`:"ESPN"})</span></h3><p class="small">${esc(g.abbrA)}: ${inj("away")}<br>${esc(g.abbrH)}: ${inj("home")}</p></div></details>`;
 }
@@ -171,7 +186,7 @@ $("bt").innerHTML = bt ? `<h3>Rücktest auf ${f(bt.games,0)} vergangenen Spielen
   <div class="kpis"><div class="kpi"><div class="k">Trefferquote Sieger</div><div class="v">${pct(bt.full.hit)}</div><div class="hint">nur Stärke + Heimvorteil: ${pct(bt.base.hit)}</div></div>
   <div class="kpi"><div class="k">Brier (Test)</div><div class="v">${f(bt.full.brier,4)}</div><div class="hint">Basis ${f(bt.base.brier,4)} · Münzwurf 0,25</div></div></div>
   <table><thead><tr><th>Faktor</th><th>gelernt</th><th>Nutzen im Test</th></tr></thead><tbody>${Object.entries(bt.coef).map(([k,c])=>`<tr><td>${FN[k]||esc(k)}</td><td>${f(c.value,2)} <span class="small">± ${f(c.se,2)}</span></td><td class="small">${bt.drop[k]==null?"–":bt.drop[k]>0?`<span class="pos">hilft</span> (${f(bt.drop[k]*10000,1)})`:`<span class="neg">hilft nicht</span> (${f(bt.drop[k]*10000,1)})`}</td></tr>`).join("")}</tbody></table>
-  <p class="hint">Jedes Spiel wurde nur mit dem Wissen vom Vortag gerechnet (eigene Team-Stärken aus den Ergebnissen). Spielerwerte, Verletzungen und Quoten gibt es für die Vergangenheit nicht – die lernt das Modell weiter täglich. „Nutzen im Test“: um wie viel der Brier-Wert (×10.000) schlechter wird, wenn man den Faktor weglässt. Die Ergebnisse wurden als Startwerte übernommen.</p>` : "";
+  <p class="hint">Jedes Spiel wurde nur mit dem Wissen vom Vortag gerechnet (eigene Team-Stärken aus den Ergebnissen). Spielerwerte, Verletzungen und Quoten gibt es für die Vergangenheit nicht – die lernt das Modell weiter täglich. „Nutzen im Test“: um wie viel der Brier-Wert (×10.000) schlechter wird, wenn man den Faktor weglässt. Übernommen wurden Stärke, Heimvorteil und Streuung sowie die Zusatzfaktoren, die im Test geholfen haben; die anderen behalten ihren Startwert.</p>` : "";
 $("learn").innerHTML = st ? `<h3>Lernt das Modell?</h3><div class="kpis">
   <div class="kpi"><div class="k">Schlussquote geschlagen (CLV)</div><div class="v ${cls(st.clvAvg||0)}">${st.clvAvg==null?"–":sg(st.clvAvg*100)+" %"}</div><div class="hint">${st.clvN||0} Wetten · ${st.clvPos==null?"–":pct(st.clvPos)} besser als die Schlussquote</div></div>
   <div class="kpi"><div class="k">CLV der ✓-Wetten</div><div class="v ${cls(st.clvValueAvg||0)}">${st.clvValueAvg==null?"–":sg(st.clvValueAvg*100)+" %"}</div><div class="hint">${st.clvValueN||0} Wetten</div></div>
@@ -194,7 +209,63 @@ $("trk").innerHTML = rows.length ? `<table><thead><tr><th>Spiel</th><th>Wette</t
   <td>${res}</td></tr>`}).join("")}</tbody></table>
   <p class="hint">Brier-Wert = Durchschnitt von (Prognose − Ergebnis)². Kleiner ist besser. Ist der Wert des Modells kleiner als der des Markts, war das Modell genauer.</p>` : `<p class="hint">Noch keine Prognosen gespeichert.</p>`;
 
-const VIEWS=["start","nba","geld","treffer","methode"];
+// ---------- Meine Wetten (nur auf diesem Gerät) ----------
+const KEY="meineWetten"; let memMine=[];
+const getMine=()=>{ try{ return JSON.parse(localStorage.getItem(KEY)||"[]"); }catch(e){ return memMine; } };
+const setMine=a=>{ memMine=a; try{ localStorage.setItem(KEY, JSON.stringify(a)); }catch(e){} renderMine(); };
+const gameById = Object.fromEntries(nba.map(g=>[g.id,g]));
+function settleMine(w){
+  const r = picksAll[w.gameId]; if(!r || !r.score) return null;
+  const [h,a] = r.score.split(":").map(Number); let d;
+  if(w.market==="Sieg") d = w.side==="home" ? h-a : a-h;
+  else if(w.market==="Handicap") d = (w.side==="home" ? h-a : a-h) + Number(w.line);
+  else d = (w.side==="over" ? 1 : -1) * (h+a-Number(w.line));
+  return d>0?"win":d<0?"loss":"push";
+}
+function renderMine(){
+  const list = getMine().map(w=>({...w, res:settleMine(w)}));
+  const done = list.filter(w=>w.res), stake = done.reduce((s,w)=>s+w.stake,0);
+  const gain = done.reduce((s,w)=>s+(w.res==="win"?w.stake*(w.odds-1):w.res==="loss"?-w.stake:0),0);
+  $("mine").innerHTML = list.length ? `<div class="kpis">
+    <div class="kpi"><div class="k">Wetten</div><div class="v">${list.length}</div><div class="hint">${list.length-done.length} offen</div></div>
+    <div class="kpi"><div class="k">Gewinn</div><div class="v ${cls(gain)}">${sg(gain,2)} €</div><div class="hint">aus ${f(stake,0)} € Einsatz</div></div>
+    <div class="kpi"><div class="k">Rendite</div><div class="v ${cls(gain)}">${stake?sg(gain/stake*100,1)+" %":"–"}</div></div>
+    <div class="kpi"><div class="k">Trefferquote</div><div class="v">${done.length?pct(done.filter(w=>w.res==="win").length/done.length):"–"}</div></div></div>
+    <table><thead><tr><th>Spiel</th><th>Wette</th><th>Quote</th><th>Ergebnis</th><th></th></tr></thead><tbody>${list.sort((a,b)=>String(b.commence).localeCompare(String(a.commence))).map(w=>`<tr>
+    <td>${esc(w.label)}<div class="small">${new Date(w.commence).toLocaleDateString("de-DE",{day:"2-digit",month:"2-digit"})}</div></td>
+    <td>${w.value?"✓ ":""}${esc(w.pick)}<div class="small">${esc(w.market)} · ${f(w.stake,0)} €</div></td>
+    <td><b>${f(w.odds,2)}</b><div class="small">${esc(w.book||"")}</div></td>
+    <td>${!w.res?'<span class="small">offen</span>':w.res==="win"?`<b class="pos">+${f(w.stake*(w.odds-1),2)} €</b>`:w.res==="loss"?`<b class="neg">−${f(w.stake,2)} €</b>`:"zurück"}</td>
+    <td><button class="btn x del" data-ts="${w.ts}" title="Löschen">✕</button></td></tr>`).join("")}</tbody></table>` : `<p class="hint">Noch keine eigenen Wetten eingetragen.</p>`;
+}
+document.addEventListener("change", e=>{
+  if(!e.target.classList.contains("bsel")) return;
+  const box=e.target.closest(".form"), g=gameById[box.dataset.game], b=g.bets[+e.target.value];
+  box.querySelector(".bodds").value = b.odds.toFixed(2);
+});
+document.addEventListener("click", e=>{
+  if(e.target.classList.contains("addbet")){
+    const box=e.target.closest(".form"), g=gameById[box.dataset.game], b=g.bets[+box.querySelector(".bsel").value];
+    const odds=parseFloat(box.querySelector(".bodds").value), stake=parseFloat(box.querySelector(".bstake").value);
+    if(!(odds>1) || !(stake>0)){ e.target.textContent="Quote/Einsatz prüfen"; return; }
+    setMine([...getMine(), {ts:Date.now(), gameId:g.id, label:`${g.abbrA} @ ${g.abbrH}`, commence:g.commence, market:b.market, side:b.side,
+      line:b.line, pick:b.pick, odds, stake, book:b.bookName, value:!!b.value, ev:b.ev}]);
+    e.target.textContent="✓ gespeichert"; setTimeout(()=>e.target.textContent="Gesetzt",1500);
+  }
+  if(e.target.classList.contains("del")){ setMine(getMine().filter(w=>String(w.ts)!==e.target.dataset.ts)); }
+  if(e.target.id==="exp"){
+    const a=document.createElement("a"); a.href=URL.createObjectURL(new Blob([JSON.stringify(getMine(),null,1)],{type:"application/json"}));
+    a.download="meine-wetten.json"; a.click();
+  }
+});
+$("imp").addEventListener("change", async e=>{
+  const file=e.target.files[0]; if(!file) return;
+  try{ const add=JSON.parse(await file.text()); const have=new Set(getMine().map(w=>w.ts));
+       setMine([...getMine(), ...add.filter(w=>w && w.gameId && !have.has(w.ts))]); }catch(err){ $("mine").insertAdjacentHTML("afterbegin",'<p class="neg">Datei nicht lesbar.</p>'); }
+});
+renderMine();
+
+const VIEWS=["start","nba","geld","treffer","meine","methode"];
 function show(){ const h=location.hash.slice(1), v=VIEWS.includes(h)?h:"start";
   document.querySelectorAll("[data-view]").forEach(e=>e.hidden=e.dataset.view!==v);
   document.querySelectorAll("[data-nav]").forEach(a=>a.classList.toggle("on",a.dataset.nav===v)); }
