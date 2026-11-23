@@ -60,7 +60,7 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
   <p class="muted" id="stand">Lade Daten …</p>
   <div class="kpis" id="kpis"></div>
   <div class="card"><h2>Höchste Erwartungswerte</h2><div id="top"></div>
-  <p class="hint">Erwartungswert (EV) = Chance × Quote − 1 zur besten Quote aller Buchmacher (Tipico, Winamax, William Hill, Betsson, Unibet …). ✓ = strenge Auswahl: EV ≥ 3 % und auch gegenüber Pinnacle nicht schlechter. Die Chance ist eine Mischung aus Modell und Markt (Markt-Anker), darum sind die Werte bewusst vorsichtig.</p></div>
+  <p class="hint">Erwartungswert (EV) = Chance × Quote − 1 zur besten Quote aller Buchmacher mit deutscher Lizenz (Tipico, Winamax, Betano, Betway, LeoVegas, 888sport). ✓ = strenge Auswahl: EV ≥ 3 % und auch gegenüber Pinnacle nicht schlechter. Die Chance ist eine Mischung aus Modell und Markt (Markt-Anker), darum sind die Werte bewusst vorsichtig.</p></div>
 </section>
 <section data-view="nba"><div class="card"><h2>NBA</h2><div id="nbaList"></div></div></section>
 <section data-view="geld"><div class="card"><h2>Großes Geld auf Polymarket</h2>
@@ -84,14 +84,14 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
     <li><b>Lernen:</b> Jeden Tag werden alle ausgewerteten Spiele nachgerechnet (Regression des echten Ergebnisses auf die Modellteile, Log-Loss für das Modellgewicht). Die Werte bewegen sich nur in kleinen Schritten und in festen Grenzen – die aktuellen Werte stehen unter „Treffer“.</li>
     <li><b>Markt-Anker:</b> anfangs 30 % Modell, 70 % Markt (Pinnacle/Betfair bzw. angezeigter Buchmacher, beim Sieg dazu Kalshi und Polymarket zur Hälfte).</li>
     <li><b>Verletzungen:</b> Wert pro Spieler = (BPM + 2) × Minuten/48 (BPM von Basketball-Reference, aktuelle Saison mit Vorsaison gemischt und zur Mitte gezogen, höchstens 8 Punkte). Davon wird nur abgezogen, was noch in den Team-Ratings steckt, mal der Ausfall-Wahrscheinlichkeit aus dem offiziellen NBA-Verletzungsbericht (alle 15 Minuten, Out 100 %, Doubtful 75 %, Questionable 45 %, Probable 10 %), für noch nicht gemeldete Teams aus ESPN (Day-To-Day 30 %).</li>
-    <li><b>Beste Quote:</b> Jede Wette wird bei allen Buchmachern verglichen (Tipico, Winamax, William Hill, Betsson, Unibet, 888sport …) und mit der besten Quote bewertet – bei Handicap und Gesamtpunkten auch über verschiedene Linien.</li>
+    <li><b>Beste Quote:</b> Jede Wette wird bei allen Buchmachern mit deutscher Lizenz (GGL-Whitelist) verglichen: Tipico, Winamax, Betano, Betway, LeoVegas und 888sport. Betano, Betway, LeoVegas und 888sport liefert die Schnittstelle nur als UK- bzw. Schweden-Version, die deutschen Quoten können leicht abweichen. Pinnacle und Betfair dienen nur als Vergleichsmarkt und mit der besten Quote bewertet – bei Handicap und Gesamtpunkten auch über verschiedene Linien.</li>
     <li><b>Strenge Auswahl (✓):</b> EV ≥ 3 % <i>und</i> die Quote ist auch gegenüber der fairen Pinnacle-Quote nicht schlechter. Ohne Pinnacle-Quote: EV ≥ 5 %. Einsatz: ¼-Kelly (Vorteil ÷ (Quote − 1) ÷ 4), höchstens 2 % der Kasse.</li>
     <li><b>Abend-Update 23:37 Uhr:</b> nach dem Bericht von 17:30 Uhr US-Zeit neu gerechnet. Ändert sich eine Empfehlung, steht beim Spiel ein ⚠. Die Trefferliste zählt die Empfehlung von mittags, der Abendlauf liefert die Schlussquote für den CLV.</li>
   </ol>
   <h3>Grenzen</h3>
   <p>Die Gewichte sind begründete Schätzungen, nicht an alten Spielen getestet. Die Trefferliste zeigt nach ein paar hundert Spielen, ob das Modell genauer ist als der Markt (Brier-Wert). Bis dahin: Lern- und Analyseprojekt, keine Wettempfehlung.</p>
   <h3>Quellen</h3>
-  <p class="hint">Quoten: The Odds API (Tipico, Winamax, William Hill, Betsson, Unibet, 888sport u. a., dazu Pinnacle und Betfair; bet365 bietet die Schnittstelle nicht an) · NBA-Ratings: Basketball-Reference · Verletzungen: offizieller NBA-Bericht und ESPN · Spielplan: ESPN · Prognosemärkte: Kalshi und Polymarket (öffentliche Schnittstellen)</p>
+  <p class="hint">Quoten: The Odds API (Tipico, Winamax, Betano, Betway, LeoVegas, 888sport; Pinnacle und Betfair als Vergleich; bet365 bietet die Schnittstelle nicht an) · NBA-Ratings: Basketball-Reference · Verletzungen: offizieller NBA-Bericht und ESPN · Spielplan: ESPN · Prognosemärkte: Kalshi und Polymarket (öffentliche Schnittstellen)</p>
 </div></section>
 </main>
 <footer>Analyse- und Lernprojekt, keine Wettempfehlung. Wetten erst ab 18 · Hilfe: check-dein-spiel.de · 0800 1 37 27 00</footer>

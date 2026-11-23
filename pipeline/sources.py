@@ -14,12 +14,13 @@ GAMMA_BASE = "https://gamma-api.polymarket.com"
 PM_DATA_BASE = "https://data-api.polymarket.com"
 # bet365 gibt es bei The Odds API nicht (nur in Australien, kostenpflichtig).
 # Bis zu 10 Buchmacher kosten so viel wie eine Region.
-SHARP = ["pinnacle", "betfair_ex_eu"]
-SOFT = ["tipico_de", "winamax_de", "williamhill", "betsson", "unibet_nl", "sport888", "marathonbet", "betvictor"]
-BOOKS = ",".join(SHARP + SOFT)
-BOOK_NAMES = {"tipico_de": "Tipico", "winamax_de": "Winamax", "williamhill": "William Hill", "betsson": "Betsson",
-              "unibet_nl": "Unibet", "sport888": "888sport", "marathonbet": "Marathonbet", "betvictor": "BetVictor",
-              "pinnacle": "Pinnacle", "betfair_ex_eu": "Betfair"}
+SHARP = ["pinnacle", "betfair_ex_eu"]              # nur als Vergleichsmarkt, in Deutschland nicht wettbar
+# Nur Anbieter mit deutscher Lizenz (GGL-Whitelist). Betano, Betway, LeoVegas und 888sport liefert die Schnittstelle
+# nur als UK-/SE-Version – deren Quoten können leicht von der deutschen Seite abweichen (5 % Wettsteuer).
+SOFT = ["tipico_de", "winamax_de", "betano_uk", "betway", "leovegas_se", "sport888"]
+BOOKS = ",".join(SHARP + SOFT)                     # 8 Buchmacher = Kosten wie eine Region
+BOOK_NAMES = {"tipico_de": "Tipico", "winamax_de": "Winamax", "betano_uk": "Betano", "betway": "Betway",
+              "leovegas_se": "LeoVegas", "sport888": "888sport", "pinnacle": "Pinnacle", "betfair_ex_eu": "Betfair"}
 CREDITS = {"remaining": None, "used_now": 0}
 
 
