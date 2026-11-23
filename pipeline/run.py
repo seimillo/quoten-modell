@@ -99,12 +99,16 @@ def load_minutes():
     return {k: [m for _, m in v] for k, v in M.get("players", {}).items()}
 
 
+REPORT = {"ok": False, "missing": set()}            # Wer hat den offiziellen Verletzungsbericht schon abgegeben?
+
+
 def merged_injuries(now, known=None):
     """Offizieller NBA-Bericht, wo das Team schon gemeldet hat – sonst ESPN."""
     espn = {canon(k): v for k, v in S.espn_injuries().items()}
     official, missing, stamp = S.nba_official_injuries(list(TEAMS) + list(ALIASES), now, known)
     official = {canon(k): v for k, v in official.items()}
     missing = {canon(k) for k in missing}
+    REPORT["ok"], REPORT["missing"] = bool(stamp), missing
     out = {}
     for t in TEAMS:
         if t in official and t not in missing:
@@ -140,6 +144,7 @@ def nba_block(now, params, kalshi_nba, pm_nba, history, recent_min=None, op="nor
     for g in nba:
         g["links"] = links.get(g["id"]) or {}
         g["injuryReport"] = stamp
+        g["reportMissing"] = {side: (not REPORT["ok"]) or g[side] in REPORT["missing"] for side in ("home", "away")}
         g["sdUsed"], g["sdMarket"] = P["sd_margin"], msd
     return nba, events
 

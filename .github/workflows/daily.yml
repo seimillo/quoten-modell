@@ -53,7 +53,8 @@ jobs:
       - name: Warnung bei Abbruch
         if: failure()
         run: |
-          curl -s -H "Title: Pipeline abgebrochen" -H "Tags: rotating_light" -H "Priority: 4" \
+          P=4; H=$(TZ=Europe/Berlin date +%H); if [ "$H" -ge 22 ] || [ "$H" -lt 9 ]; then P=2; fi
+          curl -s -H "Title: Pipeline abgebrochen" -H "Tags: rotating_light" -H "Priority: $P" \
             -d "Der Lauf ($RUN_MODE) ist mit einem Fehler abgebrochen. Details im Reiter Actions auf GitHub." \
             "https://ntfy.sh/${NTFY_TOPIC:-quoten-b6a776bab3f5}"
         env:

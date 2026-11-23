@@ -349,6 +349,27 @@ def evaluate(games, events, pstats, injuries_by_team, sd_margin, seed=7, tot_cur
         # ✓: klare Fälle, eine pro Spieler, höchstens 3 pro Spiel
         cands = sorted([p for p in props if p["ev"] >= (MIN_EV if (p["twoSided"] or p["anchored"]) else MIN_EV_ONE_SIDED) and MIN_ODDS <= p["odds"] <= MAX_ODDS and p["gp"] >= 5
                         and p["expMin"] >= 18 and p["pOut"] <= 0.15], key=lambda x: -x["ev"])
+        # „mittags sicher“: Bericht beider Teams da, Spieler selbst gesund, kein wichtiger Mitspieler/Gegner fraglich
+        rm = g.get("reportMissing") or {}
+        rows_by_team = {g["abbrH"]: hr, g["abbrA"]: ar}
+
+        def risks(p):
+            out = []
+            own, opp = (("home", "away") if p["team"] == g["abbrH"] else ("away", "home"))
+            if rm.get(own):
+                out.append("Verletzungsbericht des Teams fehlt noch")
+            if rm.get(opp):
+                out.append("Verletzungsbericht des Gegners fehlt noch")
+            if p["pOut"] > 0.05:
+                out.append("selbst fraglich")
+            for r in rows_by_team.get(p["team"], []):
+                if r["key"] != p["key"] and r["min"] >= 20 and 0.1 <= r["pOut"] <= 0.9:
+                    out.append(f"Mitspieler {r['name']} fraglich")
+            other = g["abbrA"] if p["team"] == g["abbrH"] else g["abbrH"]
+            for r in rows_by_team.get(other, []):
+                if r["min"] >= 28 and 0.1 <= r["pOut"] <= 0.9:
+                    out.append(f"Gegner {r['name']} fraglich")
+            return out
         seen = set()
         for p in cands:
             if p["key"] in seen or len(seen) >= 3:
@@ -357,6 +378,8 @@ def evaluate(games, events, pstats, injuries_by_team, sd_margin, seed=7, tot_cur
             p["value"] = True
             p["stake"] = round(min(KELLY_CAP, KELLY_FRAC * p["ev"] / (p["odds"] - 1)), 4)
             p["checkApp"] = p["stat"] != "pts"
+            p["risks"] = risks(p)
+            p["safe"] = not p["risks"]
         props.sort(key=lambda x: (-bool(x.get("value")), -x["ev"]))
         lines_out = {}
         for p in sorted(props, key=lambda x: not x["twoSided"]):
@@ -400,6 +423,7 @@ def track(prop_games, now=None, src="mittags"):
                 new.append((g, p))
                 T[_pid(g["id"], p)] = {"src": src, **{k: p[k] for k in ("player", "key", "team", "stat", "statName", "line", "side",
                                                                "odds", "book", "bookName", "pSim", "p", "ev", "stake", "mean")},
+                                       "safe": p.get("safe"), "risks": p.get("risks", []),
                                        "game": g["label"], "commence": g["commence"], "result": None, "value": None}
     save_json("props_picks.json", T)
     return new
@@ -507,7 +531,9 @@ def stats(T=None):
     for key, rows in (("mittags", [t for t in done if t.get("src", "mittags") == "mittags"]),
                       ("vorSpiel", [t for t in done if t.get("src") == "vor Spielbeginn"]),
                       ("bestaetigt", [t for t in done if (t.get("pre") or {}).get("status") == "bestätigt"]),
-                      ("zurueck", [t for t in done if (t.get("pre") or {}).get("status") in ("zurückziehen", "schwächer")])):
+                      ("zurueck", [t for t in done if (t.get("pre") or {}).get("status") in ("zurückziehen", "schwächer")]),
+                      ("sicher", [t for t in done if t.get("src", "mittags") == "mittags" and t.get("safe") is True]),
+                      ("unsicher", [t for t in done if t.get("src", "mittags") == "mittags" and t.get("safe") is False])):
         h = [t for t in rows if t["result"] != "push"]
         by[key] = {"n": len(h), "profit": round(sum(pr(t) for t in rows), 2),
                    "roi": round(sum(pr(t) for t in rows) / (10 * len(h)), 4) if h else None}

@@ -11,9 +11,18 @@ SITE = "https://seimillo.github.io/quoten-modell/"
 BERLIN = ZoneInfo("Europe/Berlin")
 
 
+def quiet_hours(now=None):
+    """22–9 Uhr deutscher Zeit: Nachrichten ohne Ton und Vibration (morgens in der Liste)."""
+    from datetime import datetime
+    h = (now or datetime.now(BERLIN)).astimezone(BERLIN).hour
+    return h >= 22 or h < 9
+
+
 def send(title, lines, tags=("basketball",), priority=3):
     if not lines or os.environ.get("NO_NOTIFY"):
         return False
+    if quiet_hours():
+        priority = 2                                  # ntfy „niedrig“: kein Ton, keine Vibration
     try:
         r = requests.post("https://ntfy.sh/", json={"topic": TOPIC, "title": title, "message": "\n".join(lines),
                                                     "tags": list(tags), "priority": priority, "click": SITE},
@@ -119,9 +128,12 @@ def notify_props(prop_games, limit=6):
     lines = []
     for ev, k, g, p in cands[:limit]:
         side = "über" if p["side"] == "over" else "unter"
-        lines.append(f"🏀 {p['player']} {side} {p['line']:g} {p['statName']} @ {p['odds']:.2f} {p['bookName']} · "
-                     f"Sim Ø {p['mean']:g} · EV {p['ev'] * 100:+.1f} %" + (" · in App prüfen" if p.get("checkApp") else ""))
+        lines.append(("🟢 " if p.get("safe") else "🟠 ") + f"{p['player']} {side} {p['line']:g} {p['statName']} @ {p['odds']:.2f} {p['bookName']} · "
+                     f"Sim Ø {p['mean']:g} · EV {p['ev'] * 100:+.1f} %" + (" · in App prüfen" if p.get("checkApp") else "")
+                     + ("" if p.get("safe") else f" · Risiko: {p['risks'][0]}"))
         sent[k] = g["commence"]
+    if lines:
+        lines.append("🟢 = mittags sicher · 🟠 = kann sich bis abends noch ändern")
     if lines and send("Spielerwetten ✓", lines, tags=("basketball", "dart"), priority=3):
         save_json("notified.json", dict(sorted(sent.items(), key=lambda kv: kv[1])[-400:]))
 
