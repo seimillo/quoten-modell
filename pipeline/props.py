@@ -4,7 +4,7 @@ Pro Spieler:
 - Minuten: letzte 10 Spiele (70 %) und Saison (30 %), Ausfall-Wahrscheinlichkeit aus dem Verletzungsbericht.
   Die Minuten aller verfügbaren Spieler werden auf 240 pro Team hochgerechnet – fehlt ein Starter,
   bekommen die anderen seine Minuten.
-- Werte pro Minute (Punkte, Rebounds, Assists, Dreier): Saison, leicht zur Liga-Mitte gezogen (40 Minuten).
+- Werte pro Minute (Punkte, Rebounds, Assists, Dreier): Saison, leicht zur Liga-Mitte gezogen (15 Minuten).
 - Team-Rahmen aus dem Spielmodell: erwartete Team-Punkte, Tempo, Punktdifferenz.
 Pro Durchlauf: Punktdifferenz und Tempo gemeinsam für beide Teams, Team-Form, Blowouts (Starter spielen
 weniger), Minuten mit Zufall, dann jeder Wert als Gamma-Poisson-Zufallszahl (mehr Streuung als Poisson).
@@ -20,11 +20,11 @@ from .nba import TEAMS
 from .sources import BOOK_NAMES, player_key
 
 N_SIM = 10000
-K_RATE = 40.0                       # Minuten, mit denen die Liga-Mitte in die Rate eingeht
+K_RATE = 15.0                       # Minuten, mit denen die Liga-Mitte in die Rate eingeht
 DISPERSION = {"pts": 7.0, "reb": 9.0, "ast": 7.0, "fg3m": 5.0}   # Gamma-Form: kleiner = mehr Streuung
 STATS = ("pts", "reb", "ast", "fg3m")
 STAT_NAME = {"pts": "Punkte", "reb": "Rebounds", "ast": "Assists", "fg3m": "Dreier"}
-CONF_P = 0.4                        # Gewicht der Simulation gegenüber dem Markt
+CONF_P = 0.3                        # Gewicht der Simulation gegenüber dem Markt
 ONE_SIDED_MARGIN = 0.07             # angenommene Marge, wenn nur „über“ angeboten wird
 MIN_EV, MIN_ODDS, MAX_ODDS = 0.05, 1.5, 3.5
 LEAGUE_POSS = 99.5
@@ -101,7 +101,7 @@ def simulate(game, home_rows, away_rows, sd_margin, rng):
     M, poss = game["margin"], game.get("poss", LEAGUE_POSS)
     margin = rng.normal(M, sd_margin, N_SIM)
     pace = rng.normal(1.0, 0.04, N_SIM)
-    blow = np.clip(1 - 0.012 * np.maximum(0, np.abs(margin) - 12), 0.72, 1.0)   # Starter sitzen bei Blowouts
+    blow = np.clip(1 - 0.008 * np.maximum(0, np.abs(margin) - 15), 0.82, 1.0)   # Starter sitzen bei Blowouts
     for rows, target, side in ((home_rows, game["ptsH"], 1), (away_rows, game["ptsA"], -1)):
         if not rows:
             continue
