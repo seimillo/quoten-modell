@@ -1062,6 +1062,7 @@
  {
   "date": "2026-11-02",
   "start": "2026-11-03T00:30Z",
+  "eid": "401909908",
   "home": "Charlotte Hornets",
   "away": "Detroit Pistons",
   "done": true,
@@ -1072,6 +1073,7 @@
  {
   "date": "2026-11-02",
   "start": "2026-11-03T00:00Z",
+  "eid": "401909907",
   "home": "Cleveland Cavaliers",
   "away": "Oklahoma City Thunder",
   "done": true,
@@ -1082,6 +1084,7 @@
  {
   "date": "2026-11-02",
   "start": "2026-11-03T01:00Z",
+  "eid": "401909913",
   "home": "Dallas Mavericks",
   "away": "Sacramento Kings",
   "done": true,
@@ -1092,6 +1095,7 @@
  {
   "date": "2026-11-02",
   "start": "2026-11-03T02:00Z",
+  "eid": "401909918",
   "home": "Denver Nuggets",
   "away": "Portland Trail Blazers",
   "done": true,
@@ -1102,6 +1106,7 @@
  {
   "date": "2026-11-02",
   "start": "2026-11-03T03:00Z",
+  "eid": "401909919",
   "home": "Golden State Warriors",
   "away": "Phoenix Suns",
   "done": true,
@@ -1112,6 +1117,7 @@
  {
   "date": "2026-11-02",
   "start": "2026-11-03T01:30Z",
+  "eid": "401909916",
   "home": "Houston Rockets",
   "away": "Boston Celtics",
   "done": true,
@@ -1122,6 +1128,7 @@
  {
   "date": "2026-11-02",
   "start": "2026-11-03T00:30Z",
+  "eid": "401909909",
   "home": "Indiana Pacers",
   "away": "Atlanta Hawks",
   "done": true,
@@ -1132,6 +1139,7 @@
  {
   "date": "2026-11-02",
   "start": "2026-11-03T03:00Z",
+  "eid": "401909920",
   "home": "LA Clippers",
   "away": "Toronto Raptors",
   "done": true,
@@ -1142,6 +1150,7 @@
  {
   "date": "2026-11-02",
   "start": "2026-11-03T03:00Z",
+  "eid": "401909921",
   "home": "Los Angeles Lakers",
   "away": "Miami Heat",
   "done": true,
@@ -1152,6 +1161,7 @@
  {
   "date": "2026-11-02",
   "start": "2026-11-03T01:00Z",
+  "eid": "401909914",
   "home": "Memphis Grizzlies",
   "away": "New Orleans Pelicans",
   "done": true,
@@ -1162,6 +1172,7 @@
  {
   "date": "2026-11-02",
   "start": "2026-11-03T01:00Z",
+  "eid": "401909915",
   "home": "Minnesota Timberwolves",
   "away": "Milwaukee Bucks",
   "done": true,
@@ -1172,6 +1183,7 @@
  {
   "date": "2026-11-02",
   "start": "2026-11-03T00:30Z",
+  "eid": "401909910",
   "home": "New York Knicks",
   "away": "Brooklyn Nets",
   "done": true,
@@ -1182,6 +1194,7 @@
  {
   "date": "2026-11-02",
   "start": "2026-11-03T00:30Z",
+  "eid": "401909911",
   "home": "Orlando Magic",
   "away": "Washington Wizards",
   "done": true,
@@ -1192,6 +1205,7 @@
  {
   "date": "2026-11-02",
   "start": "2026-11-03T00:30Z",
+  "eid": "401909912",
   "home": "Philadelphia 76ers",
   "away": "Chicago Bulls",
   "done": true,
@@ -1202,6 +1216,7 @@
  {
   "date": "2026-11-02",
   "start": "2026-11-03T01:30Z",
+  "eid": "401909917",
   "home": "San Antonio Spurs",
   "away": "Utah Jazz",
   "done": true,
@@ -1212,6 +1227,7 @@
  {
   "date": "2026-11-04",
   "start": "2026-11-05T00:30Z",
+  "eid": "401909924",
   "home": "Boston Celtics",
   "away": "Milwaukee Bucks",
   "done": true,
@@ -1222,6 +1238,7 @@
  {
   "date": "2026-11-04",
   "start": "2026-11-05T00:30Z",
+  "eid": "401909925",
   "home": "Brooklyn Nets",
   "away": "Charlotte Hornets",
   "done": true,
@@ -1232,6 +1249,7 @@
  {
   "date": "2026-11-04",
   "start": "2026-11-05T02:00Z",
+  "eid": "401909931",
   "home": "Denver Nuggets",
   "away": "Toronto Raptors",
   "done": true,
@@ -1242,6 +1260,7 @@
  {
   "date": "2026-11-04",
   "start": "2026-11-05T00:00Z",
+  "eid": "401909922",
   "home": "Detroit Pistons",
   "away": "Philadelphia 76ers",
   "done": true,
@@ -1252,6 +1271,7 @@
  {
   "date": "2026-11-04",
   "start": "2026-11-05T01:30Z",
+  "eid": "401909930",
   "home": "Houston Rockets",
   "away": "Minnesota Timberwolves",
   "done": true,
@@ -1262,6 +1282,7 @@
  {
   "date": "2026-11-04",
   "start": "2026-11-05T03:30Z",
+  "eid": "401909935",
   "home": "LA Clippers",
   "away": "Miami Heat",
   "done": true,
@@ -1272,6 +1293,7 @@
  {
   "date": "2026-11-04",
   "start": "2026-11-05T01:00Z",
+  "eid": "401909927",
   "home": "Memphis Grizzlies",
   "away": "Indiana Pacers",
   "done": true,
@@ -1282,6 +1304,7 @@
  {
   "date": "2026-11-04",
   "start": "2026-11-05T01:00Z",
+  "eid": "401909928",
   "home": "New Orleans Pelicans",
   "away": "Utah Jazz",
   "done": true,
@@ -1292,6 +1315,7 @@
  {
   "date": "2026-11-04",
   "start": "2026-11-05T00:30Z",
+  "eid": "401909926",
   "home": "New York Knicks",
   "away": "Chicago Bulls",
   "done": true,
@@ -1302,6 +1326,7 @@
  {
   "date": "2026-11-04",
   "start": "2026-11-05T01:00Z",
+  "eid": "401909929",
   "home": "Oklahoma City Thunder",
   "away": "Cleveland Cavaliers",
   "done": true,
@@ -1312,6 +1337,7 @@
  {
   "date": "2026-11-04",
   "start": "2026-11-05T02:00Z",
+  "eid": "401909932",
   "home": "Phoenix Suns",
   "away": "Portland Trail Blazers",
   "done": true,
@@ -1322,6 +1348,7 @@
  {
   "date": "2026-11-04",
   "start": "2026-11-05T03:00Z",
+  "eid": "401909934",
   "home": "Sacramento Kings",
   "away": "Los Angeles Lakers",
   "done": true,
@@ -1332,6 +1359,7 @@
  {
   "date": "2026-11-04",
   "start": "2026-11-05T02:30Z",
+  "eid": "401909933",
   "home": "San Antonio Spurs",
   "away": "Dallas Mavericks",
   "done": true,
@@ -1342,6 +1370,7 @@
  {
   "date": "2026-11-04",
   "start": "2026-11-05T00:00Z",
+  "eid": "401909923",
   "home": "Washington Wizards",
   "away": "Atlanta Hawks",
   "done": true,
@@ -1352,6 +1381,7 @@
  {
   "date": "2026-11-05",
   "start": "2026-11-06T03:00Z",
+  "eid": "401909937",
   "home": "Golden State Warriors",
   "away": "Miami Heat",
   "done": true,
@@ -1362,6 +1392,7 @@
  {
   "date": "2026-11-05",
   "start": "2026-11-06T02:00Z",
+  "eid": "401909936",
   "home": "Phoenix Suns",
   "away": "Orlando Magic",
   "done": true,
@@ -1372,6 +1403,7 @@
  {
   "date": "2026-11-06",
   "start": "2026-11-07T00:00Z",
+  "eid": "401909287",
   "home": "Atlanta Hawks",
   "away": "Washington Wizards",
   "done": true,
@@ -1382,6 +1414,7 @@
  {
   "date": "2026-11-06",
   "start": "2026-11-07T00:00Z",
+  "eid": "401909288",
   "home": "Charlotte Hornets",
   "away": "Boston Celtics",
   "done": true,
@@ -1392,6 +1425,7 @@
  {
   "date": "2026-11-06",
   "start": "2026-11-07T00:30Z",
+  "eid": "401909289",
   "home": "Cleveland Cavaliers",
   "away": "Philadelphia 76ers",
   "done": true,
@@ -1402,6 +1436,7 @@
  {
   "date": "2026-11-06",
   "start": "2026-11-07T01:00Z",
+  "eid": "401909290",
   "home": "Dallas Mavericks",
   "away": "Utah Jazz",
   "done": true,
@@ -1412,6 +1447,7 @@
  {
   "date": "2026-11-06",
   "start": "2026-11-07T03:00Z",
+  "eid": "401909294",
   "home": "Los Angeles Lakers",
   "away": "Portland Trail Blazers",
   "done": true,
@@ -1422,6 +1458,7 @@
  {
   "date": "2026-11-06",
   "start": "2026-11-07T01:00Z",
+  "eid": "401909291",
   "home": "Memphis Grizzlies",
   "away": "Oklahoma City Thunder",
   "done": true,
@@ -1432,6 +1469,7 @@
  {
   "date": "2026-11-06",
   "start": "2026-11-07T01:00Z",
+  "eid": "401909292",
   "home": "Milwaukee Bucks",
   "away": "Toronto Raptors",
   "done": true,
@@ -1442,6 +1480,7 @@
  {
   "date": "2026-11-06",
   "start": "2026-11-07T01:00Z",
+  "eid": "401909293",
   "home": "New Orleans Pelicans",
   "away": "Minnesota Timberwolves",
   "done": true,
@@ -1452,6 +1491,7 @@
  {
   "date": "2026-11-06",
   "start": "2026-11-07T03:00Z",
+  "eid": "401909295",
   "home": "Sacramento Kings",
   "away": "San Antonio Spurs",
   "done": true,
@@ -1462,6 +1502,7 @@
  {
   "date": "2026-11-07",
   "start": "2026-11-08T00:30Z",
+  "eid": "401909939",
   "home": "Atlanta Hawks",
   "away": "Brooklyn Nets",
   "done": true,
@@ -1472,6 +1513,7 @@
  {
   "date": "2026-11-07",
   "start": "2026-11-08T01:00Z",
+  "eid": "401909940",
   "home": "Cleveland Cavaliers",
   "away": "New York Knicks",
   "done": true,
@@ -1482,6 +1524,7 @@
  {
   "date": "2026-11-07",
   "start": "2026-11-08T01:30Z",
+  "eid": "401909942",
   "home": "Golden State Warriors",
   "away": "Orlando Magic",
   "done": true,
@@ -1492,6 +1535,7 @@
  {
   "date": "2026-11-07",
   "start": "2026-11-07T22:00Z",
+  "eid": "401909938",
   "home": "Indiana Pacers",
   "away": "Denver Nuggets",
   "done": true,
@@ -1502,6 +1546,7 @@
  {
   "date": "2026-11-07",
   "start": "2026-11-08T01:00Z",
+  "eid": "401909941",
   "home": "Oklahoma City Thunder",
   "away": "Washington Wizards",
   "done": true,
@@ -1512,6 +1557,7 @@
  {
   "date": "2026-11-07",
   "start": "2026-11-08T02:00Z",
+  "eid": "401909943",
   "home": "Phoenix Suns",
   "away": "Houston Rockets",
   "done": true,
@@ -1522,6 +1568,7 @@
  {
   "date": "2026-11-07",
   "start": "2026-11-08T03:00Z",
+  "eid": "401909944",
   "home": "Portland Trail Blazers",
   "away": "San Antonio Spurs",
   "done": true,
@@ -1532,6 +1579,7 @@
  {
   "date": "2026-11-08",
   "start": "2026-11-08T20:30Z",
+  "eid": "401909945",
   "home": "Chicago Bulls",
   "away": "Philadelphia 76ers",
   "done": true,
@@ -1542,6 +1590,7 @@
  {
   "date": "2026-11-08",
   "start": "2026-11-09T00:30Z",
+  "eid": "401909948",
   "home": "Dallas Mavericks",
   "away": "Brooklyn Nets",
   "done": true,
@@ -1552,6 +1601,7 @@
  {
   "date": "2026-11-08",
   "start": "2026-11-08T23:00Z",
+  "eid": "401909946",
   "home": "Detroit Pistons",
   "away": "Los Angeles Lakers",
   "done": true,
@@ -1562,6 +1612,7 @@
  {
   "date": "2026-11-08",
   "start": "2026-11-09T02:00Z",
+  "eid": "401909950",
   "home": "LA Clippers",
   "away": "New Orleans Pelicans",
   "done": true,
@@ -1572,6 +1623,7 @@
  {
   "date": "2026-11-08",
   "start": "2026-11-09T01:00Z",
+  "eid": "401909949",
   "home": "Milwaukee Bucks",
   "away": "Boston Celtics",
   "done": true,
@@ -1582,6 +1634,7 @@
  {
   "date": "2026-11-08",
   "start": "2026-11-09T00:00Z",
+  "eid": "401909947",
   "home": "Minnesota Timberwolves",
   "away": "Utah Jazz",
   "done": true,
@@ -1592,6 +1645,7 @@
  {
   "date": "2026-11-08",
   "start": "2026-11-09T02:00Z",
+  "eid": "401909951",
   "home": "Sacramento Kings",
   "away": "Miami Heat",
   "done": true,
@@ -1602,6 +1656,7 @@
  {
   "date": "2026-11-09",
   "start": "2026-11-10T00:00Z",
+  "eid": "401909952",
   "home": "Atlanta Hawks",
   "away": "Los Angeles Lakers",
   "done": true,
@@ -1612,6 +1667,7 @@
  {
   "date": "2026-11-09",
   "start": "2026-11-10T00:00Z",
+  "eid": "401909953",
   "home": "Charlotte Hornets",
   "away": "Cleveland Cavaliers",
   "done": true,
@@ -1622,6 +1678,7 @@
  {
   "date": "2026-11-09",
   "start": "2026-11-10T01:00Z",
+  "eid": "401909956",
   "home": "Dallas Mavericks",
   "away": "Indiana Pacers",
   "done": true,
@@ -1632,6 +1689,7 @@
  {
   "date": "2026-11-09",
   "start": "2026-11-10T00:00Z",
+  "eid": "401909954",
   "home": "Detroit Pistons",
   "away": "Washington Wizards",
   "done": true,
@@ -1642,6 +1700,7 @@
  {
   "date": "2026-11-09",
   "start": "2026-11-10T03:00Z",
+  "eid": "401909959",
   "home": "Golden State Warriors",
   "away": "New Orleans Pelicans",
   "done": true,
@@ -1652,6 +1711,7 @@
  {
   "date": "2026-11-09",
   "start": "2026-11-10T01:30Z",
+  "eid": "401909957",
   "home": "Houston Rockets",
   "away": "Denver Nuggets",
   "done": true,
@@ -1662,6 +1722,7 @@
  {
   "date": "2026-11-09",
   "start": "2026-11-10T02:00Z",
+  "eid": "401909958",
   "home": "Phoenix Suns",
   "away": "San Antonio Spurs",
   "done": true,
@@ -1672,6 +1733,7 @@
  {
   "date": "2026-11-09",
   "start": "2026-11-10T00:30Z",
+  "eid": "401909955",
   "home": "Toronto Raptors",
   "away": "Memphis Grizzlies",
   "done": true,
@@ -1682,6 +1744,7 @@
  {
   "date": "2026-11-10",
   "start": "2026-11-11T00:30Z",
+  "eid": "401909960",
   "home": "New York Knicks",
   "away": "Milwaukee Bucks",
   "done": true,
@@ -1692,6 +1755,7 @@
  {
   "date": "2026-11-10",
   "start": "2026-11-11T01:00Z",
+  "eid": "401909961",
   "home": "Philadelphia 76ers",
   "away": "Boston Celtics",
   "done": true,
@@ -1702,6 +1766,7 @@
  {
   "date": "2026-11-10",
   "start": "2026-11-11T02:00Z",
+  "eid": "401909962",
   "home": "Phoenix Suns",
   "away": "LA Clippers",
   "done": true,
@@ -1712,6 +1777,7 @@
  {
   "date": "2026-11-10",
   "start": "2026-11-11T04:00Z",
+  "eid": "401909965",
   "home": "Portland Trail Blazers",
   "away": "Oklahoma City Thunder",
   "done": true,
@@ -1722,6 +1788,7 @@
  {
   "date": "2026-11-10",
   "start": "2026-11-11T03:00Z",
+  "eid": "401909964",
   "home": "Sacramento Kings",
   "away": "Orlando Magic",
   "done": true,
@@ -1732,6 +1799,7 @@
  {
   "date": "2026-11-10",
   "start": "2026-11-11T02:00Z",
+  "eid": "401909963",
   "home": "Utah Jazz",
   "away": "Miami Heat",
   "done": true,
@@ -1742,6 +1810,7 @@
  {
   "date": "2026-11-11",
   "start": "2026-11-12T01:00Z",
+  "eid": "401909969",
   "home": "Chicago Bulls",
   "away": "San Antonio Spurs",
   "done": true,
@@ -1752,6 +1821,7 @@
  {
   "date": "2026-11-11",
   "start": "2026-11-12T02:30Z",
+  "eid": "401909974",
   "home": "Houston Rockets",
   "away": "Golden State Warriors",
   "done": true,
@@ -1762,6 +1832,7 @@
  {
   "date": "2026-11-11",
   "start": "2026-11-12T00:00Z",
+  "eid": "401909966",
   "home": "Indiana Pacers",
   "away": "Washington Wizards",
   "done": true,
@@ -1772,6 +1843,7 @@
  {
   "date": "2026-11-11",
   "start": "2026-11-12T01:00Z",
+  "eid": "401909970",
   "home": "Memphis Grizzlies",
   "away": "Denver Nuggets",
   "done": true,
@@ -1782,6 +1854,7 @@
  {
   "date": "2026-11-11",
   "start": "2026-11-12T01:00Z",
+  "eid": "401909971",
   "home": "Milwaukee Bucks",
   "away": "Los Angeles Lakers",
   "done": true,
@@ -1792,6 +1865,7 @@
  {
   "date": "2026-11-11",
   "start": "2026-11-12T01:00Z",
+  "eid": "401909972",
   "home": "New Orleans Pelicans",
   "away": "Brooklyn Nets",
   "done": true,
@@ -1802,6 +1876,7 @@
  {
   "date": "2026-11-11",
   "start": "2026-11-12T00:00Z",
+  "eid": "401909967",
   "home": "New York Knicks",
   "away": "Cleveland Cavaliers",
   "done": true,
@@ -1812,6 +1887,7 @@
  {
   "date": "2026-11-11",
   "start": "2026-11-12T03:00Z",
+  "eid": "401909975",
   "home": "Portland Trail Blazers",
   "away": "Oklahoma City Thunder",
   "done": true,
@@ -1822,6 +1898,7 @@
  {
   "date": "2026-11-11",
   "start": "2026-11-12T00:00Z",
+  "eid": "401909968",
   "home": "Toronto Raptors",
   "away": "Boston Celtics",
   "done": true,
@@ -1832,6 +1909,7 @@
  {
   "date": "2026-11-11",
   "start": "2026-11-12T02:00Z",
+  "eid": "401909973",
   "home": "Utah Jazz",
   "away": "Orlando Magic",
   "done": true,
@@ -1842,6 +1920,7 @@
  {
   "date": "2026-11-12",
   "start": "2026-11-13T01:00Z",
+  "eid": "401909978",
   "home": "Minnesota Timberwolves",
   "away": "Dallas Mavericks",
   "done": true,
@@ -1852,6 +1931,7 @@
  {
   "date": "2026-11-12",
   "start": "2026-11-13T00:00Z",
+  "eid": "401909976",
   "home": "Philadelphia 76ers",
   "away": "Toronto Raptors",
   "done": true,
@@ -1862,6 +1942,7 @@
  {
   "date": "2026-11-12",
   "start": "2026-11-13T02:00Z",
+  "eid": "401909979",
   "home": "Phoenix Suns",
   "away": "Charlotte Hornets",
   "done": true,
@@ -1872,6 +1953,7 @@
  {
   "date": "2026-11-12",
   "start": "2026-11-13T00:00Z",
+  "eid": "401909977",
   "home": "Washington Wizards",
   "away": "Detroit Pistons",
   "done": true,
@@ -1882,6 +1964,7 @@
  {
   "date": "2026-11-13",
   "start": "2026-11-14T01:00Z",
+  "eid": "401909299",
   "home": "Chicago Bulls",
   "away": "Atlanta Hawks",
   "done": true,
@@ -1892,6 +1975,7 @@
  {
   "date": "2026-11-13",
   "start": "2026-11-14T01:30Z",
+  "eid": "401909301",
   "home": "Houston Rockets",
   "away": "Utah Jazz",
   "done": true,
@@ -1902,6 +1986,7 @@
  {
   "date": "2026-11-13",
   "start": "2026-11-14T00:00Z",
+  "eid": "401909296",
   "home": "Indiana Pacers",
   "away": "New York Knicks",
   "done": true,
@@ -1912,6 +1997,7 @@
  {
   "date": "2026-11-13",
   "start": "2026-11-14T03:30Z",
+  "eid": "401909304",
   "home": "LA Clippers",
   "away": "Oklahoma City Thunder",
   "done": true,
@@ -1922,6 +2008,7 @@
  {
   "date": "2026-11-13",
   "start": "2026-11-14T01:00Z",
+  "eid": "401909298",
   "home": "Miami Heat",
   "away": "Cleveland Cavaliers",
   "done": true,
@@ -1932,6 +2019,7 @@
  {
   "date": "2026-11-13",
   "start": "2026-11-14T01:00Z",
+  "eid": "401909300",
   "home": "New Orleans Pelicans",
   "away": "Memphis Grizzlies",
   "done": true,
@@ -1942,6 +2030,7 @@
  {
   "date": "2026-11-13",
   "start": "2026-11-14T00:00Z",
+  "eid": "401909297",
   "home": "Orlando Magic",
   "away": "Milwaukee Bucks",
   "done": true,
@@ -1952,6 +2041,7 @@
  {
   "date": "2026-11-13",
   "start": "2026-11-14T03:00Z",
+  "eid": "401909303",
   "home": "Sacramento Kings",
   "away": "Portland Trail Blazers",
   "done": true,
@@ -1962,6 +2052,7 @@
  {
   "date": "2026-11-13",
   "start": "2026-11-14T02:30Z",
+  "eid": "401909302",
   "home": "San Antonio Spurs",
   "away": "Golden State Warriors",
   "done": true,
@@ -1972,6 +2063,7 @@
  {
   "date": "2026-11-14",
   "start": "2026-11-15T00:30Z",
+  "eid": "401909981",
   "home": "Cleveland Cavaliers",
   "away": "Dallas Mavericks",
   "done": true,
@@ -1982,6 +2074,7 @@
  {
   "date": "2026-11-14",
   "start": "2026-11-15T01:00Z",
+  "eid": "401909983",
   "home": "Memphis Grizzlies",
   "away": "Brooklyn Nets",
   "done": true,
@@ -1992,6 +2085,7 @@
  {
   "date": "2026-11-14",
   "start": "2026-11-15T01:00Z",
+  "eid": "401909982",
   "home": "Miami Heat",
   "away": "Detroit Pistons",
   "done": true,
@@ -2002,6 +2096,7 @@
  {
   "date": "2026-11-14",
   "start": "2026-11-15T01:00Z",
+  "eid": "401909984",
   "home": "Minnesota Timberwolves",
   "away": "Chicago Bulls",
   "done": true,
@@ -2012,6 +2107,7 @@
  {
   "date": "2026-11-14",
   "start": "2026-11-15T00:00Z",
+  "eid": "401909980",
   "home": "New Orleans Pelicans",
   "away": "Denver Nuggets",
   "done": true,
@@ -2022,6 +2118,7 @@
  {
   "date": "2026-11-15",
   "start": "2026-11-15T23:00Z",
+  "eid": "401909989",
   "home": "Boston Celtics",
   "away": "Dallas Mavericks",
   "done": true,
@@ -2032,6 +2129,7 @@
  {
   "date": "2026-11-15",
   "start": "2026-11-15T21:30Z",
+  "eid": "401909987",
   "home": "LA Clippers",
   "away": "Charlotte Hornets",
   "done": true,
@@ -2042,6 +2140,7 @@
  {
   "date": "2026-11-15",
   "start": "2026-11-16T01:00Z",
+  "eid": "401909992",
   "home": "Milwaukee Bucks",
   "away": "Atlanta Hawks",
   "done": true,
@@ -2052,6 +2151,7 @@
  {
   "date": "2026-11-15",
   "start": "2026-11-15T18:00Z",
+  "eid": "401909985",
   "home": "Philadelphia 76ers",
   "away": "Indiana Pacers",
   "done": true,
@@ -2062,6 +2162,7 @@
  {
   "date": "2026-11-15",
   "start": "2026-11-15T21:00Z",
+  "eid": "401909986",
   "home": "Phoenix Suns",
   "away": "Los Angeles Lakers",
   "done": true,
@@ -2072,6 +2173,7 @@
  {
   "date": "2026-11-15",
   "start": "2026-11-16T02:00Z",
+  "eid": "401909993",
   "home": "Sacramento Kings",
   "away": "Oklahoma City Thunder",
   "done": true,
@@ -2082,6 +2184,7 @@
  {
   "date": "2026-11-15",
   "start": "2026-11-15T23:00Z",
+  "eid": "401909990",
   "home": "Toronto Raptors",
   "away": "New York Knicks",
   "done": true,
@@ -2092,6 +2195,7 @@
  {
   "date": "2026-11-15",
   "start": "2026-11-15T22:00Z",
+  "eid": "401909988",
   "home": "Utah Jazz",
   "away": "San Antonio Spurs",
   "done": true,
@@ -2102,6 +2206,7 @@
  {
   "date": "2026-11-15",
   "start": "2026-11-16T00:00Z",
+  "eid": "401909991",
   "home": "Washington Wizards",
   "away": "Houston Rockets",
   "done": true,
@@ -2112,6 +2217,7 @@
  {
   "date": "2026-11-16",
   "start": "2026-11-17T00:00Z",
+  "eid": "401909994",
   "home": "Boston Celtics",
   "away": "Orlando Magic",
   "done": true,
@@ -2122,6 +2228,7 @@
  {
   "date": "2026-11-16",
   "start": "2026-11-17T00:30Z",
+  "eid": "401909997",
   "home": "Brooklyn Nets",
   "away": "Philadelphia 76ers",
   "done": true,
@@ -2132,6 +2239,7 @@
  {
   "date": "2026-11-16",
   "start": "2026-11-17T00:00Z",
+  "eid": "401909995",
   "home": "Cleveland Cavaliers",
   "away": "Chicago Bulls",
   "done": true,
@@ -2142,6 +2250,7 @@
  {
   "date": "2026-11-16",
   "start": "2026-11-17T02:00Z",
+  "eid": "401910001",
   "home": "Denver Nuggets",
   "away": "Phoenix Suns",
   "done": true,
@@ -2152,6 +2261,7 @@
  {
   "date": "2026-11-16",
   "start": "2026-11-17T00:30Z",
+  "eid": "401909998",
   "home": "Miami Heat",
   "away": "Houston Rockets",
   "done": true,
@@ -2162,6 +2272,7 @@
  {
   "date": "2026-11-16",
   "start": "2026-11-17T01:00Z",
+  "eid": "401909999",
   "home": "Minnesota Timberwolves",
   "away": "Portland Trail Blazers",
   "done": true,
@@ -2172,6 +2283,7 @@
  {
   "date": "2026-11-16",
   "start": "2026-11-17T01:00Z",
+  "eid": "401910000",
   "home": "New Orleans Pelicans",
   "away": "Golden State Warriors",
   "done": true,
@@ -2182,6 +2294,7 @@
  {
   "date": "2026-11-16",
   "start": "2026-11-17T00:00Z",
+  "eid": "401909996",
   "home": "Washington Wizards",
   "away": "Memphis Grizzlies",
   "done": true,
@@ -2192,6 +2305,7 @@
  {
   "date": "2026-11-17",
   "start": "2026-11-18T03:30Z",
+  "eid": "401910006",
   "home": "LA Clippers",
   "away": "Utah Jazz",
   "done": true,
@@ -2202,6 +2316,7 @@
  {
   "date": "2026-11-17",
   "start": "2026-11-18T04:00Z",
+  "eid": "401910005",
   "home": "Los Angeles Lakers",
   "away": "Charlotte Hornets",
   "done": true,
@@ -2212,6 +2327,7 @@
  {
   "date": "2026-11-17",
   "start": "2026-11-18T01:00Z",
+  "eid": "401910003",
   "home": "Minnesota Timberwolves",
   "away": "Portland Trail Blazers",
   "done": true,
@@ -2222,6 +2338,7 @@
  {
   "date": "2026-11-17",
   "start": "2026-11-18T01:00Z",
+  "eid": "401910004",
   "home": "San Antonio Spurs",
   "away": "Detroit Pistons",
   "done": true,
@@ -2232,6 +2349,7 @@
  {
   "date": "2026-11-17",
   "start": "2026-11-18T00:30Z",
+  "eid": "401910002",
   "home": "Toronto Raptors",
   "away": "New York Knicks",
   "done": true,
@@ -2242,6 +2360,7 @@
  {
   "date": "2026-11-18",
   "start": "2026-11-19T00:30Z",
+  "eid": "401910011",
   "home": "Brooklyn Nets",
   "away": "Chicago Bulls",
   "done": true,
@@ -2252,6 +2371,7 @@
  {
   "date": "2026-11-18",
   "start": "2026-11-19T00:00Z",
+  "eid": "401910007",
   "home": "Cleveland Cavaliers",
   "away": "Memphis Grizzlies",
   "done": true,
@@ -2262,6 +2382,7 @@
  {
   "date": "2026-11-18",
   "start": "2026-11-19T01:00Z",
+  "eid": "401910016",
   "home": "Dallas Mavericks",
   "away": "Golden State Warriors",
   "done": true,
@@ -2272,6 +2393,7 @@
  {
   "date": "2026-11-18",
   "start": "2026-11-19T02:30Z",
+  "eid": "401910015",
   "home": "Denver Nuggets",
   "away": "Boston Celtics",
   "done": true,
@@ -2282,6 +2404,7 @@
  {
   "date": "2026-11-18",
   "start": "2026-11-19T00:00Z",
+  "eid": "401910008",
   "home": "Indiana Pacers",
   "away": "Houston Rockets",
   "done": true,
@@ -2292,6 +2415,7 @@
  {
   "date": "2026-11-18",
   "start": "2026-11-19T03:00Z",
+  "eid": "401910017",
   "home": "Los Angeles Lakers",
   "away": "Utah Jazz",
   "done": true,
@@ -2302,6 +2426,7 @@
  {
   "date": "2026-11-18",
   "start": "2026-11-19T00:00Z",
+  "eid": "401910009",
   "home": "Miami Heat",
   "away": "Milwaukee Bucks",
   "done": true,
@@ -2312,6 +2437,7 @@
  {
   "date": "2026-11-18",
   "start": "2026-11-19T01:00Z",
+  "eid": "401910013",
   "home": "New Orleans Pelicans",
   "away": "Detroit Pistons",
   "done": true,
@@ -2322,6 +2448,7 @@
  {
   "date": "2026-11-18",
   "start": "2026-11-19T01:00Z",
+  "eid": "401910014",
   "home": "Oklahoma City Thunder",
   "away": "Atlanta Hawks",
   "done": true,
@@ -2332,6 +2459,7 @@
  {
   "date": "2026-11-18",
   "start": "2026-11-19T00:00Z",
+  "eid": "401910010",
   "home": "Orlando Magic",
   "away": "Philadelphia 76ers",
   "done": true,
@@ -2342,6 +2470,7 @@
  {
   "date": "2026-11-18",
   "start": "2026-11-19T03:00Z",
+  "eid": "401910018",
   "home": "Sacramento Kings",
   "away": "Phoenix Suns",
   "done": true,
@@ -2352,6 +2481,7 @@
  {
   "date": "2026-11-18",
   "start": "2026-11-19T00:30Z",
+  "eid": "401910012",
   "home": "Toronto Raptors",
   "away": "Washington Wizards",
   "done": true,
@@ -2362,6 +2492,7 @@
  {
   "date": "2026-11-19",
   "start": "2026-11-20T01:00Z",
+  "eid": "401910019",
   "home": "Memphis Grizzlies",
   "away": "Golden State Warriors",
   "done": true,
@@ -2372,6 +2503,7 @@
  {
   "date": "2026-11-19",
   "start": "2026-11-20T01:00Z",
+  "eid": "401910020",
   "home": "Milwaukee Bucks",
   "away": "Portland Trail Blazers",
   "done": true,
@@ -2382,6 +2514,7 @@
  {
   "date": "2026-11-19",
   "start": "2026-11-20T01:00Z",
+  "eid": "401910021",
   "home": "Minnesota Timberwolves",
   "away": "New York Knicks",
   "done": true,
@@ -2392,6 +2525,7 @@
  {
   "date": "2026-11-19",
   "start": "2026-11-20T01:00Z",
+  "eid": "401910022",
   "home": "San Antonio Spurs",
   "away": "LA Clippers",
   "done": true,
@@ -2402,6 +2536,7 @@
  {
   "date": "2026-11-20",
   "start": "2026-11-21T00:00Z",
+  "eid": "401909305",
   "home": "Atlanta Hawks",
   "away": "Charlotte Hornets",
   "done": true,
@@ -2412,6 +2547,7 @@
  {
   "date": "2026-11-20",
   "start": "2026-11-21T00:30Z",
+  "eid": "401909306",
   "home": "Brooklyn Nets",
   "away": "Orlando Magic",
   "done": true,
@@ -2422,6 +2558,7 @@
  {
   "date": "2026-11-20",
   "start": "2026-11-21T01:00Z",
+  "eid": "401909309",
   "home": "Chicago Bulls",
   "away": "Washington Wizards",
   "done": true,
@@ -2432,6 +2569,7 @@
  {
   "date": "2026-11-20",
   "start": "2026-11-21T00:30Z",
+  "eid": "401909307",
   "home": "Cleveland Cavaliers",
   "away": "Indiana Pacers",
   "done": true,
@@ -2442,6 +2580,7 @@
  {
   "date": "2026-11-20",
   "start": "2026-11-21T03:00Z",
+  "eid": "401909312",
   "home": "Denver Nuggets",
   "away": "Houston Rockets",
   "done": true,
@@ -2452,6 +2591,7 @@
  {
   "date": "2026-11-20",
   "start": "2026-11-21T00:30Z",
+  "eid": "401909308",
   "home": "Detroit Pistons",
   "away": "Toronto Raptors",
   "done": true,
@@ -2462,6 +2602,7 @@
  {
   "date": "2026-11-20",
   "start": "2026-11-21T03:00Z",
+  "eid": "401909313",
   "home": "Los Angeles Lakers",
   "away": "Sacramento Kings",
   "done": true,
@@ -2472,6 +2613,7 @@
  {
   "date": "2026-11-20",
   "start": "2026-11-21T01:00Z",
+  "eid": "401909310",
   "home": "Oklahoma City Thunder",
   "away": "New Orleans Pelicans",
   "done": true,
@@ -2482,6 +2624,7 @@
  {
   "date": "2026-11-20",
   "start": "2026-11-21T02:30Z",
+  "eid": "401909311",
   "home": "Utah Jazz",
   "away": "Phoenix Suns",
   "done": true,
@@ -2492,6 +2635,7 @@
  {
   "date": "2026-11-21",
   "start": "2026-11-22T01:00Z",
+  "eid": "401910025",
   "home": "Dallas Mavericks",
   "away": "LA Clippers",
   "done": true,
@@ -2502,6 +2646,7 @@
  {
   "date": "2026-11-21",
   "start": "2026-11-22T01:00Z",
+  "eid": "401910026",
   "home": "Minnesota Timberwolves",
   "away": "Memphis Grizzlies",
   "done": true,
@@ -2512,6 +2657,7 @@
  {
   "date": "2026-11-21",
   "start": "2026-11-22T00:30Z",
+  "eid": "401910024",
   "home": "New York Knicks",
   "away": "Portland Trail Blazers",
   "done": true,
@@ -2522,6 +2668,7 @@
  {
   "date": "2026-11-21",
   "start": "2026-11-21T18:00Z",
+  "eid": "401910023",
   "home": "Philadelphia 76ers",
   "away": "Milwaukee Bucks",
   "done": true,
@@ -2532,6 +2679,7 @@
  {
   "date": "2026-11-21",
   "start": "2026-11-22T03:00Z",
+  "eid": "401910028",
   "home": "Sacramento Kings",
   "away": "Boston Celtics",
   "done": true,
@@ -2542,6 +2690,7 @@
  {
   "date": "2026-11-21",
   "start": "2026-11-22T01:00Z",
+  "eid": "401910027",
   "home": "San Antonio Spurs",
   "away": "New Orleans Pelicans",
   "done": true,
@@ -2552,6 +2701,7 @@
  {
   "date": "2026-11-22",
   "start": "2026-11-22T20:30Z",
+  "eid": "401910029",
   "home": "Atlanta Hawks",
   "away": "Detroit Pistons",
   "done": true,
@@ -2562,6 +2712,7 @@
  {
   "date": "2026-11-22",
   "start": "2026-11-23T00:00Z",
+  "eid": "401910032",
   "home": "Chicago Bulls",
   "away": "Denver Nuggets",
   "done": true,
@@ -2572,6 +2723,7 @@
  {
   "date": "2026-11-22",
   "start": "2026-11-23T01:30Z",
+  "eid": "401910035",
   "home": "Golden State Warriors",
   "away": "Boston Celtics",
   "done": true,
@@ -2582,6 +2734,7 @@
  {
   "date": "2026-11-22",
   "start": "2026-11-22T23:00Z",
+  "eid": "401910030",
   "home": "Miami Heat",
   "away": "Oklahoma City Thunder",
   "done": true,
@@ -2592,6 +2745,7 @@
  {
   "date": "2026-11-22",
   "start": "2026-11-23T01:00Z",
+  "eid": "401910034",
   "home": "New York Knicks",
   "away": "Indiana Pacers",
   "done": true,
@@ -2602,6 +2756,7 @@
  {
   "date": "2026-11-22",
   "start": "2026-11-23T00:00Z",
+  "eid": "401910033",
   "home": "Utah Jazz",
   "away": "Dallas Mavericks",
   "done": true,
@@ -2612,6 +2767,7 @@
  {
   "date": "2026-11-22",
   "start": "2026-11-23T00:00Z",
+  "eid": "401910031",
   "home": "Washington Wizards",
   "away": "Orlando Magic",
   "done": true,
@@ -2622,6 +2778,7 @@
  {
   "date": "2026-11-23",
   "start": "2026-11-24T00:00Z",
+  "eid": "401910036",
   "home": "Charlotte Hornets",
   "away": "Memphis Grizzlies",
   "done": false,
@@ -2632,6 +2789,7 @@
  {
   "date": "2026-11-23",
   "start": "2026-11-24T01:00Z",
+  "eid": "401910041",
   "home": "Chicago Bulls",
   "away": "Cleveland Cavaliers",
   "done": false,
@@ -2642,6 +2800,7 @@
  {
   "date": "2026-11-23",
   "start": "2026-11-24T01:30Z",
+  "eid": "401910043",
   "home": "Houston Rockets",
   "away": "LA Clippers",
   "done": false,
@@ -2652,6 +2811,7 @@
  {
   "date": "2026-11-23",
   "start": "2026-11-24T00:30Z",
+  "eid": "401910038",
   "home": "Indiana Pacers",
   "away": "Oklahoma City Thunder",
   "done": false,
@@ -2662,6 +2822,7 @@
  {
   "date": "2026-11-23",
   "start": "2026-11-24T03:00Z",
+  "eid": "401910044",
   "home": "Los Angeles Lakers",
   "away": "Utah Jazz",
   "done": false,
@@ -2672,6 +2833,7 @@
  {
   "date": "2026-11-23",
   "start": "2026-11-24T00:30Z",
+  "eid": "401910040",
   "home": "Minnesota Timberwolves",
   "away": "Brooklyn Nets",
   "done": false,
@@ -2682,6 +2844,7 @@
  {
   "date": "2026-11-23",
   "start": "2026-11-24T01:00Z",
+  "eid": "401910042",
   "home": "New Orleans Pelicans",
   "away": "Phoenix Suns",
   "done": false,
@@ -2692,6 +2855,7 @@
  {
   "date": "2026-11-23",
   "start": "2026-11-24T00:00Z",
+  "eid": "401910037",
   "home": "Philadelphia 76ers",
   "away": "Portland Trail Blazers",
   "done": false,
@@ -2702,6 +2866,7 @@
  {
   "date": "2026-11-23",
   "start": "2026-11-24T03:00Z",
+  "eid": "401910045",
   "home": "Sacramento Kings",
   "away": "San Antonio Spurs",
   "done": false,
@@ -2712,6 +2877,7 @@
  {
   "date": "2026-11-23",
   "start": "2026-11-24T00:30Z",
+  "eid": "401910039",
   "home": "Toronto Raptors",
   "away": "Milwaukee Bucks",
   "done": false,

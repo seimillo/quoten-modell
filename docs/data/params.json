@@ -9,7 +9,7 @@
   "travel_scale": 0.3,
   "form_scale": 0.15,
   "sd_margin": 14.6358,
-  "sd_total": 18.0,
+  "sd_total": 19.19,
   "total_bias": 0.0,
   "conf": 0.3
  },
@@ -93,6 +93,19 @@
      "old": 0.4683,
      "new": 0.15,
      "target": 0.15
+    }
+   ]
+  },
+  {
+   "date": "2026-11-23",
+   "source": "Rücktest",
+   "changes": [
+    {
+     "sport": "NBA",
+     "key": "sd_total",
+     "old": 18.0,
+     "new": 19.19,
+     "target": 19.19
     }
    ]
   }

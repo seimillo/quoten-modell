@@ -106,5 +106,10 @@
    "conf": 0.3
   },
   "n": {}
- }
+ },
+ "backtestLog": [
+  "ESPN-Spielplan: 21 Tage abgefragt, 262 Spiele in der Saison",
+  "Rücktest: 1337 Spiele · Test-Brier Basis 0.1951 → voll 0.1946 · Trefferquote 70.7%",
+  "Rücktest: 1 Startwerte gesetzt"
+ ]
 }
