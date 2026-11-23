@@ -1,19 +1,55 @@
 {
- "updated": "2026-11-22T20:38:56.179772+00:00",
+ "updated": "2026-11-23T11:30:10.377307+00:00",
  "credits": {
-  "remaining": 464.0,
+  "remaining": 461.0,
   "used_now": 3.0
  },
  "stats": {
-  "total": 8,
-  "settled": 0,
-  "brierModel": null,
-  "brierMarket": null,
-  "brierRaw": null,
+  "total": 17,
+  "settled": 7,
+  "brierModel": 0.24514616,
+  "brierMarket": 0.25242116000000003,
+  "brierRaw": 0.23125814,
   "clvN": 6,
   "clvAvg": -0.0116,
   "clvPos": 0.167,
-  "calibration": [],
+  "calibration": [
+   {
+    "from": 0.0,
+    "to": 0.3,
+    "n": 2,
+    "pred": 0.257,
+    "real": 0.5
+   },
+   {
+    "from": 0.3,
+    "to": 0.45,
+    "n": 1,
+    "pred": 0.36,
+    "real": 1.0
+   },
+   {
+    "from": 0.45,
+    "to": 0.55,
+    "n": 2,
+    "pred": 0.467,
+    "real": 0.5
+   },
+   {
+    "from": 0.55,
+    "to": 0.7,
+    "n": 1,
+    "pred": 0.613,
+    "real": 1.0
+   },
+   {
+    "from": 0.7,
+    "to": 1.0,
+    "n": 1,
+    "pred": 0.726,
+    "real": 1.0
+   }
+  ],
   "clvValueN": 0,
   "clvValueAvg": null,
   "valueBets": 0,
@@ -23,22 +59,20 @@
   "kellyGrowth": 0
  },
  "log": [
-  "Kalshi KXNBAGAME: 35 Events",
+  "Kalshi KXNBAGAME: 31 Events",
   "Polymarket nba: 100 Events",
-  "Polymarket tennis: 100 Events",
-  "ESPN-Spielplan: 39 Tage abgefragt, 255 Spiele in der Saison",
+  "ESPN-Spielplan: 4 Tage abgefragt, 262 Spiele in der Saison",
   "Basketball-Reference Ratings 2027: 30 Teams",
   "Basketball-Reference Ratings 2026: 30 Teams",
   "Basketball-Reference Tempo 2027: 31 Teams",
-  "ESPN Verletzungen: 109 Einträge",
-  "NBA-Verletzungsbericht 22.11. 15:30 ET: 0 Spieler, 0 Teams noch nicht gemeldet",
   "Basketball-Reference Spieler 2027: 476 Einträge",
   "Basketball-Reference Spieler 2026: 661 Einträge",
-  "Quoten basketball_nba: 7 Events, 7 mit Buchmacher-Quoten",
-  "NBA: 7 Spiele bewertet, 0 mit Value-Wette",
-  "Tennis: aktuell keine ATP/WTA-Turniere bei The Odds API",
-  "Trefferliste: 0 Prognosen ausgewertet",
-  "Kalibrierung: 0 NBA-Spiele, 0 Tennis-Matches ausgewertet, 0 Werte angepasst (Anpassung ab 40 Spielen)"
+  "ESPN Verletzungen: 104 Einträge",
+  "NBA-Verletzungsbericht 23.11. 06:30 ET: 74 Spieler, 10 Teams noch nicht gemeldet",
+  "Quoten basketball_nba: 10 Events, 10 mit Buchmacher-Quoten",
+  "NBA: 10 Spiele bewertet, 2 mit Value-Wette",
+  "Trefferliste: 7 Prognosen ausgewertet",
+  "Kalibrierung: 7 NBA-Spiele ausgewertet, 0 Werte angepasst (Anpassung ab 40 Spielen)"
  ],
  "closeUpdated": "2026-11-22T23:16:37.761556+00:00",
  "closeLog": [
@@ -70,9 +104,6 @@
    "sd_total": 18.0,
    "total_bias": 0.0,
    "conf": 0.3
-  },
-  "tennis": {
-   "conf_scale": 1.0
   },
   "n": {}
  }
