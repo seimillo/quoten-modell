@@ -407,8 +407,14 @@
    "stake": 0.0037
   },
   "flashClose": {
-   "pFair": 0.4169,
-   "clv": 0.0214
+   "pFair": 0.483,
+   "clv": 0.1834
+  },
+  "close": {
+   "pFair": 0.5382,
+   "fairOdds": 1.858,
+   "clv": 0.0279,
+   "ts": "2026-11-23T23:29+00:00"
   }
  },
  "db2311c331296d3328d71b842167dea4": {
@@ -455,7 +461,13 @@
   "result": null,
   "betResult": null,
   "score": null,
-  "flashResult": null
+  "flashResult": null,
+  "close": {
+   "pFair": 0.5086,
+   "fairOdds": 1.966,
+   "clv": -0.0591,
+   "ts": "2026-11-23T23:29+00:00"
+  }
  },
  "c9b6c9f77fd3628308dd34f50854a9c0": {
   "id": "c9b6c9f77fd3628308dd34f50854a9c0",
@@ -501,7 +513,13 @@
   "result": null,
   "betResult": null,
   "score": null,
-  "flashResult": null
+  "flashResult": null,
+  "close": {
+   "pFair": 0.3677,
+   "fairOdds": 2.72,
+   "clv": 0.0846,
+   "ts": "2026-11-23T23:29+00:00"
+  }
  },
  "b8dfee1fca57ec870528a14c792ad73a": {
   "id": "b8dfee1fca57ec870528a14c792ad73a",
@@ -547,7 +565,13 @@
   "result": null,
   "betResult": null,
   "score": null,
-  "flashResult": null
+  "flashResult": null,
+  "close": {
+   "pFair": 0.5,
+   "fairOdds": 2.0,
+   "clv": -0.045,
+   "ts": "2026-11-23T23:29+00:00"
+  }
  },
  "6caeb7cce7c8340fed588f3badd83fe0": {
   "id": "6caeb7cce7c8340fed588f3badd83fe0",
@@ -593,7 +617,13 @@
   "result": null,
   "betResult": null,
   "score": null,
-  "flashResult": null
+  "flashResult": null,
+  "close": {
+   "pFair": 0.5821,
+   "fairOdds": 1.718,
+   "clv": -0.028,
+   "ts": "2026-11-23T23:29+00:00"
+  }
  },
  "3e9dc52cb055c0154839c4aec417955b": {
   "id": "3e9dc52cb055c0154839c4aec417955b",
@@ -639,7 +669,13 @@
   "result": null,
   "betResult": null,
   "score": null,
-  "flashResult": null
+  "flashResult": null,
+  "close": {
+   "pFair": 0.5208,
+   "fairOdds": 1.92,
+   "clv": -0.0053,
+   "ts": "2026-11-23T23:29+00:00"
+  }
  },
  "17f31499f145cd9d3232819395d29448": {
   "id": "17f31499f145cd9d3232819395d29448",
@@ -696,6 +732,16 @@
    "bookName": "Tipico",
    "evPin": 0.0381,
    "stake": 0.0021
+  },
+  "flashClose": {
+   "pFair": 0.1588,
+   "clv": -0.1269
+  },
+  "close": {
+   "pFair": 0.5041,
+   "fairOdds": 1.984,
+   "clv": -0.0372,
+   "ts": "2026-11-23T23:29+00:00"
   }
  },
  "a72a1703f7a92b80768255d1d977a761": {
@@ -742,7 +788,13 @@
   "result": null,
   "betResult": null,
   "score": null,
-  "flashResult": null
+  "flashResult": null,
+  "close": {
+   "pFair": 0.5369,
+   "fairOdds": 1.862,
+   "clv": 0.0256,
+   "ts": "2026-11-23T23:29+00:00"
+  }
  },
  "35ca45d3e548dc7207fd7f1696ab16f5": {
   "id": "35ca45d3e548dc7207fd7f1696ab16f5",
@@ -788,7 +840,13 @@
   "result": null,
   "betResult": null,
   "score": null,
-  "flashResult": null
+  "flashResult": null,
+  "close": {
+   "pFair": 0.5199,
+   "fairOdds": 1.924,
+   "clv": -0.007,
+   "ts": "2026-11-23T23:29+00:00"
+  }
  },
  "a5184238c27b9c3bfca29220f9d5d14a": {
   "id": "a5184238c27b9c3bfca29220f9d5d14a",
@@ -834,6 +892,12 @@
   "result": null,
   "betResult": null,
   "score": null,
-  "flashResult": null
+  "flashResult": null,
+  "close": {
+   "pFair": 0.5338,
+   "fairOdds": 1.873,
+   "clv": -0.0124,
+   "ts": "2026-11-23T23:29+00:00"
+  }
  }
 }

@@ -1,7 +1,7 @@
 {
  "updated": "2026-11-23T20:25:56.714193+00:00",
  "credits": {
-  "remaining": 398.0,
+  "remaining": 395.0,
   "used_now": 3.0
  },
  "stats": {
@@ -10,9 +10,9 @@
   "brierModel": 0.24514616,
   "brierMarket": 0.25242116000000003,
   "brierRaw": 0.23125814,
-  "clvN": 6,
-  "clvAvg": -0.0116,
-  "clvPos": 0.167,
+  "clvN": 16,
+  "clvAvg": -0.0078,
+  "clvPos": 0.25,
   "calibration": [
    {
     "from": 0.0,
@@ -50,8 +50,8 @@
     "real": 1.0
    }
   ],
-  "clvValueN": 0,
-  "clvValueAvg": null,
+  "clvValueN": 1,
+  "clvValueAvg": -0.0372,
   "valueBets": 0,
   "profit": 0,
   "roi": null,
@@ -61,8 +61,8 @@
   "flashSettled": 0,
   "flashProfit": 0,
   "flashRoi": null,
-  "flashClv": 0.0214,
-  "flashClvN": 1
+  "flashClv": 0.0282,
+  "flashClvN": 2
  },
  "log": [
   "Kalshi KXNBAGAME: 31 Events",
@@ -133,21 +133,23 @@
   "clv": -0.0325,
   "clvN": 10
  },
- "closeUpdated": "2026-11-22T23:16:37.761556+00:00",
+ "closeUpdated": "2026-11-23T23:29:04.925354+00:00",
  "closeLog": [
-  "Kalshi KXNBAGAME: 34 Events",
+  "Kalshi KXNBAGAME: 32 Events",
   "Polymarket nba: 100 Events",
   "Basketball-Reference Ratings 2027: 30 Teams",
   "Basketball-Reference Ratings 2026: 30 Teams",
   "Basketball-Reference Tempo 2027: 31 Teams",
   "Basketball-Reference Spieler 2027: 476 Einträge",
   "Basketball-Reference Spieler 2026: 661 Einträge",
-  "ESPN Verletzungen: 101 Einträge",
-  "NBA-Verletzungsbericht 22.11. 18:15 ET: 145 Spieler, 7 Teams noch nicht gemeldet",
-  "Quoten basketball_nba: 6 Events, 6 mit Buchmacher-Quoten",
-  "NBA: 5 Spiele bewertet, 0 mit Value-Wette",
-  "Abend-Update NBA: 4 Spiele mit geänderter Empfehlung",
-  "Schlussquoten: 5 Prognosen mit CLV"
+  "ESPN Verletzungen: 96 Einträge",
+  "NBA-Verletzungsbericht 23.11. 18:15 ET: 124 Spieler, 0 Teams noch nicht gemeldet",
+  "Quoten basketball_nba: 10 Events, 10 mit Buchmacher-Quoten",
+  "Streuung: Markt 12.4, Modell nutzt 13.54",
+  "NBA: 10 Spiele bewertet, 1 mit Value-Wette",
+  "Abend-Update NBA: 9 Spiele mit geänderter Empfehlung",
+  "Push-Nachricht „Abend-Update: Änderungen“: gesendet",
+  "Schlussquoten: 10 Prognosen mit CLV"
  ],
  "params": {
   "nba": {
