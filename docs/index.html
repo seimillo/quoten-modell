@@ -68,7 +68,7 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
   <p class="muted" id="stand">Lade Daten …</p>
   <div class="kpis" id="kpis"></div>
   <div class="card" id="slipCard"><h2>Wettzettel heute</h2><div id="slip"></div>
-  <p class="hint">Alle Empfehlungen auf einen Blick: ✓ = Modell sieht Vorteil (Spiele), ⚡ = Quote besser als die faire Pinnacle-Quote, 🏀 = Spielerwette aus der Simulation. Einsatz in Prozent deiner Kasse (¼-Kelly). Erst im Probelauf unter „Meine Wetten“ testen; echte Wetten erst ab 18.</p></div>
+  <p class="hint">Alle Empfehlungen auf einen Blick: ✓ = Modell sieht Vorteil (Spiele), ⚡ = Quote besser als die faire Pinnacle-Quote, 🏀 = Spielerwette aus der Simulation. „Chance“: fett die eigene Einschätzung (Simulation, Modell bzw. faire Pinnacle-Quote), darunter die faire Chance der Buchmacher (ohne Marge) und die Chance, die in der angebotenen Quote steckt (1 ÷ Quote). Liegt die eigene Einschätzung über der Quoten-Chance, ist der EV positiv. Einsatz in Prozent deiner Kasse (¼-Kelly). Erst im Probelauf unter „Meine Wetten“ testen; echte Wetten erst ab 18.</p></div>
   <div class="card"><h2>Alle Spiele</h2><div id="top"></div>
   <p class="hint">Erwartungswert (EV) = Chance × Quote − 1 zur besten Quote aller Buchmacher mit deutscher Lizenz (Tipico, Winamax, Betano, Betway, LeoVegas, 888sport). ✓ = strenge Auswahl: EV ≥ 3 % (Gesamtpunkte 5 %) und auch gegenüber Pinnacle nicht schlechter, höchstens eine Wette pro Spiel. Die Chance ist eine Mischung aus Modell und Markt (Markt-Anker), darum sind die Werte bewusst vorsichtig.</p></div>
 </section>
@@ -341,19 +341,23 @@ const slip = [];
 const nowMs = Date.now();
 for (const g of nba) {
   if (new Date(g.commence).getTime() < nowMs) continue;
-  if (g.best && g.best.value) slip.push({t:g.commence, kind:"✓", game:`${g.abbrA} @ ${g.abbrH}`, pick:g.best.pick, market:g.best.market, odds:g.best.odds, book:g.best.bookName, stake:g.best.stake, ev:g.best.ev, link:LINK(g.links, g.best.book)});
-  if (g.flash) slip.push({t:g.commence, kind:"⚡", game:`${g.abbrA} @ ${g.abbrH}`, pick:g.flash.pick, market:g.flash.market, odds:g.flash.odds, book:g.flash.bookName, stake:g.flash.stake, ev:g.flash.evPin, link:LINK(g.links, g.flash.book)});
+  if (g.best && g.best.value) slip.push({t:g.commence, kind:"✓", game:`${g.abbrA} @ ${g.abbrH}`, pick:g.best.pick, market:g.best.market, odds:g.best.odds, book:g.best.bookName, stake:g.best.stake, ev:g.best.ev, link:LINK(g.links, g.best.book),
+    own:g.best.pModel, ownLbl:"Modell", mkt:g.best.pMarket, mktLbl:"Markt fair"});
+  if (g.flash) slip.push({t:g.commence, kind:"⚡", game:`${g.abbrA} @ ${g.abbrH}`, pick:g.flash.pick, market:g.flash.market, odds:g.flash.odds, book:g.flash.bookName, stake:g.flash.stake, ev:g.flash.evPin, link:LINK(g.links, g.flash.book),
+    own:g.flash.pPin, ownLbl:"Pinnacle fair", mkt:null, mktLbl:""});
 }
 for (const g of PROPS.games) {
   if (new Date(g.commence).getTime() < nowMs) continue;
-  for (const p of g.props.filter(p=>p.value)) slip.push({t:g.commence, kind:"🏀", game:g.label, pick:`${p.player} ${p.side==="over"?"über":"unter"} ${String(p.line).replace(".",",")} ${p.statName}${p.checkApp?" (in App prüfen)":""}`, market:"Spieler", odds:p.odds, book:p.bookName, stake:p.stake, ev:p.ev, link:LINK(g.links, p.book)});
+  for (const p of g.props.filter(p=>p.value)) slip.push({t:g.commence, kind:"🏀", game:g.label, pick:`${p.player} ${p.side==="over"?"über":"unter"} ${String(p.line).replace(".",",")} ${p.statName}${p.checkApp?" (in App prüfen)":""}`, market:"Spieler", odds:p.odds, book:p.bookName, stake:p.stake, ev:p.ev, link:LINK(g.links, p.book),
+    own:p.pSim, ownLbl:"Simulation", mkt:p.pMkt, mktLbl:p.anchored?"bwin fair":p.twoSided?"Buchmacher fair":"Buchm. geschätzt"});
 }
 slip.sort((a,b)=>String(a.t).localeCompare(String(b.t)) || b.ev-a.ev);
 const sumStake = slip.reduce((s,x)=>s+(x.stake||0),0);
-$("slip").innerHTML = slip.length ? `<table><thead><tr><th>Wette</th><th>Quote</th><th>Einsatz</th><th>EV</th></tr></thead><tbody>${slip.map(x=>`<tr>
+$("slip").innerHTML = slip.length ? `<table><thead><tr><th>Wette</th><th>Quote</th><th>Chance</th><th>EV</th></tr></thead><tbody>${slip.map(x=>`<tr>
   <td>${x.kind} ${esc(x.pick)}<div class="small">${esc(x.game)} · ${new Date(x.t).toLocaleTimeString("de-DE",{hour:"2-digit",minute:"2-digit"})} Uhr · ${esc(x.market)}</div></td>
   <td><b>${f(x.odds,2)}</b><div class="small">${esc(x.book||"")}${x.link}</div></td>
-  <td>${f((x.stake||0)*100,1)} %</td><td class="${cls(x.ev)}">${sg(x.ev*100,1)} %</td></tr>`).join("")}</tbody></table>
+  <td>${x.own!=null?`<b>${pct(x.own)}</b><div class="small">${esc(x.ownLbl)}</div>`:""}${x.mkt!=null?`<div class="small">${pct(x.mkt)} ${esc(x.mktLbl)}</div>`:""}<div class="small">${pct(1/x.odds)} laut Quote</div></td>
+  <td class="${cls(x.ev)}">${sg(x.ev*100,1)} %<div class="small">Einsatz ${f((x.stake||0)*100,1)} %</div></td></tr>`).join("")}</tbody></table>
   <p class="small">${slip.length} Wetten · zusammen ${f(sumStake*100,1)} % der Kasse</p>` : `<p class="hint">Heute keine Empfehlung – lieber keine Wette als eine schlechte.</p>`;
 
 const PB = await load("props_backtest.json", null);
