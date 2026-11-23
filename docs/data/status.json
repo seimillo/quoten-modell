@@ -1,7 +1,7 @@
 {
- "updated": "2026-11-23T13:39:59.860127+00:00",
+ "updated": "2026-11-23T13:41:24.922950+00:00",
  "credits": {
-  "remaining": 431.0,
+  "remaining": 428.0,
   "used_now": 3.0
  },
  "stats": {
@@ -79,16 +79,16 @@
   "NBA-Verletzungsbericht 23.11. 08:30 ET: 74 Spieler, 10 Teams noch nicht gemeldet",
   "Quoten basketball_nba: 10 Events, 10 mit Buchmacher-Quoten",
   "OddsPapi: 1912 Spielerwetten-Linien",
-  "OddsPapi: 17 Buchmacher-Einträge an 10 Spiele gehängt (bet365.de, bwin.de) · Handicap-Linien plausibel 7, verworfen 0 · 124 von 250 Abfragen diesen Monat",
+  "OddsPapi: 17 Buchmacher-Einträge an 10 Spiele gehängt (bet365.de, bwin.de) · Handicap-Linien plausibel 7, verworfen 0 · 126 von 250 Abfragen diesen Monat",
   "Streuung: Markt 12.5, Modell nutzt 13.56",
   "NBA: 10 Spiele bewertet, 1 mit Value-Wette",
-  "Spielerwetten: 1972 Linien in 9 Spielen simuliert, 24 ✓",
+  "Spielerwetten: 1972 Linien in 9 Spielen simuliert, 11 ✓",
   "Trefferliste: 0 Prognosen ausgewertet",
   "Push-Nachricht „Spielerwetten ✓“: gesendet",
   "Kalibrierung: 7 NBA-Spiele ausgewertet, 0 Werte angepasst (Anpassung ab 40 Spielen)"
  ],
  "propStats": {
-  "bets": 38,
+  "bets": 11,
   "settled": 0,
   "profit": 0,
   "roi": null,
