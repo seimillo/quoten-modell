@@ -1,7 +1,7 @@
 {
- "updated": "2026-11-23T14:23:30.947274+00:00",
+ "updated": "2026-11-23T14:28:42.772477+00:00",
  "credits": {
-  "remaining": 416.0,
+  "remaining": 413.0,
   "used_now": 3.0
  },
  "stats": {
@@ -79,18 +79,17 @@
   "NBA-Verletzungsbericht 23.11. 09:15 ET: 74 Spieler, 10 Teams noch nicht gemeldet",
   "Quoten basketball_nba: 10 Events, 10 mit Buchmacher-Quoten",
   "OddsPapi: 1927 Spielerwetten-Linien",
-  "OddsPapi: 17 Buchmacher-Einträge an 10 Spiele gehängt (bet365.de, bwin.de) · Handicap-Linien plausibel 7, verworfen 0 · 134 von 250 Abfragen diesen Monat",
+  "OddsPapi: 17 Buchmacher-Einträge an 10 Spiele gehängt (bet365.de, bwin.de) · Handicap-Linien plausibel 7, verworfen 0 · 136 von 250 Abfragen diesen Monat",
   "Streuung: Markt 12.7, Modell nutzt 13.66",
   "NBA: 10 Spiele bewertet, 0 mit Value-Wette",
-  "Basketball-Reference Saisonwerte 2027: 474 Spieler",
-  "Spielerwetten: 1998 Linien in 10 Spielen simuliert, 4 ✓",
+  "Spielerwetten: 1998 Linien in 10 Spielen simuliert, 6 ✓",
   "Trefferliste: 0 Prognosen ausgewertet",
   "Spielerwetten lernen: 0 Spieler-Einsätze geprüft (Anpassung ab 150)",
   "Push-Nachricht „Spielerwetten ✓“: gesendet",
   "Kalibrierung: 7 NBA-Spiele ausgewertet, 0 Werte angepasst (Anpassung ab 40 Spielen)"
  ],
  "propStats": {
-  "bets": 4,
+  "bets": 6,
   "settled": 0,
   "profit": 0,
   "roi": null,
@@ -131,10 +130,5 @@
    "conf": 0.15
   },
   "n": {}
- },
- "propsBacktestLog": [
-  "Variante Gegner je Team: {'n': 2301, 'score': {'pts': -3.1126, 'reb': -2.2249, 'ast': -1.7854, 'fg3m': -1.3739}, 'mae': {'pts': 4.621, 'reb': 1.905, 'ast': 1.325, 'fg3m': 0.92}, 'cover50': {'pts': 0.502, 'reb': 0.634, 'ast': 0.723, 'fg3m': 0.773}}",
-  "Variante Gegner je Rolle: {'n': 2301, 'score': {'pts': -3.1124, 'reb': -2.2257, 'ast': -1.7845, 'fg3m': -1.3731}, 'mae': {'pts': 4.626, 'reb': 1.905, 'ast': 1.324, 'fg3m': 0.92}, 'cover50': {'pts': 0.502, 'reb': 0.63, 'ast': 0.725, 'fg3m': 0.775}}",
-  "Variante ohne Wissen, wer spielt: {'n': 2302, 'score': {'pts': -3.1382, 'reb': -2.2485, 'ast': -1.8023, 'fg3m': -1.3885}, 'mae': {'pts': 4.642, 'reb': 1.874, 'ast': 1.31, 'fg3m': 0.907}, 'cover50': {'pts': 0.488, 'reb': 0.622, 'ast': 0.711, 'fg3m': 0.762}}"
- ]
+ }
 }

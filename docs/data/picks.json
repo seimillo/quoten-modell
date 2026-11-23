@@ -484,15 +484,15 @@
   "bet": {
    "market": "Sieg",
    "pick": "Indiana Pacers",
-   "odds": 2.75,
-   "ev": 0.0234,
+   "odds": 2.65,
+   "ev": -0.0138,
    "line": null,
    "side": "home",
-   "book": "sport888",
-   "bookName": "888sport",
+   "book": "op_bwin",
+   "bookName": "bwin",
    "value": false,
    "stake": 0.0,
-   "evPin": 0.0015
+   "evPin": -0.0349
   },
   "result": null,
   "betResult": null,
