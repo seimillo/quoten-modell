@@ -362,8 +362,8 @@
   "away": "Portland Trail Blazers",
   "a": null,
   "b": null,
-  "pModelA": 0.5813,
-  "pMarketA": 0.5929,
+  "pModelA": 0.58,
+  "pMarketA": 0.5914,
   "pModelRaw": 0.5156,
   "feat": {
    "team": -3.523,
@@ -376,19 +376,19 @@
    "form": -1.053,
    "TOTraw": 228.19,
    "pModelRaw": 0.5156,
-   "pMarket": 0.5929
+   "pMarket": 0.5914
   },
   "bet": {
    "market": "Sieg",
    "pick": "Portland Trail Blazers",
    "odds": 2.48,
-   "ev": 0.0384,
+   "ev": 0.0415,
    "line": null,
    "side": "away",
    "book": "op_bet365",
    "bookName": "bet365",
    "value": true,
-   "stake": 0.0065,
+   "stake": 0.007,
    "evPin": 0.0046
   },
   "result": null,
@@ -730,8 +730,8 @@
   "away": "Memphis Grizzlies",
   "a": null,
   "b": null,
-  "pModelA": 0.4073,
-  "pMarketA": 0.4126,
+  "pModelA": 0.4067,
+  "pMarketA": 0.4119,
   "pModelRaw": 0.3776,
   "feat": {
    "team": -4.368,
@@ -744,13 +744,13 @@
    "form": -6.66,
    "TOTraw": 217.55,
    "pModelRaw": 0.3776,
-   "pMarket": 0.4126
+   "pMarket": 0.4119
   },
   "bet": {
    "market": "Sieg",
    "pick": "Charlotte Hornets",
    "odds": 2.43,
-   "ev": -0.0102,
+   "ev": -0.0117,
    "line": null,
    "side": "home",
    "book": "leovegas_se",

@@ -14,8 +14,8 @@
   "ptsA": 113.8,
   "ptsH": 114.4,
   "pModelHome": 0.5156,
-  "pMarketHome": 0.5929,
-  "pFinalHome": 0.5813,
+  "pMarketHome": 0.5914,
+  "pFinalHome": 0.58,
   "parts": [
    {
     "n": "Team-Stärke & Tempo",
@@ -95,9 +95,9 @@
    }
   },
   "kalshi": {
-   "a": 40.5,
+   "a": 41.0,
    "b": 58.5,
-   "vol": 151562
+   "vol": 151741
   },
   "polymarket": null,
   "bookKey": "tipico_de",
@@ -207,9 +207,9 @@
     "book": "op_bet365",
     "bookName": "bet365",
     "pModel": 0.4844,
-    "pMarket": 0.4071,
-    "p": 0.4187,
-    "ev": 0.0384,
+    "pMarket": 0.4086,
+    "p": 0.42,
+    "ev": 0.0415,
     "evRaw": 0.2013,
     "evPin": 0.0046,
     "pPin": 0.4051,
@@ -218,7 +218,7 @@
     "nBooks": 8,
     "why": null,
     "value": true,
-    "stake": 0.0065
+    "stake": 0.007
    },
    {
     "market": "Sieg",
@@ -226,12 +226,12 @@
     "odds": 1.62,
     "line": null,
     "side": "home",
-    "book": "leovegas_se",
-    "bookName": "LeoVegas",
+    "book": "betway",
+    "bookName": "Betway",
     "pModel": 0.5156,
-    "pMarket": 0.5929,
-    "p": 0.5813,
-    "ev": -0.0583,
+    "pMarket": 0.5914,
+    "p": 0.58,
+    "ev": -0.0603,
     "evRaw": -0.1647,
     "evPin": -0.0363,
     "pPin": 0.5949,
@@ -340,9 +340,9 @@
    "book": "op_bet365",
    "bookName": "bet365",
    "pModel": 0.4844,
-   "pMarket": 0.4071,
-   "p": 0.4187,
-   "ev": 0.0384,
+   "pMarket": 0.4086,
+   "p": 0.42,
+   "ev": 0.0415,
    "evRaw": 0.2013,
    "evPin": 0.0046,
    "pPin": 0.4051,
@@ -351,7 +351,7 @@
    "nBooks": 8,
    "why": null,
    "value": true,
-   "stake": 0.0065
+   "stake": 0.007
   },
   "hasValue": true,
   "flash": null,
@@ -369,7 +369,7 @@
    "form": -1.053,
    "TOTraw": 228.19,
    "pModelRaw": 0.5156,
-   "pMarket": 0.5929
+   "pMarket": 0.5914
   },
   "injuryReport": "2026-11-23 08:30 ET",
   "sdUsed": 13.56,
@@ -383,9 +383,9 @@
    "book": "op_bet365",
    "bookName": "bet365",
    "pModel": 0.4844,
-   "pMarket": 0.4071,
-   "p": 0.4187,
-   "ev": 0.0384,
+   "pMarket": 0.4086,
+   "p": 0.42,
+   "ev": 0.0415,
    "evRaw": 0.2013,
    "evPin": 0.0046,
    "pPin": 0.4051,
@@ -394,7 +394,7 @@
    "nBooks": 8,
    "why": null,
    "value": true,
-   "stake": 0.0065
+   "stake": 0.007
   }
  },
  {
@@ -495,7 +495,7 @@
   "kalshi": {
    "a": 63.5,
    "b": 36.5,
-   "vol": 83080
+   "vol": 83122
   },
   "polymarket": null,
   "bookKey": "tipico_de",
@@ -944,7 +944,7 @@
   "kalshi": {
    "a": 80.5,
    "b": 19.5,
-   "vol": 118613
+   "vol": 118625
   },
   "polymarket": {
    "pA": 1.0,
@@ -1359,7 +1359,7 @@
   "kalshi": {
    "a": 16.5,
    "b": 83.5,
-   "vol": 54276
+   "vol": 54280
   },
   "polymarket": {
    "pA": 0.165,
@@ -1802,7 +1802,7 @@
   "kalshi": {
    "a": 13.5,
    "b": 86.5,
-   "vol": 353860
+   "vol": 353879
   },
   "polymarket": {
    "pA": 0.135,
@@ -2202,7 +2202,7 @@
   "kalshi": {
    "a": 59.5,
    "b": 41.5,
-   "vol": 30995
+   "vol": 31010
   },
   "polymarket": {
    "pA": 0.585,
@@ -3064,7 +3064,7 @@
   "kalshi": {
    "a": 20.5,
    "b": 79.5,
-   "vol": 70747
+   "vol": 70761
   },
   "polymarket": {
    "pA": 0.205,
@@ -3445,8 +3445,8 @@
   "ptsA": 110.9,
   "ptsH": 106.7,
   "pModelHome": 0.3776,
-  "pMarketHome": 0.4126,
-  "pFinalHome": 0.4073,
+  "pMarketHome": 0.4119,
+  "pFinalHome": 0.4067,
   "parts": [
    {
     "n": "Team-Stärke & Tempo",
@@ -3532,8 +3532,8 @@
   },
   "kalshi": {
    "a": 58.5,
-   "b": 42.0,
-   "vol": 74862
+   "b": 41.5,
+   "vol": 74881
   },
   "polymarket": {
    "pA": 0.585,
@@ -3734,9 +3734,9 @@
     "book": "op_bwin",
     "bookName": "bwin",
     "pModel": 0.6224,
-    "pMarket": 0.5874,
-    "p": 0.5927,
-    "ev": -0.0399,
+    "pMarket": 0.5881,
+    "p": 0.5933,
+    "ev": -0.0389,
     "evRaw": 0.0083,
     "evPin": -0.0422,
     "pPin": 0.5913,
@@ -3756,9 +3756,9 @@
     "book": "leovegas_se",
     "bookName": "LeoVegas",
     "pModel": 0.3776,
-    "pMarket": 0.4126,
-    "p": 0.4073,
-    "ev": -0.0102,
+    "pMarket": 0.4119,
+    "p": 0.4067,
+    "ev": -0.0117,
     "evRaw": -0.0825,
     "evPin": -0.0068,
     "pPin": 0.4087,
@@ -3867,9 +3867,9 @@
    "book": "leovegas_se",
    "bookName": "LeoVegas",
    "pModel": 0.3776,
-   "pMarket": 0.4126,
-   "p": 0.4073,
-   "ev": -0.0102,
+   "pMarket": 0.4119,
+   "p": 0.4067,
+   "ev": -0.0117,
    "evRaw": -0.0825,
    "evPin": -0.0068,
    "pPin": 0.4087,
@@ -3896,7 +3896,7 @@
    "form": -6.66,
    "TOTraw": 217.55,
    "pModelRaw": 0.3776,
-   "pMarket": 0.4126
+   "pMarket": 0.4119
   },
   "injuryReport": "2026-11-23 08:30 ET",
   "sdUsed": 13.56,
@@ -3910,9 +3910,9 @@
    "book": "leovegas_se",
    "bookName": "LeoVegas",
    "pModel": 0.3776,
-   "pMarket": 0.4126,
-   "p": 0.4073,
-   "ev": -0.0102,
+   "pMarket": 0.4119,
+   "p": 0.4067,
+   "ev": -0.0117,
    "evRaw": -0.0825,
    "evPin": -0.0068,
    "pPin": 0.4087,
