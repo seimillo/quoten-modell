@@ -141,6 +141,23 @@ def nba_block(now, params, kalshi_nba, pm_nba, history, recent_min=None):
     return nba, events
 
 
+def props_block(nba, events, pstats, now, track=True):
+    """Spielerwetten simulieren, speichern, ✓ in die Trefferliste (mittags) bzw. Schlussquote (abends)."""
+    from . import props as PR
+    try:
+        sd = nba[0].get("sdUsed", 13.0) if nba else 13.0
+        games = PR.evaluate(nba, events, pstats, {}, sd)
+    except Exception as e:  # noqa: BLE001
+        log(f"Spielerwetten fehlgeschlagen: {e}")
+        return []
+    save_json("props.json", {"updated": now.isoformat(), "games": games})
+    if track:
+        PR.track(games, now)
+    else:
+        PR.record_close(games, now)
+    return games
+
+
 def main():
     mode = os.environ.get("RUN_MODE")
     if mode == "close":
@@ -187,10 +204,14 @@ def main():
     nba = []
     history = update_history(now)
     recent_min = update_minutes(history, now)
+    from . import playerstats, props as PR
+    pstats = playerstats.update(history)
+    prop_games = []
     if "basketball_nba" in active:
-        nba, _ = nba_block(now, params, kalshi_nba, pm_nba, history, recent_min)
+        nba, events_all = nba_block(now, params, kalshi_nba, pm_nba, history, recent_min)
         for g in nba:
             g["middayBest"] = g["best"]
+        prop_games = props_block(nba, events_all, pstats, now, track=True)
     else:
         log("NBA: aktuell keine Spiele bei The Odds API")
 
@@ -200,6 +221,11 @@ def main():
     settle(picks, nba_scores_from_history(picks, history, now))
     notify_results([picks[k] for k in open_ids if picks[k].get("result")])
     notify_value_bets(nba)
+    T_before = {k for k, t in load_json("props_picks.json", {}).items() if not t.get("result")}
+    T = PR.settle(pstats, now)
+    from .notify import notify_props, notify_props_results
+    notify_props_results([T[k] for k in T_before if k in T and T[k].get("result")])
+    notify_props(prop_games)
     params = calibrate(picks, params)                 # Modell lernt aus allen ausgewerteten Spielen
     save_params(params)
 
@@ -207,6 +233,7 @@ def main():
     save_json("picks.json", picks)
     old = load_json("status.json", {})
     save_json("status.json", {"updated": now.isoformat(), "credits": S.CREDITS, "stats": stats(picks), "log": LOG[-60:],
+                              "propStats": PR.stats(),
                               "closeUpdated": old.get("closeUpdated"), "closeLog": old.get("closeLog", []),
                               "params": {k: params[k] for k in ("nba", "n")}})
     notify_problems(LOG, S.CREDITS, "Mittagslauf")
@@ -227,6 +254,8 @@ def main_close():
     try:
         nba, nba_events = nba_block(now, params, S.kalshi_events("KXNBAGAME"), S.polymarket_events("nba"),
                                     load_json("games.json", []))
+        from . import playerstats
+        props_block(nba, nba_events, playerstats.load(), now, track=False)
         events += nba_events
         for g in nba:
             mb = (old.get(g["id"]) or {}).get("middayBest")

@@ -65,6 +65,11 @@ def patch():
     S.espn_scoreboard = lambda d: [{"date": d.isoformat(), "start": PAST, "home": "Atlanta Hawks", "away": "Charlotte Hornets",
                                     "done": True, "neutral": False, "hs": 111, "as": 97, "eid": "401"}] if d.isoformat() == ET_PAST else []
     S.espn_boxscore = lambda eid: {"Detroit Pistons": {"Det Spieler 0": 38.0}}
+    S.espn_boxscore_stats = lambda eid: {
+        "Atlanta Hawks": {f"Atl Spieler {i}": {"min": m, "pts": round(m * 0.5), "reb": round(m * 0.2), "ast": round(m * 0.1), "fg3m": round(m * 0.05)}
+                          for i, m in enumerate([34, 32, 30, 28, 26, 22, 20, 16, 14, 10])},
+        "Charlotte Hornets": {f"Cha Spieler {i}": {"min": m, "pts": round(m * 0.45), "reb": round(m * 0.18), "ast": round(m * 0.1), "fg3m": round(m * 0.05)}
+                              for i, m in enumerate([34, 32, 30, 28, 26, 22, 20, 16, 14, 10])}}
     S.espn_injuries = lambda: {"Detroit Pistons": [{"player": "Jalen Duren", "status": "Out", "info": "Oberschenkel"}]}
     # Nach dem Patch neu binden, weil run und markets die Funktionen beim Import übernommen haben
     import pipeline.markets as M
@@ -137,6 +142,21 @@ def main():
         P = calibrate(fake, P)
     print("--- gelernt:", P["nba"])
     assert P["nba"]["hca"] > 2.6 and P["nba"]["team_scale"] < 0.95 and P["nba"]["total_bias"] > 1, "Kalibrierung lernt nicht"
+    # Spielerwetten-Simulation mit erfundenen Daten: Mittelwert ≈ Minuten × Rate, Chancen monoton
+    from . import props as PR
+    import numpy as np
+    pst = {"players": {f"ATL|spieler {chr(97 + i)}": {"name": f"Spieler {chr(97 + i)}", "games": [[f"2026-11-{d:02d}", m, round(m * 0.5), round(m * 0.2), round(m * 0.1), 1, "BOS"]
+                                                                          for d in range(1, 11)]}
+                       for i, m in enumerate([34, 32, 30, 28, 26, 22, 20, 16, 14, 10])}}
+    pst["players"].update({k.replace("ATL", "BOS"): v for k, v in pst["players"].items()})
+    g = {"id": "x", "commence": "2026-11-20T00:00:00Z", "abbrH": "ATL", "abbrA": "BOS", "home": "Atlanta Hawks",
+         "away": "Boston Celtics", "margin": 0.0, "poss": 99.5, "ptsH": 120.0, "ptsA": 120.0, "injuries": {}}
+    offers = [{"player": "Spieler A", "stat": "pts", "line": l, "over": 1.9, "under": 1.9, "book": "op_bet365"} for l in (12.5, 16.5, 20.5)]
+    out = PR.evaluate([g], [{"id": "x", "props": offers}], pst, {}, 12.5)
+    pp = {p["line"]: p for p in out[0]["props"] if p["side"] == "over"}
+    print("--- Spieler A (34 Min × 0,5 Pkt):", {l: (p["mean"], p["pSim"]) for l, p in pp.items()})
+    assert 14 < pp[16.5]["mean"] < 20, "Simulierter Mittelwert unplausibel"
+    assert pp[12.5]["pSim"] > pp[16.5]["pSim"] > pp[20.5]["pSim"], "Chancen nicht monoton"
     print("SELBSTTEST OK")
 
 

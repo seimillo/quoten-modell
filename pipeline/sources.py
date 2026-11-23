@@ -370,6 +370,38 @@ def espn_boxscore(eid):
     return out
 
 
+def espn_boxscore_stats(eid):
+    """Volle Spielerwerte eines Spiels: {Teamname: {Spielername: {min, pts, reb, ast, fg3m}}}."""
+    url = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/summary"
+    try:
+        data, _ = get(url, {"event": eid})
+    except Exception as e:  # noqa: BLE001
+        log(f"ESPN-Boxscore {eid} fehlgeschlagen: {e}")
+        return None
+    out = {}
+    for team in (data.get("boxscore") or {}).get("players", []):
+        name = (team.get("team") or {}).get("displayName")
+        for st in team.get("statistics", [])[:1]:
+            labels = [str(x).upper() for x in (st.get("labels") or st.get("names") or [])]
+            if "MIN" not in labels:
+                continue
+            idx = {k: labels.index(k) for k in ("MIN", "PTS", "REB", "AST", "3PT") if k in labels}
+            for a in st.get("athletes", []):
+                if a.get("didNotPlay") or not a.get("stats"):
+                    continue
+                row = a["stats"]
+                try:
+                    raw = str(row[idx["MIN"]])
+                    m = float(raw.split(":")[0]) + (float(raw.split(":")[1]) / 60 if ":" in raw else 0)
+                    rec = {"min": round(m, 1), "pts": int(row[idx["PTS"]]), "reb": int(row[idx["REB"]]),
+                           "ast": int(row[idx["AST"]]), "fg3m": int(str(row[idx["3PT"]]).split("-")[0])}
+                except (ValueError, KeyError, IndexError):
+                    continue
+                if rec["min"] > 0:
+                    out.setdefault(name, {})[(a.get("athlete") or {}).get("displayName", "")] = rec
+    return out
+
+
 # ---------------- ESPN (NBA-Verletzungen) ----------------
 
 def espn_injuries():

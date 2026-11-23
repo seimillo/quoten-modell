@@ -104,6 +104,52 @@ def markets():
     return mk
 
 
+PROP_STATS = {"playertotals-points": "pts", "playertotals-rebounds": "reb", "playertotals-assists": "ast",
+              "playertotals-3pointers": "fg3m"}
+
+
+def prop_markets():
+    """Spielerwetten-Märkte (über/unter, ganzes Spiel): marketId → (Statistik, Linie, {outcomeId: Over/Under})."""
+    raw = load_json("oddspapi_prop_markets.json", {})
+    if not raw:
+        try:
+            data = _get("markets", sportId=SPORT_BASKETBALL)
+            items = data if isinstance(data, list) else data.get("markets", data.get("data", []))
+            raw = {str(m["marketId"]): {"name": m.get("marketName"), "type": m.get("marketType"), "line": m.get("handicap"),
+                                        "period": m.get("period"),
+                                        "outcomes": {str(o["outcomeId"]): o.get("outcomeName") for o in m.get("outcomes", [])}}
+                   for m in items if isinstance(m, dict) and m.get("playerProp")}
+            save_json("oddspapi_prop_markets.json", raw)
+        except Exception as e:  # noqa: BLE001
+            log(f"OddsPapi Spielerwetten-Märkte fehlgeschlagen: {e}")
+            return {}
+    return {mid: {"stat": PROP_STATS[d["type"]], "line": float(d["line"]), "outcomes": d["outcomes"]}
+            for mid, d in raw.items() if d.get("type") in PROP_STATS and str(d.get("period")) == "result" and d.get("line") is not None}
+
+
+def _props(bo, pm, book):
+    """Spielerwetten eines Buchmachers: [{player, stat, line, over?, under?, book}] – bet365 bietet oft nur „über“ an."""
+    rows = {}
+    for mid, m in (bo.get("markets") or {}).items():
+        d = pm.get(str(mid))
+        if not d or m.get("marketActive") is False:
+            continue
+        for oid, o in (m.get("outcomes") or {}).items():
+            side = str(d["outcomes"].get(str(oid), "")).lower()
+            if side not in ("over", "under"):
+                continue
+            for pk, p in (o.get("players") or {}).items():
+                if pk == "0" or not p.get("price") or p.get("active") is False:
+                    continue
+                name = str(p.get("playerName") or "")
+                if "," in name:
+                    last, first = name.split(",", 1)
+                    name = f"{first.strip()} {last.strip()}"
+                r = rows.setdefault((pk, d["stat"], d["line"]), {"player": name, "stat": d["stat"], "line": d["line"], "book": book})
+                r[side] = float(p["price"])
+    return [r for r in rows.values() if r.get("over") or r.get("under")]
+
+
 def _book_markets(bo, mk, p1_is_home, home, away):
     """Ein Buchmacher-Eintrag einer Partie → h2h/spreads/totals im Format von The Odds API (nur Hauptlinien)."""
     h2h, spreads, totals = [], [], []
@@ -145,6 +191,7 @@ def attach(events):
     mk = markets()
     if not mk:
         return events
+    pm = prop_markets()
     names = participants()
     from .nba import canon
     by_teams = {}
@@ -189,7 +236,13 @@ def attach(events):
                     mkts = [m for m in mkts if m["key"] != "spreads"]   # Vorzeichen unklar → Handicap weglassen
             e.setdefault("bookmakers", []).append({"key": "op_" + key, "title": key, "markets": mkts,
                                                     "link": bo.get("fixturePath")})
+            if pm:
+                pr = _props(bo, pm, "op_" + key)
+                e.setdefault("props", []).extend(pr)
+                e.setdefault("links", {})["op_" + key] = bo.get("fixturePath")
             added += 1
+    n_props = sum(len(e.get("props", [])) for e in events)
+    log(f"OddsPapi: {n_props} Spielerwetten-Linien")
     log(f"OddsPapi: {added} Buchmacher-Einträge an {len(events)} Spiele gehängt (bet365.de, bwin.de) · "
         f"Handicap-Linien plausibel {lines_ok}, verworfen {lines_bad} · {_usage()['requests']} von 250 Abfragen diesen Monat")
     return events

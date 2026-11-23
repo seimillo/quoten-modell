@@ -100,3 +100,38 @@ def notify_problems(log_lines, credits=None, mode="Lauf"):
         lines.append(f"Nur noch {rem:.0f} Credits bei The Odds API übrig.")
     if lines:
         send(f"Warnung: {mode} mit Problemen", lines, tags=("warning",), priority=3)
+
+
+def notify_props(prop_games, limit=6):
+    """Neue ✓-Spielerwetten (höchstens `limit` pro Nachricht, beste zuerst)."""
+    sent = load_json("notified.json", {})
+    cands = []
+    for g in prop_games:
+        for p in g["props"]:
+            k = f"P|{g['id']}|{p['key']}|{p['stat']}|{p['line']}|{p['side']}"
+            if p.get("value") and k not in sent:
+                cands.append((p["ev"], k, g, p))
+    cands.sort(key=lambda x: -x[0])
+    lines = []
+    for ev, k, g, p in cands[:limit]:
+        side = "über" if p["side"] == "over" else "unter"
+        lines.append(f"🏀 {p['player']} {side} {p['line']:g} {p['statName']} @ {p['odds']:.2f} {p['bookName']} · "
+                     f"Sim Ø {p['mean']:g} · EV {p['ev'] * 100:+.1f} %" + (" · in App prüfen" if p.get("checkApp") else ""))
+        sent[k] = g["commence"]
+    if lines and send("Spielerwetten ✓", lines, tags=("basketball", "dart"), priority=3):
+        save_json("notified.json", dict(sorted(sent.items(), key=lambda kv: kv[1])[-400:]))
+
+
+def notify_props_results(rows):
+    rows = [t for t in rows if t.get("result") in ("win", "loss", "push")]
+    if not rows:
+        return
+    lines, total = [], 0.0
+    for t in rows:
+        g = 10 * (t["odds"] - 1) if t["result"] == "win" else -10 if t["result"] == "loss" else 0
+        total += g
+        side = "über" if t["side"] == "over" else "unter"
+        lines.append(f"{t['player']} {side} {t['line']:g} {t['statName']}: {t.get('value')} – "
+                     f"{'gewonnen' if t['result'] == 'win' else 'verloren' if t['result'] == 'loss' else 'zurück'} ({g:+.2f} €)")
+    lines.append(f"Summe bei 10 € je Wette: {total:+.2f} €")
+    send("Ergebnisse Spielerwetten", lines, tags=("basketball", "moneybag"))
