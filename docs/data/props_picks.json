@@ -358,5 +358,31 @@
    "book": "bet365",
    "at": "2026-11-23T15:49+00:00"
   }
+ },
+ "a72a1703f7a92b80768255d1d977a761|mikel brown|pts|11.5|under": {
+  "src": "mittags",
+  "player": "Mikel Brown Jr.",
+  "key": "mikel brown",
+  "team": "BKN",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 11.5,
+  "side": "under",
+  "odds": 2.6,
+  "book": "op_bwin",
+  "bookName": "bwin",
+  "pSim": 0.6001,
+  "p": 0.4191,
+  "ev": 0.0896,
+  "stake": 0.01,
+  "mean": 10.8,
+  "safe": false,
+  "risks": [
+   "Gegner Jonathan Kuminga fraglich"
+  ],
+  "game": "BKN @ MIN",
+  "commence": "2026-11-24T00:40:00Z",
+  "result": null,
+  "value": null
  }
 }

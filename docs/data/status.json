@@ -1,7 +1,7 @@
 {
- "updated": "2026-11-23T15:48:22.995490+00:00",
+ "updated": "2026-11-23T15:57:32.355438+00:00",
  "credits": {
-  "remaining": 407.0,
+  "remaining": 404.0,
   "used_now": 3.0
  },
  "stats": {
@@ -10,9 +10,9 @@
   "brierModel": 0.24514616,
   "brierMarket": 0.25242116000000003,
   "brierRaw": 0.23125814,
-  "clvN": 16,
-  "clvAvg": -0.0223,
-  "clvPos": 0.188,
+  "clvN": 13,
+  "clvAvg": -0.0237,
+  "clvPos": 0.077,
   "calibration": [
    {
     "from": 0.0,
@@ -50,8 +50,8 @@
     "real": 1.0
    }
   ],
-  "clvValueN": 1,
-  "clvValueAvg": 0.0214,
+  "clvValueN": 0,
+  "clvValueAvg": null,
   "valueBets": 0,
   "profit": 0,
   "roi": null,
@@ -79,12 +79,11 @@
   "NBA-Verletzungsbericht 23.11. 10:45 ET: 74 Spieler, 10 Teams noch nicht gemeldet",
   "Quoten basketball_nba: 10 Events, 10 mit Buchmacher-Quoten",
   "OddsPapi: 2175 Spielerwetten-Linien",
-  "OddsPapi: 18 Buchmacher-Einträge an 10 Spiele gehängt (bet365.de, bwin.de) · Handicap-Linien plausibel 8, verworfen 0 · 138 von 250 Abfragen diesen Monat",
+  "OddsPapi: 18 Buchmacher-Einträge an 10 Spiele gehängt (bet365.de, bwin.de) · Handicap-Linien plausibel 8, verworfen 0 · 144 von 250 Abfragen diesen Monat",
   "Streuung: Markt 12.7, Modell nutzt 13.65",
   "NBA: 10 Spiele bewertet, 1 mit Value-Wette",
   "Spielerwetten: 2246 Linien in 10 Spielen simuliert, 8 ✓",
   "Trefferliste: 0 Prognosen ausgewertet",
-  "Push-Nachricht „Neue Wetten (✓ Modell, ⚡ besser als Pinnacle)“: gesendet",
   "Spielerwetten lernen: 0 Spieler-Einsätze geprüft (Anpassung ab 150)",
   "Vertrauen in die Simulation: 0 neue Linien ausgewertet · Abweichung ab 0 %: 0.30 (n=0), Abweichung ab 5 %: 0.30 (n=0), Abweichung ab 10 %: 0.30 (n=0), Abweichung ab 15 %: 0.30 (n=0)",
   "Push-Nachricht „Spielerwetten ✓“: gesendet",
@@ -111,10 +110,20 @@
     "n": 0,
     "profit": 0,
     "roi": null
+   },
+   "sicher": {
+    "n": 0,
+    "profit": 0,
+    "roi": null
+   },
+   "unsicher": {
+    "n": 0,
+    "profit": 0,
+    "roi": null
    }
   },
   "clvPos": 0.3,
-  "bets": 12,
+  "bets": 13,
   "settled": 0,
   "profit": 0,
   "roi": null,
@@ -155,29 +164,5 @@
    "conf": 0.15
   },
   "n": {}
- },
- "pregameUpdated": "2026-11-23T15:49:13.273360+00:00",
- "pregameLog": [
-  "Kalshi KXNBAGAME: 31 Events",
-  "Polymarket nba: 100 Events",
-  "Basketball-Reference Ratings 2027: 30 Teams",
-  "Basketball-Reference Ratings 2026: 30 Teams",
-  "Basketball-Reference Tempo 2027: 31 Teams",
-  "Basketball-Reference Spieler 2027: 476 Einträge",
-  "Basketball-Reference Spieler 2026: 661 Einträge",
-  "ESPN Verletzungen: 104 Einträge",
-  "NBA-Verletzungsbericht 23.11. 10:45 ET: 74 Spieler, 10 Teams noch nicht gemeldet",
-  "Quoten basketball_nba: 10 Events, 10 mit Buchmacher-Quoten",
-  "OddsPapi: 2404 Spielerwetten-Linien",
-  "OddsPapi: 38 Buchmacher-Einträge an 10 Spiele gehängt (bet365.de, bwin.de, betano.de, 888sport.de) · Handicap-Linien plausibel 28, verworfen 0 · 142 von 250 Abfragen diesen Monat",
-  "Streuung: Markt 12.7, Modell nutzt 13.65",
-  "NBA: 10 Spiele bewertet, 3 mit Value-Wette",
-  "Spielerwetten: 2453 Linien in 10 Spielen simuliert, 9 ✓",
-  "Spielerwetten vor Spielbeginn: 3 bestätigt, 1 schwächer, 0 zurückziehen, 4 geprüft",
-  "Spielerwetten Schlussquoten: 10",
-  "Push-Nachricht „Spielerwetten vor Spielbeginn“: gesendet",
-  "Abend-Update NBA: 7 Spiele mit geänderter Empfehlung",
-  "Push-Nachricht „Abend-Update: neue ✓-Wetten“: gesendet",
-  "Schlussquoten: 10 Prognosen mit CLV"
- ]
+ }
 }
