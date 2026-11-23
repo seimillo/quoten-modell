@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meine Wetten · NBA-Quoten-Modell</title>
+<style>
+:root{--chart:#2e7d46;--bg:#f6f6f3;--card:#fff;--ink:#1c1f23;--muted:#626873;--line:#e1e0db;--accent:#2f6b3f;--soft:#e3efe5;--bad:#a23b2f;--warn:#9a5b00;--warnsoft:#fbf0de}
+@media (prefers-color-scheme:dark){:root{--chart:#46a05b;--bg:#131517;--card:#1c1f22;--ink:#e9eaea;--muted:#9aa0a6;--line:#2e3236;--accent:#7cc48d;--soft:#213a28;--bad:#ec8a7e;--warn:#e2a64a;--warnsoft:#3a2e1a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line)}
+header .in{max-width:900px;margin:0 auto;padding:10px 14px 0}
+.brand{font-weight:700}
+nav{display:flex;gap:2px;overflow-x:auto;margin-top:6px}
+nav a{flex:1;text-align:center;padding:10px 8px;font-size:.9rem;font-weight:600;color:var(--muted);text-decoration:none;border-bottom:3px solid transparent;white-space:nowrap}
+nav a.on{color:var(--accent);border-bottom-color:var(--accent)}
+main{max-width:900px;margin:0 auto;padding:14px 14px 60px}
+h1{font-size:1.5rem;margin:8px 0 4px}
+h2{font-size:1.05rem;margin:0 0 10px}
+h3{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin:14px 0 6px}
+.muted,.hint{color:var(--muted)} .hint{font-size:.8rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:14px}
+.item{border:1px solid var(--line);border-radius:12px;background:var(--bg);margin-bottom:10px}
+.item summary{list-style:none;cursor:pointer;padding:12px;display:flex;justify-content:space-between;gap:8px}
+.item summary::-webkit-details-marker{display:none}
+.item .body{padding:0 12px 12px}
+.t{font-weight:700}
+.small{font-size:.8rem;color:var(--muted)}
+.tag{font-size:.75rem;padding:3px 8px;border-radius:20px;white-space:nowrap;align-self:flex-start}
+.tag.good{background:var(--soft);color:var(--accent)} .tag.none{border:1px solid var(--line);color:var(--muted)} .tag.warn{background:var(--warnsoft);color:var(--warn)}
+table{width:100%;border-collapse:collapse;font-size:.88rem;font-variant-numeric:tabular-nums}
+th,td{padding:6px 5px;border-bottom:1px solid var(--line);text-align:right;vertical-align:top}
+th:first-child,td:first-child{text-align:left}
+th{font-size:.72rem;color:var(--muted);font-weight:600}
+.pos{color:var(--accent);font-weight:600}.neg{color:var(--bad)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px}
+.kpi{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px}
+.kpi .k{font-size:.72rem;color:var(--muted)} .kpi .v{font-size:1.25rem;font-weight:700}
+@media (max-width:620px){.kpis{grid-template-columns:1fr 1fr}}
+[hidden]{display:none!important}
+footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:var(--muted)}
+.info li,.info p{font-size:.92rem}
+.chart{position:relative;margin:6px 0 4px} .chart svg{width:100%;height:auto;display:block}
+.chart .tip{position:absolute;pointer-events:none;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:6px 8px;font-size:.78rem;box-shadow:0 2px 8px rgba(0,0,0,.12);display:none;white-space:nowrap}
+.form{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-top:8px}
+.form select,.form input{font:inherit;font-size:.85rem;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:inherit}
+.form select{flex:1 1 180px;min-width:0} .form input{width:80px}
+.btn{font:inherit;font-size:.85rem;padding:6px 12px;border-radius:8px;border:1px solid var(--accent);background:var(--accent);color:#fff;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--accent)} .btn.x{border:none;background:none;color:var(--muted);padding:2px 6px}
+
+.big{font-size:2.4rem;font-weight:800;line-height:1.1;font-variant-numeric:tabular-nums}
+.row{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
+.bar{height:10px;border-radius:6px;background:var(--line);overflow:hidden;margin:10px 0 4px}
+.bar>div{height:100%;background:var(--chart)}
+.bet{border:1px solid var(--line);border-radius:12px;background:var(--bg);padding:10px 12px;margin-bottom:8px}
+.bet .top{display:flex;justify-content:space-between;gap:8px}
+.res{font-weight:700;white-space:nowrap}
+.mini{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.mini .btn{font-size:.78rem;padding:4px 9px}
+.seg{display:flex;gap:4px;margin:4px 0 8px}.seg button{flex:1}
+.seg .btn:not(.on){background:transparent;color:var(--accent)}
+.form input.wide{width:100%;flex:1 1 220px}
+</style>
+</head>
+<body>
+<header><div class="in">
+  <div class="brand">💶 Meine Wetten</div>
+  <nav>
+    <a href="index.html#start">Übersicht</a>
+    <a href="meine.html" class="on">Meine Wetten</a>
+    <a href="index.html#treffer">Treffer des Modells</a>
+  </nav>
+</div></header>
+<main>
+<section class="card" id="kassecard"></section>
+<section class="card"><h2>Verlauf deiner Kasse</h2>
+  <div class="seg" role="group" aria-label="Zeitraum"><button class="btn on" data-r="all">Alles</button><button class="btn" data-r="30">30 Tage</button><button class="btn" data-r="7">7 Tage</button></div>
+  <div class="chart" id="chart"></div>
+  <p class="small" id="chartnote"></p>
+</section>
+<section class="card"><h2>Offene Wetten</h2><div id="open"></div></section>
+<section class="card"><h2>Auswertung</h2><div id="stats"></div></section>
+<section class="card"><h2>Abgerechnete Wetten</h2><div id="done"></div></section>
+<section class="card"><h2>Wette von Hand eintragen</h2>
+  <p class="hint">Für Wetten, die nicht im Wettzettel stehen. Das Ergebnis trägst du danach selbst ein (Gewonnen/Verloren). Modell-Tipps trägst du am besten mit <b>＋</b> im Wettzettel ein – die werden automatisch ausgewertet.</p>
+  <div class="form"><input class="wide" id="mPick" placeholder="Wette, z. B. Lakers Sieg"><input id="mOdds" type="number" step="0.01" inputmode="decimal" placeholder="Quote"><input id="mStake" type="number" step="0.5" inputmode="decimal" placeholder="Einsatz €"><input id="mBook" placeholder="Anbieter"><button class="btn" id="mAdd">Eintragen</button></div>
+</section>
+<section class="card"><h2>Einstellungen</h2>
+  <div class="form"><label class="small" for="kasse">Startkasse (€)</label><input id="kasse" type="number" min="0" step="10" inputmode="decimal" placeholder="z. B. 100">
+  <label class="small" for="fest">Fester Einsatz (€)</label><input id="fest" type="number" min="0" step="1" inputmode="decimal" placeholder="z. B. 10"></div>
+  <p class="hint">Gespeichert wird nur auf diesem Gerät im Browser. Mit „Sichern“ und „Laden“ nimmst du die Wetten auf ein anderes Gerät mit.</p>
+  <div class="form"><button class="btn ghost" id="exp">Sichern (Datei)</button><label class="btn ghost">Laden<input type="file" id="imp" accept=".json,application/json" hidden></label></div>
+</section>
+</main>
+<footer>Analyse- und Lernprojekt, keine Wettempfehlung · Hilfe bei Glücksspielproblemen: check-dein-spiel.de · 0800 1 37 27 00</footer>
+<script>
+(async function(){
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const f = (x,d=1) => x===null||x===undefined||isNaN(x) ? "–" : (Math.round(x*10**d)/10**d).toFixed(d).replace(".",",");
+const pct = (x,d=0) => f(x*100,d) + " %";
+const sg = (x,d=1) => (x>0?"+":x<0?"−":"±") + f(Math.abs(x),d);
+const cls = x => x>0.0005?"pos":x<-0.0005?"neg":"";
+const when = iso => iso ? new Date(iso).toLocaleString("de-DE",{weekday:"short",day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"}) : "";
+const day = iso => new Date(iso).toLocaleDateString("sv-SE",{timeZone:"Europe/Berlin"});
+async function load(n, d){ try{ const r = await fetch("data/"+n+"?v="+Date.now()); return r.ok ? await r.json() : d; }catch(e){ return d; } }
+const [picksAll, PT, PRES] = await Promise.all([load("picks.json",{}), load("props_picks.json",{}), load("player_results.json",{players:{}})]);
+
+// ---- Speicher (gleich wie auf der Übersicht) ----
+const KEY="meineWetten"; let memMine=[];
+const ls = (k,v) => { try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v); }catch(e){ return null; } };
+const kasse = () => parseFloat(ls("kasse")||"")||0;
+const fest = () => parseFloat(ls("fest")||"")||0;
+const getMine=()=>{ try{ return JSON.parse(localStorage.getItem(KEY)||"[]"); }catch(e){ return memMine; } };
+const setMine=a=>{ memMine=a; try{ localStorage.setItem(KEY, JSON.stringify(a)); }catch(e){} render(); };
+
+// ---- Auswertung ----
+const SIDX = {pts:2, reb:3, ast:4, fg3m:5};
+function settleProp(w){
+  const t = PT[w.pid]; if(t && t.result) return {res:t.result, val:t.value};
+  const rows = (PRES.players||{})[`${w.team}|${w.key}`] || [];
+  const d0 = new Date(new Date(w.commence).getTime() - 5*3600e3).toISOString().slice(0,10);
+  const g = rows.find(r=>Math.abs((new Date(r[0]) - new Date(d0))/864e5) <= 1);
+  if(!g) return (Date.now() - new Date(w.commence).getTime() > 2*864e5) ? {res:"push", val:"nicht gespielt"} : null;
+  const v = g[SIDX[w.stat]];
+  return {res: v===w.line ? "push" : ((v > w.line) === (w.side==="over") ? "win" : "loss"), val:v};
+}
+function settle(w){
+  if(w.manual) return {res:w.manual};
+  if(w.type==="manual") return null;
+  if(w.type==="prop") return settleProp(w);
+  const r = picksAll[w.gameId]; if(!r || !r.score) return null;
+  const [h,a] = r.score.split(":").map(Number); let d;
+  if(w.market==="Sieg") d = w.side==="home" ? h-a : a-h;
+  else if(w.market==="Handicap") d = (w.side==="home" ? h-a : a-h) + Number(w.line);
+  else d = (w.side==="over" ? 1 : -1) * (h+a-Number(w.line));
+  return {res: d>0?"win":d<0?"loss":"push", val:r.score};
+}
+function clvOf(w){
+  if(w.type==="prop"){ const t = PT[w.pid]; return t && t.close ? w.odds*t.close.pMkt-1 : null; }
+  const r = picksAll[w.gameId]; if(!r) return null;
+  if(r.bet && r.close && r.bet.pick===w.pick) return w.odds*r.close.pFair-1;
+  if(r.flash && r.flashClose && r.flash.pick===w.pick) return w.odds*r.flashClose.pFair-1;
+  return null;
+}
+const gainOf = w => w.res==="win"?w.stake*(w.odds-1):w.res==="loss"?-w.stake:0;
+const kindOf = w => w.kind || (w.type==="manual" ? "eigene" : w.value ? "✓" : "eigene");
+const KIND = {"✓":"✓ Modell (Spiel)","⚡":"⚡ besser als Pinnacle","🏀":"🏀 Spielerwette","eigene":"eigene Wahl"};
+const PRE = {"bestätigt":"✅ vor Spielbeginn bestätigt","schwächer":"➖ vor Spielbeginn schwächer","zurückziehen":"❌ vor Spielbeginn zurückgezogen","nicht mehr angeboten":"⚠️ nicht mehr angeboten"};
+const resTxt = w => !w.res ? `<span class="small">offen</span>` : w.res==="win" ? `<span class="res pos">+${f(w.stake*(w.odds-1),2)} €</span>` : w.res==="loss" ? `<span class="res neg">−${f(w.stake,2)} €</span>` : `<span class="res">zurück</span>`;
+let range = "all";
+
+function render(){
+  const all = getMine().map(w=>{ const s = settle(w)||{}; return {...w, res:s.res||null, val:s.val, clv:clvOf(w)}; })
+                       .sort((a,b)=>String(a.commence).localeCompare(String(b.commence)) || a.ts-b.ts);
+  const done = all.filter(w=>w.res), open = all.filter(w=>!w.res);
+  const start = kasse(), gain = done.reduce((s,w)=>s+gainOf(w),0), now = start + gain;
+  const offen = open.reduce((s,w)=>s+w.stake,0), staked = done.reduce((s,w)=>s+w.stake,0);
+  const dec = done.filter(w=>w.res!=="push"), wins = dec.filter(w=>w.res==="win").length;
+  const need = dec.length ? dec.reduce((s,w)=>s+1/w.odds,0)/dec.length : null;
+  const cl = all.map(w=>w.clv).filter(x=>x!=null);
+
+  // ---- Kasse ----
+  $("kassecard").innerHTML = start ? `
+    <div class="row"><div><div class="small">Kasse jetzt</div><div class="big ${cls(gain)}">${f(now,2)} €</div>
+      <div class="small">Start ${f(start,0)} € · ${gain?sg(gain,2)+" € ("+sg(gain/start*100,1)+" %)":"noch nichts abgerechnet"}</div></div>
+      <div style="text-align:right"><div class="small">frei verfügbar</div><div class="t">${f(now-offen,2)} €</div><div class="small">${f(offen,0)} € in ${open.length} offenen Wetten</div></div></div>
+    <div class="bar" aria-hidden="true"><div style="width:${Math.max(0,Math.min(100,(now-offen)/Math.max(start,now)*100))}%"></div></div>
+    <div class="small">${fest()?`Fester Einsatz ${f(fest(),0)} € → noch ${Math.max(0,Math.floor((now-offen)/fest()))} Wetten möglich`:""}</div>
+    <div class="kpis" style="margin-top:12px">
+      <div class="kpi"><div class="k">Wetten</div><div class="v">${all.length}</div><div class="hint">${wins} gewonnen · ${dec.length-wins} verloren${done.length-dec.length?` · ${done.length-dec.length} zurück`:""}</div></div>
+      <div class="kpi"><div class="k">Trefferquote</div><div class="v">${dec.length?pct(wins/dec.length):"–"}</div><div class="hint">nötig bei deinen Quoten: ${need?pct(need):"–"}</div></div>
+      <div class="kpi"><div class="k">Rendite</div><div class="v ${cls(gain)}">${staked?sg(gain/staked*100,1)+" %":"–"}</div><div class="hint">aus ${f(staked,0)} € Einsatz</div></div>
+      <div class="kpi"><div class="k">CLV</div><div class="v ${cls(cl.length?cl.reduce((a,b)=>a+b,0)/cl.length:0)}">${cl.length?sg(cl.reduce((a,b)=>a+b,0)/cl.length*100,1)+" %":"–"}</div><div class="hint">${cl.length?`${cl.length} Wetten · ${pct(cl.filter(x=>x>0).length/cl.length)} positiv`:"kommt nach dem Lauf vor Spielbeginn"}</div></div>
+    </div>` : `<h2>Startkasse eintragen</h2><p class="hint">Trag unten bei „Einstellungen“ deine Startkasse ein (z. B. 100 €), dann siehst du hier deinen Kassenstand.</p>`;
+
+  // ---- Graph ----
+  const cut = range==="all" ? "" : new Date(Date.now()-(+range)*864e5).toISOString();
+  let k = start; const pts = [{k:start, w:null}];
+  for(const w of done){ k += gainOf(w); if(!cut || w.commence>=cut) pts.push({k, w}); else pts[0] = {k, w:null}; }
+  if(pts.length < 2){ $("chart").innerHTML = `<p class="hint">Der Graph erscheint, sobald die erste Wette abgerechnet ist.</p>`; $("chartnote").textContent=""; }
+  else {
+    const W=420,H=230,PL=46,PR=8,PT_=16,PB=26;
+    const ks = pts.map(p=>p.k), lo = Math.min(start,...ks), hi = Math.max(start,...ks), pad = Math.max(1,(hi-lo)*0.12);
+    const y0 = lo-pad, y1 = hi+pad;
+    const X = i => PL + i*(W-PL-PR)/(pts.length-1), Y = v => PT_ + (y1-v)*(H-PT_-PB)/(y1-y0);
+    const ticks = [y0+ (y1-y0)*0.15, (y0+y1)/2, y1-(y1-y0)*0.15].map(v=>Math.round(v));
+    const path = pts.map((p,i)=>(i?"L":"M")+X(i).toFixed(1)+","+Y(p.k).toFixed(1)).join(" ");
+    $("chart").innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Kassenverlauf von ${f(pts[0].k,0)} auf ${f(pts[pts.length-1].k,2)} Euro">
+      ${ticks.map(t=>`<line x1="${PL}" x2="${W-PR}" y1="${Y(t)}" y2="${Y(t)}" stroke="var(--line)" stroke-width="1"/><text x="${PL-6}" y="${Y(t)+4}" text-anchor="end" font-size="13" fill="var(--muted)">${t} €</text>`).join("")}
+      ${start>=y0&&start<=y1?`<line x1="${PL}" x2="${W-PR}" y1="${Y(start)}" y2="${Y(start)}" stroke="var(--muted)" stroke-dasharray="4 4" stroke-width="1"/><text x="${W-PR}" y="${Y(start)-5}" text-anchor="end" font-size="13" fill="var(--muted)">Start ${f(start,0)} €</text>`:""}
+      <path d="${path}" fill="none" stroke="var(--chart)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      ${pts.map((p,i)=>p.w?`<circle cx="${X(i)}" cy="${Y(p.k)}" r="${pts.length>60?3:5}" fill="${p.w.res==="win"?"var(--chart)":p.w.res==="loss"?"var(--bad)":"var(--muted)"}" stroke="var(--card)" stroke-width="1.5"/>`:"").join("")}
+      <text x="${PL}" y="${H-6}" font-size="13" fill="var(--muted)">${pts[1].w?new Date(pts[1].w.commence).toLocaleDateString("de-DE",{day:"2-digit",month:"2-digit"}):""}</text>
+      <text x="${W-PR}" y="${H-6}" text-anchor="end" font-size="13" fill="var(--muted)">${new Date(pts[pts.length-1].w.commence).toLocaleDateString("de-DE",{day:"2-digit",month:"2-digit"})}</text>
+      <line id="vl" x1="0" x2="0" y1="${PT_}" y2="${H-PB}" stroke="var(--muted)" visibility="hidden"/>
+      <rect id="hit" x="${PL}" y="0" width="${W-PL-PR}" height="${H}" fill="transparent"/></svg><div class="tip" id="tip"></div>`;
+    const svg = $("chart").querySelector("svg"), tip = $("tip"), vl = $("vl");
+    const move = e => { const r = svg.getBoundingClientRect(), sx = (e.clientX-r.left)*W/r.width;
+      const i = Math.max(0,Math.min(pts.length-1,Math.round((sx-PL)/((W-PL-PR)/(pts.length-1))))), p = pts[i];
+      vl.setAttribute("x1",X(i)); vl.setAttribute("x2",X(i)); vl.setAttribute("visibility","visible");
+      tip.innerHTML = p.w ? `<b>${f(p.k,2)} €</b><br>${esc(p.w.pick)} @ ${f(p.w.odds,2)}<br>${p.w.res==="win"?"gewonnen":p.w.res==="loss"?"verloren":"zurück"} · ${new Date(p.w.commence).toLocaleDateString("de-DE")}` : `<b>${f(p.k,2)} €</b><br>Start`;
+      tip.style.display="block"; const px = X(i)*r.width/W; tip.style.left = Math.min(r.width-tip.offsetWidth, Math.max(0, px-tip.offsetWidth/2))+"px"; tip.style.top = (Y(p.k)*r.height/H - tip.offsetHeight - 10)+"px"; };
+    $("hit").addEventListener("pointermove",move); $("hit").addEventListener("pointerdown",move);
+    $("hit").addEventListener("pointerleave",()=>{ tip.style.display="none"; vl.setAttribute("visibility","hidden"); });
+    let best=0, worst=0, cur=0, curT=null, run=0; for(const w of dec){ if(w.res===curT) run++; else { curT=w.res; run=1; } if(w.res==="win") best=Math.max(best,run); else worst=Math.max(worst,run); }
+    const days = {}; for(const w of done){ const d=day(w.commence); days[d]=(days[d]||0)+gainOf(w); }
+    const dv = Object.entries(days).sort((a,b)=>a[1]-b[1]);
+    let peak=start, dd=0; k=start; for(const w of done){ k+=gainOf(w); peak=Math.max(peak,k); dd=Math.max(dd,peak-k); }
+    $("chartnote").innerHTML = `Grüne Punkte = gewonnen, rote = verloren. ${curT?`Aktuelle Serie: <b>${run} × ${curT==="win"?"gewonnen":"verloren"}</b> · `:""}längste Gewinnserie ${best} · längste Pechsträhne ${worst} · größter Rückgang ${f(dd,2)} €${dv.length?` · bester Tag ${sg(dv[dv.length-1][1],2)} €, schlechtester ${sg(dv[0][1],2)} €`:""}`;
+  }
+
+  // ---- Offene Wetten ----
+  $("open").innerHTML = open.length ? open.slice().sort((a,b)=>String(a.commence).localeCompare(String(b.commence))).map(w=>{
+    const t = w.type==="prop" ? PT[w.pid] : null, pre = t && t.pre;
+    return `<div class="bet"><div class="top"><div><b>${esc(kindOf(w)==="eigene"?"":kindOf(w)+" ")}${esc(w.pick)}</b>
+      <div class="small">${esc(w.label||"")}${w.commence?" · "+when(w.commence)+" Uhr":""} · ${esc(w.book||"")}</div>
+      ${pre?`<div class="small">${PRE[pre.status]||"⚠️ "+esc(pre.status)}</div>`:""}
+      ${w.safe===false?`<div class="small" style="color:var(--warn)">🟠 war mittags unsicher</div>`:""}</div>
+      <div style="text-align:right"><div class="t">${f(w.odds,2)}</div><div class="small">${f(w.stake,2)} €</div><div class="small">möglich +${f(w.stake*(w.odds-1),2)} €</div></div></div>
+      <div class="mini">${w.type==="manual"||(w.commence&&Date.now()-new Date(w.commence).getTime()>4*3600e3)?`<button class="btn ghost" data-set="win" data-ts="${w.ts}">Gewonnen</button><button class="btn ghost" data-set="loss" data-ts="${w.ts}">Verloren</button><button class="btn ghost" data-set="push" data-ts="${w.ts}">Zurück</button>`:""}<button class="btn x" data-del="${w.ts}" aria-label="Wette löschen">✕ löschen</button></div></div>`; }).join("")
+    : `<p class="hint">Keine offenen Wetten. Im <a href="index.html#start">Wettzettel</a> trägst du mit <b>＋</b> eine Wette ein.</p>`;
+
+  // ---- Abgerechnet ----
+  $("done").innerHTML = done.length ? done.slice().reverse().map(w=>`<div class="bet"><div class="top"><div><b>${esc(kindOf(w)==="eigene"?"":kindOf(w)+" ")}${esc(w.pick)}</b>
+      <div class="small">${esc(w.label||"")}${w.commence?" · "+new Date(w.commence).toLocaleDateString("de-DE",{day:"2-digit",month:"2-digit"}):""} · ${esc(w.book||"")} · @ ${f(w.odds,2)} · ${f(w.stake,2)} €</div>
+      <div class="small">${w.val!=null?`Ergebnis: ${esc(w.val)}`:w.manual?"von Hand eingetragen":""}${w.clv!=null?` · <span class="${cls(w.clv)}">CLV ${sg(w.clv*100,1)} %</span>`:""}</div></div>
+      <div style="text-align:right">${resTxt(w)}<div class="mini" style="justify-content:flex-end">${w.manual?`<button class="btn x" data-set="" data-ts="${w.ts}">Ergebnis ändern</button>`:""}<button class="btn x" data-del="${w.ts}" aria-label="Wette löschen">✕</button></div></div></div></div>`).join("")
+    : `<p class="hint">Noch nichts abgerechnet. Nach dem Spiel wertet die Seite automatisch aus (Spielerwetten mit den echten Spielerwerten).</p>`;
+
+  // ---- Auswertung ----
+  if(!done.length){ $("stats").innerHTML = `<p class="hint">Erscheint nach der ersten abgerechneten Wette.</p>`; return; }
+  const group = (fn) => { const m={}; for(const w of done){ const k=fn(w); (m[k]=m[k]||[]).push(w); } return Object.entries(m); };
+  const tbl = (rows, head) => `<table><thead><tr><th>${head}</th><th>Wetten</th><th>Treffer</th><th>Gewinn</th><th>Rendite</th></tr></thead><tbody>${rows.map(([k,ws])=>{
+      const st=ws.reduce((s,w)=>s+w.stake,0), g=ws.reduce((s,w)=>s+gainOf(w),0), d=ws.filter(w=>w.res!=="push");
+      return `<tr><td>${esc(k)}</td><td>${ws.length}</td><td>${d.length?pct(d.filter(w=>w.res==="win").length/d.length):"–"}</td><td class="${cls(g)}">${sg(g,2)} €</td><td class="${cls(g)}">${st?sg(g/st*100,1)+" %":"–"}</td></tr>`; }).join("")}</tbody></table>`;
+  const from = done[0].commence, to = done[done.length-1].commence, inR = c => c>=from && c<=to;
+  const mg = Object.values(picksAll).filter(r=>r.sport==="NBA"&&r.bet&&r.bet.value&&r.betResult&&r.betResult!=="push"&&inR(r.commence));
+  const mp = Object.values(PT).filter(t=>t.result&&t.result!=="push"&&inR(t.commence));
+  const mGain = mg.reduce((s,r)=>s+(r.betResult==="win"?10*(r.bet.odds-1):-10),0) + mp.reduce((s,t)=>s+(t.result==="win"?10*(t.odds-1):-10),0), mN = mg.length+mp.length;
+  $("stats").innerHTML = `<h3>Nach Art</h3>${tbl(group(w=>KIND[kindOf(w)]||kindOf(w)),"Art")}
+    <h3>Nach Wettart</h3>${tbl(group(w=>w.type==="prop"?"Spieler":w.market||"von Hand"),"Markt")}
+    <h3>Nach Quote</h3>${tbl(group(w=>w.odds<1.7?"unter 1,70":w.odds<2.2?"1,70–2,19":w.odds<3?"2,20–2,99":"ab 3,00"),"Quote")}
+    <h3>Vergleich mit dem Modell</h3><p class="small">Alle ✓-Tipps des Modells (Spiele und Spieler) im selben Zeitraum mit je 10 €: <b class="${cls(mGain)}">${mN?sg(mGain,2)+" € ("+sg(mGain/(10*mN)*100,1)+" % aus "+mN+" Wetten)":"noch keine ausgewertet"}</b> · du: <b class="${cls(gain)}">${sg(gain,2)} €</b>.</p>
+    <p class="hint">Nach wenigen Wetten ist fast alles Zufall – aussagekräftig wird es ab etwa 50–100 Wetten. Früher zählt der CLV: Ist er im Schnitt positiv, hast du bessere Quoten erwischt als der Markt kurz vor Spielbeginn.</p>`;
+}
+
+// ---- Bedienung ----
+document.addEventListener("click", e=>{
+  const s = e.target.closest("[data-set]"), d = e.target.closest("[data-del]"), r = e.target.closest("[data-r]");
+  if(s){ setMine(getMine().map(w=>String(w.ts)===s.dataset.ts ? {...w, manual: s.dataset.set || undefined} : w)); }
+  if(d){ if(d.dataset.sure){ setMine(getMine().filter(w=>String(w.ts)!==d.dataset.del)); } else { d.dataset.sure="1"; d.textContent="Wirklich löschen?"; setTimeout(()=>{ if(d.isConnected){ delete d.dataset.sure; d.textContent="✕ löschen"; } },3000); } }
+  if(r){ range = r.dataset.r; document.querySelectorAll("[data-r]").forEach(b=>b.classList.toggle("on", b===r)); render(); }
+  if(e.target.id==="exp"){ const a=document.createElement("a"); a.href=URL.createObjectURL(new Blob([JSON.stringify(getMine(),null,1)],{type:"application/json"})); a.download="meine-wetten.json"; a.click(); }
+  if(e.target.id==="mAdd"){
+    const pick=$("mPick").value.trim(), odds=parseFloat($("mOdds").value), stake=parseFloat($("mStake").value);
+    if(!pick || !(odds>1) || !(stake>0)){ e.target.textContent="Wette, Quote und Einsatz eintragen"; setTimeout(()=>e.target.textContent="Eintragen",2000); return; }
+    setMine([...getMine(), {ts:Date.now(), type:"manual", kind:"eigene", pick, odds, stake, book:$("mBook").value.trim(), commence:new Date().toISOString(), market:"von Hand"}]);
+    $("mPick").value=""; $("mOdds").value="";
+  }
+});
+$("kasse").value = kasse() || ""; $("fest").value = fest() || "";
+$("mStake").value = fest() || "";
+$("kasse").addEventListener("change", e=>{ ls("kasse", String(parseFloat(e.target.value)||"")); render(); });
+$("fest").addEventListener("change", e=>{ ls("fest", String(parseFloat(e.target.value)||"")); $("mStake").value = fest()||""; render(); });
+$("imp").addEventListener("change", async e=>{
+  const file=e.target.files[0]; if(!file) return;
+  try{ const add=JSON.parse(await file.text()); const have=new Set(getMine().map(w=>w.ts));
+       setMine([...getMine(), ...add.filter(w=>w && (w.gameId||w.type==="manual") && !have.has(w.ts))]); }catch(err){ $("open").insertAdjacentHTML("afterbegin",'<p class="neg">Datei nicht lesbar.</p>'); }
+});
+render();
+})();
+</script>
+</body>
+</html>
