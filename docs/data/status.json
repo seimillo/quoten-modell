@@ -1,7 +1,7 @@
 {
- "updated": "2026-11-23T15:59:17.012921+00:00",
+ "updated": "2026-11-23T20:25:56.714193+00:00",
  "credits": {
-  "remaining": 401.0,
+  "remaining": 398.0,
   "used_now": 3.0
  },
  "stats": {
@@ -10,9 +10,9 @@
   "brierModel": 0.24514616,
   "brierMarket": 0.25242116000000003,
   "brierRaw": 0.23125814,
-  "clvN": 13,
-  "clvAvg": -0.0237,
-  "clvPos": 0.077,
+  "clvN": 6,
+  "clvAvg": -0.0116,
+  "clvPos": 0.167,
   "calibration": [
    {
     "from": 0.0,
@@ -57,7 +57,7 @@
   "roi": null,
   "kellyBets": 0,
   "kellyGrowth": 0,
-  "flashBets": 1,
+  "flashBets": 2,
   "flashSettled": 0,
   "flashProfit": 0,
   "flashRoi": null,
@@ -75,15 +75,16 @@
   "Basketball-Reference Tempo 2027: 31 Teams",
   "Basketball-Reference Spieler 2027: 476 Einträge",
   "Basketball-Reference Spieler 2026: 661 Einträge",
-  "ESPN Verletzungen: 104 Einträge",
-  "NBA-Verletzungsbericht 23.11. 10:45 ET: 74 Spieler, 4 Teams noch nicht gemeldet",
+  "ESPN Verletzungen: 103 Einträge",
+  "NBA-Verletzungsbericht 23.11. 15:15 ET: 94 Spieler, 1 Teams noch nicht gemeldet",
   "Quoten basketball_nba: 10 Events, 10 mit Buchmacher-Quoten",
-  "OddsPapi: 2175 Spielerwetten-Linien",
-  "OddsPapi: 18 Buchmacher-Einträge an 10 Spiele gehängt (bet365.de, bwin.de) · Handicap-Linien plausibel 8, verworfen 0 · 146 von 250 Abfragen diesen Monat",
-  "Streuung: Markt 12.7, Modell nutzt 13.65",
+  "OddsPapi: 2465 Spielerwetten-Linien",
+  "OddsPapi: 19 Buchmacher-Einträge an 10 Spiele gehängt (bet365.de, bwin.de) · Handicap-Linien plausibel 10, verworfen 0 · 148 von 250 Abfragen diesen Monat",
+  "Streuung: Markt 12.5, Modell nutzt 13.55",
   "NBA: 10 Spiele bewertet, 1 mit Value-Wette",
-  "Spielerwetten: 2245 Linien in 10 Spielen simuliert, 8 ✓",
+  "Spielerwetten: 2556 Linien in 10 Spielen simuliert, 10 ✓",
   "Trefferliste: 0 Prognosen ausgewertet",
+  "Push-Nachricht „Neue Wetten (✓ Modell, ⚡ besser als Pinnacle)“: gesendet",
   "Spielerwetten lernen: 0 Spieler-Einsätze geprüft (Anpassung ab 150)",
   "Vertrauen in die Simulation: 0 neue Linien ausgewertet · Abweichung ab 0 %: 0.30 (n=0), Abweichung ab 5 %: 0.30 (n=0), Abweichung ab 10 %: 0.30 (n=0), Abweichung ab 15 %: 0.30 (n=0)",
   "Push-Nachricht „Spielerwetten ✓“: gesendet",
@@ -123,7 +124,7 @@
    }
   },
   "clvPos": 0.3,
-  "bets": 14,
+  "bets": 20,
   "settled": 0,
   "profit": 0,
   "roi": null,
