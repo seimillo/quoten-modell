@@ -6,8 +6,8 @@
   "rest_scale": 0.6994,
   "inj_scale": 0.5,
   "sched_scale": 0.7021,
-  "travel_scale": 0.0,
-  "form_scale": 0.4683,
+  "travel_scale": 0.3,
+  "form_scale": 0.15,
   "sd_margin": 14.6358,
   "sd_total": 18.0,
   "total_bias": 0.0,
@@ -73,6 +73,26 @@
      "old": 12.5,
      "new": 14.6358,
      "target": 14.6358
+    }
+   ]
+  },
+  {
+   "date": "2026-11-23",
+   "source": "Rücktest",
+   "changes": [
+    {
+     "sport": "NBA",
+     "key": "travel_scale",
+     "old": 0.0,
+     "new": 0.3,
+     "target": 0.3
+    },
+    {
+     "sport": "NBA",
+     "key": "form_scale",
+     "old": 0.4683,
+     "new": 0.15,
+     "target": 0.15
     }
    ]
   }
