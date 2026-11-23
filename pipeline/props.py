@@ -576,7 +576,7 @@ def learn_conf(pstats, now=None):
     for lo, hi in GAP_BUCKETS:
         a = agg[f"{lo:.2f}"]
         if not a["n"]:
-            table[f"{lo:.2f}"] = {"w": CONF_P, "n": 0}
+            table[f"{lo:.2f}"] = {"w": CONF_P, "n": 0, "hi": hi}
             continue
         w_fit = W_GRID[max(range(len(W_GRID)), key=lambda i: a["ll"][i])]
         w = (a["n"] * w_fit + CONF_PRIOR_N * CONF_P) / (a["n"] + CONF_PRIOR_N) if a["n"] >= CONF_MIN_N else CONF_P

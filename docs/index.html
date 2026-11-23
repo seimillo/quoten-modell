@@ -451,7 +451,7 @@ function confTable(){
   const t = PP && PP.confGap; if(!t) return `<p class="small"><b>Vertrauen in die Simulation:</b> wird ab dem ersten ausgewerteten Spieltag gelernt (Start 30 %).</p>`;
   const rows = Object.entries(t).sort((a,b)=>+a[0]-+b[0]);
   return `<h3>Vertrauen in die Simulation (gelernt)</h3><table><thead><tr><th>Abweichung Sim ↔ Markt</th><th>Linien</th><th>Sim Ø</th><th>Markt Ø</th><th>echt „über“</th><th>Gewicht Sim</th></tr></thead><tbody>${rows.map(([lo,v])=>`<tr>
-    <td>${f(+lo*100,0)}${v.hi&&v.hi<1?"–"+f(v.hi*100,0):"+"} Pkt.</td><td>${f(v.n,0)}</td><td>${v.n?pct(v.sim):"–"}</td><td>${v.n?pct(v.mkt):"–"}</td><td>${v.n?pct(v.hit):"–"}</td>
+    <td>${(()=>{ const i=rows.findIndex(r=>r[0]===lo), nx=rows[i+1]; return nx ? `${f(+lo*100,0)}–${f(+nx[0]*100,0)} %-Pkt.` : `über ${f(+lo*100,0)} %-Pkt.`; })()}</td><td>${f(v.n,0)}</td><td>${v.n?pct(v.sim):"–"}</td><td>${v.n?pct(v.mkt):"–"}</td><td>${v.n?pct(v.hit):"–"}</td>
     <td><b>${pct(v.w)}</b>${v.n&&v.n<200?`<div class="small">ab 200 Linien</div>`:v.wFit!=null?`<div class="small">bestes ${pct(v.wFit)}</div>`:""}</td></tr>`).join("")}</tbody></table>
     <p class="small">Liegt „echt über“ näher an „Sim Ø“ als an „Markt Ø“, trifft die Simulation besser – dann steigt ihr Gewicht. Große Abweichungen bekommen meist weniger Gewicht.</p>`;
 }
