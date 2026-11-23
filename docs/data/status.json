@@ -1,7 +1,7 @@
 {
- "updated": "2026-11-23T13:05:47.768033+00:00",
+ "updated": "2026-11-23T13:18:33.064550+00:00",
  "credits": {
-  "remaining": 440.0,
+  "remaining": 437.0,
   "used_now": 3.0
  },
  "stats": {
@@ -56,7 +56,13 @@
   "profit": 0,
   "roi": null,
   "kellyBets": 0,
-  "kellyGrowth": 0
+  "kellyGrowth": 0,
+  "flashBets": 0,
+  "flashSettled": 0,
+  "flashProfit": 0,
+  "flashRoi": null,
+  "flashClv": null,
+  "flashClvN": 0
  },
  "log": [
   "Kalshi KXNBAGAME: 31 Events",
@@ -69,9 +75,9 @@
   "Basketball-Reference Spieler 2027: 476 Einträge",
   "Basketball-Reference Spieler 2026: 661 Einträge",
   "ESPN Verletzungen: 104 Einträge",
-  "NBA-Verletzungsbericht 23.11. 08:00 ET: 74 Spieler, 10 Teams noch nicht gemeldet",
+  "NBA-Verletzungsbericht 23.11. 08:15 ET: 74 Spieler, 10 Teams noch nicht gemeldet",
   "Quoten basketball_nba: 10 Events, 10 mit Buchmacher-Quoten",
-  "OddsPapi: 15 Buchmacher-Einträge an 10 Spiele gehängt (bet365.de, bwin.de) · Handicap-Linien plausibel 5, verworfen 0 · 108 von 250 Abfragen diesen Monat",
+  "OddsPapi: 15 Buchmacher-Einträge an 10 Spiele gehängt (bet365.de, bwin.de) · Handicap-Linien plausibel 5, verworfen 0 · 110 von 250 Abfragen diesen Monat",
   "Streuung: Markt 12.5, Modell nutzt 13.56",
   "NBA: 10 Spiele bewertet, 1 mit Value-Wette",
   "Trefferliste: 0 Prognosen ausgewertet",

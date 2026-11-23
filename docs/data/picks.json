@@ -393,7 +393,8 @@
   },
   "result": null,
   "betResult": null,
-  "score": null
+  "score": null,
+  "flashResult": null
  },
  "db2311c331296d3328d71b842167dea4": {
   "id": "db2311c331296d3328d71b842167dea4",
@@ -438,7 +439,8 @@
   },
   "result": null,
   "betResult": null,
-  "score": null
+  "score": null,
+  "flashResult": null
  },
  "c9b6c9f77fd3628308dd34f50854a9c0": {
   "id": "c9b6c9f77fd3628308dd34f50854a9c0",
@@ -452,8 +454,8 @@
   "away": "Oklahoma City Thunder",
   "a": null,
   "b": null,
-  "pModelA": 0.3702,
-  "pMarketA": 0.3624,
+  "pModelA": 0.3721,
+  "pMarketA": 0.3646,
   "pModelRaw": 0.4144,
   "feat": {
    "team": -11.222,
@@ -466,24 +468,25 @@
    "form": 1.669,
    "TOTraw": 222.71,
    "pModelRaw": 0.4144,
-   "pMarket": 0.3624
+   "pMarket": 0.3646
   },
   "bet": {
    "market": "Sieg",
    "pick": "Indiana Pacers",
    "odds": 2.75,
-   "ev": 0.0181,
+   "ev": 0.0232,
    "line": null,
    "side": "home",
-   "book": "sport888",
-   "bookName": "888sport",
+   "book": "leovegas_se",
+   "bookName": "LeoVegas",
    "value": false,
    "stake": 0.0,
-   "evPin": -0.0105
+   "evPin": 0.0015
   },
   "result": null,
   "betResult": null,
-  "score": null
+  "score": null,
+  "flashResult": null
  },
  "b8dfee1fca57ec870528a14c792ad73a": {
   "id": "b8dfee1fca57ec870528a14c792ad73a",
@@ -515,20 +518,21 @@
   },
   "bet": {
    "market": "Gesamtpunkte",
-   "pick": "Über 238.5",
-   "odds": 1.83,
-   "ev": -0.0286,
-   "line": 238.5,
+   "pick": "Über 239.5",
+   "odds": 1.91,
+   "ev": -0.0256,
+   "line": 239.5,
    "side": "over",
-   "book": "tipico_de",
-   "bookName": "Tipico",
+   "book": "sport888",
+   "bookName": "888sport",
    "value": false,
    "stake": 0.0,
-   "evPin": -0.0577
+   "evPin": -0.0562
   },
   "result": null,
   "betResult": null,
-  "score": null
+  "score": null,
+  "flashResult": null
  },
  "6caeb7cce7c8340fed588f3badd83fe0": {
   "id": "6caeb7cce7c8340fed588f3badd83fe0",
@@ -573,7 +577,8 @@
   },
   "result": null,
   "betResult": null,
-  "score": null
+  "score": null,
+  "flashResult": null
  },
  "3e9dc52cb055c0154839c4aec417955b": {
   "id": "3e9dc52cb055c0154839c4aec417955b",
@@ -587,8 +592,8 @@
   "away": "Utah Jazz",
   "a": null,
   "b": null,
-  "pModelA": 0.8647,
-  "pMarketA": 0.873,
+  "pModelA": 0.8639,
+  "pMarketA": 0.8721,
   "pModelRaw": 0.8178,
   "feat": {
    "team": 7.002,
@@ -601,13 +606,13 @@
    "form": -0.077,
    "TOTraw": 230.0,
    "pModelRaw": 0.8178,
-   "pMarket": 0.873
+   "pMarket": 0.8721
   },
   "bet": {
    "market": "Sieg",
    "pick": "Utah Jazz",
    "odds": 7.5,
-   "ev": 0.0148,
+   "ev": 0.0206,
    "line": null,
    "side": "away",
    "book": "betway",
@@ -618,7 +623,8 @@
   },
   "result": null,
   "betResult": null,
-  "score": null
+  "score": null,
+  "flashResult": null
  },
  "17f31499f145cd9d3232819395d29448": {
   "id": "17f31499f145cd9d3232819395d29448",
@@ -663,7 +669,8 @@
   },
   "result": null,
   "betResult": null,
-  "score": null
+  "score": null,
+  "flashResult": null
  },
  "a72a1703f7a92b80768255d1d977a761": {
   "id": "a72a1703f7a92b80768255d1d977a761",
@@ -708,7 +715,8 @@
   },
   "result": null,
   "betResult": null,
-  "score": null
+  "score": null,
+  "flashResult": null
  },
  "35ca45d3e548dc7207fd7f1696ab16f5": {
   "id": "35ca45d3e548dc7207fd7f1696ab16f5",
@@ -722,8 +730,8 @@
   "away": "Memphis Grizzlies",
   "a": null,
   "b": null,
-  "pModelA": 0.4099,
-  "pMarketA": 0.4156,
+  "pModelA": 0.4071,
+  "pMarketA": 0.4123,
   "pModelRaw": 0.3776,
   "feat": {
    "team": -4.368,
@@ -736,24 +744,25 @@
    "form": -6.66,
    "TOTraw": 217.55,
    "pModelRaw": 0.3776,
-   "pMarket": 0.4156
+   "pMarket": 0.4123
   },
   "bet": {
    "market": "Sieg",
    "pick": "Charlotte Hornets",
    "odds": 2.43,
-   "ev": -0.0039,
+   "ev": -0.0108,
    "line": null,
    "side": "home",
    "book": "leovegas_se",
    "bookName": "LeoVegas",
    "value": false,
    "stake": 0.0,
-   "evPin": -0.0007
+   "evPin": -0.0117
   },
   "result": null,
   "betResult": null,
-  "score": null
+  "score": null,
+  "flashResult": null
  },
  "a5184238c27b9c3bfca29220f9d5d14a": {
   "id": "a5184238c27b9c3bfca29220f9d5d14a",
@@ -798,6 +807,7 @@
   },
   "result": null,
   "betResult": null,
-  "score": null
+  "score": null,
+  "flashResult": null
  }
 }
