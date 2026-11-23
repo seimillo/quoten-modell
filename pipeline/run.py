@@ -169,7 +169,10 @@ def props_block(nba, events, pstats, now, track=True):
                 if T and L is not None:
                     g2.update({"ptsH": (T - L) / 2, "ptsA": (T + L) / 2, "margin": -L, "frame": "Markt"})
             framed.append(g2)
-        games = PR.evaluate(framed, events, pstats, {}, sd)
+        season = nba_season(now)
+        tot_cur = S.bbref_totals(season)                       # täglich neu
+        tot_prior = S.bbref_totals(season - 1, cache_days=None)   # einmal holen, dann dauerhaft
+        games = PR.evaluate(framed, events, pstats, {}, sd, tot_cur=tot_cur, tot_prior=tot_prior)
     except Exception as e:  # noqa: BLE001
         log(f"Spielerwetten fehlgeschlagen: {e}")
         return []
@@ -196,6 +199,15 @@ def main():
             log(f"Historische Quoten fehlgeschlagen: {e}")
         old = load_json("status.json", {})
         save_json("status.json", {**old, "histLog": LOG[-15:]})
+        return
+    if mode == "props_backtest":
+        from .props_backtest import run as pbt
+        try:
+            pbt()
+        except Exception as e:  # noqa: BLE001
+            log(f"Spieler-Rücktest fehlgeschlagen: {e}")
+        old = load_json("status.json", {})
+        save_json("status.json", {**old, "propsBacktestLog": LOG[-12:]})
         return
     if mode == "props_survey":
         from .props_survey import main as survey

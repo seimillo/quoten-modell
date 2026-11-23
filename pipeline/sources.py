@@ -202,6 +202,51 @@ def bbref_players(season):
         return {}
 
 
+def bbref_totals(season, cache_days=1):
+    """Saison-Gesamtwerte je Spieler (Minuten, Punkte, Rebounds, Assists, Dreier) von Basketball-Reference.
+    Bei Spielern mit mehreren Teams zählt die Summenzeile. Zwischengespeichert (Vorsaison dauerhaft)."""
+    from .common import load_json as _lj, save_json as _sj
+    fn = f"bbref_totals_{season}.json"
+    cache = _lj(fn, {})
+    today = now_utc().date().isoformat()
+    if cache.get("players") and (cache_days is None or cache.get("date") == today):
+        return cache["players"]
+    import time
+    time.sleep(3)
+    url = f"https://www.basketball-reference.com/leagues/NBA_{season}_totals.html"
+    try:
+        html, _ = get(url, as_json=False)
+        html = html.replace("<!--", "").replace("-->", "")
+        df = max((_flatten(t) for t in pd.read_html(io.StringIO(html))), key=lambda t: ("PTS" in t.columns, len(t)))
+        tcol = "Team" if "Team" in df.columns else "Tm"
+        out, multi = {}, set()
+        for _, r in df.iterrows():
+            team = str(r.get(tcol, "")).strip()
+            name = str(r.get("Player", ""))
+            if not name or name == "Player" or "League" in name:
+                continue
+            k = player_key(name)
+            combined = bool(re.fullmatch(r"\dTM|TOT", team))
+            if k in multi and not combined:
+                continue
+            try:
+                rec = {"mp": float(r["MP"]), "pts": float(r["PTS"]), "reb": float(r["TRB"]), "ast": float(r["AST"]),
+                       "fg3m": float(r["3P"])}
+            except Exception:  # noqa: BLE001
+                continue
+            if combined:
+                multi.add(k)
+                out[k] = rec
+            elif k not in out:
+                out[k] = rec
+        _sj(fn, {"date": today, "players": out})
+        log(f"Basketball-Reference Saisonwerte {season}: {len(out)} Spieler")
+        return out
+    except Exception as e:  # noqa: BLE001
+        log(f"Basketball-Reference Saisonwerte {season} fehlgeschlagen: {e}")
+        return cache.get("players", {})
+
+
 # ---------------- Offizieller NBA-Verletzungsbericht (PDF, alle 15 Minuten) ----------------
 NBA_STATUS = ("Out", "Doubtful", "Questionable", "Probable", "Available")
 

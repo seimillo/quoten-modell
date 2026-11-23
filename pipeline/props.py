@@ -30,7 +30,8 @@ STAT_NAME = {"pts": "Punkte", "reb": "Rebounds", "ast": "Assists", "fg3m": "Drei
 CONF_P = 0.3                        # Gewicht der Simulation gegenüber dem Markt
 ONE_SIDED_MARGIN = 0.07             # angenommene Marge, wenn nur „über“ angeboten wird
 MIN_EV, MIN_ODDS, MAX_ODDS = 0.05, 1.5, 3.5
-MIN_EV_ONE_SIDED = 0.10             # nur „über“ angeboten → Marge unsicher → strengere Schwelle
+MIN_EV_ONE_SIDED = 0.10
+MAX_GAP = 0.25                      # Simulation mehr als 25 Prozentpunkte vom Markt entfernt → kein ✓             # nur „über“ angeboten → Marge unsicher → strengere Schwelle
 LEAGUE_POSS = 99.5
 KELLY_FRAC, KELLY_CAP = 0.25, 0.01
 IDX = {"min": 1, "pts": 2, "reb": 3, "ast": 4, "fg3m": 5}
@@ -55,8 +56,12 @@ def league_rates(pstats):
     return {s: tot[s] / mins for s in STATS} if mins else {"pts": 0.46, "reb": 0.18, "ast": 0.11, "fg3m": 0.05}
 
 
-def roster(pstats, abbr, before, lg, injuries):
-    """Spieler eines Teams mit erwarteten Minuten, Raten und Ausfall-Wahrscheinlichkeit."""
+K_PRIOR_OWN = 250.0                 # Minuten, mit denen die eigene Vorsaison in die Rate eingeht
+
+
+def roster(pstats, abbr, before, lg, injuries, tot_cur=None, tot_prior=None):
+    """Spieler eines Teams mit erwarteten Minuten, Raten und Ausfall-Wahrscheinlichkeit.
+    tot_cur / tot_prior: Saison-Gesamtwerte von Basketball-Reference ({Spielerschlüssel: {mp, pts, reb, ast, fg3m}})."""
     dates = [d for d in _team_dates(pstats, abbr) if d < before][-10:]
     out_p = {player_key(r["player"]): r.get("pOut", 0.0) for r in injuries}
     rows = []
@@ -94,9 +99,39 @@ def roster(pstats, abbr, before, lg, injuries):
             elif r3 < 1:
                 p_out = 0.3 * (1 - r3)
         tot_min = sum(g[1] for g in games)
-        rates = {s: (sum(g[IDX[s]] for g in games) + K_RATE * lg[s]) / (tot_min + K_RATE) for s in STATS}
+        cur_sum = {s: sum(g[IDX[s]] for g in games) for s in STATS}
+        c = (tot_cur or {}).get(pkey)
+        if c and c.get("mp", 0) > tot_min:                  # volle Saison (auch Spiele ohne ESPN-Bericht)
+            tot_min, cur_sum = c["mp"], {s: c[s] for s in STATS}
+        pr = (tot_prior or {}).get(pkey)
+        if pr and pr.get("mp", 0) >= 300:                   # eigene Vorsaison als Grundlage
+            rates = {s: (cur_sum[s] + K_PRIOR_OWN * pr[s] / pr["mp"]) / (tot_min + K_PRIOR_OWN) for s in STATS}
+        else:
+            rates = {s: (cur_sum[s] + K_RATE * lg[s]) / (tot_min + K_RATE) for s in STATS}
         rows.append({"key": pkey, "name": P["name"], "min": exp_min, "pOut": p_out, "rates": rates, "gp": len(games)})
     return rows
+
+
+def opponent_factors(pstats, before):
+    """Wie viel jedes Team zulässt (Rebounds, Assists, Dreier pro 240 Minuten) im Verhältnis zur Liga, geglättet."""
+    allowed, mins, games = {}, {}, {}
+    for P in pstats["players"].values():
+        for g in P["games"]:
+            if g[0] >= before:
+                continue
+            opp = g[6]
+            mins[opp] = mins.get(opp, 0.0) + g[1]
+            for s in ("reb", "ast", "fg3m"):
+                allowed.setdefault(opp, {}).setdefault(s, 0.0)
+                allowed[opp][s] += g[IDX[s]]
+            games.setdefault(opp, set()).add(g[0])
+    lg = {s: sum(a[s] for a in allowed.values()) / max(1.0, sum(mins.values())) for s in ("reb", "ast", "fg3m")}
+    out = {}
+    for t, a in allowed.items():
+        n = len(games[t])
+        w = 0.5 * n / (n + 10)                               # höchstens halb, bei wenigen Spielen weniger
+        out[t] = {s: 1 + w * ((a[s] / mins[t]) / lg[s] - 1) if lg[s] else 1.0 for s in ("reb", "ast", "fg3m")}
+    return out
 
 
 def corrections():
@@ -105,14 +140,14 @@ def corrections():
     return {s: float(c.get(s, 1.0)) for s in STATS}
 
 
-def simulate(game, home_rows, away_rows, sd_margin, rng, corr=None):
+def simulate(game, home_rows, away_rows, sd_margin, rng, corr=None, opp_f=None):
     """10.000 Durchläufe eines Spiels → {Spielerschlüssel: {stat: Array der simulierten Werte}}."""
     res = {}
     M, poss = game["margin"], game.get("poss", LEAGUE_POSS)
     margin = rng.normal(M, sd_margin, N_SIM)
     pace = rng.normal(1.0, 0.04, N_SIM)
     blow = np.clip(1 - 0.008 * np.maximum(0, np.abs(margin) - 15), 0.82, 1.0)   # Starter sitzen bei Blowouts
-    for rows, target, side in ((home_rows, game["ptsH"], 1), (away_rows, game["ptsA"], -1)):
+    for rows, target, side in ((home_rows, game["ptsH"], "home"), (away_rows, game["ptsA"], "away")):
         if not rows:
             continue
         avail = np.array([1 - r["pOut"] for r in rows])
@@ -120,9 +155,8 @@ def simulate(game, home_rows, away_rows, sd_margin, rng, corr=None):
         exp_tot = float((base_min * avail).sum())
         scale = min(1.3, max(0.7, 240 / exp_tot)) if exp_tot > 0 else 1.0
         exp_min = np.minimum(base_min * scale, 42)
-        exp_pts = float((exp_min * avail * np.array([r["rates"]["pts"] for r in rows])).sum())
-        f_pts = target / exp_pts if exp_pts > 0 else 1.0
         f_pace = poss / LEAGUE_POSS
+        opp = (opp_f or {}).get(side, {})
         team_form = rng.normal(1.0, 0.05, N_SIM)
         plays = rng.random((N_SIM, len(rows))) < avail                 # wer heute spielt
         starter = exp_min >= 24
@@ -135,8 +169,23 @@ def simulate(game, home_rows, away_rows, sd_margin, rng, corr=None):
         mins = np.minimum(mins, 48)
         for s in STATS:
             rate = np.array([r["rates"][s] for r in rows])
-            f = f_pts if s in ("pts", "fg3m") else f_pace
-            lam = mins * rate[None, :] * f * (pace * team_form)[:, None] * (corr or {}).get(s, 1.0)
+            # Team-Summe, die verteilt wird: Punkte = Markt-Rahmen, sonst alle gesund × Tempo × Gegner
+            if s == "pts":
+                team_target = target
+            else:
+                team_target = float((np.minimum(base_min * min(1.3, max(0.7, 240 / max(1.0, base_min.sum()))), 42)
+                                     * rate).sum()) * f_pace * opp.get(s, 1.0)
+                if s == "fg3m":
+                    exp_p = float((exp_min * avail * np.array([r["rates"]["pts"] for r in rows])).sum())
+                    team_target *= (target / exp_p) if exp_p > 0 else 1.0     # mehr Punkte → mehr Dreier
+            # Umverteilung je Durchlauf: Fehlendes geht vor allem an die, die ohnehin viel davon haben
+            base = mins * rate[None, :]
+            S = base.sum(axis=1, keepdims=True)
+            D = np.where(S > 0, team_target / np.maximum(S, 1e-9), 1.0)
+            w = np.sqrt(rate)[None, :]                               # weiche Gewichtung (Wurzel der Rate)
+            wbar = np.where(S > 0, (base * w).sum(axis=1, keepdims=True) / np.maximum(S, 1e-9), 1.0)
+            m = np.clip(1 + (D - 1) * w / np.maximum(wbar, 1e-9), 0.6, 1.6)
+            lam = base * m * (pace * team_form)[:, None] * (corr or {}).get(s, 1.0)
             k = np.maximum(lam / PHI[s], 0.2)                       # Gamma-Form wächst mit der Erwartung
             vals = rng.poisson(lam * rng.gamma(k, 1 / k))
             for j, r in enumerate(rows):
@@ -146,7 +195,7 @@ def simulate(game, home_rows, away_rows, sd_margin, rng, corr=None):
     return res
 
 
-def evaluate(games, events, pstats, injuries_by_team, sd_margin, seed=7):
+def evaluate(games, events, pstats, injuries_by_team, sd_margin, seed=7, tot_cur=None, tot_prior=None):
     """Alle angebotenen Spielerlinien bewerten. Gibt Liste je Spiel zurück."""
     rng = np.random.default_rng(seed)
     lg = league_rates(pstats)
@@ -162,8 +211,10 @@ def evaluate(games, events, pstats, injuries_by_team, sd_margin, seed=7):
         before = (parse_time(g["commence"]) - timedelta(hours=5)).date().isoformat()   # US-Datum des Spiels
         inj_h = (g.get("injuries") or {}).get("home") or injuries_by_team.get(g["home"], [])
         inj_a = (g.get("injuries") or {}).get("away") or injuries_by_team.get(g["away"], [])
-        hr, ar = roster(pstats, g["abbrH"], before, lg, inj_h), roster(pstats, g["abbrA"], before, lg, inj_a)
-        sims = simulate(g, hr, ar, sd_margin, rng, corr)
+        hr = roster(pstats, g["abbrH"], before, lg, inj_h, tot_cur, tot_prior)
+        ar = roster(pstats, g["abbrA"], before, lg, inj_a, tot_cur, tot_prior)
+        of = opponent_factors(pstats, before)
+        sims = simulate(g, hr, ar, sd_margin, rng, corr, {"home": of.get(g["abbrA"], {}), "away": of.get(g["abbrH"], {})})
         info = {r["key"]: (r, g["abbrH"]) for r in hr}
         info.update({r["key"]: (r, g["abbrA"]) for r in ar})
         # faire Wahrscheinlichkeiten aus zweiseitigen Angeboten (z. B. bwin): (Spieler, Wert) → {Linie: P(über)}
@@ -218,7 +269,9 @@ def evaluate(games, events, pstats, injuries_by_team, sd_margin, seed=7):
                           "pSim": round(p_sim, 4), "pMkt": round(c["pMkt"], 4), "p": round(p, 4), "ev": round(ev, 4),
                           "evRaw": round(p_sim * c["odds"] - 1, 4)})
         # ✓: klare Fälle, eine pro Spieler, höchstens 3 pro Spiel
-        cands = sorted([p for p in props if p["ev"] >= (MIN_EV if (p["twoSided"] or p["anchored"]) else MIN_EV_ONE_SIDED) and MIN_ODDS <= p["odds"] <= MAX_ODDS and p["gp"] >= 5
+        for p in props:                              # Fluch des Gewinners: zu große Abweichung = eher fehlende Info
+            p["tooFar"] = abs(p["pSim"] - p["pMkt"]) > MAX_GAP
+        cands = sorted([p for p in props if not p["tooFar"] and p["ev"] >= (MIN_EV if (p["twoSided"] or p["anchored"]) else MIN_EV_ONE_SIDED) and MIN_ODDS <= p["odds"] <= MAX_ODDS and p["gp"] >= 5
                         and p["expMin"] >= 18 and p["pOut"] <= 0.15], key=lambda x: -x["ev"])
         seen = set()
         for p in cands:

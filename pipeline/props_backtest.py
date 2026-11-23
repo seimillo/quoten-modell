@@ -14,8 +14,8 @@ from . import props as PR
 from .common import load_json, log, save_json
 
 MIN_DATE = "2026-11-08"
-GRID_DISP = (0.5, 1.0, 1.6, 2.5)                  # PHI: zusätzliche Streuung je Wert
-GRID_K = (25.0, 80.0, 200.0)
+GRID_DISP = (1.0, 1.6, 2.5)                       # PHI für Punkte; die anderen Werte wie live
+GRID_K = (None,)                                  # None = aktuelle Einstellung
 
 
 def _games(pstats):
@@ -52,7 +52,13 @@ def run(max_games=220, seed=3):
             matchups.append((d, t, o))
     matchups = matchups[-max_games:]
     results = {}
+    from . import sources as S
+    from .common import now_utc
+    season = now_utc().year + 1 if now_utc().month >= 9 else now_utc().year
+    tot_prior = S.bbref_totals(season - 1, cache_days=None)
+    phi_live = dict(PR.PHI)
     for K in GRID_K:
+        K = K or PR.K_RATE
         PR.K_RATE = K
         lg = PR.league_rates(pstats)
         scores = {(s, k): [] for s in PR.STATS for k in GRID_DISP}
@@ -61,8 +67,9 @@ def run(max_games=220, seed=3):
         mins_err = []
         rng = np.random.default_rng(seed)
         for d, t1, t2 in matchups:
-            r1 = PR.roster(pstats, t1, d, lg, [])
-            r2 = PR.roster(pstats, t2, d, lg, [])
+            r1 = PR.roster(pstats, t1, d, lg, [], None, tot_prior)
+            r2 = PR.roster(pstats, t2, d, lg, [], None, tot_prior)
+            of = PR.opponent_factors(pstats, d)
             act1, act2 = by_game[(d, t1)], by_game[(d, t2)]
             for rows, act in ((r1, act1), (r2, act2)):
                 for r in rows:
@@ -72,8 +79,8 @@ def run(max_games=220, seed=3):
                 continue
             game = {"margin": 0.0, "poss": PR.LEAGUE_POSS, "ptsH": p1, "ptsA": p2}
             for k_disp in GRID_DISP:
-                PR.PHI = {s: k_disp for s in PR.STATS}
-                sims = PR.simulate(game, r1, r2, 13.0, rng)
+                PR.PHI = {**phi_live, "pts": k_disp}
+                sims = PR.simulate(game, r1, r2, 13.0, rng, None, {"home": of.get(t2, {}), "away": of.get(t1, {})})
                 for rows, act in ((r1, act1), (r2, act2)):
                     for r in rows:
                         a = act.get(r["key"])
@@ -87,7 +94,7 @@ def run(max_games=220, seed=3):
                             y = a[PR.IDX[s]]
                             p = ((v == y).sum() + 0.5) / (len(v) + 10)
                             scores[(s, k_disp)].append(math.log(p))
-                            if k_disp == GRID_DISP[2]:
+                            if k_disp == phi_live["pts"]:
                                 bias[s].append(float(v.mean()) - y)
                                 lo, hi = np.percentile(v, 25), np.percentile(v, 75)
                                 cover[s].append(1.0 if lo <= y <= hi else 0.0)
@@ -101,8 +108,11 @@ def run(max_games=220, seed=3):
                       "n": len(bias["pts"])}
         log(f"Spieler-Rücktest K={K}: {results[K]['n']} Spielerspiele, Streuung {best}, Log-Score {results[K]['score']}, "
             f"Abweichung {results[K]['bias']}")
-    bestK = max(GRID_K, key=lambda K: sum(results[K]["score"].values()))
-    rep = {"games": len(matchups), "bestK": bestK, "results": {str(k): v for k, v in results.items()}}
+    PR.PHI = phi_live
+    bestK = max(results, key=lambda K: sum(results[K]["score"].values()))
+    prev = load_json("props_backtest.json", {})
+    rep = {"games": len(matchups), "bestK": bestK, "results": {str(k): v for k, v in results.items()},
+           "priorSeason": len(tot_prior), "previous": prev.get("results", {}).get(str(prev.get("bestK"))) or prev.get("previous")}
     save_json("props_backtest.json", rep)
     return rep
 

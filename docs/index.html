@@ -73,7 +73,7 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
   <p class="hint">Erwartungswert (EV) = Chance × Quote − 1 zur besten Quote aller Buchmacher mit deutscher Lizenz (Tipico, Winamax, Betano, Betway, LeoVegas, 888sport). ✓ = strenge Auswahl: EV ≥ 3 % (Gesamtpunkte 5 %) und auch gegenüber Pinnacle nicht schlechter, höchstens eine Wette pro Spiel. Die Chance ist eine Mischung aus Modell und Markt (Markt-Anker), darum sind die Werte bewusst vorsichtig.</p></div>
 </section>
 <section data-view="spieler"><div class="card"><h2>Spielerwetten (Simulation)</h2>
-  <p class="hint">Jedes Spiel wird 10.000-mal simuliert: Minuten, Tempo, Blowouts, Ausfälle, dann Punkte, Rebounds, Assists und Dreier je Spieler. Verglichen mit den Quoten von bet365.de und bwin.de. ✓ nur bei EV ≥ 5 % (≥ 10 %, wenn nur „über“ angeboten wird und es keine bwin-Linie als Maßstab gibt), Quote 1,50–3,50, mindestens 18 erwarteten Minuten und gesundem Spieler; höchstens 3 pro Spiel. Rebounds, Assists und Dreier: bitte vor dem Setzen in der App prüfen, ob die Wette dort wirklich angeboten wird.</p>
+  <p class="hint">Jedes Spiel wird 10.000-mal simuliert: Minuten, Tempo, Blowouts, Ausfälle, dann Punkte, Rebounds, Assists und Dreier je Spieler. Verglichen mit den Quoten von bet365.de und bwin.de. ✓ nur bei EV ≥ 5 % (≥ 10 %, wenn nur „über“ angeboten wird und es keine bwin-Linie als Maßstab gibt), Quote 1,50–3,50, mindestens 18 erwarteten Minuten und gesundem Spieler; höchstens 3 pro Spiel; kein ✓, wenn die Simulation mehr als 25 Prozentpunkte vom Markt abweicht (dann fehlt uns vermutlich eine Information). Rebounds, Assists und Dreier: bitte vor dem Setzen in der App prüfen, ob die Wette dort wirklich angeboten wird.</p>
   <div id="propKpis"></div><div id="propBt"></div><div id="propList"></div>
   <h3>Trefferliste Spielerwetten</h3><div id="propTrk"></div></div></section>
 <section data-view="geld"><div class="card"><h2>Großes Geld auf Polymarket</h2>
@@ -369,7 +369,7 @@ function propRow(p){
   <td>${esc(sideTxt(p))}<div class="small">Sim Ø ${f(p.mean,1)}${p.checkApp?" · in App prüfen":""}</div></td>
   <td>${f(p.odds,2)}<div class="small">${esc(p.bookName)}${p.twoSided?"":p.anchored?" · Maßstab bwin":" · nur eine Seite"}</div></td>
   <td>${pct(p.p)}<div class="small">Sim ${pct(p.pSim)} · Markt ${pct(p.pMkt)}</div></td>
-  <td class="${cls(p.ev)}">${sg(p.ev*100,1)} %${p.value?`<div class="small">Einsatz ${f(p.stake*100,1)} %</div>`:""}</td></tr>`;
+  <td class="${cls(p.ev)}">${sg(p.ev*100,1)} %${p.value?`<div class="small">Einsatz ${f(p.stake*100,1)} %</div>`:p.tooFar&&p.ev>0.05?`<div class="small">Abweichung zu groß – vermutlich fehlt uns eine Info</div>`:""}</td></tr>`;
 }
 $("propList").innerHTML = PROPS.games.length ? PROPS.games.map(g=>{
   const top = g.props.filter(p=>p.value).concat(g.props.filter(p=>!p.value && p.odds>=1.4 && p.odds<=4).slice(0,8));

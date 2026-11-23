@@ -65,6 +65,7 @@ def patch():
     S.espn_scoreboard = lambda d: [{"date": d.isoformat(), "start": PAST, "home": "Atlanta Hawks", "away": "Charlotte Hornets",
                                     "done": True, "neutral": False, "hs": 111, "as": 97, "eid": "401"}] if d.isoformat() == ET_PAST else []
     S.espn_boxscore = lambda eid: {"Detroit Pistons": {"Det Spieler 0": 38.0}}
+    S.bbref_totals = lambda season, cache_days=1: {}
     S.espn_boxscore_stats = lambda eid: {
         "Atlanta Hawks": {f"Atl Spieler {i}": {"min": m, "pts": round(m * 0.5), "reb": round(m * 0.2), "ast": round(m * 0.1), "fg3m": round(m * 0.05)}
                           for i, m in enumerate([34, 32, 30, 28, 26, 22, 20, 16, 14, 10])},

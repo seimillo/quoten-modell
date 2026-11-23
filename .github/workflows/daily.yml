@@ -10,7 +10,7 @@ on:
       mode:
         description: "full = Modell rechnen, close = Abend-Update + Schlussquoten, backtest = Rücktest (keine Credits)"
         type: choice
-        options: [full, close, late, backtest, histodds, discover, props_survey]
+        options: [full, close, late, backtest, histodds, discover, props_survey, props_backtest]
         default: full
 
 permissions:
