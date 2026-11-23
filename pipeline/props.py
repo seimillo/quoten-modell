@@ -30,8 +30,7 @@ STAT_NAME = {"pts": "Punkte", "reb": "Rebounds", "ast": "Assists", "fg3m": "Drei
 CONF_P = 0.3                        # Gewicht der Simulation gegenüber dem Markt
 ONE_SIDED_MARGIN = 0.07             # angenommene Marge, wenn nur „über“ angeboten wird
 MIN_EV, MIN_ODDS, MAX_ODDS = 0.05, 1.5, 3.5
-MIN_EV_ONE_SIDED = 0.10
-MAX_GAP = 0.25                      # Simulation mehr als 25 Prozentpunkte vom Markt entfernt → kein ✓             # nur „über“ angeboten → Marge unsicher → strengere Schwelle
+MIN_EV_ONE_SIDED = 0.10             # nur „über“ angeboten → Marge unsicher → strengere Schwelle
 LEAGUE_POSS = 99.5
 KELLY_FRAC, KELLY_CAP = 0.25, 0.01
 IDX = {"min": 1, "pts": 2, "reb": 3, "ast": 4, "fg3m": 5}
@@ -108,8 +107,57 @@ def roster(pstats, abbr, before, lg, injuries, tot_cur=None, tot_prior=None):
             rates = {s: (cur_sum[s] + K_PRIOR_OWN * pr[s] / pr["mp"]) / (tot_min + K_PRIOR_OWN) for s in STATS}
         else:
             rates = {s: (cur_sum[s] + K_RATE * lg[s]) / (tot_min + K_RATE) for s in STATS}
-        rows.append({"key": pkey, "name": P["name"], "min": exp_min, "pOut": p_out, "rates": rates, "gp": len(games)})
+        rows.append({"key": pkey, "name": P["name"], "min": exp_min, "pOut": p_out, "rates": rates, "gp": len(games),
+                     "role": role_of(rates)})
     return rows
+
+
+ROLE_OPP = False                    # Gegner-Effekt je Rolle (Big/Guard/Flügel) statt je Team – im Rücktest geprüft
+
+
+def role_of(rates):
+    """Rolle aus den Werten pro Minute (Positionen stehen nicht in den Daten)."""
+    if rates["reb"] >= 0.25:
+        return "big"
+    if rates["ast"] >= 0.15:
+        return "guard"
+    return "wing"
+
+
+def opponent_role_factors(pstats, before):
+    """Wie viel jedes Team je Rolle zulässt (Punkte, Rebounds, Assists, Dreier) im Verhältnis zur Liga, geglättet."""
+    # Rolle je Spieler aus seiner Saison bis zum Vortag
+    role = {}
+    for k, P in pstats["players"].items():
+        g = [x for x in P["games"] if x[0] < before]
+        m = sum(x[1] for x in g)
+        if m >= 60:
+            role[k] = role_of({"reb": sum(x[3] for x in g) / m, "ast": sum(x[4] for x in g) / m})
+    al, mn, gm = {}, {}, {}
+    for k, P in pstats["players"].items():
+        r = role.get(k)
+        if not r:
+            continue
+        for x in P["games"]:
+            if x[0] >= before:
+                continue
+            key = (x[6], r)
+            mn[key] = mn.get(key, 0.0) + x[1]
+            a = al.setdefault(key, {s: 0.0 for s in STATS})
+            for s in STATS:
+                a[s] += x[IDX[s]]
+            gm.setdefault(x[6], set()).add(x[0])
+    lg = {}
+    for r in ("big", "guard", "wing"):
+        m = sum(v for (t, rr), v in mn.items() if rr == r)
+        lg[r] = {s: sum(a[s] for (t, rr), a in al.items() if rr == r) / m if m else 0 for s in STATS}
+    out = {}
+    for (t, r), a in al.items():
+        n = len(gm.get(t, ()))
+        w = 0.5 * n / (n + 10)
+        out.setdefault(t, {})[r] = {s: 1 + w * ((a[s] / mn[(t, r)]) / lg[r][s] - 1) if lg[r][s] and mn[(t, r)] else 1.0
+                                   for s in STATS}
+    return out
 
 
 def opponent_factors(pstats, before):
@@ -167,14 +215,17 @@ def simulate(game, home_rows, away_rows, sd_margin, rng, corr=None, opp_f=None):
         tot = mins.sum(axis=1, keepdims=True)
         mins = np.where(tot > 0, mins * np.clip(240 / np.maximum(tot, 1), 0.85, 1.3), 0)
         mins = np.minimum(mins, 48)
+        roles = opp.get("_roles") if isinstance(opp, dict) else None
         for s in STATS:
             rate = np.array([r["rates"][s] for r in rows])
+            if roles:                                                    # Gegner-Effekt je Rolle
+                rate = rate * np.array([roles.get(r.get("role", "wing"), {}).get(s, 1.0) for r in rows])
             # Team-Summe, die verteilt wird: Punkte = Markt-Rahmen, sonst alle gesund × Tempo × Gegner
             if s == "pts":
                 team_target = target
             else:
                 team_target = float((np.minimum(base_min * min(1.3, max(0.7, 240 / max(1.0, base_min.sum()))), 42)
-                                     * rate).sum()) * f_pace * opp.get(s, 1.0)
+                                     * rate).sum()) * f_pace * (1.0 if roles else opp.get(s, 1.0))
                 if s == "fg3m":
                     exp_p = float((exp_min * avail * np.array([r["rates"]["pts"] for r in rows])).sum())
                     team_target *= (target / exp_p) if exp_p > 0 else 1.0     # mehr Punkte → mehr Dreier
@@ -213,8 +264,13 @@ def evaluate(games, events, pstats, injuries_by_team, sd_margin, seed=7, tot_cur
         inj_a = (g.get("injuries") or {}).get("away") or injuries_by_team.get(g["away"], [])
         hr = roster(pstats, g["abbrH"], before, lg, inj_h, tot_cur, tot_prior)
         ar = roster(pstats, g["abbrA"], before, lg, inj_a, tot_cur, tot_prior)
-        of = opponent_factors(pstats, before)
-        sims = simulate(g, hr, ar, sd_margin, rng, corr, {"home": of.get(g["abbrA"], {}), "away": of.get(g["abbrH"], {})})
+        if ROLE_OPP:
+            of = opponent_role_factors(pstats, before)
+            opp_f = {"home": {"_roles": of.get(g["abbrA"], {})}, "away": {"_roles": of.get(g["abbrH"], {})}}
+        else:
+            of = opponent_factors(pstats, before)
+            opp_f = {"home": of.get(g["abbrA"], {}), "away": of.get(g["abbrH"], {})}
+        sims = simulate(g, hr, ar, sd_margin, rng, corr, opp_f)
         info = {r["key"]: (r, g["abbrH"]) for r in hr}
         info.update({r["key"]: (r, g["abbrA"]) for r in ar})
         # faire Wahrscheinlichkeiten aus zweiseitigen Angeboten (z. B. bwin): (Spieler, Wert) → {Linie: P(über)}
@@ -269,9 +325,7 @@ def evaluate(games, events, pstats, injuries_by_team, sd_margin, seed=7, tot_cur
                           "pSim": round(p_sim, 4), "pMkt": round(c["pMkt"], 4), "p": round(p, 4), "ev": round(ev, 4),
                           "evRaw": round(p_sim * c["odds"] - 1, 4)})
         # ✓: klare Fälle, eine pro Spieler, höchstens 3 pro Spiel
-        for p in props:                              # Fluch des Gewinners: zu große Abweichung = eher fehlende Info
-            p["tooFar"] = abs(p["pSim"] - p["pMkt"]) > MAX_GAP
-        cands = sorted([p for p in props if not p["tooFar"] and p["ev"] >= (MIN_EV if (p["twoSided"] or p["anchored"]) else MIN_EV_ONE_SIDED) and MIN_ODDS <= p["odds"] <= MAX_ODDS and p["gp"] >= 5
+        cands = sorted([p for p in props if p["ev"] >= (MIN_EV if (p["twoSided"] or p["anchored"]) else MIN_EV_ONE_SIDED) and MIN_ODDS <= p["odds"] <= MAX_ODDS and p["gp"] >= 5
                         and p["expMin"] >= 18 and p["pOut"] <= 0.15], key=lambda x: -x["ev"])
         seen = set()
         for p in cands:

@@ -127,3 +127,77 @@ if __name__ == "__main__":
     C.DATA_DIR = "docs/data"
     r = run()
     print(r["bestK"], r["results"][str(r["bestK"])])
+
+
+def run_variants(max_games=220, seed=11):
+    """Vergleich: Gegner-Effekt je Team vs. je Rolle, und mit vs. ohne Wissen, wer gespielt hat."""
+    from . import sources as S
+    from .common import now_utc
+    pstats = PR_load()
+    by_game = _games(pstats)
+    season = now_utc().year + 1 if now_utc().month >= 9 else now_utc().year
+    tot_prior = S.bbref_totals(season - 1, cache_days=None)
+    pairs = defaultdict(list)
+    for (d, t), rows in by_game.items():
+        pairs[d].append((t, next(iter(rows.values()))[6]))
+    matchups = []
+    for d in sorted(pairs):
+        if d < MIN_DATE:
+            continue
+        seen = set()
+        for t, o in pairs[d]:
+            if (o, t) in seen or (d, o) not in by_game:
+                continue
+            seen.add((t, o))
+            matchups.append((d, t, o))
+    matchups = matchups[-max_games:]
+    lg = PR.league_rates(pstats)
+    out = {}
+    for name, roles, oracle in (("Gegner je Team", False, True), ("Gegner je Rolle", True, True),
+                                ("ohne Wissen, wer spielt", False, False)):
+        rng = np.random.default_rng(seed)
+        sc = {s: [] for s in PR.STATS}
+        err = {s: [] for s in PR.STATS}
+        cov = {s: [] for s in PR.STATS}
+        for d, t1, t2 in matchups:
+            r1 = PR.roster(pstats, t1, d, lg, [], None, tot_prior)
+            r2 = PR.roster(pstats, t2, d, lg, [], None, tot_prior)
+            a1, a2 = by_game[(d, t1)], by_game[(d, t2)]
+            if oracle:
+                for rows, act in ((r1, a1), (r2, a2)):
+                    for r in rows:
+                        r["pOut"] = 0.0 if r["key"] in act else 1.0
+            p1, p2 = _team_points(by_game, t1, d), _team_points(by_game, t2, d)
+            if not p1 or not p2:
+                continue
+            game = {"margin": 0.0, "poss": PR.LEAGUE_POSS, "ptsH": p1, "ptsA": p2}
+            if roles:
+                of = PR.opponent_role_factors(pstats, d)
+                opp = {"home": {"_roles": of.get(t2, {})}, "away": {"_roles": of.get(t1, {})}}
+            else:
+                of = PR.opponent_factors(pstats, d)
+                opp = {"home": of.get(t2, {}), "away": of.get(t1, {})}
+            sims = PR.simulate(game, r1, r2, 13.0, rng, None, opp)
+            for rows, act in ((r1, a1), (r2, a2)):
+                for r in rows:
+                    a = act.get(r["key"])
+                    if not a or r["key"] not in sims:
+                        continue
+                    pl = sims[r["key"]]["min"] > 0
+                    if pl.sum() < 50:
+                        continue
+                    for s in PR.STATS:
+                        v = sims[r["key"]][s][pl]
+                        y = a[PR.IDX[s]]
+                        sc[s].append(math.log(((v == y).sum() + 0.5) / (len(v) + 10)))
+                        err[s].append(abs(float(v.mean()) - y))
+                        lo, hi = np.percentile(v, 25), np.percentile(v, 75)
+                        cov[s].append(1.0 if lo <= y <= hi else 0.0)
+        out[name] = {"n": len(sc["pts"]), "score": {s: round(float(np.mean(v)), 4) for s, v in sc.items()},
+                     "mae": {s: round(float(np.mean(v)), 3) for s, v in err.items()},
+                     "cover50": {s: round(float(np.mean(v)), 3) for s, v in cov.items()}}
+        log(f"Variante {name}: {out[name]}")
+    rep = load_json("props_backtest.json", {})
+    rep["variants"] = out
+    save_json("props_backtest.json", rep)
+    return out

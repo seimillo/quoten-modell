@@ -201,9 +201,9 @@ def main():
         save_json("status.json", {**old, "histLog": LOG[-15:]})
         return
     if mode == "props_backtest":
-        from .props_backtest import run as pbt
+        from .props_backtest import run_variants
         try:
-            pbt()
+            run_variants()
         except Exception as e:  # noqa: BLE001
             log(f"Spieler-Rücktest fehlgeschlagen: {e}")
         old = load_json("status.json", {})
