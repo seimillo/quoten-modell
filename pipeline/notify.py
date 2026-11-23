@@ -133,12 +133,12 @@ def notify_props(prop_games, limit=6):
     lines = []
     for ev, k, g, p in cands[:limit]:
         side = "über" if p["side"] == "over" else "unter"
-        lines.append(("🟢 " if p.get("safe") else "🟠 ") + f"{p['player']} {side} {p['line']:g} {p['statName']} @ {p['odds']:.2f} {p['bookName']} · "
+        lines.append(("🟢 " if p.get("safe") else "🟠 ") + f"{p['player']} {app_txt(p)} @ {p['odds']:.2f} {p['bookName']} · "
                      f"Sim Ø {p['mean']:g} · EV {p['ev'] * 100:+.1f} %" + (" · in App prüfen" if p.get("checkApp") else "")
                      + ("" if p.get("safe") else f" · Risiko: {p['risks'][0]}"))
         sent[k] = g["commence"]
     if lines:
-        lines.append("🟢 = mittags sicher · 🟠 = kann sich bis abends noch ändern")
+        lines.append("🟢 = mittags sicher · 🟠 = kann sich bis abends noch ändern · „10+“ = bet365-Meilenstein, „unter“ gibt es nur bei bwin")
     if lines and send("Spielerwetten ✓", lines, tags=("basketball", "dart"), priority=3):
         save_json("notified.json", dict(sorted(sent.items(), key=lambda kv: kv[1])[-400:]))
 
@@ -152,10 +152,18 @@ def notify_props_results(rows):
         g = 10 * (t["odds"] - 1) if t["result"] == "win" else -10 if t["result"] == "loss" else 0
         total += g
         side = "über" if t["side"] == "over" else "unter"
-        lines.append(f"{t['player']} {side} {t['line']:g} {t['statName']}: {t.get('value')} – "
+        lines.append(f"{t['player']} {app_txt(t)}: {t.get('value')} – "
                      f"{'gewonnen' if t['result'] == 'win' else 'verloren' if t['result'] == 'loss' else 'zurück'} ({g:+.2f} €)")
     lines.append(f"Summe bei 10 € je Wette: {total:+.2f} €")
     send("Ergebnisse Spielerwetten", lines, tags=("basketball", "moneybag"))
+
+
+def app_txt(p):
+    """So heißt die Wette in der App: bet365 bietet Spielerwerte nur als Meilenstein („10+ Punkte“ = über 9,5)."""
+    line = float(p["line"])
+    if "bet365" in str(p.get("book", "")) and p["side"] == "over" and line % 1 == 0.5:
+        return f"{int(line + 0.5)}+ {p['statName']}"
+    return f"{'über' if p['side'] == 'over' else 'unter'} {line:g} {p['statName']}".replace(".", ",")
 
 
 def notify_props_pregame(checked, new, limit=6):
@@ -165,11 +173,11 @@ def notify_props_pregame(checked, new, limit=6):
     for t, pre in checked:
         side = "über" if t["side"] == "over" else "unter"
         st = pre["status"]
-        lines.append(f"{sym.get(st, '⚠️')} {t['player']} {side} {t['line']:g} {t['statName']}: {st}"
+        lines.append(f"{sym.get(st, '⚠️')} {t['player']} {app_txt(t)} ({t.get('bookName', '')}): {st}"
                      + (f" (EV jetzt {pre['ev'] * 100:+.1f} %)" if pre.get("ev") is not None else ""))
     for g, p in sorted(new, key=lambda x: -x[1]["ev"])[:limit]:
         side = "über" if p["side"] == "over" else "unter"
-        lines.append(f"🆕 {p['player']} {side} {p['line']:g} {p['statName']} @ {p['odds']:.2f} {p['bookName']} · "
+        lines.append(f"🆕 {p['player']} {app_txt(p)} @ {p['odds']:.2f} {p['bookName']} · "
                      f"EV {p['ev'] * 100:+.1f} % · {_time(g['commence'])} Uhr")
     if lines:
         send("Spielerwetten vor Spielbeginn", lines, tags=("basketball", "stopwatch"), priority=3)
