@@ -97,7 +97,7 @@
   "kalshi": {
    "a": 41.0,
    "b": 58.5,
-   "vol": 149978
+   "vol": 151477
   },
   "polymarket": null,
   "bookKey": "tipico_de",
@@ -495,7 +495,7 @@
   "kalshi": {
    "a": 63.5,
    "b": 36.5,
-   "vol": 82929
+   "vol": 83067
   },
   "polymarket": null,
   "bookKey": "tipico_de",
@@ -664,7 +664,7 @@
     "pPin": 0.6358,
     "mainOdds": 1.47,
     "mainBook": "Tipico",
-    "nBooks": 7,
+    "nBooks": 8,
     "why": "EV unter 3 %",
     "value": false,
     "stake": 0.0
@@ -686,7 +686,7 @@
     "pPin": 0.3642,
     "mainOdds": 2.6,
     "mainBook": "Tipico",
-    "nBooks": 7,
+    "nBooks": 8,
     "why": "EV unter 3 %",
     "value": false,
     "stake": 0.0
@@ -708,7 +708,7 @@
     "pPin": 0.5147,
     "mainOdds": 1.87,
     "mainBook": "Tipico",
-    "nBooks": 3,
+    "nBooks": 4,
     "why": "EV unter 3 %",
     "value": false,
     "stake": 0.0
@@ -730,7 +730,7 @@
     "pPin": 0.5147,
     "mainOdds": 1.83,
     "mainBook": "Tipico",
-    "nBooks": 3,
+    "nBooks": 4,
     "why": "EV unter 3 %",
     "value": false,
     "stake": 0.0
@@ -752,7 +752,7 @@
     "pPin": 0.4954,
     "mainOdds": 1.87,
     "mainBook": "Tipico",
-    "nBooks": 3,
+    "nBooks": 4,
     "why": "EV unter 5 %",
     "value": false,
     "stake": 0.0
@@ -774,7 +774,7 @@
     "pPin": 0.5046,
     "mainOdds": 1.83,
     "mainBook": "Tipico",
-    "nBooks": 3,
+    "nBooks": 4,
     "why": "EV unter 5 %",
     "value": false,
     "stake": 0.0
@@ -797,7 +797,7 @@
    "pPin": 0.3642,
    "mainOdds": 2.6,
    "mainBook": "Tipico",
-   "nBooks": 7,
+   "nBooks": 8,
    "why": "EV unter 3 %",
    "value": false,
    "stake": 0.0
@@ -840,7 +840,7 @@
    "pPin": 0.3642,
    "mainOdds": 2.6,
    "mainBook": "Tipico",
-   "nBooks": 7,
+   "nBooks": 8,
    "why": "EV unter 3 %",
    "value": false,
    "stake": 0.0
@@ -944,7 +944,7 @@
   "kalshi": {
    "a": 80.5,
    "b": 19.5,
-   "vol": 117773
+   "vol": 117930
   },
   "polymarket": {
    "pA": 1.0,
@@ -1359,12 +1359,12 @@
   "kalshi": {
    "a": 16.5,
    "b": 83.5,
-   "vol": 53784
+   "vol": 54264
   },
   "polymarket": {
    "pA": 0.165,
    "pB": 0.835,
-   "volume": 21191
+   "volume": 21195
   },
   "bookKey": "tipico_de",
   "bookName": "Tipico",
@@ -1547,7 +1547,7 @@
    {
     "market": "Handicap",
     "pick": "Brooklyn Nets +12.5",
-    "odds": 1.83,
+    "odds": 1.85,
     "line": 12.5,
     "side": "away",
     "book": "leovegas_se",
@@ -1555,9 +1555,9 @@
     "pModel": 0.5221,
     "pMarket": 0.5228,
     "p": 0.5227,
-    "ev": -0.0435,
-    "evRaw": -0.0446,
-    "evPin": -0.0433,
+    "ev": -0.033,
+    "evRaw": -0.0342,
+    "evPin": -0.0328,
     "pPin": 0.5228,
     "mainOdds": 1.8,
     "mainBook": "Tipico",
@@ -1802,12 +1802,12 @@
   "kalshi": {
    "a": 13.5,
    "b": 86.5,
-   "vol": 353630
+   "vol": 353674
   },
   "polymarket": {
    "pA": 0.135,
    "pB": 0.865,
-   "volume": 13318
+   "volume": 13343
   },
   "bookKey": "tipico_de",
   "bookName": "Tipico",
@@ -1928,8 +1928,8 @@
     "odds": 1.12,
     "line": null,
     "side": "home",
-    "book": "leovegas_se",
-    "bookName": "LeoVegas",
+    "book": "op_bwin",
+    "bookName": "bwin",
     "pModel": 0.8178,
     "pMarket": 0.8731,
     "p": 0.8648,
@@ -2202,12 +2202,12 @@
   "kalshi": {
    "a": 59.5,
    "b": 41.5,
-   "vol": 29712
+   "vol": 29748
   },
   "polymarket": {
    "pA": 0.585,
    "pB": 0.415,
-   "volume": 26404
+   "volume": 26723
   },
   "bookKey": "tipico_de",
   "bookName": "Tipico",
@@ -2651,12 +2651,12 @@
   "kalshi": {
    "a": 16.5,
    "b": 84.5,
-   "vol": 58293
+   "vol": 58380
   },
   "polymarket": {
    "pA": 0.155,
    "pB": 0.845,
-   "volume": 27075
+   "volume": 27084
   },
   "bookKey": "tipico_de",
   "bookName": "Tipico",
@@ -3064,12 +3064,12 @@
   "kalshi": {
    "a": 20.5,
    "b": 79.5,
-   "vol": 70621
+   "vol": 70724
   },
   "polymarket": {
    "pA": 0.205,
    "pB": 0.795,
-   "volume": 54920
+   "volume": 54972
   },
   "bookKey": "tipico_de",
   "bookName": "Tipico",
@@ -3533,12 +3533,12 @@
   "kalshi": {
    "a": 58.5,
    "b": 42.5,
-   "vol": 74663
+   "vol": 74775
   },
   "polymarket": {
    "pA": 0.585,
    "pB": 0.415,
-   "volume": 56967
+   "volume": 56981
   },
   "bookKey": "tipico_de",
   "bookName": "Tipico",
@@ -4022,12 +4022,12 @@
   "kalshi": {
    "a": 75.5,
    "b": 24.5,
-   "vol": 37632
+   "vol": 37648
   },
   "polymarket": {
    "pA": 0.745,
    "pB": 0.255,
-   "volume": 15487
+   "volume": 15496
   },
   "bookKey": "tipico_de",
   "bookName": "Tipico",
