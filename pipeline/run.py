@@ -135,7 +135,9 @@ def nba_block(now, params, kalshi_nba, pm_nba, history, recent_min=None):
     log(f"Streuung: Markt {msd if msd is None else round(msd, 1)}, Modell nutzt {P['sd_margin']}")
     nba = model_games(upcoming, cur, prior, pace, [], injuries, kalshi_nba, pm_nba, cur_pl, prior_pl,
                       P, history, recent_min or load_minutes())
+    links = {e["id"]: e.get("links") for e in events if e.get("links")}
     for g in nba:
+        g["links"] = links.get(g["id"]) or {}
         g["injuryReport"] = stamp
         g["sdUsed"], g["sdMarket"] = P["sd_margin"], msd
     return nba, events
@@ -153,6 +155,7 @@ def props_block(nba, events, pstats, now, track=True):
     save_json("props.json", {"updated": now.isoformat(), "games": games})
     if track:
         PR.track(games, now)
+        PR.save_sims(games, now)
     else:
         PR.record_close(games, now)
     return games
@@ -223,6 +226,7 @@ def main():
     notify_value_bets(nba)
     T_before = {k for k, t in load_json("props_picks.json", {}).items() if not t.get("result")}
     T = PR.settle(pstats, now)
+    PR.learn(pstats, now)
     from .notify import notify_props, notify_props_results
     notify_props_results([T[k] for k in T_before if k in T and T[k].get("result")])
     notify_props(prop_games)

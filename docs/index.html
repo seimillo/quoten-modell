@@ -67,12 +67,14 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
   <h1>Wo sieht das Modell es anders als der Markt?</h1>
   <p class="muted" id="stand">Lade Daten …</p>
   <div class="kpis" id="kpis"></div>
+  <div class="card" id="slipCard"><h2>Wettzettel heute</h2><div id="slip"></div>
+  <p class="hint">Alle Empfehlungen auf einen Blick: ✓ = Modell sieht Vorteil (Spiele), ⚡ = Quote besser als die faire Pinnacle-Quote, 🏀 = Spielerwette aus der Simulation. Einsatz in Prozent deiner Kasse (¼-Kelly). Erst im Probelauf unter „Meine Wetten“ testen; echte Wetten erst ab 18.</p></div>
   <div class="card"><h2>Alle Spiele</h2><div id="top"></div>
   <p class="hint">Erwartungswert (EV) = Chance × Quote − 1 zur besten Quote aller Buchmacher mit deutscher Lizenz (Tipico, Winamax, Betano, Betway, LeoVegas, 888sport). ✓ = strenge Auswahl: EV ≥ 3 % (Gesamtpunkte 5 %) und auch gegenüber Pinnacle nicht schlechter, höchstens eine Wette pro Spiel. Die Chance ist eine Mischung aus Modell und Markt (Markt-Anker), darum sind die Werte bewusst vorsichtig.</p></div>
 </section>
 <section data-view="spieler"><div class="card"><h2>Spielerwetten (Simulation)</h2>
-  <p class="hint">Jedes Spiel wird 10.000-mal simuliert: Minuten, Tempo, Blowouts, Ausfälle, dann Punkte, Rebounds, Assists und Dreier je Spieler. Verglichen mit den Quoten von bet365.de und bwin.de. ✓ nur bei EV ≥ 5 % (≥ 10 %, wenn nur „über“ angeboten wird), Quote 1,50–3,50, mindestens 18 erwarteten Minuten und gesundem Spieler; höchstens 3 pro Spiel. Rebounds, Assists und Dreier: bitte vor dem Setzen in der App prüfen, ob die Wette dort wirklich angeboten wird.</p>
-  <div id="propKpis"></div><div id="propList"></div>
+  <p class="hint">Jedes Spiel wird 10.000-mal simuliert: Minuten, Tempo, Blowouts, Ausfälle, dann Punkte, Rebounds, Assists und Dreier je Spieler. Verglichen mit den Quoten von bet365.de und bwin.de. ✓ nur bei EV ≥ 5 % (≥ 10 %, wenn nur „über“ angeboten wird und es keine bwin-Linie als Maßstab gibt), Quote 1,50–3,50, mindestens 18 erwarteten Minuten und gesundem Spieler; höchstens 3 pro Spiel. Rebounds, Assists und Dreier: bitte vor dem Setzen in der App prüfen, ob die Wette dort wirklich angeboten wird.</p>
+  <div id="propKpis"></div><div id="propBt"></div><div id="propList"></div>
   <h3>Trefferliste Spielerwetten</h3><div id="propTrk"></div></div></section>
 <section data-view="geld"><div class="card"><h2>Großes Geld auf Polymarket</h2>
   <p class="hint">Einzelne Einsätze ab 1.000 $ in den letzten 48 Stunden auf Polymarket, plus die Kalshi-Preise. Prognosemärkte haben kleine Margen – dort handeln oft gut informierte Leute. Sie zählen im Markt-Anker zur Hälfte.</p>
@@ -333,10 +335,35 @@ $("propKpis").innerHTML = ps ? `<div class="kpis">
   <div class="kpi"><div class="k">Gewinn à 10 €</div><div class="v ${cls(ps.profit||0)}">${ps.settled?sg(ps.profit,2)+" €":"–"}</div><div class="hint">Rendite ${ps.roi==null?"–":sg(ps.roi*100,1)+" %"}</div></div>
   <div class="kpi"><div class="k">Trefferquote</div><div class="v">${ps.hit==null?"–":pct(ps.hit)}</div><div class="hint">erwartet ${ps.expHit==null?"–":pct(ps.expHit)}</div></div>
   <div class="kpi"><div class="k">CLV</div><div class="v ${cls(ps.clv||0)}">${ps.clv==null?"–":sg(ps.clv*100,1)+" %"}</div><div class="hint">${ps.clvN} Wetten</div></div></div>` : "";
+// ---------- Wettzettel ----------
+const LINK = (links, book) => { const l = links||{}; const u = book && book.includes("bet365") ? l.op_bet365 : book && book.includes("bwin") ? l.op_bwin : (l.op_bet365||l.op_bwin); return u ? ` <a href="${esc(u)}" target="_blank" rel="noopener">öffnen</a>` : ""; };
+const slip = [];
+const nowMs = Date.now();
+for (const g of nba) {
+  if (new Date(g.commence).getTime() < nowMs) continue;
+  if (g.best && g.best.value) slip.push({t:g.commence, kind:"✓", game:`${g.abbrA} @ ${g.abbrH}`, pick:g.best.pick, market:g.best.market, odds:g.best.odds, book:g.best.bookName, stake:g.best.stake, ev:g.best.ev, link:LINK(g.links, g.best.book)});
+  if (g.flash) slip.push({t:g.commence, kind:"⚡", game:`${g.abbrA} @ ${g.abbrH}`, pick:g.flash.pick, market:g.flash.market, odds:g.flash.odds, book:g.flash.bookName, stake:g.flash.stake, ev:g.flash.evPin, link:LINK(g.links, g.flash.book)});
+}
+for (const g of PROPS.games) {
+  if (new Date(g.commence).getTime() < nowMs) continue;
+  for (const p of g.props.filter(p=>p.value)) slip.push({t:g.commence, kind:"🏀", game:g.label, pick:`${p.player} ${p.side==="over"?"über":"unter"} ${String(p.line).replace(".",",")} ${p.statName}${p.checkApp?" (in App prüfen)":""}`, market:"Spieler", odds:p.odds, book:p.bookName, stake:p.stake, ev:p.ev, link:LINK(g.links, p.book)});
+}
+slip.sort((a,b)=>String(a.t).localeCompare(String(b.t)) || b.ev-a.ev);
+const sumStake = slip.reduce((s,x)=>s+(x.stake||0),0);
+$("slip").innerHTML = slip.length ? `<table><thead><tr><th>Wette</th><th>Quote</th><th>Einsatz</th><th>EV</th></tr></thead><tbody>${slip.map(x=>`<tr>
+  <td>${x.kind} ${esc(x.pick)}<div class="small">${esc(x.game)} · ${new Date(x.t).toLocaleTimeString("de-DE",{hour:"2-digit",minute:"2-digit"})} Uhr · ${esc(x.market)}</div></td>
+  <td><b>${f(x.odds,2)}</b><div class="small">${esc(x.book||"")}${x.link}</div></td>
+  <td>${f((x.stake||0)*100,1)} %</td><td class="${cls(x.ev)}">${sg(x.ev*100,1)} %</td></tr>`).join("")}</tbody></table>
+  <p class="small">${slip.length} Wetten · zusammen ${f(sumStake*100,1)} % der Kasse</p>` : `<p class="hint">Heute keine Empfehlung – lieber keine Wette als eine schlechte.</p>`;
+
+const PB = await load("props_backtest.json", null);
+const PP = await load("props_params.json", null);
+if(PB){ const r = PB.results[String(PB.bestK)] || Object.values(PB.results)[0];
+  $("propBt").innerHTML = `<p class="small"><b>Rücktest:</b> ${f(r.n,0)} Spieler-Einsätze seit 8. November, jeweils mit dem Wissen vom Vortag. Abweichung des Simulations-Schnitts vom echten Wert: Punkte ${sg(r.bias.pts,2)}, Rebounds ${sg(r.bias.reb,2)}, Assists ${sg(r.bias.ast,2)}, Dreier ${sg(r.bias.fg3m,2)} · mittlerer Fehler Punkte ${f(r.mae.pts,1)}${r.cover50?` · die mittleren 50 % der Simulation treffen bei Punkten ${pct(r.cover50.pts)} (Ziel 50 %)`:""}. Streuung und Angleichung an den Ligaschnitt wurden daran eingestellt.</p>` + (PP && PP.check && PP.check.n ? `<p class="small"><b>Live-Kontrolle:</b> ${PP.check.n} Spieler-Einsätze seit Start · echte Werte im Verhältnis zur Simulation: Punkte ${f(PP.check.pts.ratio,3)}, Rebounds ${f(PP.check.reb.ratio,3)}, Assists ${f(PP.check.ast.ratio,3)}, Dreier ${f(PP.check.fg3m.ratio,3)} (1,000 = genau) · Korrektur ab 150 Einsätzen.</p>` : ""); }
 function propRow(p){
   return `<tr><td>${p.value?"✓ ":""}${esc(p.player)}<div class="small">${esc(p.team)} · ${f(p.expMin,0)} Min. erwartet${p.pOut>0?` · fehlt zu ${pct(p.pOut)}`:""}</div></td>
   <td>${esc(sideTxt(p))}<div class="small">Sim Ø ${f(p.mean,1)}${p.checkApp?" · in App prüfen":""}</div></td>
-  <td>${f(p.odds,2)}<div class="small">${esc(p.bookName)}${p.twoSided?"":" · nur eine Seite"}</div></td>
+  <td>${f(p.odds,2)}<div class="small">${esc(p.bookName)}${p.twoSided?"":p.anchored?" · Maßstab bwin":" · nur eine Seite"}</div></td>
   <td>${pct(p.p)}<div class="small">Sim ${pct(p.pSim)} · Markt ${pct(p.pMkt)}</div></td>
   <td class="${cls(p.ev)}">${sg(p.ev*100,1)} %${p.value?`<div class="small">Einsatz ${f(p.stake*100,1)} %</div>`:""}</td></tr>`;
 }

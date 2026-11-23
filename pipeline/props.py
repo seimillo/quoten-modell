@@ -4,7 +4,7 @@ Pro Spieler:
 - Minuten: letzte 10 Spiele (70 %) und Saison (30 %), Ausfall-Wahrscheinlichkeit aus dem Verletzungsbericht.
   Die Minuten aller verfügbaren Spieler werden auf 240 pro Team hochgerechnet – fehlt ein Starter,
   bekommen die anderen seine Minuten.
-- Werte pro Minute (Punkte, Rebounds, Assists, Dreier): Saison, leicht zur Liga-Mitte gezogen (15 Minuten).
+- Werte pro Minute (Punkte, Rebounds, Assists, Dreier): Saison, zur Liga-Mitte gezogen (80 Minuten, im Rücktest am besten).
 - Team-Rahmen aus dem Spielmodell: erwartete Team-Punkte, Tempo, Punktdifferenz.
 Pro Durchlauf: Punktdifferenz und Tempo gemeinsam für beide Teams, Team-Form, Blowouts (Starter spielen
 weniger), Minuten mit Zufall, dann jeder Wert als Gamma-Poisson-Zufallszahl (mehr Streuung als Poisson).
@@ -20,8 +20,10 @@ from .nba import TEAMS
 from .sources import BOOK_NAMES, player_key
 
 N_SIM = 10000
-K_RATE = 15.0                       # Minuten, mit denen die Liga-Mitte in die Rate eingeht
-DISPERSION = {"pts": 7.0, "reb": 9.0, "ast": 7.0, "fg3m": 5.0}   # Gamma-Form: kleiner = mehr Streuung
+K_RATE = 80.0                       # Minuten, mit denen die Liga-Mitte in die Rate eingeht
+# Zusätzliche Streuung je Wert: Varianz ≈ (1 + PHI) × Erwartung. Punkte fallen in 2er- und 3er-Schritten,
+# darum wächst ihre Streuung mit der Erwartung, aber nicht quadratisch. Gemessen im Rücktest (props_backtest.py).
+PHI = {"pts": 1.6, "reb": 0.5, "ast": 0.5, "fg3m": 0.6}
 STATS = ("pts", "reb", "ast", "fg3m")
 STAT_NAME = {"pts": "Punkte", "reb": "Rebounds", "ast": "Assists", "fg3m": "Dreier"}
 CONF_P = 0.3                        # Gewicht der Simulation gegenüber dem Markt
@@ -96,7 +98,13 @@ def roster(pstats, abbr, before, lg, injuries):
     return rows
 
 
-def simulate(game, home_rows, away_rows, sd_margin, rng):
+def corrections():
+    """Gelernte Korrekturfaktoren je Wert (1.0 = keine Korrektur)."""
+    c = load_json("props_params.json", {}).get("corr", {})
+    return {s: float(c.get(s, 1.0)) for s in STATS}
+
+
+def simulate(game, home_rows, away_rows, sd_margin, rng, corr=None):
     """10.000 Durchläufe eines Spiels → {Spielerschlüssel: {stat: Array der simulierten Werte}}."""
     res = {}
     M, poss = game["margin"], game.get("poss", LEAGUE_POSS)
@@ -127,9 +135,9 @@ def simulate(game, home_rows, away_rows, sd_margin, rng):
         for s in STATS:
             rate = np.array([r["rates"][s] for r in rows])
             f = f_pts if s in ("pts", "fg3m") else f_pace
-            lam = mins * rate[None, :] * f * (pace * team_form)[:, None]
-            k = DISPERSION[s]
-            vals = rng.poisson(lam * rng.gamma(k, 1 / k, lam.shape))
+            lam = mins * rate[None, :] * f * (pace * team_form)[:, None] * (corr or {}).get(s, 1.0)
+            k = np.maximum(lam / PHI[s], 0.2)                       # Gamma-Form wächst mit der Erwartung
+            vals = rng.poisson(lam * rng.gamma(k, 1 / k))
             for j, r in enumerate(rows):
                 res.setdefault(r["key"], {})[s] = vals[:, j]
         for j, r in enumerate(rows):
@@ -141,6 +149,7 @@ def evaluate(games, events, pstats, injuries_by_team, sd_margin, seed=7):
     """Alle angebotenen Spielerlinien bewerten. Gibt Liste je Spiel zurück."""
     rng = np.random.default_rng(seed)
     lg = league_rates(pstats)
+    corr = corrections()
     ev_by_id = {e["id"]: e for e in events}
     out = []
     for g in games:
@@ -153,9 +162,15 @@ def evaluate(games, events, pstats, injuries_by_team, sd_margin, seed=7):
         inj_h = (g.get("injuries") or {}).get("home") or injuries_by_team.get(g["home"], [])
         inj_a = (g.get("injuries") or {}).get("away") or injuries_by_team.get(g["away"], [])
         hr, ar = roster(pstats, g["abbrH"], before, lg, inj_h), roster(pstats, g["abbrA"], before, lg, inj_a)
-        sims = simulate(g, hr, ar, sd_margin, rng)
+        sims = simulate(g, hr, ar, sd_margin, rng, corr)
         info = {r["key"]: (r, g["abbrH"]) for r in hr}
         info.update({r["key"]: (r, g["abbrA"]) for r in ar})
+        # faire Wahrscheinlichkeiten aus zweiseitigen Angeboten (z. B. bwin): (Spieler, Wert) → {Linie: P(über)}
+        fair = {}
+        for o in offers:
+            if o.get("over") and o.get("under"):
+                k = player_key(o["player"])
+                fair.setdefault((k, o["stat"]), {})[o["line"]] = devig_power(o["over"], o["under"])
         # beste Quote je (Spieler, Wert, Linie, Seite) über alle Buchmacher
         lines = {}
         for o in offers:
@@ -167,9 +182,9 @@ def evaluate(games, events, pstats, injuries_by_team, sd_margin, seed=7):
                 if not q:
                     continue
                 other = o.get("under" if side == "over" else "over")
-                p_mkt = devig_power(q, other) if other else min(0.97, (1 / q) / (1 + ONE_SIDED_MARGIN))
                 key = (k, o["stat"], o["line"], side)
-                cand = {"odds": q, "book": o["book"], "pMkt": p_mkt, "twoSided": bool(other)}
+                cand = {"odds": q, "book": o["book"], "twoSided": bool(other),
+                        "pMkt": devig_power(q, other) if other else None}
                 if key not in lines or q > lines[key]["odds"]:
                     lines[key] = cand
         props = []
@@ -179,17 +194,30 @@ def evaluate(games, events, pstats, injuries_by_team, sd_margin, seed=7):
             vals = sims[k][stat][played] if played.any() else sims[k][stat]
             p_over = float((vals > line).mean())
             p_sim = p_over if side == "over" else 1 - p_over
+            anchored = False
+            if c["pMkt"] is None:
+                f = fair.get((k, stat))
+                if f:
+                    # nächstgelegene faire Linie eines anderen Buchmachers, mit der Form der Simulation verschoben
+                    l0 = min(f, key=lambda x: abs(x - line))
+                    po = f[l0] + (p_over - float((vals > l0).mean()))
+                    po = min(0.98, max(0.02, po))
+                    c["pMkt"] = po if side == "over" else 1 - po
+                    anchored = True
+                else:
+                    c["pMkt"] = min(0.97, (1 / c["odds"]) / (1 + ONE_SIDED_MARGIN))
             p = CONF_P * p_sim + (1 - CONF_P) * c["pMkt"]
             ev = p * c["odds"] - 1
             props.append({"player": r["name"], "key": k, "team": team, "stat": stat, "statName": STAT_NAME[stat],
                           "line": line, "side": side, "odds": c["odds"], "book": c["book"],
-                          "bookName": BOOK_NAMES.get(c["book"], c["book"]), "twoSided": c["twoSided"],
+                          "bookName": BOOK_NAMES.get(c["book"], c["book"]), "twoSided": c["twoSided"], "anchored": anchored,
                           "mean": round(float(vals.mean()), 1), "median": float(np.median(vals)),
-                          "expMin": round(float(sims[k]["min"][sims[k]["min"] > 0].mean()) if (sims[k]["min"] > 0).any() else 0.0, 1), "pOut": round(r["pOut"], 2), "gp": r["gp"],
+                          "expMin": round(float(sims[k]["min"][played].mean()) if played.any() else 0.0, 1),
+                          "pOut": round(r["pOut"], 2), "gp": r["gp"],
                           "pSim": round(p_sim, 4), "pMkt": round(c["pMkt"], 4), "p": round(p, 4), "ev": round(ev, 4),
                           "evRaw": round(p_sim * c["odds"] - 1, 4)})
         # ✓: klare Fälle, eine pro Spieler, höchstens 3 pro Spiel
-        cands = sorted([p for p in props if p["ev"] >= (MIN_EV if p["twoSided"] else MIN_EV_ONE_SIDED) and MIN_ODDS <= p["odds"] <= MAX_ODDS and p["gp"] >= 5
+        cands = sorted([p for p in props if p["ev"] >= (MIN_EV if (p["twoSided"] or p["anchored"]) else MIN_EV_ONE_SIDED) and MIN_ODDS <= p["odds"] <= MAX_ODDS and p["gp"] >= 5
                         and p["expMin"] >= 18 and p["pOut"] <= 0.15], key=lambda x: -x["ev"])
         seen = set()
         for p in cands:
@@ -200,7 +228,14 @@ def evaluate(games, events, pstats, injuries_by_team, sd_margin, seed=7):
             p["stake"] = round(min(KELLY_CAP, KELLY_FRAC * p["ev"] / (p["odds"] - 1)), 4)
             p["checkApp"] = p["stat"] != "pts"
         props.sort(key=lambda x: (-bool(x.get("value")), -x["ev"]))
-        out.append({"id": g["id"], "commence": g["commence"], "label": f"{g['abbrA']} @ {g['abbrH']}",
+        summary = {}
+        for k, sv in sims.items():
+            pl = sv["min"] > 0
+            if pl.mean() < 0.5:
+                continue
+            summary[f"{info[k][1]}|{k}"] = {s_: [round(float(sv[s_][pl].mean()), 2), float(np.percentile(sv[s_][pl], 25)),
+                                                 float(np.percentile(sv[s_][pl], 75))] for s_ in STATS}
+        out.append({"id": g["id"], "commence": g["commence"], "label": f"{g['abbrA']} @ {g['abbrH']}", "simSummary": summary,
                     "home": g["home"], "away": g["away"], "nProps": len(props), "props": props[:60],
                     "links": (e or {}).get("links", {})})
     n_val = sum(1 for x in out for p in x["props"] if p.get("value"))
@@ -293,3 +328,68 @@ def stats(T=None):
             "hit": round(sum(1 for t in hit if t["result"] == "win") / len(hit), 3) if hit else None,
             "expHit": round(sum(t["p"] for t in hit) / len(hit), 3) if hit else None,
             "clv": round(sum(clv) / len(clv), 4) if clv else None, "clvN": len(clv)}
+
+
+# ---------------- Tägliches Lernen aus allen Spielern ----------------
+CORR_MIN_N, CORR_STEP, CORR_BOUNDS = 150, 0.25, (0.85, 1.15)
+
+
+def save_sims(prop_games, now=None):
+    """Vorhersage jedes Spielers vor Spielbeginn speichern (Mittagslauf)."""
+    now = now or now_utc()
+    D = load_json("props_sims.json", {})
+    for g in prop_games:
+        if parse_time(g["commence"]) <= now:
+            continue
+        for k, v in (g.get("simSummary") or {}).items():
+            D[f"{g['id']}|{k}"] = {"commence": g["commence"], "sim": v, "actual": None}
+    # nur die letzten 30 Tage behalten
+    cut = (now.date().toordinal() - 30)
+    D = {k: v for k, v in D.items() if parse_time(v["commence"]).date().toordinal() >= cut}
+    save_json("props_sims.json", D)
+
+
+def learn(pstats, now=None):
+    """Echte Werte eintragen, dann Korrekturfaktor je Wert langsam Richtung (Summe echt / Summe Simulation)."""
+    now = now or now_utc()
+    D = load_json("props_sims.json", {})
+    for key, v in D.items():
+        if v.get("actual") is not None or (now - parse_time(v["commence"])).total_seconds() < 6 * 3600:
+            continue
+        _, team, pk = key.split("|", 2)
+        P = pstats["players"].get(f"{team}|{pk}")
+        d = parse_time(v["commence"]).date()
+        hit = [g for g in (P or {}).get("games", []) if abs((date.fromisoformat(g[0]) - d).days) <= 1]
+        if hit:
+            g = hit[-1]
+            v["actual"] = {s: g[IDX[s]] for s in STATS}
+        elif (now - parse_time(v["commence"])).days >= 2:
+            v["actual"] = {}                                   # nicht gespielt
+    save_json("props_sims.json", D)
+    done = [v for v in D.values() if v.get("actual")]
+    Pp = load_json("props_params.json", {"corr": {}, "history": []})
+    rep = {"n": len(done)}
+    if done:
+        for s in STATS:
+            sim_sum = sum(v["sim"][s][0] for v in done)
+            act_sum = sum(v["actual"][s] for v in done)
+            cov = sum(1 for v in done if v["sim"][s][1] <= v["actual"][s] <= v["sim"][s][2]) / len(done)
+            rep[s] = {"ratio": round(act_sum / sim_sum, 4) if sim_sum else None, "cover50": round(cov, 3),
+                      "bias": round((sim_sum - act_sum) / len(done), 2)}
+    if len(done) >= CORR_MIN_N:
+        changes = []
+        for s in STATS:
+            old = float(Pp["corr"].get(s, 1.0))
+            target = old * (rep[s]["ratio"] or 1.0)
+            new = old + CORR_STEP * (min(CORR_BOUNDS[1], max(CORR_BOUNDS[0], target)) - old)
+            new = round(min(CORR_BOUNDS[1], max(CORR_BOUNDS[0], new)), 4)
+            if abs(new - old) > 1e-4:
+                changes.append({"stat": s, "old": old, "new": new})
+            Pp["corr"][s] = new
+        if changes:
+            Pp["history"] = (Pp.get("history", []) + [{"date": now.date().isoformat(), "changes": changes}])[-60:]
+    Pp["check"] = rep
+    save_json("props_params.json", Pp)
+    log(f"Spielerwetten lernen: {len(done)} Spieler-Einsätze geprüft" +
+        (f", Korrektur {Pp['corr']}" if len(done) >= CORR_MIN_N else f" (Anpassung ab {CORR_MIN_N})"))
+    return Pp
