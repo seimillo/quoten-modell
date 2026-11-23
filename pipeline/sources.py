@@ -277,6 +277,8 @@ def parse_nba_report(text, team_names, known=None):
             events.append((m.start(), m.end(), "team", name))
     for m in re.finditer(r"NOT YET SUBMITTED", t):
         events.append((m.start(), m.end(), "nys", None))
+    for m in re.finditer(r"\b(\d{2}/\d{2}/\d{4})\b", t):
+        events.append((m.start(), m.end(), "date", m.group(1)))
     st = "|".join(NBA_STATUS)
     for m in re.finditer(r"([A-Za-z'.\-]+), ((?:[A-Za-z'.\-]+ ){1,2}?)(" + st + r")\b", t):
         events.append((m.start(), m.end(), "player", m))
@@ -289,14 +291,20 @@ def parse_nba_report(text, team_names, known=None):
         clean.append(e)
         last_end = e[1]
     out, missing, team = {}, set(), None
+    first_date = next((e[3] for e in clean if e[2] == "date"), None)
+    cur_date = first_date
     for i, (s0, e0, kind, val) in enumerate(clean):
+        if kind == "date":
+            cur_date = val
+            continue
         if kind == "team":
             team = val
             continue
         if team is None:
             continue
         if kind == "nys":
-            missing.add(team)
+            if cur_date == first_date:                 # nur Spiele des ersten Tags im Bericht (heute)
+                missing.add(team)
             continue
         m = val
         first = m.group(2).strip()

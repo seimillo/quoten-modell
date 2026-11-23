@@ -113,7 +113,8 @@ def roster(pstats, abbr, before, lg, injuries, tot_cur=None, tot_prior=None):
             rates = {s: (cur_sum[s] + K_PRIOR_OWN * pr[s] / pr["mp"]) / (tot_min + K_PRIOR_OWN) for s in STATS}
         else:
             rates = {s: (cur_sum[s] + K_RATE * lg[s]) / (tot_min + K_RATE) for s in STATS}
-        rows.append({"key": pkey, "name": P["name"], "min": exp_min, "pOut": p_out, "rates": rates, "gp": len(games),
+        rows.append({"key": pkey, "name": P["name"], "min": exp_min, "pOut": p_out, "listed": pkey in out_p,
+                     "rates": rates, "gp": len(games),
                      "role": role_of(rates)})
     return rows
 
@@ -360,14 +361,16 @@ def evaluate(games, events, pstats, injuries_by_team, sd_margin, seed=7, tot_cur
                 out.append("Verletzungsbericht des Teams fehlt noch")
             if rm.get(opp):
                 out.append("Verletzungsbericht des Gegners fehlt noch")
-            if p["pOut"] > 0.05:
+            me = next((r for r in rows_by_team.get(p["team"], []) if r["key"] == p["key"]), None)
+            if p["pOut"] >= 0.25 or (me and me.get("listed") and p["pOut"] > 0.1):
                 out.append("selbst fraglich")
+            # Fraglich = offiziell gemeldet als Questionable/Doubtful bzw. ESPN Day-To-Day (nicht „Probable“)
             for r in rows_by_team.get(p["team"], []):
-                if r["key"] != p["key"] and r["min"] >= 20 and 0.1 <= r["pOut"] <= 0.9:
+                if r["key"] != p["key"] and r.get("listed") and r["min"] >= 20 and 0.25 <= r["pOut"] <= 0.9:
                     out.append(f"Mitspieler {r['name']} fraglich")
             other = g["abbrA"] if p["team"] == g["abbrH"] else g["abbrH"]
             for r in rows_by_team.get(other, []):
-                if r["min"] >= 28 and 0.1 <= r["pOut"] <= 0.9:
+                if r.get("listed") and r["min"] >= 28 and 0.25 <= r["pOut"] <= 0.9:
                     out.append(f"Gegner {r['name']} fraglich")
             return out
         seen = set()
