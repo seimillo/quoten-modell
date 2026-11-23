@@ -98,6 +98,7 @@ footer{max-width:900px;margin:0 auto;padding:0 14px 40px;font-size:.78rem;color:
     <li><b>Markt-Anker:</b> anfangs 30 % Modell, 70 % Markt (Pinnacle/Betfair bzw. angezeigter Buchmacher, beim Sieg dazu Kalshi und Polymarket zur Hälfte).</li>
     <li><b>Verletzungen:</b> Wert pro Spieler = (BPM + 2) × Minuten/48 (BPM von Basketball-Reference, aktuelle Saison mit Vorsaison gemischt und zur Mitte gezogen, höchstens 8 Punkte). Davon wird nur abgezogen, was noch in den Team-Ratings steckt, mal der Ausfall-Wahrscheinlichkeit aus dem offiziellen NBA-Verletzungsbericht (alle 15 Minuten, Out 100 %, Doubtful 75 %, Questionable 45 %, Probable 10 %), für noch nicht gemeldete Teams aus ESPN (Day-To-Day 30 %).</li>
     <li><b>Beste Quote:</b> Jede Wette wird bei allen Buchmachern mit deutscher Lizenz (GGL-Whitelist) verglichen: Tipico, Winamax, Betano, Betway, LeoVegas und 888sport. Betano, Betway, LeoVegas und 888sport liefert die Schnittstelle nur als UK- bzw. Schweden-Version, die deutschen Quoten können leicht abweichen. Pinnacle und Betfair dienen nur als Vergleichsmarkt und mit der besten Quote bewertet – bei Handicap und Gesamtpunkten auch über verschiedene Linien.</li>
+    <li><b>⚡-Wetten:</b> unabhängig vom Modell – die Quote liegt mindestens 1,5 % über der fairen Pinnacle-Quote (ohne Marge). Nur bei Tipico, Winamax und bet365, weil diese die Wettsteuer selbst tragen. Eine pro Spiel, Einsatz ¼-Kelly, eigene Trefferliste.</li>
     <li><b>Strenge Auswahl (✓):</b> höchstens eine Wette pro Spiel (die mit dem höchsten EV), EV ≥ 3 % – bei Gesamtpunkten 5 %, weil dieser Teil noch nicht gegen Quoten getestet ist – <i>und</i> die Quote ist auch gegenüber der fairen Pinnacle-Quote nicht schlechter. Ohne Pinnacle-Quote: EV ≥ 5 %. Einsatz: ¼-Kelly (Vorteil ÷ (Quote − 1) ÷ 4), höchstens 2 % der Kasse.</li>
     <li><b>Abend-Update 23:37 Uhr:</b> nach dem Bericht von 17:30 Uhr US-Zeit neu gerechnet. Ändert sich eine Empfehlung, steht beim Spiel ein ⚠. Die Trefferliste zählt die Empfehlung von mittags, der Abendlauf liefert die Schlussquote für den CLV.</li>
   </ol>
@@ -132,6 +133,9 @@ $("kpis").innerHTML = st ? `
 function tag(b){
   if(b.value) return `<span class="tag good">✓ ${esc(b.pick)} ${sg(b.ev*100)} %<br><span class="small">${f(b.odds,2)} ${esc(b.bookName||"")} · Einsatz ${f(b.stake*100,1)} %</span></span>`;
   return b.ev>0 ? `<span class="tag none">knapp: ${esc(b.pick)} ${sg(b.ev*100)} %</span>` : `<span class="tag none">kein Value</span>`; }
+function flashTag(g){
+  const x=g.flash; if(!x) return "";
+  return `<div class="small" style="color:var(--accent)">⚡ ${esc(x.pick)} @ ${f(x.odds,2)} ${esc(x.bookName||"")} · ${sg(x.evPin*100,1)} % über Pinnacle · Einsatz ${f(x.stake*100,1)} %</div>`; }
 function changeTag(g){
   if(!g.eveningUpdate || !g.middayBest) return "";
   return g.changed ? `<div class="small" style="color:var(--warn)">⚠ Abend-Update ${new Date(g.eveningUpdate).toLocaleTimeString("de-DE",{hour:"2-digit",minute:"2-digit"})}: Empfehlung geändert (mittags: ${esc(g.middayBest.pick)}${g.middayBest.value?" ✓":""})</div>`
@@ -154,7 +158,7 @@ function nbaCard(g){
     <div class="t">${esc(g.away)} @ ${esc(g.home)}</div>
     <div class="small">Modell: ${esc(g.abbrH)} ${sg(g.margin)} · ${f(g.total)} Punkte · Siegchance ${esc(g.abbrH)} ${pct(g.pModelHome)} · Markt ${pct(g.pMarketHome)}</div>
     ${g.kalshi?`<div class="small">Kalshi: ${esc(g.abbrA)} ${f(g.kalshi.a,0)} % / ${esc(g.abbrH)} ${f(g.kalshi.b,0)} % · ${f(g.kalshi.vol,0)} Kontrakte</div>`:""}
-    ${whaleLine(g.whales, g.away, g.home)}${changeTag(g)}</div>${tag(g.best)}</summary>
+    ${whaleLine(g.whales, g.away, g.home)}${flashTag(g)}${changeTag(g)}</div>${tag(g.best)}</summary>
     <div class="body"><h3>Punktdifferenz ${esc(g.abbrH)}</h3><table><tbody>${parts}
       <tr><td><b>Ergebnis</b><div class="small">${esc(g.abbrA)} ${f(g.ptsA)} : ${f(g.ptsH)} ${esc(g.abbrH)} · ${f(g.poss)} Ballbesitze</div></td><td><b>${sg(g.margin)}</b></td></tr></tbody></table>
       <h3>Wetten</h3>${betsTable(g.bets)}
@@ -165,7 +169,7 @@ function nbaCard(g){
       ${g.schedule?`<h3>Spielplan</h3><p class="small">${["away","home"].map(sd=>{const x=g.schedule[sd];return `${esc(sd==="away"?g.abbrA:g.abbrH)}: ${x.rest} Ruhetag(e)${x.dens?` · ${x.dens>1?"4 in 6 & 3 in 4":"3 in 4 / 4 in 6"}`:""}${x.km?` · ${f(x.km,0)} km Reise (gewichtet)`:""}`}).join("<br>")}</p>`:""}
       <h3>Verletzungen <span class="small">(${g.injuryReport?`offizieller NBA-Bericht ${esc(g.injuryReport)}, sonst ESPN`:"ESPN"})</span></h3><p class="small">${esc(g.abbrA)}: ${inj("away")}<br>${esc(g.abbrH)}: ${inj("home")}</p></div></details>`;
 }
-const all = [...nba.map(g=>({...g, html:nbaCard(g)}))].sort((a,b)=>(b.best.value?1:0)-(a.best.value?1:0) || b.best.ev-a.best.ev);
+const all = [...nba.map(g=>({...g, html:nbaCard(g)}))].sort((a,b)=>((b.best.value?2:0)+(b.flash?1:0))-((a.best.value?2:0)+(a.flash?1:0)) || b.best.ev-a.best.ev);
 $("top").innerHTML = all.length ? all.map(x=>x.html).join("") : `<p class="hint">Gerade keine NBA-Spiele mit Quoten.</p>`;
 
 const wl = [...nba.map(g=>({lbl:`${g.away} @ ${g.home}`, nA:g.away, nB:g.home, w:g.whales, pm:g.polymarket, k:g.kalshi}))]
@@ -198,6 +202,7 @@ $("bt").innerHTML = bt ? btOdds + `<h3>Rücktest auf ${f(bt.games,0)} vergangene
 $("learn").innerHTML = st ? `<h3>Lernt das Modell?</h3><div class="kpis">
   <div class="kpi"><div class="k">Schlussquote geschlagen (CLV)</div><div class="v ${cls(st.clvAvg||0)}">${st.clvAvg==null?"–":sg(st.clvAvg*100)+" %"}</div><div class="hint">${st.clvN||0} Wetten · ${st.clvPos==null?"–":pct(st.clvPos)} besser als die Schlussquote</div></div>
   <div class="kpi"><div class="k">CLV der ✓-Wetten</div><div class="v ${cls(st.clvValueAvg||0)}">${st.clvValueAvg==null?"–":sg(st.clvValueAvg*100)+" %"}</div><div class="hint">${st.clvValueN||0} Wetten</div></div>
+  <div class="kpi"><div class="k">⚡-Wetten (besser als Pinnacle)</div><div class="v ${cls(st.flashProfit||0)}">${st.flashSettled?sg(st.flashProfit,2)+" €":"–"}</div><div class="hint">${st.flashBets||0} Wetten · ${st.flashSettled||0} ausgewertet · CLV ${st.flashClv==null?"–":sg(st.flashClv*100,1)+" %"}</div></div>
   <div class="kpi"><div class="k">Kasse mit Kelly-Einsätzen</div><div class="v ${cls(st.kellyGrowth||0)}">${sg((st.kellyGrowth||0)*100)} %</div><div class="hint">${st.kellyBets||0} Wetten</div></div>
   <div class="kpi"><div class="k">Brier reines Modell</div><div class="v">${f(st.brierRaw,3)}</div><div class="hint">ohne Markt-Anker</div></div></div>
   ${(st.calibration||[]).length?`<h3>Kalibrierung</h3><table><thead><tr><th>Modell sagt</th><th>Spiele</th><th>Ø Prognose</th><th>tatsächlich</th></tr></thead><tbody>${st.calibration.map(c=>`<tr><td>${pct(c.from)}–${pct(c.to)}</td><td>${c.n}</td><td>${pct(c.pred)}</td><td>${pct(c.real)}</td></tr>`).join("")}</tbody></table>`:""}
@@ -212,7 +217,7 @@ $("trk").innerHTML = rows.length ? `<table><thead><tr><th>Spiel</th><th>Wette</t
   const res = !r.result ? `<span class="small">offen</span>` : `${won?'<b class="pos">gewonnen</b>':lost?'<b class="neg">verloren</b>':"zurück"}<div class="small">${esc(r.score||"")}${b.odds?` · ${won?"+"+f((b.odds-1)*10,2):lost?"−10,00":"±0"} €`:""}</div>`;
   return `<tr>
   <td>${esc(r.match)}<div class="small">${new Date(r.commence).toLocaleDateString("de-DE",{day:"2-digit",month:"2-digit"})} · Modell ${pct(r.pModelA)}, Markt ${pct(r.pMarketA)} für ${esc((r.sideA||"").split(" ").pop())}</div></td>
-  <td>${b.pick?`${b.value?"✓ ":""}${esc(b.pick)}<div class="small">${esc(b.market||"")} · EV ${sg((b.ev||0)*100)} %</div>`:"–"}</td>
+  <td>${b.pick?`${b.value?"✓ ":""}${esc(b.pick)}<div class="small">${esc(b.market||"")} · EV ${sg((b.ev||0)*100)} %</div>`:"–"}${r.flash?`<div class="small">⚡ ${esc(r.flash.pick)} @ ${f(r.flash.odds,2)} ${esc(r.flash.bookName||"")}${r.flashResult?` – ${r.flashResult==="win"?"gewonnen":r.flashResult==="loss"?"verloren":"zurück"}`:""}${r.flashClose?` · CLV ${sg(r.flashClose.clv*100,1)} %`:""}</div>`:""}</td>
   <td>${b.odds?`<b>${f(b.odds,2)}</b><div class="small">${esc(b.bookName||"")}</div>${r.close?`<div class="small">Schluss fair ${f(r.close.fairOdds,2)} · CLV <span class="${cls(r.close.clv)}">${sg(r.close.clv*100)} %</span></div>`:""}`:"–"}</td>
   <td>${res}</td></tr>`}).join("")}</tbody></table>
   <p class="hint">Brier-Wert = Durchschnitt von (Prognose − Ergebnis)². Kleiner ist besser. Ist der Wert des Modells kleiner als der des Markts, war das Modell genauer.</p>` : `<p class="hint">Noch keine Prognosen gespeichert.</p>`;

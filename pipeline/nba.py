@@ -245,6 +245,10 @@ def form(team, hist, expect):
 
 # ---------------- Wetten: beste Quote, Pinnacle-Check, Kelly ----------------
 MIN_EV, MIN_EV_NO_SHARP, KELLY_FRAC, KELLY_CAP = 0.03, 0.05, 0.25, 0.02
+# ⚡-Wetten: Quote liegt über der fairen Pinnacle-Quote – unabhängig vom eigenen Modell.
+# Nur Anbieter, die die Wettsteuer selbst tragen (sonst frisst die Steuer den Vorteil).
+FLASH_BOOKS = ("tipico_de", "winamax_de", "op_bet365")
+FLASH_MIN = 0.015
 MIN_EV_TOTAL = 0.05       # Gesamtpunkte: noch nicht gegen Quoten getestet → strengere Schwelle
 
 
@@ -418,6 +422,7 @@ def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events, c
 
         mix = lambda p, b: CF * p + (1 - CF) * b
         bets = []
+        flashes = []
 
         def add(market, pick, offers, p_model_fn, p_mkt_fn, p_pin_fn, side):
             """Bewertet jedes Angebot (Buch, Quote, Linie) und behält das mit dem höchsten EV."""
@@ -435,6 +440,18 @@ def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events, c
                             "p": round(p, 4), "ev": round(ev_, 4), "evRaw": round(pm_ * q - 1, 4),
                             "evPin": round(pp * q - 1, 4) if pp is not None else None,
                             "pPin": round(pp, 4) if pp is not None else None}
+            for book, q, line in offers:                    # ⚡: Quote gegen faire Pinnacle-Quote
+                if book not in FLASH_BOOKS:
+                    continue
+                pp = p_pin_fn(line)
+                if pp is None:
+                    continue
+                evp = pp * q - 1
+                if evp >= FLASH_MIN:
+                    flashes.append({"market": market, "pick": pick(line), "odds": q, "line": line, "side": side,
+                                    "book": book, "bookName": BOOK_NAMES.get(book, book), "pPin": round(pp, 4),
+                                    "evPin": round(evp, 4), "ev": round(evp, 4),
+                                    "stake": round(min(KELLY_CAP, KELLY_FRAC * evp / (q - 1)), 4) if q > 1 else 0.0})
             if best:
                 main_q = next((q for b_, q, _ in offers if b_ == bk), None)
                 best["mainOdds"], best["mainBook"] = main_q, BOOK_NAMES.get(bk, bk)
@@ -496,6 +513,7 @@ def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events, c
             "kalshi": kal, "polymarket": ({"pA": pm["pA"], "pB": pm["pB"], "volume": round(pm["volume"])} if pm else None),
             "bookKey": bk, "bookName": BOOK_NAMES.get(bk, bk), "whales": whale, "injuries": {"away": rows_a, "home": rows_h},
             "bets": bets, "best": best, "hasValue": bool(values),
+            "flash": max(flashes, key=lambda x: x["evPin"]) if flashes else None,
             "sideA": home, "pickLabel": f"{away} @ {home}", "conf": CF,
             "feat": {"team": round(team_raw, 3), "player": round(player_raw, 3), "alt": alt, "rest": round(rest_raw, 3),
                      "inj": round(inj_raw, 3), "sched": sched_raw, "travel": round(travel_raw, 3), "form": round(form_raw, 3),

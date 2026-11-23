@@ -38,7 +38,7 @@ def _key(g, b):
     return f"{g['id']}|{b['market']}|{b['pick']}"
 
 
-def notify_value_bets(nba, title="Neue ✓-Wetten"):
+def notify_value_bets(nba, title="Neue Wetten (✓ Modell, ⚡ besser als Pinnacle)"):
     """Meldet nur ✓-Wetten, die noch nicht gemeldet wurden."""
     sent = load_json("notified.json", {})
     lines, keys = [], []
@@ -47,6 +47,11 @@ def notify_value_bets(nba, title="Neue ✓-Wetten"):
             if b.get("value") and _key(g, b) not in sent:
                 lines.append(_line(g, b))
                 keys.append((_key(g, b), g["commence"]))
+        fl = g.get("flash")
+        if fl and "⚡" + _key(g, fl) not in sent:
+            lines.append(f"⚡ {g['abbrA']} @ {g['abbrH']} {_time(g['commence'])} Uhr: {fl['pick']} @ {fl['odds']:.2f} "
+                         f"{fl.get('bookName', '')} · {fl['evPin'] * 100:+.1f} % über Pinnacle · Einsatz {fl['stake'] * 100:.1f} %")
+            keys.append(("⚡" + _key(g, fl), g["commence"]))
     if lines and send(title, lines, tags=("basketball", "white_check_mark"), priority=4):
         for k, c in keys:
             sent[k] = c

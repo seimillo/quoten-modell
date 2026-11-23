@@ -29,6 +29,13 @@ def update_picks(picks, items):
             "pModelRaw": it.get("pModelHome", it.get("pModelA")), "feat": it.get("feat"),
             "bet": bet, "result": None, "betResult": None, "score": None,
         })
+        fl = it.get("flash")
+        if fl:
+            new = {k: fl.get(k) for k in ("market", "pick", "odds", "line", "side", "book", "bookName", "evPin", "stake")}
+            if rec.get("flash") != new:
+                rec.pop("flashClose", None)
+            rec["flash"] = new                         # einmal ⚡, bleibt ⚡ (bestes Angebot bis Spielbeginn)
+        rec.setdefault("flashResult", None)
         picks[it["id"]] = rec
 
 
@@ -71,6 +78,8 @@ def settle(picks, scores_by_id):
         rec["result"] = "A" if a > b else "B"
         rec["score"] = f"{a:g}:{b:g}"
         rec["betResult"] = _bet_result(rec, a, b, rec["sport"])
+        if rec.get("flash"):
+            rec["flashResult"] = _bet_result({"bet": rec["flash"]}, a, b, rec["sport"])
         n += 1
     log(f"Trefferliste: {n} Prognosen ausgewertet")
 
@@ -98,7 +107,18 @@ def stats(picks):
             "calibration": calibration(picks),
             "clvValueN": len(clv_v), "clvValueAvg": round(sum(clv_v) / len(clv_v), 4) if clv_v else None,
             "valueBets": len(vb), "profit": round(profit, 2), "roi": round(profit / (10 * len(vb)), 4) if vb else None,
-            "kellyBets": len(kb), "kellyGrowth": round(kelly, 4)}
+            "kellyBets": len(kb), "kellyGrowth": round(kelly, 4), **flash_stats(picks)}
+
+
+def flash_stats(picks):
+    fl = [r for r in picks.values() if r.get("flash")]
+    done = [r for r in fl if r.get("flashResult")]
+    pr = lambda r: 10 * (r["flash"]["odds"] - 1) if r["flashResult"] == "win" else -10 if r["flashResult"] == "loss" else 0
+    clv = [r["flashClose"]["clv"] for r in fl if r.get("flashClose")]
+    profit = sum(pr(r) for r in done)
+    return {"flashBets": len(fl), "flashSettled": len(done), "flashProfit": round(profit, 2),
+            "flashRoi": round(profit / (10 * len(done)), 4) if done else None,
+            "flashClv": round(sum(clv) / len(clv), 4) if clv else None, "flashClvN": len(clv)}
 
 
 # ---------------- Schlussquote (Closing Line Value) ----------------
@@ -158,6 +178,10 @@ def record_close(picks, events, params=None):
         p = close_prob(rec, ev, nba_p.get("sd_margin", 12.5), nba_p.get("sd_total", 18.0))
         if p is None:
             continue
+        if rec.get("flash"):
+            pf = close_prob({**rec, "bet": rec["flash"]}, ev, nba_p.get("sd_margin", 12.5), nba_p.get("sd_total", 18.0))
+            if pf is not None:
+                rec["flashClose"] = {"pFair": round(pf, 4), "clv": round(rec["flash"]["odds"] * pf - 1, 4)}
         odds = rec["bet"]["odds"]
         rec["close"] = {"pFair": round(p, 4), "fairOdds": round(1 / p, 3), "clv": round(odds * p - 1, 4),
                         "ts": now.isoformat(timespec="minutes")}
