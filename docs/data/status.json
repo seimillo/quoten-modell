@@ -1,7 +1,7 @@
 {
- "updated": "2026-11-23T15:57:32.355438+00:00",
+ "updated": "2026-11-23T15:59:17.012921+00:00",
  "credits": {
-  "remaining": 404.0,
+  "remaining": 401.0,
   "used_now": 3.0
  },
  "stats": {
@@ -76,13 +76,13 @@
   "Basketball-Reference Spieler 2027: 476 Einträge",
   "Basketball-Reference Spieler 2026: 661 Einträge",
   "ESPN Verletzungen: 104 Einträge",
-  "NBA-Verletzungsbericht 23.11. 10:45 ET: 74 Spieler, 10 Teams noch nicht gemeldet",
+  "NBA-Verletzungsbericht 23.11. 10:45 ET: 74 Spieler, 4 Teams noch nicht gemeldet",
   "Quoten basketball_nba: 10 Events, 10 mit Buchmacher-Quoten",
   "OddsPapi: 2175 Spielerwetten-Linien",
-  "OddsPapi: 18 Buchmacher-Einträge an 10 Spiele gehängt (bet365.de, bwin.de) · Handicap-Linien plausibel 8, verworfen 0 · 144 von 250 Abfragen diesen Monat",
+  "OddsPapi: 18 Buchmacher-Einträge an 10 Spiele gehängt (bet365.de, bwin.de) · Handicap-Linien plausibel 8, verworfen 0 · 146 von 250 Abfragen diesen Monat",
   "Streuung: Markt 12.7, Modell nutzt 13.65",
   "NBA: 10 Spiele bewertet, 1 mit Value-Wette",
-  "Spielerwetten: 2246 Linien in 10 Spielen simuliert, 8 ✓",
+  "Spielerwetten: 2245 Linien in 10 Spielen simuliert, 8 ✓",
   "Trefferliste: 0 Prognosen ausgewertet",
   "Spielerwetten lernen: 0 Spieler-Einsätze geprüft (Anpassung ab 150)",
   "Vertrauen in die Simulation: 0 neue Linien ausgewertet · Abweichung ab 0 %: 0.30 (n=0), Abweichung ab 5 %: 0.30 (n=0), Abweichung ab 10 %: 0.30 (n=0), Abweichung ab 15 %: 0.30 (n=0)",
@@ -123,7 +123,7 @@
    }
   },
   "clvPos": 0.3,
-  "bets": 13,
+  "bets": 14,
   "settled": 0,
   "profit": 0,
   "roi": null,

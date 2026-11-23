@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T15:57:32.355438+00:00",
+ "updated": "2026-11-23T15:59:17.012921+00:00",
  "mode": "mittags",
  "games": [
   {
@@ -3053,31 +3053,6 @@
      "evRaw": 0.5163
     },
     {
-     "player": "Devin Vassell",
-     "key": "devin vassell",
-     "team": "SAS",
-     "stat": "reb",
-     "statName": "Rebounds",
-     "line": 6.5,
-     "side": "over",
-     "odds": 6.0,
-     "book": "op_bet365",
-     "bookName": "bet365",
-     "twoSided": false,
-     "anchored": false,
-     "mean": 4.8,
-     "median": 4.0,
-     "expMin": 36.0,
-     "pOut": 0.0,
-     "gp": 9,
-     "pSim": 0.2454,
-     "pMkt": 0.1558,
-     "p": 0.1827,
-     "ev": 0.0959,
-     "w": 0.3,
-     "evRaw": 0.4724
-    },
-    {
      "player": "Stephon Castle",
      "key": "stephon castle",
      "team": "SAS",
@@ -3101,6 +3076,31 @@
      "ev": 0.0959,
      "w": 0.3,
      "evRaw": 0.4722
+    },
+    {
+     "player": "Devin Vassell",
+     "key": "devin vassell",
+     "team": "SAS",
+     "stat": "reb",
+     "statName": "Rebounds",
+     "line": 6.5,
+     "side": "over",
+     "odds": 6.0,
+     "book": "op_bet365",
+     "bookName": "bet365",
+     "twoSided": false,
+     "anchored": false,
+     "mean": 4.8,
+     "median": 4.0,
+     "expMin": 36.0,
+     "pOut": 0.0,
+     "gp": 9,
+     "pSim": 0.2454,
+     "pMkt": 0.1558,
+     "p": 0.1827,
+     "ev": 0.0959,
+     "w": 0.3,
+     "evRaw": 0.4724
     },
     {
      "player": "Victor Wembanyama",
@@ -4840,8 +4840,7 @@
      "stake": 0.01,
      "checkApp": false,
      "risks": [
-      "Verletzungsbericht des Gegners fehlt noch",
-      "selbst fraglich"
+      "Verletzungsbericht des Gegners fehlt noch"
      ],
      "safe": false
     },
@@ -4873,8 +4872,7 @@
      "stake": 0.0075,
      "checkApp": false,
      "risks": [
-      "Verletzungsbericht des Gegners fehlt noch",
-      "Mitspieler Walker Kessler fraglich"
+      "Verletzungsbericht des Gegners fehlt noch"
      ],
      "safe": false
     },
@@ -4907,8 +4905,7 @@
      "checkApp": false,
      "risks": [
       "Verletzungsbericht des Teams fehlt noch",
-      "Mitspieler Jaxson Hayes fraglich",
-      "Gegner Walker Kessler fraglich"
+      "Mitspieler Jaxson Hayes fraglich"
      ],
      "safe": false
     },
@@ -6288,31 +6285,6 @@
      "evRaw": 0.1134
     },
     {
-     "player": "Walker Kessler",
-     "key": "walker kessler",
-     "team": "LAL",
-     "stat": "pts",
-     "statName": "Punkte",
-     "line": 4.5,
-     "side": "over",
-     "odds": 1.012,
-     "book": "op_bet365",
-     "bookName": "bet365",
-     "twoSided": false,
-     "anchored": true,
-     "mean": 14.4,
-     "median": 14.0,
-     "expMin": 30.7,
-     "pOut": 0.1,
-     "gp": 9,
-     "pSim": 0.9666,
-     "pMkt": 0.98,
-     "p": 0.976,
-     "ev": -0.0123,
-     "w": 0.3,
-     "evRaw": -0.0218
-    },
-    {
      "player": "Matisse Thybulle",
      "key": "matisse thybulle",
      "team": "LAL",
@@ -6336,6 +6308,31 @@
      "ev": -0.0123,
      "w": 0.3,
      "evRaw": 0.1115
+    },
+    {
+     "player": "Walker Kessler",
+     "key": "walker kessler",
+     "team": "LAL",
+     "stat": "pts",
+     "statName": "Punkte",
+     "line": 4.5,
+     "side": "over",
+     "odds": 1.012,
+     "book": "op_bet365",
+     "bookName": "bet365",
+     "twoSided": false,
+     "anchored": true,
+     "mean": 14.4,
+     "median": 14.0,
+     "expMin": 30.7,
+     "pOut": 0.1,
+     "gp": 9,
+     "pSim": 0.9666,
+     "pMkt": 0.98,
+     "p": 0.976,
+     "ev": -0.0123,
+     "w": 0.3,
+     "evRaw": -0.0218
     }
    ],
    "links": {
@@ -8420,31 +8417,6 @@
      "evRaw": 0.0343
     },
     {
-     "player": "Derik Queen",
-     "key": "derik queen",
-     "team": "NOP",
-     "stat": "ast",
-     "statName": "Assists",
-     "line": 4.5,
-     "side": "over",
-     "odds": 7.25,
-     "book": "op_bet365",
-     "bookName": "bet365",
-     "twoSided": false,
-     "anchored": false,
-     "mean": 2.4,
-     "median": 2.0,
-     "expMin": 20.1,
-     "pOut": 0.0,
-     "gp": 12,
-     "pSim": 0.1422,
-     "pMkt": 0.1289,
-     "p": 0.1329,
-     "ev": -0.0365,
-     "w": 0.3,
-     "evRaw": 0.031
-    },
-    {
      "player": "Trey Murphy III",
      "key": "trey murphy",
      "team": "NOP",
@@ -8468,6 +8440,31 @@
      "ev": -0.0365,
      "w": 0.3,
      "evRaw": 0.0309
+    },
+    {
+     "player": "Derik Queen",
+     "key": "derik queen",
+     "team": "NOP",
+     "stat": "ast",
+     "statName": "Assists",
+     "line": 4.5,
+     "side": "over",
+     "odds": 7.25,
+     "book": "op_bet365",
+     "bookName": "bet365",
+     "twoSided": false,
+     "anchored": false,
+     "mean": 2.4,
+     "median": 2.0,
+     "expMin": 20.1,
+     "pOut": 0.0,
+     "gp": 12,
+     "pSim": 0.1422,
+     "pMkt": 0.1289,
+     "p": 0.1329,
+     "ev": -0.0365,
+     "w": 0.3,
+     "evRaw": 0.031
     }
    ],
    "links": {
@@ -10004,7 +10001,7 @@
    },
    "home": "Minnesota Timberwolves",
    "away": "Brooklyn Nets",
-   "nProps": 284,
+   "nProps": 283,
    "props": [
     {
      "player": "Mikel Brown Jr.",
@@ -10012,9 +10009,9 @@
      "team": "BKN",
      "stat": "pts",
      "statName": "Punkte",
-     "line": 11.5,
+     "line": 12.5,
      "side": "under",
-     "odds": 2.6,
+     "odds": 2.2,
      "book": "op_bwin",
      "bookName": "bwin",
      "twoSided": true,
@@ -10024,19 +10021,17 @@
      "expMin": 23.9,
      "pOut": 0.0,
      "gp": 7,
-     "pSim": 0.6001,
-     "pMkt": 0.3415,
-     "p": 0.4191,
-     "ev": 0.0896,
+     "pSim": 0.6644,
+     "pMkt": 0.4156,
+     "p": 0.4903,
+     "ev": 0.0786,
      "w": 0.3,
-     "evRaw": 0.5603,
+     "evRaw": 0.4617,
      "value": true,
      "stake": 0.01,
      "checkApp": false,
-     "risks": [
-      "Gegner Jonathan Kuminga fraglich"
-     ],
-     "safe": false
+     "risks": [],
+     "safe": true
     },
     {
      "player": "Mikel Brown Jr.",
@@ -10057,9 +10052,9 @@
      "pOut": 0.0,
      "gp": 7,
      "pSim": 0.0013,
-     "pMkt": 0.2599,
-     "p": 0.1823,
-     "ev": 5.5635,
+     "pMkt": 0.2501,
+     "p": 0.1754,
+     "ev": 5.3161,
      "w": 0.3,
      "evRaw": -0.9532
     },
@@ -10107,9 +10102,9 @@
      "pOut": 0.0,
      "gp": 7,
      "pSim": 0.0052,
-     "pMkt": 0.2638,
-     "p": 0.1862,
-     "ev": 2.9106,
+     "pMkt": 0.254,
+     "p": 0.1793,
+     "ev": 2.7663,
      "w": 0.3,
      "evRaw": -0.8908
     },
@@ -10182,9 +10177,9 @@
      "pOut": 0.0,
      "gp": 7,
      "pSim": 0.0194,
-     "pMkt": 0.278,
-     "p": 0.2004,
-     "ev": 1.3048,
+     "pMkt": 0.2682,
+     "p": 0.1935,
+     "ev": 1.2258,
      "w": 0.3,
      "evRaw": -0.7769
     },
@@ -10264,31 +10259,6 @@
      "evRaw": -0.4373
     },
     {
-     "player": "Mikel Brown Jr.",
-     "key": "mikel brown",
-     "team": "BKN",
-     "stat": "pts",
-     "statName": "Punkte",
-     "line": 19.5,
-     "side": "over",
-     "odds": 5.5,
-     "book": "op_bet365",
-     "bookName": "bet365",
-     "twoSided": false,
-     "anchored": true,
-     "mean": 10.8,
-     "median": 10.0,
-     "expMin": 23.9,
-     "pOut": 0.0,
-     "gp": 7,
-     "pSim": 0.0718,
-     "pMkt": 0.3304,
-     "p": 0.2528,
-     "ev": 0.3905,
-     "w": 0.3,
-     "evRaw": -0.6051
-    },
-    {
      "player": "Terrence Shannon Jr.",
      "key": "terrence shannon",
      "team": "MIN",
@@ -10312,6 +10282,31 @@
      "ev": 0.3723,
      "w": 0.3,
      "evRaw": -0.7516
+    },
+    {
+     "player": "Mikel Brown Jr.",
+     "key": "mikel brown",
+     "team": "BKN",
+     "stat": "pts",
+     "statName": "Punkte",
+     "line": 19.5,
+     "side": "over",
+     "odds": 5.5,
+     "book": "op_bet365",
+     "bookName": "bet365",
+     "twoSided": false,
+     "anchored": true,
+     "mean": 10.8,
+     "median": 10.0,
+     "expMin": 23.9,
+     "pOut": 0.0,
+     "gp": 7,
+     "pSim": 0.0718,
+     "pMkt": 0.3206,
+     "p": 0.2459,
+     "ev": 0.3527,
+     "w": 0.3,
+     "evRaw": -0.6051
     },
     {
      "player": "Julius Randle",
@@ -11089,6 +11084,31 @@
      "evRaw": 0.157
     },
     {
+     "player": "Egor Demin",
+     "key": "egor demin",
+     "team": "BKN",
+     "stat": "pts",
+     "statName": "Punkte",
+     "line": 9.5,
+     "side": "over",
+     "odds": 1.75,
+     "book": "op_bwin",
+     "bookName": "bwin",
+     "twoSided": true,
+     "anchored": false,
+     "mean": 12.4,
+     "median": 12.0,
+     "expMin": 26.6,
+     "pOut": 0.0,
+     "gp": 5,
+     "pSim": 0.6506,
+     "pMkt": 0.537,
+     "p": 0.5711,
+     "ev": -0.0006,
+     "w": 0.3,
+     "evRaw": 0.1385
+    },
+    {
      "player": "Julius Randle",
      "key": "julius randle",
      "team": "BKN",
@@ -11387,31 +11407,6 @@
      "ev": -0.0107,
      "w": 0.3,
      "evRaw": -0.0577
-    },
-    {
-     "player": "Egor Demin",
-     "key": "egor demin",
-     "team": "BKN",
-     "stat": "pts",
-     "statName": "Punkte",
-     "line": 10.5,
-     "side": "over",
-     "odds": 1.95,
-     "book": "op_bwin",
-     "bookName": "bwin",
-     "twoSided": true,
-     "anchored": false,
-     "mean": 12.4,
-     "median": 12.0,
-     "expMin": 26.6,
-     "pOut": 0.0,
-     "gp": 5,
-     "pSim": 0.5753,
-     "pMkt": 0.4779,
-     "p": 0.5071,
-     "ev": -0.0111,
-     "w": 0.3,
-     "evRaw": 0.1218
     },
     {
      "player": "Jonathan Kuminga",
@@ -16304,10 +16299,8 @@
      "value": true,
      "stake": 0.01,
      "checkApp": false,
-     "risks": [
-      "Gegner Amen Thompson fraglich"
-     ],
-     "safe": false
+     "risks": [],
+     "safe": true
     },
     {
      "player": "Rui Hachimura",
@@ -18378,10 +18371,7 @@
      "stake": 0.01,
      "checkApp": false,
      "risks": [
-      "Verletzungsbericht des Gegners fehlt noch",
-      "Mitspieler Sam Merrill fraglich",
-      "Mitspieler Peyton Watson fraglich",
-      "Mitspieler Jaylon Tyson fraglich"
+      "Verletzungsbericht des Gegners fehlt noch"
      ],
      "safe": false
     },
@@ -18413,10 +18403,7 @@
      "stake": 0.01,
      "checkApp": false,
      "risks": [
-      "Verletzungsbericht des Gegners fehlt noch",
-      "Mitspieler Sam Merrill fraglich",
-      "Mitspieler Peyton Watson fraglich",
-      "Mitspieler Jaylon Tyson fraglich"
+      "Verletzungsbericht des Gegners fehlt noch"
      ],
      "safe": false
     },
