@@ -436,7 +436,7 @@ for (const g of PROPS.games) {
   for (const p of g.props.filter(p=>p.value)) slip.push({pre:(PT[pidOf(g.id,p)]||{}).pre,
     log:{type:"prop", gameId:g.id, pid:pidOf(g.id,p), label:g.label, commence:g.commence, market:"Spieler", team:p.team, key:p.key, stat:p.stat,
          statName:p.statName, line:p.line, side:p.side, player:p.player, pick:`${p.player} ${appTxt(p)}`, kind:"🏀", value:true},
-    t:g.commence, kind:"🏀", pMin:p.p, hint:appHint(p), game:g.label, pick:`${p.player} ${appTxt(p)}${p.checkApp?" (in App prüfen)":""}`, market:"Spieler",
+    t:g.commence, kind:"🏀", pMin:p.p, hint:appHint(p) + ((p.alt||[]).length ? " · andere Linie: " + p.alt.map(a=>`${p.side==="over"?"Über":"Unter"} ${String(a.line).replace(".",",")} ab ${f(a.minOdds,2)}`).join(", ") : ""), game:g.label, pick:`${p.player} ${appTxt(p)}${p.checkApp?" (in App prüfen)":""}`, market:"Spieler",
     safe:p.safe, risks:p.risks||[], odds:p.odds, book:p.bookName, stake:p.stake, ev:p.ev, link:LINK(g.links, p.book),
     own:p.pSim, ownLbl:"Simulation", mkt:p.pMkt, mktLbl:p.anchored?"bwin fair":p.twoSided?"Buchmacher fair":"Buchm. geschätzt"});
 }

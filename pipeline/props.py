@@ -36,6 +36,8 @@ W_GRID = [round(i * 0.05, 2) for i in range(21)]
 CONF_PRIOR_N, CONF_MIN_N, CONF_MAX = 400, 200, 0.7
 ONE_SIDED_MARGIN = 0.07             # angenommene Marge, wenn nur „über“ angeboten wird
 MIN_EV, MIN_ODDS, MAX_ODDS = 0.05, 1.5, 3.5
+# In der deutschen App nicht spielbar (vom Nutzer geprüft): bet365 hat keine Rebounds/Assists für Spieler
+NOT_IN_APP = {("op_bet365", "reb"), ("op_bet365", "ast")}
 MIN_EV_ONE_SIDED = 0.10             # nur „über“ angeboten → Marge unsicher → strengere Schwelle
 LEAGUE_POSS = 99.5
 KELLY_FRAC, KELLY_CAP = 0.25, 0.01
@@ -318,10 +320,12 @@ def evaluate(games, events, pstats, injuries_by_team, sd_margin, seed=7, tot_cur
                 if key not in lines or q > lines[key]["odds"]:
                     lines[key] = cand
         props = []
+        vals_of = {}
         for (k, stat, line, side), c in lines.items():
             r, team = info[k]
             played = sims[k]["min"] > 0               # spielt er nicht, wird die Wette zurückgezahlt
             vals = sims[k][stat][played] if played.any() else sims[k][stat]
+            vals_of[(k, stat)] = vals
             p_over = float((vals > line).mean())
             p_sim = p_over if side == "over" else 1 - p_over
             anchored = False
@@ -349,7 +353,7 @@ def evaluate(games, events, pstats, injuries_by_team, sd_margin, seed=7, tot_cur
                           "evRaw": round(p_sim * c["odds"] - 1, 4)})
         # ✓: klare Fälle, eine pro Spieler, höchstens 3 pro Spiel
         cands = sorted([p for p in props if p["ev"] >= (MIN_EV if (p["twoSided"] or p["anchored"]) else MIN_EV_ONE_SIDED) and MIN_ODDS <= p["odds"] <= MAX_ODDS and p["gp"] >= 5
-                        and p["expMin"] >= 18 and p["pOut"] <= 0.15], key=lambda x: -x["ev"])
+                        and p["expMin"] >= 18 and p["pOut"] <= 0.15 and (p["book"], p["stat"]) not in NOT_IN_APP], key=lambda x: -x["ev"])
         # „mittags sicher“: Bericht beider Teams da, Spieler selbst gesund, kein wichtiger Mitspieler/Gegner fraglich
         rm = g.get("reportMissing") or {}
         rows_by_team = {g["abbrH"]: hr, g["abbrA"]: ar}
@@ -380,7 +384,18 @@ def evaluate(games, events, pstats, injuries_by_team, sd_margin, seed=7, tot_cur
             seen.add(p["key"])
             p["value"] = True
             p["stake"] = round(min(KELLY_CAP, KELLY_FRAC * p["ev"] / (p["odds"] - 1)), 4)
-            p["checkApp"] = p["stat"] != "pts"
+            p["checkApp"] = p["stat"] != "pts" and not (p["twoSided"] and "bet365" not in p["book"])
+            # Nachbarlinien: falls die App eine andere Linie zeigt – Mindestquote dafür (Form der Simulation)
+            v = vals_of.get((p["key"], p["stat"]))
+            if v is not None and not ("bet365" in p["book"] and p["side"] == "over"):
+                alt = []
+                for L in (p["line"] - 1, p["line"] + 1):
+                    po = float((v > L).mean())
+                    ps = po if p["side"] == "over" else 1 - po
+                    pm = min(0.98, max(0.02, p["pMkt"] + (ps - p["pSim"])))
+                    pa = p["w"] * ps + (1 - p["w"]) * pm
+                    alt.append({"line": L, "pSim": round(ps, 4), "p": round(pa, 4), "minOdds": round(1 / max(pa, 0.01), 2)})
+                p["alt"] = alt
             p["risks"] = risks(p)
             p["safe"] = not p["risks"]
         props.sort(key=lambda x: (-bool(x.get("value")), -x["ev"]))
@@ -426,7 +441,7 @@ def track(prop_games, now=None, src="mittags"):
                 new.append((g, p))
                 T[_pid(g["id"], p)] = {"src": src, **{k: p[k] for k in ("player", "key", "team", "stat", "statName", "line", "side",
                                                                "odds", "book", "bookName", "pSim", "p", "ev", "stake", "mean")},
-                                       "safe": p.get("safe"), "risks": p.get("risks", []),
+                                       "safe": p.get("safe"), "risks": p.get("risks", []), "alt": p.get("alt", []),
                                        "game": g["label"], "commence": g["commence"], "result": None, "value": None}
     save_json("props_picks.json", T)
     return new
