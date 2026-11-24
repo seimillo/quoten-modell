@@ -146,7 +146,19 @@ def nba_block(now, params, kalshi_nba, pm_nba, history, recent_min=None, op="nor
         g["injuryReport"] = stamp
         g["reportMissing"] = {side: (not REPORT["ok"]) or g[side] in REPORT["missing"] for side in ("home", "away")}
         g["sdUsed"], g["sdMarket"] = P["sd_margin"], msd
+        if not tonight(g["commence"], now):              # Tipps nur für die kommende Nacht
+            g["laterNight"] = True
+            g["flash"] = None
+            g["hasValue"] = False
+            for b in g["bets"]:
+                if b.get("value"):
+                    b["value"], b["stake"], b["why"] = False, 0.0, "Spiel erst in einer späteren Nacht – Tipp kommt dann"
     return nba, events
+
+
+def tonight(commence, now):
+    """Gehört das Spiel zur kommenden Spielnacht? (US-Spieltag von jetzt, z. B. mittags = die Nacht danach)"""
+    return _et_date(commence) == _et_date(now.isoformat())
 
 
 def props_block(nba, events, pstats, now, mode="mittags"):
@@ -183,6 +195,10 @@ def props_block(nba, events, pstats, now, mode="mittags"):
     except Exception as e:  # noqa: BLE001
         log(f"Spielerwetten fehlgeschlagen: {e}")
         return []
+    for g in games:                                       # Tipps nur für die kommende Nacht
+        if not tonight(g["commence"], now):
+            for p in g["props"]:
+                p["value"] = False
     if mode == "mittags":
         PR.save_lines(games, now)
     for g in games:
