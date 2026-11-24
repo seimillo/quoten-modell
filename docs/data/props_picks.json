@@ -20,11 +20,19 @@
   "result": null,
   "value": null,
   "close": {
-   "odds": 3.3,
-   "pMkt": 0.3094,
-   "clv": 0.021,
+   "odds": 2.9,
+   "pMkt": 0.3138,
+   "clv": 0.0355,
    "book": "bet365",
-   "at": "2026-11-23T15:49+00:00"
+   "at": "2026-11-24T00:07+00:00"
+  },
+  "pre": {
+   "status": "schwächer",
+   "odds": 2.9,
+   "ev": 0.0385,
+   "pSim": 0.4614,
+   "pOut": 0.0,
+   "at": "2026-11-24T00:07+00:00"
   }
  },
  "db2311c331296d3328d71b842167dea4|derrick jones|pts|9.5|over": {
@@ -53,6 +61,10 @@
    "clv": 0.0752,
    "book": "bet365",
    "at": "2026-11-23T15:49+00:00"
+  },
+  "pre": {
+   "status": "nicht mehr angeboten",
+   "at": "2026-11-24T00:07+00:00"
   }
  },
  "db2311c331296d3328d71b842167dea4|kevin durant|pts|24.5|over": {
@@ -74,7 +86,15 @@
   "game": "LAC @ HOU",
   "commence": "2026-11-24T01:40:00Z",
   "result": null,
-  "value": null
+  "value": null,
+  "pre": {
+   "status": "Linie jetzt 29.5",
+   "line": 29.5,
+   "odds": 6.75,
+   "ev": 0.1881,
+   "pSim": 0.1565,
+   "at": "2026-11-24T00:07+00:00"
+  }
  },
  "b8dfee1fca57ec870528a14c792ad73a|donovan mitchell|pts|26.5|under": {
   "player": "Donovan Mitchell",
@@ -97,11 +117,19 @@
   "result": null,
   "value": null,
   "close": {
-   "odds": 1.91,
-   "pMkt": 0.4881,
-   "clv": -0.0726,
+   "odds": 1.95,
+   "pMkt": 0.4779,
+   "clv": -0.092,
    "book": "bwin",
-   "at": "2026-11-23T15:49+00:00"
+   "at": "2026-11-24T00:07+00:00"
+  },
+  "pre": {
+   "status": "bestätigt",
+   "odds": 1.95,
+   "ev": 0.0664,
+   "pSim": 0.7079,
+   "pOut": 0.0,
+   "at": "2026-11-24T00:07+00:00"
   }
  },
  "b8dfee1fca57ec870528a14c792ad73a|jarrett allen|pts|14.5|under": {
@@ -123,7 +151,22 @@
   "game": "CLE @ CHI",
   "commence": "2026-11-24T01:10:00Z",
   "result": null,
-  "value": null
+  "value": null,
+  "pre": {
+   "status": "schwächer",
+   "odds": 1.87,
+   "ev": 0.0345,
+   "pSim": 0.6773,
+   "pOut": 0.0,
+   "at": "2026-11-24T00:07+00:00"
+  },
+  "close": {
+   "odds": 1.87,
+   "pMkt": 0.5,
+   "clv": 0.0,
+   "book": "bwin",
+   "at": "2026-11-24T00:07+00:00"
+  }
  },
  "35ca45d3e548dc7207fd7f1696ab16f5|cam spencer|ast|6.5|over": {
   "player": "Cam Spencer",
@@ -151,6 +194,10 @@
    "clv": -0.1219,
    "book": "bet365",
    "at": "2026-11-23T15:49+00:00"
+  },
+  "pre": {
+   "status": "nicht mehr angeboten",
+   "at": "2026-11-24T00:07+00:00"
   }
  },
  "3e9dc52cb055c0154839c4aec417955b|walker kessler|pts|14.5|over": {
@@ -177,17 +224,17 @@
   "pre": {
    "status": "schwächer",
    "odds": 2.3,
-   "ev": 0.0049,
-   "pSim": 0.4444,
+   "ev": 0.0033,
+   "pSim": 0.4504,
    "pOut": 0.1,
-   "at": "2026-11-23T15:49+00:00"
+   "at": "2026-11-24T00:07+00:00"
   },
   "close": {
    "odds": 2.3,
-   "pMkt": 0.4337,
-   "clv": -0.0025,
+   "pMkt": 0.4301,
+   "clv": -0.0108,
    "book": "bet365",
-   "at": "2026-11-23T15:49+00:00"
+   "at": "2026-11-24T00:07+00:00"
   }
  },
  "3e9dc52cb055c0154839c4aec417955b|ziaire williams|pts|9.5|over": {
@@ -213,18 +260,18 @@
   "value": null,
   "pre": {
    "status": "bestätigt",
-   "odds": 2.95,
-   "ev": 0.0735,
-   "pSim": 0.4675,
+   "odds": 2.7,
+   "ev": 0.0968,
+   "pSim": 0.469,
    "pOut": 0.0,
-   "at": "2026-11-23T15:49+00:00"
+   "at": "2026-11-24T00:07+00:00"
   },
   "close": {
-   "odds": 2.95,
-   "pMkt": 0.3195,
-   "clv": -0.0575,
+   "odds": 2.7,
+   "pMkt": 0.3793,
+   "clv": 0.1189,
    "book": "bet365",
-   "at": "2026-11-23T15:49+00:00"
+   "at": "2026-11-24T00:07+00:00"
   }
  },
  "3e9dc52cb055c0154839c4aec417955b|darryn peterson|pts|18.5|under": {
@@ -249,19 +296,19 @@
   "result": null,
   "value": null,
   "pre": {
-   "status": "bestätigt",
-   "odds": 1.87,
-   "ev": 0.0524,
-   "pSim": 0.7093,
+   "status": "zurückziehen",
+   "odds": 1.8,
+   "ev": -0.0048,
+   "pSim": 0.6408,
    "pOut": 0.0,
-   "at": "2026-11-23T15:49+00:00"
+   "at": "2026-11-24T00:07+00:00"
   },
   "close": {
-   "odds": 1.87,
-   "pMkt": 0.5,
-   "clv": -0.065,
-   "book": "bwin",
-   "at": "2026-11-23T15:49+00:00"
+   "odds": 1.8,
+   "pMkt": 0.5152,
+   "clv": -0.0366,
+   "book": "Betano",
+   "at": "2026-11-24T00:07+00:00"
   }
  },
  "b8dfee1fca57ec870528a14c792ad73a|jarrett allen|pts|15.5|under": {
@@ -286,19 +333,19 @@
   "result": null,
   "value": null,
   "pre": {
-   "status": "bestätigt",
-   "odds": 1.8,
-   "ev": 0.0553,
-   "pSim": 0.736,
+   "status": "schwächer",
+   "odds": 1.78,
+   "ev": 0.0424,
+   "pSim": 0.7323,
    "pOut": 0.0,
-   "at": "2026-11-23T15:49+00:00"
+   "at": "2026-11-24T00:07+00:00"
   },
   "close": {
-   "odds": 1.8,
-   "pMkt": 0.5221,
-   "clv": -0.0602,
-   "book": "bwin",
-   "at": "2026-11-23T15:49+00:00"
+   "odds": 1.78,
+   "pMkt": 0.5227,
+   "clv": -0.0591,
+   "book": "Betano",
+   "at": "2026-11-24T00:07+00:00"
   }
  },
  "17f31499f145cd9d3232819395d29448|domantas sabonis|reb|13.5|under": {
@@ -327,7 +374,7 @@
    "pMkt": 0.4947,
    "clv": -0.0932,
    "book": "888sport",
-   "at": "2026-11-23T15:49+00:00"
+   "at": "2026-11-24T00:07+00:00"
   }
  },
  "ac6fb079d66ef35a2a77e22b5e94ef8d|anfernee simons|pts|9.5|over": {
@@ -383,7 +430,15 @@
   "game": "BKN @ MIN",
   "commence": "2026-11-24T00:40:00Z",
   "result": null,
-  "value": null
+  "value": null,
+  "pre": {
+   "status": "Linie jetzt 13.5",
+   "line": 13.5,
+   "odds": 2.1,
+   "ev": 0.0891,
+   "pSim": 0.7106,
+   "at": "2026-11-24T00:07+00:00"
+  }
  },
  "a72a1703f7a92b80768255d1d977a761|mikel brown|pts|12.5|under": {
   "src": "mittags",
@@ -407,7 +462,15 @@
   "game": "BKN @ MIN",
   "commence": "2026-11-24T00:40:00Z",
   "result": null,
-  "value": null
+  "value": null,
+  "pre": {
+   "status": "Linie jetzt 13.5",
+   "line": 13.5,
+   "odds": 2.1,
+   "ev": 0.0891,
+   "pSim": 0.7106,
+   "at": "2026-11-24T00:07+00:00"
+  }
  },
  "17f31499f145cd9d3232819395d29448|domantas sabonis|pts|13.5|under": {
   "src": "mittags",
@@ -447,7 +510,22 @@
   "game": "SAS @ SAC",
   "commence": "2026-11-24T03:10:00Z",
   "result": null,
-  "value": null
+  "value": null,
+  "pre": {
+   "status": "zurückziehen",
+   "odds": 1.78,
+   "ev": -0.0095,
+   "pSim": 0.6352,
+   "pOut": 0.0,
+   "at": "2026-11-24T00:07+00:00"
+  },
+  "close": {
+   "odds": 1.78,
+   "pMkt": 0.5227,
+   "clv": 0.1238,
+   "book": "Betano",
+   "at": "2026-11-24T00:07+00:00"
+  }
  },
  "a72a1703f7a92b80768255d1d977a761|moritz wagner|pts|9.5|over": {
   "src": "mittags",
@@ -472,7 +550,15 @@
   "game": "BKN @ MIN",
   "commence": "2026-11-24T00:40:00Z",
   "result": null,
-  "value": null
+  "value": null,
+  "pre": {
+   "status": "Linie jetzt 14.5",
+   "line": 14.5,
+   "odds": 7.25,
+   "ev": 0.0324,
+   "pSim": 0.1739,
+   "at": "2026-11-24T00:07+00:00"
+  }
  },
  "35ca45d3e548dc7207fd7f1696ab16f5|naz reid|pts|19.5|over": {
   "src": "mittags",
@@ -497,7 +583,11 @@
   "game": "MEM @ CHA",
   "commence": "2026-11-24T00:10:00Z",
   "result": null,
-  "value": null
+  "value": null,
+  "pre": {
+   "status": "nicht mehr angeboten",
+   "at": "2026-11-24T00:07+00:00"
+  }
  },
  "c9b6c9f77fd3628308dd34f50854a9c0|ivica zubac|pts|14.5|over": {
   "src": "mittags",
@@ -524,7 +614,11 @@
   "game": "OKC @ IND",
   "commence": "2026-11-24T00:40:00Z",
   "result": null,
-  "value": null
+  "value": null,
+  "pre": {
+   "status": "nicht mehr angeboten",
+   "at": "2026-11-24T00:07+00:00"
+  }
  },
  "c9b6c9f77fd3628308dd34f50854a9c0|andrew nembhard|pts|14.5|over": {
   "src": "mittags",
@@ -551,7 +645,22 @@
   "game": "OKC @ IND",
   "commence": "2026-11-24T00:40:00Z",
   "result": null,
-  "value": null
+  "value": null,
+  "pre": {
+   "status": "schwächer",
+   "odds": 1.92,
+   "ev": 0.026,
+   "pSim": 0.6022,
+   "pOut": 0.1,
+   "at": "2026-11-24T00:07+00:00"
+  },
+  "close": {
+   "odds": 1.92,
+   "pMkt": 0.5053,
+   "clv": -0.0298,
+   "book": "bet365",
+   "at": "2026-11-24T00:07+00:00"
+  }
  },
  "c9b6c9f77fd3628308dd34f50854a9c0|ajay mitchell|pts|19.5|over": {
   "src": "mittags",
@@ -578,6 +687,197 @@
   "game": "OKC @ IND",
   "commence": "2026-11-24T00:40:00Z",
   "result": null,
-  "value": null
+  "value": null,
+  "pre": {
+   "status": "bestätigt",
+   "odds": 2.75,
+   "ev": 0.0758,
+   "pSim": 0.4398,
+   "pOut": 0.0,
+   "at": "2026-11-24T00:07+00:00"
+  },
+  "close": {
+   "odds": 2.75,
+   "pMkt": 0.3704,
+   "clv": 0.0186,
+   "book": "bet365",
+   "at": "2026-11-24T00:07+00:00"
+  }
+ },
+ "17f31499f145cd9d3232819395d29448|stephon castle|pts|24.5|over": {
+  "src": "vor Spielbeginn",
+  "player": "Stephon Castle",
+  "key": "stephon castle",
+  "team": "SAS",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 24.5,
+  "side": "over",
+  "odds": 3.1,
+  "book": "op_bet365",
+  "bookName": "bet365",
+  "pSim": 0.3591,
+  "p": 0.3506,
+  "ev": 0.087,
+  "stake": 0.01,
+  "mean": 22.2,
+  "safe": false,
+  "risks": [
+   "Mitspieler Victor Wembanyama fraglich",
+   "Mitspieler De'Aaron Fox fraglich"
+  ],
+  "alt": [],
+  "game": "SAS @ SAC",
+  "commence": "2026-11-24T03:10:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 3.1,
+   "pMkt": 0.347,
+   "clv": 0.0757,
+   "book": "bet365",
+   "at": "2026-11-24T00:07+00:00"
+  }
+ },
+ "a72a1703f7a92b80768255d1d977a761|mikel brown|pts|13.5|under": {
+  "src": "vor Spielbeginn",
+  "player": "Mikel Brown Jr.",
+  "key": "mikel brown",
+  "team": "BKN",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 13.5,
+  "side": "under",
+  "odds": 2.1,
+  "book": "op_bwin",
+  "bookName": "bwin",
+  "pSim": 0.7106,
+  "p": 0.5186,
+  "ev": 0.0891,
+  "stake": 0.01,
+  "mean": 11.0,
+  "safe": true,
+  "risks": [],
+  "alt": [
+   {
+    "line": 12.5,
+    "pSim": 0.6538,
+    "p": 0.4618,
+    "minOdds": 2.17
+   },
+   {
+    "line": 14.5,
+    "pSim": 0.7639,
+    "p": 0.5719,
+    "minOdds": 1.75
+   }
+  ],
+  "game": "BKN @ MIN",
+  "commence": "2026-11-24T00:40:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 2.1,
+   "pMkt": 0.4363,
+   "clv": -0.0838,
+   "book": "bwin",
+   "at": "2026-11-24T00:07+00:00"
+  }
+ },
+ "c9b6c9f77fd3628308dd34f50854a9c0|pascal siakam|pts|24.5|over": {
+  "src": "vor Spielbeginn",
+  "player": "Pascal Siakam",
+  "key": "pascal siakam",
+  "team": "IND",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 24.5,
+  "side": "over",
+  "odds": 2.7,
+  "book": "op_bet365",
+  "bookName": "bet365",
+  "pSim": 0.4291,
+  "p": 0.3952,
+  "ev": 0.0671,
+  "stake": 0.0099,
+  "mean": 23.7,
+  "safe": true,
+  "risks": [],
+  "alt": [],
+  "game": "OKC @ IND",
+  "commence": "2026-11-24T00:40:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 2.7,
+   "pMkt": 0.3807,
+   "clv": 0.0279,
+   "book": "bet365",
+   "at": "2026-11-24T00:07+00:00"
+  }
+ },
+ "3e9dc52cb055c0154839c4aec417955b|luka doncic|pts|39.5|over": {
+  "src": "vor Spielbeginn",
+  "player": "Luka Doncic",
+  "key": "luka doncic",
+  "team": "LAL",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 39.5,
+  "side": "over",
+  "odds": 2.55,
+  "book": "op_bet365",
+  "bookName": "bet365",
+  "pSim": 0.3341,
+  "p": 0.4148,
+  "ev": 0.0579,
+  "stake": 0.0093,
+  "mean": 35.7,
+  "safe": true,
+  "risks": [],
+  "alt": [],
+  "game": "UTA @ LAL",
+  "commence": "2026-11-24T03:10:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 2.55,
+   "pMkt": 0.4495,
+   "clv": 0.1462,
+   "book": "bet365",
+   "at": "2026-11-24T00:07+00:00"
+  }
+ },
+ "6caeb7cce7c8340fed588f3badd83fe0|yves missi|pts|9.5|over": {
+  "src": "vor Spielbeginn",
+  "player": "Yves Missi",
+  "key": "yves missi",
+  "team": "NOP",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 9.5,
+  "side": "over",
+  "odds": 3.25,
+  "book": "op_bet365",
+  "bookName": "bet365",
+  "pSim": 0.2099,
+  "p": 0.3377,
+  "ev": 0.0975,
+  "stake": 0.01,
+  "mean": 6.4,
+  "safe": true,
+  "risks": [],
+  "alt": [],
+  "game": "PHX @ NOP",
+  "commence": "2026-11-24T01:10:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 3.25,
+   "pMkt": 0.3924,
+   "clv": 0.2753,
+   "book": "bet365",
+   "at": "2026-11-24T00:07+00:00"
+  }
  }
 }

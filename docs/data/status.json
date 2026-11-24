@@ -1,7 +1,7 @@
 {
  "updated": "2026-11-23T20:25:56.714193+00:00",
  "credits": {
-  "remaining": 395.0,
+  "remaining": 392.0,
   "used_now": 3.0
  },
  "stats": {
@@ -11,7 +11,7 @@
   "brierMarket": 0.25242116000000003,
   "brierRaw": 0.23125814,
   "clvN": 16,
-  "clvAvg": -0.0078,
+  "clvAvg": -0.007,
   "clvPos": 0.25,
   "calibration": [
    {
@@ -61,7 +61,7 @@
   "flashSettled": 0,
   "flashProfit": 0,
   "flashRoi": null,
-  "flashClv": 0.0282,
+  "flashClv": 0.0514,
   "flashClvN": 2
  },
  "log": [
@@ -123,15 +123,15 @@
     "roi": null
    }
   },
-  "clvPos": 0.3,
-  "bets": 20,
+  "clvPos": 0.526,
+  "bets": 25,
   "settled": 0,
   "profit": 0,
   "roi": null,
   "hit": null,
   "expHit": null,
-  "clv": -0.0325,
-  "clvN": 10
+  "clv": 0.0222,
+  "clvN": 19
  },
  "closeUpdated": "2026-11-23T23:29:04.925354+00:00",
  "closeLog": [
@@ -167,5 +167,31 @@
    "conf": 0.15
   },
   "n": {}
- }
+ },
+ "pregameUpdated": "2026-11-24T00:07:49.963156+00:00",
+ "pregameLog": [
+  "Kalshi KXNBAGAME: 34 Events",
+  "Polymarket nba: 100 Events",
+  "Basketball-Reference Ratings 2027: 30 Teams",
+  "Basketball-Reference Ratings 2026: 30 Teams",
+  "Basketball-Reference Tempo 2027: 31 Teams",
+  "Basketball-Reference Spieler 2027: 476 Einträge",
+  "Basketball-Reference Spieler 2026: 661 Einträge",
+  "ESPN Verletzungen: 94 Einträge",
+  "NBA-Verletzungsbericht 23.11. 19:00 ET: 126 Spieler, 0 Teams noch nicht gemeldet",
+  "Quoten basketball_nba: 11 Events, 10 mit Buchmacher-Quoten",
+  "OddsPapi: 2410 Spielerwetten-Linien",
+  "OddsPapi: 32 Buchmacher-Einträge an 11 Spiele gehängt (bet365.de, bwin.de, betano.de, 888sport.de) · Handicap-Linien plausibel 24, verworfen 0 · 152 von 250 Abfragen diesen Monat",
+  "Streuung: Markt 12.5, Modell nutzt 13.56",
+  "NBA: keine Quoten für Boston Celtics @ Washington Wizards",
+  "NBA: 10 Spiele bewertet, 3 mit Value-Wette",
+  "Basketball-Reference Saisonwerte 2027: 474 Spieler",
+  "Spielerwetten: 2451 Linien in 8 Spielen simuliert, 9 ✓",
+  "Spielerwetten vor Spielbeginn: 3 bestätigt, 5 schwächer, 2 zurückziehen, 18 geprüft",
+  "Spielerwetten Schlussquoten: 16",
+  "Push-Nachricht „Spielerwetten vor Spielbeginn“: gesendet",
+  "Abend-Update NBA: 9 Spiele mit geänderter Empfehlung",
+  "Push-Nachricht „Abend-Update: neue ✓-Wetten“: gesendet",
+  "Schlussquoten: 10 Prognosen mit CLV"
+ ]
 }
