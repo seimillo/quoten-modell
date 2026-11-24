@@ -41,7 +41,7 @@ jobs:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           ODDSPAPI_KEY: ${{ secrets.ODDSPAPI_KEY }}
-          MIDDAY_CHECK: ${{ (github.event.schedule == '47 10 * * *' || github.event.schedule == '47 9 * * *') && '1' || '' }}
+          MIDDAY_CHECK: ${{ github.event.schedule == '47 10 * * *' && 'winter' || github.event.schedule == '47 9 * * *' && 'sommer' || '' }}
           RUN_MODE: ${{ inputs.mode || (github.event.schedule == '37 22 * * *' && 'close' || github.event.schedule == '22 23 * * *' && 'pregame' || github.event.schedule == '47 2 * * *' && 'late' || github.event.schedule == '47 5 * * *' && 'results' || 'full') }}
         run: python -m pipeline.run
       - name: Ergebnisse speichern

@@ -219,7 +219,9 @@ def main():
     if os.environ.get("MIDDAY_CHECK"):
         from zoneinfo import ZoneInfo
         from datetime import datetime
-        if datetime.now(ZoneInfo("Europe/Berlin")).hour != 11:
+        # Nach der Zeitumstellung entscheiden, nicht nach der Uhrzeit – GitHub startet oft bis zu einer Stunde zu spät
+        sommer = datetime.now(ZoneInfo("Europe/Berlin")).utcoffset().total_seconds() == 7200
+        if (os.environ["MIDDAY_CHECK"] == "sommer") != sommer:
             log("Mittagslauf für die andere Jahreszeit – übersprungen")
             return
     if mode == "close":
