@@ -879,5 +879,157 @@
    "book": "bet365",
    "at": "2026-11-24T00:07+00:00"
   }
+ },
+ "42f48a4769eab3d1472d76aac0fd0fa7|franz wagner|pts|22.5|under": {
+  "src": "mittags",
+  "player": "Franz Wagner",
+  "key": "franz wagner",
+  "team": "ORL",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 22.5,
+  "side": "under",
+  "odds": 1.91,
+  "book": "op_bwin",
+  "bookName": "bwin",
+  "pSim": 0.6296,
+  "p": 0.5667,
+  "ev": 0.0823,
+  "stake": 0.01,
+  "mean": 20.7,
+  "safe": true,
+  "risks": [],
+  "alt": [
+   {
+    "line": 21.5,
+    "pSim": 0.5793,
+    "p": 0.5163,
+    "minOdds": 1.94
+   },
+   {
+    "line": 23.5,
+    "pSim": 0.6723,
+    "p": 0.6093,
+    "minOdds": 1.64
+   }
+  ],
+  "game": "DET @ ORL",
+  "commence": "2026-11-25T00:11:00Z",
+  "result": null,
+  "value": null
+ },
+ "42f48a4769eab3d1472d76aac0fd0fa7|cade cunningham|pts|24.5|under": {
+  "src": "mittags",
+  "player": "Cade Cunningham",
+  "key": "cade cunningham",
+  "team": "DET",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 24.5,
+  "side": "under",
+  "odds": 1.91,
+  "book": "op_bwin",
+  "bookName": "bwin",
+  "pSim": 0.6017,
+  "p": 0.5512,
+  "ev": 0.0527,
+  "stake": 0.01,
+  "mean": 23.1,
+  "safe": true,
+  "risks": [],
+  "alt": [
+   {
+    "line": 23.5,
+    "pSim": 0.5579,
+    "p": 0.5074,
+    "minOdds": 1.97
+   },
+   {
+    "line": 25.5,
+    "pSim": 0.6419,
+    "p": 0.5913,
+    "minOdds": 1.69
+   }
+  ],
+  "game": "DET @ ORL",
+  "commence": "2026-11-25T00:11:00Z",
+  "result": null,
+  "value": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|anthony davis|pts|21.5|under": {
+  "src": "mittags",
+  "player": "Anthony Davis",
+  "key": "anthony davis",
+  "team": "WAS",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 21.5,
+  "side": "under",
+  "odds": 1.8,
+  "book": "op_bwin",
+  "bookName": "bwin",
+  "pSim": 0.6387,
+  "p": 0.5868,
+  "ev": 0.0563,
+  "stake": 0.01,
+  "mean": 19.5,
+  "safe": true,
+  "risks": [],
+  "alt": [
+   {
+    "line": 20.5,
+    "pSim": 0.5896,
+    "p": 0.5377,
+    "minOdds": 1.86
+   },
+   {
+    "line": 22.5,
+    "pSim": 0.6891,
+    "p": 0.6372,
+    "minOdds": 1.57
+   }
+  ],
+  "game": "BOS @ WAS",
+  "commence": "2026-11-25T01:10:00Z",
+  "result": null,
+  "value": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|aj dybantsa|pts|16.5|under": {
+  "src": "mittags",
+  "player": "AJ Dybantsa",
+  "key": "aj dybantsa",
+  "team": "WAS",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 16.5,
+  "side": "under",
+  "odds": 1.8,
+  "book": "op_bwin",
+  "bookName": "bwin",
+  "pSim": 0.6958,
+  "p": 0.5836,
+  "ev": 0.0505,
+  "stake": 0.01,
+  "mean": 13.9,
+  "safe": true,
+  "risks": [],
+  "alt": [
+   {
+    "line": 15.5,
+    "pSim": 0.6444,
+    "p": 0.5322,
+    "minOdds": 1.88
+   },
+   {
+    "line": 17.5,
+    "pSim": 0.7433,
+    "p": 0.6311,
+    "minOdds": 1.58
+   }
+  ],
+  "game": "BOS @ WAS",
+  "commence": "2026-11-25T01:10:00Z",
+  "result": null,
+  "value": null
  }
 }
