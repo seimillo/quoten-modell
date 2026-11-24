@@ -391,10 +391,10 @@
    "stake": 0.0,
    "evPin": -0.0168
   },
-  "result": null,
-  "betResult": null,
-  "score": null,
-  "flashResult": null,
+  "result": "B",
+  "betResult": "win",
+  "score": "111:128",
+  "flashResult": "win",
   "flash": {
    "market": "Sieg",
    "pick": "Portland Trail Blazers",
@@ -458,9 +458,9 @@
    "stake": 0.0,
    "evPin": -0.0157
   },
-  "result": null,
-  "betResult": null,
-  "score": null,
+  "result": "A",
+  "betResult": "win",
+  "score": "116:104",
   "flashResult": null,
   "close": {
    "pFair": 0.5083,
@@ -510,9 +510,9 @@
    "stake": 0.0,
    "evPin": -0.0324
   },
-  "result": null,
-  "betResult": null,
-  "score": null,
+  "result": "A",
+  "betResult": "win",
+  "score": "125:120",
   "flashResult": null,
   "close": {
    "pFair": 0.3719,
@@ -562,9 +562,9 @@
    "stake": 0.0,
    "evPin": -0.0273
   },
-  "result": null,
-  "betResult": null,
-  "score": null,
+  "result": "A",
+  "betResult": "win",
+  "score": "122:108",
   "flashResult": null,
   "close": {
    "pFair": 0.5,
@@ -614,9 +614,9 @@
    "stake": 0.0,
    "evPin": -0.0323
   },
-  "result": null,
-  "betResult": null,
-  "score": null,
+  "result": "B",
+  "betResult": "win",
+  "score": "119:123",
   "flashResult": null,
   "close": {
    "pFair": 0.5821,
@@ -666,9 +666,9 @@
    "stake": 0.0,
    "evPin": -0.0528
   },
-  "result": null,
-  "betResult": null,
-  "score": null,
+  "result": "A",
+  "betResult": "loss",
+  "score": "109:94",
   "flashResult": null,
   "close": {
    "pFair": 0.5167,
@@ -718,10 +718,10 @@
    "stake": 0.0184,
    "evPin": 0.0726
   },
-  "result": null,
-  "betResult": null,
-  "score": null,
-  "flashResult": null,
+  "result": "B",
+  "betResult": "loss",
+  "score": "107:123",
+  "flashResult": "loss",
   "flash": {
    "market": "Sieg",
    "pick": "Sacramento Kings",
@@ -785,9 +785,9 @@
    "stake": 0.0,
    "evPin": 0.0024
   },
-  "result": null,
-  "betResult": null,
-  "score": null,
+  "result": "A",
+  "betResult": "loss",
+  "score": "142:116",
   "flashResult": null,
   "close": {
    "pFair": 0.5382,
@@ -837,9 +837,9 @@
    "stake": 0.0,
    "evPin": -0.0121
   },
-  "result": null,
-  "betResult": null,
-  "score": null,
+  "result": "B",
+  "betResult": "win",
+  "score": "111:117",
   "flashResult": null,
   "close": {
    "pFair": 0.5066,
@@ -889,9 +889,9 @@
    "stake": 0.0,
    "evPin": -0.0304
   },
-  "result": null,
-  "betResult": null,
-  "score": null,
+  "result": "B",
+  "betResult": "win",
+  "score": "111:116",
   "flashResult": null,
   "close": {
    "pFair": 0.5338,
