@@ -944,17 +944,6 @@
   "result": null,
   "betResult": null,
   "score": null,
-  "flash": {
-   "market": "Sieg",
-   "pick": "Philadelphia 76ers",
-   "odds": 1.58,
-   "line": null,
-   "side": "home",
-   "book": "winamax_de",
-   "bookName": "Winamax",
-   "evPin": 0.5033,
-   "stake": 0.02
-  },
   "flashResult": null
  },
  "07421d1675d6bc51bb5fa91f84a09eb3": {
@@ -1047,17 +1036,6 @@
   "result": null,
   "betResult": null,
   "score": null,
-  "flash": {
-   "market": "Sieg",
-   "pick": "New York Knicks",
-   "odds": 1.44,
-   "line": null,
-   "side": "home",
-   "book": "winamax_de",
-   "bookName": "Winamax",
-   "evPin": 0.3701,
-   "stake": 0.02
-  },
   "flashResult": null
  },
  "60fd73164f7b0d1848f998d922155d87": {
@@ -1104,17 +1082,6 @@
   "result": null,
   "betResult": null,
   "score": null,
-  "flash": {
-   "market": "Sieg",
-   "pick": "Houston Rockets",
-   "odds": 1.26,
-   "line": null,
-   "side": "home",
-   "book": "winamax_de",
-   "bookName": "Winamax",
-   "evPin": 0.1988,
-   "stake": 0.02
-  },
   "flashResult": null
  },
  "42f48a4769eab3d1472d76aac0fd0fa7": {
@@ -1161,17 +1128,6 @@
   "result": null,
   "betResult": null,
   "score": null,
-  "flash": {
-   "market": "Gesamtpunkte",
-   "pick": "Unter 213.5",
-   "odds": 1.9,
-   "line": 213.5,
-   "side": "under",
-   "book": "op_bet365",
-   "bookName": "bet365",
-   "evPin": 0.0314,
-   "stake": 0.0087
-  },
   "flashResult": null
  },
  "6bfadbd22ed8a054cf82ec1b12b78243": {

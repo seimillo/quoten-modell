@@ -145,6 +145,14 @@ def _two(outcomes, a, b, key="name"):
     return oa, ob
 
 
+def _sane(oa, ob):
+    """Plausible Zwei-Wege-Quote? Dünne Börsenmärkte (z. B. Betfair Tage vor dem Spiel) liefern oft 1,01 / 1,05 –
+    dann ist die Summe der Wahrscheinlichkeiten weit über 100 % und der Preis wertlos."""
+    if not oa or not ob or not oa.get("price") or not ob.get("price"):
+        return False
+    return 0.99 <= 1 / oa["price"] + 1 / ob["price"] <= 1.12
+
+
 # ---------------- Spielerebene: heutige Aufstellung ----------------
 
 def _shrunk_bpm(c, p):
@@ -280,9 +288,20 @@ def soft_offers(prices, name, point=None):
 def sharp_pair(prices, n1, n2):
     for bk in SHARP:
         a, b = _two(prices.get(bk) or [], n1, n2)
-        if a and b:
+        if _sane(a, b):
             return devig_power(a["price"], b["price"]), a, b
     return None, None, None
+
+
+def soft_consensus(prices, n1, n2):
+    """Median der fairen Chance über alle normalen Buchmacher – Prüfstein für den Sharp-Preis."""
+    ps = []
+    for bk in SOFT:
+        a, b = _two(prices.get(bk) or [], n1, n2)
+        if _sane(a, b):
+            ps.append(devig_power(a["price"], b["price"]))
+    ps.sort()
+    return ps[len(ps) // 2] if ps else None
 
 
 def market_sd(events):
@@ -410,6 +429,10 @@ def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events, c
         p_model_h = phi(M / SDM)
         mk_h = devig_power(oh["price"], oa["price"])
         pin_h, _, _ = sharp_pair(h2h, home, away)
+        cons_h = soft_consensus(h2h, home, away)
+        if pin_h is not None and cons_h is not None and abs(pin_h - cons_h) > 0.10:
+            log(f"NBA: Sharp-Preis {away} @ {home} unplausibel ({pin_h:.0%} gegen {cons_h:.0%} bei den Buchmachern) – verworfen")
+            pin_h = None
         if pin_h is not None:
             mk_h = pin_h
         ab_a, ab_h = TEAMS[away][0], TEAMS[home][0]
@@ -465,7 +488,7 @@ def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events, c
             lambda l: pin_h, "home")
 
         # Handicap: Marktwahrscheinlichkeit an jeder Linie über die Normalverteilung umgerechnet
-        ref_bk = next((b_ for b_ in SHARP + [bk] + SOFT if _two(spr.get(b_) or [], away, home)[1]), None)
+        ref_bk = next((b_ for b_ in SHARP + [bk] + SOFT if _sane(*_two(spr.get(b_) or [], away, home))), None)
         if ref_bk:
             ra, rh = _two(spr[ref_bk], away, home)
             if ra and rh and rh.get("point") is not None:
@@ -479,7 +502,7 @@ def model_games(events, cur, prior, pace, scores, injuries, kalshi, pm_events, c
                     lambda l: cov_h_mkt(l), (lambda l: cov_h_mkt(l)) if pin_ok else (lambda l: None), "home")
 
         # Gesamtpunkte
-        ref_bk = next((b_ for b_ in SHARP + [bk] + SOFT if _two(tot.get(b_) or [], "Over", "Under")[0]), None)
+        ref_bk = next((b_ for b_ in SHARP + [bk] + SOFT if _sane(*_two(tot.get(b_) or [], "Over", "Under"))), None)
         if ref_bk:
             ro, ru = _two(tot[ref_bk], "Over", "Under")
             if ro and ru and ro.get("point") is not None:
