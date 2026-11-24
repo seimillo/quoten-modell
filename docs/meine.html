@@ -220,7 +220,7 @@ function render(){
       ${pre?`<div class="small">${PRE[pre.status]||"⚠️ "+esc(pre.status)}</div>`:""}
       ${w.safe===false?`<div class="small" style="color:var(--warn)">🟠 war mittags unsicher</div>`:""}</div>
       <div style="text-align:right"><div class="t">${f(w.odds,2)}</div><div class="small">${f(w.stake,2)} €</div><div class="small">möglich +${f(w.stake*(w.odds-1),2)} €</div></div></div>
-      <div class="mini">${w.type==="manual"||(w.commence&&Date.now()-new Date(w.commence).getTime()>4*3600e3)?`<button class="btn ghost" data-set="win" data-ts="${w.ts}">Gewonnen</button><button class="btn ghost" data-set="loss" data-ts="${w.ts}">Verloren</button><button class="btn ghost" data-set="push" data-ts="${w.ts}">Zurück</button>`:""}<button class="btn x" data-del="${w.ts}" aria-label="Wette löschen">✕ löschen</button></div></div>`; }).join("")
+      <div class="mini">${w.type==="manual"||(w.commence&&Date.now()-new Date(w.commence).getTime()>2.5*3600e3)?`<button class="btn ghost" data-set="win" data-ts="${w.ts}">Gewonnen</button><button class="btn ghost" data-set="loss" data-ts="${w.ts}">Verloren</button><button class="btn ghost" data-set="push" data-ts="${w.ts}">Zurück</button>`:""}<button class="btn x" data-del="${w.ts}" aria-label="Wette löschen">✕ löschen</button></div></div>`; }).join("")
     : `<p class="hint">Keine offenen Wetten. Im <a href="index.html#start">Wettzettel</a> trägst du mit <b>＋</b> eine Wette ein.</p>`;
 
   // ---- Abgerechnet ----

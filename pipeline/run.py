@@ -228,6 +228,8 @@ def main():
         return main_close(pregame=True)
     if mode == "late":
         return main_late()
+    if mode == "results":
+        return main_results()
     if mode == "histodds":
         from .histodds import run as hist
         try:
@@ -358,6 +360,31 @@ def main_close(pregame=False):
     save_json("status.json", {**old, **extra, "credits": S.CREDITS, "stats": stats(picks)})
     notify_problems(LOG, S.CREDITS, "Lauf vor Spielbeginn" if pregame else "Abendlauf")
     log("Fertig (Schlussquoten).")
+
+
+def main_results():
+    """Morgenlauf (ca. 6:47 Uhr): nur Ergebnisse der Nacht – Spiele und Spielerwerte von ESPN, keine Quoten-Abfragen.
+    Damit „Meine Wetten“ und die Trefferliste schon morgens ausgewertet sind."""
+    now = now_utc()
+    allp = load_json("picks.json", {})
+    picks = {k: v for k, v in allp.items() if v.get("sport") == "NBA"}
+    history = update_history(now)
+    from . import playerstats, props as PR
+    pstats = playerstats.update(history)
+    open_ids = {k for k, r in picks.items() if not r.get("result")}
+    settle(picks, nba_scores_from_history(picks, history, now))
+    notify_results([picks[k] for k in open_ids if picks[k].get("result")])
+    T_before = {k for k, t in load_json("props_picks.json", {}).items() if not t.get("result")}
+    T = PR.settle(pstats, now)
+    save_json("player_results.json", player_results(pstats, now))
+    from .notify import notify_props_results
+    notify_props_results([T[k] for k in T_before if k in T and T[k].get("result")])
+    save_json("picks.json", {**allp, **picks})
+    old = load_json("status.json", {})
+    save_json("status.json", {**old, "resultsUpdated": now.isoformat(), "stats": stats(picks), "propStats": PR.stats(),
+                              "resultsLog": LOG[-20:]})
+    notify_problems(LOG, S.CREDITS, "Morgenlauf")
+    log(f"Fertig (Morgenlauf, {sum(1 for k in open_ids if picks[k].get('result'))} Spiele ausgewertet).")
 
 
 def main_late():
