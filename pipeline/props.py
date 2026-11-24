@@ -34,6 +34,7 @@ CONF_P = 0.3                        # Start-Gewicht der Simulation gegenüber de
 GAP_BUCKETS = ((0.0, 0.05), (0.05, 0.10), (0.10, 0.15), (0.15, 1.01))
 W_GRID = [round(i * 0.05, 2) for i in range(21)]
 CONF_PRIOR_N, CONF_MIN_N, CONF_MAX = 400, 200, 0.7
+CONF_MIN_DAYS = 3          # Linien eines Abends hängen zusammen (mehrere Stufen je Spieler) – erst ab 3 Spieltagen lernen
 ONE_SIDED_MARGIN = 0.07             # angenommene Marge, wenn nur „über“ angeboten wird
 MIN_EV, MIN_ODDS, MAX_ODDS = 0.05, 1.5, 3.5
 # In der deutschen App nicht spielbar (vom Nutzer geprüft): bet365 hat für Spieler nur Punkte (keine Rebounds, Assists, Dreier)
@@ -612,6 +613,9 @@ def learn_conf(pstats, now=None):
         gap = abs(ps - pm)
         lo = next(lo for lo, hi in GAP_BUCKETS if lo <= gap < hi)
         a = agg[f"{lo:.2f}"]
+        dset = set(a.get("days") or [])
+        dset.add(_et(commence).isoformat())
+        a["days"] = sorted(dset)
         a["n"] += 1
         a["y"] += y
         a["ps"] += ps
@@ -629,8 +633,10 @@ def learn_conf(pstats, now=None):
             table[f"{lo:.2f}"] = {"w": CONF_P, "n": 0, "hi": hi}
             continue
         w_fit = W_GRID[max(range(len(W_GRID)), key=lambda i: a["ll"][i])]
-        w = (a["n"] * w_fit + CONF_PRIOR_N * CONF_P) / (a["n"] + CONF_PRIOR_N) if a["n"] >= CONF_MIN_N else CONF_P
-        table[f"{lo:.2f}"] = {"w": round(min(CONF_MAX, w), 3), "wFit": w_fit, "n": a["n"], "hi": hi,
+        nd = len(a.get("days") or [])
+        ok = a["n"] >= CONF_MIN_N and nd >= CONF_MIN_DAYS
+        w = (a["n"] * w_fit + CONF_PRIOR_N * CONF_P) / (a["n"] + CONF_PRIOR_N) if ok else CONF_P
+        table[f"{lo:.2f}"] = {"w": round(min(CONF_MAX, w), 3), "wFit": w_fit, "n": a["n"], "hi": hi, "days": nd,
                               "hit": round(a["y"] / a["n"], 3), "sim": round(a["ps"] / a["n"], 3), "mkt": round(a["pm"] / a["n"], 3)}
     Pp["confAgg"], Pp["confGap"] = agg, table
     save_json("props_params.json", Pp)
