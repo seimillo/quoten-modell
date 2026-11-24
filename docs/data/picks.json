@@ -1188,8 +1188,8 @@
   "away": "Boston Celtics",
   "a": null,
   "b": null,
-  "pModelA": 0.2077,
-  "pMarketA": 0.2028,
+  "pModelA": 0.2058,
+  "pMarketA": 0.2005,
   "pModelRaw": 0.2356,
   "feat": {
    "team": -12.6,
@@ -1202,7 +1202,7 @@
    "form": -2.154,
    "TOTraw": 214.41,
    "pModelRaw": 0.2356,
-   "pMarket": 0.2028
+   "pMarket": 0.2005
   },
   "bet": {
    "market": "Handicap",

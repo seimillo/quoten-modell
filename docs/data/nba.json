@@ -92,7 +92,7 @@
   "kalshi": {
    "a": 44.5,
    "b": 54.5,
-   "vol": 49654
+   "vol": 49659
   },
   "polymarket": null,
   "bookKey": "winamax_de",
@@ -396,7 +396,7 @@
    "pMarket": 0.5677
   },
   "links": {},
-  "injuryReport": "2026-11-24 07:30 ET",
+  "injuryReport": "2026-11-24 07:45 ET",
   "reportMissing": {
    "home": false,
    "away": false
@@ -774,7 +774,7 @@
    "pMarket": 0.6664
   },
   "links": {},
-  "injuryReport": "2026-11-24 07:30 ET",
+  "injuryReport": "2026-11-24 07:45 ET",
   "reportMissing": {
    "home": false,
    "away": false
@@ -897,7 +897,7 @@
   "kalshi": {
    "a": 56.5,
    "b": 44.5,
-   "vol": 86500
+   "vol": 86520
   },
   "polymarket": {
    "pA": 0.565,
@@ -1247,7 +1247,7 @@
    "op_bet365": "https://www.bet365.de/",
    "op_bwin": "https://sports.bwin.de/en/sports/events/20099889"
   },
-  "injuryReport": "2026-11-24 07:30 ET",
+  "injuryReport": "2026-11-24 07:45 ET",
   "reportMissing": {
    "home": false,
    "away": false
@@ -1375,7 +1375,7 @@
   "kalshi": {
    "a": 27.5,
    "b": 73.0,
-   "vol": 195077
+   "vol": 195236
   },
   "polymarket": {
    "pA": 0.275,
@@ -1640,7 +1640,7 @@
    "op_bet365": "https://www.bet365.de/",
    "op_bwin": "https://sports.bwin.de/en/sports/events/20099891"
   },
-  "injuryReport": "2026-11-24 07:30 ET",
+  "injuryReport": "2026-11-24 07:45 ET",
   "reportMissing": {
    "home": false,
    "away": false
@@ -1685,8 +1685,8 @@
   "ptsA": 112.2,
   "ptsH": 102.3,
   "pModelHome": 0.2356,
-  "pMarketHome": 0.2028,
-  "pFinalHome": 0.2077,
+  "pMarketHome": 0.2005,
+  "pFinalHome": 0.2058,
   "parts": [
    {
     "n": "Team-Stärke & Tempo",
@@ -1766,9 +1766,9 @@
    }
   },
   "kalshi": {
-   "a": 79.5,
-   "b": 20.5,
-   "vol": 249553
+   "a": 80.0,
+   "b": 19.5,
+   "vol": 257730
   },
   "polymarket": {
    "pA": 0.795,
@@ -1883,12 +1883,12 @@
     "odds": 1.22,
     "line": null,
     "side": "away",
-    "book": "betway",
-    "bookName": "Betway",
+    "book": "winamax_de",
+    "bookName": "Winamax",
     "pModel": 0.7644,
-    "pMarket": 0.7972,
-    "p": 0.7923,
-    "ev": -0.0334,
+    "pMarket": 0.7995,
+    "p": 0.7942,
+    "ev": -0.031,
     "evRaw": -0.0674,
     "evPin": -0.0247,
     "pPin": 0.7995,
@@ -1908,9 +1908,9 @@
     "book": "op_bet365",
     "bookName": "bet365",
     "pModel": 0.2356,
-    "pMarket": 0.2028,
-    "p": 0.2077,
-    "ev": -0.055,
+    "pMarket": 0.2005,
+    "p": 0.2058,
+    "ev": -0.0637,
     "evRaw": 0.0719,
     "evPin": -0.0876,
     "pPin": 0.2005,
@@ -2048,13 +2048,13 @@
    "form": -2.154,
    "TOTraw": 214.41,
    "pModelRaw": 0.2356,
-   "pMarket": 0.2028
+   "pMarket": 0.2005
   },
   "links": {
    "op_bet365": "https://www.bet365.de/",
    "op_bwin": "https://sports.bwin.de/en/sports/events/20099890"
   },
-  "injuryReport": "2026-11-24 07:30 ET",
+  "injuryReport": "2026-11-24 07:45 ET",
   "reportMissing": {
    "home": false,
    "away": false
@@ -2177,7 +2177,7 @@
   "kalshi": {
    "a": 41.5,
    "b": 58.5,
-   "vol": 33806
+   "vol": 33817
   },
   "polymarket": null,
   "bookKey": "winamax_de",
@@ -2401,7 +2401,7 @@
    "pMarket": 0.5959
   },
   "links": {},
-  "injuryReport": "2026-11-24 07:30 ET",
+  "injuryReport": "2026-11-24 07:45 ET",
   "reportMissing": {
    "home": false,
    "away": false
@@ -2734,7 +2734,7 @@
    "pMarket": 0.7723
   },
   "links": {},
-  "injuryReport": "2026-11-24 07:30 ET",
+  "injuryReport": "2026-11-24 07:45 ET",
   "reportMissing": {
    "home": false,
    "away": false
