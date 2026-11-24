@@ -360,7 +360,8 @@ def evaluate(games, events, pstats, injuries_by_team, sd_margin, seed=7, tot_cur
                           "evRaw": round(p_sim * c["odds"] - 1, 4)})
         # ✓: klare Fälle, eine pro Spieler, höchstens 3 pro Spiel
         cands = sorted([p for p in props if p["ev"] >= (MIN_EV if (p["twoSided"] or p["anchored"]) else MIN_EV_ONE_SIDED) and MIN_ODDS <= p["odds"] <= MAX_ODDS and p["gp"] >= 5
-                        and p["expMin"] >= 18 and p["pOut"] <= 0.15 and (p["book"], p["stat"]) not in NOT_IN_APP], key=lambda x: -x["ev"])
+                        and p["expMin"] >= 18 and p["pOut"] <= 0.15 and (p["book"], p["stat"]) not in NOT_IN_APP
+                        and p["pSim"] * p["odds"] >= 1.0], key=lambda x: -x["ev"])   # Simulation muss selbst Vorteil sehen
         # „mittags sicher“: Bericht beider Teams da, Spieler selbst gesund, kein wichtiger Mitspieler/Gegner fraglich
         rm = g.get("reportMissing") or {}
         rows_by_team = {g["abbrH"]: hr, g["abbrA"]: ar}
