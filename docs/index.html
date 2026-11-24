@@ -300,6 +300,15 @@ function clvMine(w){
   return null;
 }
 function settleMine(w){
+  if(w.manual) return w.manual;
+  if(w.type==="kombi"){                                   // alle Beine müssen gewinnen; „zurück“-Beine fallen raus
+    const rs = (w.legs||[]).map(settleMine);
+    if(rs.includes("loss")) return "loss";
+    if(rs.some(r=>!r)) return null;
+    const live = w.legs.filter((l,i)=>rs[i]==="win");
+    w._eff = live.length ? w.odds * live.reduce((q,l)=>q*l.odds,1) / w.legs.reduce((q,l)=>q*l.odds,1) : 1;
+    return live.length ? "win" : "push";
+  }
   if(w.type==="prop"){ const s = settleProp(w); return s && s.res; }
   const r = picksAll[w.gameId]; if(!r || !r.score) return null;
   const [h,a] = r.score.split(":").map(Number); let d;
@@ -308,7 +317,7 @@ function settleMine(w){
   else d = (w.side==="over" ? 1 : -1) * (h+a-Number(w.line));
   return d>0?"win":d<0?"loss":"push";
 }
-const gainOf = w => w.res==="win"?w.stake*(w.odds-1):w.res==="loss"?-w.stake:0;
+const gainOf = w => w.res==="win"?w.stake*((w._eff||w.odds)-1):w.res==="loss"?-w.stake:0;
 const kindOf = w => w.kind || (w.value ? "✓" : "eigene");
 function mineExtra(list, done){
   if(!done.length) return "";
@@ -449,7 +458,7 @@ const scheinInfo = (()=>{
   const eur = fest() || 10, mine = getMine().map(w=>({...w, res:settleMine(w)}));
   const frei = kasse() + mine.filter(w=>w.res).reduce((s,w)=>s+gainOf(w),0) - mine.filter(w=>!w.res).reduce((s,w)=>s+w.stake,0);
   const ids = new Set(slip.map(x=>x.log.gameId));
-  const schon = mine.filter(w=>!w.res && ids.has(w.gameId)).length;
+  const schon = mine.filter(w=>!w.res && (ids.has(w.gameId) || (w.legs||[]).some(l=>ids.has(l.gameId)))).length;
   if (!slip.length) return null;
   if (schon) return {schon, eur, frei};
   const n = kasse() ? Math.max(0, Math.min(MAX_SCHEIN, Math.floor((frei + 1e-9) / eur))) : Math.min(MAX_SCHEIN, slip.length);
@@ -462,7 +471,31 @@ const scheinInfo = (()=>{
     pick.push(i); per[slip[i].game] = (per[slip[i].game]||0) + 1;
   }
   pick.forEach((i,k)=>slip[i].schein = k+1);
-  return {n, eur, frei, pick: pick.length};
+  // Rest der Kasse (weniger als ein Einzel-Einsatz): Kombi mit Gesamtquote ab 4,0 – alles bei einem Anbieter, je Spiel ein Bein
+  const rest = Math.floor((frei - pick.length*eur) * 10) / 10;
+  let kombi = null;
+  if (kasse() && rest >= 1 && rest < eur) {
+    const KMIN = 4.0, KMAX_LEGS = 4;
+    const build = (pool, book) => {
+      const legs = [], games = new Set();
+      for (const i of pool) { const x = slip[i];
+        if (x.book !== book || games.has(x.game) || x.ev <= 0) continue;
+        legs.push(i); games.add(x.game);
+        if (legs.length >= 2 && legs.reduce((q,j)=>q*slip[j].odds,1) >= KMIN) break;
+        if (legs.length >= KMAX_LEGS) break; }
+      const q = legs.reduce((q,j)=>q*slip[j].odds,1);
+      if (legs.length < 2 || q < KMIN) return null;
+      const pr = legs.reduce((q,j)=>q*(slip[j].pMin||1/slip[j].odds*(1+slip[j].ev)),1);
+      return {legs: legs.map(j=>slip[j]), odds:q, p:pr, ev: pr*q-1, book};   // Objekte, nicht Positionen (Liste wird danach umsortiert)
+    };
+    const notIn = order.filter(i=>!pick.includes(i)), all = order;
+    const books = [...new Set(slip.map(x=>x.book))];
+    for (const pool of [notIn, all]) {
+      const opts = books.map(b=>build(pool,b)).filter(Boolean).sort((a,b)=>b.ev-a.ev);
+      if (opts.length) { kombi = {...opts[0], stake: rest}; break; }
+    }
+  }
+  return {n, eur, frei, pick: pick.length, rest, kombi};
 })();
 // Schein zuerst (in Rangfolge), dann die übrigen Tipps nach Uhrzeit
 slip.sort((a,b)=>(a.schein||99)-(b.schein||99) || String(a.t).localeCompare(String(b.t)));
@@ -471,7 +504,14 @@ const scheinHead = !scheinInfo ? "" : scheinInfo.schon
   ? `<div class="card" style="background:var(--soft);margin-bottom:10px;padding:12px"><b>Für diesen Spieltag hast du schon ${scheinInfo.schon} Wette${scheinInfo.schon>1?"n":""} gesetzt.</b><div class="small">Der nächste Tagesschein kommt mit dem Mittagslauf. Darunter alle Tipps zum Nachschauen.</div></div>`
   : `<div class="card" style="background:var(--soft);margin-bottom:10px;padding:12px"><b>Dein Tagesschein: ${scheinInfo.pick} Wette${scheinInfo.pick===1?"":"n"} à ${f(scheinInfo.eur,0)} € = ${f(scheinInfo.pick*scheinInfo.eur,0)} €</b>
      <div class="small">${kasse()?`Frei verfügbar ${f(scheinInfo.frei,2)} € · `:"Trag unter <a href=\"meine.html\">Meine Wetten</a> deine Kasse ein, dann passt sich der Schein an. · "}höchstens ${MAX_SCHEIN} Wetten · je Spiel möglichst nur eine · 🟢 und Wetten mit echtem Marktpreis zuerst</div>
-     ${scheinInfo.pick===0?`<div class="small neg">Die Kasse reicht heute für keine Wette à ${f(scheinInfo.eur,0)} €.</div>`:""}</div>`;
+     ${scheinInfo.pick===0?`<div class="small neg">Die Kasse reicht heute für keine Wette à ${f(scheinInfo.eur,0)} €.</div>`:""}</div>` + kombiHtml(scheinInfo);
+function kombiHtml(si){
+  const k = si && si.kombi; if(!k){ return si && si.rest>=1 && si.rest<si.eur ? `<p class="small">Rest ${f(si.rest,2)} €: heute kein sinnvoller Kombi ab Quote 4,0 bei einem Anbieter.</p>` : ""; }
+  return `<div class="card" style="margin-bottom:10px;padding:12px;border-color:var(--chart)"><b>🧩 Rest-Kombi: ${f(k.stake,2)} € bei ${esc(k.book)} · Gesamtquote ${f(k.odds,2)}</b>
+    <table style="margin-top:6px"><tbody>${k.legs.map(x=>{ return `<tr><td>${esc(x.kind)} ${esc(x.pick)}<div class="small">${esc(x.game)} · ${new Date(x.t).toLocaleTimeString("de-DE",{hour:"2-digit",minute:"2-digit"})} Uhr${x.hint?" · "+esc(x.hint):""}</div></td><td><b>${f(x.odds,2)}</b>${x.pMin?`<div class="small">mind. ${f(1/x.pMin,2)}</div>`:""}</td></tr>`; }).join("")}</tbody></table>
+    <div class="small">Möglicher Gewinn +${f(k.stake*(k.odds-1),2)} € · Chance etwa ${pct(k.p)} · EV ${sg(k.ev*100,1)} % · Mindest-Gesamtquote ${f(1/k.p,2)}. Alle Beine müssen gewinnen; ein Bein mit „zurück“ fällt raus.</div>
+    <div class="form" style="margin-top:6px"><label class="small">Gesamtquote <input id="kOdds" type="number" step="0.01" inputmode="decimal" value="${k.odds.toFixed(2)}"></label><label class="small">Einsatz € <input id="kStake" type="number" step="0.1" inputmode="decimal" value="${k.stake.toFixed(2)}"></label><button class="btn" id="kSave">Kombi gesetzt</button></div></div>`;
+}
 $("slip").innerHTML = slip.length ? scheinHead + `<table><thead><tr><th>Wette</th><th>Quote</th><th>Chance</th><th>EV</th></tr></thead><tbody>${slip.map((x,i)=>`${i>0&&!x.schein&&slip[i-1].schein?`<tr><td colspan="4" class="small" style="padding-top:14px"><b>Weitere Tipps – nicht im Schein</b></td></tr>`:""}<tr${scheinInfo&&!scheinInfo.schon&&!x.schein?' style="opacity:.6"':""}>
   <td>${x.schein&&!scheinInfo.schon?`<span class="tag good">Schein ${x.schein}</span> `:""}<button class="btn x slipadd" data-i="${i}" title="In Meine Wetten eintragen" aria-label="In Meine Wetten eintragen">＋</button>${x.kind} ${esc(x.pick)}<div class="small">${esc(x.game)} · ${new Date(x.t).toLocaleTimeString("de-DE",{hour:"2-digit",minute:"2-digit"})} Uhr · ${esc(x.market)}</div>${x.hint?`<div class="small">${esc(x.hint)}</div>`:""}${x.both?`<div class="small">Modell-Tipp und zugleich besser als die faire Pinnacle-Quote – zählt als eine Wette</div>`:""}${x.safe===true?`<div class="small pos">🟢 mittags sicher</div>`:x.safe===false?`<div class="small" style="color:var(--warn)">🟠 ${esc(x.risks.slice(0,2).join(" · "))}${x.risks.length>2?" …":""}</div>`:""}${preTxt(x.pre)}</td>
   <td><b>${f(x.odds,2)}</b><div class="small">${esc(x.book||"")}${x.link}</div>${x.pMin?`<div class="small">mind. <b>${f(1/x.pMin,2)}</b></div>`:""}</td>
@@ -484,6 +524,14 @@ $("slip").innerHTML = slip.length ? scheinHead + `<table><thead><tr><th>Wette</t
   <p class="small">${slip.length} Wetten · zusammen ${f(sumStake*100,1)} % der Kasse</p>` : `<p class="hint">Heute keine Empfehlung – lieber keine Wette als eine schlechte.</p>`;
 
 document.addEventListener("click", e=>{
+  if(e.target.id==="kSave" && scheinInfo && scheinInfo.kombi){
+    const k = scheinInfo.kombi, odds = parseFloat($("kOdds").value), stake = parseFloat($("kStake").value);
+    if(!(odds>1) || !(stake>0)){ e.target.textContent="Quote/Einsatz prüfen"; return; }
+    const legs = k.legs.map(x=>({...x.log, odds:x.odds, book:x.book}));
+    setMine([...getMine(), {ts:Date.now(), type:"kombi", kind:"🧩", market:"Kombi", pick:`Kombi (${legs.length}): `+legs.map(l=>l.pick).join(" + "),
+      label:[...new Set(k.legs.map(x=>x.game))].join(", "), commence:k.legs.map(x=>x.t).sort().slice(-1)[0], legs, odds, stake, book:k.book}]);
+    e.target.textContent="✓ gespeichert"; return;
+  }
   const b = e.target.closest(".slipadd, .slipsave"); if(!b) return;
   const i = b.dataset.i, row = document.querySelector(`.slipform[data-i="${i}"]`);
   if(b.classList.contains("slipadd")){ row.hidden = !row.hidden; return; }

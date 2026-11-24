@@ -129,6 +129,14 @@ function settleProp(w){
 }
 function settle(w){
   if(w.manual) return {res:w.manual};
+  if(w.type==="kombi"){
+    const rs = (w.legs||[]).map(l=>(settle(l)||{}).res||null);
+    if(rs.includes("loss")) return {res:"loss", val:rs.map(r=>r==="win"?"✓":r==="loss"?"✗":r==="push"?"↺":"…").join(" ")};
+    if(rs.some(r=>!r)) return null;
+    const live = w.legs.filter((l,i)=>rs[i]==="win");
+    const eff = live.length ? w.odds * live.reduce((q,l)=>q*l.odds,1) / w.legs.reduce((q,l)=>q*l.odds,1) : 1;
+    return {res: live.length?"win":"push", val:rs.map(r=>r==="win"?"✓":"↺").join(" "), eff};
+  }
   if(w.type==="manual") return null;
   if(w.type==="prop") return settleProp(w);
   const r = picksAll[w.gameId]; if(!r || !r.score) return null;
@@ -147,13 +155,13 @@ function clvOf(w){
 }
 const gainOf = w => w.res==="win"?w.stake*(w.odds-1):w.res==="loss"?-w.stake:0;
 const kindOf = w => w.kind || (w.type==="manual" ? "eigene" : w.value ? "✓" : "eigene");
-const KIND = {"✓":"✓ Modell (Spiel)","⚡":"⚡ besser als Pinnacle","🏀":"🏀 Spielerwette","eigene":"eigene Wahl"};
+const KIND = {"🧩":"🧩 Rest-Kombi","✓":"✓ Modell (Spiel)","⚡":"⚡ besser als Pinnacle","🏀":"🏀 Spielerwette","eigene":"eigene Wahl"};
 const PRE = {"bestätigt":"✅ vor Spielbeginn bestätigt","schwächer":"➖ vor Spielbeginn schwächer","zurückziehen":"❌ vor Spielbeginn zurückgezogen","nicht mehr angeboten":"⚠️ nicht mehr angeboten"};
 const resTxt = w => !w.res ? `<span class="small">offen</span>` : w.res==="win" ? `<span class="res pos">+${f(w.stake*(w.odds-1),2)} €</span>` : w.res==="loss" ? `<span class="res neg">−${f(w.stake,2)} €</span>` : `<span class="res">zurück</span>`;
 let range = "all";
 
 function render(){
-  const all = getMine().map(w=>{ const s = settle(w)||{}; return {...w, res:s.res||null, val:s.val, clv:clvOf(w)}; })
+  const all = getMine().map(w=>{ const s = settle(w)||{}; return {...w, res:s.res||null, val:s.val, odds:s.eff||w.odds, clv:w.type==="kombi"?null:clvOf(w)}; })
                        .sort((a,b)=>String(a.commence).localeCompare(String(b.commence)) || a.ts-b.ts);
   const done = all.filter(w=>w.res), open = all.filter(w=>!w.res);
   const start = kasse(), gain = done.reduce((s,w)=>s+gainOf(w),0), now = start + gain;
@@ -241,7 +249,7 @@ function render(){
   const mp = Object.values(PT).filter(t=>t.result&&t.result!=="push"&&inR(t.commence));
   const mGain = mg.reduce((s,r)=>s+(r.betResult==="win"?10*(r.bet.odds-1):-10),0) + mp.reduce((s,t)=>s+(t.result==="win"?10*(t.odds-1):-10),0), mN = mg.length+mp.length;
   $("stats").innerHTML = `<h3>Nach Art</h3>${tbl(group(w=>KIND[kindOf(w)]||kindOf(w)),"Art")}
-    <h3>Nach Wettart</h3>${tbl(group(w=>w.type==="prop"?"Spieler":w.market||"von Hand"),"Markt")}
+    <h3>Nach Wettart</h3>${tbl(group(w=>w.type==="prop"?"Spieler":w.type==="kombi"?"Kombi":w.market||"von Hand"),"Markt")}
     <h3>Nach Quote</h3>${tbl(group(w=>w.odds<1.7?"unter 1,70":w.odds<2.2?"1,70–2,19":w.odds<3?"2,20–2,99":"ab 3,00"),"Quote")}
     <h3>Vergleich mit dem Modell</h3><p class="small">Alle ✓-Tipps des Modells (Spiele und Spieler) im selben Zeitraum mit je 10 €: <b class="${cls(mGain)}">${mN?sg(mGain,2)+" € ("+sg(mGain/(10*mN)*100,1)+" % aus "+mN+" Wetten)":"noch keine ausgewertet"}</b> · du: <b class="${cls(gain)}">${sg(gain,2)} €</b>.</p>
     <p class="hint">Nach wenigen Wetten ist fast alles Zufall – aussagekräftig wird es ab etwa 50–100 Wetten. Früher zählt der CLV: Ist er im Schnitt positiv, hast du bessere Quoten erwischt als der Markt kurz vor Spielbeginn.</p>`;
