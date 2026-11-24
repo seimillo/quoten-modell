@@ -1,7 +1,7 @@
 {
  "updated": "2026-11-24T12:45:36.504225+00:00",
  "credits": {
-  "remaining": 380.0,
+  "remaining": 377.0,
   "used_now": 3.0
  },
  "stats": {
@@ -10,9 +10,9 @@
   "brierModel": 0.23917287294117648,
   "brierMarket": 0.24461355823529415,
   "brierRaw": 0.2208964182352941,
-  "clvN": 16,
-  "clvAvg": -0.007,
-  "clvPos": 0.25,
+  "clvN": 23,
+  "clvAvg": -0.0036,
+  "clvPos": 0.304,
   "calibration": [
    {
     "from": 0.0,
@@ -131,23 +131,23 @@
   "clv": 0.0222,
   "clvN": 19
  },
- "closeUpdated": "2026-11-23T23:29:04.925354+00:00",
+ "closeUpdated": "2026-11-24T23:27:00.874618+00:00",
  "closeLog": [
-  "Kalshi KXNBAGAME: 32 Events",
+  "Kalshi KXNBAGAME: 30 Events",
   "Polymarket nba: 100 Events",
   "Basketball-Reference Ratings 2027: 30 Teams",
   "Basketball-Reference Ratings 2026: 30 Teams",
   "Basketball-Reference Tempo 2027: 31 Teams",
-  "Basketball-Reference Spieler 2027: 476 Einträge",
+  "Basketball-Reference Spieler 2027: 483 Einträge",
   "Basketball-Reference Spieler 2026: 661 Einträge",
-  "ESPN Verletzungen: 96 Einträge",
-  "NBA-Verletzungsbericht 23.11. 18:15 ET: 124 Spieler, 0 Teams noch nicht gemeldet",
-  "Quoten basketball_nba: 10 Events, 10 mit Buchmacher-Quoten",
-  "Streuung: Markt 12.4, Modell nutzt 13.54",
-  "NBA: 10 Spiele bewertet, 1 mit Value-Wette",
-  "Abend-Update NBA: 9 Spiele mit geänderter Empfehlung",
-  "Push-Nachricht „Abend-Update: Änderungen“: gesendet",
-  "Schlussquoten: 10 Prognosen mit CLV"
+  "ESPN Verletzungen: 94 Einträge",
+  "NBA-Verletzungsbericht 24.11. 18:15 ET: 91 Spieler, 0 Teams noch nicht gemeldet",
+  "Quoten basketball_nba: 7 Events, 7 mit Buchmacher-Quoten",
+  "Streuung: Markt 13.9, Modell nutzt 14.25",
+  "NBA: 7 Spiele bewertet, 1 mit Value-Wette",
+  "Abend-Update NBA: 4 Spiele mit geänderter Empfehlung",
+  "Push-Nachricht „Abend-Update: neue ✓-Wetten“: gesendet",
+  "Schlussquoten: 7 Prognosen mit CLV"
  ],
  "params": {
   "nba": {
