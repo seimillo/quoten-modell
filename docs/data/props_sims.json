@@ -23,7 +23,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 23,
+   "reb": 6,
+   "ast": 3,
+   "fg3m": 4
+  }
  },
  "ac6fb079d66ef35a2a77e22b5e94ef8d|PHI|joel embiid": {
   "commence": "2026-11-24T00:10:00Z",
@@ -75,7 +80,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 20,
+   "reb": 2,
+   "ast": 4,
+   "fg3m": 1
+  }
  },
  "ac6fb079d66ef35a2a77e22b5e94ef8d|PHI|tyrese maxey": {
   "commence": "2026-11-24T00:10:00Z",
@@ -101,7 +111,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 22,
+   "reb": 2,
+   "ast": 5,
+   "fg3m": 2
+  }
  },
  "ac6fb079d66ef35a2a77e22b5e94ef8d|PHI|vj edgecombe": {
   "commence": "2026-11-24T00:10:00Z",
@@ -127,7 +142,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 12,
+   "reb": 7,
+   "ast": 7,
+   "fg3m": 1
+  }
  },
  "ac6fb079d66ef35a2a77e22b5e94ef8d|PHI|dean wade": {
   "commence": "2026-11-24T00:10:00Z",
@@ -153,7 +173,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 2,
+   "reb": 2,
+   "ast": 2,
+   "fg3m": 0
+  }
  },
  "ac6fb079d66ef35a2a77e22b5e94ef8d|PHI|jabari walker": {
   "commence": "2026-11-24T00:10:00Z",
@@ -179,7 +204,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 10,
+   "reb": 5,
+   "ast": 2,
+   "fg3m": 0
+  }
  },
  "ac6fb079d66ef35a2a77e22b5e94ef8d|PHI|justin edwards": {
   "commence": "2026-11-24T00:10:00Z",
@@ -205,7 +235,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 5,
+   "reb": 1,
+   "ast": 0,
+   "fg3m": 1
+  }
  },
  "ac6fb079d66ef35a2a77e22b5e94ef8d|PHI|adem bona": {
   "commence": "2026-11-24T00:10:00Z",
@@ -231,7 +266,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 4,
+   "reb": 2,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "ac6fb079d66ef35a2a77e22b5e94ef8d|PHI|kentavious caldwell pope": {
   "commence": "2026-11-24T00:10:00Z",
@@ -257,7 +297,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 2,
+   "reb": 3,
+   "ast": 1,
+   "fg3m": 0
+  }
  },
  "ac6fb079d66ef35a2a77e22b5e94ef8d|PHI|anfernee simons": {
   "commence": "2026-11-24T00:10:00Z",
@@ -283,7 +328,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 3,
+   "reb": 0,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "ac6fb079d66ef35a2a77e22b5e94ef8d|PHI|labaron philon": {
   "commence": "2026-11-24T00:10:00Z",
@@ -309,7 +359,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 2,
+   "reb": 1,
+   "ast": 1,
+   "fg3m": 0
+  }
  },
  "ac6fb079d66ef35a2a77e22b5e94ef8d|PHI|tacko fall": {
   "commence": "2026-11-24T00:10:00Z",
@@ -387,7 +442,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 6,
+   "reb": 2,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "ac6fb079d66ef35a2a77e22b5e94ef8d|POR|toumani camara": {
   "commence": "2026-11-24T00:10:00Z",
@@ -413,7 +473,12 @@
     4.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 5,
+   "reb": 5,
+   "ast": 3,
+   "fg3m": 1
+  }
  },
  "ac6fb079d66ef35a2a77e22b5e94ef8d|POR|deni avdija": {
   "commence": "2026-11-24T00:10:00Z",
@@ -439,7 +504,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 31,
+   "reb": 3,
+   "ast": 7,
+   "fg3m": 5
+  }
  },
  "ac6fb079d66ef35a2a77e22b5e94ef8d|POR|donovan clingan": {
   "commence": "2026-11-24T00:10:00Z",
@@ -465,7 +535,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 15,
+   "reb": 18,
+   "ast": 5,
+   "fg3m": 1
+  }
  },
  "ac6fb079d66ef35a2a77e22b5e94ef8d|POR|damian lillard": {
   "commence": "2026-11-24T00:10:00Z",
@@ -491,7 +566,12 @@
     4.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 18,
+   "reb": 3,
+   "ast": 5,
+   "fg3m": 1
+  }
  },
  "ac6fb079d66ef35a2a77e22b5e94ef8d|POR|scoot henderson": {
   "commence": "2026-11-24T00:10:00Z",
@@ -517,7 +597,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 17,
+   "reb": 3,
+   "ast": 3,
+   "fg3m": 3
+  }
  },
  "ac6fb079d66ef35a2a77e22b5e94ef8d|POR|robert williams": {
   "commence": "2026-11-24T00:10:00Z",
@@ -543,7 +628,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 6,
+   "reb": 6,
+   "ast": 1,
+   "fg3m": 0
+  }
  },
  "ac6fb079d66ef35a2a77e22b5e94ef8d|POR|jrue holiday": {
   "commence": "2026-11-24T00:10:00Z",
@@ -569,7 +659,12 @@
     4.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 18,
+   "reb": 2,
+   "ast": 5,
+   "fg3m": 4
+  }
  },
  "ac6fb079d66ef35a2a77e22b5e94ef8d|POR|sidy cissoko": {
   "commence": "2026-11-24T00:10:00Z",
@@ -595,7 +690,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 5,
+   "reb": 4,
+   "ast": 0,
+   "fg3m": 1
+  }
  },
  "ac6fb079d66ef35a2a77e22b5e94ef8d|POR|micah potter": {
   "commence": "2026-11-24T00:10:00Z",
@@ -621,7 +721,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 0,
+   "reb": 0,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "ac6fb079d66ef35a2a77e22b5e94ef8d|POR|branden carlson": {
   "commence": "2026-11-24T00:10:00Z",
@@ -647,7 +752,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 0,
+   "reb": 3,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "ac6fb079d66ef35a2a77e22b5e94ef8d|POR|yang hansen": {
   "commence": "2026-11-24T00:10:00Z",
@@ -673,7 +783,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 2,
+   "reb": 0,
+   "ast": 1,
+   "fg3m": 0
+  }
  },
  "ac6fb079d66ef35a2a77e22b5e94ef8d|POR|jayson kent": {
   "commence": "2026-11-24T00:10:00Z",
@@ -699,7 +814,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 9,
+   "reb": 2,
+   "ast": 1,
+   "fg3m": 3
+  }
  },
  "ac6fb079d66ef35a2a77e22b5e94ef8d|POR|john tonje": {
   "commence": "2026-11-24T00:10:00Z",
@@ -725,7 +845,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 2,
+   "reb": 0,
+   "ast": 1,
+   "fg3m": 0
+  }
  },
  "c9b6c9f77fd3628308dd34f50854a9c0|IND|jalen slawson": {
   "commence": "2026-11-24T00:40:00Z",
@@ -751,7 +876,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 16,
+   "reb": 10,
+   "ast": 2,
+   "fg3m": 3
+  }
  },
  "c9b6c9f77fd3628308dd34f50854a9c0|IND|jarace walker": {
   "commence": "2026-11-24T00:40:00Z",
@@ -777,7 +907,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 4,
+   "reb": 8,
+   "ast": 3,
+   "fg3m": 0
+  }
  },
  "c9b6c9f77fd3628308dd34f50854a9c0|IND|jay huff": {
   "commence": "2026-11-24T00:40:00Z",
@@ -829,7 +964,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 9,
+   "reb": 3,
+   "ast": 0,
+   "fg3m": 1
+  }
  },
  "c9b6c9f77fd3628308dd34f50854a9c0|IND|braden smith": {
   "commence": "2026-11-24T00:40:00Z",
@@ -855,7 +995,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 6,
+   "reb": 2,
+   "ast": 6,
+   "fg3m": 1
+  }
  },
  "c9b6c9f77fd3628308dd34f50854a9c0|IND|kobe brown": {
   "commence": "2026-11-24T00:40:00Z",
@@ -881,7 +1026,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 4,
+   "reb": 0,
+   "ast": 1,
+   "fg3m": 0
+  }
  },
  "c9b6c9f77fd3628308dd34f50854a9c0|IND|pascal siakam": {
   "commence": "2026-11-24T00:40:00Z",
@@ -907,7 +1057,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 20,
+   "reb": 8,
+   "ast": 5,
+   "fg3m": 2
+  }
  },
  "c9b6c9f77fd3628308dd34f50854a9c0|IND|ivica zubac": {
   "commence": "2026-11-24T00:40:00Z",
@@ -933,7 +1088,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 14,
+   "reb": 15,
+   "ast": 1,
+   "fg3m": 0
+  }
  },
  "c9b6c9f77fd3628308dd34f50854a9c0|IND|andrew nembhard": {
   "commence": "2026-11-24T00:40:00Z",
@@ -959,7 +1119,12 @@
     4.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 15,
+   "reb": 2,
+   "ast": 6,
+   "fg3m": 2
+  }
  },
  "c9b6c9f77fd3628308dd34f50854a9c0|IND|aaron nesmith": {
   "commence": "2026-11-24T00:40:00Z",
@@ -1011,7 +1176,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 0,
+   "reb": 0,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "c9b6c9f77fd3628308dd34f50854a9c0|IND|obi toppin": {
   "commence": "2026-11-24T00:40:00Z",
@@ -1037,7 +1207,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 17,
+   "reb": 6,
+   "ast": 4,
+   "fg3m": 2
+  }
  },
  "c9b6c9f77fd3628308dd34f50854a9c0|IND|tj mcconnell": {
   "commence": "2026-11-24T00:40:00Z",
@@ -1089,7 +1264,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 20,
+   "reb": 4,
+   "ast": 2,
+   "fg3m": 4
+  }
  },
  "c9b6c9f77fd3628308dd34f50854a9c0|OKC|jaylin williams": {
   "commence": "2026-11-24T00:40:00Z",
@@ -1141,7 +1321,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 18,
+   "reb": 9,
+   "ast": 3,
+   "fg3m": 0
+  }
  },
  "c9b6c9f77fd3628308dd34f50854a9c0|OKC|kenrich williams": {
   "commence": "2026-11-24T00:40:00Z",
@@ -1167,7 +1352,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 20,
+   "reb": 9,
+   "ast": 2,
+   "fg3m": 4
+  }
  },
  "c9b6c9f77fd3628308dd34f50854a9c0|OKC|shai gilgeous alexander": {
   "commence": "2026-11-24T00:40:00Z",
@@ -1193,7 +1383,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 38,
+   "reb": 5,
+   "ast": 7,
+   "fg3m": 4
+  }
  },
  "c9b6c9f77fd3628308dd34f50854a9c0|OKC|ajay mitchell": {
   "commence": "2026-11-24T00:40:00Z",
@@ -1219,7 +1414,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 12,
+   "reb": 4,
+   "ast": 3,
+   "fg3m": 2
+  }
  },
  "c9b6c9f77fd3628308dd34f50854a9c0|OKC|aday mara": {
   "commence": "2026-11-24T00:40:00Z",
@@ -1271,7 +1471,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 7,
+   "reb": 3,
+   "ast": 2,
+   "fg3m": 1
+  }
  },
  "c9b6c9f77fd3628308dd34f50854a9c0|OKC|jared mccain": {
   "commence": "2026-11-24T00:40:00Z",
@@ -1297,7 +1502,12 @@
     4.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 13,
+   "reb": 5,
+   "ast": 0,
+   "fg3m": 1
+  }
  },
  "c9b6c9f77fd3628308dd34f50854a9c0|OKC|josh dix": {
   "commence": "2026-11-24T00:40:00Z",
@@ -1323,7 +1533,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 0,
+   "reb": 1,
+   "ast": 1,
+   "fg3m": 0
+  }
  },
  "c9b6c9f77fd3628308dd34f50854a9c0|OKC|bennett stirtz": {
   "commence": "2026-11-24T00:40:00Z",
@@ -1349,7 +1564,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 5,
+   "reb": 9,
+   "ast": 3,
+   "fg3m": 1
+  }
  },
  "c9b6c9f77fd3628308dd34f50854a9c0|OKC|alex caruso": {
   "commence": "2026-11-24T00:40:00Z",
@@ -1401,7 +1621,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 7,
+   "reb": 4,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "c9b6c9f77fd3628308dd34f50854a9c0|OKC|nique clifford": {
   "commence": "2026-11-24T00:40:00Z",
@@ -1427,7 +1652,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 0,
+   "reb": 0,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "c9b6c9f77fd3628308dd34f50854a9c0|OKC|nikola topic": {
   "commence": "2026-11-24T00:40:00Z",
@@ -1479,7 +1709,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 20,
+   "reb": 12,
+   "ast": 8,
+   "fg3m": 0
+  }
  },
  "17f31499f145cd9d3232819395d29448|SAC|deandre hunter": {
   "commence": "2026-11-24T03:10:00Z",
@@ -1505,7 +1740,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 15,
+   "reb": 7,
+   "ast": 8,
+   "fg3m": 1
+  }
  },
  "17f31499f145cd9d3232819395d29448|SAC|precious achiuwa": {
   "commence": "2026-11-24T03:10:00Z",
@@ -1531,7 +1771,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 9,
+   "reb": 3,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "17f31499f145cd9d3232819395d29448|SAC|zach lavine": {
   "commence": "2026-11-24T03:10:00Z",
@@ -1557,7 +1802,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 18,
+   "reb": 6,
+   "ast": 2,
+   "fg3m": 2
+  }
  },
  "17f31499f145cd9d3232819395d29448|SAC|darius acuff": {
   "commence": "2026-11-24T03:10:00Z",
@@ -1583,7 +1833,12 @@
     4.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 12,
+   "reb": 1,
+   "ast": 4,
+   "fg3m": 0
+  }
  },
  "17f31499f145cd9d3232819395d29448|SAC|leaky black": {
   "commence": "2026-11-24T03:10:00Z",
@@ -1609,7 +1864,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 3,
+   "reb": 3,
+   "ast": 3,
+   "fg3m": 1
+  }
  },
  "17f31499f145cd9d3232819395d29448|SAC|malik monk": {
   "commence": "2026-11-24T03:10:00Z",
@@ -1635,7 +1895,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 15,
+   "reb": 3,
+   "ast": 4,
+   "fg3m": 4
+  }
  },
  "17f31499f145cd9d3232819395d29448|SAC|daeqwon plowden": {
   "commence": "2026-11-24T03:10:00Z",
@@ -1661,7 +1926,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 1,
+   "reb": 0,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "17f31499f145cd9d3232819395d29448|SAC|emanuel sharp": {
   "commence": "2026-11-24T03:10:00Z",
@@ -1687,7 +1957,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 0,
+   "reb": 1,
+   "ast": 2,
+   "fg3m": 0
+  }
  },
  "17f31499f145cd9d3232819395d29448|SAC|dylan cardwell": {
   "commence": "2026-11-24T03:10:00Z",
@@ -1713,7 +1988,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 0,
+   "reb": 7,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "17f31499f145cd9d3232819395d29448|SAC|alex karaban": {
   "commence": "2026-11-24T03:10:00Z",
@@ -1739,7 +2019,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 0,
+   "reb": 0,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "17f31499f145cd9d3232819395d29448|SAC|keegan murray": {
   "commence": "2026-11-24T03:10:00Z",
@@ -1765,7 +2050,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 14,
+   "reb": 2,
+   "ast": 1,
+   "fg3m": 2
+  }
  },
  "17f31499f145cd9d3232819395d29448|SAC|mason plumlee": {
   "commence": "2026-11-24T03:10:00Z",
@@ -1869,7 +2159,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 16,
+   "reb": 6,
+   "ast": 2,
+   "fg3m": 4
+  }
  },
  "17f31499f145cd9d3232819395d29448|SAS|stephon castle": {
   "commence": "2026-11-24T03:10:00Z",
@@ -1895,7 +2190,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 28,
+   "reb": 8,
+   "ast": 11,
+   "fg3m": 4
+  }
  },
  "17f31499f145cd9d3232819395d29448|SAS|harrison barnes": {
   "commence": "2026-11-24T03:10:00Z",
@@ -1921,7 +2221,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 9,
+   "reb": 2,
+   "ast": 2,
+   "fg3m": 1
+  }
  },
  "17f31499f145cd9d3232819395d29448|SAS|keldon johnson": {
   "commence": "2026-11-24T03:10:00Z",
@@ -1947,7 +2252,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 12,
+   "reb": 4,
+   "ast": 5,
+   "fg3m": 0
+  }
  },
  "17f31499f145cd9d3232819395d29448|SAS|julian champagnie": {
   "commence": "2026-11-24T03:10:00Z",
@@ -1973,7 +2283,12 @@
     4.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 22,
+   "reb": 7,
+   "ast": 3,
+   "fg3m": 6
+  }
  },
  "17f31499f145cd9d3232819395d29448|SAS|carter bryant": {
   "commence": "2026-11-24T03:10:00Z",
@@ -1999,7 +2314,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 0,
+   "reb": 3,
+   "ast": 2,
+   "fg3m": 0
+  }
  },
  "17f31499f145cd9d3232819395d29448|SAS|luke kornet": {
   "commence": "2026-11-24T03:10:00Z",
@@ -2025,7 +2345,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 18,
+   "reb": 11,
+   "ast": 3,
+   "fg3m": 0
+  }
  },
  "17f31499f145cd9d3232819395d29448|SAS|tarris reed": {
   "commence": "2026-11-24T03:10:00Z",
@@ -2051,7 +2376,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 7,
+   "reb": 7,
+   "ast": 1,
+   "fg3m": 0
+  }
  },
  "17f31499f145cd9d3232819395d29448|SAS|jordan mclaughlin": {
   "commence": "2026-11-24T03:10:00Z",
@@ -2077,7 +2407,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 6,
+   "reb": 2,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "17f31499f145cd9d3232819395d29448|SAS|david jones garcia": {
   "commence": "2026-11-24T03:10:00Z",
@@ -2103,7 +2438,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 2,
+   "reb": 0,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "6caeb7cce7c8340fed588f3badd83fe0|NOP|herbert jones": {
   "commence": "2026-11-24T01:10:00Z",
@@ -2129,7 +2469,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 7,
+   "reb": 3,
+   "ast": 4,
+   "fg3m": 1
+  }
  },
  "6caeb7cce7c8340fed588f3badd83fe0|NOP|zion williamson": {
   "commence": "2026-11-24T01:10:00Z",
@@ -2155,7 +2500,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 25,
+   "reb": 4,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "6caeb7cce7c8340fed588f3badd83fe0|NOP|trey murphy": {
   "commence": "2026-11-24T01:10:00Z",
@@ -2181,7 +2531,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 9,
+   "reb": 9,
+   "ast": 2,
+   "fg3m": 1
+  }
  },
  "6caeb7cce7c8340fed588f3badd83fe0|NOP|karlo matkovic": {
   "commence": "2026-11-24T01:10:00Z",
@@ -2207,7 +2562,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 5,
+   "reb": 4,
+   "ast": 1,
+   "fg3m": 1
+  }
  },
  "6caeb7cce7c8340fed588f3badd83fe0|NOP|jeremiah fears": {
   "commence": "2026-11-24T01:10:00Z",
@@ -2233,7 +2593,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 7,
+   "reb": 7,
+   "ast": 11,
+   "fg3m": 0
+  }
  },
  "6caeb7cce7c8340fed588f3badd83fe0|NOP|saddiq bey": {
   "commence": "2026-11-24T01:10:00Z",
@@ -2259,7 +2624,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 21,
+   "reb": 4,
+   "ast": 3,
+   "fg3m": 2
+  }
  },
  "6caeb7cce7c8340fed588f3badd83fe0|NOP|derik queen": {
   "commence": "2026-11-24T01:10:00Z",
@@ -2285,7 +2655,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 11,
+   "reb": 9,
+   "ast": 2,
+   "fg3m": 0
+  }
  },
  "6caeb7cce7c8340fed588f3badd83fe0|NOP|bryce mcgowens": {
   "commence": "2026-11-24T01:10:00Z",
@@ -2311,7 +2686,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 2,
+   "reb": 1,
+   "ast": 1,
+   "fg3m": 0
+  }
  },
  "6caeb7cce7c8340fed588f3badd83fe0|NOP|julian reese": {
   "commence": "2026-11-24T01:10:00Z",
@@ -2389,7 +2769,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 28,
+   "reb": 0,
+   "ast": 3,
+   "fg3m": 6
+  }
  },
  "6caeb7cce7c8340fed588f3badd83fe0|NOP|deandre jordan": {
   "commence": "2026-11-24T01:10:00Z",
@@ -2493,7 +2878,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 4,
+   "reb": 8,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "6caeb7cce7c8340fed588f3badd83fe0|PHX|dillon brooks": {
   "commence": "2026-11-24T01:10:00Z",
@@ -2519,7 +2909,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 16,
+   "reb": 5,
+   "ast": 7,
+   "fg3m": 2
+  }
  },
  "6caeb7cce7c8340fed588f3badd83fe0|PHX|miles bridges": {
   "commence": "2026-11-24T01:10:00Z",
@@ -2545,7 +2940,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 14,
+   "reb": 11,
+   "ast": 5,
+   "fg3m": 2
+  }
  },
  "6caeb7cce7c8340fed588f3badd83fe0|PHX|khaman maluach": {
   "commence": "2026-11-24T01:10:00Z",
@@ -2571,7 +2971,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 8,
+   "reb": 6,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "6caeb7cce7c8340fed588f3badd83fe0|PHX|devin booker": {
   "commence": "2026-11-24T01:10:00Z",
@@ -2597,7 +3002,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 22,
+   "reb": 5,
+   "ast": 8,
+   "fg3m": 2
+  }
  },
  "6caeb7cce7c8340fed588f3badd83fe0|PHX|jalen green": {
   "commence": "2026-11-24T01:10:00Z",
@@ -2623,7 +3033,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 25,
+   "reb": 3,
+   "ast": 0,
+   "fg3m": 3
+  }
  },
  "6caeb7cce7c8340fed588f3badd83fe0|PHX|oso ighodaro": {
   "commence": "2026-11-24T01:10:00Z",
@@ -2649,7 +3064,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 7,
+   "reb": 4,
+   "ast": 1,
+   "fg3m": 0
+  }
  },
  "6caeb7cce7c8340fed588f3badd83fe0|PHX|ryan dunn": {
   "commence": "2026-11-24T01:10:00Z",
@@ -2675,7 +3095,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 3,
+   "reb": 2,
+   "ast": 0,
+   "fg3m": 1
+  }
  },
  "6caeb7cce7c8340fed588f3badd83fe0|PHX|luke kennard": {
   "commence": "2026-11-24T01:10:00Z",
@@ -2701,7 +3126,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 4,
+   "reb": 1,
+   "ast": 2,
+   "fg3m": 0
+  }
  },
  "6caeb7cce7c8340fed588f3badd83fe0|PHX|jordan goodwin": {
   "commence": "2026-11-24T01:10:00Z",
@@ -2727,7 +3157,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 6,
+   "reb": 2,
+   "ast": 2,
+   "fg3m": 2
+  }
  },
  "6caeb7cce7c8340fed588f3badd83fe0|PHX|collin gillespie": {
   "commence": "2026-11-24T01:10:00Z",
@@ -2753,7 +3188,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 18,
+   "reb": 3,
+   "ast": 3,
+   "fg3m": 3
+  }
  },
  "6caeb7cce7c8340fed588f3badd83fe0|PHX|koa peat": {
   "commence": "2026-11-24T01:10:00Z",
@@ -2857,7 +3297,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 32,
+   "reb": 9,
+   "ast": 4,
+   "fg3m": 4
+  }
  },
  "db2311c331296d3328d71b842167dea4|HOU|jabari smith": {
   "commence": "2026-11-24T01:40:00Z",
@@ -2883,7 +3328,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 13,
+   "reb": 6,
+   "ast": 2,
+   "fg3m": 1
+  }
  },
  "db2311c331296d3328d71b842167dea4|HOU|alperen sengun": {
   "commence": "2026-11-24T01:40:00Z",
@@ -2909,7 +3359,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 20,
+   "reb": 8,
+   "ast": 7,
+   "fg3m": 1
+  }
  },
  "db2311c331296d3328d71b842167dea4|HOU|fred vanvleet": {
   "commence": "2026-11-24T01:40:00Z",
@@ -2935,7 +3390,12 @@
     4.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 6,
+   "reb": 2,
+   "ast": 4,
+   "fg3m": 2
+  }
  },
  "db2311c331296d3328d71b842167dea4|HOU|amen thompson": {
   "commence": "2026-11-24T01:40:00Z",
@@ -2961,7 +3421,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 20,
+   "reb": 4,
+   "ast": 5,
+   "fg3m": 1
+  }
  },
  "db2311c331296d3328d71b842167dea4|HOU|jaesean tate": {
   "commence": "2026-11-24T01:40:00Z",
@@ -3013,7 +3478,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 10,
+   "reb": 4,
+   "ast": 4,
+   "fg3m": 2
+  }
  },
  "db2311c331296d3328d71b842167dea4|HOU|isaiah crawford": {
   "commence": "2026-11-24T01:40:00Z",
@@ -3091,7 +3561,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 4,
+   "reb": 3,
+   "ast": 3,
+   "fg3m": 0
+  }
  },
  "db2311c331296d3328d71b842167dea4|HOU|bogdan bogdanovic": {
   "commence": "2026-11-24T01:40:00Z",
@@ -3117,7 +3592,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 2,
+   "reb": 1,
+   "ast": 2,
+   "fg3m": 0
+  }
  },
  "db2311c331296d3328d71b842167dea4|HOU|reed sheppard": {
   "commence": "2026-11-24T01:40:00Z",
@@ -3143,7 +3623,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 5,
+   "reb": 3,
+   "ast": 5,
+   "fg3m": 1
+  }
  },
  "db2311c331296d3328d71b842167dea4|HOU|bruce thornton": {
   "commence": "2026-11-24T01:40:00Z",
@@ -3195,7 +3680,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 4,
+   "reb": 6,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "db2311c331296d3328d71b842167dea4|LAC|brook lopez": {
   "commence": "2026-11-24T01:40:00Z",
@@ -3221,7 +3711,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 3,
+   "reb": 4,
+   "ast": 1,
+   "fg3m": 1
+  }
  },
  "db2311c331296d3328d71b842167dea4|LAC|kris dunn": {
   "commence": "2026-11-24T01:40:00Z",
@@ -3247,7 +3742,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 9,
+   "reb": 5,
+   "ast": 4,
+   "fg3m": 0
+  }
  },
  "db2311c331296d3328d71b842167dea4|LAC|darius garland": {
   "commence": "2026-11-24T01:40:00Z",
@@ -3273,7 +3773,12 @@
     4.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 26,
+   "reb": 1,
+   "ast": 8,
+   "fg3m": 4
+  }
  },
  "db2311c331296d3328d71b842167dea4|LAC|kobe sanders": {
   "commence": "2026-11-24T01:40:00Z",
@@ -3299,7 +3804,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 6,
+   "reb": 0,
+   "ast": 0,
+   "fg3m": 2
+  }
  },
  "db2311c331296d3328d71b842167dea4|LAC|gradey dick": {
   "commence": "2026-11-24T01:40:00Z",
@@ -3351,7 +3861,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 6,
+   "reb": 6,
+   "ast": 2,
+   "fg3m": 0
+  }
  },
  "db2311c331296d3328d71b842167dea4|LAC|baba miller": {
   "commence": "2026-11-24T01:40:00Z",
@@ -3377,7 +3892,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 0,
+   "reb": 0,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "db2311c331296d3328d71b842167dea4|LAC|max strus": {
   "commence": "2026-11-24T01:40:00Z",
@@ -3403,7 +3923,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 8,
+   "reb": 0,
+   "ast": 2,
+   "fg3m": 1
+  }
  },
  "db2311c331296d3328d71b842167dea4|LAC|keaton wagler": {
   "commence": "2026-11-24T01:40:00Z",
@@ -3429,7 +3954,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 2,
+   "reb": 1,
+   "ast": 2,
+   "fg3m": 0
+  }
  },
  "db2311c331296d3328d71b842167dea4|LAC|derrick jones": {
   "commence": "2026-11-24T01:40:00Z",
@@ -3455,7 +3985,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 7,
+   "reb": 4,
+   "ast": 3,
+   "fg3m": 1
+  }
  },
  "db2311c331296d3328d71b842167dea4|LAC|rui hachimura": {
   "commence": "2026-11-24T01:40:00Z",
@@ -3481,7 +4016,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 19,
+   "reb": 3,
+   "ast": 3,
+   "fg3m": 2
+  }
  },
  "db2311c331296d3328d71b842167dea4|LAC|jalen pickett": {
   "commence": "2026-11-24T01:40:00Z",
@@ -3533,7 +4073,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 2,
+   "reb": 1,
+   "ast": 1,
+   "fg3m": 0
+  }
  },
  "a5184238c27b9c3bfca29220f9d5d14a|TOR|scottie barnes": {
   "commence": "2026-11-24T00:40:00Z",
@@ -3559,7 +4104,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 31,
+   "reb": 5,
+   "ast": 8,
+   "fg3m": 2
+  }
  },
  "a5184238c27b9c3bfca29220f9d5d14a|TOR|collin murray boyles": {
   "commence": "2026-11-24T00:40:00Z",
@@ -3585,7 +4135,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 6,
+   "reb": 10,
+   "ast": 1,
+   "fg3m": 0
+  }
  },
  "a5184238c27b9c3bfca29220f9d5d14a|TOR|immanuel quickley": {
   "commence": "2026-11-24T00:40:00Z",
@@ -3611,7 +4166,12 @@
     4.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 13,
+   "reb": 3,
+   "ast": 6,
+   "fg3m": 2
+  }
  },
  "a5184238c27b9c3bfca29220f9d5d14a|TOR|jakobe walter": {
   "commence": "2026-11-24T00:40:00Z",
@@ -3637,7 +4197,12 @@
     4.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 15,
+   "reb": 6,
+   "ast": 2,
+   "fg3m": 2
+  }
  },
  "a5184238c27b9c3bfca29220f9d5d14a|TOR|kyle anderson": {
   "commence": "2026-11-24T00:40:00Z",
@@ -3689,7 +4254,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 0,
+   "reb": 2,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "a5184238c27b9c3bfca29220f9d5d14a|TOR|jamison battle": {
   "commence": "2026-11-24T00:40:00Z",
@@ -3715,7 +4285,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 13,
+   "reb": 2,
+   "ast": 0,
+   "fg3m": 3
+  }
  },
  "a5184238c27b9c3bfca29220f9d5d14a|TOR|allen graves": {
   "commence": "2026-11-24T00:40:00Z",
@@ -3741,7 +4316,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 7,
+   "reb": 2,
+   "ast": 0,
+   "fg3m": 2
+  }
  },
  "a5184238c27b9c3bfca29220f9d5d14a|TOR|jamal shead": {
   "commence": "2026-11-24T00:40:00Z",
@@ -3767,7 +4347,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 11,
+   "reb": 2,
+   "ast": 6,
+   "fg3m": 3
+  }
  },
  "a5184238c27b9c3bfca29220f9d5d14a|TOR|alijah martin": {
   "commence": "2026-11-24T00:40:00Z",
@@ -3793,7 +4378,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 0,
+   "reb": 2,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "a5184238c27b9c3bfca29220f9d5d14a|TOR|jakob poeltl": {
   "commence": "2026-11-24T00:40:00Z",
@@ -3819,7 +4409,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 15,
+   "reb": 10,
+   "ast": 3,
+   "fg3m": 0
+  }
  },
  "a5184238c27b9c3bfca29220f9d5d14a|TOR|malachi smith": {
   "commence": "2026-11-24T00:40:00Z",
@@ -3871,7 +4466,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 18,
+   "reb": 5,
+   "ast": 3,
+   "fg3m": 2
+  }
  },
  "a5184238c27b9c3bfca29220f9d5d14a|MIL|jaime jaquez": {
   "commence": "2026-11-24T00:40:00Z",
@@ -3897,7 +4497,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 3,
+   "reb": 4,
+   "ast": 2,
+   "fg3m": 1
+  }
  },
  "a5184238c27b9c3bfca29220f9d5d14a|MIL|myles turner": {
   "commence": "2026-11-24T00:40:00Z",
@@ -3923,7 +4528,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 27,
+   "reb": 11,
+   "ast": 1,
+   "fg3m": 5
+  }
  },
  "a5184238c27b9c3bfca29220f9d5d14a|MIL|tyler herro": {
   "commence": "2026-11-24T00:40:00Z",
@@ -3949,7 +4559,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 32,
+   "reb": 6,
+   "ast": 8,
+   "fg3m": 4
+  }
  },
  "a5184238c27b9c3bfca29220f9d5d14a|MIL|brayden burries": {
   "commence": "2026-11-24T00:40:00Z",
@@ -3975,7 +4590,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 14,
+   "reb": 10,
+   "ast": 4,
+   "fg3m": 1
+  }
  },
  "a5184238c27b9c3bfca29220f9d5d14a|MIL|nate ament": {
   "commence": "2026-11-24T00:40:00Z",
@@ -4001,7 +4621,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 7,
+   "reb": 4,
+   "ast": 1,
+   "fg3m": 0
+  }
  },
  "a5184238c27b9c3bfca29220f9d5d14a|MIL|jericho sims": {
   "commence": "2026-11-24T00:40:00Z",
@@ -4053,7 +4678,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 9,
+   "reb": 3,
+   "ast": 0,
+   "fg3m": 1
+  }
  },
  "a5184238c27b9c3bfca29220f9d5d14a|MIL|aj green": {
   "commence": "2026-11-24T00:40:00Z",
@@ -4105,7 +4735,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 6,
+   "reb": 1,
+   "ast": 3,
+   "fg3m": 0
+  }
  },
  "a5184238c27b9c3bfca29220f9d5d14a|MIL|kasparas jakucionis": {
   "commence": "2026-11-24T00:40:00Z",
@@ -4131,7 +4766,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 0,
+   "reb": 0,
+   "ast": 3,
+   "fg3m": 0
+  }
  },
  "a5184238c27b9c3bfca29220f9d5d14a|MIL|ousmane dieng": {
   "commence": "2026-11-24T00:40:00Z",
@@ -4183,7 +4823,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 0,
+   "reb": 0,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "a5184238c27b9c3bfca29220f9d5d14a|MIL|pete nance": {
   "commence": "2026-11-24T00:40:00Z",
@@ -4235,7 +4880,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 0,
+   "reb": 0,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "b8dfee1fca57ec870528a14c792ad73a|CHI|jalen smith": {
   "commence": "2026-11-24T01:10:00Z",
@@ -4261,7 +4911,12 @@
     4.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 11,
+   "reb": 6,
+   "ast": 4,
+   "fg3m": 1
+  }
  },
  "b8dfee1fca57ec870528a14c792ad73a|CHI|matas buzelis": {
   "commence": "2026-11-24T01:10:00Z",
@@ -4287,7 +4942,12 @@
     4.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 15,
+   "reb": 6,
+   "ast": 0,
+   "fg3m": 4
+  }
  },
  "b8dfee1fca57ec870528a14c792ad73a|CHI|josh giddey": {
   "commence": "2026-11-24T01:10:00Z",
@@ -4313,7 +4973,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 4,
+   "reb": 2,
+   "ast": 11,
+   "fg3m": 0
+  }
  },
  "b8dfee1fca57ec870528a14c792ad73a|CHI|zach collins": {
   "commence": "2026-11-24T01:10:00Z",
@@ -4365,7 +5030,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 12,
+   "reb": 4,
+   "ast": 3,
+   "fg3m": 3
+  }
  },
  "b8dfee1fca57ec870528a14c792ad73a|CHI|leonard miller": {
   "commence": "2026-11-24T01:10:00Z",
@@ -4417,7 +5087,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 6,
+   "reb": 2,
+   "ast": 0,
+   "fg3m": 1
+  }
  },
  "b8dfee1fca57ec870528a14c792ad73a|CHI|buddy hield": {
   "commence": "2026-11-24T01:10:00Z",
@@ -4443,7 +5118,12 @@
     4.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 17,
+   "reb": 5,
+   "ast": 0,
+   "fg3m": 4
+  }
  },
  "b8dfee1fca57ec870528a14c792ad73a|CHI|tre jones": {
   "commence": "2026-11-24T01:10:00Z",
@@ -4469,7 +5149,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 16,
+   "reb": 4,
+   "ast": 9,
+   "fg3m": 1
+  }
  },
  "b8dfee1fca57ec870528a14c792ad73a|CHI|jordan hawkins": {
   "commence": "2026-11-24T01:10:00Z",
@@ -4495,7 +5180,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 19,
+   "reb": 1,
+   "ast": 2,
+   "fg3m": 4
+  }
  },
  "b8dfee1fca57ec870528a14c792ad73a|CHI|patrick williams": {
   "commence": "2026-11-24T01:10:00Z",
@@ -4521,7 +5211,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 7,
+   "reb": 5,
+   "ast": 2,
+   "fg3m": 1
+  }
  },
  "b8dfee1fca57ec870528a14c792ad73a|CHI|dailyn swain": {
   "commence": "2026-11-24T01:10:00Z",
@@ -4573,7 +5268,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 6,
+   "reb": 6,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "b8dfee1fca57ec870528a14c792ad73a|CLE|jarrett allen": {
   "commence": "2026-11-24T01:10:00Z",
@@ -4599,7 +5299,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 16,
+   "reb": 4,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "b8dfee1fca57ec870528a14c792ad73a|CLE|james harden": {
   "commence": "2026-11-24T01:10:00Z",
@@ -4625,7 +5330,12 @@
     4.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 21,
+   "reb": 6,
+   "ast": 5,
+   "fg3m": 3
+  }
  },
  "b8dfee1fca57ec870528a14c792ad73a|CLE|donovan mitchell": {
   "commence": "2026-11-24T01:10:00Z",
@@ -4651,7 +5361,12 @@
     4.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 28,
+   "reb": 3,
+   "ast": 5,
+   "fg3m": 1
+  }
  },
  "b8dfee1fca57ec870528a14c792ad73a|CLE|meleek thomas": {
   "commence": "2026-11-24T01:10:00Z",
@@ -4677,7 +5392,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 13,
+   "reb": 3,
+   "ast": 2,
+   "fg3m": 1
+  }
  },
  "b8dfee1fca57ec870528a14c792ad73a|CLE|mario hezonja": {
   "commence": "2026-11-24T01:10:00Z",
@@ -4703,7 +5423,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 4,
+   "reb": 5,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "b8dfee1fca57ec870528a14c792ad73a|CLE|thomas bryant": {
   "commence": "2026-11-24T01:10:00Z",
@@ -4729,7 +5454,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 0,
+   "reb": 2,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "b8dfee1fca57ec870528a14c792ad73a|CLE|sam merrill": {
   "commence": "2026-11-24T01:10:00Z",
@@ -4755,7 +5485,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 12,
+   "reb": 3,
+   "ast": 2,
+   "fg3m": 2
+  }
  },
  "b8dfee1fca57ec870528a14c792ad73a|CLE|craig porter": {
   "commence": "2026-11-24T01:10:00Z",
@@ -4807,7 +5542,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 4,
+   "reb": 2,
+   "ast": 2,
+   "fg3m": 0
+  }
  },
  "b8dfee1fca57ec870528a14c792ad73a|CLE|peyton watson": {
   "commence": "2026-11-24T01:10:00Z",
@@ -4833,7 +5573,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 8,
+   "reb": 10,
+   "ast": 3,
+   "fg3m": 1
+  }
  },
  "b8dfee1fca57ec870528a14c792ad73a|CLE|norchad omier": {
   "commence": "2026-11-24T01:10:00Z",
@@ -4859,7 +5604,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 2,
+   "reb": 4,
+   "ast": 2,
+   "fg3m": 0
+  }
  },
  "b8dfee1fca57ec870528a14c792ad73a|CLE|jaylon tyson": {
   "commence": "2026-11-24T01:10:00Z",
@@ -4885,7 +5635,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 0,
+   "reb": 2,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "a72a1703f7a92b80768255d1d977a761|MIN|jaden mcdaniels": {
   "commence": "2026-11-24T00:40:00Z",
@@ -4911,7 +5666,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 34,
+   "reb": 10,
+   "ast": 6,
+   "fg3m": 4
+  }
  },
  "a72a1703f7a92b80768255d1d977a761|MIN|jonathan kuminga": {
   "commence": "2026-11-24T00:40:00Z",
@@ -4937,7 +5697,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 15,
+   "reb": 5,
+   "ast": 4,
+   "fg3m": 1
+  }
  },
  "a72a1703f7a92b80768255d1d977a761|MIN|rudy gobert": {
   "commence": "2026-11-24T00:40:00Z",
@@ -4963,7 +5728,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 7,
+   "reb": 6,
+   "ast": 3,
+   "fg3m": 0
+  }
  },
  "a72a1703f7a92b80768255d1d977a761|MIN|ayo dosunmu": {
   "commence": "2026-11-24T00:40:00Z",
@@ -4989,7 +5759,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 23,
+   "reb": 3,
+   "ast": 5,
+   "fg3m": 4
+  }
  },
  "a72a1703f7a92b80768255d1d977a761|MIN|lamelo ball": {
   "commence": "2026-11-24T00:40:00Z",
@@ -5015,7 +5790,12 @@
     5.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 17,
+   "reb": 2,
+   "ast": 3,
+   "fg3m": 2
+  }
  },
  "a72a1703f7a92b80768255d1d977a761|MIN|trey lyles": {
   "commence": "2026-11-24T00:40:00Z",
@@ -5041,7 +5821,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 9,
+   "reb": 3,
+   "ast": 2,
+   "fg3m": 0
+  }
  },
  "a72a1703f7a92b80768255d1d977a761|MIN|cody williams": {
   "commence": "2026-11-24T00:40:00Z",
@@ -5067,7 +5852,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 0,
+   "reb": 0,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "a72a1703f7a92b80768255d1d977a761|MIN|joan beringer": {
   "commence": "2026-11-24T00:40:00Z",
@@ -5093,7 +5883,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 0,
+   "reb": 4,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "a72a1703f7a92b80768255d1d977a761|MIN|bones hyland": {
   "commence": "2026-11-24T00:40:00Z",
@@ -5119,7 +5914,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 14,
+   "reb": 2,
+   "ast": 6,
+   "fg3m": 4
+  }
  },
  "a72a1703f7a92b80768255d1d977a761|MIN|terrence shannon": {
   "commence": "2026-11-24T00:40:00Z",
@@ -5145,7 +5945,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 17,
+   "reb": 1,
+   "ast": 5,
+   "fg3m": 2
+  }
  },
  "a72a1703f7a92b80768255d1d977a761|BKN|julius randle": {
   "commence": "2026-11-24T00:40:00Z",
@@ -5171,7 +5976,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 29,
+   "reb": 4,
+   "ast": 4,
+   "fg3m": 2
+  }
  },
  "a72a1703f7a92b80768255d1d977a761|BKN|michael porter": {
   "commence": "2026-11-24T00:40:00Z",
@@ -5197,7 +6007,12 @@
     4.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 11,
+   "reb": 6,
+   "ast": 2,
+   "fg3m": 0
+  }
  },
  "a72a1703f7a92b80768255d1d977a761|BKN|dayron sharpe": {
   "commence": "2026-11-24T00:40:00Z",
@@ -5223,7 +6038,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 6,
+   "reb": 5,
+   "ast": 7,
+   "fg3m": 0
+  }
  },
  "a72a1703f7a92b80768255d1d977a761|BKN|noah clowney": {
   "commence": "2026-11-24T00:40:00Z",
@@ -5249,7 +6069,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 13,
+   "reb": 2,
+   "ast": 1,
+   "fg3m": 3
+  }
  },
  "a72a1703f7a92b80768255d1d977a761|BKN|moritz wagner": {
   "commence": "2026-11-24T00:40:00Z",
@@ -5275,7 +6100,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 11,
+   "reb": 0,
+   "ast": 1,
+   "fg3m": 2
+  }
  },
  "a72a1703f7a92b80768255d1d977a761|BKN|keon ellis": {
   "commence": "2026-11-24T00:40:00Z",
@@ -5301,7 +6131,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 6,
+   "reb": 0,
+   "ast": 0,
+   "fg3m": 2
+  }
  },
  "a72a1703f7a92b80768255d1d977a761|BKN|mikel brown": {
   "commence": "2026-11-24T00:40:00Z",
@@ -5327,7 +6162,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 17,
+   "reb": 5,
+   "ast": 7,
+   "fg3m": 4
+  }
  },
  "a72a1703f7a92b80768255d1d977a761|BKN|josh minott": {
   "commence": "2026-11-24T00:40:00Z",
@@ -5353,7 +6193,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 0,
+   "reb": 0,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "a72a1703f7a92b80768255d1d977a761|BKN|danny wolf": {
   "commence": "2026-11-24T00:40:00Z",
@@ -5379,7 +6224,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 11,
+   "reb": 5,
+   "ast": 4,
+   "fg3m": 3
+  }
  },
  "a72a1703f7a92b80768255d1d977a761|BKN|terance mann": {
   "commence": "2026-11-24T00:40:00Z",
@@ -5405,7 +6255,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 0,
+   "reb": 0,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "a72a1703f7a92b80768255d1d977a761|BKN|egor demin": {
   "commence": "2026-11-24T00:40:00Z",
@@ -5431,7 +6286,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 10,
+   "reb": 3,
+   "ast": 4,
+   "fg3m": 2
+  }
  },
  "35ca45d3e548dc7207fd7f1696ab16f5|CHA|moussa diabate": {
   "commence": "2026-11-24T00:10:00Z",
@@ -5457,7 +6317,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 10,
+   "reb": 10,
+   "ast": 3,
+   "fg3m": 0
+  }
  },
  "35ca45d3e548dc7207fd7f1696ab16f5|CHA|brandon miller": {
   "commence": "2026-11-24T00:10:00Z",
@@ -5483,7 +6348,12 @@
     4.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 20,
+   "reb": 3,
+   "ast": 5,
+   "fg3m": 4
+  }
  },
  "35ca45d3e548dc7207fd7f1696ab16f5|CHA|naz reid": {
   "commence": "2026-11-24T00:10:00Z",
@@ -5509,7 +6379,12 @@
     4.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 24,
+   "reb": 6,
+   "ast": 3,
+   "fg3m": 3
+  }
  },
  "35ca45d3e548dc7207fd7f1696ab16f5|CHA|coby white": {
   "commence": "2026-11-24T00:10:00Z",
@@ -5535,7 +6410,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 21,
+   "reb": 3,
+   "ast": 2,
+   "fg3m": 5
+  }
  },
  "35ca45d3e548dc7207fd7f1696ab16f5|CHA|sion james": {
   "commence": "2026-11-24T00:10:00Z",
@@ -5561,7 +6441,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 5,
+   "reb": 4,
+   "ast": 4,
+   "fg3m": 1
+  }
  },
  "35ca45d3e548dc7207fd7f1696ab16f5|CHA|royce oneale": {
   "commence": "2026-11-24T00:10:00Z",
@@ -5587,7 +6472,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 0,
+   "reb": 1,
+   "ast": 1,
+   "fg3m": 0
+  }
  },
  "35ca45d3e548dc7207fd7f1696ab16f5|CHA|tidjane salaun": {
   "commence": "2026-11-24T00:10:00Z",
@@ -5613,7 +6503,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 0,
+   "reb": 5,
+   "ast": 1,
+   "fg3m": 0
+  }
  },
  "35ca45d3e548dc7207fd7f1696ab16f5|CHA|ryan kalkbrenner": {
   "commence": "2026-11-24T00:10:00Z",
@@ -5639,7 +6534,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 0,
+   "reb": 2,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "35ca45d3e548dc7207fd7f1696ab16f5|CHA|christian anderson": {
   "commence": "2026-11-24T00:10:00Z",
@@ -5665,7 +6565,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 25,
+   "reb": 2,
+   "ast": 3,
+   "fg3m": 6
+  }
  },
  "35ca45d3e548dc7207fd7f1696ab16f5|CHA|liam mcneeley": {
   "commence": "2026-11-24T00:10:00Z",
@@ -5691,7 +6596,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 3,
+   "reb": 2,
+   "ast": 0,
+   "fg3m": 1
+  }
  },
  "35ca45d3e548dc7207fd7f1696ab16f5|MEM|cedric coward": {
   "commence": "2026-11-24T00:10:00Z",
@@ -5717,7 +6627,12 @@
     4.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 16,
+   "reb": 9,
+   "ast": 3,
+   "fg3m": 0
+  }
  },
  "35ca45d3e548dc7207fd7f1696ab16f5|MEM|jaylen wells": {
   "commence": "2026-11-24T00:10:00Z",
@@ -5743,7 +6658,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 8,
+   "reb": 2,
+   "ast": 0,
+   "fg3m": 2
+  }
  },
  "35ca45d3e548dc7207fd7f1696ab16f5|MEM|zach edey": {
   "commence": "2026-11-24T00:10:00Z",
@@ -5769,7 +6689,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 8,
+   "reb": 11,
+   "ast": 1,
+   "fg3m": 0
+  }
  },
  "35ca45d3e548dc7207fd7f1696ab16f5|MEM|ty jerome": {
   "commence": "2026-11-24T00:10:00Z",
@@ -5795,7 +6720,12 @@
     4.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 29,
+   "reb": 4,
+   "ast": 3,
+   "fg3m": 7
+  }
  },
  "35ca45d3e548dc7207fd7f1696ab16f5|MEM|kris murray": {
   "commence": "2026-11-24T00:10:00Z",
@@ -5821,7 +6751,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 9,
+   "reb": 3,
+   "ast": 1,
+   "fg3m": 1
+  }
  },
  "35ca45d3e548dc7207fd7f1696ab16f5|MEM|isaiah stewart": {
   "commence": "2026-11-24T00:10:00Z",
@@ -5847,7 +6782,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 11,
+   "reb": 4,
+   "ast": 0,
+   "fg3m": 1
+  }
  },
  "35ca45d3e548dc7207fd7f1696ab16f5|MEM|cam spencer": {
   "commence": "2026-11-24T00:10:00Z",
@@ -5873,7 +6813,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 24,
+   "reb": 1,
+   "ast": 5,
+   "fg3m": 3
+  }
  },
  "35ca45d3e548dc7207fd7f1696ab16f5|MEM|olivier maxence prosper": {
   "commence": "2026-11-24T00:10:00Z",
@@ -5899,7 +6844,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 6,
+   "reb": 3,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "35ca45d3e548dc7207fd7f1696ab16f5|MEM|quinten post": {
   "commence": "2026-11-24T00:10:00Z",
@@ -5925,7 +6875,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 0,
+   "reb": 0,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "35ca45d3e548dc7207fd7f1696ab16f5|MEM|taylor hendricks": {
   "commence": "2026-11-24T00:10:00Z",
@@ -5951,7 +6906,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 3,
+   "reb": 4,
+   "ast": 1,
+   "fg3m": 1
+  }
  },
  "35ca45d3e548dc7207fd7f1696ab16f5|MEM|karim lopez": {
   "commence": "2026-11-24T00:10:00Z",
@@ -6029,7 +6989,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 3,
+   "reb": 3,
+   "ast": 5,
+   "fg3m": 0
+  }
  },
  "3e9dc52cb055c0154839c4aec417955b|LAL|jake laravia": {
   "commence": "2026-11-24T03:10:00Z",
@@ -6055,7 +7020,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 15,
+   "reb": 10,
+   "ast": 1,
+   "fg3m": 1
+  }
  },
  "3e9dc52cb055c0154839c4aec417955b|LAL|walker kessler": {
   "commence": "2026-11-24T03:10:00Z",
@@ -6081,7 +7051,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 10,
+   "reb": 12,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "3e9dc52cb055c0154839c4aec417955b|LAL|matisse thybulle": {
   "commence": "2026-11-24T03:10:00Z",
@@ -6107,7 +7082,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 14,
+   "reb": 4,
+   "ast": 0,
+   "fg3m": 2
+  }
  },
  "3e9dc52cb055c0154839c4aec417955b|LAL|luka doncic": {
   "commence": "2026-11-24T03:10:00Z",
@@ -6133,7 +7113,12 @@
     5.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 28,
+   "reb": 4,
+   "ast": 8,
+   "fg3m": 3
+  }
  },
  "3e9dc52cb055c0154839c4aec417955b|LAL|jarred vanderbilt": {
   "commence": "2026-11-24T03:10:00Z",
@@ -6159,7 +7144,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 1,
+   "reb": 2,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "3e9dc52cb055c0154839c4aec417955b|LAL|sandro mamukelashvili": {
   "commence": "2026-11-24T03:10:00Z",
@@ -6185,7 +7175,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 2,
+   "reb": 4,
+   "ast": 2,
+   "fg3m": 0
+  }
  },
  "3e9dc52cb055c0154839c4aec417955b|LAL|ziaire williams": {
   "commence": "2026-11-24T03:10:00Z",
@@ -6211,7 +7206,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 9,
+   "reb": 4,
+   "ast": 0,
+   "fg3m": 2
+  }
  },
  "3e9dc52cb055c0154839c4aec417955b|LAL|collin sexton": {
   "commence": "2026-11-24T03:10:00Z",
@@ -6237,7 +7237,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 12,
+   "reb": 2,
+   "ast": 4,
+   "fg3m": 2
+  }
  },
  "3e9dc52cb055c0154839c4aec417955b|LAL|quentin grimes": {
   "commence": "2026-11-24T03:10:00Z",
@@ -6263,7 +7268,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 9,
+   "reb": 3,
+   "ast": 8,
+   "fg3m": 1
+  }
  },
  "3e9dc52cb055c0154839c4aec417955b|LAL|bronny james": {
   "commence": "2026-11-24T03:10:00Z",
@@ -6341,7 +7351,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 9,
+   "reb": 0,
+   "ast": 0,
+   "fg3m": 1
+  }
  },
  "3e9dc52cb055c0154839c4aec417955b|LAL|adou thiero": {
   "commence": "2026-11-24T03:10:00Z",
@@ -6471,7 +7486,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 14,
+   "reb": 4,
+   "ast": 2,
+   "fg3m": 2
+  }
  },
  "3e9dc52cb055c0154839c4aec417955b|UTA|ace bailey": {
   "commence": "2026-11-24T03:10:00Z",
@@ -6497,7 +7517,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 18,
+   "reb": 5,
+   "ast": 1,
+   "fg3m": 1
+  }
  },
  "3e9dc52cb055c0154839c4aec417955b|UTA|darryn peterson": {
   "commence": "2026-11-24T03:10:00Z",
@@ -6523,7 +7548,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 13,
+   "reb": 6,
+   "ast": 5,
+   "fg3m": 0
+  }
  },
  "3e9dc52cb055c0154839c4aec417955b|UTA|kyle filipowski": {
   "commence": "2026-11-24T03:10:00Z",
@@ -6549,7 +7579,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 21,
+   "reb": 12,
+   "ast": 4,
+   "fg3m": 1
+  }
  },
  "3e9dc52cb055c0154839c4aec417955b|UTA|brice sensabaugh": {
   "commence": "2026-11-24T03:10:00Z",
@@ -6575,7 +7610,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 6,
+   "reb": 4,
+   "ast": 1,
+   "fg3m": 0
+  }
  },
  "3e9dc52cb055c0154839c4aec417955b|UTA|tony bradley": {
   "commence": "2026-11-24T03:10:00Z",
@@ -6627,7 +7667,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 6,
+   "reb": 7,
+   "ast": 2,
+   "fg3m": 0
+  }
  },
  "3e9dc52cb055c0154839c4aec417955b|UTA|svi mykhailiuk": {
   "commence": "2026-11-24T03:10:00Z",
@@ -6653,7 +7698,12 @@
     3.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 4,
+   "reb": 3,
+   "ast": 2,
+   "fg3m": 0
+  }
  },
  "3e9dc52cb055c0154839c4aec417955b|UTA|josh okogie": {
   "commence": "2026-11-24T03:10:00Z",
@@ -6679,7 +7729,12 @@
     1.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 0,
+   "reb": 0,
+   "ast": 0,
+   "fg3m": 0
+  }
  },
  "3e9dc52cb055c0154839c4aec417955b|UTA|josh green": {
   "commence": "2026-11-24T03:10:00Z",
@@ -6705,7 +7760,12 @@
     2.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 8,
+   "reb": 2,
+   "ast": 1,
+   "fg3m": 2
+  }
  },
  "3e9dc52cb055c0154839c4aec417955b|UTA|isaiah collier": {
   "commence": "2026-11-24T03:10:00Z",
@@ -6731,7 +7791,12 @@
     0.0
    ]
   },
-  "actual": null
+  "actual": {
+   "pts": 4,
+   "reb": 2,
+   "ast": 1,
+   "fg3m": 0
+  }
  },
  "a5184238c27b9c3bfca29220f9d5d14a|TOR|jaden bradley": {
   "commence": "2026-11-24T00:40:00Z",
@@ -6753,6 +7818,1982 @@
    ],
    "fg3m": [
     0.07,
+    0.0,
+    0.0
+   ]
+  },
+  "actual": null
+ },
+ "42f48a4769eab3d1472d76aac0fd0fa7|ORL|jamal cain": {
+  "commence": "2026-11-25T00:11:00Z",
+  "sim": {
+   "pts": [
+    4.59,
+    2.0,
+    6.0
+   ],
+   "reb": [
+    2.09,
+    1.0,
+    3.0
+   ],
+   "ast": [
+    0.51,
+    0.0,
+    1.0
+   ],
+   "fg3m": [
+    0.59,
+    0.0,
+    1.0
+   ]
+  },
+  "actual": null
+ },
+ "42f48a4769eab3d1472d76aac0fd0fa7|ORL|franz wagner": {
+  "commence": "2026-11-25T00:11:00Z",
+  "sim": {
+   "pts": [
+    20.62,
+    15.0,
+    25.0
+   ],
+   "reb": [
+    5.84,
+    4.0,
+    8.0
+   ],
+   "ast": [
+    5.79,
+    4.0,
+    8.0
+   ],
+   "fg3m": [
+    1.12,
+    0.0,
+    2.0
+   ]
+  },
+  "actual": null
+ },
+ "42f48a4769eab3d1472d76aac0fd0fa7|ORL|wendell carter": {
+  "commence": "2026-11-25T00:11:00Z",
+  "sim": {
+   "pts": [
+    10.73,
+    7.0,
+    14.0
+   ],
+   "reb": [
+    7.14,
+    5.0,
+    9.0
+   ],
+   "ast": [
+    1.37,
+    0.0,
+    2.0
+   ],
+   "fg3m": [
+    0.79,
+    0.0,
+    1.0
+   ]
+  },
+  "actual": null
+ },
+ "42f48a4769eab3d1472d76aac0fd0fa7|ORL|desmond bane": {
+  "commence": "2026-11-25T00:11:00Z",
+  "sim": {
+   "pts": [
+    16.12,
+    11.0,
+    20.0
+   ],
+   "reb": [
+    3.49,
+    2.0,
+    5.0
+   ],
+   "ast": [
+    2.79,
+    1.0,
+    4.0
+   ],
+   "fg3m": [
+    2.55,
+    1.0,
+    4.0
+   ]
+  },
+  "actual": null
+ },
+ "42f48a4769eab3d1472d76aac0fd0fa7|ORL|jase richardson": {
+  "commence": "2026-11-25T00:11:00Z",
+  "sim": {
+   "pts": [
+    6.12,
+    3.0,
+    8.0
+   ],
+   "reb": [
+    1.79,
+    1.0,
+    3.0
+   ],
+   "ast": [
+    1.87,
+    1.0,
+    3.0
+   ],
+   "fg3m": [
+    0.67,
+    0.0,
+    1.0
+   ]
+  },
+  "actual": null
+ },
+ "42f48a4769eab3d1472d76aac0fd0fa7|ORL|tristan da silva": {
+  "commence": "2026-11-25T00:11:00Z",
+  "sim": {
+   "pts": [
+    11.21,
+    7.0,
+    14.0
+   ],
+   "reb": [
+    3.45,
+    2.0,
+    5.0
+   ],
+   "ast": [
+    1.46,
+    0.0,
+    2.0
+   ],
+   "fg3m": [
+    2.03,
+    1.0,
+    3.0
+   ]
+  },
+  "actual": null
+ },
+ "42f48a4769eab3d1472d76aac0fd0fa7|ORL|nikola vucevic": {
+  "commence": "2026-11-25T00:11:00Z",
+  "sim": {
+   "pts": [
+    3.51,
+    1.0,
+    5.0
+   ],
+   "reb": [
+    2.32,
+    1.0,
+    3.0
+   ],
+   "ast": [
+    0.82,
+    0.0,
+    1.0
+   ],
+   "fg3m": [
+    0.5,
+    0.0,
+    1.0
+   ]
+  },
+  "actual": null
+ },
+ "42f48a4769eab3d1472d76aac0fd0fa7|ORL|jevon carter": {
+  "commence": "2026-11-25T00:11:00Z",
+  "sim": {
+   "pts": [
+    4.25,
+    2.0,
+    6.0
+   ],
+   "reb": [
+    1.14,
+    0.0,
+    2.0
+   ],
+   "ast": [
+    1.27,
+    0.0,
+    2.0
+   ],
+   "fg3m": [
+    0.94,
+    0.0,
+    1.0
+   ]
+  },
+  "actual": null
+ },
+ "42f48a4769eab3d1472d76aac0fd0fa7|ORL|alex morales": {
+  "commence": "2026-11-25T00:11:00Z",
+  "sim": {
+   "pts": [
+    1.88,
+    0.0,
+    3.0
+   ],
+   "reb": [
+    1.44,
+    0.0,
+    2.0
+   ],
+   "ast": [
+    0.59,
+    0.0,
+    1.0
+   ],
+   "fg3m": [
+    0.21,
+    0.0,
+    0.0
+   ]
+  },
+  "actual": null
+ },
+ "42f48a4769eab3d1472d76aac0fd0fa7|ORL|anthony black": {
+  "commence": "2026-11-25T00:11:00Z",
+  "sim": {
+   "pts": [
+    14.6,
+    10.0,
+    19.0
+   ],
+   "reb": [
+    4.44,
+    3.0,
+    6.0
+   ],
+   "ast": [
+    4.31,
+    2.0,
+    6.0
+   ],
+   "fg3m": [
+    1.64,
+    0.0,
+    2.0
+   ]
+  },
+  "actual": null
+ },
+ "42f48a4769eab3d1472d76aac0fd0fa7|ORL|goga bitadze": {
+  "commence": "2026-11-25T00:11:00Z",
+  "sim": {
+   "pts": [
+    4.48,
+    2.0,
+    6.0
+   ],
+   "reb": [
+    3.81,
+    2.0,
+    5.0
+   ],
+   "ast": [
+    0.88,
+    0.0,
+    1.0
+   ],
+   "fg3m": [
+    0.01,
+    0.0,
+    0.0
+   ]
+  },
+  "actual": null
+ },
+ "42f48a4769eab3d1472d76aac0fd0fa7|ORL|jalen suggs": {
+  "commence": "2026-11-25T00:11:00Z",
+  "sim": {
+   "pts": [
+    9.23,
+    5.0,
+    12.0
+   ],
+   "reb": [
+    3.64,
+    2.0,
+    5.0
+   ],
+   "ast": [
+    3.7,
+    2.0,
+    5.0
+   ],
+   "fg3m": [
+    1.28,
+    0.0,
+    2.0
+   ]
+  },
+  "actual": null
+ },
+ "42f48a4769eab3d1472d76aac0fd0fa7|DET|john collins": {
+  "commence": "2026-11-25T00:11:00Z",
+  "sim": {
+   "pts": [
+    11.05,
+    7.0,
+    14.0
+   ],
+   "reb": [
+    4.69,
+    3.0,
+    6.0
+   ],
+   "ast": [
+    0.77,
+    0.0,
+    1.0
+   ],
+   "fg3m": [
+    1.45,
+    0.0,
+    2.0
+   ]
+  },
+  "actual": null
+ },
+ "42f48a4769eab3d1472d76aac0fd0fa7|DET|paul reed": {
+  "commence": "2026-11-25T00:11:00Z",
+  "sim": {
+   "pts": [
+    12.22,
+    8.0,
+    16.0
+   ],
+   "reb": [
+    6.62,
+    4.0,
+    9.0
+   ],
+   "ast": [
+    2.18,
+    1.0,
+    3.0
+   ],
+   "fg3m": [
+    0.35,
+    0.0,
+    0.0
+   ]
+  },
+  "actual": null
+ },
+ "42f48a4769eab3d1472d76aac0fd0fa7|DET|cade cunningham": {
+  "commence": "2026-11-25T00:11:00Z",
+  "sim": {
+   "pts": [
+    23.2,
+    17.0,
+    28.0
+   ],
+   "reb": [
+    4.88,
+    3.0,
+    7.0
+   ],
+   "ast": [
+    7.96,
+    5.0,
+    10.0
+   ],
+   "fg3m": [
+    2.18,
+    1.0,
+    3.0
+   ]
+  },
+  "actual": null
+ },
+ "42f48a4769eab3d1472d76aac0fd0fa7|DET|ausar thompson": {
+  "commence": "2026-11-25T00:11:00Z",
+  "sim": {
+   "pts": [
+    11.27,
+    7.0,
+    14.0
+   ],
+   "reb": [
+    7.1,
+    5.0,
+    9.0
+   ],
+   "ast": [
+    4.57,
+    3.0,
+    6.0
+   ],
+   "fg3m": [
+    0.04,
+    0.0,
+    0.0
+   ]
+  },
+  "actual": null
+ },
+ "42f48a4769eab3d1472d76aac0fd0fa7|DET|tolu smith": {
+  "commence": "2026-11-25T00:11:00Z",
+  "sim": {
+   "pts": [
+    0.71,
+    0.0,
+    1.0
+   ],
+   "reb": [
+    0.42,
+    0.0,
+    1.0
+   ],
+   "ast": [
+    0.12,
+    0.0,
+    0.0
+   ],
+   "fg3m": [
+    0.06,
+    0.0,
+    0.0
+   ]
+  },
+  "actual": null
+ },
+ "42f48a4769eab3d1472d76aac0fd0fa7|DET|ronald holland": {
+  "commence": "2026-11-25T00:11:00Z",
+  "sim": {
+   "pts": [
+    3.5,
+    1.0,
+    5.0
+   ],
+   "reb": [
+    2.22,
+    1.0,
+    3.0
+   ],
+   "ast": [
+    0.88,
+    0.0,
+    1.0
+   ],
+   "fg3m": [
+    0.67,
+    0.0,
+    1.0
+   ]
+  },
+  "actual": null
+ },
+ "42f48a4769eab3d1472d76aac0fd0fa7|DET|isaac jones": {
+  "commence": "2026-11-25T00:11:00Z",
+  "sim": {
+   "pts": [
+    0.36,
+    0.0,
+    0.0
+   ],
+   "reb": [
+    0.22,
+    0.0,
+    0.0
+   ],
+   "ast": [
+    0.1,
+    0.0,
+    0.0
+   ],
+   "fg3m": [
+    0.05,
+    0.0,
+    0.0
+   ]
+  },
+  "actual": null
+ },
+ "42f48a4769eab3d1472d76aac0fd0fa7|DET|javonte green": {
+  "commence": "2026-11-25T00:11:00Z",
+  "sim": {
+   "pts": [
+    7.33,
+    4.0,
+    10.0
+   ],
+   "reb": [
+    2.64,
+    1.0,
+    4.0
+   ],
+   "ast": [
+    0.58,
+    0.0,
+    1.0
+   ],
+   "fg3m": [
+    1.39,
+    0.0,
+    2.0
+   ]
+  },
+  "actual": null
+ },
+ "42f48a4769eab3d1472d76aac0fd0fa7|DET|kevin huerter": {
+  "commence": "2026-11-25T00:11:00Z",
+  "sim": {
+   "pts": [
+    11.85,
+    8.0,
+    15.0
+   ],
+   "reb": [
+    3.46,
+    2.0,
+    5.0
+   ],
+   "ast": [
+    3.07,
+    1.0,
+    4.0
+   ],
+   "fg3m": [
+    2.01,
+    1.0,
+    3.0
+   ]
+  },
+  "actual": null
+ },
+ "42f48a4769eab3d1472d76aac0fd0fa7|DET|chaz lanier": {
+  "commence": "2026-11-25T00:11:00Z",
+  "sim": {
+   "pts": [
+    2.43,
+    1.0,
+    4.0
+   ],
+   "reb": [
+    0.59,
+    0.0,
+    1.0
+   ],
+   "ast": [
+    0.31,
+    0.0,
+    0.0
+   ],
+   "fg3m": [
+    0.59,
+    0.0,
+    1.0
+   ]
+  },
+  "actual": null
+ },
+ "42f48a4769eab3d1472d76aac0fd0fa7|DET|daniss jenkins": {
+  "commence": "2026-11-25T00:11:00Z",
+  "sim": {
+   "pts": [
+    15.01,
+    10.0,
+    19.0
+   ],
+   "reb": [
+    3.73,
+    2.0,
+    5.0
+   ],
+   "ast": [
+    5.06,
+    3.0,
+    7.0
+   ],
+   "fg3m": [
+    2.33,
+    1.0,
+    3.0
+   ]
+  },
+  "actual": null
+ },
+ "42f48a4769eab3d1472d76aac0fd0fa7|DET|elijah harkless": {
+  "commence": "2026-11-25T00:11:00Z",
+  "sim": {
+   "pts": [
+    0.65,
+    0.0,
+    1.0
+   ],
+   "reb": [
+    0.2,
+    0.0,
+    0.0
+   ],
+   "ast": [
+    0.3,
+    0.0,
+    0.0
+   ],
+   "fg3m": [
+    0.08,
+    0.0,
+    0.0
+   ]
+  },
+  "actual": null
+ },
+ "42f48a4769eab3d1472d76aac0fd0fa7|DET|isaiah joe": {
+  "commence": "2026-11-25T00:11:00Z",
+  "sim": {
+   "pts": [
+    10.77,
+    7.0,
+    14.0
+   ],
+   "reb": [
+    2.18,
+    1.0,
+    3.0
+   ],
+   "ast": [
+    1.33,
+    0.0,
+    2.0
+   ],
+   "fg3m": [
+    2.62,
+    1.0,
+    4.0
+   ]
+  },
+  "actual": null
+ },
+ "6bfadbd22ed8a054cf82ec1b12b78243|DEN|aaron gordon": {
+  "commence": "2026-11-25T03:10:00Z",
+  "sim": {
+   "pts": [
+    13.71,
+    9.0,
+    17.0
+   ],
+   "reb": [
+    5.23,
+    3.0,
+    7.0
+   ],
+   "ast": [
+    2.3,
+    1.0,
+    3.0
+   ],
+   "fg3m": [
+    1.31,
+    0.0,
+    2.0
+   ]
+  },
+  "actual": null
+ },
+ "6bfadbd22ed8a054cf82ec1b12b78243|DEN|cameron johnson": {
+  "commence": "2026-11-25T03:10:00Z",
+  "sim": {
+   "pts": [
+    12.77,
+    8.0,
+    16.0
+   ],
+   "reb": [
+    3.63,
+    2.0,
+    5.0
+   ],
+   "ast": [
+    2.37,
+    1.0,
+    3.0
+   ],
+   "fg3m": [
+    2.02,
+    1.0,
+    3.0
+   ]
+  },
+  "actual": null
+ },
+ "6bfadbd22ed8a054cf82ec1b12b78243|DEN|nikola jokic": {
+  "commence": "2026-11-25T03:10:00Z",
+  "sim": {
+   "pts": [
+    26.33,
+    20.0,
+    32.0
+   ],
+   "reb": [
+    10.76,
+    8.0,
+    13.0
+   ],
+   "ast": [
+    8.5,
+    6.0,
+    11.0
+   ],
+   "fg3m": [
+    1.46,
+    0.0,
+    2.0
+   ]
+  },
+  "actual": null
+ },
+ "6bfadbd22ed8a054cf82ec1b12b78243|DEN|jamal murray": {
+  "commence": "2026-11-25T03:10:00Z",
+  "sim": {
+   "pts": [
+    25.97,
+    19.0,
+    32.0
+   ],
+   "reb": [
+    4.72,
+    3.0,
+    6.0
+   ],
+   "ast": [
+    6.1,
+    4.0,
+    8.0
+   ],
+   "fg3m": [
+    3.26,
+    2.0,
+    5.0
+   ]
+  },
+  "actual": null
+ },
+ "6bfadbd22ed8a054cf82ec1b12b78243|DEN|christian braun": {
+  "commence": "2026-11-25T03:10:00Z",
+  "sim": {
+   "pts": [
+    12.92,
+    9.0,
+    16.0
+   ],
+   "reb": [
+    4.51,
+    3.0,
+    6.0
+   ],
+   "ast": [
+    2.45,
+    1.0,
+    4.0
+   ],
+   "fg3m": [
+    1.42,
+    0.0,
+    2.0
+   ]
+  },
+  "actual": null
+ },
+ "6bfadbd22ed8a054cf82ec1b12b78243|DEN|marvin bagley": {
+  "commence": "2026-11-25T03:10:00Z",
+  "sim": {
+   "pts": [
+    6.08,
+    3.0,
+    8.0
+   ],
+   "reb": [
+    3.59,
+    2.0,
+    5.0
+   ],
+   "ast": [
+    0.65,
+    0.0,
+    1.0
+   ],
+   "fg3m": [
+    0.2,
+    0.0,
+    0.0
+   ]
+  },
+  "actual": null
+ },
+ "6bfadbd22ed8a054cf82ec1b12b78243|DEN|trevon brazile": {
+  "commence": "2026-11-25T03:10:00Z",
+  "sim": {
+   "pts": [
+    6.22,
+    3.0,
+    8.25
+   ],
+   "reb": [
+    4.12,
+    2.0,
+    6.0
+   ],
+   "ast": [
+    0.5,
+    0.0,
+    1.0
+   ],
+   "fg3m": [
+    0.69,
+    0.0,
+    1.0
+   ]
+  },
+  "actual": null
+ },
+ "6bfadbd22ed8a054cf82ec1b12b78243|DEN|demar derozan": {
+  "commence": "2026-11-25T03:10:00Z",
+  "sim": {
+   "pts": [
+    10.95,
+    7.0,
+    14.0
+   ],
+   "reb": [
+    1.86,
+    1.0,
+    3.0
+   ],
+   "ast": [
+    2.51,
+    1.0,
+    4.0
+   ],
+   "fg3m": [
+    0.29,
+    0.0,
+    0.0
+   ]
+  },
+  "actual": null
+ },
+ "6bfadbd22ed8a054cf82ec1b12b78243|DEN|tyus jones": {
+  "commence": "2026-11-25T03:10:00Z",
+  "sim": {
+   "pts": [
+    2.29,
+    0.0,
+    3.0
+   ],
+   "reb": [
+    0.81,
+    0.0,
+    1.0
+   ],
+   "ast": [
+    1.93,
+    1.0,
+    3.0
+   ],
+   "fg3m": [
+    0.39,
+    0.0,
+    1.0
+   ]
+  },
+  "actual": null
+ },
+ "6bfadbd22ed8a054cf82ec1b12b78243|DEN|spencer jones": {
+  "commence": "2026-11-25T03:10:00Z",
+  "sim": {
+   "pts": [
+    3.44,
+    1.0,
+    5.0
+   ],
+   "reb": [
+    2.09,
+    1.0,
+    3.0
+   ],
+   "ast": [
+    0.56,
+    0.0,
+    1.0
+   ],
+   "fg3m": [
+    0.61,
+    0.0,
+    1.0
+   ]
+  },
+  "actual": null
+ },
+ "6bfadbd22ed8a054cf82ec1b12b78243|DAL|caleb martin": {
+  "commence": "2026-11-25T03:10:00Z",
+  "sim": {
+   "pts": [
+    6.41,
+    3.0,
+    9.0
+   ],
+   "reb": [
+    3.89,
+    2.0,
+    5.0
+   ],
+   "ast": [
+    2.39,
+    1.0,
+    3.0
+   ],
+   "fg3m": [
+    1.0,
+    0.0,
+    2.0
+   ]
+  },
+  "actual": null
+ },
+ "6bfadbd22ed8a054cf82ec1b12b78243|DAL|daniel gafford": {
+  "commence": "2026-11-25T03:10:00Z",
+  "sim": {
+   "pts": [
+    9.1,
+    5.0,
+    12.0
+   ],
+   "reb": [
+    5.98,
+    4.0,
+    8.0
+   ],
+   "ast": [
+    1.65,
+    0.0,
+    2.0
+   ],
+   "fg3m": [
+    0.07,
+    0.0,
+    0.0
+   ]
+  },
+  "actual": null
+ },
+ "6bfadbd22ed8a054cf82ec1b12b78243|DAL|pj washington": {
+  "commence": "2026-11-25T03:10:00Z",
+  "sim": {
+   "pts": [
+    11.9,
+    8.0,
+    15.0
+   ],
+   "reb": [
+    5.77,
+    4.0,
+    8.0
+   ],
+   "ast": [
+    1.27,
+    0.0,
+    2.0
+   ],
+   "fg3m": [
+    1.69,
+    0.0,
+    3.0
+   ]
+  },
+  "actual": null
+ },
+ "6bfadbd22ed8a054cf82ec1b12b78243|DAL|cooper flagg": {
+  "commence": "2026-11-25T03:10:00Z",
+  "sim": {
+   "pts": [
+    22.86,
+    17.0,
+    28.0
+   ],
+   "reb": [
+    6.37,
+    4.0,
+    8.0
+   ],
+   "ast": [
+    5.6,
+    3.0,
+    7.0
+   ],
+   "fg3m": [
+    1.46,
+    0.0,
+    2.0
+   ]
+  },
+  "actual": null
+ },
+ "6bfadbd22ed8a054cf82ec1b12b78243|DAL|max christie": {
+  "commence": "2026-11-25T03:10:00Z",
+  "sim": {
+   "pts": [
+    3.26,
+    1.0,
+    5.0
+   ],
+   "reb": [
+    1.22,
+    0.0,
+    2.0
+   ],
+   "ast": [
+    0.56,
+    0.0,
+    1.0
+   ],
+   "fg3m": [
+    0.65,
+    0.0,
+    1.0
+   ]
+  },
+  "actual": null
+ },
+ "6bfadbd22ed8a054cf82ec1b12b78243|DAL|naji marshall": {
+  "commence": "2026-11-25T03:10:00Z",
+  "sim": {
+   "pts": [
+    10.91,
+    7.0,
+    14.0
+   ],
+   "reb": [
+    3.11,
+    1.0,
+    4.0
+   ],
+   "ast": [
+    3.13,
+    2.0,
+    4.0
+   ],
+   "fg3m": [
+    0.84,
+    0.0,
+    1.0
+   ]
+  },
+  "actual": null
+ },
+ "6bfadbd22ed8a054cf82ec1b12b78243|DAL|morez johnson": {
+  "commence": "2026-11-25T03:10:00Z",
+  "sim": {
+   "pts": [
+    6.65,
+    3.0,
+    9.0
+   ],
+   "reb": [
+    4.52,
+    3.0,
+    6.0
+   ],
+   "ast": [
+    1.41,
+    0.0,
+    2.0
+   ],
+   "fg3m": [
+    0.34,
+    0.0,
+    0.0
+   ]
+  },
+  "actual": null
+ },
+ "6bfadbd22ed8a054cf82ec1b12b78243|DAL|zaccharie risacher": {
+  "commence": "2026-11-25T03:10:00Z",
+  "sim": {
+   "pts": [
+    8.57,
+    5.0,
+    11.0
+   ],
+   "reb": [
+    4.28,
+    2.0,
+    6.0
+   ],
+   "ast": [
+    1.12,
+    0.0,
+    2.0
+   ],
+   "fg3m": [
+    1.12,
+    0.0,
+    2.0
+   ]
+  },
+  "actual": null
+ },
+ "6bfadbd22ed8a054cf82ec1b12b78243|DAL|moussa cisse": {
+  "commence": "2026-11-25T03:10:00Z",
+  "sim": {
+   "pts": [
+    0.78,
+    0.0,
+    1.0
+   ],
+   "reb": [
+    0.35,
+    0.0,
+    0.75
+   ],
+   "ast": [
+    0.18,
+    0.0,
+    0.0
+   ],
+   "fg3m": [
+    0.09,
+    0.0,
+    0.0
+   ]
+  },
+  "actual": null
+ },
+ "6bfadbd22ed8a054cf82ec1b12b78243|DAL|marcus sasser": {
+  "commence": "2026-11-25T03:10:00Z",
+  "sim": {
+   "pts": [
+    2.0,
+    0.0,
+    3.0
+   ],
+   "reb": [
+    0.43,
+    0.0,
+    1.0
+   ],
+   "ast": [
+    0.71,
+    0.0,
+    1.0
+   ],
+   "fg3m": [
+    0.4,
+    0.0,
+    1.0
+   ]
+  },
+  "actual": null
+ },
+ "6bfadbd22ed8a054cf82ec1b12b78243|DAL|walter clayton": {
+  "commence": "2026-11-25T03:10:00Z",
+  "sim": {
+   "pts": [
+    9.07,
+    5.0,
+    12.0
+   ],
+   "reb": [
+    2.98,
+    1.0,
+    4.0
+   ],
+   "ast": [
+    4.18,
+    2.0,
+    6.0
+   ],
+   "fg3m": [
+    1.47,
+    0.0,
+    2.0
+   ]
+  },
+  "actual": null
+ },
+ "6bfadbd22ed8a054cf82ec1b12b78243|DAL|kyrie irving": {
+  "commence": "2026-11-25T03:10:00Z",
+  "sim": {
+   "pts": [
+    21.94,
+    16.0,
+    27.0
+   ],
+   "reb": [
+    3.96,
+    2.0,
+    5.0
+   ],
+   "ast": [
+    4.54,
+    3.0,
+    6.0
+   ],
+   "fg3m": [
+    3.33,
+    2.0,
+    5.0
+   ]
+  },
+  "actual": null
+ },
+ "6bfadbd22ed8a054cf82ec1b12b78243|DAL|santi aldama": {
+  "commence": "2026-11-25T03:10:00Z",
+  "sim": {
+   "pts": [
+    5.15,
+    2.0,
+    7.0
+   ],
+   "reb": [
+    2.46,
+    1.0,
+    4.0
+   ],
+   "ast": [
+    0.93,
+    0.0,
+    1.0
+   ],
+   "fg3m": [
+    0.64,
+    0.0,
+    1.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|WAS|anthony davis": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    19.59,
+    14.0,
+    24.0
+   ],
+   "reb": [
+    9.35,
+    7.0,
+    12.0
+   ],
+   "ast": [
+    2.13,
+    1.0,
+    3.0
+   ],
+   "fg3m": [
+    0.62,
+    0.0,
+    1.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|WAS|aj dybantsa": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    13.82,
+    9.0,
+    18.0
+   ],
+   "reb": [
+    6.2,
+    4.0,
+    8.0
+   ],
+   "ast": [
+    2.6,
+    1.0,
+    4.0
+   ],
+   "fg3m": [
+    0.76,
+    0.0,
+    1.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|WAS|kyshawn george": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    14.58,
+    10.0,
+    18.0
+   ],
+   "reb": [
+    4.39,
+    2.0,
+    6.0
+   ],
+   "ast": [
+    4.21,
+    2.0,
+    6.0
+   ],
+   "fg3m": [
+    1.87,
+    1.0,
+    3.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|WAS|deandre ayton": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    3.53,
+    1.0,
+    5.0
+   ],
+   "reb": [
+    2.94,
+    1.0,
+    4.0
+   ],
+   "ast": [
+    0.46,
+    0.0,
+    1.0
+   ],
+   "fg3m": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|WAS|trae young": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    14.92,
+    10.0,
+    19.0
+   ],
+   "reb": [
+    2.39,
+    1.0,
+    3.0
+   ],
+   "ast": [
+    7.63,
+    5.0,
+    10.0
+   ],
+   "fg3m": [
+    1.6,
+    0.0,
+    2.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|WAS|bub carrington": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    3.5,
+    1.0,
+    5.0
+   ],
+   "reb": [
+    1.1,
+    0.0,
+    2.0
+   ],
+   "ast": [
+    1.52,
+    0.0,
+    2.0
+   ],
+   "fg3m": [
+    0.69,
+    0.0,
+    1.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|WAS|bilal coulibaly": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    7.1,
+    4.0,
+    10.0
+   ],
+   "reb": [
+    3.72,
+    2.0,
+    5.0
+   ],
+   "ast": [
+    1.21,
+    0.0,
+    2.0
+   ],
+   "fg3m": [
+    0.63,
+    0.0,
+    1.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|WAS|will riley": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    3.04,
+    1.0,
+    4.0
+   ],
+   "reb": [
+    0.94,
+    0.0,
+    1.0
+   ],
+   "ast": [
+    0.57,
+    0.0,
+    1.0
+   ],
+   "fg3m": [
+    0.28,
+    0.0,
+    0.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|WAS|tre johnson": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    8.37,
+    5.0,
+    11.0
+   ],
+   "reb": [
+    2.09,
+    1.0,
+    3.0
+   ],
+   "ast": [
+    1.21,
+    0.0,
+    2.0
+   ],
+   "fg3m": [
+    1.15,
+    0.0,
+    2.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|WAS|alex sarr": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    10.95,
+    7.0,
+    14.0
+   ],
+   "reb": [
+    6.27,
+    4.0,
+    8.0
+   ],
+   "ast": [
+    1.84,
+    1.0,
+    3.0
+   ],
+   "fg3m": [
+    0.94,
+    0.0,
+    1.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|WAS|felix okpara": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    0.1,
+    0.0,
+    0.0
+   ],
+   "reb": [
+    0.06,
+    0.0,
+    0.0
+   ],
+   "ast": [
+    0.02,
+    0.0,
+    0.0
+   ],
+   "fg3m": [
+    0.01,
+    0.0,
+    0.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|WAS|tre mann": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    1.22,
+    0.0,
+    2.0
+   ],
+   "reb": [
+    0.4,
+    0.0,
+    1.0
+   ],
+   "ast": [
+    0.4,
+    0.0,
+    1.0
+   ],
+   "fg3m": [
+    0.19,
+    0.0,
+    0.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|WAS|anthony gill": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    0.62,
+    0.0,
+    1.0
+   ],
+   "reb": [
+    0.34,
+    0.0,
+    0.0
+   ],
+   "ast": [
+    0.14,
+    0.0,
+    0.0
+   ],
+   "fg3m": [
+    0.03,
+    0.0,
+    0.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|WAS|khris middleton": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    3.07,
+    1.0,
+    4.0
+   ],
+   "reb": [
+    1.21,
+    0.0,
+    2.0
+   ],
+   "ast": [
+    0.89,
+    0.0,
+    1.0
+   ],
+   "fg3m": [
+    0.35,
+    0.0,
+    0.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|BOS|jayson tatum": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    24.83,
+    18.0,
+    30.0
+   ],
+   "reb": [
+    7.74,
+    5.0,
+    10.0
+   ],
+   "ast": [
+    5.95,
+    4.0,
+    8.0
+   ],
+   "fg3m": [
+    2.51,
+    1.0,
+    4.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|BOS|neemias queta": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    10.47,
+    6.0,
+    14.0
+   ],
+   "reb": [
+    7.75,
+    5.0,
+    10.0
+   ],
+   "ast": [
+    1.9,
+    1.0,
+    3.0
+   ],
+   "fg3m": [
+    0.2,
+    0.0,
+    0.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|BOS|derrick white": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    13.62,
+    9.0,
+    17.0
+   ],
+   "reb": [
+    3.27,
+    2.0,
+    5.0
+   ],
+   "ast": [
+    4.82,
+    3.0,
+    6.0
+   ],
+   "fg3m": [
+    1.77,
+    0.0,
+    3.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|BOS|baylor scheierman": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    5.93,
+    3.0,
+    8.0
+   ],
+   "reb": [
+    3.76,
+    2.0,
+    5.0
+   ],
+   "ast": [
+    1.54,
+    0.0,
+    2.0
+   ],
+   "fg3m": [
+    1.16,
+    0.0,
+    2.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|BOS|hugo gonzalez": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    4.5,
+    2.0,
+    6.0
+   ],
+   "reb": [
+    3.22,
+    1.0,
+    5.0
+   ],
+   "ast": [
+    0.62,
+    0.0,
+    1.0
+   ],
+   "fg3m": [
+    0.59,
+    0.0,
+    1.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|BOS|sam hauser": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    9.21,
+    5.0,
+    12.0
+   ],
+   "reb": [
+    3.5,
+    2.0,
+    5.0
+   ],
+   "ast": [
+    1.34,
+    0.0,
+    2.0
+   ],
+   "fg3m": [
+    2.25,
+    1.0,
+    3.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|BOS|chris cenac": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    2.51,
+    1.0,
+    4.0
+   ],
+   "reb": [
+    1.43,
+    0.0,
+    2.0
+   ],
+   "ast": [
+    0.29,
+    0.0,
+    0.0
+   ],
+   "fg3m": [
+    0.22,
+    0.0,
+    0.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|BOS|luka garza": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    7.15,
+    4.0,
+    10.0
+   ],
+   "reb": [
+    3.63,
+    2.0,
+    5.0
+   ],
+   "ast": [
+    1.26,
+    0.0,
+    2.0
+   ],
+   "fg3m": [
+    0.81,
+    0.0,
+    1.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|BOS|mike conley": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    1.84,
+    0.0,
+    3.0
+   ],
+   "reb": [
+    0.59,
+    0.0,
+    1.0
+   ],
+   "ast": [
+    0.85,
+    0.0,
+    1.0
+   ],
+   "fg3m": [
+    0.39,
+    0.0,
+    1.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|BOS|payton pritchard": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    13.88,
+    9.0,
+    18.0
+   ],
+   "reb": [
+    3.16,
+    2.0,
+    4.0
+   ],
+   "ast": [
+    4.13,
+    2.0,
+    6.0
+   ],
+   "fg3m": [
+    1.99,
+    1.0,
+    3.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|BOS|ron harper": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    2.11,
+    0.0,
+    3.0
+   ],
+   "reb": [
+    0.72,
+    0.0,
+    1.0
+   ],
+   "ast": [
+    0.35,
+    0.0,
+    0.0
+   ],
+   "fg3m": [
+    0.43,
+    0.0,
+    1.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|BOS|jordan walsh": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    4.56,
+    2.0,
+    6.0
+   ],
+   "reb": [
+    3.11,
+    1.0,
+    4.0
+   ],
+   "ast": [
+    0.58,
+    0.0,
+    1.0
+   ],
+   "fg3m": [
+    0.6,
+    0.0,
+    1.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|BOS|paul george": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    18.72,
+    13.0,
+    23.0
+   ],
+   "reb": [
+    5.32,
+    3.0,
+    7.0
+   ],
+   "ast": [
+    3.56,
+    2.0,
+    5.0
+   ],
+   "fg3m": [
+    2.63,
+    1.0,
+    4.0
+   ]
+  },
+  "actual": null
+ },
+ "3167a4072c65c9314c71d0fe49be8e28|BOS|devin carter": {
+  "commence": "2026-11-25T01:10:00Z",
+  "sim": {
+   "pts": [
+    0.76,
+    0.0,
+    1.0
+   ],
+   "reb": [
+    0.31,
+    0.0,
+    0.0
+   ],
+   "ast": [
+    0.23,
+    0.0,
+    0.0
+   ],
+   "fg3m": [
+    0.06,
     0.0,
     0.0
    ]
