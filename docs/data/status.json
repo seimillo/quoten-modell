@@ -1,7 +1,7 @@
 {
- "updated": "2026-11-24T12:42:00.820358+00:00",
+ "updated": "2026-11-24T12:44:12.493973+00:00",
  "credits": {
-  "remaining": 386.0,
+  "remaining": 383.0,
   "used_now": 3.0
  },
  "stats": {
@@ -78,14 +78,14 @@
   "ESPN Verletzungen: 92 Einträge",
   "NBA-Verletzungsbericht 24.11. 07:30 ET: 26 Spieler, 0 Teams noch nicht gemeldet",
   "Quoten basketball_nba: 7 Events, 7 mit Buchmacher-Quoten",
-  "OddsPapi: 839 Spielerwetten-Linien",
-  "OddsPapi: 6 Buchmacher-Einträge an 7 Spiele gehängt (bet365.de, bwin.de) · Handicap-Linien plausibel 3, verworfen 0 · 156 von 250 Abfragen diesen Monat",
+  "OddsPapi: 850 Spielerwetten-Linien",
+  "OddsPapi: 6 Buchmacher-Einträge an 7 Spiele gehängt (bet365.de, bwin.de) · Handicap-Linien plausibel 3, verworfen 0 · 158 von 250 Abfragen diesen Monat",
   "Streuung: Markt 12.8, Modell nutzt 13.74",
   "NBA: 7 Spiele bewertet, 0 mit Value-Wette",
-  "Spielerwetten: 836 Linien in 3 Spielen simuliert, 4 ✓",
+  "Spielerwetten: 855 Linien in 3 Spielen simuliert, 1 ✓",
   "Trefferliste: 0 Prognosen ausgewertet",
-  "Spielerwetten lernen: 213 Spieler-Einsätze geprüft, Korrektur {'pts': 1.0115, 'reb': 1.0067, 'ast': 1.0211, 'fg3m': 1.0143}",
-  "Vertrauen in die Simulation: 0 neue Linien ausgewertet · Abweichung ab 0 %: 0.10 (n=844), Abweichung ab 5 %: 0.25 (n=423), Abweichung ab 10 %: 0.56 (n=229), Abweichung ab 15 %: 0.35 (n=224)",
+  "Spielerwetten lernen: 213 Spieler-Einsätze geprüft, Korrektur {'pts': 1.0173, 'reb': 1.0101, 'ast': 1.0318, 'fg3m': 1.0215}",
+  "Vertrauen in die Simulation: 0 neue Linien ausgewertet · Abweichung ab 0 %: 0.30 (n=844), Abweichung ab 5 %: 0.30 (n=423), Abweichung ab 10 %: 0.30 (n=229), Abweichung ab 15 %: 0.30 (n=224)",
   "Push-Nachricht „Spielerwetten ✓“: gesendet",
   "Kalibrierung: 17 NBA-Spiele ausgewertet, 0 Werte angepasst (Anpassung ab 40 Spielen)"
  ],
@@ -123,7 +123,7 @@
    }
   },
   "clvPos": 0.526,
-  "bets": 29,
+  "bets": 30,
   "settled": 25,
   "profit": -54.77,
   "roi": -0.2191,

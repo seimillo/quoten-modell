@@ -1031,5 +1031,32 @@
   "commence": "2026-11-25T01:10:00Z",
   "result": null,
   "value": null
+ },
+ "6bfadbd22ed8a054cf82ec1b12b78243|cameron johnson|pts|14.5|over": {
+  "src": "mittags",
+  "player": "Cameron Johnson",
+  "key": "cameron johnson",
+  "team": "DEN",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 14.5,
+  "side": "over",
+  "odds": 2.7,
+  "book": "op_bet365",
+  "bookName": "bet365",
+  "pSim": 0.3521,
+  "p": 0.4049,
+  "ev": 0.0933,
+  "stake": 0.01,
+  "mean": 12.9,
+  "safe": false,
+  "risks": [
+   "Gegner P.J. Washington fraglich"
+  ],
+  "alt": [],
+  "game": "DAL @ DEN",
+  "commence": "2026-11-25T03:10:00Z",
+  "result": null,
+  "value": null
  }
 }

@@ -1004,8 +1004,8 @@
   "away": "Cleveland Cavaliers",
   "a": null,
   "b": null,
-  "pModelA": 0.6655,
-  "pMarketA": 0.6652,
+  "pModelA": 0.6666,
+  "pMarketA": 0.6664,
   "pModelRaw": 0.6677,
   "feat": {
    "team": 3.031,
@@ -1018,7 +1018,7 @@
    "form": 2.624,
    "TOTraw": 221.12,
    "pModelRaw": 0.6677,
-   "pMarket": 0.6652
+   "pMarket": 0.6664
   },
   "bet": {
    "market": "Gesamtpunkte",

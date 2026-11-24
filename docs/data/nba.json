@@ -92,7 +92,7 @@
   "kalshi": {
    "a": 44.5,
    "b": 54.5,
-   "vol": 49106
+   "vol": 49654
   },
   "polymarket": null,
   "bookKey": "winamax_de",
@@ -441,8 +441,8 @@
   "ptsA": 107.6,
   "ptsH": 113.5,
   "pModelHome": 0.6677,
-  "pMarketHome": 0.6652,
-  "pFinalHome": 0.6655,
+  "pMarketHome": 0.6664,
+  "pFinalHome": 0.6666,
   "parts": [
    {
     "n": "Team-Stärke & Tempo",
@@ -524,11 +524,11 @@
   "kalshi": {
    "a": 34.0,
    "b": 66.0,
-   "vol": 12934
+   "vol": 12939
   },
   "polymarket": {
-   "pA": 0.34,
-   "pB": 0.66,
+   "pA": 0.335,
+   "pB": 0.665,
    "volume": 2906
   },
   "bookKey": "winamax_de",
@@ -609,9 +609,9 @@
     "book": "sport888",
     "bookName": "888sport",
     "pModel": 0.3323,
-    "pMarket": 0.3348,
-    "p": 0.3345,
-    "ev": -0.0803,
+    "pMarket": 0.3336,
+    "p": 0.3334,
+    "ev": -0.0832,
     "evRaw": -0.0862,
     "evPin": null,
     "pPin": null,
@@ -628,12 +628,12 @@
     "odds": 1.44,
     "line": null,
     "side": "home",
-    "book": "winamax_de",
-    "bookName": "Winamax",
+    "book": "sport888",
+    "bookName": "888sport",
     "pModel": 0.6677,
-    "pMarket": 0.6652,
-    "p": 0.6655,
-    "ev": -0.0416,
+    "pMarket": 0.6664,
+    "p": 0.6666,
+    "ev": -0.0401,
     "evRaw": -0.0385,
     "evPin": null,
     "pPin": null,
@@ -771,7 +771,7 @@
    "form": 2.624,
    "TOTraw": 221.12,
    "pModelRaw": 0.6677,
-   "pMarket": 0.6652
+   "pMarket": 0.6664
   },
   "links": {},
   "injuryReport": "2026-11-24 07:30 ET",
@@ -897,7 +897,7 @@
   "kalshi": {
    "a": 56.5,
    "b": 44.5,
-   "vol": 86472
+   "vol": 86500
   },
   "polymarket": {
    "pA": 0.565,
@@ -1375,7 +1375,7 @@
   "kalshi": {
    "a": 27.5,
    "b": 73.0,
-   "vol": 194857
+   "vol": 195077
   },
   "polymarket": {
    "pA": 0.275,
@@ -1768,7 +1768,7 @@
   "kalshi": {
    "a": 79.5,
    "b": 20.5,
-   "vol": 249177
+   "vol": 249553
   },
   "polymarket": {
    "pA": 0.795,
