@@ -2,8 +2,8 @@ name: Tägliches Update
 
 on:
   schedule:
-    - cron: "47 10 * * *"     # täglich 11:47 Uhr deutscher Winterzeit: Modelle rechnen + lernen (fertig vor 12:30)
-    - cron: "47 9 * * *"      # dasselbe in der Sommerzeit (der jeweils falsche Lauf beendet sich sofort)
+    - cron: "17 9 * * *"      # täglich 10:17 Uhr deutscher Winterzeit: Modelle rechnen + lernen (GitHub startet oft bis 1 h später – trotzdem vor 12:30 fertig)
+    - cron: "17 8 * * *"      # dasselbe in der Sommerzeit (der jeweils falsche Lauf beendet sich sofort)
     - cron: "37 22 * * *"     # täglich 23:37 Uhr: nach dem NBA-Verletzungsbericht neu rechnen + Schlussquoten (CLV)
     - cron: "22 23 * * *"     # täglich 0:22 Uhr (18:22 US-Ostküste): kurz vor Spielbeginn – Spielerwetten nachprüfen, mehr Anbieter, Schlussquoten
     - cron: "47 2 * * *"      # täglich 3:47 Uhr: Schlussquoten der späten Spiele (Westküste)
@@ -41,7 +41,7 @@ jobs:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           ODDSPAPI_KEY: ${{ secrets.ODDSPAPI_KEY }}
-          MIDDAY_CHECK: ${{ github.event.schedule == '47 10 * * *' && 'winter' || github.event.schedule == '47 9 * * *' && 'sommer' || '' }}
+          MIDDAY_CHECK: ${{ github.event.schedule == '17 9 * * *' && 'winter' || github.event.schedule == '17 8 * * *' && 'sommer' || '' }}
           RUN_MODE: ${{ inputs.mode || (github.event.schedule == '37 22 * * *' && 'close' || github.event.schedule == '22 23 * * *' && 'pregame' || github.event.schedule == '47 2 * * *' && 'late' || github.event.schedule == '47 5 * * *' && 'results' || 'full') }}
         run: python -m pipeline.run
       - name: Ergebnisse speichern
