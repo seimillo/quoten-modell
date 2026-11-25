@@ -1,7 +1,7 @@
 {
  "updated": "2026-11-24T12:45:36.504225+00:00",
  "credits": {
-  "remaining": 377.0,
+  "remaining": 374.0,
   "used_now": 3.0
  },
  "stats": {
@@ -11,7 +11,7 @@
   "brierMarket": 0.24461355823529415,
   "brierRaw": 0.2208964182352941,
   "clvN": 23,
-  "clvAvg": -0.0036,
+  "clvAvg": -0.0141,
   "clvPos": 0.304,
   "calibration": [
    {
@@ -121,15 +121,15 @@
     "roi": -0.616
    }
   },
-  "clvPos": 0.526,
-  "bets": 25,
+  "clvPos": 0.55,
+  "bets": 26,
   "settled": 25,
   "profit": -54.77,
   "roi": -0.2191,
   "hit": 0.32,
   "expHit": 0.451,
-  "clv": 0.0222,
-  "clvN": 19
+  "clv": 0.0227,
+  "clvN": 20
  },
  "closeUpdated": "2026-11-24T23:27:00.874618+00:00",
  "closeLog": [
@@ -165,5 +165,29 @@
    "conf": 0.15
   },
   "n": {}
- }
+ },
+ "pregameUpdated": "2026-11-25T00:04:39.148414+00:00",
+ "pregameLog": [
+  "Kalshi KXNBAGAME: 30 Events",
+  "Polymarket nba: 100 Events",
+  "Basketball-Reference Ratings 2027: 30 Teams",
+  "Basketball-Reference Ratings 2026: 30 Teams",
+  "Basketball-Reference Tempo 2027: 31 Teams",
+  "Basketball-Reference Spieler 2027: 483 Einträge",
+  "Basketball-Reference Spieler 2026: 661 Einträge",
+  "ESPN Verletzungen: 95 Einträge",
+  "NBA-Verletzungsbericht 24.11. 19:00 ET: 91 Spieler, 0 Teams noch nicht gemeldet",
+  "Quoten basketball_nba: 7 Events, 7 mit Buchmacher-Quoten",
+  "OddsPapi: 976 Spielerwetten-Linien",
+  "OddsPapi: 18 Buchmacher-Einträge an 7 Spiele gehängt (bet365.de, bwin.de, betano.de, 888sport.de) · Handicap-Linien plausibel 12, verworfen 0 · 164 von 250 Abfragen diesen Monat",
+  "Streuung: Markt 14.3, Modell nutzt 14.46",
+  "NBA: 7 Spiele bewertet, 1 mit Value-Wette",
+  "Basketball-Reference Saisonwerte 2027: 481 Spieler",
+  "Spielerwetten: 978 Linien in 4 Spielen simuliert, 1 ✓",
+  "Spielerwetten vor Spielbeginn: 0 bestätigt, 0 schwächer, 0 zurückziehen, 0 geprüft",
+  "Spielerwetten Schlussquoten: 1",
+  "Push-Nachricht „Spielerwetten vor Spielbeginn“: gesendet",
+  "Abend-Update NBA: 4 Spiele mit geänderter Empfehlung",
+  "Schlussquoten: 7 Prognosen mit CLV"
+ ]
 }

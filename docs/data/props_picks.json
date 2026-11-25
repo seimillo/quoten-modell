@@ -879,5 +879,39 @@
    "book": "bet365",
    "at": "2026-11-24T00:07+00:00"
   }
+ },
+ "6bfadbd22ed8a054cf82ec1b12b78243|jamal murray|pts|24.5|over": {
+  "src": "vor Spielbeginn",
+  "player": "Jamal Murray",
+  "key": "jamal murray",
+  "team": "DEN",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 24.5,
+  "side": "over",
+  "odds": 2.3,
+  "book": "op_bet365",
+  "bookName": "bet365",
+  "pSim": 0.5568,
+  "p": 0.4811,
+  "ev": 0.1065,
+  "stake": 0.01,
+  "mean": 26.6,
+  "safe": false,
+  "risks": [
+   "Gegner P.J. Washington fraglich"
+  ],
+  "alt": [],
+  "game": "DAL @ DEN",
+  "commence": "2026-11-25T03:10:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 2.3,
+   "pMkt": 0.4486,
+   "clv": 0.0318,
+   "book": "bet365",
+   "at": "2026-11-25T00:04+00:00"
+  }
  }
 }
