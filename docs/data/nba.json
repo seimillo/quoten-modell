@@ -1,5 +1,3842 @@
 [
  {
+  "id": "60fd73164f7b0d1848f998d922155d87",
+  "sportKey": "basketball_nba",
+  "sport": "NBA",
+  "commence": "2026-11-26T01:40:00Z",
+  "away": "Phoenix Suns",
+  "home": "Houston Rockets",
+  "abbrA": "PHX",
+  "abbrH": "HOU",
+  "margin": 7.0,
+  "total": 225.8,
+  "poss": 96.7,
+  "ptsA": 109.4,
+  "ptsH": 116.4,
+  "pModelHome": 0.6959,
+  "pMarketHome": 0.7684,
+  "pFinalHome": 0.7575,
+  "parts": [
+   {
+    "n": "Team-Stärke & Tempo",
+    "m": 2.7,
+    "info": "Gewicht 0.51"
+   },
+   {
+    "n": "Heutige Aufstellung (Spieler)",
+    "m": 2.7,
+    "info": "Netto PHX -1.2, HOU +4.3 pro 100 · Gewicht 0.51"
+   },
+   {
+    "n": "Verletzungen (gegen Team-Ratings)",
+    "m": 0.3,
+    "info": "PHX −0.6, HOU −0.0 Punkte · Gewicht 0.50"
+   },
+   {
+    "n": "Heimvorteil",
+    "m": 1.5
+   },
+   {
+    "n": "Ruhe & Zeitzone",
+    "m": 0.2,
+    "info": "Ruhetage PHX 1, HOU 1"
+   },
+   {
+    "n": "Reise",
+    "m": 0.1,
+    "info": "PHX 255 km, HOU 0 km (gewichtet)"
+   },
+   {
+    "n": "Form (letzte 10)",
+    "m": -0.5,
+    "info": "Abweichung vom erwarteten Ergebnis, zur Null gezogen"
+   }
+  ],
+  "ratings": {
+   "away": {
+    "off": 0.54,
+    "def": 0.02,
+    "pace": 98.3,
+    "w": 0.44,
+    "netCur": -0.22,
+    "netPrior": 1.69
+   },
+   "home": {
+    "off": 4.99,
+    "def": 1.09,
+    "pace": 96.9,
+    "w": 0.47,
+    "netCur": 8.94,
+    "netPrior": 5.02
+   }
+  },
+  "lineup": {
+   "away": {
+    "net": -1.2,
+    "min": 263
+   },
+   "home": {
+    "net": 4.3,
+    "min": 286
+   }
+  },
+  "schedule": {
+   "away": {
+    "rest": 1,
+    "dens": 0,
+    "km": 254.824440036445,
+    "n": 17
+   },
+   "home": {
+    "rest": 1,
+    "dens": 0,
+    "km": 0.0,
+    "n": 19
+   }
+  },
+  "kalshi": {
+   "a": 23.5,
+   "b": 76.5,
+   "vol": 213125
+  },
+  "polymarket": {
+   "pA": 0.235,
+   "pB": 0.765,
+   "volume": 90165
+  },
+  "bookKey": "tipico_de",
+  "bookName": "Tipico",
+  "whales": {
+   "trades": [
+    {
+     "side": "A",
+     "team": "Phoenix Suns",
+     "usd": 4704,
+     "price": 0.23,
+     "buy": true,
+     "ts": 1795627694,
+     "wallet": "Normal-Distance-Apparatus (0xc374…0f3e)"
+    },
+    {
+     "side": "B",
+     "team": "Houston Rockets",
+     "usd": 4282,
+     "price": 0.78,
+     "buy": true,
+     "ts": 1795620647,
+     "wallet": "0x2b3e…a3b7"
+    },
+    {
+     "side": "B",
+     "team": "Houston Rockets",
+     "usd": 3580,
+     "price": 0.783,
+     "buy": true,
+     "ts": 1795610849,
+     "wallet": "Legal-Revascularisation-Rug (0x8707…8b15)"
+    },
+    {
+     "side": "A",
+     "team": "Phoenix Suns",
+     "usd": 2272,
+     "price": 0.23,
+     "buy": true,
+     "ts": 1795627694,
+     "wallet": "Normal-Distance-Apparatus (0xc374…0f3e)"
+    },
+    {
+     "side": "B",
+     "team": "Houston Rockets",
+     "usd": 2137,
+     "price": 0.78,
+     "buy": true,
+     "ts": 1795615205,
+     "wallet": "Practical-Definition (0x613b…823a)"
+    },
+    {
+     "side": "B",
+     "team": "Houston Rockets",
+     "usd": 2000,
+     "price": 0.78,
+     "buy": true,
+     "ts": 1795627258,
+     "wallet": "Shy-Success (0xb685…e32d)"
+    },
+    {
+     "side": "B",
+     "team": "Houston Rockets",
+     "usd": 2000,
+     "price": 0.78,
+     "buy": true,
+     "ts": 1795611818,
+     "wallet": "Sardonic-Quest (0x7a33…dd0f)"
+    },
+    {
+     "side": "A",
+     "team": "Phoenix Suns",
+     "usd": 1949,
+     "price": 0.24,
+     "buy": true,
+     "ts": 1795646263,
+     "wallet": "Agitated-Bricklaying (0x84cf…2f63)"
+    },
+    {
+     "side": "A",
+     "team": "Phoenix Suns",
+     "usd": 1263,
+     "price": 0.23,
+     "buy": true,
+     "ts": 1795620646,
+     "wallet": "0x7018…054c"
+    },
+    {
+     "side": "B",
+     "team": "Houston Rockets",
+     "usd": 1181,
+     "price": 0.77,
+     "buy": true,
+     "ts": 1795630965,
+     "wallet": "Agitated-Bricklaying (0x84cf…2f63)"
+    }
+   ],
+   "usdA": 10187,
+   "usdB": 15180
+  },
+  "injuries": {
+   "away": [
+    {
+     "player": "Mark Williams",
+     "status": "Out",
+     "info": "Injury/Illness - Left Shoulder Surgery",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 1.5,
+     "bpm": 1.1,
+     "mpg": 23.6,
+     "loss": 0.59
+    }
+   ],
+   "home": [
+    {
+     "player": "Quadir Copeland",
+     "status": "Out",
+     "info": "G League - Two-Way",
+     "src": "NBA",
+     "pOut": 1.0
+    },
+    {
+     "player": "Julian Phillips",
+     "status": "Out",
+     "info": "G League - Two-Way",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.1,
+     "bpm": -1.7,
+     "mpg": 9.5,
+     "loss": 0.0
+    }
+   ]
+  },
+  "bets": [
+   {
+    "market": "Sieg",
+    "pick": "Phoenix Suns",
+    "odds": 4.2,
+    "line": null,
+    "side": "away",
+    "book": "sport888",
+    "bookName": "888sport",
+    "pModel": 0.3041,
+    "pMarket": 0.2316,
+    "p": 0.2425,
+    "ev": 0.0183,
+    "evRaw": 0.277,
+    "evPin": -0.0417,
+    "pPin": 0.2282,
+    "mainOdds": 3.8,
+    "mainBook": "Tipico",
+    "nBooks": 6,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Sieg",
+    "pick": "Houston Rockets",
+    "odds": 1.26,
+    "line": null,
+    "side": "home",
+    "book": "leovegas_se",
+    "bookName": "LeoVegas",
+    "pModel": 0.6959,
+    "pMarket": 0.7684,
+    "p": 0.7575,
+    "ev": -0.0455,
+    "evRaw": -0.1231,
+    "evPin": -0.0275,
+    "pPin": 0.7718,
+    "mainOdds": 1.25,
+    "mainBook": "Tipico",
+    "nBooks": 6,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Handicap",
+    "pick": "Phoenix Suns +9.5",
+    "odds": 1.91,
+    "line": 9.5,
+    "side": "away",
+    "book": "sport888",
+    "bookName": "888sport",
+    "pModel": 0.5719,
+    "pMarket": 0.5172,
+    "p": 0.5254,
+    "ev": 0.0035,
+    "evRaw": 0.0923,
+    "evPin": -0.0121,
+    "pPin": 0.5172,
+    "mainOdds": 1.87,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Handicap",
+    "pick": "Houston Rockets -8.5",
+    "odds": 1.83,
+    "line": -8.5,
+    "side": "home",
+    "book": "tipico_de",
+    "bookName": "Tipico",
+    "pModel": 0.4569,
+    "pMarket": 0.5119,
+    "p": 0.5037,
+    "ev": -0.0783,
+    "evRaw": -0.1638,
+    "evPin": -0.0632,
+    "pPin": 0.5119,
+    "mainOdds": 1.83,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Gesamtpunkte",
+    "pick": "Über 222.5",
+    "odds": 1.9,
+    "line": 222.5,
+    "side": "over",
+    "book": "betano_uk",
+    "bookName": "Betano",
+    "pModel": 0.5674,
+    "pMarket": 0.5037,
+    "p": 0.5133,
+    "ev": -0.0248,
+    "evRaw": 0.0781,
+    "evPin": -0.043,
+    "pPin": 0.5037,
+    "mainOdds": 1.85,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 5 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Gesamtpunkte",
+    "pick": "Unter 222.5",
+    "odds": 1.95,
+    "line": 222.5,
+    "side": "under",
+    "book": "sport888",
+    "bookName": "888sport",
+    "pModel": 0.4326,
+    "pMarket": 0.4963,
+    "p": 0.4867,
+    "ev": -0.0509,
+    "evRaw": -0.1565,
+    "evPin": -0.0322,
+    "pPin": 0.4963,
+    "mainOdds": 1.85,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 5 %",
+    "value": false,
+    "stake": 0.0
+   }
+  ],
+  "best": {
+   "market": "Sieg",
+   "pick": "Phoenix Suns",
+   "odds": 4.2,
+   "line": null,
+   "side": "away",
+   "book": "sport888",
+   "bookName": "888sport",
+   "pModel": 0.3041,
+   "pMarket": 0.2316,
+   "p": 0.2425,
+   "ev": 0.0183,
+   "evRaw": 0.277,
+   "evPin": -0.0417,
+   "pPin": 0.2282,
+   "mainOdds": 3.8,
+   "mainBook": "Tipico",
+   "nBooks": 6,
+   "why": "EV unter 3 %",
+   "value": false,
+   "stake": 0.0
+  },
+  "hasValue": false,
+  "flash": null,
+  "sideA": "Houston Rockets",
+  "pickLabel": "Phoenix Suns @ Houston Rockets",
+  "conf": 0.15,
+  "feat": {
+   "team": 5.344,
+   "player": 5.349,
+   "alt": 0.0,
+   "rest": 0.3,
+   "inj": 0.594,
+   "sched": 0,
+   "travel": 0.255,
+   "form": -3.415,
+   "TOTraw": 225.76,
+   "pModelRaw": 0.6959,
+   "pMarket": 0.7684
+  },
+  "links": {},
+  "injuryReport": "2026-11-25 18:15 ET",
+  "reportMissing": {
+   "home": false,
+   "away": false
+  },
+  "sdUsed": 13.69,
+  "sdMarket": 12.75314199657065,
+  "middayBest": {
+   "market": "Sieg",
+   "pick": "Phoenix Suns",
+   "odds": 4.2,
+   "line": null,
+   "side": "away",
+   "book": "sport888",
+   "bookName": "888sport",
+   "pModel": 0.3042,
+   "pMarket": 0.2276,
+   "p": 0.2391,
+   "ev": 0.0042,
+   "evRaw": 0.2776,
+   "evPin": -0.0541,
+   "pPin": 0.2252,
+   "mainOdds": 4.1,
+   "mainBook": "Tipico",
+   "nBooks": 7,
+   "why": "EV unter 3 %",
+   "value": false,
+   "stake": 0.0
+  },
+  "eveningUpdate": "2026-11-25T23:27:57.958116+00:00",
+  "updateKind": "abends",
+  "changed": false
+ },
+ {
+  "id": "07421d1675d6bc51bb5fa91f84a09eb3",
+  "sportKey": "basketball_nba",
+  "sport": "NBA",
+  "commence": "2026-11-26T00:40:00Z",
+  "away": "Minnesota Timberwolves",
+  "home": "Oklahoma City Thunder",
+  "abbrA": "MIN",
+  "abbrH": "OKC",
+  "margin": -1.4,
+  "total": 220.4,
+  "poss": 100.5,
+  "ptsA": 110.9,
+  "ptsH": 109.5,
+  "pModelHome": 0.4591,
+  "pMarketHome": 0.5581,
+  "pFinalHome": 0.5433,
+  "parts": [
+   {
+    "n": "Team-Stärke & Tempo",
+    "m": -0.2,
+    "info": "Gewicht 0.51"
+   },
+   {
+    "n": "Heutige Aufstellung (Spieler)",
+    "m": -0.5,
+    "info": "Netto MIN +2.9, OKC +1.9 pro 100 · Gewicht 0.51"
+   },
+   {
+    "n": "Verletzungen (gegen Team-Ratings)",
+    "m": -0.4,
+    "info": "MIN −2.7, OKC −3.6 Punkte · Gewicht 0.50"
+   },
+   {
+    "n": "Heimvorteil",
+    "m": 1.5
+   },
+   {
+    "n": "Spielplan-Dichte",
+    "m": -1.4,
+    "info": "3-in-4/4-in-6: MIN 0, OKC 2"
+   },
+   {
+    "n": "Form (letzte 10)",
+    "m": -0.3,
+    "info": "Abweichung vom erwarteten Ergebnis, zur Null gezogen"
+   }
+  ],
+  "ratings": {
+   "away": {
+    "off": 0.4,
+    "def": 5.81,
+    "pace": 100.1,
+    "w": 0.47,
+    "netCur": 10.91,
+    "netPrior": 2.81
+   },
+   "home": {
+    "off": 0.74,
+    "def": 5.05,
+    "pace": 98.9,
+    "w": 0.47,
+    "netCur": 3.69,
+    "netPrior": 10.95
+   }
+  },
+  "lineup": {
+   "away": {
+    "net": 2.9,
+    "min": 247
+   },
+   "home": {
+    "net": 1.9,
+    "min": 265
+   }
+  },
+  "schedule": {
+   "away": {
+    "rest": 1,
+    "dens": 0,
+    "km": 558.6169887965602,
+    "n": 19
+   },
+   "home": {
+    "rest": 1,
+    "dens": 2,
+    "km": 553.9069146694112,
+    "n": 19
+   }
+  },
+  "kalshi": {
+   "a": 44.5,
+   "b": 54.5,
+   "vol": 491510
+  },
+  "polymarket": null,
+  "bookKey": "tipico_de",
+  "bookName": "Tipico",
+  "whales": {
+   "trades": [],
+   "usdA": 0,
+   "usdB": 0
+  },
+  "injuries": {
+   "away": [
+    {
+     "player": "Joan Beringer",
+     "status": "Available",
+     "info": "Injury/Illness - Right Face Mask",
+     "src": "NBA",
+     "pOut": 0.0
+    },
+    {
+     "player": "Jaylen Clark",
+     "status": "Out",
+     "info": "Injury/Illness - Right Hamstring Strain",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.2,
+     "bpm": -1.3,
+     "mpg": 13.6,
+     "loss": 0.14
+    },
+    {
+     "player": "Donte DiVincenzo",
+     "status": "Out",
+     "info": "Injury/Illness - Right Achilles Tendon Repair / Surgery",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 1.6,
+     "bpm": 0.5,
+     "mpg": 30.4,
+     "loss": 0.57
+    },
+    {
+     "player": "Anthony Edwards",
+     "status": "Out",
+     "info": "Injury/Illness - Right Knee Arthroscopy",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 4.0,
+     "bpm": 3.7,
+     "mpg": 33.8,
+     "loss": 1.91
+    },
+    {
+     "player": "Rocco Zikarsky",
+     "status": "Out",
+     "info": "G League - Two-Way",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.1,
+     "bpm": -1.0,
+     "mpg": 7.2,
+     "loss": 0.06
+    }
+   ],
+   "home": [
+    {
+     "player": "Chet Holmgren",
+     "status": "Out",
+     "info": "Injury/Illness - Right Knee/ Injury Recovery",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 3.1,
+     "bpm": 3.0,
+     "mpg": 30.0,
+     "loss": 1.39
+    },
+    {
+     "player": "Aday Mara",
+     "status": "Out",
+     "info": "Injury/Illness - Right Shin Contusion",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.9,
+     "bpm": -0.0,
+     "mpg": 22.4,
+     "loss": 0.39
+    },
+    {
+     "player": "Thomas Sorber",
+     "status": "Out",
+     "info": "Injury/Illness - Right Knee Surgery",
+     "src": "NBA",
+     "pOut": 1.0
+    },
+    {
+     "player": "Nikola Topic",
+     "status": "Out",
+     "info": "Injury/Illness - Left Hip Strain",
+     "src": "NBA",
+     "pOut": 1.0
+    },
+    {
+     "player": "Cason Wallace",
+     "status": "Out",
+     "info": "Injury/Illness - Left Shoulder Surgery",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.9,
+     "bpm": 0.8,
+     "mpg": 16.3,
+     "loss": 0.42
+    },
+    {
+     "player": "Jalen Williams",
+     "status": "Out",
+     "info": "Injury/Illness - Left Ankle Surgery",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 1.8,
+     "bpm": 0.7,
+     "mpg": 31.7,
+     "loss": 0.8
+    },
+    {
+     "player": "Jaylin Williams",
+     "status": "Out",
+     "info": "Injury/Illness - Low Back Spasms",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.9,
+     "bpm": 0.5,
+     "mpg": 17.1,
+     "loss": 0.55
+    }
+   ]
+  },
+  "bets": [
+   {
+    "market": "Sieg",
+    "pick": "Minnesota Timberwolves",
+    "odds": 2.2,
+    "line": null,
+    "side": "away",
+    "book": "winamax_de",
+    "bookName": "Winamax",
+    "pModel": 0.5409,
+    "pMarket": 0.4419,
+    "p": 0.4567,
+    "ev": 0.0048,
+    "evRaw": 0.1899,
+    "evPin": -0.0446,
+    "pPin": 0.4343,
+    "mainOdds": 2.1,
+    "mainBook": "Tipico",
+    "nBooks": 6,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Sieg",
+    "pick": "Oklahoma City Thunder",
+    "odds": 1.72,
+    "line": null,
+    "side": "home",
+    "book": "winamax_de",
+    "bookName": "Winamax",
+    "pModel": 0.4591,
+    "pMarket": 0.5581,
+    "p": 0.5433,
+    "ev": -0.0656,
+    "evRaw": -0.2103,
+    "evPin": -0.027,
+    "pPin": 0.5657,
+    "mainOdds": 1.7,
+    "mainBook": "Tipico",
+    "nBooks": 6,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Handicap",
+    "pick": "Minnesota Timberwolves +2.5",
+    "odds": 1.91,
+    "line": 2.5,
+    "side": "away",
+    "book": "sport888",
+    "bookName": "888sport",
+    "pModel": 0.6123,
+    "pMarket": 0.4973,
+    "p": 0.5146,
+    "ev": -0.0171,
+    "evRaw": 0.1694,
+    "evPin": -0.0501,
+    "pPin": 0.4973,
+    "mainOdds": 1.9,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Handicap",
+    "pick": "Oklahoma City Thunder -2.5",
+    "odds": 1.91,
+    "line": -2.5,
+    "side": "home",
+    "book": "sport888",
+    "bookName": "888sport",
+    "pModel": 0.3877,
+    "pMarket": 0.5027,
+    "p": 0.4854,
+    "ev": -0.0729,
+    "evRaw": -0.2594,
+    "evPin": -0.0399,
+    "pPin": 0.5027,
+    "mainOdds": 1.8,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Gesamtpunkte",
+    "pick": "Über 222.5",
+    "odds": 1.91,
+    "line": 222.5,
+    "side": "over",
+    "book": "sport888",
+    "bookName": "888sport",
+    "pModel": 0.4569,
+    "pMarket": 0.5108,
+    "p": 0.5027,
+    "ev": -0.0398,
+    "evRaw": -0.1273,
+    "evPin": -0.0244,
+    "pPin": 0.5108,
+    "mainOdds": 1.87,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 5 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Gesamtpunkte",
+    "pick": "Unter 222.5",
+    "odds": 1.95,
+    "line": 222.5,
+    "side": "under",
+    "book": "betano_uk",
+    "bookName": "Betano",
+    "pModel": 0.5431,
+    "pMarket": 0.4892,
+    "p": 0.4973,
+    "ev": -0.0303,
+    "evRaw": 0.0591,
+    "evPin": -0.046,
+    "pPin": 0.4892,
+    "mainOdds": 1.83,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 5 %",
+    "value": false,
+    "stake": 0.0
+   }
+  ],
+  "best": {
+   "market": "Sieg",
+   "pick": "Minnesota Timberwolves",
+   "odds": 2.2,
+   "line": null,
+   "side": "away",
+   "book": "winamax_de",
+   "bookName": "Winamax",
+   "pModel": 0.5409,
+   "pMarket": 0.4419,
+   "p": 0.4567,
+   "ev": 0.0048,
+   "evRaw": 0.1899,
+   "evPin": -0.0446,
+   "pPin": 0.4343,
+   "mainOdds": 2.1,
+   "mainBook": "Tipico",
+   "nBooks": 6,
+   "why": "EV unter 3 %",
+   "value": false,
+   "stake": 0.0
+  },
+  "hasValue": false,
+  "flash": null,
+  "sideA": "Oklahoma City Thunder",
+  "pickLabel": "Minnesota Timberwolves @ Oklahoma City Thunder",
+  "conf": 0.15,
+  "feat": {
+   "team": -0.423,
+   "player": -0.957,
+   "alt": 0.0,
+   "rest": 0.0,
+   "inj": -0.876,
+   "sched": -2,
+   "travel": 0.005,
+   "form": -2.256,
+   "TOTraw": 220.42,
+   "pModelRaw": 0.4591,
+   "pMarket": 0.5581
+  },
+  "links": {},
+  "injuryReport": "2026-11-25 18:15 ET",
+  "reportMissing": {
+   "home": false,
+   "away": false
+  },
+  "sdUsed": 13.69,
+  "sdMarket": 12.75314199657065,
+  "middayBest": {
+   "market": "Gesamtpunkte",
+   "pick": "Unter 224.5",
+   "odds": 1.95,
+   "line": 224.5,
+   "side": "under",
+   "book": "sport888",
+   "bookName": "888sport",
+   "pModel": 0.5841,
+   "pMarket": 0.4942,
+   "p": 0.5077,
+   "ev": -0.0101,
+   "evRaw": 0.1391,
+   "evPin": -0.0364,
+   "pPin": 0.4942,
+   "mainOdds": 1.85,
+   "mainBook": "Tipico",
+   "nBooks": 4,
+   "why": "EV unter 5 %",
+   "value": false,
+   "stake": 0.0
+  },
+  "eveningUpdate": "2026-11-25T23:27:57.958116+00:00",
+  "updateKind": "abends",
+  "changed": true
+ },
+ {
+  "id": "9aa9f220709533d70d11f85fae886771",
+  "sportKey": "basketball_nba",
+  "sport": "NBA",
+  "commence": "2026-11-26T03:10:00Z",
+  "away": "San Antonio Spurs",
+  "home": "Portland Trail Blazers",
+  "abbrA": "SAS",
+  "abbrH": "POR",
+  "margin": -0.0,
+  "total": 224.5,
+  "poss": 98.3,
+  "ptsA": 112.2,
+  "ptsH": 112.2,
+  "pModelHome": 0.4989,
+  "pMarketHome": 0.4057,
+  "pFinalHome": 0.4196,
+  "parts": [
+   {
+    "n": "Team-Stärke & Tempo",
+    "m": -2.4,
+    "info": "Gewicht 0.51"
+   },
+   {
+    "n": "Heutige Aufstellung (Spieler)",
+    "m": -1.0,
+    "info": "Netto SAS +4.1, POR +2.2 pro 100 · Gewicht 0.51"
+   },
+   {
+    "n": "Verletzungen (gegen Team-Ratings)",
+    "m": 2.5,
+    "info": "SAS −5.3, POR −0.4 Punkte · Gewicht 0.50"
+   },
+   {
+    "n": "Heimvorteil",
+    "m": 1.5
+   },
+   {
+    "n": "Reise",
+    "m": -0.5,
+    "info": "SAS 389 km, POR 1936 km (gewichtet)"
+   },
+   {
+    "n": "Form (letzte 10)",
+    "m": -0.2,
+    "info": "Abweichung vom erwarteten Ergebnis, zur Null gezogen"
+   }
+  ],
+  "ratings": {
+   "away": {
+    "off": 4.11,
+    "def": 4.45,
+    "pace": 97.8,
+    "w": 0.47,
+    "netCur": 11.65,
+    "netPrior": 8.25
+   },
+   "home": {
+    "off": 1.77,
+    "def": 2.11,
+    "pace": 99.0,
+    "w": 0.46,
+    "netCur": 8.57,
+    "netPrior": -0.16
+   }
+  },
+  "lineup": {
+   "away": {
+    "net": 4.1,
+    "min": 218
+   },
+   "home": {
+    "net": 2.2,
+    "min": 269
+   }
+  },
+  "schedule": {
+   "away": {
+    "rest": 1,
+    "dens": 0,
+    "km": 389.4915509601007,
+    "n": 19
+   },
+   "home": {
+    "rest": 1,
+    "dens": 0,
+    "km": 1936.3422021423921,
+    "n": 18
+   }
+  },
+  "kalshi": {
+   "a": 59.5,
+   "b": 40.5,
+   "vol": 131368
+  },
+  "polymarket": {
+   "pA": 0.595,
+   "pB": 0.405,
+   "volume": 66704
+  },
+  "bookKey": "tipico_de",
+  "bookName": "Tipico",
+  "whales": {
+   "trades": [
+    {
+     "side": "A",
+     "team": "San Antonio Spurs",
+     "usd": 3934,
+     "price": 0.6,
+     "buy": true,
+     "ts": 1795641310,
+     "wallet": "Agitated-Bricklaying (0x84cf…2f63)"
+    },
+    {
+     "side": "B",
+     "team": "Portland Trail Blazers",
+     "usd": 2599,
+     "price": 0.429,
+     "buy": true,
+     "ts": 1795600825,
+     "wallet": "Normal-Distance-Apparatus (0xc374…0f3e)"
+    },
+    {
+     "side": "A",
+     "team": "San Antonio Spurs",
+     "usd": 2320,
+     "price": 0.58,
+     "buy": true,
+     "ts": 1795633857,
+     "wallet": "Quick-Diffuse (0x5fe0…d994)"
+    },
+    {
+     "side": "B",
+     "team": "Portland Trail Blazers",
+     "usd": 2000,
+     "price": 0.43,
+     "buy": true,
+     "ts": 1795575722,
+     "wallet": "Legitimate-Oyster-Outrigger (0x73c8…e1b1)"
+    },
+    {
+     "side": "B",
+     "team": "Portland Trail Blazers",
+     "usd": 1499,
+     "price": 0.43,
+     "buy": true,
+     "ts": 1795592230,
+     "wallet": "Agitated-Bricklaying (0x84cf…2f63)"
+    },
+    {
+     "side": "B",
+     "team": "Portland Trail Blazers",
+     "usd": 1123,
+     "price": 0.41,
+     "buy": true,
+     "ts": 1795642114,
+     "wallet": "Agitated-Bricklaying (0x84cf…2f63)"
+    }
+   ],
+   "usdA": 6254,
+   "usdB": 7220
+  },
+  "injuries": {
+   "away": [
+    {
+     "player": "De'Aaron Fox",
+     "status": "Questionable",
+     "info": "Injury/Illness - Right Shin Contusion",
+     "src": "NBA",
+     "pOut": 0.45,
+     "value": 2.1,
+     "bpm": 1.4,
+     "mpg": 28.9,
+     "loss": 0.73
+    },
+    {
+     "player": "Dylan Harper",
+     "status": "Out",
+     "info": "Injury/Illness - Left Hip External Rotator Strain",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 2.3,
+     "bpm": 1.5,
+     "mpg": 31.7,
+     "loss": 1.74
+    },
+    {
+     "player": "Tobias Harris",
+     "status": "Out",
+     "info": "Injury/Illness - Left Calf Strain",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 1.6,
+     "bpm": 0.8,
+     "mpg": 27.7,
+     "loss": 0.0
+    },
+    {
+     "player": "Jayden Quaintance",
+     "status": "Out",
+     "info": "Injury/Illness - Right Knee Surgery",
+     "src": "NBA",
+     "pOut": 1.0
+    },
+    {
+     "player": "Victor Wembanyama",
+     "status": "Questionable",
+     "info": "Injury/Illness - Low Back Tightness",
+     "src": "NBA",
+     "pOut": 0.45,
+     "value": 7.8,
+     "bpm": 10.3,
+     "mpg": 30.3,
+     "loss": 2.86
+    }
+   ],
+   "home": [
+    {
+     "player": "Vit Krejci",
+     "status": "Out",
+     "info": "Injury/Illness - Left Ankle Fracture",
+     "src": "NBA",
+     "pOut": 1.0
+    },
+    {
+     "player": "Ja Morant",
+     "status": "Out",
+     "info": "Injury/Illness - Left Hamstring Strain",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.9,
+     "bpm": -0.4,
+     "mpg": 25.8,
+     "loss": 0.09
+    },
+    {
+     "player": "Shaedon Sharpe",
+     "status": "Out",
+     "info": "Injury/Illness - Right Meniscus Surgery",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.4,
+     "bpm": -1.3,
+     "mpg": 29.4,
+     "loss": 0.17
+    },
+    {
+     "player": "Chris Youngblood",
+     "status": "Out",
+     "info": "Injury/Illness - Right Heel Contusion / Bone Bruise",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.2,
+     "bpm": -1.3,
+     "mpg": 13.3,
+     "loss": 0.1
+    }
+   ]
+  },
+  "bets": [
+   {
+    "market": "Sieg",
+    "pick": "San Antonio Spurs",
+    "odds": 1.62,
+    "line": null,
+    "side": "away",
+    "book": "winamax_de",
+    "bookName": "Winamax",
+    "pModel": 0.5011,
+    "pMarket": 0.5943,
+    "p": 0.5804,
+    "ev": -0.0598,
+    "evRaw": -0.1882,
+    "evPin": -0.0383,
+    "pPin": 0.5937,
+    "mainOdds": 1.57,
+    "mainBook": "Tipico",
+    "nBooks": 6,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Sieg",
+    "pick": "Portland Trail Blazers",
+    "odds": 2.38,
+    "line": null,
+    "side": "home",
+    "book": "sport888",
+    "bookName": "888sport",
+    "pModel": 0.4989,
+    "pMarket": 0.4057,
+    "p": 0.4196,
+    "ev": -0.0012,
+    "evRaw": 0.1874,
+    "evPin": -0.0329,
+    "pPin": 0.4063,
+    "mainOdds": 2.35,
+    "mainBook": "Tipico",
+    "nBooks": 6,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Handicap",
+    "pick": "San Antonio Spurs -3.5",
+    "odds": 1.91,
+    "line": -3.5,
+    "side": "away",
+    "book": "sport888",
+    "bookName": "888sport",
+    "pModel": 0.4002,
+    "pMarket": 0.4959,
+    "p": 0.4816,
+    "ev": -0.0802,
+    "evRaw": -0.2357,
+    "evPin": -0.0528,
+    "pPin": 0.4959,
+    "mainOdds": 1.8,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Handicap",
+    "pick": "Portland Trail Blazers +3.5",
+    "odds": 1.91,
+    "line": 3.5,
+    "side": "home",
+    "book": "sport888",
+    "bookName": "888sport",
+    "pModel": 0.5998,
+    "pMarket": 0.5041,
+    "p": 0.5184,
+    "ev": -0.0098,
+    "evRaw": 0.1457,
+    "evPin": -0.0372,
+    "pPin": 0.5041,
+    "mainOdds": 1.9,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Gesamtpunkte",
+    "pick": "Über 225.5",
+    "odds": 1.91,
+    "line": 225.5,
+    "side": "over",
+    "book": "sport888",
+    "bookName": "888sport",
+    "pModel": 0.4783,
+    "pMarket": 0.5033,
+    "p": 0.4995,
+    "ev": -0.0459,
+    "evRaw": -0.0864,
+    "evPin": -0.0387,
+    "pPin": 0.5033,
+    "mainOdds": 1.87,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 5 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Gesamtpunkte",
+    "pick": "Unter 225.5",
+    "odds": 1.91,
+    "line": 225.5,
+    "side": "under",
+    "book": "sport888",
+    "bookName": "888sport",
+    "pModel": 0.5217,
+    "pMarket": 0.4967,
+    "p": 0.5005,
+    "ev": -0.0441,
+    "evRaw": -0.0036,
+    "evPin": -0.0513,
+    "pPin": 0.4967,
+    "mainOdds": 1.83,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 5 %",
+    "value": false,
+    "stake": 0.0
+   }
+  ],
+  "best": {
+   "market": "Sieg",
+   "pick": "Portland Trail Blazers",
+   "odds": 2.38,
+   "line": null,
+   "side": "home",
+   "book": "sport888",
+   "bookName": "888sport",
+   "pModel": 0.4989,
+   "pMarket": 0.4057,
+   "p": 0.4196,
+   "ev": -0.0012,
+   "evRaw": 0.1874,
+   "evPin": -0.0329,
+   "pPin": 0.4063,
+   "mainOdds": 2.35,
+   "mainBook": "Tipico",
+   "nBooks": 6,
+   "why": "EV unter 3 %",
+   "value": false,
+   "stake": 0.0
+  },
+  "hasValue": false,
+  "flash": null,
+  "sideA": "Portland Trail Blazers",
+  "pickLabel": "San Antonio Spurs @ Portland Trail Blazers",
+  "conf": 0.15,
+  "feat": {
+   "team": -4.602,
+   "player": -1.944,
+   "alt": 0.0,
+   "rest": 0.0,
+   "inj": 4.971,
+   "sched": 0,
+   "travel": -1.547,
+   "form": -1.285,
+   "TOTraw": 224.46,
+   "pModelRaw": 0.4989,
+   "pMarket": 0.4057
+  },
+  "links": {},
+  "injuryReport": "2026-11-25 18:15 ET",
+  "reportMissing": {
+   "home": false,
+   "away": false
+  },
+  "sdUsed": 13.69,
+  "sdMarket": 12.75314199657065,
+  "middayBest": {
+   "market": "Handicap",
+   "pick": "Portland Trail Blazers +2.5",
+   "odds": 2.0,
+   "line": 2.5,
+   "side": "home",
+   "book": "sport888",
+   "bookName": "888sport",
+   "pModel": 0.5713,
+   "pMarket": 0.4881,
+   "p": 0.5006,
+   "ev": 0.0012,
+   "evRaw": 0.1426,
+   "evPin": -0.0237,
+   "pPin": 0.4881,
+   "mainOdds": 1.95,
+   "mainBook": "Tipico",
+   "nBooks": 4,
+   "why": "EV unter 3 %",
+   "value": false,
+   "stake": 0.0
+  },
+  "eveningUpdate": "2026-11-25T23:27:57.958116+00:00",
+  "updateKind": "abends",
+  "changed": true
+ },
+ {
+  "id": "f08629281f1510f47d91cc408f86a2a8",
+  "sportKey": "basketball_nba",
+  "sport": "NBA",
+  "commence": "2026-11-26T00:40:00Z",
+  "away": "Cleveland Cavaliers",
+  "home": "New York Knicks",
+  "abbrA": "CLE",
+  "abbrH": "NYK",
+  "margin": 4.3,
+  "total": 221.1,
+  "poss": 95.6,
+  "ptsA": 108.4,
+  "ptsH": 112.7,
+  "pModelHome": 0.6234,
+  "pMarketHome": 0.6262,
+  "pFinalHome": 0.6258,
+  "parts": [
+   {
+    "n": "Team-Stärke & Tempo",
+    "m": 1.5,
+    "info": "Gewicht 0.51"
+   },
+   {
+    "n": "Heutige Aufstellung (Spieler)",
+    "m": 1.0,
+    "info": "Netto CLE +0.4, NYK +2.5 pro 100 · Gewicht 0.51"
+   },
+   {
+    "n": "Verletzungen (gegen Team-Ratings)",
+    "m": -0.5,
+    "info": "CLE −2.1, NYK −3.1 Punkte · Gewicht 0.50"
+   },
+   {
+    "n": "Heimvorteil",
+    "m": 1.5
+   },
+   {
+    "n": "Ruhe & Zeitzone",
+    "m": 0.2,
+    "info": "Ruhetage CLE 1, NYK 2"
+   },
+   {
+    "n": "Reise",
+    "m": 0.2,
+    "info": "CLE 574 km, NYK 0 km (gewichtet)"
+   },
+   {
+    "n": "Form (letzte 10)",
+    "m": 0.4,
+    "info": "Abweichung vom erwarteten Ergebnis, zur Null gezogen"
+   }
+  ],
+  "ratings": {
+   "away": {
+    "off": 3.14,
+    "def": -1.51,
+    "pace": 99.4,
+    "w": 0.47,
+    "netCur": 0.54,
+    "netPrior": 3.72
+   },
+   "home": {
+    "off": 1.21,
+    "def": 3.56,
+    "pace": 94.7,
+    "w": 0.46,
+    "netCur": 5.28,
+    "netPrior": 6.18
+   }
+  },
+  "lineup": {
+   "away": {
+    "net": 0.4,
+    "min": 302
+   },
+   "home": {
+    "net": 2.5,
+    "min": 220
+   }
+  },
+  "schedule": {
+   "away": {
+    "rest": 1,
+    "dens": 0,
+    "km": 574.1167585231839,
+    "n": 18
+   },
+   "home": {
+    "rest": 2,
+    "dens": 0,
+    "km": 0.0,
+    "n": 18
+   }
+  },
+  "kalshi": {
+   "a": 37.5,
+   "b": 62.5,
+   "vol": 727035
+  },
+  "polymarket": {
+   "pA": 0.375,
+   "pB": 0.625,
+   "volume": 576471
+  },
+  "bookKey": "tipico_de",
+  "bookName": "Tipico",
+  "whales": {
+   "trades": [
+    {
+     "side": "B",
+     "team": "New York Knicks",
+     "usd": 25830,
+     "price": 0.59,
+     "buy": true,
+     "ts": 1795642275,
+     "wallet": "Fake-Bitter (0xdc41…dd7e)"
+    },
+    {
+     "side": "B",
+     "team": "New York Knicks",
+     "usd": 23677,
+     "price": 0.62,
+     "buy": true,
+     "ts": 1795642821,
+     "wallet": "New-Sickness (0xd391…b109)"
+    },
+    {
+     "side": "B",
+     "team": "New York Knicks",
+     "usd": 16699,
+     "price": 0.62,
+     "buy": true,
+     "ts": 1795646244,
+     "wallet": "Agitated-Bricklaying (0x84cf…2f63)"
+    },
+    {
+     "side": "B",
+     "team": "New York Knicks",
+     "usd": 14323,
+     "price": 0.541,
+     "buy": true,
+     "ts": 1795642204,
+     "wallet": "Frayed-Mud (0x906f…88b4)"
+    },
+    {
+     "side": "A",
+     "team": "Cleveland Cavaliers",
+     "usd": 10170,
+     "price": 0.39,
+     "buy": true,
+     "ts": 1795642416,
+     "wallet": "Cooked-Butler (0x2e16…7399)"
+    },
+    {
+     "side": "B",
+     "team": "New York Knicks",
+     "usd": 9696,
+     "price": 0.57,
+     "buy": true,
+     "ts": 1795642204,
+     "wallet": "Ordinary-Archives-Poultry (0xe5d1…a9d7)"
+    },
+    {
+     "side": "B",
+     "team": "New York Knicks",
+     "usd": 9389,
+     "price": 0.61,
+     "buy": true,
+     "ts": 1795642369,
+     "wallet": "Fake-Bitter (0xdc41…dd7e)"
+    },
+    {
+     "side": "A",
+     "team": "Cleveland Cavaliers",
+     "usd": 8615,
+     "price": 0.516,
+     "buy": false,
+     "ts": 1795628716,
+     "wallet": "Miserly-Clock (0xa6df…dda7)"
+    },
+    {
+     "side": "A",
+     "team": "Cleveland Cavaliers",
+     "usd": 7327,
+     "price": 0.419,
+     "buy": true,
+     "ts": 1795628705,
+     "wallet": "Ordinary-Archives-Poultry (0xe5d1…a9d7)"
+    },
+    {
+     "side": "B",
+     "team": "New York Knicks",
+     "usd": 6505,
+     "price": 0.611,
+     "buy": true,
+     "ts": 1795642206,
+     "wallet": "Silky-Geometry (0x032e…2a9e)"
+    }
+   ],
+   "usdA": 67240,
+   "usdB": 172006
+  },
+  "injuries": {
+   "away": [
+    {
+     "player": "Zack Austin",
+     "status": "Out",
+     "info": "G League - Two-Way",
+     "src": "NBA",
+     "pOut": 1.0
+    },
+    {
+     "player": "Khalifa Diop",
+     "status": "Out",
+     "info": "G League - On Assignment",
+     "src": "NBA",
+     "pOut": 1.0
+    },
+    {
+     "player": "Evan Mobley",
+     "status": "Out",
+     "info": "Injury/Illness - Left Great Toe Sprain",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 3.0,
+     "bpm": 2.5,
+     "mpg": 32.0,
+     "loss": 2.04
+    },
+    {
+     "player": "Nae'Qwan Tomlin",
+     "status": "Out",
+     "info": "Injury/Illness - Low Back Stress Reaction",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.1,
+     "bpm": -1.7,
+     "mpg": 15.7,
+     "loss": 0.04
+    },
+    {
+     "player": "Ernest Udeh Jr.",
+     "status": "Out",
+     "info": "G League - Two-Way",
+     "src": "NBA",
+     "pOut": 1.0
+    }
+   ],
+   "home": [
+    {
+     "player": "OG Anunoby",
+     "status": "Out",
+     "info": "Injury/Illness - Left Calf Strain",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 2.0,
+     "bpm": 0.8,
+     "mpg": 33.9,
+     "loss": 1.56
+    },
+    {
+     "player": "Jalen Brunson",
+     "status": "Probable",
+     "info": "Injury/Illness - Illness",
+     "src": "NBA",
+     "pOut": 0.1,
+     "value": 3.6,
+     "bpm": 3.0,
+     "mpg": 34.4,
+     "loss": 0.3
+    },
+    {
+     "player": "Jordan Clarkson",
+     "status": "Out",
+     "info": "Injury/Illness - Right Plantar Fasciitis",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.0,
+     "bpm": -2.7,
+     "mpg": 9.8,
+     "loss": 0.0
+    },
+    {
+     "player": "Josh Hart",
+     "status": "Probable",
+     "info": "Injury/Illness - Right Shoulder Sprain",
+     "src": "NBA",
+     "pOut": 0.1,
+     "value": 2.1,
+     "bpm": 1.2,
+     "mpg": 30.8,
+     "loss": 0.16
+    },
+    {
+     "player": "Miles McBride",
+     "status": "Out",
+     "info": "Injury/Illness - Left Adductor Tightness",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.9,
+     "bpm": 0.6,
+     "mpg": 17.2,
+     "loss": 0.76
+    },
+    {
+     "player": "Karl-Anthony Towns",
+     "status": "Probable",
+     "info": "Injury/Illness - Right Knee Inflammation MIN@OKC",
+     "src": "NBA",
+     "pOut": 0.1,
+     "value": 4.0,
+     "bpm": 3.9,
+     "mpg": 32.6,
+     "loss": 0.32
+    }
+   ]
+  },
+  "bets": [
+   {
+    "market": "Sieg",
+    "pick": "Cleveland Cavaliers",
+    "odds": 2.55,
+    "line": null,
+    "side": "away",
+    "book": "tipico_de",
+    "bookName": "Tipico",
+    "pModel": 0.3766,
+    "pMarket": 0.3738,
+    "p": 0.3742,
+    "ev": -0.0458,
+    "evRaw": -0.0397,
+    "evPin": -0.05,
+    "pPin": 0.3726,
+    "mainOdds": 2.55,
+    "mainBook": "Tipico",
+    "nBooks": 6,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Sieg",
+    "pick": "New York Knicks",
+    "odds": 1.58,
+    "line": null,
+    "side": "home",
+    "book": "winamax_de",
+    "bookName": "Winamax",
+    "pModel": 0.6234,
+    "pMarket": 0.6262,
+    "p": 0.6258,
+    "ev": -0.0112,
+    "evRaw": -0.015,
+    "evPin": -0.0086,
+    "pPin": 0.6274,
+    "mainOdds": 1.5,
+    "mainBook": "Tipico",
+    "nBooks": 6,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Handicap",
+    "pick": "Cleveland Cavaliers +3.5",
+    "odds": 2.0,
+    "line": 3.5,
+    "side": "away",
+    "book": "sport888",
+    "bookName": "888sport",
+    "pModel": 0.4766,
+    "pMarket": 0.4762,
+    "p": 0.4762,
+    "ev": -0.0475,
+    "evRaw": -0.0469,
+    "evPin": -0.0476,
+    "pPin": 0.4762,
+    "mainOdds": 1.75,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Handicap",
+    "pick": "New York Knicks -4.5",
+    "odds": 1.95,
+    "line": -4.5,
+    "side": "home",
+    "book": "tipico_de",
+    "bookName": "Tipico",
+    "pModel": 0.4943,
+    "pMarket": 0.4947,
+    "p": 0.4946,
+    "ev": -0.0355,
+    "evRaw": -0.0361,
+    "evPin": -0.0354,
+    "pPin": 0.4947,
+    "mainOdds": 1.95,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Gesamtpunkte",
+    "pick": "Über 218.5",
+    "odds": 1.91,
+    "line": 218.5,
+    "side": "over",
+    "book": "sport888",
+    "bookName": "888sport",
+    "pModel": 0.5533,
+    "pMarket": 0.5171,
+    "p": 0.5225,
+    "ev": -0.002,
+    "evRaw": 0.0568,
+    "evPin": -0.0124,
+    "pPin": 0.5171,
+    "mainOdds": 1.9,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 5 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Gesamtpunkte",
+    "pick": "Unter 218.5",
+    "odds": 1.95,
+    "line": 218.5,
+    "side": "under",
+    "book": "betano_uk",
+    "bookName": "Betano",
+    "pModel": 0.4467,
+    "pMarket": 0.4829,
+    "p": 0.4775,
+    "ev": -0.0689,
+    "evRaw": -0.129,
+    "evPin": -0.0583,
+    "pPin": 0.4829,
+    "mainOdds": 1.8,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 5 %",
+    "value": false,
+    "stake": 0.0
+   }
+  ],
+  "best": {
+   "market": "Gesamtpunkte",
+   "pick": "Über 218.5",
+   "odds": 1.91,
+   "line": 218.5,
+   "side": "over",
+   "book": "sport888",
+   "bookName": "888sport",
+   "pModel": 0.5533,
+   "pMarket": 0.5171,
+   "p": 0.5225,
+   "ev": -0.002,
+   "evRaw": 0.0568,
+   "evPin": -0.0124,
+   "pPin": 0.5171,
+   "mainOdds": 1.9,
+   "mainBook": "Tipico",
+   "nBooks": 3,
+   "why": "EV unter 5 %",
+   "value": false,
+   "stake": 0.0
+  },
+  "hasValue": false,
+  "flash": null,
+  "sideA": "New York Knicks",
+  "pickLabel": "Cleveland Cavaliers @ New York Knicks",
+  "conf": 0.15,
+  "feat": {
+   "team": 2.999,
+   "player": 2.008,
+   "alt": 0.0,
+   "rest": 0.3,
+   "inj": -1.019,
+   "sched": 0,
+   "travel": 0.574,
+   "form": 2.606,
+   "TOTraw": 221.07,
+   "pModelRaw": 0.6234,
+   "pMarket": 0.6262
+  },
+  "links": {},
+  "injuryReport": "2026-11-25 18:15 ET",
+  "reportMissing": {
+   "home": false,
+   "away": false
+  },
+  "sdUsed": 13.69,
+  "sdMarket": 12.75314199657065,
+  "middayBest": {
+   "market": "Gesamtpunkte",
+   "pick": "Unter 219.5",
+   "odds": 1.87,
+   "line": 219.5,
+   "side": "under",
+   "book": "op_bet365",
+   "bookName": "bet365",
+   "pModel": 0.4674,
+   "pMarket": 0.5375,
+   "p": 0.5269,
+   "ev": -0.0146,
+   "evRaw": -0.1261,
+   "evPin": 0.005,
+   "pPin": 0.5375,
+   "mainOdds": 1.85,
+   "mainBook": "Tipico",
+   "nBooks": 4,
+   "why": "EV unter 5 %",
+   "value": false,
+   "stake": 0.0
+  },
+  "eveningUpdate": "2026-11-25T23:27:57.958116+00:00",
+  "updateKind": "abends",
+  "changed": true
+ },
+ {
+  "id": "698d6d78acf30f4ff4e4aaf6670249ee",
+  "sportKey": "basketball_nba",
+  "sport": "NBA",
+  "commence": "2026-11-26T01:10:00Z",
+  "away": "Los Angeles Clippers",
+  "home": "Memphis Grizzlies",
+  "abbrA": "LAC",
+  "abbrH": "MEM",
+  "margin": 7.4,
+  "total": 230.5,
+  "poss": 98.6,
+  "ptsA": 111.5,
+  "ptsH": 118.9,
+  "pModelHome": 0.706,
+  "pMarketHome": 0.7074,
+  "pFinalHome": 0.7071,
+  "parts": [
+   {
+    "n": "Team-Stärke & Tempo",
+    "m": 1.6,
+    "info": "Gewicht 0.51"
+   },
+   {
+    "n": "Heutige Aufstellung (Spieler)",
+    "m": 3.7,
+    "info": "Netto LAC -6.7, MEM +0.7 pro 100 · Gewicht 0.51"
+   },
+   {
+    "n": "Verletzungen (gegen Team-Ratings)",
+    "m": -0.5,
+    "info": "LAC −0.3, MEM −1.3 Punkte · Gewicht 0.50"
+   },
+   {
+    "n": "Heimvorteil",
+    "m": 1.5
+   },
+   {
+    "n": "Ruhe & Zeitzone",
+    "m": 0.4,
+    "info": "Ruhetage LAC 1, MEM 1"
+   },
+   {
+    "n": "Form (letzte 10)",
+    "m": 0.7,
+    "info": "Abweichung vom erwarteten Ergebnis, zur Null gezogen"
+   }
+  ],
+  "ratings": {
+   "away": {
+    "off": -0.37,
+    "def": -1.76,
+    "pace": 98.7,
+    "w": 0.44,
+    "netCur": -5.63,
+    "netPrior": 0.96
+   },
+   "home": {
+    "off": 2.14,
+    "def": -1.18,
+    "pace": 98.4,
+    "w": 0.47,
+    "netCur": 6.48,
+    "netPrior": -5.72
+   }
+  },
+  "lineup": {
+   "away": {
+    "net": -6.7,
+    "min": 292
+   },
+   "home": {
+    "net": 0.7,
+    "min": 240
+   }
+  },
+  "schedule": {
+   "away": {
+    "rest": 1,
+    "dens": 0,
+    "km": 389.46536087678754,
+    "n": 16
+   },
+   "home": {
+    "rest": 1,
+    "dens": 0,
+    "km": 418.48529950059185,
+    "n": 19
+   }
+  },
+  "kalshi": {
+   "a": 29.5,
+   "b": 70.5,
+   "vol": 230530
+  },
+  "polymarket": {
+   "pA": 0.295,
+   "pB": 0.705,
+   "volume": 62578
+  },
+  "bookKey": "tipico_de",
+  "bookName": "Tipico",
+  "whales": {
+   "trades": [
+    {
+     "side": "B",
+     "team": "Memphis Grizzlies",
+     "usd": 3900,
+     "price": 0.71,
+     "buy": true,
+     "ts": 1795623047,
+     "wallet": "Orderly-Venture (0xd48a…6e90)"
+    },
+    {
+     "side": "A",
+     "team": "Los Angeles Clippers",
+     "usd": 3057,
+     "price": 0.3,
+     "buy": true,
+     "ts": 1795629110,
+     "wallet": "Agitated-Bricklaying (0x84cf…2f63)"
+    },
+    {
+     "side": "B",
+     "team": "Memphis Grizzlies",
+     "usd": 2250,
+     "price": 0.69,
+     "buy": true,
+     "ts": 1795574836,
+     "wallet": "Agitated-Bricklaying (0x84cf…2f63)"
+    },
+    {
+     "side": "B",
+     "team": "Memphis Grizzlies",
+     "usd": 2000,
+     "price": 0.69,
+     "buy": true,
+     "ts": 1795610059,
+     "wallet": "Legal-Revascularisation-Rug (0x8707…8b15)"
+    },
+    {
+     "side": "B",
+     "team": "Memphis Grizzlies",
+     "usd": 1754,
+     "price": 0.68,
+     "buy": true,
+     "ts": 1795568141,
+     "wallet": "Agitated-Bricklaying (0x84cf…2f63)"
+    },
+    {
+     "side": "B",
+     "team": "Memphis Grizzlies",
+     "usd": 1380,
+     "price": 0.69,
+     "buy": true,
+     "ts": 1795616084,
+     "wallet": "Agitated-Bricklaying (0x84cf…2f63)"
+    }
+   ],
+   "usdA": 3057,
+   "usdB": 11284
+  },
+  "injuries": {
+   "away": [
+    {
+     "player": "Bradley Beal",
+     "status": "Out",
+     "info": "Injury/Illness - Right Knee Injury Management",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.0,
+     "bpm": -2.6,
+     "mpg": 20.2,
+     "loss": 0.0
+    },
+    {
+     "player": "Nick Martinelli",
+     "status": "Out",
+     "info": "G League - Two-Way",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.1,
+     "bpm": -0.7,
+     "mpg": 4.3,
+     "loss": 0.02
+    },
+    {
+     "player": "Jordan Miller",
+     "status": "Out",
+     "info": "Injury/Illness - Left Rotator Cuff Surgery",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.8,
+     "bpm": -0.2,
+     "mpg": 22.1,
+     "loss": 0.33
+    },
+    {
+     "player": "Jalen Pickett",
+     "status": "Questionable",
+     "info": "G League - Two-Way",
+     "src": "NBA",
+     "pOut": 0.45,
+     "value": 0.0,
+     "bpm": -1.6,
+     "mpg": 4.5,
+     "loss": 0.0
+    }
+   ],
+   "home": [
+    {
+     "player": "Cameron Boozer",
+     "status": "Out",
+     "info": "Injury/Illness - Right Medial Ankle Sprain",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 1.9,
+     "bpm": 0.9,
+     "mpg": 30.9,
+     "loss": 0.79
+    },
+    {
+     "player": "Jerami Grant",
+     "status": "Out",
+     "info": "Injury/Illness - Left Calf Strain",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.9,
+     "bpm": -0.1,
+     "mpg": 22.3,
+     "loss": 0.35
+    },
+    {
+     "player": "GG Jackson",
+     "status": "Out",
+     "info": "Injury/Illness - Left 5th Metatarsal Fracture",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.1,
+     "bpm": -1.7,
+     "mpg": 15.0,
+     "loss": 0.07
+    },
+    {
+     "player": "Scotty Pippen Jr.",
+     "status": "Out",
+     "info": "Injury/Illness - Lumbar Disc Herniation",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.2,
+     "bpm": -1.5,
+     "mpg": 16.0,
+     "loss": 0.08
+    },
+    {
+     "player": "Richie Saunders",
+     "status": "Out",
+     "info": "Injury/Illness - Right Knee Surgery",
+     "src": "NBA",
+     "pOut": 1.0
+    }
+   ]
+  },
+  "bets": [
+   {
+    "market": "Sieg",
+    "pick": "Los Angeles Clippers",
+    "odds": 3.25,
+    "line": null,
+    "side": "away",
+    "book": "winamax_de",
+    "bookName": "Winamax",
+    "pModel": 0.294,
+    "pMarket": 0.2926,
+    "p": 0.2929,
+    "ev": -0.0482,
+    "evRaw": -0.0444,
+    "evPin": -0.0566,
+    "pPin": 0.2903,
+    "mainOdds": 3.2,
+    "mainBook": "Tipico",
+    "nBooks": 6,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Sieg",
+    "pick": "Memphis Grizzlies",
+    "odds": 1.38,
+    "line": null,
+    "side": "home",
+    "book": "winamax_de",
+    "bookName": "Winamax",
+    "pModel": 0.706,
+    "pMarket": 0.7074,
+    "p": 0.7071,
+    "ev": -0.0241,
+    "evRaw": -0.0258,
+    "evPin": -0.0206,
+    "pPin": 0.7097,
+    "mainOdds": 1.33,
+    "mainBook": "Tipico",
+    "nBooks": 6,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Handicap",
+    "pick": "Los Angeles Clippers +7.5",
+    "odds": 1.91,
+    "line": 7.5,
+    "side": "away",
+    "book": "sport888",
+    "bookName": "888sport",
+    "pModel": 0.5025,
+    "pMarket": 0.5162,
+    "p": 0.5141,
+    "ev": -0.018,
+    "evRaw": -0.0403,
+    "evPin": -0.0141,
+    "pPin": 0.5162,
+    "mainOdds": 1.87,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Handicap",
+    "pick": "Memphis Grizzlies -7.5",
+    "odds": 1.93,
+    "line": -7.5,
+    "side": "home",
+    "book": "leovegas_se",
+    "bookName": "LeoVegas",
+    "pModel": 0.4975,
+    "pMarket": 0.4838,
+    "p": 0.4859,
+    "ev": -0.0623,
+    "evRaw": -0.0398,
+    "evPin": -0.0663,
+    "pPin": 0.4838,
+    "mainOdds": 1.83,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Gesamtpunkte",
+    "pick": "Über 227.5",
+    "odds": 1.9,
+    "line": 227.5,
+    "side": "over",
+    "book": "betano_uk",
+    "bookName": "Betano",
+    "pModel": 0.5617,
+    "pMarket": 0.5171,
+    "p": 0.5238,
+    "ev": -0.0048,
+    "evRaw": 0.0673,
+    "evPin": -0.0175,
+    "pPin": 0.5171,
+    "mainOdds": 1.8,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 5 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Gesamtpunkte",
+    "pick": "Unter 227.5",
+    "odds": 1.95,
+    "line": 227.5,
+    "side": "under",
+    "book": "sport888",
+    "bookName": "888sport",
+    "pModel": 0.4383,
+    "pMarket": 0.4829,
+    "p": 0.4762,
+    "ev": -0.0714,
+    "evRaw": -0.1454,
+    "evPin": -0.0583,
+    "pPin": 0.4829,
+    "mainOdds": 1.9,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 5 %",
+    "value": false,
+    "stake": 0.0
+   }
+  ],
+  "best": {
+   "market": "Gesamtpunkte",
+   "pick": "Über 227.5",
+   "odds": 1.9,
+   "line": 227.5,
+   "side": "over",
+   "book": "betano_uk",
+   "bookName": "Betano",
+   "pModel": 0.5617,
+   "pMarket": 0.5171,
+   "p": 0.5238,
+   "ev": -0.0048,
+   "evRaw": 0.0673,
+   "evPin": -0.0175,
+   "pPin": 0.5171,
+   "mainOdds": 1.8,
+   "mainBook": "Tipico",
+   "nBooks": 3,
+   "why": "EV unter 5 %",
+   "value": false,
+   "stake": 0.0
+  },
+  "hasValue": false,
+  "flash": null,
+  "sideA": "Memphis Grizzlies",
+  "pickLabel": "Los Angeles Clippers @ Memphis Grizzlies",
+  "conf": 0.15,
+  "feat": {
+   "team": 3.048,
+   "player": 7.234,
+   "alt": 0.0,
+   "rest": 0.6,
+   "inj": -0.952,
+   "sched": 0,
+   "travel": -0.029,
+   "form": 4.942,
+   "TOTraw": 230.48,
+   "pModelRaw": 0.706,
+   "pMarket": 0.7074
+  },
+  "links": {},
+  "injuryReport": "2026-11-25 18:15 ET",
+  "reportMissing": {
+   "home": false,
+   "away": false
+  },
+  "sdUsed": 13.69,
+  "sdMarket": 12.75314199657065,
+  "middayBest": {
+   "market": "Sieg",
+   "pick": "Memphis Grizzlies",
+   "odds": 1.43,
+   "line": null,
+   "side": "home",
+   "book": "betway",
+   "bookName": "Betway",
+   "pModel": 0.7059,
+   "pMarket": 0.6852,
+   "p": 0.6883,
+   "ev": -0.0157,
+   "evRaw": 0.0094,
+   "evPin": -0.0198,
+   "pPin": 0.6854,
+   "mainOdds": 1.4,
+   "mainBook": "Tipico",
+   "nBooks": 7,
+   "why": "EV unter 3 %",
+   "value": false,
+   "stake": 0.0
+  },
+  "eveningUpdate": "2026-11-25T23:27:57.958116+00:00",
+  "updateKind": "abends",
+  "changed": true
+ },
+ {
+  "id": "9e203cbbc6d37b7b0d9c08cb89fe0b28",
+  "sportKey": "basketball_nba",
+  "sport": "NBA",
+  "commence": "2026-11-26T01:10:00Z",
+  "away": "Brooklyn Nets",
+  "home": "Milwaukee Bucks",
+  "abbrA": "BKN",
+  "abbrH": "MIL",
+  "margin": 1.8,
+  "total": 231.5,
+  "poss": 99.9,
+  "ptsA": 114.9,
+  "ptsH": 116.6,
+  "pModelHome": 0.5522,
+  "pMarketHome": 0.5121,
+  "pFinalHome": 0.5181,
+  "parts": [
+   {
+    "n": "Team-Stärke & Tempo",
+    "m": 0.6,
+    "info": "Gewicht 0.51"
+   },
+   {
+    "n": "Heutige Aufstellung (Spieler)",
+    "m": -0.2,
+    "info": "Netto BKN -6.3, MIL -6.7 pro 100 · Gewicht 0.51"
+   },
+   {
+    "n": "Heimvorteil",
+    "m": 1.5
+   },
+   {
+    "n": "Reise",
+    "m": -0.0,
+    "info": "BKN 240 km, MIL 347 km (gewichtet)"
+   },
+   {
+    "n": "Form (letzte 10)",
+    "m": -0.0,
+    "info": "Abweichung vom erwarteten Ergebnis, zur Null gezogen"
+   }
+  ],
+  "ratings": {
+   "away": {
+    "off": -3.49,
+    "def": -4.75,
+    "pace": 98.8,
+    "w": 0.44,
+    "netCur": -9.82,
+    "netPrior": -9.96
+   },
+   "home": {
+    "off": -2.84,
+    "def": -4.27,
+    "pace": 99.6,
+    "w": 0.47,
+    "netCur": -10.06,
+    "netPrior": -6.39
+   }
+  },
+  "lineup": {
+   "away": {
+    "net": -6.3,
+    "min": 267
+   },
+   "home": {
+    "net": -6.7,
+    "min": 296
+   }
+  },
+  "schedule": {
+   "away": {
+    "rest": 1,
+    "dens": 0,
+    "km": 239.67816382448927,
+    "n": 16
+   },
+   "home": {
+    "rest": 1,
+    "dens": 0,
+    "km": 346.65880229845374,
+    "n": 19
+   }
+  },
+  "kalshi": {
+   "a": 48.5,
+   "b": 51.5,
+   "vol": 93654
+  },
+  "polymarket": {
+   "pA": 0.485,
+   "pB": 0.515,
+   "volume": 107818
+  },
+  "bookKey": "tipico_de",
+  "bookName": "Tipico",
+  "whales": {
+   "trades": [
+    {
+     "side": "A",
+     "team": "Brooklyn Nets",
+     "usd": 18099,
+     "price": 0.48,
+     "buy": true,
+     "ts": 1795644022,
+     "wallet": "Agitated-Bricklaying (0x84cf…2f63)"
+    },
+    {
+     "side": "A",
+     "team": "Brooklyn Nets",
+     "usd": 8451,
+     "price": 0.48,
+     "buy": true,
+     "ts": 1795634758,
+     "wallet": "Leading-Substitution (0x0c15…9a45)"
+    },
+    {
+     "side": "B",
+     "team": "Milwaukee Bucks",
+     "usd": 3201,
+     "price": 0.52,
+     "buy": true,
+     "ts": 1795600642,
+     "wallet": "Tasty-Rutabaga (0x84ec…72c1)"
+    },
+    {
+     "side": "B",
+     "team": "Milwaukee Bucks",
+     "usd": 2650,
+     "price": 0.53,
+     "buy": true,
+     "ts": 1795644034,
+     "wallet": "Well-Documented-Understanding (0x66e5…d3c7)"
+    },
+    {
+     "side": "B",
+     "team": "Milwaukee Bucks",
+     "usd": 2650,
+     "price": 0.53,
+     "buy": true,
+     "ts": 1795643914,
+     "wallet": "Well-Documented-Understanding (0x66e5…d3c7)"
+    },
+    {
+     "side": "A",
+     "team": "Brooklyn Nets",
+     "usd": 1827,
+     "price": 0.49,
+     "buy": true,
+     "ts": 1795573718,
+     "wallet": "Legitimate-Oyster-Outrigger (0x73c8…e1b1)"
+    },
+    {
+     "side": "A",
+     "team": "Brooklyn Nets",
+     "usd": 1673,
+     "price": 0.5,
+     "buy": true,
+     "ts": 1795574116,
+     "wallet": "Legitimate-Oyster-Outrigger (0x73c8…e1b1)"
+    },
+    {
+     "side": "A",
+     "team": "Brooklyn Nets",
+     "usd": 1639,
+     "price": 0.48,
+     "buy": true,
+     "ts": 1795647319,
+     "wallet": "Front-Kilogram (0xbb64…db86)"
+    },
+    {
+     "side": "A",
+     "team": "Brooklyn Nets",
+     "usd": 1448,
+     "price": 0.48,
+     "buy": true,
+     "ts": 1795611670,
+     "wallet": "Agitated-Bricklaying (0x84cf…2f63)"
+    },
+    {
+     "side": "A",
+     "team": "Brooklyn Nets",
+     "usd": 1327,
+     "price": 0.48,
+     "buy": true,
+     "ts": 1795644019,
+     "wallet": "Fond-Tongue (0x2559…b2e3)"
+    }
+   ],
+   "usdA": 34464,
+   "usdB": 8501
+  },
+  "injuries": {
+   "away": [
+    {
+     "player": "Tyler Bilodeau",
+     "status": "Out",
+     "info": "G League - Two-Way",
+     "src": "NBA",
+     "pOut": 1.0
+    },
+    {
+     "player": "Joshua Jefferson",
+     "status": "Out",
+     "info": "G League - On Assignment",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.0,
+     "bpm": -1.7,
+     "mpg": 0.0,
+     "loss": 0.0
+    },
+    {
+     "player": "Chaney Johnson",
+     "status": "Out",
+     "info": "G League - Two-Way",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.0,
+     "bpm": -2.5,
+     "mpg": 16.1,
+     "loss": 0.0
+    },
+    {
+     "player": "Drake Powell",
+     "status": "Out",
+     "info": "G League - On Assignment",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.0,
+     "bpm": -4.5,
+     "mpg": 7.2,
+     "loss": 0.0
+    },
+    {
+     "player": "Ben Saraf",
+     "status": "Out",
+     "info": "G League - On Assignment",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.0,
+     "bpm": -4.8,
+     "mpg": 20.8,
+     "loss": 0.0
+    },
+    {
+     "player": "Nolan Traore",
+     "status": "Out",
+     "info": "Injury/Illness - Right Hamstring Strain LAC@MEM",
+     "src": "NBA",
+     "pOut": 1.0
+    }
+   ],
+   "home": []
+  },
+  "bets": [
+   {
+    "market": "Sieg",
+    "pick": "Brooklyn Nets",
+    "odds": 2.0,
+    "line": null,
+    "side": "away",
+    "book": "sport888",
+    "bookName": "888sport",
+    "pModel": 0.4478,
+    "pMarket": 0.4879,
+    "p": 0.4819,
+    "ev": -0.0363,
+    "evRaw": -0.1044,
+    "evPin": -0.0185,
+    "pPin": 0.4907,
+    "mainOdds": 1.93,
+    "mainBook": "Tipico",
+    "nBooks": 6,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Sieg",
+    "pick": "Milwaukee Bucks",
+    "odds": 1.91,
+    "line": null,
+    "side": "home",
+    "book": "betway",
+    "bookName": "Betway",
+    "pModel": 0.5522,
+    "pMarket": 0.5121,
+    "p": 0.5181,
+    "ev": -0.0103,
+    "evRaw": 0.0547,
+    "evPin": -0.0273,
+    "pPin": 0.5093,
+    "mainOdds": 1.83,
+    "mainBook": "Tipico",
+    "nBooks": 6,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Handicap",
+    "pick": "Brooklyn Nets +1.5",
+    "odds": 1.91,
+    "line": 1.5,
+    "side": "away",
+    "book": "sport888",
+    "bookName": "888sport",
+    "pModel": 0.4913,
+    "pMarket": 0.5212,
+    "p": 0.5167,
+    "ev": -0.0131,
+    "evRaw": -0.0615,
+    "evPin": -0.0046,
+    "pPin": 0.5212,
+    "mainOdds": 1.83,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Handicap",
+    "pick": "Milwaukee Bucks +0.5",
+    "odds": 1.83,
+    "line": 0.5,
+    "side": "home",
+    "book": "leovegas_se",
+    "bookName": "LeoVegas",
+    "pModel": 0.5666,
+    "pMarket": 0.537,
+    "p": 0.5415,
+    "ev": -0.0091,
+    "evRaw": 0.0369,
+    "evPin": -0.0172,
+    "pPin": 0.537,
+    "mainOdds": 1.87,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Gesamtpunkte",
+    "pick": "Über 233.5",
+    "odds": 1.9,
+    "line": 233.5,
+    "side": "over",
+    "book": "betano_uk",
+    "bookName": "Betano",
+    "pModel": 0.4586,
+    "pMarket": 0.5131,
+    "p": 0.5049,
+    "ev": -0.0407,
+    "evRaw": -0.1288,
+    "evPin": -0.0251,
+    "pPin": 0.5131,
+    "mainOdds": 1.83,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 5 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Gesamtpunkte",
+    "pick": "Unter 233.5",
+    "odds": 1.95,
+    "line": 233.5,
+    "side": "under",
+    "book": "sport888",
+    "bookName": "888sport",
+    "pModel": 0.5414,
+    "pMarket": 0.4869,
+    "p": 0.4951,
+    "ev": -0.0346,
+    "evRaw": 0.0558,
+    "evPin": -0.0505,
+    "pPin": 0.4869,
+    "mainOdds": 1.87,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 5 %",
+    "value": false,
+    "stake": 0.0
+   }
+  ],
+  "best": {
+   "market": "Handicap",
+   "pick": "Milwaukee Bucks +0.5",
+   "odds": 1.83,
+   "line": 0.5,
+   "side": "home",
+   "book": "leovegas_se",
+   "bookName": "LeoVegas",
+   "pModel": 0.5666,
+   "pMarket": 0.537,
+   "p": 0.5415,
+   "ev": -0.0091,
+   "evRaw": 0.0369,
+   "evPin": -0.0172,
+   "pPin": 0.537,
+   "mainOdds": 1.87,
+   "mainBook": "Tipico",
+   "nBooks": 3,
+   "why": "EV unter 3 %",
+   "value": false,
+   "stake": 0.0
+  },
+  "hasValue": false,
+  "flash": null,
+  "sideA": "Milwaukee Bucks",
+  "pickLabel": "Brooklyn Nets @ Milwaukee Bucks",
+  "conf": 0.15,
+  "feat": {
+   "team": 1.117,
+   "player": -0.407,
+   "alt": 0.0,
+   "rest": 0.0,
+   "inj": 0.0,
+   "sched": 0,
+   "travel": -0.107,
+   "form": -0.1,
+   "TOTraw": 231.5,
+   "pModelRaw": 0.5522,
+   "pMarket": 0.5121
+  },
+  "links": {},
+  "injuryReport": "2026-11-25 18:15 ET",
+  "reportMissing": {
+   "home": false,
+   "away": false
+  },
+  "sdUsed": 13.69,
+  "sdMarket": 12.75314199657065,
+  "middayBest": {
+   "market": "Handicap",
+   "pick": "Milwaukee Bucks +0.5",
+   "odds": 1.82,
+   "line": 0.5,
+   "side": "home",
+   "book": "leovegas_se",
+   "bookName": "LeoVegas",
+   "pModel": 0.5666,
+   "pMarket": 0.5502,
+   "p": 0.5527,
+   "ev": 0.0059,
+   "evRaw": 0.0312,
+   "evPin": 0.0014,
+   "pPin": 0.5502,
+   "mainOdds": 1.83,
+   "mainBook": "Tipico",
+   "nBooks": 3,
+   "why": "EV unter 3 %",
+   "value": false,
+   "stake": 0.0
+  },
+  "eveningUpdate": "2026-11-25T23:27:57.958116+00:00",
+  "updateKind": "abends",
+  "changed": false
+ },
+ {
+  "id": "87ce247fb83685389ca8ffb21be6cd3e",
+  "sportKey": "basketball_nba",
+  "sport": "NBA",
+  "commence": "2026-11-26T00:10:00Z",
+  "away": "Chicago Bulls",
+  "home": "Charlotte Hornets",
+  "abbrA": "CHI",
+  "abbrH": "CHA",
+  "margin": 3.0,
+  "total": 224.5,
+  "poss": 98.7,
+  "ptsA": 110.7,
+  "ptsH": 113.7,
+  "pModelHome": 0.5867,
+  "pMarketHome": 0.62,
+  "pFinalHome": 0.615,
+  "parts": [
+   {
+    "n": "Team-Stärke & Tempo",
+    "m": 0.6,
+    "info": "Gewicht 0.51"
+   },
+   {
+    "n": "Heutige Aufstellung (Spieler)",
+    "m": 0.6,
+    "info": "Netto CHI -6.8, CHA -5.6 pro 100 · Gewicht 0.51"
+   },
+   {
+    "n": "Verletzungen (gegen Team-Ratings)",
+    "m": -0.4,
+    "info": "CHI −1.8, CHA −2.6 Punkte · Gewicht 0.50"
+   },
+   {
+    "n": "Heimvorteil",
+    "m": 1.5
+   },
+   {
+    "n": "Ruhe & Zeitzone",
+    "m": 0.2,
+    "info": "Ruhetage CHI 1, CHA 1"
+   },
+   {
+    "n": "Spielplan-Dichte",
+    "m": 1.4,
+    "info": "3-in-4/4-in-6: CHI 2, CHA 0"
+   },
+   {
+    "n": "Reise",
+    "m": 0.1,
+    "info": "CHI 474 km, CHA 0 km (gewichtet)"
+   },
+   {
+    "n": "Form (letzte 10)",
+    "m": -1.0,
+    "info": "Abweichung vom erwarteten Ergebnis, zur Null gezogen"
+   }
+  ],
+  "ratings": {
+   "away": {
+    "off": -1.41,
+    "def": -3.01,
+    "pace": 102.3,
+    "w": 0.46,
+    "netCur": -5.47,
+    "netPrior": -5.04
+   },
+   "home": {
+    "off": -3.19,
+    "def": -0.07,
+    "pace": 95.0,
+    "w": 0.44,
+    "netCur": -11.41,
+    "netPrior": 4.67
+   }
+  },
+  "lineup": {
+   "away": {
+    "net": -6.8,
+    "min": 222
+   },
+   "home": {
+    "net": -5.6,
+    "min": 284
+   }
+  },
+  "schedule": {
+   "away": {
+    "rest": 1,
+    "dens": 2,
+    "km": 474.26549829089174,
+    "n": 18
+   },
+   "home": {
+    "rest": 1,
+    "dens": 0,
+    "km": 0.0,
+    "n": 17
+   }
+  },
+  "kalshi": {
+   "a": 38.5,
+   "b": 62.5,
+   "vol": 215495
+  },
+  "polymarket": {
+   "pA": 0.385,
+   "pB": 0.615,
+   "volume": 120758
+  },
+  "bookKey": "tipico_de",
+  "bookName": "Tipico",
+  "whales": {
+   "trades": [
+    {
+     "side": "B",
+     "team": "Charlotte Hornets",
+     "usd": 6840,
+     "price": 0.61,
+     "buy": true,
+     "ts": 1795644114,
+     "wallet": "Agitated-Bricklaying (0x84cf…2f63)"
+    },
+    {
+     "side": "B",
+     "team": "Charlotte Hornets",
+     "usd": 5244,
+     "price": 0.59,
+     "buy": true,
+     "ts": 1795595975,
+     "wallet": "Tasty-Rutabaga (0x84ec…72c1)"
+    },
+    {
+     "side": "B",
+     "team": "Charlotte Hornets",
+     "usd": 4694,
+     "price": 0.6,
+     "buy": true,
+     "ts": 1795619336,
+     "wallet": "Agitated-Bricklaying (0x84cf…2f63)"
+    },
+    {
+     "side": "B",
+     "team": "Charlotte Hornets",
+     "usd": 3331,
+     "price": 0.61,
+     "buy": true,
+     "ts": 1795644114,
+     "wallet": "Agitated-Bricklaying (0x84cf…2f63)"
+    },
+    {
+     "side": "B",
+     "team": "Charlotte Hornets",
+     "usd": 3293,
+     "price": 0.6,
+     "buy": true,
+     "ts": 1795619335,
+     "wallet": "Agitated-Bricklaying (0x84cf…2f63)"
+    },
+    {
+     "side": "B",
+     "team": "Charlotte Hornets",
+     "usd": 3243,
+     "price": 0.59,
+     "buy": true,
+     "ts": 1795559183,
+     "wallet": "Miniature-Ad (0x52ed…8db7)"
+    },
+    {
+     "side": "B",
+     "team": "Charlotte Hornets",
+     "usd": 2970,
+     "price": 0.58,
+     "buy": true,
+     "ts": 1795594490,
+     "wallet": "Positive-Console (0x684b…8409)"
+    },
+    {
+     "side": "B",
+     "team": "Charlotte Hornets",
+     "usd": 2491,
+     "price": 0.6,
+     "buy": true,
+     "ts": 1795625789,
+     "wallet": "Positive-Console (0x684b…8409)"
+    },
+    {
+     "side": "B",
+     "team": "Charlotte Hornets",
+     "usd": 2000,
+     "price": 0.61,
+     "buy": true,
+     "ts": 1795631002,
+     "wallet": "Orderly-Venture (0xd48a…6e90)"
+    },
+    {
+     "side": "A",
+     "team": "Chicago Bulls",
+     "usd": 2000,
+     "price": 0.4,
+     "buy": true,
+     "ts": 1795628155,
+     "wallet": "Agitated-Bricklaying (0x84cf…2f63)"
+    }
+   ],
+   "usdA": 2000,
+   "usdB": 37939
+  },
+  "injuries": {
+   "away": [
+    {
+     "player": "Tobe Awaka",
+     "status": "Out",
+     "info": "G League - Two-Way",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.2,
+     "bpm": -0.9,
+     "mpg": 10.2,
+     "loss": 0.03
+    },
+    {
+     "player": "Norman Powell",
+     "status": "Out",
+     "info": "Injury/Illness - Right Hamstring Strain",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 1.5,
+     "bpm": 0.5,
+     "mpg": 29.5,
+     "loss": 0.54
+    },
+    {
+     "player": "Jaylin Sellers",
+     "status": "Out",
+     "info": "G League - Two-Way",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.4,
+     "bpm": -0.0,
+     "mpg": 10.0,
+     "loss": 0.08
+    },
+    {
+     "player": "Jalen Smith",
+     "status": "Out",
+     "info": "Injury/Illness - Gastrointestinal Illness",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 1.3,
+     "bpm": 0.5,
+     "mpg": 25.3,
+     "loss": 1.02
+    },
+    {
+     "player": "Caleb Wilson",
+     "status": "Out",
+     "info": "Injury/Illness - Right Metacarpal Fracture",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.4,
+     "bpm": -1.4,
+     "mpg": 30.8,
+     "loss": 0.11
+    }
+   ],
+   "home": [
+    {
+     "player": "Michael Ajayi",
+     "status": "Out",
+     "info": "G League - Two-Way",
+     "src": "NBA",
+     "pOut": 1.0
+    },
+    {
+     "player": "Grayson Allen",
+     "status": "Out",
+     "info": "Concussion Protocol",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 2.0,
+     "bpm": 1.5,
+     "mpg": 27.1,
+     "loss": 0.71
+    },
+    {
+     "player": "Kylan Boswell",
+     "status": "Out",
+     "info": "G League - Two-Way",
+     "src": "NBA",
+     "pOut": 1.0
+    },
+    {
+     "player": "Sion James",
+     "status": "Available",
+     "info": "Injury/Illness - Left Thigh Soreness",
+     "src": "NBA",
+     "pOut": 0.0
+    },
+    {
+     "player": "Ryan Kalkbrenner",
+     "status": "Out",
+     "info": "Injury/Illness - Left Hip Soreness / Tightness",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 1.0,
+     "bpm": 0.7,
+     "mpg": 17.6,
+     "loss": 0.83
+    },
+    {
+     "player": "Kon Knueppel",
+     "status": "Out",
+     "info": "Injury/Illness - Left Hamstring Strain",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 2.6,
+     "bpm": 2.0,
+     "mpg": 31.5,
+     "loss": 1.09
+    },
+    {
+     "player": "Dennis Schroder",
+     "status": "Out",
+     "info": "Injury/Illness - Left Hamstring Strain",
+     "src": "NBA",
+     "pOut": 1.0
+    }
+   ]
+  },
+  "bets": [
+   {
+    "market": "Sieg",
+    "pick": "Chicago Bulls",
+    "odds": 2.5,
+    "line": null,
+    "side": "away",
+    "book": "sport888",
+    "bookName": "888sport",
+    "pModel": 0.4133,
+    "pMarket": 0.38,
+    "p": 0.385,
+    "ev": -0.0376,
+    "evRaw": 0.0332,
+    "evPin": -0.0579,
+    "pPin": 0.3768,
+    "mainOdds": 2.4,
+    "mainBook": "Tipico",
+    "nBooks": 6,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Sieg",
+    "pick": "Charlotte Hornets",
+    "odds": 1.6,
+    "line": null,
+    "side": "home",
+    "book": "betano_uk",
+    "bookName": "Betano",
+    "pModel": 0.5867,
+    "pMarket": 0.62,
+    "p": 0.615,
+    "ev": -0.0159,
+    "evRaw": -0.0613,
+    "evPin": -0.0029,
+    "pPin": 0.6232,
+    "mainOdds": 1.55,
+    "mainBook": "Tipico",
+    "nBooks": 6,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Handicap",
+    "pick": "Chicago Bulls +3.5",
+    "odds": 1.92,
+    "line": 3.5,
+    "side": "away",
+    "book": "leovegas_se",
+    "bookName": "LeoVegas",
+    "pModel": 0.5146,
+    "pMarket": 0.4801,
+    "p": 0.4853,
+    "ev": -0.0682,
+    "evRaw": -0.012,
+    "evPin": -0.0782,
+    "pPin": 0.4801,
+    "mainOdds": 1.87,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Handicap",
+    "pick": "Charlotte Hornets -3.5",
+    "odds": 1.91,
+    "line": -3.5,
+    "side": "home",
+    "book": "sport888",
+    "bookName": "888sport",
+    "pModel": 0.4854,
+    "pMarket": 0.5199,
+    "p": 0.5147,
+    "ev": -0.0169,
+    "evRaw": -0.0729,
+    "evPin": -0.007,
+    "pPin": 0.5199,
+    "mainOdds": 1.83,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Gesamtpunkte",
+    "pick": "Über 217.5",
+    "odds": 1.85,
+    "line": 217.5,
+    "side": "over",
+    "book": "tipico_de",
+    "bookName": "Tipico",
+    "pModel": 0.642,
+    "pMarket": 0.5033,
+    "p": 0.5241,
+    "ev": -0.0303,
+    "evRaw": 0.1877,
+    "evPin": -0.0688,
+    "pPin": 0.5033,
+    "mainOdds": 1.85,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 5 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Gesamtpunkte",
+    "pick": "Unter 218.5",
+    "odds": 1.91,
+    "line": 218.5,
+    "side": "under",
+    "book": "betano_uk",
+    "bookName": "Betano",
+    "pModel": 0.3777,
+    "pMarket": 0.5174,
+    "p": 0.4965,
+    "ev": -0.0517,
+    "evRaw": -0.2787,
+    "evPin": -0.0117,
+    "pPin": 0.5174,
+    "mainOdds": 1.85,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 5 %",
+    "value": false,
+    "stake": 0.0
+   }
+  ],
+  "best": {
+   "market": "Sieg",
+   "pick": "Charlotte Hornets",
+   "odds": 1.6,
+   "line": null,
+   "side": "home",
+   "book": "betano_uk",
+   "bookName": "Betano",
+   "pModel": 0.5867,
+   "pMarket": 0.62,
+   "p": 0.615,
+   "ev": -0.0159,
+   "evRaw": -0.0613,
+   "evPin": -0.0029,
+   "pPin": 0.6232,
+   "mainOdds": 1.55,
+   "mainBook": "Tipico",
+   "nBooks": 6,
+   "why": "EV unter 3 %",
+   "value": false,
+   "stake": 0.0
+  },
+  "hasValue": false,
+  "flash": null,
+  "sideA": "Charlotte Hornets",
+  "pickLabel": "Chicago Bulls @ Charlotte Hornets",
+  "conf": 0.15,
+  "feat": {
+   "team": 1.15,
+   "player": 1.104,
+   "alt": 0.0,
+   "rest": 0.3,
+   "inj": -0.854,
+   "sched": 2,
+   "travel": 0.474,
+   "form": -6.422,
+   "TOTraw": 224.48,
+   "pModelRaw": 0.5867,
+   "pMarket": 0.62
+  },
+  "links": {},
+  "injuryReport": "2026-11-25 18:15 ET",
+  "reportMissing": {
+   "home": false,
+   "away": false
+  },
+  "sdUsed": 13.69,
+  "sdMarket": 12.75314199657065,
+  "middayBest": {
+   "market": "Sieg",
+   "pick": "Charlotte Hornets",
+   "odds": 1.67,
+   "line": null,
+   "side": "home",
+   "book": "sport888",
+   "bookName": "888sport",
+   "pModel": 0.5892,
+   "pMarket": 0.5904,
+   "p": 0.5902,
+   "ev": -0.0143,
+   "evRaw": -0.0161,
+   "evPin": -0.0168,
+   "pPin": 0.5888,
+   "mainOdds": 1.65,
+   "mainBook": "Tipico",
+   "nBooks": 8,
+   "why": "EV unter 3 %",
+   "value": false,
+   "stake": 0.0
+  },
+  "eveningUpdate": "2026-11-25T23:27:57.958116+00:00",
+  "updateKind": "abends",
+  "changed": false
+ },
+ {
+  "id": "e6df92326adb480e427bb7c10f445c60",
+  "sportKey": "basketball_nba",
+  "sport": "NBA",
+  "commence": "2026-11-26T03:10:00Z",
+  "away": "Sacramento Kings",
+  "home": "Golden State Warriors",
+  "abbrA": "SAC",
+  "abbrH": "GSW",
+  "margin": 7.2,
+  "total": 221.7,
+  "poss": 97.9,
+  "ptsA": 107.3,
+  "ptsH": 114.5,
+  "pModelHome": 0.7001,
+  "pMarketHome": 0.7429,
+  "pFinalHome": 0.7365,
+  "parts": [
+   {
+    "n": "Team-Stärke & Tempo",
+    "m": 4.0,
+    "info": "Gewicht 0.51"
+   },
+   {
+    "n": "Heutige Aufstellung (Spieler)",
+    "m": 2.8,
+    "info": "Netto SAC -9.7, GSW -4.1 pro 100 · Gewicht 0.51"
+   },
+   {
+    "n": "Verletzungen (gegen Team-Ratings)",
+    "m": -1.9,
+    "info": "SAC −0.8, GSW −4.7 Punkte · Gewicht 0.50"
+   },
+   {
+    "n": "Heimvorteil",
+    "m": 1.5
+   },
+   {
+    "n": "Ruhe & Zeitzone",
+    "m": 0.2,
+    "info": "Ruhetage SAC 1, GSW 2"
+   },
+   {
+    "n": "Spielplan-Dichte",
+    "m": 0.7,
+    "info": "3-in-4/4-in-6: SAC 1, GSW 0"
+   },
+   {
+    "n": "Reise",
+    "m": 0.0,
+    "info": "SAC 60 km, GSW 0 km (gewichtet)"
+   },
+   {
+    "n": "Form (letzte 10)",
+    "m": -0.1,
+    "info": "Abweichung vom erwarteten Ergebnis, zur Null gezogen"
+   }
+  ],
+  "ratings": {
+   "away": {
+    "off": -4.09,
+    "def": -3.44,
+    "pace": 99.2,
+    "w": 0.46,
+    "netCur": -8.43,
+    "netPrior": -9.64
+   },
+   "home": {
+    "off": -0.66,
+    "def": 1.22,
+    "pace": 97.2,
+    "w": 0.46,
+    "netCur": 1.48,
+    "netPrior": -0.33
+   }
+  },
+  "lineup": {
+   "away": {
+    "net": -9.7,
+    "min": 267
+   },
+   "home": {
+    "net": -4.1,
+    "min": 239
+   }
+  },
+  "schedule": {
+   "away": {
+    "rest": 1,
+    "dens": 1,
+    "km": 59.53464799208374,
+    "n": 18
+   },
+   "home": {
+    "rest": 2,
+    "dens": 0,
+    "km": 0.0,
+    "n": 18
+   }
+  },
+  "kalshi": {
+   "a": 26.5,
+   "b": 74.5,
+   "vol": 430504
+  },
+  "polymarket": {
+   "pA": 0.255,
+   "pB": 0.745,
+   "volume": 53650
+  },
+  "bookKey": "tipico_de",
+  "bookName": "Tipico",
+  "whales": {
+   "trades": [
+    {
+     "side": "B",
+     "team": "Golden State Warriors",
+     "usd": 2488,
+     "price": 0.69,
+     "buy": true,
+     "ts": 1795612679,
+     "wallet": "Agitated-Bricklaying (0x84cf…2f63)"
+    },
+    {
+     "side": "B",
+     "team": "Golden State Warriors",
+     "usd": 2370,
+     "price": 0.7,
+     "buy": true,
+     "ts": 1795616689,
+     "wallet": "Agitated-Bricklaying (0x84cf…2f63)"
+    },
+    {
+     "side": "B",
+     "team": "Golden State Warriors",
+     "usd": 2079,
+     "price": 0.69,
+     "buy": true,
+     "ts": 1795582351,
+     "wallet": "Agitated-Bricklaying (0x84cf…2f63)"
+    },
+    {
+     "side": "B",
+     "team": "Golden State Warriors",
+     "usd": 1786,
+     "price": 0.72,
+     "buy": true,
+     "ts": 1795639522,
+     "wallet": "Agitated-Bricklaying (0x84cf…2f63)"
+    },
+    {
+     "side": "B",
+     "team": "Golden State Warriors",
+     "usd": 1200,
+     "price": 0.73,
+     "buy": true,
+     "ts": 1795645702,
+     "wallet": "Sniveling-Exam (0x27d2…b0f8)"
+    },
+    {
+     "side": "B",
+     "team": "Golden State Warriors",
+     "usd": 1009,
+     "price": 0.73,
+     "buy": true,
+     "ts": 1795645807,
+     "wallet": "Quick-Diffuse (0x5fe0…d994)"
+    }
+   ],
+   "usdA": 0,
+   "usdB": 10932
+  },
+  "injuries": {
+   "away": [
+    {
+     "player": "Zach LaVine",
+     "status": "Out",
+     "info": "Injury/Illness - Right Knee Soreness",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 1.0,
+     "bpm": -0.6,
+     "mpg": 33.0,
+     "loss": 0.81
+    },
+    {
+     "player": "Jonathan Mogbo",
+     "status": "Out",
+     "info": "G League - Two-Way",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.1,
+     "bpm": -1.6,
+     "mpg": 14.4,
+     "loss": 0.02
+    },
+    {
+     "player": "Maxime Raynaud",
+     "status": "Out",
+     "info": "Injury/Illness - Right Patella Subluxation",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.0,
+     "bpm": -2.1,
+     "mpg": 26.5,
+     "loss": 0.0
+    },
+    {
+     "player": "Ben Simmons",
+     "status": "Out",
+     "info": "Injury/Illness - Right Achilles Tendon Repair / Surgery",
+     "src": "NBA",
+     "pOut": 1.0
+    }
+   ],
+   "home": [
+    {
+     "player": "Jimmy Butler III",
+     "status": "Out",
+     "info": "Injury/Illness - Right ACL Repair / Surgery",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 3.4,
+     "bpm": 3.3,
+     "mpg": 31.1,
+     "loss": 1.3
+    },
+    {
+     "player": "Stephen Curry",
+     "status": "Out",
+     "info": "Injury/Illness - Right Oblique Tear",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 4.2,
+     "bpm": 5.6,
+     "mpg": 26.3,
+     "loss": 2.71
+    },
+    {
+     "player": "Yaxel Lendeborg",
+     "status": "Questionable",
+     "info": "Injury/Illness - Illness",
+     "src": "NBA",
+     "pOut": 0.45,
+     "value": 1.2,
+     "bpm": -0.2,
+     "mpg": 31.8,
+     "loss": 0.25
+    },
+    {
+     "player": "Moses Moody",
+     "status": "Out",
+     "info": "Injury/Illness - Left Patellar Tendon Repair / Surgery",
+     "src": "NBA",
+     "pOut": 1.0,
+     "value": 0.9,
+     "bpm": -0.4,
+     "mpg": 25.7,
+     "loss": 0.33
+    },
+    {
+     "player": "Kristaps Porzingis",
+     "status": "Out",
+     "info": "Not With Team",
+     "src": "NBA",
+     "pOut": 1.0
+    },
+    {
+     "player": "Brandon Williams",
+     "status": "Questionable",
+     "info": "Injury/Illness - Left Hamstring Strain SAS@POR",
+     "src": "NBA",
+     "pOut": 0.45,
+     "value": 0.6,
+     "bpm": -0.1,
+     "mpg": 16.1,
+     "loss": 0.08
+    }
+   ]
+  },
+  "bets": [
+   {
+    "market": "Sieg",
+    "pick": "Sacramento Kings",
+    "odds": 3.65,
+    "line": null,
+    "side": "away",
+    "book": "winamax_de",
+    "bookName": "Winamax",
+    "pModel": 0.2999,
+    "pMarket": 0.2571,
+    "p": 0.2635,
+    "ev": -0.0381,
+    "evRaw": 0.0947,
+    "evPin": -0.0673,
+    "pPin": 0.2555,
+    "mainOdds": 3.6,
+    "mainBook": "Tipico",
+    "nBooks": 6,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Sieg",
+    "pick": "Golden State Warriors",
+    "odds": 1.32,
+    "line": null,
+    "side": "home",
+    "book": "winamax_de",
+    "bookName": "Winamax",
+    "pModel": 0.7001,
+    "pMarket": 0.7429,
+    "p": 0.7365,
+    "ev": -0.0279,
+    "evRaw": -0.0759,
+    "evPin": -0.0173,
+    "pPin": 0.7445,
+    "mainOdds": 1.28,
+    "mainBook": "Tipico",
+    "nBooks": 6,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Handicap",
+    "pick": "Sacramento Kings +8.5",
+    "odds": 1.91,
+    "line": 8.5,
+    "side": "away",
+    "book": "sport888",
+    "bookName": "888sport",
+    "pModel": 0.5384,
+    "pMarket": 0.5052,
+    "p": 0.5102,
+    "ev": -0.0256,
+    "evRaw": 0.0283,
+    "evPin": -0.0351,
+    "pPin": 0.5052,
+    "mainOdds": 1.87,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Handicap",
+    "pick": "Golden State Warriors -7.5",
+    "odds": 1.83,
+    "line": -7.5,
+    "side": "home",
+    "book": "tipico_de",
+    "bookName": "Tipico",
+    "pModel": 0.4907,
+    "pMarket": 0.5239,
+    "p": 0.519,
+    "ev": -0.0503,
+    "evRaw": -0.102,
+    "evPin": -0.0412,
+    "pPin": 0.5239,
+    "mainOdds": 1.83,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 3 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Gesamtpunkte",
+    "pick": "Über 215.5",
+    "odds": 1.91,
+    "line": 215.5,
+    "side": "over",
+    "book": "sport888",
+    "bookName": "888sport",
+    "pModel": 0.6271,
+    "pMarket": 0.4932,
+    "p": 0.5133,
+    "ev": -0.0196,
+    "evRaw": 0.1978,
+    "evPin": -0.058,
+    "pPin": 0.4932,
+    "mainOdds": 1.87,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 5 %",
+    "value": false,
+    "stake": 0.0
+   },
+   {
+    "market": "Gesamtpunkte",
+    "pick": "Unter 215.5",
+    "odds": 1.91,
+    "line": 215.5,
+    "side": "under",
+    "book": "sport888",
+    "bookName": "888sport",
+    "pModel": 0.3729,
+    "pMarket": 0.5068,
+    "p": 0.4867,
+    "ev": -0.0704,
+    "evRaw": -0.2878,
+    "evPin": -0.032,
+    "pPin": 0.5068,
+    "mainOdds": 1.83,
+    "mainBook": "Tipico",
+    "nBooks": 3,
+    "why": "EV unter 5 %",
+    "value": false,
+    "stake": 0.0
+   }
+  ],
+  "best": {
+   "market": "Gesamtpunkte",
+   "pick": "Über 215.5",
+   "odds": 1.91,
+   "line": 215.5,
+   "side": "over",
+   "book": "sport888",
+   "bookName": "888sport",
+   "pModel": 0.6271,
+   "pMarket": 0.4932,
+   "p": 0.5133,
+   "ev": -0.0196,
+   "evRaw": 0.1978,
+   "evPin": -0.058,
+   "pPin": 0.4932,
+   "mainOdds": 1.87,
+   "mainBook": "Tipico",
+   "nBooks": 3,
+   "why": "EV unter 5 %",
+   "value": false,
+   "stake": 0.0
+  },
+  "hasValue": false,
+  "flash": null,
+  "sideA": "Golden State Warriors",
+  "pickLabel": "Sacramento Kings @ Golden State Warriors",
+  "conf": 0.15,
+  "feat": {
+   "team": 7.907,
+   "player": 5.428,
+   "alt": 0.0,
+   "rest": 0.3,
+   "inj": -3.854,
+   "sched": 1,
+   "travel": 0.06,
+   "form": -0.809,
+   "TOTraw": 221.72,
+   "pModelRaw": 0.7001,
+   "pMarket": 0.7429
+  },
+  "links": {},
+  "injuryReport": "2026-11-25 18:15 ET",
+  "reportMissing": {
+   "home": false,
+   "away": false
+  },
+  "sdUsed": 13.69,
+  "sdMarket": 12.75314199657065,
+  "middayBest": {
+   "market": "Handicap",
+   "pick": "Golden State Warriors -5.5",
+   "odds": 1.92,
+   "line": -5.5,
+   "side": "home",
+   "book": "leovegas_se",
+   "bookName": "LeoVegas",
+   "pModel": 0.5262,
+   "pMarket": 0.5147,
+   "p": 0.5165,
+   "ev": -0.0084,
+   "evRaw": 0.0103,
+   "evPin": -0.0117,
+   "pPin": 0.5147,
+   "mainOdds": 1.83,
+   "mainBook": "Tipico",
+   "nBooks": 4,
+   "why": "EV unter 3 %",
+   "value": false,
+   "stake": 0.0
+  },
+  "eveningUpdate": "2026-11-25T23:27:57.958116+00:00",
+  "updateKind": "abends",
+  "changed": true
+ },
+ {
   "id": "4f6d199bb67cf3a517a3880fd2f00b26",
   "sportKey": "basketball_nba",
   "sport": "NBA",
@@ -386,3434 +4223,6 @@
    "mainBook": "Tipico",
    "nBooks": 4,
    "why": "EV unter 5 %",
-   "value": false,
-   "stake": 0.0
-  }
- },
- {
-  "id": "9e203cbbc6d37b7b0d9c08cb89fe0b28",
-  "sportKey": "basketball_nba",
-  "sport": "NBA",
-  "commence": "2026-11-26T01:10:00Z",
-  "away": "Brooklyn Nets",
-  "home": "Milwaukee Bucks",
-  "abbrA": "BKN",
-  "abbrH": "MIL",
-  "margin": 1.8,
-  "total": 231.5,
-  "poss": 99.9,
-  "ptsA": 114.9,
-  "ptsH": 116.6,
-  "pModelHome": 0.5522,
-  "pMarketHome": 0.5187,
-  "pFinalHome": 0.5237,
-  "parts": [
-   {
-    "n": "Team-Stärke & Tempo",
-    "m": 0.6,
-    "info": "Gewicht 0.51"
-   },
-   {
-    "n": "Heutige Aufstellung (Spieler)",
-    "m": -0.2,
-    "info": "Netto BKN -6.3, MIL -6.7 pro 100 · Gewicht 0.51"
-   },
-   {
-    "n": "Heimvorteil",
-    "m": 1.5
-   },
-   {
-    "n": "Reise",
-    "m": -0.0,
-    "info": "BKN 240 km, MIL 347 km (gewichtet)"
-   },
-   {
-    "n": "Form (letzte 10)",
-    "m": -0.0,
-    "info": "Abweichung vom erwarteten Ergebnis, zur Null gezogen"
-   }
-  ],
-  "ratings": {
-   "away": {
-    "off": -3.49,
-    "def": -4.75,
-    "pace": 98.8,
-    "w": 0.44,
-    "netCur": -9.82,
-    "netPrior": -9.96
-   },
-   "home": {
-    "off": -2.84,
-    "def": -4.27,
-    "pace": 99.6,
-    "w": 0.47,
-    "netCur": -10.06,
-    "netPrior": -6.39
-   }
-  },
-  "lineup": {
-   "away": {
-    "net": -6.3,
-    "min": 267
-   },
-   "home": {
-    "net": -6.7,
-    "min": 296
-   }
-  },
-  "schedule": {
-   "away": {
-    "rest": 1,
-    "dens": 0,
-    "km": 239.67816382448927,
-    "n": 16
-   },
-   "home": {
-    "rest": 1,
-    "dens": 0,
-    "km": 346.65880229845374,
-    "n": 19
-   }
-  },
-  "kalshi": {
-   "a": 48.5,
-   "b": 51.5,
-   "vol": 36568
-  },
-  "polymarket": {
-   "pA": 0.475,
-   "pB": 0.525,
-   "volume": 21143
-  },
-  "bookKey": "tipico_de",
-  "bookName": "Tipico",
-  "whales": {
-   "trades": [
-    {
-     "side": "B",
-     "team": "Milwaukee Bucks",
-     "usd": 3201,
-     "price": 0.52,
-     "buy": true,
-     "ts": 1795600642,
-     "wallet": "Tasty-Rutabaga (0x84ec…72c1)"
-    },
-    {
-     "side": "A",
-     "team": "Brooklyn Nets",
-     "usd": 1827,
-     "price": 0.49,
-     "buy": true,
-     "ts": 1795573718,
-     "wallet": "Legitimate-Oyster-Outrigger (0x73c8…e1b1)"
-    },
-    {
-     "side": "A",
-     "team": "Brooklyn Nets",
-     "usd": 1673,
-     "price": 0.5,
-     "buy": true,
-     "ts": 1795574116,
-     "wallet": "Legitimate-Oyster-Outrigger (0x73c8…e1b1)"
-    }
-   ],
-   "usdA": 3500,
-   "usdB": 3201
-  },
-  "injuries": {
-   "away": [
-    {
-     "player": "Tyler Bilodeau",
-     "status": "Out",
-     "info": "G League - Two-Way",
-     "src": "NBA",
-     "pOut": 1.0
-    },
-    {
-     "player": "Joshua Jefferson",
-     "status": "Out",
-     "info": "G League - On Assignment",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.0,
-     "bpm": -1.7,
-     "mpg": 0.0,
-     "loss": 0.0
-    },
-    {
-     "player": "Chaney Johnson",
-     "status": "Out",
-     "info": "G League - Two-Way",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.0,
-     "bpm": -2.5,
-     "mpg": 16.1,
-     "loss": 0.0
-    },
-    {
-     "player": "Drake Powell",
-     "status": "Out",
-     "info": "G League - On Assignment",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.0,
-     "bpm": -4.5,
-     "mpg": 7.2,
-     "loss": 0.0
-    },
-    {
-     "player": "Ben Saraf",
-     "status": "Out",
-     "info": "G League - On Assignment",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.0,
-     "bpm": -4.8,
-     "mpg": 20.8,
-     "loss": 0.0
-    },
-    {
-     "player": "Nolan Traore",
-     "status": "Out",
-     "info": "Injury/Illness - Right Hamstring Strain LAC@MEM",
-     "src": "NBA",
-     "pOut": 1.0
-    }
-   ],
-   "home": []
-  },
-  "bets": [
-   {
-    "market": "Sieg",
-    "pick": "Brooklyn Nets",
-    "odds": 1.97,
-    "line": null,
-    "side": "away",
-    "book": "tipico_de",
-    "bookName": "Tipico",
-    "pModel": 0.4478,
-    "pMarket": 0.4813,
-    "p": 0.4763,
-    "ev": -0.0618,
-    "evRaw": -0.1178,
-    "evPin": -0.0494,
-    "pPin": 0.4826,
-    "mainOdds": 1.97,
-    "mainBook": "Tipico",
-    "nBooks": 7,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Sieg",
-    "pick": "Milwaukee Bucks",
-    "odds": 1.91,
-    "line": null,
-    "side": "home",
-    "book": "sport888",
-    "bookName": "888sport",
-    "pModel": 0.5522,
-    "pMarket": 0.5187,
-    "p": 0.5237,
-    "ev": 0.0003,
-    "evRaw": 0.0547,
-    "evPin": -0.0117,
-    "pPin": 0.5174,
-    "mainOdds": 1.8,
-    "mainBook": "Tipico",
-    "nBooks": 7,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Handicap",
-    "pick": "Brooklyn Nets +1.5",
-    "odds": 1.87,
-    "line": 1.5,
-    "side": "away",
-    "book": "tipico_de",
-    "bookName": "Tipico",
-    "pModel": 0.4913,
-    "pMarket": 0.5079,
-    "p": 0.5054,
-    "ev": -0.0549,
-    "evRaw": -0.0812,
-    "evPin": -0.0503,
-    "pPin": 0.5079,
-    "mainOdds": 1.87,
-    "mainBook": "Tipico",
-    "nBooks": 3,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Handicap",
-    "pick": "Milwaukee Bucks +0.5",
-    "odds": 1.82,
-    "line": 0.5,
-    "side": "home",
-    "book": "leovegas_se",
-    "bookName": "LeoVegas",
-    "pModel": 0.5666,
-    "pMarket": 0.5502,
-    "p": 0.5527,
-    "ev": 0.0059,
-    "evRaw": 0.0312,
-    "evPin": 0.0014,
-    "pPin": 0.5502,
-    "mainOdds": 1.83,
-    "mainBook": "Tipico",
-    "nBooks": 3,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Gesamtpunkte",
-    "pick": "Über 233.5",
-    "odds": 1.9,
-    "line": 233.5,
-    "side": "over",
-    "book": "betano_uk",
-    "bookName": "Betano",
-    "pModel": 0.4586,
-    "pMarket": 0.5149,
-    "p": 0.5065,
-    "ev": -0.0377,
-    "evRaw": -0.1288,
-    "evPin": -0.0216,
-    "pPin": 0.5149,
-    "mainOdds": 1.83,
-    "mainBook": "Tipico",
-    "nBooks": 3,
-    "why": "EV unter 5 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Gesamtpunkte",
-    "pick": "Unter 233.5",
-    "odds": 1.9,
-    "line": 233.5,
-    "side": "under",
-    "book": "betano_uk",
-    "bookName": "Betano",
-    "pModel": 0.5414,
-    "pMarket": 0.4851,
-    "p": 0.4935,
-    "ev": -0.0623,
-    "evRaw": 0.0288,
-    "evPin": -0.0784,
-    "pPin": 0.4851,
-    "mainOdds": 1.87,
-    "mainBook": "Tipico",
-    "nBooks": 3,
-    "why": "EV unter 5 %",
-    "value": false,
-    "stake": 0.0
-   }
-  ],
-  "best": {
-   "market": "Handicap",
-   "pick": "Milwaukee Bucks +0.5",
-   "odds": 1.82,
-   "line": 0.5,
-   "side": "home",
-   "book": "leovegas_se",
-   "bookName": "LeoVegas",
-   "pModel": 0.5666,
-   "pMarket": 0.5502,
-   "p": 0.5527,
-   "ev": 0.0059,
-   "evRaw": 0.0312,
-   "evPin": 0.0014,
-   "pPin": 0.5502,
-   "mainOdds": 1.83,
-   "mainBook": "Tipico",
-   "nBooks": 3,
-   "why": "EV unter 3 %",
-   "value": false,
-   "stake": 0.0
-  },
-  "hasValue": false,
-  "flash": null,
-  "sideA": "Milwaukee Bucks",
-  "pickLabel": "Brooklyn Nets @ Milwaukee Bucks",
-  "conf": 0.15,
-  "feat": {
-   "team": 1.117,
-   "player": -0.407,
-   "alt": 0.0,
-   "rest": 0.0,
-   "inj": 0.0,
-   "sched": 0,
-   "travel": -0.107,
-   "form": -0.1,
-   "TOTraw": 231.5,
-   "pModelRaw": 0.5522,
-   "pMarket": 0.5187
-  },
-  "links": {
-   "op_bwin": "https://sports.bwin.de/en/sports/events/20099897"
-  },
-  "injuryReport": "2026-11-25 06:30 ET",
-  "reportMissing": {
-   "home": false,
-   "away": false
-  },
-  "sdUsed": 13.7,
-  "sdMarket": 12.761179944791825,
-  "middayBest": {
-   "market": "Handicap",
-   "pick": "Milwaukee Bucks +0.5",
-   "odds": 1.82,
-   "line": 0.5,
-   "side": "home",
-   "book": "leovegas_se",
-   "bookName": "LeoVegas",
-   "pModel": 0.5666,
-   "pMarket": 0.5502,
-   "p": 0.5527,
-   "ev": 0.0059,
-   "evRaw": 0.0312,
-   "evPin": 0.0014,
-   "pPin": 0.5502,
-   "mainOdds": 1.83,
-   "mainBook": "Tipico",
-   "nBooks": 3,
-   "why": "EV unter 3 %",
-   "value": false,
-   "stake": 0.0
-  }
- },
- {
-  "id": "60fd73164f7b0d1848f998d922155d87",
-  "sportKey": "basketball_nba",
-  "sport": "NBA",
-  "commence": "2026-11-26T01:40:00Z",
-  "away": "Phoenix Suns",
-  "home": "Houston Rockets",
-  "abbrA": "PHX",
-  "abbrH": "HOU",
-  "margin": 7.0,
-  "total": 225.8,
-  "poss": 96.7,
-  "ptsA": 109.4,
-  "ptsH": 116.4,
-  "pModelHome": 0.6958,
-  "pMarketHome": 0.7724,
-  "pFinalHome": 0.7609,
-  "parts": [
-   {
-    "n": "Team-Stärke & Tempo",
-    "m": 2.7,
-    "info": "Gewicht 0.51"
-   },
-   {
-    "n": "Heutige Aufstellung (Spieler)",
-    "m": 2.7,
-    "info": "Netto PHX -1.2, HOU +4.3 pro 100 · Gewicht 0.51"
-   },
-   {
-    "n": "Verletzungen (gegen Team-Ratings)",
-    "m": 0.3,
-    "info": "PHX −0.6, HOU −0.0 Punkte · Gewicht 0.50"
-   },
-   {
-    "n": "Heimvorteil",
-    "m": 1.5
-   },
-   {
-    "n": "Ruhe & Zeitzone",
-    "m": 0.2,
-    "info": "Ruhetage PHX 1, HOU 1"
-   },
-   {
-    "n": "Reise",
-    "m": 0.1,
-    "info": "PHX 255 km, HOU 0 km (gewichtet)"
-   },
-   {
-    "n": "Form (letzte 10)",
-    "m": -0.5,
-    "info": "Abweichung vom erwarteten Ergebnis, zur Null gezogen"
-   }
-  ],
-  "ratings": {
-   "away": {
-    "off": 0.54,
-    "def": 0.02,
-    "pace": 98.3,
-    "w": 0.44,
-    "netCur": -0.22,
-    "netPrior": 1.69
-   },
-   "home": {
-    "off": 4.99,
-    "def": 1.09,
-    "pace": 96.9,
-    "w": 0.47,
-    "netCur": 8.94,
-    "netPrior": 5.02
-   }
-  },
-  "lineup": {
-   "away": {
-    "net": -1.2,
-    "min": 263
-   },
-   "home": {
-    "net": 4.3,
-    "min": 286
-   }
-  },
-  "schedule": {
-   "away": {
-    "rest": 1,
-    "dens": 0,
-    "km": 254.824440036445,
-    "n": 17
-   },
-   "home": {
-    "rest": 1,
-    "dens": 0,
-    "km": 0.0,
-    "n": 19
-   }
-  },
-  "kalshi": {
-   "a": 22.5,
-   "b": 77.5,
-   "vol": 91261
-  },
-  "polymarket": {
-   "pA": 0.235,
-   "pB": 0.765,
-   "volume": 6761
-  },
-  "bookKey": "tipico_de",
-  "bookName": "Tipico",
-  "whales": {
-   "trades": [],
-   "usdA": 0,
-   "usdB": 0
-  },
-  "injuries": {
-   "away": [
-    {
-     "player": "Mark Williams",
-     "status": "Out",
-     "info": "Injury/Illness - Left Shoulder Surgery",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 1.5,
-     "bpm": 1.1,
-     "mpg": 23.6,
-     "loss": 0.59
-    }
-   ],
-   "home": [
-    {
-     "player": "Quadir Copeland",
-     "status": "Out",
-     "info": "G League - Two-Way",
-     "src": "NBA",
-     "pOut": 1.0
-    },
-    {
-     "player": "Julian Phillips",
-     "status": "Out",
-     "info": "G League - Two-Way",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.1,
-     "bpm": -1.7,
-     "mpg": 9.5,
-     "loss": 0.0
-    }
-   ]
-  },
-  "bets": [
-   {
-    "market": "Sieg",
-    "pick": "Phoenix Suns",
-    "odds": 4.2,
-    "line": null,
-    "side": "away",
-    "book": "sport888",
-    "bookName": "888sport",
-    "pModel": 0.3042,
-    "pMarket": 0.2276,
-    "p": 0.2391,
-    "ev": 0.0042,
-    "evRaw": 0.2776,
-    "evPin": -0.0541,
-    "pPin": 0.2252,
-    "mainOdds": 4.1,
-    "mainBook": "Tipico",
-    "nBooks": 7,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Sieg",
-    "pick": "Houston Rockets",
-    "odds": 1.27,
-    "line": null,
-    "side": "home",
-    "book": "leovegas_se",
-    "bookName": "LeoVegas",
-    "pModel": 0.6958,
-    "pMarket": 0.7724,
-    "p": 0.7609,
-    "ev": -0.0337,
-    "evRaw": -0.1163,
-    "evPin": -0.016,
-    "pPin": 0.7748,
-    "mainOdds": 1.22,
-    "mainBook": "Tipico",
-    "nBooks": 7,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Handicap",
-    "pick": "Phoenix Suns +9.5",
-    "odds": 1.91,
-    "line": 9.5,
-    "side": "away",
-    "book": "sport888",
-    "bookName": "888sport",
-    "pModel": 0.5718,
-    "pMarket": 0.5121,
-    "p": 0.521,
-    "ev": -0.0048,
-    "evRaw": 0.0922,
-    "evPin": -0.022,
-    "pPin": 0.5121,
-    "mainOdds": 1.75,
-    "mainBook": "Tipico",
-    "nBooks": 3,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Handicap",
-    "pick": "Houston Rockets -9.5",
-    "odds": 1.95,
-    "line": -9.5,
-    "side": "home",
-    "book": "tipico_de",
-    "bookName": "Tipico",
-    "pModel": 0.4282,
-    "pMarket": 0.4879,
-    "p": 0.479,
-    "ev": -0.066,
-    "evRaw": -0.1651,
-    "evPin": -0.0485,
-    "pPin": 0.4879,
-    "mainOdds": 1.95,
-    "mainBook": "Tipico",
-    "nBooks": 3,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Gesamtpunkte",
-    "pick": "Über 222.5",
-    "odds": 1.85,
-    "line": 222.5,
-    "side": "over",
-    "book": "tipico_de",
-    "bookName": "Tipico",
-    "pModel": 0.5674,
-    "pMarket": 0.5041,
-    "p": 0.5136,
-    "ev": -0.0499,
-    "evRaw": 0.0498,
-    "evPin": -0.0675,
-    "pPin": 0.5041,
-    "mainOdds": 1.85,
-    "mainBook": "Tipico",
-    "nBooks": 3,
-    "why": "EV unter 5 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Gesamtpunkte",
-    "pick": "Unter 223.5",
-    "odds": 1.91,
-    "line": 223.5,
-    "side": "under",
-    "book": "sport888",
-    "bookName": "888sport",
-    "pModel": 0.4531,
-    "pMarket": 0.5167,
-    "p": 0.5072,
-    "ev": -0.0313,
-    "evRaw": -0.1345,
-    "evPin": -0.0131,
-    "pPin": 0.5167,
-    "mainOdds": 1.85,
-    "mainBook": "Tipico",
-    "nBooks": 3,
-    "why": "EV unter 5 %",
-    "value": false,
-    "stake": 0.0
-   }
-  ],
-  "best": {
-   "market": "Sieg",
-   "pick": "Phoenix Suns",
-   "odds": 4.2,
-   "line": null,
-   "side": "away",
-   "book": "sport888",
-   "bookName": "888sport",
-   "pModel": 0.3042,
-   "pMarket": 0.2276,
-   "p": 0.2391,
-   "ev": 0.0042,
-   "evRaw": 0.2776,
-   "evPin": -0.0541,
-   "pPin": 0.2252,
-   "mainOdds": 4.1,
-   "mainBook": "Tipico",
-   "nBooks": 7,
-   "why": "EV unter 3 %",
-   "value": false,
-   "stake": 0.0
-  },
-  "hasValue": false,
-  "flash": null,
-  "sideA": "Houston Rockets",
-  "pickLabel": "Phoenix Suns @ Houston Rockets",
-  "conf": 0.15,
-  "feat": {
-   "team": 5.344,
-   "player": 5.349,
-   "alt": 0.0,
-   "rest": 0.3,
-   "inj": 0.594,
-   "sched": 0,
-   "travel": 0.255,
-   "form": -3.415,
-   "TOTraw": 225.76,
-   "pModelRaw": 0.6958,
-   "pMarket": 0.7724
-  },
-  "links": {
-   "op_bwin": "https://sports.bwin.de/en/sports/events/20099898"
-  },
-  "injuryReport": "2026-11-25 06:30 ET",
-  "reportMissing": {
-   "home": false,
-   "away": false
-  },
-  "sdUsed": 13.7,
-  "sdMarket": 12.761179944791825,
-  "middayBest": {
-   "market": "Sieg",
-   "pick": "Phoenix Suns",
-   "odds": 4.2,
-   "line": null,
-   "side": "away",
-   "book": "sport888",
-   "bookName": "888sport",
-   "pModel": 0.3042,
-   "pMarket": 0.2276,
-   "p": 0.2391,
-   "ev": 0.0042,
-   "evRaw": 0.2776,
-   "evPin": -0.0541,
-   "pPin": 0.2252,
-   "mainOdds": 4.1,
-   "mainBook": "Tipico",
-   "nBooks": 7,
-   "why": "EV unter 3 %",
-   "value": false,
-   "stake": 0.0
-  }
- },
- {
-  "id": "9aa9f220709533d70d11f85fae886771",
-  "sportKey": "basketball_nba",
-  "sport": "NBA",
-  "commence": "2026-11-26T03:10:00Z",
-  "away": "San Antonio Spurs",
-  "home": "Portland Trail Blazers",
-  "abbrA": "SAS",
-  "abbrH": "POR",
-  "margin": -0.0,
-  "total": 224.5,
-  "poss": 98.3,
-  "ptsA": 112.2,
-  "ptsH": 112.2,
-  "pModelHome": 0.4989,
-  "pMarketHome": 0.4272,
-  "pFinalHome": 0.438,
-  "parts": [
-   {
-    "n": "Team-Stärke & Tempo",
-    "m": -2.4,
-    "info": "Gewicht 0.51"
-   },
-   {
-    "n": "Heutige Aufstellung (Spieler)",
-    "m": -1.0,
-    "info": "Netto SAS +4.1, POR +2.2 pro 100 · Gewicht 0.51"
-   },
-   {
-    "n": "Verletzungen (gegen Team-Ratings)",
-    "m": 2.5,
-    "info": "SAS −5.3, POR −0.4 Punkte · Gewicht 0.50"
-   },
-   {
-    "n": "Heimvorteil",
-    "m": 1.5
-   },
-   {
-    "n": "Reise",
-    "m": -0.5,
-    "info": "SAS 389 km, POR 1936 km (gewichtet)"
-   },
-   {
-    "n": "Form (letzte 10)",
-    "m": -0.2,
-    "info": "Abweichung vom erwarteten Ergebnis, zur Null gezogen"
-   }
-  ],
-  "ratings": {
-   "away": {
-    "off": 4.11,
-    "def": 4.45,
-    "pace": 97.8,
-    "w": 0.47,
-    "netCur": 11.65,
-    "netPrior": 8.25
-   },
-   "home": {
-    "off": 1.77,
-    "def": 2.11,
-    "pace": 99.0,
-    "w": 0.46,
-    "netCur": 8.57,
-    "netPrior": -0.16
-   }
-  },
-  "lineup": {
-   "away": {
-    "net": 4.1,
-    "min": 218
-   },
-   "home": {
-    "net": 2.2,
-    "min": 269
-   }
-  },
-  "schedule": {
-   "away": {
-    "rest": 1,
-    "dens": 0,
-    "km": 389.4915509601007,
-    "n": 19
-   },
-   "home": {
-    "rest": 1,
-    "dens": 0,
-    "km": 1936.3422021423921,
-    "n": 18
-   }
-  },
-  "kalshi": {
-   "a": 56.5,
-   "b": 42.5,
-   "vol": 42435
-  },
-  "polymarket": {
-   "pA": 0.565,
-   "pB": 0.435,
-   "volume": 25794
-  },
-  "bookKey": "tipico_de",
-  "bookName": "Tipico",
-  "whales": {
-   "trades": [
-    {
-     "side": "B",
-     "team": "Portland Trail Blazers",
-     "usd": 2599,
-     "price": 0.429,
-     "buy": true,
-     "ts": 1795600825,
-     "wallet": "Normal-Distance-Apparatus (0xc374…0f3e)"
-    },
-    {
-     "side": "B",
-     "team": "Portland Trail Blazers",
-     "usd": 2000,
-     "price": 0.43,
-     "buy": true,
-     "ts": 1795575722,
-     "wallet": "Legitimate-Oyster-Outrigger (0x73c8…e1b1)"
-    },
-    {
-     "side": "B",
-     "team": "Portland Trail Blazers",
-     "usd": 1499,
-     "price": 0.43,
-     "buy": true,
-     "ts": 1795592230,
-     "wallet": "Agitated-Bricklaying (0x84cf…2f63)"
-    }
-   ],
-   "usdA": 0,
-   "usdB": 6097
-  },
-  "injuries": {
-   "away": [
-    {
-     "player": "De'Aaron Fox",
-     "status": "Questionable",
-     "info": "Injury/Illness - Right Shin Contusion",
-     "src": "NBA",
-     "pOut": 0.45,
-     "value": 2.1,
-     "bpm": 1.4,
-     "mpg": 28.9,
-     "loss": 0.73
-    },
-    {
-     "player": "Dylan Harper",
-     "status": "Out",
-     "info": "Injury/Illness - Left Hip External Rotator Strain",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 2.3,
-     "bpm": 1.5,
-     "mpg": 31.7,
-     "loss": 1.74
-    },
-    {
-     "player": "Tobias Harris",
-     "status": "Out",
-     "info": "Injury/Illness - Left Calf Strain",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 1.6,
-     "bpm": 0.8,
-     "mpg": 27.7,
-     "loss": 0.0
-    },
-    {
-     "player": "Jayden Quaintance",
-     "status": "Out",
-     "info": "Injury/Illness - Right Knee Surgery",
-     "src": "NBA",
-     "pOut": 1.0
-    },
-    {
-     "player": "Victor Wembanyama",
-     "status": "Questionable",
-     "info": "Injury/Illness - Low Back Tightness",
-     "src": "NBA",
-     "pOut": 0.45,
-     "value": 7.8,
-     "bpm": 10.3,
-     "mpg": 30.3,
-     "loss": 2.86
-    }
-   ],
-   "home": [
-    {
-     "player": "Vit Krejci",
-     "status": "Out",
-     "info": "Injury/Illness - Left Ankle Fracture",
-     "src": "NBA",
-     "pOut": 1.0
-    },
-    {
-     "player": "Ja Morant",
-     "status": "Out",
-     "info": "Injury/Illness - Left Hamstring Strain",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.9,
-     "bpm": -0.4,
-     "mpg": 25.8,
-     "loss": 0.09
-    },
-    {
-     "player": "Shaedon Sharpe",
-     "status": "Out",
-     "info": "Injury/Illness - Right Meniscus Surgery",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.4,
-     "bpm": -1.3,
-     "mpg": 29.4,
-     "loss": 0.17
-    },
-    {
-     "player": "Chris Youngblood",
-     "status": "Out",
-     "info": "Injury/Illness - Right Heel Contusion / Bone Bruise",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.2,
-     "bpm": -1.3,
-     "mpg": 13.3,
-     "loss": 0.1
-    }
-   ]
-  },
-  "bets": [
-   {
-    "market": "Sieg",
-    "pick": "San Antonio Spurs",
-    "odds": 1.67,
-    "line": null,
-    "side": "away",
-    "book": "betway",
-    "bookName": "Betway",
-    "pModel": 0.5011,
-    "pMarket": 0.5728,
-    "p": 0.562,
-    "ev": -0.0614,
-    "evRaw": -0.1632,
-    "evPin": -0.0353,
-    "pPin": 0.5777,
-    "mainOdds": 1.62,
-    "mainBook": "Tipico",
-    "nBooks": 8,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Sieg",
-    "pick": "Portland Trail Blazers",
-    "odds": 2.28,
-    "line": null,
-    "side": "home",
-    "book": "op_bet365",
-    "bookName": "bet365",
-    "pModel": 0.4989,
-    "pMarket": 0.4272,
-    "p": 0.438,
-    "ev": -0.0014,
-    "evRaw": 0.1375,
-    "evPin": -0.0371,
-    "pPin": 0.4223,
-    "mainOdds": 2.25,
-    "mainBook": "Tipico",
-    "nBooks": 8,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Handicap",
-    "pick": "San Antonio Spurs -2.5",
-    "odds": 1.85,
-    "line": -2.5,
-    "side": "away",
-    "book": "leovegas_se",
-    "bookName": "LeoVegas",
-    "pModel": 0.4287,
-    "pMarket": 0.5119,
-    "p": 0.4994,
-    "ev": -0.0761,
-    "evRaw": -0.2069,
-    "evPin": -0.0531,
-    "pPin": 0.5119,
-    "mainOdds": 1.75,
-    "mainBook": "Tipico",
-    "nBooks": 4,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Handicap",
-    "pick": "Portland Trail Blazers +2.5",
-    "odds": 2.0,
-    "line": 2.5,
-    "side": "home",
-    "book": "sport888",
-    "bookName": "888sport",
-    "pModel": 0.5713,
-    "pMarket": 0.4881,
-    "p": 0.5006,
-    "ev": 0.0012,
-    "evRaw": 0.1426,
-    "evPin": -0.0237,
-    "pPin": 0.4881,
-    "mainOdds": 1.95,
-    "mainBook": "Tipico",
-    "nBooks": 4,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Gesamtpunkte",
-    "pick": "Über 225.5",
-    "odds": 1.86,
-    "line": 225.5,
-    "side": "over",
-    "book": "op_bet365",
-    "bookName": "bet365",
-    "pModel": 0.4783,
-    "pMarket": 0.514,
-    "p": 0.5086,
-    "ev": -0.0539,
-    "evRaw": -0.1104,
-    "evPin": -0.044,
-    "pPin": 0.514,
-    "mainOdds": 1.83,
-    "mainBook": "Tipico",
-    "nBooks": 4,
-    "why": "EV unter 5 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Gesamtpunkte",
-    "pick": "Unter 226.5",
-    "odds": 1.9,
-    "line": 226.5,
-    "side": "under",
-    "book": "betano_uk",
-    "bookName": "Betano",
-    "pModel": 0.5424,
-    "pMarket": 0.5068,
-    "p": 0.5121,
-    "ev": -0.027,
-    "evRaw": 0.0306,
-    "evPin": -0.0371,
-    "pPin": 0.5068,
-    "mainOdds": 1.87,
-    "mainBook": "Tipico",
-    "nBooks": 4,
-    "why": "EV unter 5 %",
-    "value": false,
-    "stake": 0.0
-   }
-  ],
-  "best": {
-   "market": "Handicap",
-   "pick": "Portland Trail Blazers +2.5",
-   "odds": 2.0,
-   "line": 2.5,
-   "side": "home",
-   "book": "sport888",
-   "bookName": "888sport",
-   "pModel": 0.5713,
-   "pMarket": 0.4881,
-   "p": 0.5006,
-   "ev": 0.0012,
-   "evRaw": 0.1426,
-   "evPin": -0.0237,
-   "pPin": 0.4881,
-   "mainOdds": 1.95,
-   "mainBook": "Tipico",
-   "nBooks": 4,
-   "why": "EV unter 3 %",
-   "value": false,
-   "stake": 0.0
-  },
-  "hasValue": false,
-  "flash": null,
-  "sideA": "Portland Trail Blazers",
-  "pickLabel": "San Antonio Spurs @ Portland Trail Blazers",
-  "conf": 0.15,
-  "feat": {
-   "team": -4.602,
-   "player": -1.944,
-   "alt": 0.0,
-   "rest": 0.0,
-   "inj": 4.971,
-   "sched": 0,
-   "travel": -1.547,
-   "form": -1.285,
-   "TOTraw": 224.46,
-   "pModelRaw": 0.4989,
-   "pMarket": 0.4272
-  },
-  "links": {
-   "op_bet365": "https://www.bet365.de/",
-   "op_bwin": "https://sports.bwin.de/en/sports/events/20099900"
-  },
-  "injuryReport": "2026-11-25 06:30 ET",
-  "reportMissing": {
-   "home": false,
-   "away": false
-  },
-  "sdUsed": 13.7,
-  "sdMarket": 12.761179944791825,
-  "middayBest": {
-   "market": "Handicap",
-   "pick": "Portland Trail Blazers +2.5",
-   "odds": 2.0,
-   "line": 2.5,
-   "side": "home",
-   "book": "sport888",
-   "bookName": "888sport",
-   "pModel": 0.5713,
-   "pMarket": 0.4881,
-   "p": 0.5006,
-   "ev": 0.0012,
-   "evRaw": 0.1426,
-   "evPin": -0.0237,
-   "pPin": 0.4881,
-   "mainOdds": 1.95,
-   "mainBook": "Tipico",
-   "nBooks": 4,
-   "why": "EV unter 3 %",
-   "value": false,
-   "stake": 0.0
-  }
- },
- {
-  "id": "e6df92326adb480e427bb7c10f445c60",
-  "sportKey": "basketball_nba",
-  "sport": "NBA",
-  "commence": "2026-11-26T03:10:00Z",
-  "away": "Sacramento Kings",
-  "home": "Golden State Warriors",
-  "abbrA": "SAC",
-  "abbrH": "GSW",
-  "margin": 6.4,
-  "total": 221.7,
-  "poss": 97.9,
-  "ptsA": 107.7,
-  "ptsH": 114.1,
-  "pModelHome": 0.6798,
-  "pMarketHome": 0.676,
-  "pFinalHome": 0.6766,
-  "parts": [
-   {
-    "n": "Team-Stärke & Tempo",
-    "m": 4.0,
-    "info": "Gewicht 0.51"
-   },
-   {
-    "n": "Heutige Aufstellung (Spieler)",
-    "m": 2.4,
-    "info": "Netto SAC -8.9, GSW -4.1 pro 100 · Gewicht 0.51"
-   },
-   {
-    "n": "Verletzungen (gegen Team-Ratings)",
-    "m": -2.3,
-    "info": "SAC −0.0, GSW −4.7 Punkte · Gewicht 0.50"
-   },
-   {
-    "n": "Heimvorteil",
-    "m": 1.5
-   },
-   {
-    "n": "Ruhe & Zeitzone",
-    "m": 0.2,
-    "info": "Ruhetage SAC 1, GSW 2"
-   },
-   {
-    "n": "Spielplan-Dichte",
-    "m": 0.7,
-    "info": "3-in-4/4-in-6: SAC 1, GSW 0"
-   },
-   {
-    "n": "Reise",
-    "m": 0.0,
-    "info": "SAC 60 km, GSW 0 km (gewichtet)"
-   },
-   {
-    "n": "Form (letzte 10)",
-    "m": -0.1,
-    "info": "Abweichung vom erwarteten Ergebnis, zur Null gezogen"
-   }
-  ],
-  "ratings": {
-   "away": {
-    "off": -4.09,
-    "def": -3.44,
-    "pace": 99.2,
-    "w": 0.46,
-    "netCur": -8.43,
-    "netPrior": -9.64
-   },
-   "home": {
-    "off": -0.66,
-    "def": 1.22,
-    "pace": 97.2,
-    "w": 0.46,
-    "netCur": 1.48,
-    "netPrior": -0.33
-   }
-  },
-  "lineup": {
-   "away": {
-    "net": -8.9,
-    "min": 299
-   },
-   "home": {
-    "net": -4.1,
-    "min": 239
-   }
-  },
-  "schedule": {
-   "away": {
-    "rest": 1,
-    "dens": 1,
-    "km": 59.53464799208374,
-    "n": 18
-   },
-   "home": {
-    "rest": 2,
-    "dens": 0,
-    "km": 0.0,
-    "n": 18
-   }
-  },
-  "kalshi": {
-   "a": 32.0,
-   "b": 67.5,
-   "vol": 75298
-  },
-  "polymarket": {
-   "pA": 0.325,
-   "pB": 0.675,
-   "volume": 16291
-  },
-  "bookKey": "tipico_de",
-  "bookName": "Tipico",
-  "whales": {
-   "trades": [
-    {
-     "side": "B",
-     "team": "Golden State Warriors",
-     "usd": 2079,
-     "price": 0.69,
-     "buy": true,
-     "ts": 1795582351,
-     "wallet": "Agitated-Bricklaying (0x84cf…2f63)"
-    }
-   ],
-   "usdA": 0,
-   "usdB": 2079
-  },
-  "injuries": {
-   "away": [
-    {
-     "player": "Jonathan Mogbo",
-     "status": "Out",
-     "info": "G League - Two-Way",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.1,
-     "bpm": -1.6,
-     "mpg": 14.4,
-     "loss": 0.02
-    },
-    {
-     "player": "Maxime Raynaud",
-     "status": "Out",
-     "info": "Injury/Illness - Right Patella Subluxation",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.0,
-     "bpm": -2.1,
-     "mpg": 26.5,
-     "loss": 0.0
-    },
-    {
-     "player": "Ben Simmons",
-     "status": "Out",
-     "info": "Injury/Illness - Right Achilles Tendon Repair / Surgery",
-     "src": "NBA",
-     "pOut": 1.0
-    }
-   ],
-   "home": [
-    {
-     "player": "Jimmy Butler III",
-     "status": "Out",
-     "info": "Injury/Illness - Right ACL Repair / Surgery",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 3.4,
-     "bpm": 3.3,
-     "mpg": 31.1,
-     "loss": 1.3
-    },
-    {
-     "player": "Stephen Curry",
-     "status": "Out",
-     "info": "Injury/Illness - Right Oblique Tear",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 4.2,
-     "bpm": 5.6,
-     "mpg": 26.3,
-     "loss": 2.71
-    },
-    {
-     "player": "Yaxel Lendeborg",
-     "status": "Questionable",
-     "info": "Injury/Illness - Illness",
-     "src": "NBA",
-     "pOut": 0.45,
-     "value": 1.2,
-     "bpm": -0.2,
-     "mpg": 31.8,
-     "loss": 0.25
-    },
-    {
-     "player": "Moses Moody",
-     "status": "Out",
-     "info": "Injury/Illness - Left Patellar Tendon Repair / Surgery",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.9,
-     "bpm": -0.4,
-     "mpg": 25.7,
-     "loss": 0.33
-    },
-    {
-     "player": "Kristaps Porzingis",
-     "status": "Out",
-     "info": "Not With Team",
-     "src": "NBA",
-     "pOut": 1.0
-    },
-    {
-     "player": "Brandon Williams",
-     "status": "Questionable",
-     "info": "Injury/Illness - Left Hamstring Strain SAS@POR",
-     "src": "NBA",
-     "pOut": 0.45,
-     "value": 0.6,
-     "bpm": -0.1,
-     "mpg": 16.1,
-     "loss": 0.08
-    }
-   ]
-  },
-  "bets": [
-   {
-    "market": "Sieg",
-    "pick": "Sacramento Kings",
-    "odds": 2.95,
-    "line": null,
-    "side": "away",
-    "book": "op_bet365",
-    "bookName": "bet365",
-    "pModel": 0.3202,
-    "pMarket": 0.324,
-    "p": 0.3234,
-    "ev": -0.0459,
-    "evRaw": -0.0554,
-    "evPin": -0.0422,
-    "pPin": 0.3247,
-    "mainOdds": 2.7,
-    "mainBook": "Tipico",
-    "nBooks": 8,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Sieg",
-    "pick": "Golden State Warriors",
-    "odds": 1.45,
-    "line": null,
-    "side": "home",
-    "book": "tipico_de",
-    "bookName": "Tipico",
-    "pModel": 0.6798,
-    "pMarket": 0.676,
-    "p": 0.6766,
-    "ev": -0.019,
-    "evRaw": -0.0143,
-    "evPin": -0.0208,
-    "pPin": 0.6753,
-    "mainOdds": 1.45,
-    "mainBook": "Tipico",
-    "nBooks": 8,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Handicap",
-    "pick": "Sacramento Kings +5.5",
-    "odds": 1.91,
-    "line": 5.5,
-    "side": "away",
-    "book": "sport888",
-    "bookName": "888sport",
-    "pModel": 0.4738,
-    "pMarket": 0.4853,
-    "p": 0.4835,
-    "ev": -0.0764,
-    "evRaw": -0.095,
-    "evPin": -0.0732,
-    "pPin": 0.4853,
-    "mainOdds": 1.87,
-    "mainBook": "Tipico",
-    "nBooks": 4,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Handicap",
-    "pick": "Golden State Warriors -5.5",
-    "odds": 1.92,
-    "line": -5.5,
-    "side": "home",
-    "book": "leovegas_se",
-    "bookName": "LeoVegas",
-    "pModel": 0.5262,
-    "pMarket": 0.5147,
-    "p": 0.5165,
-    "ev": -0.0084,
-    "evRaw": 0.0103,
-    "evPin": -0.0117,
-    "pPin": 0.5147,
-    "mainOdds": 1.83,
-    "mainBook": "Tipico",
-    "nBooks": 4,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Gesamtpunkte",
-    "pick": "Über 216.5",
-    "odds": 1.83,
-    "line": 216.5,
-    "side": "over",
-    "book": "tipico_de",
-    "bookName": "Tipico",
-    "pModel": 0.6073,
-    "pMarket": 0.509,
-    "p": 0.5238,
-    "ev": -0.0415,
-    "evRaw": 0.1113,
-    "evPin": -0.0685,
-    "pPin": 0.509,
-    "mainOdds": 1.83,
-    "mainBook": "Tipico",
-    "nBooks": 4,
-    "why": "EV unter 5 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Gesamtpunkte",
-    "pick": "Unter 217.5",
-    "odds": 1.95,
-    "line": 217.5,
-    "side": "under",
-    "book": "sport888",
-    "bookName": "888sport",
-    "pModel": 0.4129,
-    "pMarket": 0.5117,
-    "p": 0.4969,
-    "ev": -0.031,
-    "evRaw": -0.1948,
-    "evPin": -0.0021,
-    "pPin": 0.5117,
-    "mainOdds": 1.87,
-    "mainBook": "Tipico",
-    "nBooks": 4,
-    "why": "EV unter 5 %",
-    "value": false,
-    "stake": 0.0
-   }
-  ],
-  "best": {
-   "market": "Handicap",
-   "pick": "Golden State Warriors -5.5",
-   "odds": 1.92,
-   "line": -5.5,
-   "side": "home",
-   "book": "leovegas_se",
-   "bookName": "LeoVegas",
-   "pModel": 0.5262,
-   "pMarket": 0.5147,
-   "p": 0.5165,
-   "ev": -0.0084,
-   "evRaw": 0.0103,
-   "evPin": -0.0117,
-   "pPin": 0.5147,
-   "mainOdds": 1.83,
-   "mainBook": "Tipico",
-   "nBooks": 4,
-   "why": "EV unter 3 %",
-   "value": false,
-   "stake": 0.0
-  },
-  "hasValue": false,
-  "flash": null,
-  "sideA": "Golden State Warriors",
-  "pickLabel": "Sacramento Kings @ Golden State Warriors",
-  "conf": 0.15,
-  "feat": {
-   "team": 7.907,
-   "player": 4.688,
-   "alt": 0.0,
-   "rest": 0.3,
-   "inj": -4.66,
-   "sched": 1,
-   "travel": 0.06,
-   "form": -0.809,
-   "TOTraw": 221.72,
-   "pModelRaw": 0.6798,
-   "pMarket": 0.676
-  },
-  "links": {
-   "op_bet365": "https://www.bet365.de/",
-   "op_bwin": "https://sports.bwin.de/en/sports/events/20099899"
-  },
-  "injuryReport": "2026-11-25 06:30 ET",
-  "reportMissing": {
-   "home": false,
-   "away": false
-  },
-  "sdUsed": 13.7,
-  "sdMarket": 12.761179944791825,
-  "middayBest": {
-   "market": "Handicap",
-   "pick": "Golden State Warriors -5.5",
-   "odds": 1.92,
-   "line": -5.5,
-   "side": "home",
-   "book": "leovegas_se",
-   "bookName": "LeoVegas",
-   "pModel": 0.5262,
-   "pMarket": 0.5147,
-   "p": 0.5165,
-   "ev": -0.0084,
-   "evRaw": 0.0103,
-   "evPin": -0.0117,
-   "pPin": 0.5147,
-   "mainOdds": 1.83,
-   "mainBook": "Tipico",
-   "nBooks": 4,
-   "why": "EV unter 3 %",
-   "value": false,
-   "stake": 0.0
-  }
- },
- {
-  "id": "07421d1675d6bc51bb5fa91f84a09eb3",
-  "sportKey": "basketball_nba",
-  "sport": "NBA",
-  "commence": "2026-11-26T00:40:00Z",
-  "away": "Minnesota Timberwolves",
-  "home": "Oklahoma City Thunder",
-  "abbrA": "MIN",
-  "abbrH": "OKC",
-  "margin": -1.4,
-  "total": 220.4,
-  "poss": 100.5,
-  "ptsA": 110.9,
-  "ptsH": 109.5,
-  "pModelHome": 0.4592,
-  "pMarketHome": 0.5336,
-  "pFinalHome": 0.5224,
-  "parts": [
-   {
-    "n": "Team-Stärke & Tempo",
-    "m": -0.2,
-    "info": "Gewicht 0.51"
-   },
-   {
-    "n": "Heutige Aufstellung (Spieler)",
-    "m": -0.5,
-    "info": "Netto MIN +2.9, OKC +1.9 pro 100 · Gewicht 0.51"
-   },
-   {
-    "n": "Verletzungen (gegen Team-Ratings)",
-    "m": -0.4,
-    "info": "MIN −2.7, OKC −3.6 Punkte · Gewicht 0.50"
-   },
-   {
-    "n": "Heimvorteil",
-    "m": 1.5
-   },
-   {
-    "n": "Spielplan-Dichte",
-    "m": -1.4,
-    "info": "3-in-4/4-in-6: MIN 0, OKC 2"
-   },
-   {
-    "n": "Form (letzte 10)",
-    "m": -0.3,
-    "info": "Abweichung vom erwarteten Ergebnis, zur Null gezogen"
-   }
-  ],
-  "ratings": {
-   "away": {
-    "off": 0.4,
-    "def": 5.81,
-    "pace": 100.1,
-    "w": 0.47,
-    "netCur": 10.91,
-    "netPrior": 2.81
-   },
-   "home": {
-    "off": 0.74,
-    "def": 5.05,
-    "pace": 98.9,
-    "w": 0.47,
-    "netCur": 3.69,
-    "netPrior": 10.95
-   }
-  },
-  "lineup": {
-   "away": {
-    "net": 2.9,
-    "min": 247
-   },
-   "home": {
-    "net": 1.9,
-    "min": 265
-   }
-  },
-  "schedule": {
-   "away": {
-    "rest": 1,
-    "dens": 0,
-    "km": 558.6169887965602,
-    "n": 19
-   },
-   "home": {
-    "rest": 1,
-    "dens": 2,
-    "km": 553.9069146694112,
-    "n": 19
-   }
-  },
-  "kalshi": {
-   "a": 46.5,
-   "b": 53.5,
-   "vol": 186137
-  },
-  "polymarket": null,
-  "bookKey": "tipico_de",
-  "bookName": "Tipico",
-  "whales": {
-   "trades": [],
-   "usdA": 0,
-   "usdB": 0
-  },
-  "injuries": {
-   "away": [
-    {
-     "player": "Joan Beringer",
-     "status": "Available",
-     "info": "Injury/Illness - Right Face Mask",
-     "src": "NBA",
-     "pOut": 0.0
-    },
-    {
-     "player": "Jaylen Clark",
-     "status": "Out",
-     "info": "Injury/Illness - Right Hamstring Strain",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.2,
-     "bpm": -1.3,
-     "mpg": 13.6,
-     "loss": 0.14
-    },
-    {
-     "player": "Donte DiVincenzo",
-     "status": "Out",
-     "info": "Injury/Illness - Right Achilles Tendon Repair / Surgery",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 1.6,
-     "bpm": 0.5,
-     "mpg": 30.4,
-     "loss": 0.57
-    },
-    {
-     "player": "Anthony Edwards",
-     "status": "Out",
-     "info": "Injury/Illness - Right Knee Arthroscopy",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 4.0,
-     "bpm": 3.7,
-     "mpg": 33.8,
-     "loss": 1.91
-    },
-    {
-     "player": "Rocco Zikarsky",
-     "status": "Out",
-     "info": "G League - Two-Way",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.1,
-     "bpm": -1.0,
-     "mpg": 7.2,
-     "loss": 0.06
-    }
-   ],
-   "home": [
-    {
-     "player": "Chet Holmgren",
-     "status": "Out",
-     "info": "Injury/Illness - Right Knee/ Injury Recovery",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 3.1,
-     "bpm": 3.0,
-     "mpg": 30.0,
-     "loss": 1.39
-    },
-    {
-     "player": "Aday Mara",
-     "status": "Out",
-     "info": "Injury/Illness - Right Shin Contusion",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.9,
-     "bpm": -0.0,
-     "mpg": 22.4,
-     "loss": 0.39
-    },
-    {
-     "player": "Thomas Sorber",
-     "status": "Out",
-     "info": "Injury/Illness - Right Knee Surgery",
-     "src": "NBA",
-     "pOut": 1.0
-    },
-    {
-     "player": "Nikola Topic",
-     "status": "Out",
-     "info": "Injury/Illness - Left Hip Strain",
-     "src": "NBA",
-     "pOut": 1.0
-    },
-    {
-     "player": "Cason Wallace",
-     "status": "Out",
-     "info": "Injury/Illness - Left Shoulder Surgery",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.9,
-     "bpm": 0.8,
-     "mpg": 16.3,
-     "loss": 0.42
-    },
-    {
-     "player": "Jalen Williams",
-     "status": "Out",
-     "info": "Injury/Illness - Left Ankle Surgery",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 1.8,
-     "bpm": 0.7,
-     "mpg": 31.7,
-     "loss": 0.8
-    },
-    {
-     "player": "Jaylin Williams",
-     "status": "Out",
-     "info": "Injury/Illness - Low Back Spasms",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.9,
-     "bpm": 0.5,
-     "mpg": 17.1,
-     "loss": 0.55
-    }
-   ]
-  },
-  "bets": [
-   {
-    "market": "Sieg",
-    "pick": "Minnesota Timberwolves",
-    "odds": 2.05,
-    "line": null,
-    "side": "away",
-    "book": "betway",
-    "bookName": "Betway",
-    "pModel": 0.5408,
-    "pMarket": 0.4664,
-    "p": 0.4776,
-    "ev": -0.0209,
-    "evRaw": 0.1087,
-    "evPin": -0.0408,
-    "pPin": 0.4679,
-    "mainOdds": 1.97,
-    "mainBook": "Tipico",
-    "nBooks": 7,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Sieg",
-    "pick": "Oklahoma City Thunder",
-    "odds": 1.83,
-    "line": null,
-    "side": "home",
-    "book": "op_bwin",
-    "bookName": "bwin",
-    "pModel": 0.4592,
-    "pMarket": 0.5336,
-    "p": 0.5224,
-    "ev": -0.044,
-    "evRaw": -0.1597,
-    "evPin": -0.0262,
-    "pPin": 0.5321,
-    "mainOdds": 1.8,
-    "mainBook": "Tipico",
-    "nBooks": 7,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Handicap",
-    "pick": "Minnesota Timberwolves +1.5",
-    "odds": 1.93,
-    "line": 1.5,
-    "side": "away",
-    "book": "tipico_de",
-    "bookName": "Tipico",
-    "pModel": 0.5839,
-    "pMarket": 0.496,
-    "p": 0.5092,
-    "ev": -0.0173,
-    "evRaw": 0.127,
-    "evPin": -0.0428,
-    "pPin": 0.496,
-    "mainOdds": 1.93,
-    "mainBook": "Tipico",
-    "nBooks": 4,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Handicap",
-    "pick": "Oklahoma City Thunder -1.5",
-    "odds": 1.91,
-    "line": -1.5,
-    "side": "home",
-    "book": "sport888",
-    "bookName": "888sport",
-    "pModel": 0.4161,
-    "pMarket": 0.504,
-    "p": 0.4908,
-    "ev": -0.0625,
-    "evRaw": -0.2053,
-    "evPin": -0.0373,
-    "pPin": 0.504,
-    "mainOdds": 1.77,
-    "mainBook": "Tipico",
-    "nBooks": 4,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Gesamtpunkte",
-    "pick": "Über 223.5",
-    "odds": 1.86,
-    "line": 223.5,
-    "side": "over",
-    "book": "op_bet365",
-    "bookName": "bet365",
-    "pModel": 0.4363,
-    "pMarket": 0.5266,
-    "p": 0.5131,
-    "ev": -0.0457,
-    "evRaw": -0.1885,
-    "evPin": -0.0205,
-    "pPin": 0.5266,
-    "mainOdds": 1.85,
-    "mainBook": "Tipico",
-    "nBooks": 4,
-    "why": "EV unter 5 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Gesamtpunkte",
-    "pick": "Unter 224.5",
-    "odds": 1.95,
-    "line": 224.5,
-    "side": "under",
-    "book": "sport888",
-    "bookName": "888sport",
-    "pModel": 0.5841,
-    "pMarket": 0.4942,
-    "p": 0.5077,
-    "ev": -0.0101,
-    "evRaw": 0.1391,
-    "evPin": -0.0364,
-    "pPin": 0.4942,
-    "mainOdds": 1.85,
-    "mainBook": "Tipico",
-    "nBooks": 4,
-    "why": "EV unter 5 %",
-    "value": false,
-    "stake": 0.0
-   }
-  ],
-  "best": {
-   "market": "Gesamtpunkte",
-   "pick": "Unter 224.5",
-   "odds": 1.95,
-   "line": 224.5,
-   "side": "under",
-   "book": "sport888",
-   "bookName": "888sport",
-   "pModel": 0.5841,
-   "pMarket": 0.4942,
-   "p": 0.5077,
-   "ev": -0.0101,
-   "evRaw": 0.1391,
-   "evPin": -0.0364,
-   "pPin": 0.4942,
-   "mainOdds": 1.85,
-   "mainBook": "Tipico",
-   "nBooks": 4,
-   "why": "EV unter 5 %",
-   "value": false,
-   "stake": 0.0
-  },
-  "hasValue": false,
-  "flash": null,
-  "sideA": "Oklahoma City Thunder",
-  "pickLabel": "Minnesota Timberwolves @ Oklahoma City Thunder",
-  "conf": 0.15,
-  "feat": {
-   "team": -0.423,
-   "player": -0.957,
-   "alt": 0.0,
-   "rest": 0.0,
-   "inj": -0.876,
-   "sched": -2,
-   "travel": 0.005,
-   "form": -2.256,
-   "TOTraw": 220.42,
-   "pModelRaw": 0.4592,
-   "pMarket": 0.5336
-  },
-  "links": {
-   "op_bet365": "https://www.bet365.de/",
-   "op_bwin": "https://sports.bwin.de/en/sports/events/20099895"
-  },
-  "injuryReport": "2026-11-25 06:30 ET",
-  "reportMissing": {
-   "home": false,
-   "away": false
-  },
-  "sdUsed": 13.7,
-  "sdMarket": 12.761179944791825,
-  "middayBest": {
-   "market": "Gesamtpunkte",
-   "pick": "Unter 224.5",
-   "odds": 1.95,
-   "line": 224.5,
-   "side": "under",
-   "book": "sport888",
-   "bookName": "888sport",
-   "pModel": 0.5841,
-   "pMarket": 0.4942,
-   "p": 0.5077,
-   "ev": -0.0101,
-   "evRaw": 0.1391,
-   "evPin": -0.0364,
-   "pPin": 0.4942,
-   "mainOdds": 1.85,
-   "mainBook": "Tipico",
-   "nBooks": 4,
-   "why": "EV unter 5 %",
-   "value": false,
-   "stake": 0.0
-  }
- },
- {
-  "id": "87ce247fb83685389ca8ffb21be6cd3e",
-  "sportKey": "basketball_nba",
-  "sport": "NBA",
-  "commence": "2026-11-26T00:10:00Z",
-  "away": "Chicago Bulls",
-  "home": "Charlotte Hornets",
-  "abbrA": "CHI",
-  "abbrH": "CHA",
-  "margin": 3.1,
-  "total": 224.5,
-  "poss": 98.7,
-  "ptsA": 110.7,
-  "ptsH": 113.8,
-  "pModelHome": 0.5892,
-  "pMarketHome": 0.5904,
-  "pFinalHome": 0.5902,
-  "parts": [
-   {
-    "n": "Team-Stärke & Tempo",
-    "m": 0.6,
-    "info": "Gewicht 0.51"
-   },
-   {
-    "n": "Heutige Aufstellung (Spieler)",
-    "m": 0.6,
-    "info": "Netto CHI -6.0, CHA -4.8 pro 100 · Gewicht 0.51"
-   },
-   {
-    "n": "Verletzungen (gegen Team-Ratings)",
-    "m": -0.4,
-    "info": "CHI −1.2, CHA −2.0 Punkte · Gewicht 0.50"
-   },
-   {
-    "n": "Heimvorteil",
-    "m": 1.5
-   },
-   {
-    "n": "Ruhe & Zeitzone",
-    "m": 0.2,
-    "info": "Ruhetage CHI 1, CHA 1"
-   },
-   {
-    "n": "Spielplan-Dichte",
-    "m": 1.4,
-    "info": "3-in-4/4-in-6: CHI 2, CHA 0"
-   },
-   {
-    "n": "Reise",
-    "m": 0.1,
-    "info": "CHI 474 km, CHA 0 km (gewichtet)"
-   },
-   {
-    "n": "Form (letzte 10)",
-    "m": -1.0,
-    "info": "Abweichung vom erwarteten Ergebnis, zur Null gezogen"
-   }
-  ],
-  "ratings": {
-   "away": {
-    "off": -1.41,
-    "def": -3.01,
-    "pace": 102.3,
-    "w": 0.46,
-    "netCur": -5.47,
-    "netPrior": -5.04
-   },
-   "home": {
-    "off": -3.19,
-    "def": -0.07,
-    "pace": 95.0,
-    "w": 0.44,
-    "netCur": -11.41,
-    "netPrior": 4.67
-   }
-  },
-  "lineup": {
-   "away": {
-    "net": -6.0,
-    "min": 236
-   },
-   "home": {
-    "net": -4.8,
-    "min": 301
-   }
-  },
-  "schedule": {
-   "away": {
-    "rest": 1,
-    "dens": 2,
-    "km": 474.26549829089174,
-    "n": 18
-   },
-   "home": {
-    "rest": 1,
-    "dens": 0,
-    "km": 0.0,
-    "n": 17
-   }
-  },
-  "kalshi": {
-   "a": 41.5,
-   "b": 59.5,
-   "vol": 61874
-  },
-  "polymarket": {
-   "pA": 0.405,
-   "pB": 0.595,
-   "volume": 45476
-  },
-  "bookKey": "tipico_de",
-  "bookName": "Tipico",
-  "whales": {
-   "trades": [
-    {
-     "side": "B",
-     "team": "Charlotte Hornets",
-     "usd": 5244,
-     "price": 0.59,
-     "buy": true,
-     "ts": 1795595975,
-     "wallet": "Tasty-Rutabaga (0x84ec…72c1)"
-    },
-    {
-     "side": "B",
-     "team": "Charlotte Hornets",
-     "usd": 3243,
-     "price": 0.59,
-     "buy": true,
-     "ts": 1795559183,
-     "wallet": "Miniature-Ad (0x52ed…8db7)"
-    },
-    {
-     "side": "B",
-     "team": "Charlotte Hornets",
-     "usd": 2970,
-     "price": 0.58,
-     "buy": true,
-     "ts": 1795594490,
-     "wallet": "Positive-Console (0x684b…8409)"
-    },
-    {
-     "side": "B",
-     "team": "Charlotte Hornets",
-     "usd": 1150,
-     "price": 0.59,
-     "buy": true,
-     "ts": 1795564984,
-     "wallet": "Legitimate-Oyster-Outrigger (0x73c8…e1b1)"
-    }
-   ],
-   "usdA": 0,
-   "usdB": 12608
-  },
-  "injuries": {
-   "away": [
-    {
-     "player": "Tobe Awaka",
-     "status": "Out",
-     "info": "G League - Two-Way",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.2,
-     "bpm": -0.9,
-     "mpg": 10.2,
-     "loss": 0.03
-    },
-    {
-     "player": "Norman Powell",
-     "status": "Out",
-     "info": "Injury/Illness - Right Hamstring Strain",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 1.5,
-     "bpm": 0.5,
-     "mpg": 29.5,
-     "loss": 0.54
-    },
-    {
-     "player": "Orlando Robinson",
-     "status": "Out",
-     "info": "Not With Team",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.1,
-     "bpm": -0.9,
-     "mpg": 6.2,
-     "loss": 0.0
-    },
-    {
-     "player": "Jaylin Sellers",
-     "status": "Out",
-     "info": "G League - Two-Way",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.4,
-     "bpm": -0.0,
-     "mpg": 10.0,
-     "loss": 0.08
-    },
-    {
-     "player": "Jalen Smith",
-     "status": "Questionable",
-     "info": "Injury/Illness - Gastrointestinal Illness",
-     "src": "NBA",
-     "pOut": 0.45,
-     "value": 1.3,
-     "bpm": 0.5,
-     "mpg": 25.3,
-     "loss": 0.46
-    },
-    {
-     "player": "Caleb Wilson",
-     "status": "Out",
-     "info": "Injury/Illness - Right Metacarpal Fracture",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.4,
-     "bpm": -1.4,
-     "mpg": 30.8,
-     "loss": 0.11
-    }
-   ],
-   "home": [
-    {
-     "player": "Michael Ajayi",
-     "status": "Out",
-     "info": "G League - Two-Way",
-     "src": "NBA",
-     "pOut": 1.0
-    },
-    {
-     "player": "Grayson Allen",
-     "status": "Questionable",
-     "info": "Concussion Protocol",
-     "src": "NBA",
-     "pOut": 0.45,
-     "value": 2.0,
-     "bpm": 1.5,
-     "mpg": 27.1,
-     "loss": 0.32
-    },
-    {
-     "player": "Kylan Boswell",
-     "status": "Out",
-     "info": "G League - Two-Way",
-     "src": "NBA",
-     "pOut": 1.0
-    },
-    {
-     "player": "Sion James",
-     "status": "Probable",
-     "info": "Injury/Illness - Left Thigh Soreness",
-     "src": "NBA",
-     "pOut": 0.1,
-     "value": 0.0,
-     "bpm": -2.8,
-     "mpg": 27.3,
-     "loss": 0.0
-    },
-    {
-     "player": "Ryan Kalkbrenner",
-     "status": "Doubtful",
-     "info": "Injury/Illness - Left Hip Soreness / Tightness",
-     "src": "NBA",
-     "pOut": 0.75,
-     "value": 1.0,
-     "bpm": 0.7,
-     "mpg": 17.6,
-     "loss": 0.62
-    },
-    {
-     "player": "Kon Knueppel",
-     "status": "Out",
-     "info": "Injury/Illness - Left Hamstring Strain",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 2.6,
-     "bpm": 2.0,
-     "mpg": 31.5,
-     "loss": 1.09
-    },
-    {
-     "player": "Dennis Schroder",
-     "status": "Out",
-     "info": "Injury/Illness - Left Hamstring Strain",
-     "src": "NBA",
-     "pOut": 1.0
-    }
-   ]
-  },
-  "bets": [
-   {
-    "market": "Sieg",
-    "pick": "Chicago Bulls",
-    "odds": 2.32,
-    "line": null,
-    "side": "away",
-    "book": "op_bet365",
-    "bookName": "bet365",
-    "pModel": 0.4108,
-    "pMarket": 0.4096,
-    "p": 0.4098,
-    "ev": -0.0493,
-    "evRaw": -0.0469,
-    "evPin": -0.0459,
-    "pPin": 0.4112,
-    "mainOdds": 2.2,
-    "mainBook": "Tipico",
-    "nBooks": 8,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Sieg",
-    "pick": "Charlotte Hornets",
-    "odds": 1.67,
-    "line": null,
-    "side": "home",
-    "book": "sport888",
-    "bookName": "888sport",
-    "pModel": 0.5892,
-    "pMarket": 0.5904,
-    "p": 0.5902,
-    "ev": -0.0143,
-    "evRaw": -0.0161,
-    "evPin": -0.0168,
-    "pPin": 0.5888,
-    "mainOdds": 1.65,
-    "mainBook": "Tipico",
-    "nBooks": 8,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Handicap",
-    "pick": "Chicago Bulls +3.5",
-    "odds": 1.91,
-    "line": 3.5,
-    "side": "away",
-    "book": "sport888",
-    "bookName": "888sport",
-    "pModel": 0.512,
-    "pMarket": 0.509,
-    "p": 0.5094,
-    "ev": -0.027,
-    "evRaw": -0.0221,
-    "evPin": -0.0279,
-    "pPin": 0.509,
-    "mainOdds": 1.9,
-    "mainBook": "Tipico",
-    "nBooks": 4,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Handicap",
-    "pick": "Charlotte Hornets -2.5",
-    "odds": 1.85,
-    "line": -2.5,
-    "side": "home",
-    "book": "leovegas_se",
-    "bookName": "LeoVegas",
-    "pModel": 0.5171,
-    "pMarket": 0.5201,
-    "p": 0.5197,
-    "ev": -0.0386,
-    "evRaw": -0.0433,
-    "evPin": -0.0378,
-    "pPin": 0.5201,
-    "mainOdds": 1.8,
-    "mainBook": "Tipico",
-    "nBooks": 4,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Gesamtpunkte",
-    "pick": "Über 221.5",
-    "odds": 1.9,
-    "line": 221.5,
-    "side": "over",
-    "book": "betano_uk",
-    "bookName": "Betano",
-    "pModel": 0.5617,
-    "pMarket": 0.51,
-    "p": 0.5178,
-    "ev": -0.0162,
-    "evRaw": 0.0672,
-    "evPin": -0.031,
-    "pPin": 0.51,
-    "mainOdds": 1.85,
-    "mainBook": "Tipico",
-    "nBooks": 4,
-    "why": "EV unter 5 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Gesamtpunkte",
-    "pick": "Unter 222.5",
-    "odds": 1.87,
-    "line": 222.5,
-    "side": "under",
-    "book": "op_bet365",
-    "bookName": "bet365",
-    "pModel": 0.4589,
-    "pMarket": 0.5108,
-    "p": 0.503,
-    "ev": -0.0594,
-    "evRaw": -0.1418,
-    "evPin": -0.0448,
-    "pPin": 0.5108,
-    "mainOdds": 1.85,
-    "mainBook": "Tipico",
-    "nBooks": 4,
-    "why": "EV unter 5 %",
-    "value": false,
-    "stake": 0.0
-   }
-  ],
-  "best": {
-   "market": "Sieg",
-   "pick": "Charlotte Hornets",
-   "odds": 1.67,
-   "line": null,
-   "side": "home",
-   "book": "sport888",
-   "bookName": "888sport",
-   "pModel": 0.5892,
-   "pMarket": 0.5904,
-   "p": 0.5902,
-   "ev": -0.0143,
-   "evRaw": -0.0161,
-   "evPin": -0.0168,
-   "pPin": 0.5888,
-   "mainOdds": 1.65,
-   "mainBook": "Tipico",
-   "nBooks": 8,
-   "why": "EV unter 3 %",
-   "value": false,
-   "stake": 0.0
-  },
-  "hasValue": false,
-  "flash": null,
-  "sideA": "Charlotte Hornets",
-  "pickLabel": "Chicago Bulls @ Charlotte Hornets",
-  "conf": 0.15,
-  "feat": {
-   "team": 1.15,
-   "player": 1.241,
-   "alt": 0.0,
-   "rest": 0.3,
-   "inj": -0.816,
-   "sched": 2,
-   "travel": 0.474,
-   "form": -6.422,
-   "TOTraw": 224.48,
-   "pModelRaw": 0.5892,
-   "pMarket": 0.5904
-  },
-  "links": {
-   "op_bet365": "https://www.bet365.de/",
-   "op_bwin": "https://sports.bwin.de/en/sports/events/20099893"
-  },
-  "injuryReport": "2026-11-25 06:30 ET",
-  "reportMissing": {
-   "home": false,
-   "away": false
-  },
-  "sdUsed": 13.7,
-  "sdMarket": 12.761179944791825,
-  "middayBest": {
-   "market": "Sieg",
-   "pick": "Charlotte Hornets",
-   "odds": 1.67,
-   "line": null,
-   "side": "home",
-   "book": "sport888",
-   "bookName": "888sport",
-   "pModel": 0.5892,
-   "pMarket": 0.5904,
-   "p": 0.5902,
-   "ev": -0.0143,
-   "evRaw": -0.0161,
-   "evPin": -0.0168,
-   "pPin": 0.5888,
-   "mainOdds": 1.65,
-   "mainBook": "Tipico",
-   "nBooks": 8,
-   "why": "EV unter 3 %",
-   "value": false,
-   "stake": 0.0
-  }
- },
- {
-  "id": "f08629281f1510f47d91cc408f86a2a8",
-  "sportKey": "basketball_nba",
-  "sport": "NBA",
-  "commence": "2026-11-26T00:40:00Z",
-  "away": "Cleveland Cavaliers",
-  "home": "New York Knicks",
-  "abbrA": "CLE",
-  "abbrH": "NYK",
-  "margin": 3.2,
-  "total": 221.1,
-  "poss": 95.6,
-  "ptsA": 108.9,
-  "ptsH": 112.1,
-  "pModelHome": 0.5928,
-  "pMarketHome": 0.5769,
-  "pFinalHome": 0.5792,
-  "parts": [
-   {
-    "n": "Team-Stärke & Tempo",
-    "m": 1.5,
-    "info": "Gewicht 0.51"
-   },
-   {
-    "n": "Heutige Aufstellung (Spieler)",
-    "m": 0.4,
-    "info": "Netto CLE +0.4, NYK +1.3 pro 100 · Gewicht 0.51"
-   },
-   {
-    "n": "Verletzungen (gegen Team-Ratings)",
-    "m": -1.0,
-    "info": "CLE −2.1, NYK −4.1 Punkte · Gewicht 0.50"
-   },
-   {
-    "n": "Heimvorteil",
-    "m": 1.5
-   },
-   {
-    "n": "Ruhe & Zeitzone",
-    "m": 0.2,
-    "info": "Ruhetage CLE 1, NYK 2"
-   },
-   {
-    "n": "Reise",
-    "m": 0.2,
-    "info": "CLE 574 km, NYK 0 km (gewichtet)"
-   },
-   {
-    "n": "Form (letzte 10)",
-    "m": 0.4,
-    "info": "Abweichung vom erwarteten Ergebnis, zur Null gezogen"
-   }
-  ],
-  "ratings": {
-   "away": {
-    "off": 3.14,
-    "def": -1.51,
-    "pace": 99.4,
-    "w": 0.47,
-    "netCur": 0.54,
-    "netPrior": 3.72
-   },
-   "home": {
-    "off": 1.21,
-    "def": 3.56,
-    "pace": 94.7,
-    "w": 0.46,
-    "netCur": 5.28,
-    "netPrior": 6.18
-   }
-  },
-  "lineup": {
-   "away": {
-    "net": 0.4,
-    "min": 302
-   },
-   "home": {
-    "net": 1.3,
-    "min": 211
-   }
-  },
-  "schedule": {
-   "away": {
-    "rest": 1,
-    "dens": 0,
-    "km": 574.1167585231839,
-    "n": 18
-   },
-   "home": {
-    "rest": 2,
-    "dens": 0,
-    "km": 0.0,
-    "n": 18
-   }
-  },
-  "kalshi": {
-   "a": 42.5,
-   "b": 58.0,
-   "vol": 73782
-  },
-  "polymarket": {
-   "pA": 0.425,
-   "pB": 0.575,
-   "volume": 37762
-  },
-  "bookKey": "tipico_de",
-  "bookName": "Tipico",
-  "whales": {
-   "trades": [
-    {
-     "side": "A",
-     "team": "Cleveland Cavaliers",
-     "usd": 3628,
-     "price": 0.38,
-     "buy": true,
-     "ts": 1795556704,
-     "wallet": "Miserly-Clock (0xa6df…dda7)"
-    },
-    {
-     "side": "A",
-     "team": "Cleveland Cavaliers",
-     "usd": 1575,
-     "price": 0.4,
-     "buy": true,
-     "ts": 1795581602,
-     "wallet": "Agitated-Bricklaying (0x84cf…2f63)"
-    }
-   ],
-   "usdA": 5203,
-   "usdB": 0
-  },
-  "injuries": {
-   "away": [
-    {
-     "player": "Zack Austin",
-     "status": "Out",
-     "info": "G League - Two-Way",
-     "src": "NBA",
-     "pOut": 1.0
-    },
-    {
-     "player": "Khalifa Diop",
-     "status": "Out",
-     "info": "G League - On Assignment",
-     "src": "NBA",
-     "pOut": 1.0
-    },
-    {
-     "player": "Evan Mobley",
-     "status": "Out",
-     "info": "Injury/Illness - Left Great Toe Sprain",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 3.0,
-     "bpm": 2.5,
-     "mpg": 32.0,
-     "loss": 2.04
-    },
-    {
-     "player": "Nae'Qwan Tomlin",
-     "status": "Out",
-     "info": "Injury/Illness - Low Back Stress Reaction",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.1,
-     "bpm": -1.7,
-     "mpg": 15.7,
-     "loss": 0.04
-    },
-    {
-     "player": "Ernest Udeh Jr.",
-     "status": "Out",
-     "info": "G League - Two-Way",
-     "src": "NBA",
-     "pOut": 1.0
-    }
-   ],
-   "home": [
-    {
-     "player": "OG Anunoby",
-     "status": "Out",
-     "info": "Injury/Illness - Left Calf Strain",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 2.0,
-     "bpm": 0.8,
-     "mpg": 33.9,
-     "loss": 1.56
-    },
-    {
-     "player": "Jordan Clarkson",
-     "status": "Out",
-     "info": "Injury/Illness - Right Plantar Fasciitis",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.0,
-     "bpm": -2.7,
-     "mpg": 9.8,
-     "loss": 0.0
-    },
-    {
-     "player": "Josh Hart",
-     "status": "Questionable",
-     "info": "Injury/Illness - Right Shoulder Sprain",
-     "src": "NBA",
-     "pOut": 0.45,
-     "value": 2.1,
-     "bpm": 1.2,
-     "mpg": 30.8,
-     "loss": 0.7
-    },
-    {
-     "player": "Miles McBride",
-     "status": "Questionable",
-     "info": "Injury/Illness - Left Adductor Tightness",
-     "src": "NBA",
-     "pOut": 0.45,
-     "value": 0.9,
-     "bpm": 0.6,
-     "mpg": 17.2,
-     "loss": 0.34
-    },
-    {
-     "player": "Karl-Anthony Towns",
-     "status": "Questionable",
-     "info": "Injury/Illness - Right Knee Inflammation MIN@OKC",
-     "src": "NBA",
-     "pOut": 0.45,
-     "value": 4.0,
-     "bpm": 3.9,
-     "mpg": 32.6,
-     "loss": 1.45
-    }
-   ]
-  },
-  "bets": [
-   {
-    "market": "Sieg",
-    "pick": "Cleveland Cavaliers",
-    "odds": 2.32,
-    "line": null,
-    "side": "away",
-    "book": "leovegas_se",
-    "bookName": "LeoVegas",
-    "pModel": 0.4072,
-    "pMarket": 0.4231,
-    "p": 0.4208,
-    "ev": -0.0239,
-    "evRaw": -0.0553,
-    "evPin": -0.0202,
-    "pPin": 0.4223,
-    "mainOdds": 2.25,
-    "mainBook": "Tipico",
-    "nBooks": 8,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Sieg",
-    "pick": "New York Knicks",
-    "odds": 1.67,
-    "line": null,
-    "side": "home",
-    "book": "sport888",
-    "bookName": "888sport",
-    "pModel": 0.5928,
-    "pMarket": 0.5769,
-    "p": 0.5792,
-    "ev": -0.0327,
-    "evRaw": -0.01,
-    "evPin": -0.0353,
-    "pPin": 0.5777,
-    "mainOdds": 1.62,
-    "mainBook": "Tipico",
-    "nBooks": 8,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Handicap",
-    "pick": "Cleveland Cavaliers +3.5",
-    "odds": 1.88,
-    "line": 3.5,
-    "side": "away",
-    "book": "leovegas_se",
-    "bookName": "LeoVegas",
-    "pModel": 0.5083,
-    "pMarket": 0.5144,
-    "p": 0.5135,
-    "ev": -0.0347,
-    "evRaw": -0.0444,
-    "evPin": -0.033,
-    "pPin": 0.5144,
-    "mainOdds": 1.83,
-    "mainBook": "Tipico",
-    "nBooks": 4,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Handicap",
-    "pick": "New York Knicks -3.5",
-    "odds": 2.0,
-    "line": -3.5,
-    "side": "home",
-    "book": "sport888",
-    "bookName": "888sport",
-    "pModel": 0.4917,
-    "pMarket": 0.4856,
-    "p": 0.4865,
-    "ev": -0.0269,
-    "evRaw": -0.0165,
-    "evPin": -0.0287,
-    "pPin": 0.4856,
-    "mainOdds": 1.87,
-    "mainBook": "Tipico",
-    "nBooks": 4,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Gesamtpunkte",
-    "pick": "Über 217.5",
-    "odds": 1.85,
-    "line": 217.5,
-    "side": "over",
-    "book": "tipico_de",
-    "bookName": "Tipico",
-    "pModel": 0.5738,
-    "pMarket": 0.5041,
-    "p": 0.5145,
-    "ev": -0.0481,
-    "evRaw": 0.0616,
-    "evPin": -0.0675,
-    "pPin": 0.5041,
-    "mainOdds": 1.85,
-    "mainBook": "Tipico",
-    "nBooks": 4,
-    "why": "EV unter 5 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Gesamtpunkte",
-    "pick": "Unter 219.5",
-    "odds": 1.87,
-    "line": 219.5,
-    "side": "under",
-    "book": "op_bet365",
-    "bookName": "bet365",
-    "pModel": 0.4674,
-    "pMarket": 0.5375,
-    "p": 0.5269,
-    "ev": -0.0146,
-    "evRaw": -0.1261,
-    "evPin": 0.005,
-    "pPin": 0.5375,
-    "mainOdds": 1.85,
-    "mainBook": "Tipico",
-    "nBooks": 4,
-    "why": "EV unter 5 %",
-    "value": false,
-    "stake": 0.0
-   }
-  ],
-  "best": {
-   "market": "Gesamtpunkte",
-   "pick": "Unter 219.5",
-   "odds": 1.87,
-   "line": 219.5,
-   "side": "under",
-   "book": "op_bet365",
-   "bookName": "bet365",
-   "pModel": 0.4674,
-   "pMarket": 0.5375,
-   "p": 0.5269,
-   "ev": -0.0146,
-   "evRaw": -0.1261,
-   "evPin": 0.005,
-   "pPin": 0.5375,
-   "mainOdds": 1.85,
-   "mainBook": "Tipico",
-   "nBooks": 4,
-   "why": "EV unter 5 %",
-   "value": false,
-   "stake": 0.0
-  },
-  "hasValue": false,
-  "flash": null,
-  "sideA": "New York Knicks",
-  "pickLabel": "Cleveland Cavaliers @ New York Knicks",
-  "conf": 0.15,
-  "feat": {
-   "team": 2.999,
-   "player": 0.812,
-   "alt": 0.0,
-   "rest": 0.3,
-   "inj": -1.973,
-   "sched": 0,
-   "travel": 0.574,
-   "form": 2.606,
-   "TOTraw": 221.07,
-   "pModelRaw": 0.5928,
-   "pMarket": 0.5769
-  },
-  "links": {
-   "op_bet365": "https://www.bet365.de/",
-   "op_bwin": "https://sports.bwin.de/en/sports/events/20099894"
-  },
-  "injuryReport": "2026-11-25 06:30 ET",
-  "reportMissing": {
-   "home": false,
-   "away": false
-  },
-  "sdUsed": 13.7,
-  "sdMarket": 12.761179944791825,
-  "middayBest": {
-   "market": "Gesamtpunkte",
-   "pick": "Unter 219.5",
-   "odds": 1.87,
-   "line": 219.5,
-   "side": "under",
-   "book": "op_bet365",
-   "bookName": "bet365",
-   "pModel": 0.4674,
-   "pMarket": 0.5375,
-   "p": 0.5269,
-   "ev": -0.0146,
-   "evRaw": -0.1261,
-   "evPin": 0.005,
-   "pPin": 0.5375,
-   "mainOdds": 1.85,
-   "mainBook": "Tipico",
-   "nBooks": 4,
-   "why": "EV unter 5 %",
-   "value": false,
-   "stake": 0.0
-  }
- },
- {
-  "id": "698d6d78acf30f4ff4e4aaf6670249ee",
-  "sportKey": "basketball_nba",
-  "sport": "NBA",
-  "commence": "2026-11-26T01:10:00Z",
-  "away": "Los Angeles Clippers",
-  "home": "Memphis Grizzlies",
-  "abbrA": "LAC",
-  "abbrH": "MEM",
-  "margin": 7.4,
-  "total": 230.5,
-  "poss": 98.6,
-  "ptsA": 111.5,
-  "ptsH": 118.9,
-  "pModelHome": 0.7059,
-  "pMarketHome": 0.6852,
-  "pFinalHome": 0.6883,
-  "parts": [
-   {
-    "n": "Team-Stärke & Tempo",
-    "m": 1.6,
-    "info": "Gewicht 0.51"
-   },
-   {
-    "n": "Heutige Aufstellung (Spieler)",
-    "m": 3.7,
-    "info": "Netto LAC -6.7, MEM +0.7 pro 100 · Gewicht 0.51"
-   },
-   {
-    "n": "Verletzungen (gegen Team-Ratings)",
-    "m": -0.5,
-    "info": "LAC −0.3, MEM −1.3 Punkte · Gewicht 0.50"
-   },
-   {
-    "n": "Heimvorteil",
-    "m": 1.5
-   },
-   {
-    "n": "Ruhe & Zeitzone",
-    "m": 0.4,
-    "info": "Ruhetage LAC 1, MEM 1"
-   },
-   {
-    "n": "Form (letzte 10)",
-    "m": 0.7,
-    "info": "Abweichung vom erwarteten Ergebnis, zur Null gezogen"
-   }
-  ],
-  "ratings": {
-   "away": {
-    "off": -0.37,
-    "def": -1.76,
-    "pace": 98.7,
-    "w": 0.44,
-    "netCur": -5.63,
-    "netPrior": 0.96
-   },
-   "home": {
-    "off": 2.14,
-    "def": -1.18,
-    "pace": 98.4,
-    "w": 0.47,
-    "netCur": 6.48,
-    "netPrior": -5.72
-   }
-  },
-  "lineup": {
-   "away": {
-    "net": -6.7,
-    "min": 294
-   },
-   "home": {
-    "net": 0.7,
-    "min": 240
-   }
-  },
-  "schedule": {
-   "away": {
-    "rest": 1,
-    "dens": 0,
-    "km": 389.46536087678754,
-    "n": 16
-   },
-   "home": {
-    "rest": 1,
-    "dens": 0,
-    "km": 418.48529950059185,
-    "n": 19
-   }
-  },
-  "kalshi": {
-   "a": 31.5,
-   "b": 68.5,
-   "vol": 52828
-  },
-  "polymarket": {
-   "pA": 0.315,
-   "pB": 0.685,
-   "volume": 24622
-  },
-  "bookKey": "tipico_de",
-  "bookName": "Tipico",
-  "whales": {
-   "trades": [
-    {
-     "side": "B",
-     "team": "Memphis Grizzlies",
-     "usd": 2250,
-     "price": 0.69,
-     "buy": true,
-     "ts": 1795574836,
-     "wallet": "Agitated-Bricklaying (0x84cf…2f63)"
-    },
-    {
-     "side": "B",
-     "team": "Memphis Grizzlies",
-     "usd": 1754,
-     "price": 0.68,
-     "buy": true,
-     "ts": 1795568141,
-     "wallet": "Agitated-Bricklaying (0x84cf…2f63)"
-    }
-   ],
-   "usdA": 0,
-   "usdB": 4004
-  },
-  "injuries": {
-   "away": [
-    {
-     "player": "Bradley Beal",
-     "status": "Out",
-     "info": "Injury/Illness - Right Knee Injury Management",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.0,
-     "bpm": -2.6,
-     "mpg": 20.2,
-     "loss": 0.0
-    },
-    {
-     "player": "Nick Martinelli",
-     "status": "Out",
-     "info": "G League - Two-Way",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.1,
-     "bpm": -0.7,
-     "mpg": 4.3,
-     "loss": 0.02
-    },
-    {
-     "player": "Jordan Miller",
-     "status": "Out",
-     "info": "Injury/Illness - Left Rotator Cuff Surgery",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.8,
-     "bpm": -0.2,
-     "mpg": 22.1,
-     "loss": 0.33
-    }
-   ],
-   "home": [
-    {
-     "player": "Cameron Boozer",
-     "status": "Out",
-     "info": "Injury/Illness - Right Medial Ankle Sprain",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 1.9,
-     "bpm": 0.9,
-     "mpg": 30.9,
-     "loss": 0.79
-    },
-    {
-     "player": "Jerami Grant",
-     "status": "Out",
-     "info": "Injury/Illness - Left Calf Strain",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.9,
-     "bpm": -0.1,
-     "mpg": 22.3,
-     "loss": 0.35
-    },
-    {
-     "player": "GG Jackson",
-     "status": "Out",
-     "info": "Injury/Illness - Left 5th Metatarsal Fracture",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.1,
-     "bpm": -1.7,
-     "mpg": 15.0,
-     "loss": 0.07
-    },
-    {
-     "player": "Scotty Pippen Jr.",
-     "status": "Out",
-     "info": "Injury/Illness - Lumbar Disc Herniation",
-     "src": "NBA",
-     "pOut": 1.0,
-     "value": 0.2,
-     "bpm": -1.5,
-     "mpg": 16.0,
-     "loss": 0.08
-    },
-    {
-     "player": "Richie Saunders",
-     "status": "Out",
-     "info": "Injury/Illness - Right Knee Surgery",
-     "src": "NBA",
-     "pOut": 1.0
-    }
-   ]
-  },
-  "bets": [
-   {
-    "market": "Sieg",
-    "pick": "Los Angeles Clippers",
-    "odds": 3.1,
-    "line": null,
-    "side": "away",
-    "book": "sport888",
-    "bookName": "888sport",
-    "pModel": 0.2941,
-    "pMarket": 0.3148,
-    "p": 0.3117,
-    "ev": -0.0338,
-    "evRaw": -0.0883,
-    "evPin": -0.0249,
-    "pPin": 0.3146,
-    "mainOdds": 2.9,
-    "mainBook": "Tipico",
-    "nBooks": 7,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Sieg",
-    "pick": "Memphis Grizzlies",
-    "odds": 1.43,
-    "line": null,
-    "side": "home",
-    "book": "betway",
-    "bookName": "Betway",
-    "pModel": 0.7059,
-    "pMarket": 0.6852,
-    "p": 0.6883,
-    "ev": -0.0157,
-    "evRaw": 0.0094,
-    "evPin": -0.0198,
-    "pPin": 0.6854,
-    "mainOdds": 1.4,
-    "mainBook": "Tipico",
-    "nBooks": 7,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Handicap",
-    "pick": "Los Angeles Clippers +6.5",
-    "odds": 1.91,
-    "line": 6.5,
-    "side": "away",
-    "book": "sport888",
-    "bookName": "888sport",
-    "pModel": 0.4733,
-    "pMarket": 0.504,
-    "p": 0.4994,
-    "ev": -0.0461,
-    "evRaw": -0.096,
-    "evPin": -0.0373,
-    "pPin": 0.504,
-    "mainOdds": 1.9,
-    "mainBook": "Tipico",
-    "nBooks": 4,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Handicap",
-    "pick": "Memphis Grizzlies -6.5",
-    "odds": 1.92,
-    "line": -6.5,
-    "side": "home",
-    "book": "leovegas_se",
-    "bookName": "LeoVegas",
-    "pModel": 0.5267,
-    "pMarket": 0.496,
-    "p": 0.5006,
-    "ev": -0.0389,
-    "evRaw": 0.0112,
-    "evPin": -0.0477,
-    "pPin": 0.496,
-    "mainOdds": 1.8,
-    "mainBook": "Tipico",
-    "nBooks": 4,
-    "why": "EV unter 3 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Gesamtpunkte",
-    "pick": "Über 229.5",
-    "odds": 1.9,
-    "line": 229.5,
-    "side": "over",
-    "book": "betano_uk",
-    "bookName": "Betano",
-    "pModel": 0.5204,
-    "pMarket": 0.5137,
-    "p": 0.5147,
-    "ev": -0.0221,
-    "evRaw": -0.0113,
-    "evPin": -0.024,
-    "pPin": 0.5137,
-    "mainOdds": 1.83,
-    "mainBook": "Tipico",
-    "nBooks": 3,
-    "why": "EV unter 5 %",
-    "value": false,
-    "stake": 0.0
-   },
-   {
-    "market": "Gesamtpunkte",
-    "pick": "Unter 229.5",
-    "odds": 1.9,
-    "line": 229.5,
-    "side": "under",
-    "book": "betano_uk",
-    "bookName": "Betano",
-    "pModel": 0.4796,
-    "pMarket": 0.4863,
-    "p": 0.4853,
-    "ev": -0.0779,
-    "evRaw": -0.0887,
-    "evPin": -0.076,
-    "pPin": 0.4863,
-    "mainOdds": 1.87,
-    "mainBook": "Tipico",
-    "nBooks": 3,
-    "why": "EV unter 5 %",
-    "value": false,
-    "stake": 0.0
-   }
-  ],
-  "best": {
-   "market": "Sieg",
-   "pick": "Memphis Grizzlies",
-   "odds": 1.43,
-   "line": null,
-   "side": "home",
-   "book": "betway",
-   "bookName": "Betway",
-   "pModel": 0.7059,
-   "pMarket": 0.6852,
-   "p": 0.6883,
-   "ev": -0.0157,
-   "evRaw": 0.0094,
-   "evPin": -0.0198,
-   "pPin": 0.6854,
-   "mainOdds": 1.4,
-   "mainBook": "Tipico",
-   "nBooks": 7,
-   "why": "EV unter 3 %",
-   "value": false,
-   "stake": 0.0
-  },
-  "hasValue": false,
-  "flash": null,
-  "sideA": "Memphis Grizzlies",
-  "pickLabel": "Los Angeles Clippers @ Memphis Grizzlies",
-  "conf": 0.15,
-  "feat": {
-   "team": 3.048,
-   "player": 7.241,
-   "alt": 0.0,
-   "rest": 0.6,
-   "inj": -0.955,
-   "sched": 0,
-   "travel": -0.029,
-   "form": 4.942,
-   "TOTraw": 230.48,
-   "pModelRaw": 0.7059,
-   "pMarket": 0.6852
-  },
-  "links": {
-   "op_bwin": "https://sports.bwin.de/en/sports/events/20099896"
-  },
-  "injuryReport": "2026-11-25 06:30 ET",
-  "reportMissing": {
-   "home": false,
-   "away": false
-  },
-  "sdUsed": 13.7,
-  "sdMarket": 12.761179944791825,
-  "middayBest": {
-   "market": "Sieg",
-   "pick": "Memphis Grizzlies",
-   "odds": 1.43,
-   "line": null,
-   "side": "home",
-   "book": "betway",
-   "bookName": "Betway",
-   "pModel": 0.7059,
-   "pMarket": 0.6852,
-   "p": 0.6883,
-   "ev": -0.0157,
-   "evRaw": 0.0094,
-   "evPin": -0.0198,
-   "pPin": 0.6854,
-   "mainOdds": 1.4,
-   "mainBook": "Tipico",
-   "nBooks": 7,
-   "why": "EV unter 3 %",
    "value": false,
    "stake": 0.0
   }
