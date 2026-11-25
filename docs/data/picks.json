@@ -1149,9 +1149,9 @@
    "stake": 0.0,
    "evPin": -0.0128
   },
-  "result": null,
-  "betResult": null,
-  "score": null,
+  "result": "B",
+  "betResult": "win",
+  "score": "86:104",
   "flashResult": null,
   "close": {
    "pFair": 0.4179,
@@ -1201,9 +1201,9 @@
    "stake": 0.0,
    "evPin": -0.0424
   },
-  "result": null,
-  "betResult": null,
-  "score": null,
+  "result": "B",
+  "betResult": "win",
+  "score": "101:120",
   "flashResult": null,
   "close": {
    "pFair": 0.4792,
@@ -1253,9 +1253,9 @@
    "stake": 0.0,
    "evPin": -0.0117
   },
-  "result": null,
-  "betResult": null,
-  "score": null,
+  "result": "B",
+  "betResult": "loss",
+  "score": "116:131",
   "flashResult": null,
   "close": {
    "pFair": 0.4873,

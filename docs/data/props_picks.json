@@ -904,8 +904,8 @@
   "alt": [],
   "game": "DAL @ DEN",
   "commence": "2026-11-25T03:10:00Z",
-  "result": null,
-  "value": null,
+  "result": "loss",
+  "value": 20,
   "close": {
    "odds": 2.3,
    "pMkt": 0.4486,
