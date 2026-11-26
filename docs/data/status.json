@@ -1,7 +1,7 @@
 {
  "updated": "2026-11-25T11:39:41.734667+00:00",
  "credits": {
-  "remaining": 368.0,
+  "remaining": 365.0,
   "used_now": 3.0
  },
  "stats": {
@@ -11,7 +11,7 @@
   "brierMarket": 0.24614977750000003,
   "brierRaw": 0.22476722850000003,
   "clvN": 27,
-  "clvAvg": -0.0187,
+  "clvAvg": -0.0199,
   "clvPos": 0.296,
   "calibration": [
    {
@@ -123,15 +123,15 @@
     "roi": -0.616
    }
   },
-  "clvPos": 0.55,
-  "bets": 28,
+  "clvPos": 0.618,
+  "bets": 40,
   "settled": 26,
   "profit": -64.77,
   "roi": -0.2491,
   "hit": 0.308,
   "expHit": 0.452,
-  "clv": 0.0227,
-  "clvN": 20
+  "clv": 0.0273,
+  "clvN": 34
  },
  "closeUpdated": "2026-11-25T23:27:57.958116+00:00",
  "closeLog": [
@@ -166,5 +166,30 @@
    "conf": 0.15
   },
   "n": {}
- }
+ },
+ "pregameUpdated": "2026-11-26T00:06:58.553806+00:00",
+ "pregameLog": [
+  "Kalshi KXNBAGAME: 34 Events",
+  "Polymarket nba: 100 Events",
+  "Basketball-Reference Ratings 2027: 30 Teams",
+  "Basketball-Reference Ratings 2026: 30 Teams",
+  "Basketball-Reference Tempo 2027: 31 Teams",
+  "Basketball-Reference Spieler 2027: 483 Einträge",
+  "Basketball-Reference Spieler 2026: 661 Einträge",
+  "ESPN Verletzungen: 92 Einträge",
+  "NBA-Verletzungsbericht 25.11. 19:00 ET: 78 Spieler, 0 Teams noch nicht gemeldet",
+  "Quoten basketball_nba: 9 Events, 9 mit Buchmacher-Quoten",
+  "OddsPapi: 2350 Spielerwetten-Linien",
+  "OddsPapi: 29 Buchmacher-Einträge an 8 Spiele gehängt (bet365.de, bwin.de, betano.de, 888sport.de) · Handicap-Linien plausibel 22, verworfen 0 · 170 von 250 Abfragen diesen Monat",
+  "Streuung: Markt 12.8, Modell nutzt 13.69",
+  "NBA: 8 Spiele bewertet, 1 mit Value-Wette",
+  "Basketball-Reference Saisonwerte 2027: 481 Spieler",
+  "Spielerwetten: 2455 Linien in 8 Spielen simuliert, 12 ✓",
+  "Spielerwetten vor Spielbeginn: 0 bestätigt, 2 schwächer, 0 zurückziehen, 2 geprüft",
+  "Spielerwetten Schlussquoten: 14",
+  "Push-Nachricht „Spielerwetten vor Spielbeginn“: gesendet",
+  "Abend-Update NBA: 7 Spiele mit geänderter Empfehlung",
+  "Push-Nachricht „Abend-Update: neue ✓-Wetten“: gesendet",
+  "Schlussquoten: 8 Prognosen mit CLV"
+ ]
 }
