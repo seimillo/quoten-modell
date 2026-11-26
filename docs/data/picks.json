@@ -1573,7 +1573,13 @@
   "result": null,
   "betResult": null,
   "score": null,
-  "flashResult": null
+  "flashResult": null,
+  "close": {
+   "pFair": 0.1975,
+   "fairOdds": 5.063,
+   "clv": -0.1507,
+   "ts": "2026-11-26T23:32+00:00"
+  }
  },
  "5b64071f3e3bf67b0fdea8d1ac81d0ec": {
   "id": "5b64071f3e3bf67b0fdea8d1ac81d0ec",
@@ -1619,7 +1625,13 @@
   "result": null,
   "betResult": null,
   "score": null,
-  "flashResult": null
+  "flashResult": null,
+  "close": {
+   "pFair": 0.4174,
+   "fairOdds": 2.396,
+   "clv": 0.0019,
+   "ts": "2026-11-26T23:32+00:00"
+  }
  },
  "13d9ca3bcb664829c603755d31401002": {
   "id": "13d9ca3bcb664829c603755d31401002",
@@ -1665,7 +1677,13 @@
   "result": null,
   "betResult": null,
   "score": null,
-  "flashResult": null
+  "flashResult": null,
+  "close": {
+   "pFair": 0.5,
+   "fairOdds": 2.0,
+   "clv": -0.045,
+   "ts": "2026-11-26T23:32+00:00"
+  }
  },
  "c5dc35b4116988de2c1425df17456478": {
   "id": "c5dc35b4116988de2c1425df17456478",
@@ -1711,7 +1729,13 @@
   "result": null,
   "betResult": null,
   "score": null,
-  "flashResult": null
+  "flashResult": null,
+  "close": {
+   "pFair": 0.2132,
+   "fairOdds": 4.69,
+   "clv": -0.1471,
+   "ts": "2026-11-26T23:32+00:00"
+  }
  },
  "3c522e32c3035d7dc3e1734903b84654": {
   "id": "3c522e32c3035d7dc3e1734903b84654",
@@ -1757,6 +1781,12 @@
   "result": null,
   "betResult": null,
   "score": null,
-  "flashResult": null
+  "flashResult": null,
+  "close": {
+   "pFair": 0.4742,
+   "fairOdds": 2.109,
+   "clv": -0.0848,
+   "ts": "2026-11-26T23:32+00:00"
+  }
  }
 }
