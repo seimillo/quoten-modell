@@ -2924,10 +2924,10 @@
   "eid": "401909318",
   "home": "Charlotte Hornets",
   "away": "Chicago Bulls",
-  "done": false,
+  "done": true,
   "neutral": false,
-  "hs": null,
-  "as": null
+  "hs": 105,
+  "as": 107
  },
  {
   "date": "2026-11-25",
@@ -2935,10 +2935,10 @@
   "eid": "401909324",
   "home": "Golden State Warriors",
   "away": "Sacramento Kings",
-  "done": false,
+  "done": true,
   "neutral": false,
-  "hs": null,
-  "as": null
+  "hs": 129,
+  "as": 110
  },
  {
   "date": "2026-11-25",
@@ -2946,10 +2946,10 @@
   "eid": "401909323",
   "home": "Houston Rockets",
   "away": "Phoenix Suns",
-  "done": false,
+  "done": true,
   "neutral": false,
-  "hs": null,
-  "as": null
+  "hs": 116,
+  "as": 104
  },
  {
   "date": "2026-11-25",
@@ -2957,10 +2957,10 @@
   "eid": "401909321",
   "home": "Memphis Grizzlies",
   "away": "LA Clippers",
-  "done": false,
+  "done": true,
   "neutral": false,
-  "hs": null,
-  "as": null
+  "hs": 115,
+  "as": 97
  },
  {
   "date": "2026-11-25",
@@ -2968,10 +2968,10 @@
   "eid": "401909322",
   "home": "Milwaukee Bucks",
   "away": "Brooklyn Nets",
-  "done": false,
+  "done": true,
   "neutral": false,
-  "hs": null,
-  "as": null
+  "hs": 97,
+  "as": 104
  },
  {
   "date": "2026-11-25",
@@ -2979,10 +2979,10 @@
   "eid": "401909319",
   "home": "New York Knicks",
   "away": "Cleveland Cavaliers",
-  "done": false,
+  "done": true,
   "neutral": false,
-  "hs": null,
-  "as": null
+  "hs": 121,
+  "as": 102
  },
  {
   "date": "2026-11-25",
@@ -2990,10 +2990,10 @@
   "eid": "401909320",
   "home": "Oklahoma City Thunder",
   "away": "Minnesota Timberwolves",
-  "done": false,
+  "done": true,
   "neutral": false,
-  "hs": null,
-  "as": null
+  "hs": 106,
+  "as": 113
  },
  {
   "date": "2026-11-25",
@@ -3001,10 +3001,10 @@
   "eid": "401909317",
   "home": "Philadelphia 76ers",
   "away": "Miami Heat",
-  "done": false,
+  "done": true,
   "neutral": false,
-  "hs": null,
-  "as": null
+  "hs": 111,
+  "as": 104
  },
  {
   "date": "2026-11-25",
@@ -3012,9 +3012,9 @@
   "eid": "401909325",
   "home": "Portland Trail Blazers",
   "away": "San Antonio Spurs",
-  "done": false,
+  "done": true,
   "neutral": false,
-  "hs": null,
-  "as": null
+  "hs": 116,
+  "as": 111
  }
 ]

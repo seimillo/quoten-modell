@@ -6,10 +6,10 @@
  },
  "stats": {
   "total": 29,
-  "settled": 20,
-  "brierModel": 0.2413303965,
-  "brierMarket": 0.24614977750000003,
-  "brierRaw": 0.22476722850000003,
+  "settled": 29,
+  "brierModel": 0.23102594344827584,
+  "brierMarket": 0.23497402413793103,
+  "brierRaw": 0.21661446862068964,
   "clvN": 27,
   "clvAvg": -0.0199,
   "clvPos": 0.296,
@@ -24,30 +24,30 @@
    {
     "from": 0.3,
     "to": 0.45,
-    "n": 5,
-    "pred": 0.39,
-    "real": 0.4
+    "n": 6,
+    "pred": 0.398,
+    "real": 0.5
    },
    {
     "from": 0.45,
     "to": 0.55,
-    "n": 3,
-    "pred": 0.493,
+    "n": 6,
+    "pred": 0.508,
     "real": 0.333
    },
    {
     "from": 0.55,
     "to": 0.7,
-    "n": 1,
-    "pred": 0.613,
-    "real": 1.0
+    "n": 5,
+    "pred": 0.629,
+    "real": 0.8
    },
    {
     "from": 0.7,
     "to": 1.0,
-    "n": 6,
-    "pred": 0.796,
-    "real": 0.667
+    "n": 7,
+    "pred": 0.791,
+    "real": 0.714
    }
   ],
   "clvValueN": 1,
@@ -58,9 +58,9 @@
   "kellyBets": 1,
   "kellyGrowth": -0.0184,
   "flashBets": 3,
-  "flashSettled": 2,
-  "flashProfit": 4.5,
-  "flashRoi": 0.225,
+  "flashSettled": 3,
+  "flashProfit": 13.2,
+  "flashRoi": 0.44,
   "flashClv": 0.0514,
   "flashClvN": 2
  },
@@ -93,14 +93,14 @@
  "propStats": {
   "by": {
    "mittags": {
-    "n": 18,
-    "profit": -34.1,
-    "roi": -0.1894
+    "n": 20,
+    "profit": -31.1,
+    "roi": -0.1555
    },
    "vorSpiel": {
-    "n": 8,
-    "profit": -30.67,
-    "roi": -0.3834
+    "n": 20,
+    "profit": -62.47,
+    "roi": -0.3124
    },
    "bestaetigt": {
     "n": 3,
@@ -108,14 +108,14 @@
     "roi": -1.0
    },
    "zurueck": {
-    "n": 7,
-    "profit": 0.9,
-    "roi": 0.0129
+    "n": 9,
+    "profit": 3.9,
+    "roi": 0.0433
    },
    "sicher": {
-    "n": 3,
-    "profit": 16.0,
-    "roi": 0.5333
+    "n": 5,
+    "profit": 19.0,
+    "roi": 0.38
    },
    "unsicher": {
     "n": 5,
@@ -125,11 +125,11 @@
   },
   "clvPos": 0.618,
   "bets": 40,
-  "settled": 26,
-  "profit": -64.77,
-  "roi": -0.2491,
-  "hit": 0.308,
-  "expHit": 0.452,
+  "settled": 40,
+  "profit": -93.57,
+  "roi": -0.2339,
+  "hit": 0.325,
+  "expHit": 0.458,
   "clv": 0.0273,
   "clvN": 34
  },
@@ -191,5 +191,13 @@
   "Abend-Update NBA: 7 Spiele mit geänderter Empfehlung",
   "Push-Nachricht „Abend-Update: neue ✓-Wetten“: gesendet",
   "Schlussquoten: 8 Prognosen mit CLV"
+ ],
+ "resultsUpdated": "2026-11-26T06:42:57.942497+00:00",
+ "resultsLog": [
+  "ESPN-Spielplan: 4 Tage abgefragt, 284 Spiele in der Saison",
+  "Spielerwerte: 9 neue Spielberichte, 460 Spieler",
+  "Trefferliste: 9 Prognosen ausgewertet",
+  "Spielerwetten ausgewertet: 14",
+  "Push-Nachricht „Ergebnisse Spielerwetten“: gesendet"
  ]
 }
