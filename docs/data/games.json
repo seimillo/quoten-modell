@@ -3016,5 +3016,126 @@
   "neutral": false,
   "hs": 116,
   "as": 111
+ },
+ {
+  "date": "2026-11-27",
+  "start": "2026-11-28T01:00Z",
+  "eid": "401909330",
+  "home": "Boston Celtics",
+  "away": "Atlanta Hawks",
+  "done": false,
+  "neutral": false,
+  "hs": null,
+  "as": null
+ },
+ {
+  "date": "2026-11-27",
+  "start": "2026-11-28T00:30Z",
+  "eid": "401909327",
+  "home": "Detroit Pistons",
+  "away": "Milwaukee Bucks",
+  "done": false,
+  "neutral": false,
+  "hs": null,
+  "as": null
+ },
+ {
+  "date": "2026-11-27",
+  "start": "2026-11-28T00:30Z",
+  "eid": "401909328",
+  "home": "Indiana Pacers",
+  "away": "Philadelphia 76ers",
+  "done": false,
+  "neutral": false,
+  "hs": null,
+  "as": null
+ },
+ {
+  "date": "2026-11-27",
+  "start": "2026-11-28T02:30Z",
+  "eid": "401909335",
+  "home": "LA Clippers",
+  "away": "New Orleans Pelicans",
+  "done": false,
+  "neutral": false,
+  "hs": null,
+  "as": null
+ },
+ {
+  "date": "2026-11-27",
+  "start": "2026-11-28T01:30Z",
+  "eid": "401909331",
+  "home": "Minnesota Timberwolves",
+  "away": "Memphis Grizzlies",
+  "done": false,
+  "neutral": false,
+  "hs": null,
+  "as": null
+ },
+ {
+  "date": "2026-11-27",
+  "start": "2026-11-28T00:00Z",
+  "eid": "401909326",
+  "home": "New York Knicks",
+  "away": "Miami Heat",
+  "done": false,
+  "neutral": false,
+  "hs": null,
+  "as": null
+ },
+ {
+  "date": "2026-11-27",
+  "start": "2026-11-28T02:00Z",
+  "eid": "401909332",
+  "home": "Phoenix Suns",
+  "away": "Dallas Mavericks",
+  "done": false,
+  "neutral": false,
+  "hs": null,
+  "as": null
+ },
+ {
+  "date": "2026-11-27",
+  "start": "2026-11-28T02:30Z",
+  "eid": "401909336",
+  "home": "Portland Trail Blazers",
+  "away": "Golden State Warriors",
+  "done": false,
+  "neutral": false,
+  "hs": null,
+  "as": null
+ },
+ {
+  "date": "2026-11-27",
+  "start": "2026-11-28T02:30Z",
+  "eid": "401909333",
+  "home": "San Antonio Spurs",
+  "away": "Los Angeles Lakers",
+  "done": false,
+  "neutral": false,
+  "hs": null,
+  "as": null
+ },
+ {
+  "date": "2026-11-27",
+  "start": "2026-11-28T00:30Z",
+  "eid": "401909329",
+  "home": "Toronto Raptors",
+  "away": "Brooklyn Nets",
+  "done": false,
+  "neutral": false,
+  "hs": null,
+  "as": null
+ },
+ {
+  "date": "2026-11-27",
+  "start": "2026-11-28T02:30Z",
+  "eid": "401909334",
+  "home": "Utah Jazz",
+  "away": "Denver Nuggets",
+  "done": false,
+  "neutral": false,
+  "hs": null,
+  "as": null
  }
 ]
