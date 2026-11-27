@@ -1,7 +1,7 @@
 {
  "updated": "2026-11-26T10:22:44.269918+00:00",
  "credits": {
-  "remaining": 359.0,
+  "remaining": 356.0,
   "used_now": 3.0
  },
  "stats": {
@@ -164,5 +164,28 @@
    "conf": 0.15
   },
   "n": {}
- }
+ },
+ "pregameUpdated": "2026-11-27T00:14:55.516321+00:00",
+ "pregameLog": [
+  "Kalshi KXNBAGAME: 30 Events",
+  "Polymarket nba: 100 Events",
+  "Basketball-Reference Ratings 2027: 30 Teams",
+  "Basketball-Reference Ratings 2026: 30 Teams",
+  "Basketball-Reference Tempo 2027: 31 Teams",
+  "Basketball-Reference Spieler 2027: 484 Einträge",
+  "Basketball-Reference Spieler 2026: 661 Einträge",
+  "ESPN Verletzungen: 98 Einträge",
+  "NBA-Verletzungsbericht 26.11. 19:00 ET: 90 Spieler, 4 Teams noch nicht gemeldet",
+  "Quoten basketball_nba: 11 Events, 11 mit Buchmacher-Quoten",
+  "OddsPapi: 2310 Spielerwetten-Linien",
+  "OddsPapi: 43 Buchmacher-Einträge an 11 Spiele gehängt (bet365.de, bwin.de, betano.de, 888sport.de) · Handicap-Linien plausibel 33, verworfen 0 · 176 von 250 Abfragen diesen Monat",
+  "Streuung: Markt None, Modell nutzt 14.6358",
+  "NBA: 11 Spiele bewertet, 0 mit Value-Wette",
+  "Basketball-Reference Saisonwerte 2027: 482 Spieler",
+  "Spielerwetten: 2422 Linien in 10 Spielen simuliert, 26 ✓",
+  "Spielerwetten vor Spielbeginn: 0 bestätigt, 0 schwächer, 0 zurückziehen, 0 geprüft",
+  "Spielerwetten Schlussquoten: 0",
+  "Abend-Update NBA: 4 Spiele mit geänderter Empfehlung",
+  "Schlussquoten: 5 Prognosen mit CLV"
+ ]
 }
