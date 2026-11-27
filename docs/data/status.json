@@ -1,18 +1,18 @@
 {
- "updated": "2026-11-26T10:22:44.269918+00:00",
+ "updated": "2026-11-27T10:19:23.680643+00:00",
  "credits": {
-  "remaining": 356.0,
+  "remaining": 353.0,
   "used_now": 3.0
  },
  "stats": {
-  "total": 34,
+  "total": 40,
   "settled": 29,
   "brierModel": 0.23102594344827584,
   "brierMarket": 0.23497402413793103,
   "brierRaw": 0.21661446862068964,
-  "clvN": 32,
-  "clvAvg": -0.0301,
-  "clvPos": 0.281,
+  "clvN": 27,
+  "clvAvg": -0.0199,
+  "clvPos": 0.296,
   "calibration": [
    {
     "from": 0.0,
@@ -65,27 +65,28 @@
   "flashClvN": 2
  },
  "log": [
-  "Kalshi KXNBAGAME: 27 Events",
+  "Kalshi KXNBAGAME: 36 Events",
   "Polymarket nba: 100 Events",
   "ESPN-Spielplan: 4 Tage abgefragt, 284 Spiele in der Saison",
-  "ESPN-Boxscores: 9 neue Spiele, Minuten für 460 Spieler",
+  "ESPN-Boxscores: 0 neue Spiele, Minuten für 460 Spieler",
   "Spielerwerte: 0 neue Spielberichte, 460 Spieler",
   "Basketball-Reference Ratings 2027: 30 Teams",
   "Basketball-Reference Ratings 2026: 30 Teams",
   "Basketball-Reference Tempo 2027: 31 Teams",
   "Basketball-Reference Spieler 2027: 484 Einträge",
   "Basketball-Reference Spieler 2026: 661 Einträge",
-  "ESPN Verletzungen: 93 Einträge",
-  "NBA-Verletzungsbericht 26.11. 05:15 ET: 0 Spieler, 22 Teams noch nicht gemeldet",
-  "Quoten basketball_nba: 5 Events, 5 mit Buchmacher-Quoten",
-  "OddsPapi: 982 Spielerwetten-Linien",
-  "OddsPapi: 10 Buchmacher-Einträge an 5 Spiele gehängt (bet365.de, bwin.de) · Handicap-Linien plausibel 9, verworfen 0 · 172 von 250 Abfragen diesen Monat",
-  "Streuung: Markt None, Modell nutzt 14.6358",
-  "NBA: 5 Spiele bewertet, 0 mit Value-Wette",
-  "Spielerwetten: 982 Linien in 4 Spielen simuliert, 0 ✓",
+  "ESPN Verletzungen: 98 Einträge",
+  "NBA-Verletzungsbericht 27.11. 05:15 ET: 104 Spieler, 0 Teams noch nicht gemeldet",
+  "Quoten basketball_nba: 11 Events, 11 mit Buchmacher-Quoten",
+  "OddsPapi: 2814 Spielerwetten-Linien",
+  "OddsPapi: 22 Buchmacher-Einträge an 11 Spiele gehängt (bet365.de, bwin.de) · Handicap-Linien plausibel 11, verworfen 0 · 178 von 250 Abfragen diesen Monat",
+  "Streuung: Markt 12.6, Modell nutzt 13.6",
+  "NBA: 11 Spiele bewertet, 0 mit Value-Wette",
+  "Spielerwetten: 2823 Linien in 11 Spielen simuliert, 8 ✓",
   "Trefferliste: 0 Prognosen ausgewertet",
-  "Spielerwetten lernen: 399 Spieler-Einsätze geprüft, Korrektur {'pts': 1.0282, 'reb': 1.0225, 'ast': 1.0549, 'fg3m': 1.0504}",
-  "Vertrauen in die Simulation: 307 neue Linien ausgewertet · Abweichung ab 0 %: 0.26 (n=1323), Abweichung ab 5 %: 0.27 (n=670), Abweichung ab 10 %: 0.63 (n=361), Abweichung ab 15 %: 0.40 (n=269)",
+  "Spielerwetten lernen: 399 Spieler-Einsätze geprüft, Korrektur {'pts': 1.0291, 'reb': 1.0252, 'ast': 1.058, 'fg3m': 1.0582}",
+  "Vertrauen in die Simulation: 0 neue Linien ausgewertet · Abweichung ab 0 %: 0.26 (n=1323), Abweichung ab 5 %: 0.27 (n=670), Abweichung ab 10 %: 0.63 (n=361), Abweichung ab 15 %: 0.40 (n=269)",
+  "Push-Nachricht „Spielerwetten ✓“: gesendet",
   "Kalibrierung: 29 NBA-Spiele ausgewertet, 0 Werte angepasst (Anpassung ab 40 Spielen)"
  ],
  "propStats": {
@@ -122,7 +123,7 @@
    }
   },
   "clvPos": 0.618,
-  "bets": 40,
+  "bets": 48,
   "settled": 40,
   "profit": -93.57,
   "roi": -0.2339,
@@ -164,34 +165,5 @@
    "conf": 0.15
   },
   "n": {}
- },
- "pregameUpdated": "2026-11-27T00:14:55.516321+00:00",
- "pregameLog": [
-  "Kalshi KXNBAGAME: 30 Events",
-  "Polymarket nba: 100 Events",
-  "Basketball-Reference Ratings 2027: 30 Teams",
-  "Basketball-Reference Ratings 2026: 30 Teams",
-  "Basketball-Reference Tempo 2027: 31 Teams",
-  "Basketball-Reference Spieler 2027: 484 Einträge",
-  "Basketball-Reference Spieler 2026: 661 Einträge",
-  "ESPN Verletzungen: 98 Einträge",
-  "NBA-Verletzungsbericht 26.11. 19:00 ET: 90 Spieler, 4 Teams noch nicht gemeldet",
-  "Quoten basketball_nba: 11 Events, 11 mit Buchmacher-Quoten",
-  "OddsPapi: 2310 Spielerwetten-Linien",
-  "OddsPapi: 43 Buchmacher-Einträge an 11 Spiele gehängt (bet365.de, bwin.de, betano.de, 888sport.de) · Handicap-Linien plausibel 33, verworfen 0 · 176 von 250 Abfragen diesen Monat",
-  "Streuung: Markt None, Modell nutzt 14.6358",
-  "NBA: 11 Spiele bewertet, 0 mit Value-Wette",
-  "Basketball-Reference Saisonwerte 2027: 482 Spieler",
-  "Spielerwetten: 2422 Linien in 10 Spielen simuliert, 26 ✓",
-  "Spielerwetten vor Spielbeginn: 0 bestätigt, 0 schwächer, 0 zurückziehen, 0 geprüft",
-  "Spielerwetten Schlussquoten: 0",
-  "Abend-Update NBA: 4 Spiele mit geänderter Empfehlung",
-  "Schlussquoten: 5 Prognosen mit CLV"
- ],
- "resultsUpdated": "2026-11-27T06:43:49.413965+00:00",
- "resultsLog": [
-  "ESPN-Spielplan: 4 Tage abgefragt, 284 Spiele in der Saison",
-  "Spielerwerte: 0 neue Spielberichte, 460 Spieler",
-  "Trefferliste: 0 Prognosen ausgewertet"
- ]
+ }
 }
