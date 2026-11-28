@@ -1451,7 +1451,22 @@
   "game": "MEM @ MIN",
   "commence": "2026-11-28T01:40:00Z",
   "result": null,
-  "value": null
+  "value": null,
+  "pre": {
+   "status": "bestätigt",
+   "odds": 2.4,
+   "ev": 0.0958,
+   "pSim": 0.5229,
+   "pOut": 0.0,
+   "at": "2026-11-28T00:08+00:00"
+  },
+  "close": {
+   "odds": 2.4,
+   "pMkt": 0.4322,
+   "clv": 0.0373,
+   "book": "bet365",
+   "at": "2026-11-28T00:08+00:00"
+  }
  },
  "f0bc60d1516d217dba58c1f4fa653a59|jaylen wells|pts|10.5|over": {
   "src": "mittags",
@@ -1492,7 +1507,22 @@
   "game": "MEM @ MIN",
   "commence": "2026-11-28T01:40:00Z",
   "result": null,
-  "value": null
+  "value": null,
+  "pre": {
+   "status": "bestätigt",
+   "odds": 2.0,
+   "ev": 0.0879,
+   "pSim": 0.5911,
+   "pOut": 0.0,
+   "at": "2026-11-28T00:08+00:00"
+  },
+  "close": {
+   "odds": 2.0,
+   "pMkt": 0.463,
+   "clv": -0.074,
+   "book": "bwin",
+   "at": "2026-11-28T00:08+00:00"
+  }
  },
  "326e8215b0369df0d4d65e5c0afe9ff5|ausar thompson|pts|14.5|over": {
   "src": "mittags",
@@ -1517,7 +1547,22 @@
   "game": "MIL @ DET",
   "commence": "2026-11-28T00:40:00Z",
   "result": null,
-  "value": null
+  "value": null,
+  "pre": {
+   "status": "bestätigt",
+   "odds": 2.95,
+   "ev": 0.2358,
+   "pSim": 0.4568,
+   "pOut": 0.0,
+   "at": "2026-11-28T00:08+00:00"
+  },
+  "close": {
+   "odds": 2.95,
+   "pMkt": 0.3538,
+   "clv": 0.026,
+   "book": "bet365",
+   "at": "2026-11-28T00:08+00:00"
+  }
  },
  "326e8215b0369df0d4d65e5c0afe9ff5|john collins|pts|14.5|over": {
   "src": "mittags",
@@ -1542,7 +1587,22 @@
   "game": "MIL @ DET",
   "commence": "2026-11-28T00:40:00Z",
   "result": null,
-  "value": null
+  "value": null,
+  "pre": {
+   "status": "bestätigt",
+   "odds": 2.82,
+   "ev": 0.2463,
+   "pSim": 0.4872,
+   "pOut": 0.0,
+   "at": "2026-11-28T00:08+00:00"
+  },
+  "close": {
+   "odds": 2.82,
+   "pMkt": 0.3642,
+   "clv": -0.0531,
+   "book": "bet365",
+   "at": "2026-11-28T00:08+00:00"
+  }
  },
  "3c522e32c3035d7dc3e1734903b84654|ryan conwell|pts|9.5|over": {
   "src": "mittags",
@@ -1569,7 +1629,11 @@
   "game": "MIA @ NYK",
   "commence": "2026-11-28T00:10:00Z",
   "result": null,
-  "value": null
+  "value": null,
+  "pre": {
+   "status": "nicht mehr angeboten",
+   "at": "2026-11-28T00:08+00:00"
+  }
  },
  "3c522e32c3035d7dc3e1734903b84654|karl anthony towns|pts|24.5|over": {
   "src": "mittags",
@@ -1596,7 +1660,11 @@
   "game": "MIA @ NYK",
   "commence": "2026-11-28T00:10:00Z",
   "result": null,
-  "value": null
+  "value": null,
+  "pre": {
+   "status": "nicht mehr angeboten",
+   "at": "2026-11-28T00:08+00:00"
+  }
  },
  "709de4f76f95aebf383d180ac3c6f679|egor demin|pts|14.5|over": {
   "src": "mittags",
@@ -1621,7 +1689,22 @@
   "game": "BKN @ TOR",
   "commence": "2026-11-28T00:40:00Z",
   "result": null,
-  "value": null
+  "value": null,
+  "pre": {
+   "status": "bestätigt",
+   "odds": 3.3,
+   "ev": 0.1493,
+   "pSim": 0.394,
+   "pOut": 0.0,
+   "at": "2026-11-28T00:08+00:00"
+  },
+  "close": {
+   "odds": 3.3,
+   "pMkt": 0.2698,
+   "clv": -0.0827,
+   "book": "bet365",
+   "at": "2026-11-28T00:08+00:00"
+  }
  },
  "709de4f76f95aebf383d180ac3c6f679|danny wolf|pts|9.5|over": {
   "src": "mittags",
@@ -1646,6 +1729,873 @@
   "game": "BKN @ TOR",
   "commence": "2026-11-28T00:40:00Z",
   "result": null,
-  "value": null
+  "value": null,
+  "pre": {
+   "status": "schwächer",
+   "odds": 2.25,
+   "ev": 0.0549,
+   "pSim": 0.5628,
+   "pOut": 0.0,
+   "at": "2026-11-28T00:08+00:00"
+  },
+  "close": {
+   "odds": 2.25,
+   "pMkt": 0.406,
+   "clv": 0.0353,
+   "book": "bet365",
+   "at": "2026-11-28T00:08+00:00"
+  }
+ },
+ "592a440c590415d43f5ffbfd922cd41e|toumani camara|pts|14.5|over": {
+  "src": "vor Spielbeginn",
+  "player": "Toumani Camara",
+  "key": "toumani camara",
+  "team": "POR",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 14.5,
+  "side": "over",
+  "odds": 2.75,
+  "book": "op_bet365",
+  "bookName": "bet365",
+  "pSim": 0.4511,
+  "p": 0.3892,
+  "ev": 0.0704,
+  "stake": 0.01,
+  "mean": 14.5,
+  "safe": true,
+  "risks": [],
+  "alt": [],
+  "game": "GSW @ POR",
+  "commence": "2026-11-28T02:40:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 2.75,
+   "pMkt": 0.3665,
+   "clv": 0.0079,
+   "book": "bet365",
+   "at": "2026-11-28T00:08+00:00"
+  }
+ },
+ "592a440c590415d43f5ffbfd922cd41e|deni avdija|pts|29.5|over": {
+  "src": "vor Spielbeginn",
+  "player": "Deni Avdija",
+  "key": "deni avdija",
+  "team": "POR",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 29.5,
+  "side": "over",
+  "odds": 2.5,
+  "book": "op_bet365",
+  "bookName": "bet365",
+  "pSim": 0.4364,
+  "p": 0.4264,
+  "ev": 0.0659,
+  "stake": 0.01,
+  "mean": 28.7,
+  "safe": true,
+  "risks": [],
+  "alt": [],
+  "game": "GSW @ POR",
+  "commence": "2026-11-28T02:40:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 2.5,
+   "pMkt": 0.4228,
+   "clv": 0.057,
+   "book": "bet365",
+   "at": "2026-11-28T00:08+00:00"
+  }
+ },
+ "592a440c590415d43f5ffbfd922cd41e|donovan clingan|pts|11.5|over": {
+  "src": "vor Spielbeginn",
+  "player": "Donovan Clingan",
+  "key": "donovan clingan",
+  "team": "POR",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 11.5,
+  "side": "over",
+  "odds": 1.87,
+  "book": "op_betano",
+  "bookName": "Betano",
+  "pSim": 0.6086,
+  "p": 0.5664,
+  "ev": 0.0592,
+  "stake": 0.01,
+  "mean": 13.9,
+  "safe": true,
+  "risks": [],
+  "alt": [
+   {
+    "line": 10.5,
+    "pSim": 0.6725,
+    "p": 0.6303,
+    "minOdds": 1.59
+   },
+   {
+    "line": 12.5,
+    "pSim": 0.5392,
+    "p": 0.497,
+    "minOdds": 2.01
+   }
+  ],
+  "game": "GSW @ POR",
+  "commence": "2026-11-28T02:40:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 1.87,
+   "pMkt": 0.4939,
+   "clv": -0.0764,
+   "book": "Betano",
+   "at": "2026-11-28T00:08+00:00"
+  }
+ },
+ "5b64071f3e3bf67b0fdea8d1ac81d0ec|ivica zubac|pts|12.5|under": {
+  "src": "vor Spielbeginn",
+  "player": "Ivica Zubac",
+  "key": "ivica zubac",
+  "team": "IND",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 12.5,
+  "side": "under",
+  "odds": 1.95,
+  "book": "op_bwin",
+  "bookName": "bwin",
+  "pSim": 0.6209,
+  "p": 0.5683,
+  "ev": 0.1081,
+  "stake": 0.01,
+  "mean": 11.5,
+  "safe": true,
+  "risks": [],
+  "alt": [
+   {
+    "line": 11.5,
+    "pSim": 0.5588,
+    "p": 0.5062,
+    "minOdds": 1.98
+   },
+   {
+    "line": 13.5,
+    "pSim": 0.6804,
+    "p": 0.6278,
+    "minOdds": 1.59
+   }
+  ],
+  "game": "PHI @ IND",
+  "commence": "2026-11-28T00:40:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 1.95,
+   "pMkt": 0.4779,
+   "clv": -0.0681,
+   "book": "bwin",
+   "at": "2026-11-28T00:08+00:00"
+  }
+ },
+ "5b64071f3e3bf67b0fdea8d1ac81d0ec|pascal siakam|pts|24.5|under": {
+  "src": "vor Spielbeginn",
+  "player": "Pascal Siakam",
+  "key": "pascal siakam",
+  "team": "IND",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 24.5,
+  "side": "under",
+  "odds": 1.78,
+  "book": "op_betano",
+  "bookName": "Betano",
+  "pSim": 0.6294,
+  "p": 0.5901,
+  "ev": 0.0505,
+  "stake": 0.01,
+  "mean": 22.6,
+  "safe": true,
+  "risks": [],
+  "alt": [
+   {
+    "line": 23.5,
+    "pSim": 0.5839,
+    "p": 0.5446,
+    "minOdds": 1.84
+   },
+   {
+    "line": 25.5,
+    "pSim": 0.673,
+    "p": 0.6337,
+    "minOdds": 1.58
+   }
+  ],
+  "game": "PHI @ IND",
+  "commence": "2026-11-28T00:40:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 1.78,
+   "pMkt": 0.5227,
+   "clv": -0.0696,
+   "book": "Betano",
+   "at": "2026-11-28T00:08+00:00"
+  }
+ },
+ "f0bc60d1516d217dba58c1f4fa653a59|cam spencer|pts|10.5|over": {
+  "src": "vor Spielbeginn",
+  "player": "Cam Spencer",
+  "key": "cam spencer",
+  "team": "MEM",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 10.5,
+  "side": "over",
+  "odds": 1.95,
+  "book": "op_bwin",
+  "bookName": "bwin",
+  "pSim": 0.6787,
+  "p": 0.5584,
+  "ev": 0.0889,
+  "stake": 0.01,
+  "mean": 14.0,
+  "safe": false,
+  "risks": [
+   "Mitspieler Zach Edey fraglich"
+  ],
+  "alt": [
+   {
+    "line": 9.5,
+    "pSim": 0.7415,
+    "p": 0.6212,
+    "minOdds": 1.61
+   },
+   {
+    "line": 11.5,
+    "pSim": 0.6118,
+    "p": 0.4915,
+    "minOdds": 2.03
+   }
+  ],
+  "game": "MEM @ MIN",
+  "commence": "2026-11-28T01:40:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 1.95,
+   "pMkt": 0.4779,
+   "clv": -0.0681,
+   "book": "bwin",
+   "at": "2026-11-28T00:08+00:00"
+  }
+ },
+ "326e8215b0369df0d4d65e5c0afe9ff5|paul reed|pts|14.5|over": {
+  "src": "vor Spielbeginn",
+  "player": "Paul Reed",
+  "key": "paul reed",
+  "team": "DET",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 14.5,
+  "side": "over",
+  "odds": 2.55,
+  "book": "op_bet365",
+  "bookName": "bet365",
+  "pSim": 0.5323,
+  "p": 0.4787,
+  "ev": 0.2207,
+  "stake": 0.01,
+  "mean": 15.9,
+  "safe": true,
+  "risks": [],
+  "alt": [],
+  "game": "MIL @ DET",
+  "commence": "2026-11-28T00:40:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 2.55,
+   "pMkt": 0.3866,
+   "clv": -0.0142,
+   "book": "bet365",
+   "at": "2026-11-28T00:08+00:00"
+  }
+ },
+ "c5dc35b4116988de2c1425df17456478|paul george|pts|19.5|over": {
+  "src": "vor Spielbeginn",
+  "player": "Paul George",
+  "key": "paul george",
+  "team": "BOS",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 19.5,
+  "side": "over",
+  "odds": 2.2,
+  "book": "op_bet365",
+  "bookName": "bet365",
+  "pSim": 0.4884,
+  "p": 0.5009,
+  "ev": 0.1019,
+  "stake": 0.01,
+  "mean": 20.1,
+  "safe": true,
+  "risks": [],
+  "alt": [],
+  "game": "ATL @ BOS",
+  "commence": "2026-11-28T01:10:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 2.2,
+   "pMkt": 0.5053,
+   "clv": 0.1117,
+   "book": "bet365",
+   "at": "2026-11-28T00:08+00:00"
+  }
+ },
+ "c5dc35b4116988de2c1425df17456478|sam hauser|pts|9.5|over": {
+  "src": "vor Spielbeginn",
+  "player": "Sam Hauser",
+  "key": "sam hauser",
+  "team": "BOS",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 9.5,
+  "side": "over",
+  "odds": 2.75,
+  "book": "op_bet365",
+  "bookName": "bet365",
+  "pSim": 0.4197,
+  "p": 0.3949,
+  "ev": 0.086,
+  "stake": 0.01,
+  "mean": 9.3,
+  "safe": true,
+  "risks": [],
+  "alt": [],
+  "game": "ATL @ BOS",
+  "commence": "2026-11-28T01:10:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 2.75,
+   "pMkt": 0.3861,
+   "clv": 0.0618,
+   "book": "bet365",
+   "at": "2026-11-28T00:08+00:00"
+  }
+ },
+ "c5dc35b4116988de2c1425df17456478|payton pritchard|pts|12.5|over": {
+  "src": "vor Spielbeginn",
+  "player": "Payton Pritchard",
+  "key": "payton pritchard",
+  "team": "BOS",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 12.5,
+  "side": "over",
+  "odds": 1.91,
+  "book": "op_bwin",
+  "bookName": "bwin",
+  "pSim": 0.6072,
+  "p": 0.5634,
+  "ev": 0.0761,
+  "stake": 0.01,
+  "mean": 15.2,
+  "safe": true,
+  "risks": [],
+  "alt": [
+   {
+    "line": 11.5,
+    "pSim": 0.6668,
+    "p": 0.623,
+    "minOdds": 1.61
+   },
+   {
+    "line": 13.5,
+    "pSim": 0.5492,
+    "p": 0.5054,
+    "minOdds": 1.98
+   }
+  ],
+  "game": "ATL @ BOS",
+  "commence": "2026-11-28T01:10:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 1.91,
+   "pMkt": 0.4881,
+   "clv": -0.0677,
+   "book": "bwin",
+   "at": "2026-11-28T00:08+00:00"
+  }
+ },
+ "428050645d1dc8b16d84287e21de55fa|jamal murray|pts|29.5|over": {
+  "src": "vor Spielbeginn",
+  "player": "Jamal Murray",
+  "key": "jamal murray",
+  "team": "DEN",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 29.5,
+  "side": "over",
+  "odds": 3.35,
+  "book": "op_bet365",
+  "bookName": "bet365",
+  "pSim": 0.3447,
+  "p": 0.3591,
+  "ev": 0.203,
+  "stake": 0.01,
+  "mean": 26.7,
+  "safe": true,
+  "risks": [],
+  "alt": [],
+  "game": "DEN @ UTA",
+  "commence": "2026-11-28T02:40:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 3.35,
+   "pMkt": 0.3642,
+   "clv": 0.2201,
+   "book": "bet365",
+   "at": "2026-11-28T00:08+00:00"
+  }
+ },
+ "428050645d1dc8b16d84287e21de55fa|brice sensabaugh|pts|14.5|over": {
+  "src": "vor Spielbeginn",
+  "player": "Brice Sensabaugh",
+  "key": "brice sensabaugh",
+  "team": "UTA",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 14.5,
+  "side": "over",
+  "odds": 2.85,
+  "book": "op_bet365",
+  "bookName": "bet365",
+  "pSim": 0.4704,
+  "p": 0.4162,
+  "ev": 0.186,
+  "stake": 0.01,
+  "mean": 14.8,
+  "safe": false,
+  "risks": [
+   "Mitspieler Jaxson Hayes fraglich",
+   "Mitspieler Mo Bamba fraglich"
+  ],
+  "alt": [],
+  "game": "DEN @ UTA",
+  "commence": "2026-11-28T02:40:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 2.85,
+   "pMkt": 0.323,
+   "clv": -0.0794,
+   "book": "bet365",
+   "at": "2026-11-28T00:08+00:00"
+  }
+ },
+ "428050645d1dc8b16d84287e21de55fa|keyonte george|pts|24.5|over": {
+  "src": "vor Spielbeginn",
+  "player": "Keyonte George",
+  "key": "keyonte george",
+  "team": "UTA",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 24.5,
+  "side": "over",
+  "odds": 2.82,
+  "book": "op_bet365",
+  "bookName": "bet365",
+  "pSim": 0.4525,
+  "p": 0.4042,
+  "ev": 0.1398,
+  "stake": 0.01,
+  "mean": 24.3,
+  "safe": false,
+  "risks": [
+   "Mitspieler Jaxson Hayes fraglich",
+   "Mitspieler Mo Bamba fraglich"
+  ],
+  "alt": [],
+  "game": "DEN @ UTA",
+  "commence": "2026-11-28T02:40:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 2.82,
+   "pMkt": 0.3212,
+   "clv": -0.0942,
+   "book": "bet365",
+   "at": "2026-11-28T00:08+00:00"
+  }
+ },
+ "709de4f76f95aebf383d180ac3c6f679|scottie barnes|pts|29.5|over": {
+  "src": "vor Spielbeginn",
+  "player": "Scottie Barnes",
+  "key": "scottie barnes",
+  "team": "TOR",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 29.5,
+  "side": "over",
+  "odds": 3.25,
+  "book": "op_bet365",
+  "bookName": "bet365",
+  "pSim": 0.3113,
+  "p": 0.3575,
+  "ev": 0.1617,
+  "stake": 0.01,
+  "mean": 25.7,
+  "safe": true,
+  "risks": [],
+  "alt": [],
+  "game": "BKN @ TOR",
+  "commence": "2026-11-28T00:40:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 3.25,
+   "pMkt": 0.3744,
+   "clv": 0.2168,
+   "book": "bet365",
+   "at": "2026-11-28T00:08+00:00"
+  }
+ },
+ "709de4f76f95aebf383d180ac3c6f679|allen graves|pts|10.5|under": {
+  "src": "vor Spielbeginn",
+  "player": "Allen Graves",
+  "key": "allen graves",
+  "team": "TOR",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 10.5,
+  "side": "under",
+  "odds": 1.83,
+  "book": "op_betano",
+  "bookName": "Betano",
+  "pSim": 0.7364,
+  "p": 0.5993,
+  "ev": 0.0968,
+  "stake": 0.01,
+  "mean": 8.1,
+  "safe": true,
+  "risks": [],
+  "alt": [
+   {
+    "line": 9.5,
+    "pSim": 0.6727,
+    "p": 0.5356,
+    "minOdds": 1.87
+   },
+   {
+    "line": 11.5,
+    "pSim": 0.7869,
+    "p": 0.6498,
+    "minOdds": 1.54
+   }
+  ],
+  "game": "BKN @ TOR",
+  "commence": "2026-11-28T00:40:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 1.83,
+   "pMkt": 0.5076,
+   "clv": -0.0711,
+   "book": "Betano",
+   "at": "2026-11-28T00:08+00:00"
+  }
+ },
+ "fecbaa4e1973217826262c63d8f52dea|brook lopez|pts|14.5|over": {
+  "src": "vor Spielbeginn",
+  "player": "Brook Lopez",
+  "key": "brook lopez",
+  "team": "LAC",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 14.5,
+  "side": "over",
+  "odds": 3.35,
+  "book": "op_bet365",
+  "bookName": "bet365",
+  "pSim": 0.3886,
+  "p": 0.3405,
+  "ev": 0.1406,
+  "stake": 0.01,
+  "mean": 13.5,
+  "safe": true,
+  "risks": [],
+  "alt": [],
+  "game": "NOP @ LAC",
+  "commence": "2026-11-28T02:40:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 3.35,
+   "pMkt": 0.2578,
+   "clv": -0.1364,
+   "book": "bet365",
+   "at": "2026-11-28T00:08+00:00"
+  }
+ },
+ "fecbaa4e1973217826262c63d8f52dea|kris dunn|pts|4.5|over": {
+  "src": "vor Spielbeginn",
+  "player": "Kris Dunn",
+  "key": "kris dunn",
+  "team": "LAC",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 4.5,
+  "side": "over",
+  "odds": 1.86,
+  "book": "op_bet365",
+  "bookName": "bet365",
+  "pSim": 0.6372,
+  "p": 0.5951,
+  "ev": 0.1068,
+  "stake": 0.01,
+  "mean": 6.5,
+  "safe": true,
+  "risks": [],
+  "alt": [],
+  "game": "NOP @ LAC",
+  "commence": "2026-11-28T02:40:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 1.86,
+   "pMkt": 0.5227,
+   "clv": -0.0278,
+   "book": "bet365",
+   "at": "2026-11-28T00:08+00:00"
+  }
+ },
+ "fecbaa4e1973217826262c63d8f52dea|rui hachimura|pts|14.5|under": {
+  "src": "vor Spielbeginn",
+  "player": "Rui Hachimura",
+  "key": "rui hachimura",
+  "team": "LAC",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 14.5,
+  "side": "under",
+  "odds": 1.91,
+  "book": "op_betano",
+  "bookName": "Betano",
+  "pSim": 0.6263,
+  "p": 0.5737,
+  "ev": 0.0958,
+  "stake": 0.01,
+  "mean": 13.3,
+  "safe": true,
+  "risks": [],
+  "alt": [
+   {
+    "line": 13.5,
+    "pSim": 0.5631,
+    "p": 0.5105,
+    "minOdds": 1.96
+   },
+   {
+    "line": 15.5,
+    "pSim": 0.6816,
+    "p": 0.629,
+    "minOdds": 1.59
+   }
+  ],
+  "game": "NOP @ LAC",
+  "commence": "2026-11-28T02:40:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 1.91,
+   "pMkt": 0.4833,
+   "clv": -0.0769,
+   "book": "Betano",
+   "at": "2026-11-28T00:08+00:00"
+  }
+ },
+ "46b1c571cf786a86e800d61fd1d79004|khaman maluach|pts|7.5|under": {
+  "src": "vor Spielbeginn",
+  "player": "Khaman Maluach",
+  "key": "khaman maluach",
+  "team": "PHX",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 7.5,
+  "side": "under",
+  "odds": 1.95,
+  "book": "op_betano",
+  "bookName": "Betano",
+  "pSim": 0.5999,
+  "p": 0.5519,
+  "ev": 0.0762,
+  "stake": 0.01,
+  "mean": 7.1,
+  "safe": false,
+  "risks": [
+   "Gegner Kyrie Irving fraglich"
+  ],
+  "alt": [
+   {
+    "line": 6.5,
+    "pSim": 0.5123,
+    "p": 0.4643,
+    "minOdds": 2.15
+   },
+   {
+    "line": 8.5,
+    "pSim": 0.6769,
+    "p": 0.6289,
+    "minOdds": 1.59
+   }
+  ],
+  "game": "DAL @ PHX",
+  "commence": "2026-11-28T02:10:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 1.95,
+   "pMkt": 0.4694,
+   "clv": -0.0847,
+   "book": "Betano",
+   "at": "2026-11-28T00:08+00:00"
+  }
+ },
+ "13d9ca3bcb664829c603755d31401002|luka doncic|pts|34.5|under": {
+  "src": "vor Spielbeginn",
+  "player": "Luka Doncic",
+  "key": "luka doncic",
+  "team": "LAL",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 34.5,
+  "side": "under",
+  "odds": 1.82,
+  "book": "op_betano",
+  "bookName": "Betano",
+  "pSim": 0.8161,
+  "p": 0.6322,
+  "ev": 0.1507,
+  "stake": 0.01,
+  "mean": 26.6,
+  "safe": false,
+  "risks": [
+   "Gegner Dylan Harper fraglich"
+  ],
+  "alt": [
+   {
+    "line": 33.5,
+    "pSim": 0.7918,
+    "p": 0.6079,
+    "minOdds": 1.64
+   },
+   {
+    "line": 35.5,
+    "pSim": 0.8406,
+    "p": 0.6567,
+    "minOdds": 1.52
+   }
+  ],
+  "game": "LAL @ SAS",
+  "commence": "2026-11-28T02:40:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 1.82,
+   "pMkt": 0.5091,
+   "clv": -0.0734,
+   "book": "Betano",
+   "at": "2026-11-28T00:08+00:00"
+  }
+ },
+ "13d9ca3bcb664829c603755d31401002|victor wembanyama|pts|31.5|under": {
+  "src": "vor Spielbeginn",
+  "player": "Victor Wembanyama",
+  "key": "victor wembanyama",
+  "team": "SAS",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 31.5,
+  "side": "under",
+  "odds": 1.85,
+  "book": "op_betano",
+  "bookName": "Betano",
+  "pSim": 0.6475,
+  "p": 0.5943,
+  "ev": 0.0995,
+  "stake": 0.01,
+  "mean": 28.6,
+  "safe": false,
+  "risks": [
+   "Mitspieler De'Aaron Fox fraglich",
+   "Mitspieler Dylan Harper fraglich"
+  ],
+  "alt": [
+   {
+    "line": 30.5,
+    "pSim": 0.6101,
+    "p": 0.5569,
+    "minOdds": 1.8
+   },
+   {
+    "line": 32.5,
+    "pSim": 0.6846,
+    "p": 0.6314,
+    "minOdds": 1.58
+   }
+  ],
+  "game": "LAL @ SAS",
+  "commence": "2026-11-28T02:40:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 1.85,
+   "pMkt": 0.503,
+   "clv": -0.0694,
+   "book": "Betano",
+   "at": "2026-11-28T00:08+00:00"
+  }
+ },
+ "13d9ca3bcb664829c603755d31401002|julian champagnie|pts|9.5|over": {
+  "src": "vor Spielbeginn",
+  "player": "Julian Champagnie",
+  "key": "julian champagnie",
+  "team": "SAS",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 9.5,
+  "side": "over",
+  "odds": 1.8,
+  "book": "op_bet365",
+  "bookName": "bet365",
+  "pSim": 0.5949,
+  "p": 0.6035,
+  "ev": 0.0864,
+  "stake": 0.01,
+  "mean": 11.6,
+  "safe": false,
+  "risks": [
+   "Mitspieler De'Aaron Fox fraglich",
+   "Mitspieler Dylan Harper fraglich"
+  ],
+  "alt": [],
+  "game": "LAL @ SAS",
+  "commence": "2026-11-28T02:40:00Z",
+  "result": null,
+  "value": null,
+  "close": {
+   "odds": 1.8,
+   "pMkt": 0.6066,
+   "clv": 0.0919,
+   "book": "bet365",
+   "at": "2026-11-28T00:08+00:00"
+  }
  }
 }

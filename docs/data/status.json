@@ -1,7 +1,7 @@
 {
  "updated": "2026-11-27T10:19:23.680643+00:00",
  "credits": {
-  "remaining": 350.0,
+  "remaining": 347.0,
   "used_now": 3.0
  },
  "stats": {
@@ -11,8 +11,8 @@
   "brierMarket": 0.23497402413793103,
   "brierRaw": 0.21661446862068964,
   "clvN": 38,
-  "clvAvg": -0.0179,
-  "clvPos": 0.368,
+  "clvAvg": -0.0173,
+  "clvPos": 0.342,
   "calibration": [
    {
     "from": 0.0,
@@ -122,15 +122,15 @@
     "roi": -0.616
    }
   },
-  "clvPos": 0.618,
-  "bets": 48,
+  "clvPos": 0.5,
+  "bets": 70,
   "settled": 40,
   "profit": -93.57,
   "roi": -0.2339,
   "hit": 0.325,
   "expHit": 0.458,
-  "clv": 0.0273,
-  "clvN": 34
+  "clv": 0.0082,
+  "clvN": 62
  },
  "closeUpdated": "2026-11-27T23:29:12.886470+00:00",
  "closeLog": [
@@ -165,5 +165,30 @@
    "conf": 0.15
   },
   "n": {}
- }
+ },
+ "pregameUpdated": "2026-11-28T00:08:11.683228+00:00",
+ "pregameLog": [
+  "Kalshi KXNBAGAME: 42 Events",
+  "Polymarket nba: 100 Events",
+  "Basketball-Reference Ratings 2027: 30 Teams",
+  "Basketball-Reference Ratings 2026: 30 Teams",
+  "Basketball-Reference Tempo 2027: 31 Teams",
+  "Basketball-Reference Spieler 2027: 484 Einträge",
+  "Basketball-Reference Spieler 2026: 661 Einträge",
+  "ESPN Verletzungen: 101 Einträge",
+  "NBA-Verletzungsbericht 27.11. 19:00 ET: 147 Spieler, 0 Teams noch nicht gemeldet",
+  "Quoten basketball_nba: 15 Events, 15 mit Buchmacher-Quoten",
+  "OddsPapi: 3178 Spielerwetten-Linien",
+  "OddsPapi: 40 Buchmacher-Einträge an 15 Spiele gehängt (bet365.de, bwin.de, betano.de, 888sport.de) · Handicap-Linien plausibel 30, verworfen 0 · 182 von 250 Abfragen diesen Monat",
+  "Streuung: Markt 12.9, Modell nutzt 13.78",
+  "NBA: 15 Spiele bewertet, 4 mit Value-Wette",
+  "Basketball-Reference Saisonwerte 2027: 482 Spieler",
+  "Spielerwetten: 3284 Linien in 10 Spielen simuliert, 27 ✓",
+  "Spielerwetten vor Spielbeginn: 5 bestätigt, 1 schwächer, 0 zurückziehen, 8 geprüft",
+  "Spielerwetten Schlussquoten: 28",
+  "Push-Nachricht „Spielerwetten vor Spielbeginn“: gesendet",
+  "Abend-Update NBA: 8 Spiele mit geänderter Empfehlung",
+  "Push-Nachricht „Abend-Update: neue ✓-Wetten“: gesendet",
+  "Schlussquoten: 11 Prognosen mit CLV"
+ ]
 }
