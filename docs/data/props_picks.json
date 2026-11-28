@@ -2597,5 +2597,223 @@
    "book": "bet365",
    "at": "2026-11-28T00:08+00:00"
   }
+ },
+ "1ef1f5b9c8c88c584772f64a0d9a9435|tre jones|pts|14.5|over": {
+  "src": "mittags",
+  "player": "Tre Jones",
+  "key": "tre jones",
+  "team": "CHI",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 14.5,
+  "side": "over",
+  "odds": 3.0,
+  "book": "op_bet365",
+  "bookName": "bet365",
+  "pSim": 0.4186,
+  "p": 0.3677,
+  "ev": 0.1031,
+  "stake": 0.01,
+  "mean": 13.9,
+  "safe": false,
+  "risks": [
+   "Verletzungsbericht des Gegners fehlt noch"
+  ],
+  "alt": [],
+  "game": "IND @ CHI",
+  "commence": "2026-11-29T01:10:00Z",
+  "result": null,
+  "value": null
+ },
+ "1ef1f5b9c8c88c584772f64a0d9a9435|jalen smith|pts|14.5|over": {
+  "src": "mittags",
+  "player": "Jalen Smith",
+  "key": "jalen smith",
+  "team": "CHI",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 14.5,
+  "side": "over",
+  "odds": 1.83,
+  "book": "op_bwin",
+  "bookName": "bwin",
+  "pSim": 0.6153,
+  "p": 0.5773,
+  "ev": 0.0564,
+  "stake": 0.01,
+  "mean": 17.4,
+  "safe": false,
+  "risks": [
+   "Verletzungsbericht des Gegners fehlt noch"
+  ],
+  "alt": [
+   {
+    "line": 13.5,
+    "pSim": 0.6755,
+    "p": 0.6374,
+    "minOdds": 1.57
+   },
+   {
+    "line": 15.5,
+    "pSim": 0.5576,
+    "p": 0.5195,
+    "minOdds": 1.92
+   }
+  ],
+  "game": "IND @ CHI",
+  "commence": "2026-11-29T01:10:00Z",
+  "result": null,
+  "value": null
+ },
+ "c4b53c6aebbd7b81fd821526ad9503e8|tyrese maxey|pts|29.5|over": {
+  "src": "mittags",
+  "player": "Tyrese Maxey",
+  "key": "tyrese maxey",
+  "team": "PHI",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 29.5,
+  "side": "over",
+  "odds": 2.55,
+  "book": "op_bet365",
+  "bookName": "bet365",
+  "pSim": 0.6244,
+  "p": 0.4699,
+  "ev": 0.1983,
+  "stake": 0.01,
+  "mean": 33.3,
+  "safe": false,
+  "risks": [
+   "Verletzungsbericht des Teams fehlt noch",
+   "Mitspieler Dean Wade fraglich"
+  ],
+  "alt": [],
+  "game": "PHI @ HOU",
+  "commence": "2026-11-29T01:40:00Z",
+  "result": null,
+  "value": null
+ },
+ "c4b53c6aebbd7b81fd821526ad9503e8|vj edgecombe|pts|19.5|over": {
+  "src": "mittags",
+  "player": "VJ Edgecombe",
+  "key": "vj edgecombe",
+  "team": "PHI",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 19.5,
+  "side": "over",
+  "odds": 2.82,
+  "book": "op_bet365",
+  "bookName": "bet365",
+  "pSim": 0.4326,
+  "p": 0.3954,
+  "ev": 0.1149,
+  "stake": 0.01,
+  "mean": 19.1,
+  "safe": false,
+  "risks": [
+   "Verletzungsbericht des Teams fehlt noch",
+   "Mitspieler Dean Wade fraglich"
+  ],
+  "alt": [],
+  "game": "PHI @ HOU",
+  "commence": "2026-11-29T01:40:00Z",
+  "result": null,
+  "value": null
+ },
+ "c4b53c6aebbd7b81fd821526ad9503e8|kentavious caldwell pope|pts|9.5|over": {
+  "src": "mittags",
+  "player": "Kentavious Caldwell-Pope",
+  "key": "kentavious caldwell pope",
+  "team": "PHI",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 9.5,
+  "side": "over",
+  "odds": 2.5,
+  "book": "op_bet365",
+  "bookName": "bet365",
+  "pSim": 0.5418,
+  "p": 0.4412,
+  "ev": 0.103,
+  "stake": 0.01,
+  "mean": 10.8,
+  "safe": false,
+  "risks": [
+   "Verletzungsbericht des Teams fehlt noch",
+   "Mitspieler Dean Wade fraglich"
+  ],
+  "alt": [],
+  "game": "PHI @ HOU",
+  "commence": "2026-11-29T01:40:00Z",
+  "result": null,
+  "value": null
+ },
+ "2f2c60fafdc3fd106d71517a9de4f2b1|aj dybantsa|pts|17.5|under": {
+  "src": "mittags",
+  "player": "AJ Dybantsa",
+  "key": "aj dybantsa",
+  "team": "WAS",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 17.5,
+  "side": "under",
+  "odds": 1.8,
+  "book": "op_bwin",
+  "bookName": "bwin",
+  "pSim": 0.6708,
+  "p": 0.6161,
+  "ev": 0.1089,
+  "stake": 0.01,
+  "mean": 15.3,
+  "safe": false,
+  "risks": [
+   "Gegner Anthony Black fraglich"
+  ],
+  "alt": [
+   {
+    "line": 16.5,
+    "pSim": 0.6163,
+    "p": 0.5616,
+    "minOdds": 1.78
+   },
+   {
+    "line": 18.5,
+    "pSim": 0.715,
+    "p": 0.6603,
+    "minOdds": 1.51
+   }
+  ],
+  "game": "ORL @ WAS",
+  "commence": "2026-11-28T22:10:00Z",
+  "result": null,
+  "value": null
+ },
+ "638cefeed67cdd691e1686e024981563|shai gilgeous alexander|pts|34.5|over": {
+  "src": "mittags",
+  "player": "Shai Gilgeous-Alexander",
+  "key": "shai gilgeous alexander",
+  "team": "OKC",
+  "stat": "pts",
+  "statName": "Punkte",
+  "line": 34.5,
+  "side": "over",
+  "odds": 2.35,
+  "book": "op_bet365",
+  "bookName": "bet365",
+  "pSim": 0.5281,
+  "p": 0.4801,
+  "ev": 0.1283,
+  "stake": 0.01,
+  "mean": 35.8,
+  "safe": false,
+  "risks": [
+   "Verletzungsbericht des Gegners fehlt noch"
+  ],
+  "alt": [],
+  "game": "OKC @ MIL",
+  "commence": "2026-11-29T01:10:00Z",
+  "result": null,
+  "value": null
  }
 }

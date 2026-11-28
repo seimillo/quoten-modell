@@ -1,17 +1,17 @@
 {
  "nba": {
-  "team_scale": 0.5114,
-  "player_scale": 0.5114,
-  "hca": 1.4807,
-  "rest_scale": 0.6994,
-  "inj_scale": 0.5,
-  "sched_scale": 0.7021,
-  "travel_scale": 0.3,
-  "form_scale": 0.15,
-  "sd_margin": 14.6358,
-  "sd_total": 19.19,
-  "total_bias": 0.0,
-  "conf": 0.15
+  "team_scale": 0.5122,
+  "player_scale": 0.5125,
+  "hca": 1.4885,
+  "rest_scale": 0.6935,
+  "inj_scale": 0.4988,
+  "sched_scale": 0.6815,
+  "travel_scale": 0.3188,
+  "form_scale": 0.1534,
+  "sd_margin": 14.5352,
+  "sd_total": 19.2377,
+  "total_bias": -0.1406,
+  "conf": 0.1691
  },
  "history": [
   {
@@ -121,9 +121,100 @@
      "target": 0.0
     }
    ]
+  },
+  {
+   "date": "2026-11-28",
+   "changes": [
+    {
+     "sport": "NBA",
+     "key": "team_scale",
+     "old": 0.5114,
+     "new": 0.5122,
+     "target": 0.538
+    },
+    {
+     "sport": "NBA",
+     "key": "hca",
+     "old": 1.4807,
+     "new": 1.4885,
+     "target": 1.747
+    },
+    {
+     "sport": "NBA",
+     "key": "rest_scale",
+     "old": 0.6994,
+     "new": 0.6935,
+     "target": 0.499
+    },
+    {
+     "sport": "NBA",
+     "key": "inj_scale",
+     "old": 0.5,
+     "new": 0.4988,
+     "target": 0.458
+    },
+    {
+     "sport": "NBA",
+     "key": "player_scale",
+     "old": 0.5114,
+     "new": 0.5125,
+     "target": 0.549
+    },
+    {
+     "sport": "NBA",
+     "key": "sched_scale",
+     "old": 0.7021,
+     "new": 0.6815,
+     "target": -0.065
+    },
+    {
+     "sport": "NBA",
+     "key": "travel_scale",
+     "old": 0.3,
+     "new": 0.3188,
+     "target": 0.939
+    },
+    {
+     "sport": "NBA",
+     "key": "form_scale",
+     "old": 0.15,
+     "new": 0.1534,
+     "target": 0.266
+    },
+    {
+     "sport": "NBA",
+     "key": "sd_margin",
+     "old": 14.6358,
+     "new": 14.5352,
+     "target": 11.215
+    },
+    {
+     "sport": "NBA",
+     "key": "sd_total",
+     "old": 19.19,
+     "new": 19.2377,
+     "target": 20.812
+    },
+    {
+     "sport": "NBA",
+     "key": "total_bias",
+     "old": 0.0,
+     "new": -0.1406,
+     "target": -4.779
+    },
+    {
+     "sport": "NBA",
+     "key": "conf",
+     "old": 0.15,
+     "new": 0.1691,
+     "target": 0.8
+    }
+   ]
   }
  ],
- "n": {},
+ "n": {
+  "nba": 40
+ },
  "version": 2,
  "backtest": "2026-11-23"
 }
